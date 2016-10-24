@@ -1,24 +1,10 @@
 
-CiviCRM User and Administrator Guide
+Guide d'utilisation et d'administration de CiviCRM
 ====================================
 
-This book is a guide for users and administrators of CiviCRM. It covers
-everything that normal users and administrators of CiviCRM need to know
-to work with CiviCRM on a day to day basis. Our aim is to cover all
-functionality that is available via CiviCRM's user interface.
+[CiviCRM](http://www.civicrmfr.org) est un système de gestion des associations et des organisations sans but lucratif, conçu pour le web. Ce guide d'utilisation et d'administration a pour objectif de couvrir tout ce qui est disponible « clé en main » par l'interface de CiviCRM.
 
-Although we do not cover system administrator or developer topics,
-CiviCRM developers and system administrators will also find this book
-useful as a guide to everything you can do with an 'out of the box'
-CiviCRM.
+Certains aspects de CiviCRM (tels que l'installation ou le développement personnalisé) sont des sujets techniques qui vont au delà du cadre de ce livre. Malgré qu'ils ne soient pas inclus ici, à l'occasion nous mentionnerons des liens ou des ressources qui pourraient être utiles.
 
-Some aspects of CiviCRM (such as installation, or custom development)
-are technical and outside the scope of this book. Although they are not
-covered here, we do point to other relevant sources of technical
-document which should be useful for people (like your service provider,
-or technical staff) who understand them.
-
-This book is freely available to read online. It is collaboratively written by the CiviCRM community (see the
-*History of this book* chapter for more details). You can help write this
-book and help with other documentation efforts. See
-https://civicrm.org/participate/documentation for more information. 
+Ce guide est librement et gratuitement disponible en ligne. Il a été collaborativement rédigé par la communauté CiviCRM (voir le chapitre *Historique du livre* pour plus d'information) et il est basé sur la version originale en anglais. Nous vous invitons également contribuer à améliorer ce livre. Voir 
+[https://civicrm.org/participate/documentation](https://civicrm.org/participate/documentation) pour plus d'information. 

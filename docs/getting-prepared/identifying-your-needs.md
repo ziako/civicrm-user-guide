@@ -1,64 +1,35 @@
-Identifying Your Needs
+Identifier vos besoins
 ======================
 
-This chapter covers some basic strategies for identifying your
-organizational needs, and how they could be met by CiviCRM. It doesn't
-go into detail about CiviCRM functionality or how CiviCRM stores data
-(you will find that in other chapters). Instead, we encourage you to
-first take a step back and think about your organisation.
+Ce chapitre survole quelques stratégies de base pour identifier vos besoins organisationnels, et comment CiviCRM pourrait y répondre. Nous éviterons les détails techniques des fonctionnalités de CiviCRM (ces points seront traités dans les chapitres suivants). Nous vous invitons d'abord à prendre un pas en arrière et à réfléchir à votre organisation. 
 
-Building internal support for a new Constituent Relationship Management
-(CRM) solution is a complex task that, when done thoughtfully, can yield
-great rewards.
+Pour mener à terme votre projet, nous vous suggérons de bâtir une équipe de soutien pour mener à terme l'implantation de votre projet. La gestion de relations contacts est une tâche complexe qui affecte de nombreux intervenants.
 
-Some organizations are comfortable appointing a team to do this
-internally while others rely on outside consultants. Following are our
-recommendations for how best to evaluate your organization’s needs and
-build internal support.
+Certaines organisations sont à l'aise d'assigner une équipe interne, tandis que d'autres font appel à des consultants externes. Vous trouverez ci-dessous nos recommandations pour mieux évaluer les besoins et pour construire votre équipe.
 
-Goal
+Objectif
 ----
 
-To start with, take a minute to articulate the goal of adopting a CRM.
-For example:
+Pour débuter, prenez quelques minutes pour articuler l'objectif souhaité en adoptant un logiciel tel que CiviCRM. Par exemple :
 
-*Investing in our organization’s database of 12,000 constituents will
-allow our team to better focus on raising funds and awareness to fulfill
-our mission now and in the future.*
+*Investir dans notre bases de données de 12 000 constituants réduira notre surcharge administrative afin de permettre à notre équipe de mieux se concentrer sur les activités de levée de fonds et sur les projets de sensibilisation.*
 
-Evaluation
+Évaluation
 ----------
 
-Evaluate your organization's specific CRM needs by interviewing key
-stakeholders. This might include development, communications, marketing,
-events and programs staff as well as board members.
+Évaluez les besoins spécifiques de votre organisation en conduisant des entrevues avec les différents intervenants affectés. Ceci peut inclure les responsables des communications, le marketting, les organisateurs d'évènements, les solliciteurs et organisateurs de campagnes de levée de fonds, les développeurs et les membres du conseil d'administration.
 
-**Help them identify the constituents** they interact with on a routine
-basis and to articulate key challenges in managing constituent
-information (collecting, updating, sharing and using contact
-information).
+**Aidez-les à identifier les constituants** avec qui ils interagissent régulièrement et à articuler les principaux défis de gestion de l'information (collecte, mise à jour, partage et utilisation des données).
 
-**Identify specific inefficiencies** that could be addressed by a
-comprehensive Constituent Relationship Management solution.
+**Identifiez les lourdeurs administratives** qui peuvent être améliorées par une meilleure solution de gestion de relations contacts.
 
-**Enumerate the resulting lost productivity**. For example:
+**Énumérez les conséquences des limitations de vos solutions actuelles**. Par exemple :
 
--   **Incoherent view of our constituents.** We are unable to see a
-    holistic record of our constituents eg: who is a donor, volunteer
-    and e-newsletter subscriber.
--   **Inability to include all prospective donors in all outreach
-    efforts.** With fractured constituent lists we are unable to include
-    all constituents in our efforts to raise funds, awareness and
-    promote events.
--   **Inefficient use of staff.**Redundant staff time is spent re-keying
-    information originally received digitally, importing, exporting and
-    de-duping records.
--   **Lack of communication.**Inability to communicate across
-    departments about our various interactions with the same
-    constituent.
--   **Data vulnerability.**Inability to make reliable backups of all
-    data and protect it against malicious or accidental loss.
-
+-   **Portrait incomplet de nos constituants.** Nous n'avons pas de portrait global de qui est un donateur, bénévole ou abonné de notre infolettre.
+-   **Impossible d'inclure tous nos donateurs potentiels pour les solliciter proactivement.** Avec toutes nos différentes listes de constituants, nous ne pouvons pas efficacement les cibler dans nos campagnes de levée de fonds, de sensibilisation ou de promotion de nos évènements.
+-   **Utilisation inefficace du personnel.** Du précieux temps du personnel de l'organisation est gaspillé avec la double-saisie de l'information, la fusion de différentes listes provenant de différents systèmes ou à la fusion de doublons.
+-   **Manque de communication.** Difficulté de communication à travers les différents départements à propos des interactions avec les constituants (ex: les solliciteurs de dons ne sont pas informés si les membres étaient présents à la dernière assemblée générale).
+-   **Vulnérabilité des données.** Manque de sauvegardes fiables de toutes les données (ex: certains fichiers Excel étaient perdus sur le portable d'un employé), difficilté de les protéger contre des pertes malicieuses ou accidentelles.
 
 **Lastly, inventory current data sources** that could be consolidated
 and shared across departments. For example:
@@ -76,7 +47,7 @@ and shared across departments. For example:
 -   Carole / Volunteers / 3450 / volunteers / all MLK day volunteers,
     skills / mlk_volunteers_10.xls
 
-Benefits
+Bénéfices
 --------
 
 Enumerate the specific benefits of investing in a holistic CRM solution.
@@ -94,27 +65,21 @@ For example:
 -   **Constituents' self-service creation and management** of their
     contact/contribution/subscription/activity records
 
-Recommendations
+Recommandations
 ---------------
 
-In recommending your CRM solution enumerate and compare its features and
-costs to other market solutions. Share case studies of other
-organizations who use the recommended solution.
+Lorsque vous recommandez CiviCRM, énumérer et comparer ses fonctionnalités et ses coûts par rapport à d'autres solutions sur le marché. Partagez des études de cas de d'autres organisations qui recommandent les solutions que vous avez évalué.
 
-**Implementation costs -** Include a budget for implementation that
-contemplates:
+**Coûts d'implémentation** - Prévoir un budget pour l'implémentation qui prenne en compte :
 
--   discovery and project management
--   data clean up, consolidation and migration
--   system configuration
--   post implementation training and documentation
+-  les étapes de découverte et de gestion de projet
+-  nettoyage des données, consolidation et migration
+-  configuration du système
+-  formation et documentation suite à l'implémentation
 
-**Maintenance costs** - Include a budget for ongoing maintenance that
-contemplates:
+**Coûts de maintenance** - Prévoir un budget pour la maintenance continue qui prenne en compte :
 
--   pro-active server maintenance
--   incremental data backups
--   operating system and software upgrades
--   ongoing training
-
-
+-   maintenance pro-active du serveur
+-   sauvegardes de données
+-   système d'exploitation et mises à jours des logiciels
+-   formation continue
