@@ -1,5 +1,5 @@
-Apperçu
-========
+Aperçu
+======
 
 Ce chapitre couvre les principaux critères de paramétrage que CiviCRM utilise pour stocker des données et donne des conseils sur la façon de transférer et d'organiser vos données existantes. La bonne utilisation de CiviCRM dépend de la façon dont les données sont stockées, au bon endroit et de la bonne manière, ce qui ne peut se faire qu'avec une planification judicieuse de la structure de vos données dans CiviCRM.
 
