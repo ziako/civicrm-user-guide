@@ -21,7 +21,7 @@ pages:
     - 'Hébergement': 'getting-prepared/hosting.md'
     - 'Faire la transition': 'getting-prepared/transitioning-to-civicrm.md'
 - Configuration initiale:
-    - 'Installation and basic set-up': 'initial-set-up/installation-and-basic-set-up.md'
+    - 'Installation et paramétrage': 'initial-set-up/installation-and-basic-set-up.md'
     - 'Scheduled jobs': 'initial-set-up/scheduled-jobs.md'
     - 'Customizing the user interface': 'initial-set-up/customizing-the-user-interface.md'
     - 'Permissions and access control': 'initial-set-up/permissions-and-access-control.md'
@@ -36,7 +36,7 @@ pages:
     - 'Searching': 'the-user-interface/searching.md'
     - 'Undelete': 'the-user-interface/undelete.md'
 - Organiser vos données:
-    - 'Overview': 'organising-your-data/overview.md'
+    - 'Aperçu': 'organising-your-data/overview.md'
     - 'Mapping your data': 'organising-your-data/mapping-your-data.md'
     - 'Contacts': 'organising-your-data/contacts.md'
     - 'Groups and tags': 'organising-your-data/groups-and-tags.md'
@@ -75,10 +75,10 @@ pages:
     - 'Set-up': 'pledges/set-up.md'
     - 'Everyday tasks': 'pledges/everyday-tasks.md'
     - 'Pledges Reports and Analysis': 'pledges/pledges-reports-and-analysis.md'
-- Events:
-    - 'Qu'est-ce-que CiviEvent?': 'events/what-is-civievent.md'
-    - 'Event planning and management': 'events/event-planning-and-management.md'
-    - 'Creating an event': 'events/creating-an-event.md'
+- Évènements:
+    - "Qu'est-ce que CiviEvent?": 'events/what-is-civievent.md'
+    - 'Planification et gestion des événements  ': 'events/event-planning-and-management.md'
+    - 'Créer un événement': 'events/creating-an-event.md'
     - 'Online event registration': 'events/online-event-registration.md'
     - 'Integrating events with your website': 'events/integrating-events-with-your-website.md'
     - 'Manual event registration': 'events/manual-event-registration.md'
@@ -86,7 +86,7 @@ pages:
     - 'Complex event fees': 'events/complex-event-fees.md'
     - 'Event templates': 'events/event-templates.md'
     - 'Reports': 'events/reports.md'
-    - 'Custom data for events': 'events/custom-data-for-events.md'
+    - 'Données personnalisées': 'events/custom-data-for-events.md'
     - 'Repeating Events': 'events/repeating-events.md'
 - Membership:
     - 'What is CiviMember': 'membership/what-is-civimember.md'
