@@ -25,7 +25,7 @@ pages:
     - 'Scheduled jobs': 'initial-set-up/scheduled-jobs.md'
     - "Personnaliser l'interface utilisateur": 'initial-set-up/customizing-the-user-interface.md'
     - 'Permissions and access control': 'initial-set-up/permissions-and-access-control.md'
-    - 'Security': 'initial-set-up/security.md'
+    - "Sécurité": 'initial-set-up/security.md'
     - 'CiviCRM System Status': 'initial-set-up/civicrm-system-status.md'
 - Configuration avancée:
     - 'Email system configuration': 'advanced-configuration/email-system-configuration.md'
