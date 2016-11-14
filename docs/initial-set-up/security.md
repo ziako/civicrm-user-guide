@@ -1,153 +1,69 @@
-Security
+Sécurité
 ========
 
-CiviCRM is a web based solution, and as such, requires a web server to
-run. When web servers store sensitive data and are publicly available
-over the Internet - as CiviCRM is designed to be - security is an
-important aspect to consider. The recommended approach to securing CRM
-data is to use a VPN (Virtual Private Network) to encapsulate data
-transferred over public networks in encrypted packets. One of the
-simplest methods of implementing this is through forcing the use of
-encrypted tunnels when accessing the server through various data
-protocols (e.g. SSH, SSL and FTPS, explored below); this effectively
-wraps and the data in a protective shell, which can only be opened by
-the user's web browser, and the server.
+CiviCRM est une solution basée sur le Web, et en tant que tel, nécessite un serveur web pour fonctionner. Lorsque les serveurs Web stockent des données sensibles et sont accessibles au public sur Internet - comme CiviCRM est conçu pour le permettre - la sécurité est un aspect important à considérer. L'approche recommandée pour sécuriser les données CRM consiste à utiliser un VPN (Virtual Private Network) pour encapsuler les données transférées sur des réseaux publics dans des paquets cryptés. L'une des méthodes les plus simples consiste à forcer l'utilisation de tunnels cryptés lors de l'accès au serveur via divers protocoles de données (par exemple SSH, SSL et FTPS, explorés ci-dessous). Cet environnement protège efficacement les données dans un shell de protection, qui ne peut être ouvert que par le navigateur Web de l'utilisateur et par le serveur. 
 
-Encrypted data transfer
------------------------
+Transfert de données cryptées
+-----------------------------
 
-There are a number of different protocols (methods) for transferring
-data from one point to another.
+Il existe un certain nombre de protocoles ou de méthodes différentes pour transférer des données d'un point à un autre.
 
--   **FTPS**: for uploading files to the server outside of the CiviCRM
-    interface (admins only), you may wish to use a FTPS (Secure File
-    Transfer Protocol) client. If possible, set up FTPS accounts with
-    usernames and passwords.
--   **SSH**: the SSH (Secure Shell) is a method which can be used to
-    authenticate a user - by password or a key - and tunnel them into
-    the server to execute command-line instructions.
--   **SSL**: this affects your everyday users accessing CiviCRM through
-    a web browser. SSL (Secure Sockets Layer) encrypts the data
-    submitted on a page by a user and sends it to the server - the only
-    entity holding the 'key' to decrypt the data, and vice versa. SSL
-    may be required for PCI compliance, or simply to prevent the
-    interception of sensitive information during transit. By default,
-    CiviCRM is *not* secured for browser access, please read the section
-    'Setting up SSL' for configuration instructions.
 
-Note: ensure passwords used by one person across several protocols are
-different, as each carry with it varying levels of control.
+-   **FTPS**: Pour télécharger des fichiers sur le serveur en dehors de l'interface CiviCRM, (admin uniquement), vous pouvez utiliser un client FTPS (Secure File Transfer Protocol). Vous devez, configurez des comptes FTPS avec des noms d'utilisateur et des mots de passe.
 
-Should I use SSL (Secure Sockets Layer)? 
--------------------------------------------
+-   **SSH**: Le SSH (Secure Shell) est une méthode qui peut être utilisée pour authentifier des utilisateurs - par mot de passe ou avec une clé - et les encapsuler dans le serveur pour exécuter des instructions en ligne de commande.
+   
+-   **SSL**: Secure Sockets Layer affecte vos utilisateurs quotidiens accédant à CiviCRM via un navigateur Web. SSL crypte les données soumises sur une page par un utilisateur et les envoie au serveur (la seule entité détenant la «clé» pour déchiffrer les données et vice versa). SSL peut être nécessaire pour la conformité PCI, ou tout simplement pour empêcher l'interception d'informations sensibles pendant le transit. Par défaut, CiviCRM est *non* sécurisé pour l'accès au navigateur, veuillez lire la section «Configuration de SSL» pour les instructions de configuration.
 
-### PCI compliance
+Remarque: assurez-vous que les mots de passe utilisés par une personne à travers plusieurs protocoles sont différents, car chacun comporte des niveaux de contrôle variables.
 
-American Express, Discover Financial Services, JCB International,
-MasterCard Worldwide, and Visa Inc. work together to form standards for
-online payment processing (see
-[https://www.pcisecuritystandards.org/organization_info/index.php](https://www.pcisecuritystandards.org/organization_info/index.php)).
 
-Hosting for websites that accept payments using CiviContribute and
-CiviEvent should comply with their standards if the plug-in you are
-using does not route the user to external pages for payment processing
-(e.g. PayPal Standard redirects users to PayPal pages to make the
-transaction before returning to your website, and should therefore meet
-these standards). If credit card information *is* being processed or
-stored on your server, there are a number of PCI Payment Application
-Data Security Standards (PCI PA-DSS) which must be met, including the
-need to use SSL. Each CiviCRM installation must also be tested for PCI
-compliance every 4-12 months. Consider the payment processing method you
-intend to use carefully before implementing it, use SSL if you are using
-a credit card payment processor, and seek security consultation if you
-decide to store credit card information on your server (this is not
-recommended).
+Dois-je utiliser un SSL (Secure Sockets Layer)? 
+-----------------------------------------------
 
-For further information, see:
-[https://www.pcisecuritystandards.org/merchants/index.php](https://www.pcisecuritystandards.org/merchants/index.php).
+### Conformité PCI
 
-### Unauthorised data access
+American Express, Discover Financial Services, JCB International, MasterCard International et Visa Inc. travaillent ensemble pour élaborer des normes pour le traitement des paiements en ligne (voir [https://www.pcisecuritystandards.org/organization_info/index.php](https://www.pcisecuritystandards.org/organization_info/index.php)).
 
-Aside from the potential need to meet PCI compliance, you should use SSL
-if you wish to ensure:
+L'hébergement des sites Web qui acceptent les paiements par carte de paiement, à l'aide de CiviContribute et CiviEvent, doit être conforme aux normes PCI. Le plug-in que vous utiliserez doit conduire l'utilisateur vers des pages externes pour le traitement des paiements (par exemple: PayPal Standard redirige les utilisateurs vers les pages PayPal pour effectuer la transaction avant de revenir à votre site Web, et devrait donc satisfaire à ces normes).
 
--   your data cannot be read by unauthorised users (e.g. through
-    intercepting un-encrypted data during transit between the user and
-    server).
--   a user's session is not hi-jacked through acquiring the cookie used
-    to authenticate their access. If this occurs, an unauthorised
-    individual could assume their identity and proceed to use the system
-    through their account.
+Si les informations de carte de crédit *sont traitées ou stockées* sur votre serveur, il y a un certain nombre de normes de sécurité des données de paiement PCI (PCI PA-DSS) qui doivent être respectées, y compris le choix d'utiliser SSL. Chaque installation CiviCRM doit également être testée pour sa conformité PCI tous les 4 à 12 mois. Choisissez avec soin la méthode de traitement des paiements que vous avez l'intention d'utiliser avant de la mettre en œuvre. Utilisez SSL si vous optez pour un processeur de paiement par carte de crédit et vérifiez les normes de sécurité si vous décidez de stocker des informations de carte de crédit sur votre serveur (mais ce n'est pas recommandé).
 
-Setting up SSL
---------------
+Pour plus d'informations, voir ici: [https://www.pcisecuritystandards.org/merchants/index.php](https://www.pcisecuritystandards.org/merchants/index.php).
 
-Before choosing a hosting company or web server provider, check that
-they support SSL certificates. As explained above, SSL encrypts the data
-transferred between a user's web browser and the server, but this is
-*not* enabled upon installation as it requires the purchase of an SSL
-certificate from a trusted vendor. To install SSL:
+### Accès aux données non autorisé
 
-1.  Determine what your server requirements or procedures are for
-    enabling an SSL certificate. On shared servers this may require
-    purchasing a static IP from your host. **Important**: your host must
-    be willing to install the certificate on your *domain*, not one at a
-    higher level. CiviCRM does not support shared SSL.
-2.  Purchase an SSL certificate from a security vendor.
-3.  Install the SSL on your server following the procedure you learned
-    in step 1.
-4.  Enable 'HTTPS' redirection on your CiviCRM site so that the login,
-    online contribution, member, event and administrator pages use SSL
-    encryption. CiviCRM has an option in global settings to check the
-    certificate and enable SSL for these pages (**Administer** >
-    **System Settings** > **Resource URLs**). To use SSL for *all*
-    CiviCRM pages, either edit the server's apache .htaccess file to
-    force SSL and redirect HTTP requests to HTTPS, or enable the option
-    in Drupal.
+Outre le besoin potentiel de respecter la conformité PCI, vous devez utiliser un certificat SSL si vous souhaitez vous assurer que:
 
-Backups and their security
---------------------------
+-   Vos données ne peuvent pas être lues par des utilisateurs non autorisés (par exemple en interceptant des données non chiffrées pendant le transit entre l'utilisateur et le serveur).
+-   La session d'un utilisateur n'est pas "hi-jacked" par l'acquisition du cookie utilisé pour authentifier leur accès. Si cela se produit, une personne non autorisée peut assumer son identité et procéder à l'utilisation du système via son compte.
 
-All computer systems are prone to failures - both hardware and software.
-It is advisable to create periodic backups of all existing data (and
-possibly the software) to fulfil two important purposes: recovery and
-retention. In regards to recovery, the organisation can ensure that the
-data gathered and stored in its database is not lost in the event of
-failure. Backups can also aid in the strengthening of service
-continuity. In some situations it is essential that data gathering or
-analysis operations do not cease, and the ability to build a working
-tool from a backup (while the issue is being addressed) minimises
-downtime. Conversely, retention is useful when the organisation needs to
-check the state of data gathered at a given time in the past.
+Configuration SSL
+-----------------
+Avant de choisir un fournisseur de serveur Web, vérifiez qu'il prenne bien en charge les certificats SSL. Comme expliqué ci-dessus, SSL crypte les données transférées entre le navigateur Web d'un utilisateur et le serveur, mais ceci n'est *pas activé* lors de l'installation car cela nécessite l'achat d'un certificat SSL auprès d'un fournisseur de confiance. Pour installer SSL:
 
-Once made, the backups themselves must also be secured from natural
-disasters, fire, vandalism and theft. It is good practice to encrypt
-backups and duplicate them, keeping one copy on premises, and sending
-the other to storage at another external location.
+1.  Déterminez les exigences ou les procédures de votre serveur pour activer un certificat SSL. Sur les serveurs partagés, cela peut nécessiter l'achat d'une adresse IP statique à partir de votre hôte. **Important**: votre hôte doit être disposé à ne pas installer le certificat sur votre *domaine* à un niveau supérieur. CiviCRM ne prend pas en charge le SSL partagé.
+2.  Achetez un certificat SSL auprès d'un fournisseur de sécurité.
+3.  Installez le protocole SSL sur votre serveur en suivant la procédure décrite à l'étape 1.
+4.  Activez la redirection HTTPS sur votre site CiviCRM pour que les pages de connexion, de contribution en ligne, de membre, d'événement et d'administrateur utilisent le cryptage SSL. CiviCRM dispose d'une option dans les paramètres globaux pour vérifier le certificat et activer SSL pour ces pages (**Administer> System Settings> Resource URLs**). Pour utiliser SSL sur *toutes les pages CiviCRM*, modifiez le fichier apache ".htaccess" du serveur pour forcer le SSL et rediriger les requêtes HTTP vers HTTPS ou activer l'option dans votre CMS.
 
-Data storage jurisdiction
--------------------------
+Les sauvegardes et leur sécurité
+--------------------------------
 
-CiviCRM can be run on a web server managed by your organisation, or by
-an external hosting provider. When working with issues related to human
-rights, or if your organisation is gathering sensitive information about
-a country's government or its officials, it may be important to know
-where your data is stored. Consider gathering detailed information about
-where the servers are physically located, and the country whose
-jurisdiction the data will fall under in case a governmental agency
-requests information.
+Tous les systèmes informatiques sont enclins à des défaillances - matériel et logiciel.
+Il est conseillé de créer des sauvegardes périodiques de toutes les données existantes (et éventuellement du logiciel) pour atteindre deux objectifs importants: la récupération et la rétention. En ce qui concerne la récupération, l'organisation peut s'assurer que les données recueillies et stockées dans sa base de données ne sont pas perdues en cas d'échec. Les sauvegardes peuvent également contribuer au renforcement de la continuité des services. Dans certaines situations, il est essentiel que les opérations de collecte ou d'analyse de données ne cessent pas et que la possibilité de construire un outil de travail à partir d'une sauvegarde (pendant que le problème est traité) minimise le temps d'arrêt. Inversement, la rétention est utile lorsque l'organisation doit vérifier l'état des données recueillies à un moment donné dans le passé.
 
-Other security concerns
------------------------
+Une fois faites, les sauvegardes elles-mêmes doivent également être sécurisées contre les catastrophes naturelles, le feu, le vandalisme et le vol. Il est recommandé de crypter les sauvegardes et de les dupliquer, de garder une copie sur les lieux et d'envoyer l'autre vers un autre emplacement externe.
 
-Data may be accessed by unauthorised individuals through a
-variety of methods, many of which do not directly relate to the CRM's
-security. Amongst others, the following are areas that should be
-examined:
+Aspect juridique des données
+----------------------------
 
--   Physical access to the server: the building holding the servers
-    should be adequately protected against break-in.
--   Passwords: an organisational policy should be implemented where
-    passwords are of a sufficient complexity and length (e.g. minimum 8
-    characters, including letters and numbers), and must not be shared
-    or divulged over insecure communications like email.
+CiviCRM peut être exécuté sur un serveur web géré par votre organisation, ou par un fournisseur d'hébergement externe. Lorsque vous travaillez sur des questions liées aux droits de la personne ou si votre organisation recueille des informations sensibles sur le gouvernement d'un pays ou ses fonctionnaires, il peut être important de savoir où sont stockées vos données. Envisager de recueillir des informations détaillées sur l'emplacement physique des serveurs et sur le pays dont les données relèveront de la compétence d'un organisme gouvernemental.
+
+Autres problèmes de sécurité
+----------------------------
+Les données peuvent être consultées par des personnes non autorisées à travers une variété de méthodes, dont beaucoup ne sont pas directement liées à la sécurité de CiviCRM. Entre autres, les critères suivants doivent être respectés:
+
+-   Accès physique au serveur: le bâtiment qui héberge les serveurs doit être protégé de manière adéquate contre les intrusions.
+-   Mots de passe: une politique organisationnelle doit être mise en œuvre pour que les mots de passe soient d'une complexité et d'une longueur suffisante (par exemple 8 caractères minimum, y compris lettres, majuscules et chiffres) et ne doivent pas être partagés ou divulgués lors de communications non sécurisées telle que le courrier électronique.
+
