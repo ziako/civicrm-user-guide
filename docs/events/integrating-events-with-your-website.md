@@ -1,52 +1,32 @@
-Integrating events with your website
-====================================
+Intégrer vos événements sur votre site
+--------------------------------------
 
-Listing your events on your website, or on other organisations'
-websites, is a great way to promote your events and attract registrants.
-Below are a few suggestions of how you can integrate your events into
-your website.
+Afficher la liste de vos événements sur votre site Web, ou sur les sites Web d'autres organisations, est un excellent moyen de promouvoir vos événements et de favoriser de nouvelles inscriptions. Voici quelques suggestions de la façon dont vous pouvez intégrer vos événements dans votre site Web :
 
-To get the link of the registration page of your event navigate
-to **Events > Manage Events** and then click **Event Links. **You will
-see a few different links in that menu. The two most useful are the link
-to the event info page and the event registration page (the registration
-page is also linked from the info page). Copy the URL for the event
-page. You can then link to this page from anywhere in your website.
+Pour obtenir le lien de la page d'inscription de votre événement, accédez à **Evénements > Gestion des événements**. La liste des événements s'affiche, puis cliquez sur **Liens événements** pour l'événement choisi. Vous verrez deux liens différents dans ce menu : le lien vers la fiche d'information sur l'événement et le lien vers la page d'inscription vous permettant d'inscrire directement un participant. (la page d'inscription est également liée depuis la page d'informations). Copiez et inserez l'URL de la page de la fiche d'information sur votre site. Vous pouvez ainsi accéder à cette page à partir de n'importe où dans votre site Web.
 
-Note that in Joomla! you can link to your event by following these
-steps:
+**Paramétrage**
 
-### 
+Dans Joomla! 2.5x et 3.xx vous pouvez établir un lien vers votre événement en procédant comme suit:
 
-1.  Go into the Joomla! control panel
-2.  Choose **Menu Manager > *Your menu name***
-3.  Click **New**
-4.  Expand **CiviCRM > CiviCRM Events** and click the **Event Info**
-    item
-5.  Choose the event from the **Select an Event** list on the right side
-    of the page
-6.  Click **Save**.
+1.  Allez dans Joomla!  **Panneau d'administration**
+2.  Choisir  **Menu > votre nom de menu** ou **Ajouter un menu**.
+3.  Clicker  **Lien de menu** ou **Nouveau** 
+4.  Choisir  **Type de lien de menu** puis cliquez sur **CiviCRM > Event Information page** 
+5.  Choisir l'événement à afficher dans la liste 
+6.  Valider sur  **Enregistrer**.
 
-In WordPress you can also use the CiviCRM icon 'shortcode' to insert the
-event registration form into the Page or Post
+Dans WordPress, vous pouvez également utiliser l'icône CiviCRM 'code court' pour insérer le formulaire d'inscription d'événement dans la page ou le message :
 
 ![image](../img/Wordpress-Shortcodes-small.png)
 
-In Drupal, the **views** module gives many options for displaying lists
-of content, including the ability to create an automatically updating
-lists of upcoming events. Have a look at *Integrating with Drupal* in
-the *Website integration* chapter for more details. 
+Dans Drupal, le module **views** offre de nombreuses options pour afficher des listes de contenu, y compris la possibilité de créer une liste de mise à jour automatique des événements à venir. Consultez  *Intégration avec Drupal*  dans le chapitre *Intégration de site Web* pour plus de détails.
 
-**RSS feed for all upcoming events**
-------------------------------------
+**Flux RSS pour tous les événements à venir**
+-----------------------------------------
 
-This lets visitors subscribe to all your events in the RSS feed reader
-of their choice. Many website management systems also allow a website to
-subscribe to any RSS feed and present the information within their
-layout.
+Cette fonction permet aux visiteurs de s'abonner à tous vos événements dans le lecteur RSS de leur choix. De nombreux systèmes de gestion de sites Web permettent également à un site Web de s'abonner à tout flux RSS et de présenter les informations dans leur mise en page.
 
-1.  Navigate to **Events > Manage Events**.  
-2.  Click on the orange and white square icon on the top right of the
-    page.
-3.  Copy the URL to share or embed into your website.
-
+1.  Allez à : **Evénements > Gestion des Evénements**.  
+2.  Cliquez sur l'icône du flux RSS en haut à droite de la page
+3.  Copiez l'URL à partager ou à intégrer à votre site Web.
