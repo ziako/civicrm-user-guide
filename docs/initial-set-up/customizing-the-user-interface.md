@@ -20,6 +20,8 @@ Les options incluses dans les champs déroulants que vous voyez dans les formula
 
 Les choix des Moyens de communication préférées (par exemple, Téléphone, Email, Courrier postal, SMS) dans le formulaire d'édition/saisie de contact peuvent également être modifiés. Aller à **Administrer> Communications> Méthodes de communication préférées**.
 
+![image](../img/Fr_listes_deroulantes.PNG)
+
 Les choix de Méthodes de communication préférées (par exemple, Téléphone, Email, Courrier postal, SMS) dans le formulaire d'édition / saisie de contact peut également être modifié.  Aller à **Administrer> Communications> Méthodes de communication préférées**.
 
 La modification des options de liste déroulante qui définissent des données, telles que Type d'activité, Relations, etc., ne relève pas du champ d'application de ce chapitre. Voir *Organiser vos données* et les sections des différents composants CiviCRM.
