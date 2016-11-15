@@ -1,32 +1,21 @@
-Repeating Events
-================
+Événements récurrents
+=====================
 
-You can set an Event to repeat on a certain day and time with a specific
-end date and include dates to exclude from the repetition.
+Vous pouvez définir une série d'un même événement qui va se reproduire plusieurs fois certains jours et heure avec une date de fin spécifique et y inclure des dates à exclure de cette série. Exemple : le mardi pendant 6 semaines ou le mercredi tous les mois sauf vacances scolaire
 
-To access the **Repeat Events** screen go to **Manage Events**, then
-under the **Configure** select **Repeat** from the dropdown.
+Pour accéder à la répétition des événements aller  à  **Gestion des événements**, puis selectionner **Configurer** à droite de l'événement et cliquez sur **Répéter** dans le menu déroulant.
 
 ![image](../img/Repeating%20Events.png)
 
-**Repeat Event Page**
+**Ecran répéter l'événement**
+
+Dès que vous êtes dans l'écran **Repeat Event**, vous devez spécifier les intervalles de répétition (en heures, jours, semaines, mois ou années) et la date de fin de l'événement. Cependant, il est fortement recommandé de spécifier la date de début de la répétition et les dates exclues.
 
 ![image](../img/Repeting%20Event%20Page.png)
 
-Once you are in the **Repeat Event Screen** you must specify the
-Repeating intervals (in hours, days, weeks, months, or years), and Event
-end date and occurrence end date. However it is recommended you specify
-the Repetition Start Date and Excluded Dates.
+**Remarque:** Si vous souhaitez que vos rappels programmés se répètent, assurez-vous que vous avez configuré les rappels programmés sur l'événement que vous répétez, vous pourrez le modifier ultérieurement. Il est également recommandé de ne pas configurer vos rappels de répétition les jours spécifiques prévus, mais plutôt de les envoyer deux semaines ou quelques jours avant l'événement.
 
-**Note:** If you would like your Scheduled Reminders to repeat, make
-sure you have setup Scheduled Reminders on the Event that you are
-repeating, you can edit this later. It is also recommend that you do not
-setup your reminders to repeat on specific days, but rather have them
-sent two weeks or a few days before the Event.
-
-Once you have filled out all the appropriate fields click
-**Save,**to save your selection**.**You will have a popup window that
-will prompt you to **Continue** with your selection. 
+Une fois que vous avez rempli tous les champs appropriés, cliquez sur **Enregistrer** pour enregistrer votre sélection. Vous aurez une fenêtre popup qui vous invitera à **Continuer** votre sélection.
 
 ![image](../img/Repeated%20Event.png)
 
