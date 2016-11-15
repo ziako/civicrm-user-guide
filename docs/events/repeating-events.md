@@ -11,7 +11,7 @@ Pour accéder à la répétition des événements aller  à  **Gestion des évé
 
 Dès que vous êtes dans l'écran **Repeat Event**, vous devez spécifier les intervalles de répétition (en heures, jours, semaines, mois ou années) et la date de fin de l'événement. Cependant, il est fortement recommandé de spécifier la date de début de la répétition et les dates exclues.
 
-![image](../img/Repeting%20Event%20Page.png)
+![image](../img/Fr_repeter_evenement.PNG)
 
 **Remarque:** Si vous souhaitez que vos rappels programmés se répètent, assurez-vous que vous avez configuré les rappels programmés sur l'événement que vous répétez, vous pourrez le modifier ultérieurement. Il est également recommandé de ne pas configurer vos rappels de répétition les jours spécifiques prévus, mais plutôt de les envoyer deux semaines ou quelques jours avant l'événement.
 
