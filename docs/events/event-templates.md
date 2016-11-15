@@ -1,34 +1,22 @@
-Event templates
-===============
+Modèles d'événements
+====================
 
-If you need to set up a number of events with similar configurations,
-you can streamline the process using event templates.
+Si vous devez créér de nombreux événements avec des configurations semblables, il est possible de rationaliser et d'accélérer le processus de création à l'aide de modèles.
 
-The steps for creating event templates are similar to those described
-earlier for creating an event. The main differences are:
+Les étapes de création de modèles d'événements sont similaires à celles décrites précédemment pour la création d'un événement. Les principales différences sont les suivantes:
 
--   Assign a descriptive template title that clearly identifies the type
-    of event this template is used for (e.g., Monthly community meetup
-    with online registration).
--   There are no starting and ending dates in the template form. That
-    information will always be specific to an actual event instance.
+-   Attribuez un titre de modèle descriptif qui identifie clairement le type d'événement utilisé pour ce modèle (par exemple, Réunion mensuelle des bénévoles avec inscription en ligne).
+-   Il n'y a pas de dates de début et de fin dans le modèle. Ces informations seront toujours spécifiques à une instance d'événement réelle.
 
-Click **Events > Event Templates**.
+**Création d'un modèle d'événement**.
 
--   To create a template, start by navigating to **Events > Event
-    Templates** and clicking **Add Event Template**. Enter template
-    title and event type. 
--   Select campaign if all events created from this template should be
-    associated with a campaign.
--   Continue the normal event set-up process using the settings that
-    will be constant for all events to be created using this template.
--   Common characteristics might include location, event fees, online
-    registration settings, tell-a-friend settings, etc.
+-   Pour créer un modèle, commencez par naviguer ici: **Événements> Modèles d'événements** et cliquez sur **Ajouter un modèle d'événement**. Saisir "le titre du modèle" ainsi que le type d'événement.
+-   Sélectionnez une campagne si tous les événements créés à partir de ce modèle doivent être associés à une campagne.
+-   Continuez de saisir les paramètres qui seront communs pour tous les événements à venir créés à l'aide de ce modèle.
+-   Les caractéristiques communes peuvent inclure la localisation, les tarifs, les paramètres d'inscription en ligne,etc...
 
 ![image](../img/event_template_setup.png)
 
-Once you've created an event template, you can select that template (as
-shown in the following screenshot) when you start to create a new event.
-Your event will be pre-filled with the saved configuration properties.
+Une fois que vous avez créé un modèle d'événement, vous pouvez sélectionner ce modèle (comme illustré dans la capture d'écran suivante) lorsque vous créez un nouvel événement aux caractéristiques similaires. Votre événement sera pré-rempli avec les propriétés de la configuration enregistrée.
 
 ![image](../img/event_template_new.png)
