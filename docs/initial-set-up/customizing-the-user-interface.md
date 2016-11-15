@@ -3,44 +3,44 @@ Personnalisation de l'interface utilisateur
 
 CiviCRM est très flexible et personnalisable. Ce chapitre donne des informations sur les nombreuses façons de modifier l'interface en fonction de vos besoins et de la rendre plus conviviable pour vos utilisateurs.
 
-La façon de personnaliser vous-même vos données est traité dans *Organiser vos données* et dans les chapitres *Ce que vous devez savoir* et *Configurer* dans les sections des différents composants CiviCRM (exemple : La personnalisation des types d'événements dans la section *Evenements*).
+La façon de personnaliser vous-même vos données est traité dans *Organiser vos données* et dans les chapitres *Ce que vous devez savoir* et *Configurer* dans les sections des différents composants CiviCRM (exemple : La personnalisation des types d'événements dans la section *Evénements*).
 
 Modifier les listes déroulantes
 -------------------------------
 
-Les options incluses dans les champs déroulants que vous voyez dans les formulaires de saisie/d'édition de contact dans CiviCRM peuvent être modifiées (vous pouvez ajouter, renommer, désactiver ou supprimer des options) dans **Administer> Personnaliser les données et les écrans> Listes déroulantes**. Ceci inclus:
+Les options incluses dans les champs déroulants utilisés dans les formulaires de saisie/d'édition de contacts dans CiviCRM peuvent être modifiées (vous pouvez ajouter, renommer, désactiver ou supprimer des options) dans **Administer> Personnaliser les données et les écrans> Listes déroulantes**. Paramètres inclus:
 
 -   Le sexe : Homme, Femme
 -   Préfixe et suffixe individuel (exemple : Mme., Mr., Docteur, Me., et Jr., Sr.)
 -   Type de téléphone (exemple : Téléphone, Mobile, Fax..)
--   Fournisseurs de téléphonie mobile (exemple : orange, SFR, Free,...)
--   Messagerie - Chat : (exemple: Yahoo, MSN, Skype, ... )
+-   Opérateurs de téléphonie mobile (exemple : orange, SFR, Free,...)
+-   Messagerie instantanée : (exemple: Yahoo, MSN, Skype, ... )
 -   Type de site Web : (exemple : Personnel,Entreprise, Facebook, Linkedln, Twitter,...)
--   Type d'adresse : (exemple : Principale, domicile, Bureaux, Compta, Facturation,..). Notez que l'adresse de facturation est attribuée lorsque les membres contribuent ou paient les frais d'inscription et d'inscription en ligne. Le type d'adresse ne doit pas contenir d'espaces.(ex : "Résidence secondaire", n'est pas permis).
-
-Les choix des Moyens de communication préférées (par exemple, Téléphone, Email, Courrier postal, SMS) dans le formulaire d'édition/saisie de contact peuvent également être modifiés. Aller à **Administrer> Communications> Méthodes de communication préférées**.
+-   Type d'adresse : (exemple : Principale, domicile, Bureaux, Compta, Facturation,..). Notez que l'adresse de facturation est attribuée lorsque les membres contribuent ou paient les frais d'inscription et d'inscription en ligne. Le type d'adresse ne doit pas contenir d'espaces. (ex : "Résidence secondaire", n'est pas permis).
 
 ![image](../img/Fr_listes_deroulantes.PNG)
 
-Les choix de Méthodes de communication préférées (par exemple, Téléphone, Email, Courrier postal, SMS) dans le formulaire d'édition / saisie de contact peut également être modifié.  Aller à **Administrer> Communications> Méthodes de communication préférées**.
+Les choix des Moyens de communication préférés (par exemple, Téléphone, Email, Courrier postal, SMS) dans le formulaire d'édition/saisie de contact peuvent également être modifiés. Aller à **Administrer> Communications> Méthodes de communication préférées**.
+
+Les choix de Méthodes de communication préférées (par exemple, Téléphone, Email, Courrier postal, SMS) dans le formulaire d'édition / saisie de contact peuvent également être modifiés.  Aller à **Administrer> Communications> Méthodes de communication préférées**.
 
 La modification des options de liste déroulante qui définissent des données, telles que Type d'activité, Relations, etc., ne relève pas du champ d'application de ce chapitre. Voir *Organiser vos données* et les sections des différents composants CiviCRM.
 
 Modification des préférences d'affichage
 ----------------------------------------
 
-S'il existe des types d'activités ou des catégories de données que vous ne souhaitez pas utiliser, vous pouvez faire que ces champs et ces onglets ne s'affichent pas lorsque vos utilisateurs utilisent CiviCRM. Ce qui permet de faciliter l'utilisation quotidienne des utilisateurs. Pour cela allez à : **Administer > Personnaliser les données et écrans > Préférences d'affichage**.
-Ensuite : **Informations à afficher** : vous pouvez modifier les onglets disponibles en cochant ou décochant les cases appropriées pour voir ce qui est nécessaire lorsque vous consulterez les enregistrements de contact.
+S'il existe des types d'activités ou des catégories de données que vous ne souhaitez pas utiliser, vous pouvez faire que ces champs et ces onglets ne s'affichent pas à vos utilisateurs. Ce qui permet de faciliter l'utilisation quotidienne des utilisateurs. Pour cela allez à : **Administer > Personnaliser les données et écrans > Préférences d'affichage**.
+Ensuite : **Informations à afficher** : vous pouvez modifier les onglets disponibles en cochant ou décochant les cases appropriées pour voir ce qui est nécessaire lorsque vous consulterez les enregistrements de contacts.
 
 ![Display Preferences Viewing Contacts](../img/Viewing%20Contacts.png)
 
-Par exemple, si votre organisation n'utilise pas les Dossiers ou les Subventions, vous pouvez les décocher. Ces onglets ne s'afficheront plus dans l'interface utilisateur. Si vous décidez plus tard de les utiliser, il suffit de ré-afficher l'onglet en cochant la case appropriée. Les informations stockées dans les onglets que vous masquez restent dans votre base de données. Vous pouvez masquer les onglets que vous avez déjà utilisés, et lorsque vous choisirez de les afficher à nouveau, toutes les informations s'afficheront comme auparavant.
+Par exemple, si votre organisation n'utilise pas les Dossiers ou les Subventions, vous pouvez les décocher. Ces onglets ne s'afficheront plus dans l'interface utilisateur. Si vous décidez plus tard de les utiliser, il suffit de ré-afficher l'onglet en cochant la case appropriée. Les informations stockées dans les composants que vous masquez restent dans votre base de données. Vous pouvez masquer les composants que vous avez déjà utilisés, et lorsque vous choisirez de les afficher à nouveau, toutes les informations s'afficheront comme auparavant.
 
 Vous pouvez choisir les informations qui apparaitront sur les fiches de contact en cochant ou décochant les cases appropriées en regard de **Information éditables**:
 
 ![Display Preferences Editing Contacts](../img/Editing%20Contacts.png)
 
-Par exemple, si votre organisation ne collecte pas d'informations démographiques ou de préférences de communication, vous pouvez les décocher pour rationaliser l'écran d'édition. Comme pour les préférences des *informations à afficher*, toutes les informations contenues dans les champs que vous choisissez de ne pas afficher restent dans votre base de données et vous pouvez choisir de l'afficher à tout moment en cochant de nouveau les cases de ce paramètre.
+Par exemple, si votre organisation ne collecte pas d'informations démographiques ou de préférences de communication, vous pouvez les décocher pour rationaliser l'écran d'édition. Comme pour les préférences des *informations à afficher*, toutes les informations contenues dans les champs que vous choisissez de ne pas afficher restent dans votre base de données et vous pouvez choisir de l'afficher à tout moment en cochant de nouveau les cases de ces paramètres.
 
 ### Désactiver les boites de dialogue (popup)
 
@@ -59,13 +59,13 @@ Vous pouvez modifier le paramétrage de recherche par défaut de CiviCRM dans **
 
 -   **Inclure le surnom** : (choisir Oui ou Non): Si vous choisissez Oui, le contenu du champ Surnom sera automatiquement inclus lorsque les utilisateurs effectueront une recherche par nom.
 
--   **Inclure une pagination alphabétique** : (choisissez Oui ou Non): Si vous choisissez Oui, une barre apparaît en haut de vos résultats de recherche vous permettant de choisir une lettre de l'alphabet. En cliquant sur A, par exemple, vous accédez à une page affichant uniquement les contacts commençant par A.
+-   **Inclure une pagination alphabétique** : (choisissez Oui ou Non): Si vous choisissez Oui, une barre apparaît en haut de vos résultats de recherche vous permettant de choisir une lettre de l'alphabet. En cliquant sur C par exemple, vous accédez à une page affichant uniquement les contacts commençant par C.
 
 -   **Inclure la clause « order by »** (Choisissez Oui ou Non): Si vous choisisez NON, les résultats de recherche ne seront pas ordonnés.
 
--   **Délai d'attente de cache de groupe intelligent**: Détermine la fréquence à laquelle le cache de groupe intelligent est actualisé. Pour la plupart des sites cette valeur ne doit pas être définie à zéro, car cela signifie pas de mise en cache du tout et ralentira votre site. Même sur les sites où les données de contact changent fréquemment, la valeur minimale proposée est de 5 minutes.
+-   **Délai d'attente de cache de groupe intelligent**: Détermine la fréquence à laquelle le cache de groupe intelligent est actualisé. Pour la plupart des sites cette valeur ne doit pas être définie à zéro, car cela signifie pas de mise en cache du tout et ralentira votre site. Même sur les sites où les données des contacts changent fréquemment, la valeur minimale proposée est de 5 minutes.
 
--   **Expiration de la mémoire cache des groupes dynamiques**: Détermine la fréquence à laquelle le cache de groupe intelligent est actualisé. Pour la plupart des sites cette valeur ne doit pas être définie à zéro, car cela signifie aucune mise en cache t et ralentira votre site. Même sur les sites où les données de contact changent fréquemment, la valeur minimale proposée est de 5 minutes.
+-   **Expiration de la mémoire cache des groupes dynamiques**: Détermine la fréquence à laquelle le cache de groupe intelligent est actualisé. Pour la plupart des sites cette valeur ne doit pas être définie à zéro, car cela signifie aucune mise en cache et ralentira votre site. Même sur les sites où les données de contact changent fréquemment, la valeur minimale proposée est de 5 minutes.
 
 -   **Recherche de contacts avec autocomplétion**: Il s'agit d'une série de cases à cocher pour les champs de contact de base (nom, courriel, téléphone, etc.). Les champs cochés apparaissent dans la liste des résultats de la saisie semi-automatique qui s'affichent lorsque vous utilisez la barre de recherche rapide en haut à gauche de tous les écrans.
 
@@ -81,11 +81,9 @@ Personnalisation des préférences de date
 L'affichage par défaut des dates est définie sur **Administer> Localisation> Formats de date**.
 Vous pouvez remplacer les paramètre par défaut et définir la plage de dates autorisées pour les types de champs spécifiques à :  **Administer> Données et écrans personnalisés> Préférences de date**
 
-:-:
-
 Par défaut, CiviCRM fournit des fourchettes de date sur des champs de date spécifiques.
 
-Par exemple, la fourchette par défaut pour les dates d'activité est 20 ans avant l'année en cours jusqu'à 10 ans au-delà de l'année en cours. Si vous souhaitez suivre les activités qui ont eu lieu, disons, il ya 25 ans, vous devez modifier le nombre d'années d'activités à consulter pour vos utilisateurs finaux.
+Par exemple, la fourchette par défaut pour les dates d'activité est 20 ans avant l'année en cours jusqu'à 10 ans au-delà de l'année en cours. Si vous souhaitez suivre les activités qui ont eu lieu, disons,...il ya 25 ans !, vous devez modifier le nombre d'années d'activités à consulter pour vos utilisateurs finaux.
 
 Personnalisation du menu de navigation
 --------------------------------------
@@ -124,8 +122,8 @@ Si vous avez du personnel ou des bénévoles qui saisissent souvent manuellement
 7. Une fois que vous avez choisi un type de contact, un autre champ déroulant apparaîtra à droite avec la liste des champs disponibles. Choisissez le champ que vous désirez. 
 8.  Si le texte qui apparaît automatiquement dans le champ **Nom de champ** n'est pas ce que vous souhaitez afficher sur le formulaire, vous pouvez en choisir un autre.  
 9.  Si les enregistrements saisis dans ce champ doivent obligatoirement contenir des données alors cochez la case **Obligatoire?**.
-10. Utilisez les champs **Aide avant** et **Aide après** pour ajouter les instrustions que vous souhaitez afficher à ceux qui effectuent la saisie des données.
-11. Vous pouvez utiliser le champ **Numéro d'ordre** pour modifier l'ordre dans lequel les champs sont affichés sur le formulaire. Les nombres inférieurs sont affichés devant des nombres plus élevés.
+10. Utilisez les champs **Aide avant** et **Aide après** pour ajouter les instructions que vous souhaitez afficher à ceux qui effectuent la saisie des données.
+11. Vous pouvez utiliser le champ **Numéro d'ordre** pour modifier l'ordre dans lequel les champs sont affichés sur le formulaire. Les nombres inférieurs sont affichés devant les nombres plus élevés.
 12. Cliquez sur **Enregistrer et Nouvelle entrée** pour ajouter d'autres champs, et **Enregistrer** lorsque vous avez terminé.
 13. Vous serez redirigé vers un écran répertoriant tous vos champs et leurs paramètres. Cliquez sur **Prévisualisation(tous les champs)** pour vous assurer que votre formulaire ressemble à ce que vous souhaitez. Cliquez sur **Utiliser (mode de création)** pour accéder à la page contenant votre formulaire. Copiez le lien et utilisez-le pour créer un élément de menu de navigation (voir la section précédente pour les instructions).
 
@@ -134,10 +132,10 @@ Personnalisation des écrans de recherche
 
 Pour cela:
 
-1.  Créer ou ouvrir un profil et cochez "Résultat de recherche" si vous voulez utiliser ce profil pour afficher d'autres colonnes de résultats lors de recherches simples ou multicritères. (connus sous le nom de résultats de recherche dans 4.1 et précédents):
+1.  Créer ou ouvrir un profil et cochez "Résultat de recherche" si vous voulez utiliser ce profil pour afficher d'autres colonnes de résultats lors de recherches simples ou multicritères. 
 2.  Lorsque vous ajoutez des champs à ce profil, vous devez définir la "Visibilité" pour les champs sur "Pages publiques" et cocher la case" Colonne des résultats".
 
-Lorsque vous effectuez une "Recherche multicritères", utilisez le menu déroulant **Views For Display Contacts** en haut à droite de la page pour sélectionner votre profil (voir image ci-dessous).
+Lorsque vous effectuez une **Recherche multicritères**, utilisez le menu déroulant **Views For Display Contacts** en haut à droite de la page pour sélectionner votre profil (voir image ci-dessous).
 
 ![Customize Search Views](../img/configure-customize-search-views.png)
 
