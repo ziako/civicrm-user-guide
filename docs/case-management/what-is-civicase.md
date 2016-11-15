@@ -1,7 +1,7 @@
 Qu'est-ce que CiviCase?
 =======================
 
-CiviCase est un outil pouvant gérer et suivre une séquence d'interactions entre différentes personnes, internes ou externes à votre organisation.
+CiviCase est un outil de gestion dossiers permettant de faire le suivi d'une séquence d'interactions entre différentes personnes, internes ou externes à votre organisation.
 
 Un dossier peut être utilisé pour:
 
