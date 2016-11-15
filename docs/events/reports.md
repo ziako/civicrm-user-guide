@@ -1,75 +1,40 @@
-Reports
-=======
+Rappports
+=========
 
-There are a number of techniques for reporting on and analysing your
-events and participants.
+Il existe plusieurs moyens pour analyser et faire un rapport de vos événements et participants.
 
-The **event dashboard** gives a quick overview of your upcoming events
-showing for each event the number of registrations and their statuses
-(how many are registered, how many are counted, how many are pending for
-different reasons). The dashboard is limited to 12 events scheduled to
-start at a date closest to today. This is most likely not to be
-sufficient to organizations with many scheduled events.
+Le **Tableau de bord des événements ** donne un aperçu rapide de vos événements à venir, montrant pour chaque événement le nombre d'inscriptions et leur statut ( enregistrés, en attente, rôle, date d'inscrition, montat inscription,...). Le tableau de bord est limité à 12 événements programmés trié par date la plus récente. Il est fort probable que cela ne soit pas suffisant pour les organisations ayant de nombreux événements planifiés.
 
-This chapter outlines other ways that provide more detailed and
-customised analysis using CiviCRM's search features and CiviReport.
+Ce chapitre décrit d'autres façons d'utiliser des analyses plus détaillées et personnalisées à l'aide des fonctions de recherche de CiviCRM et de CiviReport.
 
-If you are interested in the financial aspects of events, you may also
-find the *Reports and analysis* chapter in *Contributions* useful.
+Si vous êtes intéressé par les aspects financiers des événements, vous pouvez également voir le chapitre *Rapports et analyse* dans *Contributions*.
 
-Searching based on participant data
------------------------------------
+**Recherche en fonction des données des participants**
+--------------------------------------------------
 
-CiviCRM makes an important distinction between contacts and event
-participants. Sometimes it is useful to get the answer to your event
-related question in terms of contacts, e.g. which contacts came to
-events in 2011. Other times it is more useful to have the answer in
-terms of participants, e.g. how many training sessions did we deliver as
-part of our sexual health education programme this year. It is important
-to take this into consideration when carrying out a search for event
-attendees.
+CiviCRM fait une distinction importante entre les contacts et les participants à l'événement. Parfois, il est utile d'obtenir la réponse aux questions liées à l'événement en termes de contacts. Exemple : Quels sont les contacts venus à des événements en 2015? Parfois, il peut être plus utile d'avoir la réponse en termes de participants : exemple : Combien de séances de formation avons-nous organisées dans le cadre de notre programme d'éducation en santé sexuelle cette année?  Il est donc important de prendre cela en considération lors de la réalisation d'une recherche sur les participants à l'événement.
 
-The **Find participants** search allows you to search based on
-participant data and return participant data. The **Advanced
-search** allows you to search based on most participant information and
-combine that with other contact information and return contacts. You
-can also choose **Participant** from the **Display Results As** column
-to show participants rather than contacts.
+Dans le menu **Recherche > Rechercher des participants**  permet de rechercher sur la base des données des participants et de retourner les données des participants. La **Recherche multicritères**  permet de rechercher en fonction de la plupart des informations des participants et de les combiner avec d'autres informations de contact. Vous pouvez également choisir **Participants à l'événement** dans l'onglet **Type de résultats**  pour afficher les participants plutôt que les contacts.
 
-Searching based on these criteria gives you access to simple totals. You
-can also export your search results as CSV for further analysis in your
-spreadsheet software.
+La recherche en fonction de ces critères vous donne accès à des totaux simples. Vous pouvez également exporter vos résultats de recherche en format CSV pour une analyse plus poussée dans votre tableur.
 
-Event and participant reports
------------------------------
 
-Reports have several features that cannot be accomplished by search. For instance, you cannot aggregate data from multiple events at once or
-limit the date of registration very flexibly. Also, repeating the same
-searches over and over can be very time consuming. Searches can be set
-as Smart Groups but this leads to a proliferation of groups.
+Rapports d'événements et de participants
+----------------------------------------
 
-The solution is to set up reports for each event or a collection of
-events. The reports can be automatically assigned to a designated
-submenu (e.g. under Events > Reports) or made available as dashlets for
-the main dashboard (this is described in a subsection below).
+Les rapports ont des caractéristiques qui ne peuvent pas être accomplies par les fonctions de recherche. Par exemple, vous ne pouvez pas agréger des données à partir de plusieurs événements à la fois ou limiter la date d'enregistrement de manière très flexible. En outre, répéter les mêmes recherches à plusieurs reprises peut prendre beaucoup de temps. Les recherches peuvent être définies comme des groupes intelligents, mais cela entraîne une prolifération de groupes.
 
-Out of the box, CiviCRM comes with four reports designed to help you
-analyse events. Of these, **Event Participants List** is the most
-useful. It will display both participant and individual data and all
-custom data. All of these can also be used as filters.
+La solution consiste à créer des rapports pour chaque événement ou une série d'événements. Les rapports peuvent être automatiquement affectés à un sous-menu désigné (par exemple sous Événements> Rapports) ou mis à disposition sous forme de sous-menu pour le tableau de bord principal (cela est décrit dans la sous-section ci-dessous).
 
-**Attendee List** provides a list of event attendees and can be filtered
-to provide provide a list for just one event. You add one blank column
-on the left of the list and tone, two or three at the right of the list
-and so create an event sign up sheet. 
+CiviCRM est livré avec quatre rapports types conçus pour vous aider à analyser les événements. Parmi ceux-ci, **La liste des participants à l'événement** est la plus utile : affichage des données individuelles ainsi que toutes les données personnalisées. Tous ces éléments peuvent également être utilisés comme filtres.
 
-The **Event Income Detail** and **Event Income Summary** work
-together to show details of revenue from events. The summary report is
-suitable for showing total income for a series of events, all your
-conference in 2011, for example. Clicking on one of those events will
-give you more details about the event breakdown of the income per role
-and per status. It can also be displayed in graphical form as Pie Chart
-or Bar Chart.
+Rapports type
+-------------
+
+**Liste des participants** fournit une liste des participants aux événements et peut être filtré pour éditer une liste pour un seul événement. Vous pouvez ajouter une colonne vierge sur la gauche de la liste, deux ou trois à droite de la liste et vous créez ainsi une feuille d'inscription et d'émargement à l'événement.(onglet Display option
+
+Les rapports **Event Income Detail** et **Event Income Summary**  montrent les détails et la synthèse des recettes des événements. Le rapport de synthèse est adapté pour montrer le revenu total pour une série d'événements : toutes vos conférences en 2015, par exemple. En cliquant sur l'un de ces événements, vous obtiendrez plus de détails sur la répartition des recettes par rôle et par statut. Il peut également être affiché sous forme graphique ou graphique à barres.
+
 
 ### Create an event report from a template
 
