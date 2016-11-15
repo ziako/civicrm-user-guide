@@ -87,7 +87,7 @@ pages:
     - 'Event templates': 'events/event-templates.md'
     - 'Rapports': 'events/reports.md'
     - 'Données personnalisées': 'events/custom-data-for-events.md'
-    - 'Repeating Events': 'events/repeating-events.md'
+    - "Répéter les Evénements": 'events/repeating-events.md'
 - Membership:
     - 'What is CiviMember': 'membership/what-is-civimember.md'
     - 'Defining memberships': 'membership/defining-memberships.md'
