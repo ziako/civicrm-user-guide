@@ -73,6 +73,8 @@ C'est ici que vous pouvez activer ou désactiver les composants pour votre syst�
 
 Lorsque vous installez CiviCRM pour la première fois, les composants les plus utilisés (CiviContribute, CiviEvent, CiviMail, CiviMember, CiviReport) sont déjà activés. Si vous n'avez pas besoin de ces composants, vous pouvez les désactiver. Vous pouvez également activer tout ou partie de CiviCampaign, CiviCase, CiviGrant et CiviPledge. Vous pouvez modifier cette page à tout moment pour activer ou désactiver les composants.
 
+![image](../img/Fr_activer_composant.PNG)
+
 Vous pouvez désactiver un composant que vous avez déjà utilisé. Les données et informations contenues dans le composant sont conservées et seront toujours là si vous le réactivez. Il serait anormal de désactiver un composant que vous avez déjà utilisé. Si vous souhaitez simplifier le menu d'administration et la page de recherche avancée, une meilleure façon de faire  peut consister à utiliser les autorisations (voir le chapitre Autorisations et contrôle d'accès).
 
 ### Préférences d'affichage
