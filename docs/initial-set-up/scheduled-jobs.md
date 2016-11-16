@@ -1,103 +1,47 @@
-Scheduled jobs
-==============
+Travaux programmés
+==================
 
-CiviCRM relies on a number of scheduled jobs that are run on a regular
-basis to keep data up to date and to perform certain tasks. These jobs
-must be triggered by a [cron](http://en.wikipedia.org/wiki/Cron) that
-runs regularly on your web hosting server.
+CiviCRM s'appuie sur un certain nombre d'actions planifiées qui sont exécutés régulièrement pour maintenir les données à jour et pour effectuer certaines tâches. Ces travaux doivent être déclenchés par un [cron](http://fr.wikipedia.org/wiki/Cron) qui s'exécute régulièrement sur votre serveur d'hébergement Web.
 
-Examples of scheduled jobs include:
+Voici des exemples d'actions planifiés:
 
--   the membership processing job, which updates membership statuses
--   the event waiting list job, which invites people on the waiting list
-    to register for events when spaces become available
--   the CiviMail send and process script which handle the sending and
-    processing of emails
--   the CiviReport scripts which handle the emailing of reports on a
-    regular basis.
+-   Le traitement des adhérents, pour mettre à jour les statuts d'adhésion.
+-   Inviter les personnes en liste d'attente à s'inscrire aux événements lorsque des places sont disponibles.
+-   Le script  d'envoi et de traitement de CiviMail qui gère l'envoi et le traitement des emails
+-   Les scripts CiviReport qui gèrent l'envoi périodique de documents par courrier électronique  
 
-Some jobs need to be run very frequently, for example the email send
-task tends to be run once every 5 or 10 minutes. Others need to be run
-less frequency, for example the membership update script may be run just
-once a day.
+Certains travaux doivent être exécutés très fréquemment, par exemple la tâche d'envoi de courrier électronique a tendance à être exécuté une fois toutes les 5 ou 10 minutes. D'autres doivent être exécutés moins fréquement, par exemple le script de mise à jour d'adhésion peut n'être exécuté qu'une fois par jour.
 
-There are two ways of configuring scheduled jobs:
+Il existe deux façons de configurer les tâches planifiées:
 
--   via the user interface, which you can configure at **Administer >
-    System Settings > Scheduled Jobs** and a single consolidated cron
-    job
--   by configuring multiple cron jobs for specific tasks
+-   Via l'interface utilisateur, que vous pouvez configurer à l'option **Administer> Paramètres système> Travaux programmés**.
+-   En configurant plusieurs jobs cron pour des tâches spécifiques.
 
-These methods are discussed below.
+Ces méthodes sont développées ci-dessous.
 
+## Qu'est-ce que un cron ?
 
-## What is cron?
+Cron (pensez "**cron** ology" ou "**cron** ograph") est un planificateur automatique basé sur le temps qui déclenche certains programmes à exécuter sur votre serveur web. D'une manière générale, cron (également connu sous le nom «cronjob») peut être configuré dans votre panneau de contrôle d'hébergement Web ou par l'administrateur du serveur en charge de votre hébergement web. Nous vous recommandons de choisir l'hébergement web qui offre cron comme un service gratuit.
 
-Cron (think "**cron**ology" or "**cron**ograph") is a time-based
-automatic scheduler that triggers certain programs to run on your web
-server. Generally speaking, cron (also known as 'a cronjob') can be
-setup in your web hosting control panel or configured by the server
-administrator in charge of your web hosting. We recommend choosing web
-hosting that offers cron as a free service.
+Avant que les tâches planifiées configurées via l'interface utilisateur ne fonctionnent réellement, vous devrez configurer un travail CRON du serveur Web. Il existe des exemples de configuration CRON dans les page wiki : [Exécution des scripts de ligne de commande via URL] (http://wiki.civicrm.org/confluence/display/CRMDOC/Running+Command-line+Scripts+via+URL) .
 
-Before scheduled jobs configured via the user interface will actually
-work you will need to configure a web server CRON job. There are CRON
-configuration examples found in the [Running Command-line Scripts via
-URL](http://wiki.civicrm.org/confluence/display/CRMDOC/Running+Command-line+Scripts+via+URL) wiki
-page.
+## Configuration des travaux programmés via l'interface utilisateur
 
+L'interface utilisateur des travaux programmés est conçue pour faciliter la configuration des tâches planifiées et éviter de devoir créer ou modifier une tâche cron chaque fois que vous souhaitez effectuer une modification dans un travail planifié. Dans la plupart des petites installations les actions doivent être bien configurées pour exécuter les tâches planifiées via l'interface utilisateur. Les sites plus importants devraient envisager de créer pour chaque tâche un cron de la manière habituelle. Cela nécessite certaines compétences en administration système.
 
-## Configuring Scheduled Jobs via the user interface
+La page Tâches périodiques (**Administer**> **Paramètres système**> **Travaux programmés**) est conçue pour faciliter la configuration des tâches planifiées et le contrôle de leur dernière exécution. Il affiche une liste de tous les travaux planifiés disponibles par défaut. Vous pouvez modifier chacun d'eux et régler sa fréquence (horaire, quotidienne, hebdomadaire, mensuelle, trimestrielle, annuelle ou chaque fois que le cron est exécuté, ce qui est généralement toutes les 5-10 minutes), les paramètres pertinents et la date/heure la plus ancienne pour la Première/Prochaine exécution de la tâche
 
-The user interface for scheduled tasks is designed to make it easy for
-people to set up scheduled jobs, and avoid having to create or edit a
-cron job each time you want to make a change to a scheduled job. Most
-smaller installations should be fine configuring and running scheduled
-jobs via the user interface. Larger sites should consider creating cron
-jobs in the normal way for each task. That requires some system
-administration skills.
+Vous pouvez trouver une liste à jour de tous les travaux planifiés et des paramètres sur la page wiki : [Gestion des tâches planifiées] (http://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled + Jobs).
 
-The Scheduled Jobs page (**Administer**> **System Settings** >
-**Scheduled Jobs**) is designed to make it easy to set up scheduled jobs
-and to monitor when they were last run. It shows a list of all available scheduled
-jobs. You can edit each one and set its frequency (hourly, daily, weekly, monthly, quarterly, yearly or every time cron is run which is typically every 5-10 minutes), any relevant parameters, and the earliest date/time for the first/next execution of the job.
+Certaines tâches effectuent des actions spéciales de mise à jour de données et ne sont pas conçues pour être exécutées automatiquement ou à plusieurs reprises. Ce sont: "Mettre à jour les salutations et les destinataires" et "Fixer les dates de rappel du renouvellement". Les détails sur la façon de les exécuter sont expliqués sur la page wiki : [Gestion des tâches planifiés] (http://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs).
 
-You can find an up-to-date list of all scheduled jobs and the parameters
-that can be sent to them on the [Managing Scheduled
-Jobs](http://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs)
-wiki page.
+## Exécution manuelle des tâches planifiées
 
-Some jobs perform special data update tasks and are not designed to be
-run automatically or repeatedly. These are: "Update Greetings and
-Addressees" and "Set Renewal Reminder Dates". Details about when to run
-them are provided on the [Managing Scheduled
-Jobs](http://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs)
-wiki page.
+La page des tâches planifiées peut également être utilisée pour exécuter des tâches planifiées ponctuellement. Cela est utile pour certains travaux planifiés qui sont conçus pour être exécutés sur une base moins régulière, dont le travail de géocodage, les salutations et les destinataires. Exécutez l'action manuellement en cliquant sur le lien **Plus> Exécuter maintenant** pour le job choisi dans **Administer> Paramètres système> travaux programmés**.
 
+## Planification des tâches spécifiques via des tâches cron individuelles
 
+Les administrateurs système parlent plus souvent de tâches planifiés que de tâches cron. Si vous exécutez un grand nombre de tâche planifiées sur de grands ensembles de données, il est souhaitable d'avoir un administrateur système expérimenté pour les configurer à l'aide du cron. Cela permettra un contrôle plus précis au moment de l'exécution de ces tâches, ce qui peut être utile si ces processus ont une charge importante sur votre serveur.
 
-## Manual execution of scheduled jobs
+Notez que les tâches planifiées qui ont été exécutées via un travail cron individuel n'apparaissent pas automatiquement ici. Elles doivent être configurées pour le faire. Des détails sur le déclenchement de tâches spécifiques via la ligne de commande, l'URL, Drush et d'autres méthodes peuvent être trouvés sur la page : [Gestion des emplois planifiés] (http://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs).
 
-The scheduled jobs page can also be used to run scheduled jobs on a one-off basis. This is useful for some of the scheduled jobs that are
-designed to be run on a less regular basis, including the geo-coding job
-and the greetings and addressees job. Execute a job manually by
-clicking the **More > Execute Now** link for the given job
-at **Administer > System Settings > Scheduled Jobs**.
-
-
-
-## Scheduling specific jobs via individual cron tasks
-
-System administrators more commonly talk about scheduled jobs as cron
-jobs. If you run a lot of scheduled jobs on large data sets you may wish
-to consider getting an experienced system administrator to set these up
-using cron.  This will allow more granular control over when and how
-these jobs are executed, which may be useful if these processes put
-significant load on your server.
-
-Note scheduled jobs that were run via an individual cron job directly do
-not automatically appear here. They need to be configured to do so.
-Details on triggering specific jobs via command-line, URL, Drush and
-other methods can be found in the [Managing Scheduled
-Jobs](http://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs)
-wiki page.
