@@ -3,12 +3,12 @@ Personnalisation de l'interface utilisateur
 
 CiviCRM est très flexible et personnalisable. Ce chapitre donne des informations sur les nombreuses façons de modifier l'interface en fonction de vos besoins et de la rendre plus conviviable pour vos utilisateurs.
 
-La façon de personnaliser vous-même vos données est traité dans *Organiser vos données* et dans les chapitres *Ce que vous devez savoir* et *Configurer* dans les sections des différents composants CiviCRM (exemple : La personnalisation des types d'événements dans la section *Evénements*).
+La façon de personnaliser vous-même vos données est traitée dans *Organiser vos données* et dans les chapitres *Ce que vous devez savoir* et *Configurer* dans les sections des différents composants CiviCRM. (exemple : La personnalisation des types d'événements dans la section *Evénements*).
 
 Modifier les listes déroulantes
 -------------------------------
 
-Les options incluses dans les champs déroulants utilisés dans les formulaires de saisie/d'édition de contacts dans CiviCRM peuvent être modifiées (vous pouvez ajouter, renommer, désactiver ou supprimer des options) dans **Administer> Personnaliser les données et les écrans> Listes déroulantes**. Paramètres inclus:
+Les options incluses dans les champs déroulants utilisés dans les formulaires de saisie ou d'édition de contacts dans CiviCRM peuvent être modifiées (vous pouvez ajouter, renommer, désactiver ou supprimer des options) dans **Administer> Personnaliser les données et les écrans> Listes déroulantes**. Paramètres inclus:
 
 -   Le sexe : Homme, Femme
 -   Préfixe et suffixe individuel (exemple : Mme., Mr., Docteur, Me., et Jr., Sr.)
@@ -24,7 +24,7 @@ Les choix des Moyens de communication préférés (par exemple, Téléphone, Ema
 
 Les choix de Méthodes de communication préférées (par exemple, Téléphone, Email, Courrier postal, SMS) dans le formulaire d'édition / saisie de contact peuvent également être modifiés.  Aller à **Administrer> Communications> Méthodes de communication préférées**.
 
-La modification des options de liste déroulante qui définissent des données, telles que Type d'activité, Relations, etc., ne relève pas du champ d'application de ce chapitre. Voir *Organiser vos données* et les sections des différents composants CiviCRM.
+La modification des options des listes déroulantes qui définissent des données, telles que Type d'activité, Relations, etc., ne relève pas du champ d'application de ce chapitre. Voir *Organiser vos données* et les sections des différents composants CiviCRM.
 
 Modification des préférences d'affichage
 ----------------------------------------
@@ -32,13 +32,13 @@ Modification des préférences d'affichage
 S'il existe des types d'activités ou des catégories de données que vous ne souhaitez pas utiliser, vous pouvez faire que ces champs et ces onglets ne s'affichent pas à vos utilisateurs. Ce qui permet de faciliter l'utilisation quotidienne des utilisateurs. Pour cela allez à : **Administer > Personnaliser les données et écrans > Préférences d'affichage**.
 Ensuite : **Informations à afficher** : vous pouvez modifier les onglets disponibles en cochant ou décochant les cases appropriées pour voir ce qui est nécessaire lorsque vous consulterez les enregistrements de contacts.
 
-![Display Preferences Viewing Contacts](../img/Viewing%20Contacts.png)
+![Infocontact](../img/FR_contatct_afficher.PNG)
 
 Par exemple, si votre organisation n'utilise pas les Dossiers ou les Subventions, vous pouvez les décocher. Ces onglets ne s'afficheront plus dans l'interface utilisateur. Si vous décidez plus tard de les utiliser, il suffit de ré-afficher l'onglet en cochant la case appropriée. Les informations stockées dans les composants que vous masquez restent dans votre base de données. Vous pouvez masquer les composants que vous avez déjà utilisés, et lorsque vous choisirez de les afficher à nouveau, toutes les informations s'afficheront comme auparavant.
 
 Vous pouvez choisir les informations qui apparaitront sur les fiches de contact en cochant ou décochant les cases appropriées en regard de **Information éditables**:
 
-![Display Preferences Editing Contacts](../img/Editing%20Contacts.png)
+![Display Preferences Editing Contacts](../img/fr_contact_editables.PNG)
 
 Par exemple, si votre organisation ne collecte pas d'informations démographiques ou de préférences de communication, vous pouvez les décocher pour rationaliser l'écran d'édition. Comme pour les préférences des *informations à afficher*, toutes les informations contenues dans les champs que vous choisissez de ne pas afficher restent dans votre base de données et vous pouvez choisir de l'afficher à tout moment en cochant de nouveau les cases de ces paramètres.
 
@@ -46,7 +46,7 @@ Par exemple, si votre organisation ne collecte pas d'informations démographique
 
 L'interface utilisateur CiviCRM fait un usage étendu des boîtes de dialogue contextuelles (popup) pour permettre une visualisation rapide et une édition facile des données. Vous pouvez désactiver cette fonctionnalité et limiter l'interface à la navigation traditionnelle en désélectionnant la case à cocher **Enable popup** dans **Administrer> Personnaliser les données et les écrans> Préférences d'affichage **. Notez que CiviCRM sera plus lent avec cette fonction désactivée car chaque formulaire nécessitera une charge de page complète dans le navigateur.
 
-![Display Preferences Disabling Popup Forms](../img/Contact%20Dashboard.png)
+![Display Preferences Disabling Popup Forms](../img/Fr_Contact_popup.PNG)
 
 Personnalisation des préférences de recherche
 ---------------------------------------------
@@ -75,15 +75,18 @@ Vous pouvez modifier le paramétrage de recherche par défaut de CiviCRM dans **
 
 Si votre base de données est importante et que vos recherches sont lentes, envisagez de désactiver certaines de ces options pour augmenter votre vitesse.
 
-
 Personnalisation des préférences de date
 ----------------------------------------
 L'affichage par défaut des dates est définie sur **Administer> Localisation> Formats de date**.
-Vous pouvez remplacer les paramètre par défaut et définir la plage de dates autorisées pour les types de champs spécifiques à :  **Administer> Données et écrans personnalisés> Préférences de date**
+Vous pouvez remplacer les paramètre par défaut et définir la plage de dates autorisées pour les types de champs spécifiques à : **Administer> Données et écrans personnalisés> Préférences de date**
 
 Par défaut, CiviCRM fournit des fourchettes de date sur des champs de date spécifiques.
 
+![image](../img/Fr_date_avances.PNG)
+
 Par exemple, la fourchette par défaut pour les dates d'activité est 20 ans avant l'année en cours jusqu'à 10 ans au-delà de l'année en cours. Si vous souhaitez suivre les activités qui ont eu lieu, disons,...il ya 25 ans !, vous devez modifier le nombre d'années d'activités à consulter pour vos utilisateurs finaux.
+
+
 
 Personnalisation du menu de navigation
 --------------------------------------
