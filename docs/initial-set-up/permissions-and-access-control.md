@@ -1,73 +1,36 @@
-Permissions and access control
-==============================
+Autorisations et contrôle d'accès
+=================================
 
-Permissions (and the related concept of access control lists, or ACLs)
-are collections of rules which define access to various areas of the
-system. In essence, you create roles for your site, give these roles
-permissions to do certain things, and assign the roles to certain
-people.
+Les autorisations (concept connexe de listes de contrôle d'accès ou ACL) sont des ensembles de règles qui définissent l'accès à différentes zones d'action du système. Pratiquement, vous créez des rôles pour votre site, donnez à ces rôles des autorisations pour effectuer certaines tâches et affectez les rôles à certaines personnes autorisées.
 
-Permissions and ACLs allow you to grant access to: 
+Les autorisations et les listes de contrôle d'accès vous permettent d'accéder à:
 
--   Different areas of CiviCRM (e.g. CiviContribute, CiviCase and
-    CiviMail) to reflect the tasks the user is responsible for
--   Entities within the system (like contacts, contributions, etc.), and
-    how the user can interact or operate with them (e.g. view, edit,
-    delete)
+-  Différents composants de CiviCRM (par exemple : CiviContribute, CiviCase et CiviMail) pour permettre les tâches dont l'utilisateur est responsable 
+-  Les données au sein du système (par exemple : les contacts, les contributions, etc.) et comment l'utilisateur peut interagir ou opérer avec elles.(créer, voir, modifier, supprimer)
 
-Since permissions define who can see and do what on your site, it is
-important, from a security perspective, that you understand them well.
-It is very easy to check a permissions box without fully understanding
-what it does. A site with badly configured permissions may inadvertently
-expose your contacts' data. 
+Comme les permissions définissent qui peut voir et agir sur votre site, il est important, d'un point de vue de sécurité de bien les comprendre. Il est très facile de vérifier un paramètre d'autorisation sans comprendre complètement ce qu'il fait. Un site avec des autorisations mal configurées peut exposer par inadvertance les données de vos contacts.
 
-The difference between CMS permissions and CiviCRM ACLs
--------------------------------------------------------
+Quelle différence entre les autorisations CMS et les ACL CiviCRM ?
+------------------------------------------------------------------
 
-Permissions and ACLs are defined in two separate places: in the content
-management system (CMS) and in CiviCRM itself. Many organisations are
-able to do what they need to do with just CMS permissioning. Others need
-to use CiviCRM ACLs to provide more fine grained access control. 
+Les autorisations et les ACL sont définis en deux endroits distincts: dans le système de gestion de contenu (CMS) et dans CiviCRM lui-même. De nombreuses organisations peuvent faire simplement avec les autorisations du CMS. D'autres doivent utiliser les ACL de CiviCRM pour obtenir un contrôle d'accès plus précis.
 
-CMS permissions allow you to grant (or not grant) access to entire
-sections of CiviCRM to user roles, such as CiviMail, CiviEvent, etc.
-They also allow you to restrict the user's ability to view, edit, add
-and delete records such as contacts, events and contributions. However,
-this is an 'all or nothing' approach: you cannot differentiate between
-contacts who fall into different groups, for instance.
+Les autorisations CMS vous permettent d'accorder (ou non) l'accès à des sections entières de CiviCRM ainsi qu'à des rôles d'utilisateurs tels que CiviMail, CiviEvent, etc... Elles permettent également de restreindre la capacité de l'utilisateur à afficher, éditer, ajouter et supprimer des enregistrements tels que des contacts , Événements et contributions. Cependant, il s'agit d'une approche «tout ou rien»: vous ne pouvez pas différencier les contacts qui sont dans différents groupes, par exemple :
 
-Native CiviCRM ACLs give more fine grained control, so, for example, you
-can limit access to view, edit, create, delete and search to :
+Les ACL CiviCRM natives donnent un contrôle plus précis, ainsi vous pouvez limiter l'accès pour afficher, modifier, créer, supprimer et rechercher dans:
 
--   groups of contacts
--   a profile (this is a collection of existing and/or custom fields,
-    see "*Profiles*")
--   a set of custom fields
--   events (e.g. a user may access one event, but not others)
+-   Les goupes et les contacts
+-   Un profil (il s'agit d'une serie de champs existants et/ou personnalisés, voir "*Profils*")
+-   Un ensemble de champs personnalisés
+-   Certains événement (Par exemple, un utilisateur peut accéder à un événement, mais pas à d'autres)
 
-As a general rule, you should probably start with CMS permissions and if
-you can't do what you need to with these, look at using CiviCRM to
-enforce more granular access rights.
+En règle générale, vous pouvez commencer avec les autorisations CMS et si vous ne pouvez pas faire ce que vous souhaitez, configurez alors les ACL de CiviCRM pour renforcer plus précisement les droits d'accès.
 
-To clarify, here are two of examples of times when CiviCRM ACLs should
-be used instead of those in Drupal, Joomla! or WordPress:
+Pour clarifier, voici deux exemples d'instances où les listes ACL de CiviCRM devraient être utilisées plutôt que celles de Drupal, Joomla! Ou WordPress:
 
-1.  An organisation has a head office, and three regional offices spread
-    across the country. The event director working from the central
-    office must be able to view all events across every office, but the
-    event coordinators reporting to the director and local to each
-    regional office are only to have access to view and edit their own
-    events. Since a CMS access control list would only be able to
-    restrict access to view/edit/add/delete *all* or *no* events, a
-    CiviCRM ACL must be used.
-2.  Two sets of custom fields have been built, one for a team of
-    employees working in Paris managing a group of volunteers, and the
-    other collecting donor information in London. Each team should only
-    be able to access data held in their own set of custom fields,
-    however, a CMS access control list could only give them access to
-    all of the custom information, or none of it. In this case any CMS
-    rule controlling access to custom fields should be disabled, and a
-    CiviCRM ACL used instead.
+1.  Une organisation a un siège social, et trois bureaux régionaux répartis à travers le pays. Le responsable des événements travaillant à partir du bureau central doit être en mesure de visualiser tous les événements à travers chaque bureau. Chaque bureau régional est seulement autorisé à l'accès à ses propres événements pour voir et modifier. Étant donné qu'une liste de contrôle d'accès CMS ne peut restreindre l'accès aux événements pour voir/modifier/ajouter/supprimer, *une ACL CiviCRM doit être utilisée.*
+
+2. Deux ensembles de champs personnalisés ont été crées, l'un pour une équipe d'employés travaillant à Paris et un autre pour les donateurs à Londres. Chaque équipe doit uniquement pouvoir accéder aux données contenues dans son propre ensemble de champs personnalisés. Une liste de contrôle d'accès CMS ne peut leur donner accès qu'à toutes les informations personnalisées, ou à aucune d'entre elles. Dans ce cas, toute règle CMS contrôlant l'accès aux champs personnalisés doit être désactivée et une ACL CiviCRM doit être utilisée.
 
 CMS permissions
 ---------------
