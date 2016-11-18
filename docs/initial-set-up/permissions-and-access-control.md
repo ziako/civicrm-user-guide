@@ -32,84 +32,51 @@ Pour clarifier, voici deux exemples d'instances où les listes ACL de CiviCRM de
 
 2. Deux ensembles de champs personnalisés ont été crées, l'un pour une équipe d'employés travaillant à Paris et un autre pour les donateurs à Londres. Chaque équipe doit uniquement pouvoir accéder aux données contenues dans son propre ensemble de champs personnalisés. Une liste de contrôle d'accès CMS ne peut leur donner accès qu'à toutes les informations personnalisées, ou à aucune d'entre elles. Dans ce cas, toute règle CMS contrôlant l'accès aux champs personnalisés doit être désactivée et une ACL CiviCRM doit être utilisée.
 
-CMS permissions
----------------
+Autorisations CMS 
+-----------------
 
-All CMS have the same set of CiviCRM permissions, but each are found in
-different places, and differ slightly in appearance.
+Tous les CMS possèdent le même ensemble d'autorisations de CiviCRM, mais chacun se trouve dans des endroits différents et diffère légèrement en apparence.
 
-### Permissions in Drupal
 
-To access Drupal's permissions, go to the Drupal menu, choose the option
-**People** and click the **Permissions** tab in the top right corner of
-the pop-up window. Here you will find a long list of all possible
-operations/actions a user could perform in CiviCRM and Drupal, with
-columns for each existing role type. Checking an option in one of the
-columns will grant that role the ability to perform the action.
+### Autorisations dans Drupal
 
-You may create new roles and edit all existing ones. To edit roles,
-while in the **Permissions** tab click the button **Roles** toward the
-top right of the page.
+Pour acceder aux autorisation Drupal allez au menu Drupal et coisissez l'option **People** et cliquez sur l'onglet **Permissions** dans le coin supérieur droit de la fenêtre popup. Vous trouverez ici une liste de toutes les opérations ou actions possibles qu'un utilisateur peut effectuer dans CiviCRM et Drupal, avec des colonnes pour chaque type de rôle existant. La vérification d'une option dans l'une des colonnes confère à ce rôle la capacité d'exécuter l'action
+Vous pouvez créer de nouveaux rôles et modifier ceux déjà existants. Pour modifier les rôles, dans l'onglet **Permis**, cliquez sur le bouton **Rôles** en haut à droite de la page.
 
 ![image](../img/CiviCRM_Drupal_Roles.png) 
 
-Roles can be assigned to users in the following ways:
+Les rôles peuvent être attribués aux utilisateurs de la manière suivante:
 
--   Open a user's contact record (a contact in CiviCRM with a user
-    account), hit the **Actions** button at the top and select **User
-    Record** from the menu. When the next screen appears, click the
-    **Edit** tab (top right) and then scroll down to the section titled
-    **Roles**; here you may change their level of access.
--   As an administrator, go to the Drupal menu and select the option
-    **People**. When the list of active users appears, click on the
-    desired name to open their Drupal user profile, go to the **Edit**
-    tab at the top-right of the page, and then scroll down to the
-    **Roles** section.
+- Ouvrez l'enregistrement de contact d'un utilisateur (un contact dans CiviCRM avec un compte d'utilisateur), appuyez sur le bouton **Actions** en haut et sélectionnez **Enregistrement utilisateur** dans le menu. Lorsque l'écran suivant apparaît, cliquez sur l'onglet **Modifier** (en haut à droite), puis faites défiler la page vers la section intitulée **Rôles**, vous pourrez alors changer leur niveau d'accès.
+
+- En tant qu'administrateur, accédez au menu Drupal et sélectionnez l'option **Personne**. Lorsque la liste des utilisateurs actifs s'affiche, cliquez sur le nom souhaité pour ouvrir leur profil utilisateur Drupal, accédez à l'onglet **Modifier** en haut à droite de la page, puis faites défiler jusqu'à la section **Rôles**.
 
 
 
-### Permissions in Joomla!
+### Autorisations dans Joomla!
 
-Permissions in Joomla! can be found as follows:
+Les autorisations dans Joomla! peuvent être trouvées comme suit:
 
-1.  Log into the Joomla! administrative portal
-2.  Go to the **Components** menu and select **CiviCRM** from the list
-3.  In CiviCRM's menu, navigate to **Administer > User and
-    Permissions > Permissions (Access Control)**
-4.  Click the option **Joomla Access Control** at the top of the list
+1.  Connectez-vous à Joomla! en tant qu'administrateur. Vous accedez au Panneau d'administration : choisir **Configuration**
+2.  Dans la liste des **Composants** sélectionnez **CiviCRM** 
+3.  Lorsque l'écran suivant apparaît, cliquez sur l'onglet **Droits**, vous pourrez alors changer les niveaux d'accès.
+4.  Une fois les modifications effectuées cliquez sur **Enregistrer et fermer** en haut à gauche. 
 
-Joomla! has a different method of assigning permissions, in that each
-user group (role) is either a parent or child to another user group,
-where child user groups (those lower in the table) inherit the
-permissions set for those above them. Therefore, when editing the
-permissions assigned to a user group in the table, you may choose
-between:
+Joomla! a une méthode différente d'attribution des autorisations. Les droits d'accès des différents groupes dans Joomla sont organisés de manière hiérachique, chaque groupe héritant des droits de son parent. Chaque groupe d'utilisateurs (rôle) est un parent ou un enfant d'un autre groupe d'utilisateurs. Les groupes d'utilisateurs enfants (ceux de la table inférieure) héritent des autorisations définies pour les groupes au-dessus d'eux. Par conséquent, lors de la modification des autorisations attribuées à un groupe d'utilisateurs dans la table, vous pouvez choisir entre:
 
--   **Inherited**: if the user group above was given this permission, it
-    will also be able to perform the given action
--   **Allowed**: users in this user group are allowed to perform the
-    operation
--   **Denied**: users in this user group cannot perform the action
+-   **Hérité**: Si le groupe d'utilisateurs supérieur a cette autorisation, il sera également en mesure d'effectuer l'action donnée
+-   **Autorisé**: Les utilisateurs de ce groupe sont autorisés à effectuer l'action. 
+-   **Non autorisé**: Les utilisateurs de ce groupe ne peuvent pas effectuer l'action
 
-Note that Joomla! has two additional permissions not used by Drupal or
-Wordpress: **Configure Joomla! ACL** (user can configure Joomla! ACLs and
-is assigned all CiviCRM permissions) and **Show CiviCRM
-Component** (user can see CiviCRM in the Components list).
+Notez que Joomla! a deux autorisations supplémentaires non utilisées par Drupal ou Wordpress: **Configurer Joomla! AC ** (l'utilisateur peut configurer les listes ACL de Joomla! affectées à toutes les autorisations CiviCRM) et **Voir le composant CiviCRM** (l'utilisateur peut voir CiviCRM dans la liste des Composants).
 
 ![image](../img/joomla%20permissions_1.PNG)
 
-Finally, to assign one of these user groups to a user, or change their
-existing user group, ensure you are logged in as an administrator then
-do one of the following:
+Enfin, pour affecter un de ces groupes à un utilisateur ou pour modifier son groupe existant, assurez-vous d'être connecté en tant qu'administrateur, puis effectuez l'une des opérations suivantes:
 
--   Go to the user's contact record in CiviCRM, click the **Action**
-    button and select the option **User Record**. A section called
-    **Assigned User Groups** will be available to change roles.
--   Within the Joomla! administrative portal, under the **User** menu
-    click **User Manager**. All available users will be listed, and
-    clicking on a name will open a screen with the option to change
-    their account settings, including user group.
+-   Accédez à l'enregistrement de contact de l'utilisateur dans CiviCRM, cliquez sur le bouton **Action** et sélectionnez l'option **Group add contacts** Il suffira de sélectionner le groupe et valider par **Ajouter au groupe** 
 
+-   Dans l'administration de Joomla!, sous le menu **Utilisateur**. Tous les utilisateurs disponibles y sont répertoriés, et en cliquant sur un nom, vous ouvrirez un écran avec la possibilité de modifier les paramètres de leur compte, y compris le groupe d'utilisateurs : **Attribuer cet utilisateur à un ou plusieurs groupe**. N'oubliez pas de cliquer sur **Enregistrer et fermer**
 
 
 ### Access Control (Permissions) in Wordpress 
