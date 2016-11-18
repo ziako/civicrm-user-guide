@@ -70,7 +70,7 @@ Joomla! a une méthode différente d'attribution des autorisations. Les droits d
 
 Notez que Joomla! a deux autorisations supplémentaires non utilisées par Drupal ou Wordpress: **Configurer Joomla! ACL** (l'utilisateur peut configurer les listes ACL de Joomla! affectées à toutes les autorisations CiviCRM) et **See CiviCRM is installed** (l'utilisateur peut voir CiviCRM dans la liste des Composants).
 
-![image](../img/joomla%20permissions_1.PNG)
+![image](../img/Fr_joomla_acl.png)
 
 Enfin, pour affecter un de ces groupes à un utilisateur ou pour modifier son groupe existant, assurez-vous d'être connecté en tant qu'administrateur, puis effectuez l'une des opérations suivantes:
 
