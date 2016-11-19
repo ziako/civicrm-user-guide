@@ -182,13 +182,12 @@ Comme indiqué précédemment, les listes ACL de CiviCRM constituent une manièr
 
 > Un organisme de bienfaisance basé à Paris a trois bureaux régionaux et doit donner à son personnel de collecte de fonds la possibilité de créer et d'éditer des dossiers de contact pour les donateurs potentiels. Ils ont décidé que le service de collecte de fonds de chaque bureau ne peut avoir accès qu'à ses contacts locaux. Alors que l'autorisation "ajouter des contacts" peut être accordée aux utilisateurs authentifiés dans le CMS (Drupal, Joomla! Ou WordPress), si "voir tous les contacts" et "modifier tous les contacts" avait également été attribués de cette manière, il n'y aurait aucun moyen de différencier les trois groupes de donneurs selon leur lieu. Cela ne peut être réalisé qu'avec une ACL CiviCRM.
 
-Pour commencer, allez dans **Administer**> **Utilisateur et Permissions**> **Permisssion (Contôme d'accès)**. Cet écran vous permettra d'arriver à la liste de contrôle d'accès CMS, et les trois étapes à la gestion propre à CiviCRM.
+Pour commencer, allez dans **Administer**> **Utilisateur et Permissions**> **Permisssion (Contrôle d'accès)**. Cet écran vous permettra d'arriver à la liste de contrôle d'accès CMS, et les trois étapes à la gestion propre à CiviCRM.
 
 ### Gérer les rôles
 C'est ici que vous pouvez créer des rôles ACL. Par défaut, il existe "Administrateur" et "Enregistré" (connecté), mais seul le rôle d'administrateur peut être édité; «Enregistré» est un rôle réservé et de base pour le système.
-Cliquez sur "Ajouter Acl Role" to display a screen to create a new role with the following options:
 
-Clicking "Add Acl Role"  pour afficher un écran qui permettra de créer un nouveau rôle avec les options suivantes:
+Cliquez sur "Add Acl Role"  pour afficher un écran qui permettra de créer un nouveau rôle avec les options suivantes:
 
 -   **Label**: c'est le nom du rôle et sera visible aux utilisateurs
 -   **Valeur** :  Le changement de ce champ valeur va dissocier les enregistrements qui référencent cette option. Ce changement ne peut être annulé excepté en restaurant la valeur précédente.
@@ -196,7 +195,7 @@ Clicking "Add Acl Role"  pour afficher un écran qui permettra de créer un nouv
 -   **Poids**: donner au rôle un nombre pour déterminer sa place dans la liste (par exemple, "1" place le rôle en haut, tandis que "20" peut l'envoyer au bas, des nombres inférieurs apparaissent avant ceux plus élevés)
 -   **Actif?**: le rôle est-il actif ou non? Si vous désactivez cette option, la fonctionnalité peut cesser de fonctionner pour certains utilisateurs
 
-![image](../img/CiviCRM_ACL_civicrm-manage-roles.png)
+![image](../img/Fr_roles_ACL.PNG)
 
 ### Assigner des utilisateurs aux rôles ACL de CiviCRM
 
