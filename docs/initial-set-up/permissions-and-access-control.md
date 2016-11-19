@@ -203,7 +203,7 @@ Le groupe de contacts ACL peut maintenant être affecté à un rôle. Cliquez su
 -   **Assigné à**: Choisissez un groupe de contacts à affecter au rôle
 -   **Actif?**: Cette affectation est-elle active ou non?
 
-![image](../img/CiviCRM_ACL_civicrm-assign-users.png) 
+![image](../img/Fr_Assign_role_user.PNG)
 
 ### 3 - Gérer les ACL
 
