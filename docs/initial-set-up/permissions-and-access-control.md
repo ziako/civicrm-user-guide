@@ -226,5 +226,6 @@ Pour commencer à créer ces ACL, retournez à l'écran "Contrôle d'accès"  (*
 -   **Groupe** : Sélectionnez le groupe spécifique de contacts, de profil, de données personnalisées ou d'événements pour cette ACL
 - **Actif?**: est-ce que cette ACL est active?
 
-![image](../img/CiviCRM_ACL_civicrm-create-ACL.png)
+![image](../img/Fr_creer_acl.PNG)
+
 
