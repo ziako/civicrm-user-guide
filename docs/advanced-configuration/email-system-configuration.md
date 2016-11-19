@@ -1,71 +1,37 @@
-Email system configuration
-==========================
+Configuration de la messagerie électronique
+===========================================
 
-This chapter covers system configuration necessary so that CiviCRM can
-send and receive email. This is a complex task which requires system
-administrator level skills. The correct configuration of your email
-system is crucial to keep your server off spam lists and black lists.
+Ce chapitre traite de la configuration système nécessaire pour que CiviCRM puisse envoyer et recevoir des courriels. Il s'agit d'une tâche complexe qui nécessite des compétences du niveau administrateur système. La configuration correcte de votre système de courrier électronique est cruciale pour empêcher votre serveur de recevoir des spam ou des black lists.
 
-See the Email sections chapter on Set up for tasks necessary to set up
-the sending of messages once these email system configuration settings
-have been configured.
+Reportez-vous à la "Section des courriers électroniques" au chapitre "Configuration des tâches" pour configurer l'envoi des messages après que les paramètres de configuration du courrier électronique soient effectués.
 
-Some parts of the configuration are core CiviCRM functionality (basic
-sending and receiving of emails) whereas others (mass mailings) require
-that the CiviMAIL component be enabled.
+Certaines parties de la configuration sont une fonctionnalité native de CiviCRM (envoi et réception de courriels de base) alors que d'autres (envoi groupé) nécessitent l'activation du composant CiviMAIL.
 
-You will need to be able to change the configuration of your DNS, create
-email accounts, configure a cron job, read the headers of email
-messages, and possibly change the configuration of your SMTP server.
+Vous aurez peut-être besoin de modifier la configuration de votre DNS, créer des comptes de messagerie, configurer une tâche cron, lire les en-têtes des messages électroniques et éventuellement modifier la configuration de votre serveur SMTP.
 
-This chapter assumes you are running CiviCRM on a Linux server and that
-you are comfortable working with the shell and running some simple
-commands. Most of these steps will be similar on other operating
-systems, but you will need to adapt them to your system and tools.
+Ce chapitre suppose que vous exécutez CiviCRM sur un serveur Linux et que vous êtes à l'aise pour travailler avec le shell et exécuter des commandes simples. La plupart de ces étapes seront similaires sur d'autres systèmes d'exploitation, mais vous devrez les adapter à votre système et à vos outils.
 
-The configuration described works fine for mailings to up to about
-10,000 people. If you plan on sending email to hundreds of thousands of
-contacts, you should benchmark several options and consider a dedicated
-SMTP server. This more complex configuration is outside the scope of
-this book but you can find community contributed instructions on the
-CiviCRM documentation
-wiki. ([http://wiki.civicrm.org/confluence/display/CRMDOC/CiviMail+Installation](http://wiki.civicrm.org/confluence/display/CRMDOC/CiviMail+Installation)).
+La configuration décrite ici fonctionne bien pour les envois jusqu'à environ 10 000 personnes. Si vous prévoyez d'envoyer des courriels à des centaines de milliers de contacts, vous devriez comparer plusieurs options et envisager un serveur SMTP dédié. Cette configuration plus complexe est en dehors de la portée de ce livre, mais vous pouvez trouver des instructions fournies par la communauté sur le wiki de documentation CiviCRM : ([http://wiki.civicrm.org/confluence/display/CRMDOC/CiviMail+Installation](http://wiki.civicrm.org/confluence/display/CRMDOC/CiviMail+Installation)).
 
-In this chapter we'll use an external Gmail mailbox address to test
-configuration. So the first step is to create a Gmail account if you
-don't have one already; alternatively, you can use another address for
-testing the procedures in this chapter, but you will need to be able to
-view the source of the mails you receive.
+Dans ce chapitre, nous utiliserons une adresse de boîte aux lettres Gmail externe pour tester la configuration. Donc la première étape est de créer un compte Gmail si vous n'en avez pas déjà. Vous pouvez également utiliser une autre adresse pour tester les procédures de ce chapitre, mais vous devrez pouvoir afficher la source des messages reçus
 
-Once your system is properly configured we are going to use cron to
-trigger CiviCRM's **Scheduled Jobs** to ensure your scheduled mailings
-are sent.
+Une fois que votre système est correctement configuré, nous allons utiliser un cron CiviCRM dans **Travaux programmés** et s'assurer que vos envois programmés sont bien envoyés.
 
-Configuring outbound email service
-----------------------------------
+Configuration du service de messagerie sortant
+----------------------------------------------
+Les paramètres de messagerie sortante sont configurés sur: **Administer> Paramètres système> Courriel sortant (SMTP / Sendmail)**. Les choix sont : 
 
-Outbound email settings are configured at: **Administer > System
-Settings > Outbound Email (SMTP/Sendmail)**. The choices here are:
 ![Screen shot of mail choices](../img/Administer-System Settings-Outbound Email.png)
--   **mail()**: This is the default option and if it works for you, you
-    should use it.
--   **SMTP**: If you have a dedicated external mail server, specify its
-    details here. Bounce messages generated with SMTP are slightly more
-    complete than the ones from mail(), but there is no practical
-    benefit to using SMTP if you can use mail().
--   **Sendmail**: This option is kept for compatibility with older CiviCRM
-    versions.
--   **Disable Outbound Email**: Works as expected.
--   **Redirect to Database**: All emails will be recorded as archived mailings
-instead of being sent out. They can be found in the civicrm\_mailing_spool
-table in the CiviCRM database.
 
-After making a choice, send a test email to your account on Gmail and
-verify that you receive it.
+-   **mail()**: C'est l'option par défaut et si elle fonctionne pour vous, vous devez l'utiliser.
+-   **SMTP**: Si vous avez un serveur de messagerie externe dédié, veuillez en spécifier les détails ici. Les messages de rebond générés avec SMTP sont légèrement plus complets que ceux de mail (), mais il n'y a aucun avantage pratique à utiliser SMTP si vous pouvez utiliser mail ().
+-   **Sendmail**: Cette option est conservée pour la compatibilité avec les anciennes versions CiviCRM.
+-   **Désactiver l'envoi de courriels**: Fonctionne comme indiqué.
+-   **Redirection vers base de données**: Tous les e-mails seront enregistrés comme des envois archivés au lieu d'être envoyés. Ils peuvent être trouvés dans la table civicrm_mailing_spool de la base de données CiviCRM.
 
-If you receive the following error message, you'll need to configure a
-default FROM email address (covered in the chapter on CiviMail
-configuration).
+Après avoir fait votre choix, envoyez un email de test à votre adresse sur Gmail et vérifiez que vous le recevez.
+
+Si vous recevez le message d'erreur suivant, vous devrez configurer une adresse de courrier électronique "DE" par défaut (Voir chapitre sur la configuration de CiviMail).
 
 ```
 Sorry. A non-recoverable error has occurred.
@@ -74,12 +40,7 @@ Administer -> Configure -> Domain Information.
 The email address used may need to be a valid mail account with your email service provider.
 
 ```
-
-Once you have received the email, you will need to view the source.
-This is done in Gmail by clicking on "Show original" in the email you
-receive.
-
-The email should contain headers that resemble the following.
+Dès que vous avez reçu le courrier électronique, vous devrez consulter la source. Cela se fait dans Gmail en cliquant sur "Afficher l'original" dans l'e-mail que vous avez reçu. Le courrier électronique doit contenir une en-tête qui ressemblent à ce qui suit :
 
 ```
 Received: from yourmailserver.example.org (xxx.example.org
@@ -92,105 +53,50 @@ google.com: best guess record for domain of
 
 ```
 
-In particular:
+Explications : 
 
-*  "Received: from" header should correspond to your mail server and be
-properly configured. It might contain information about your hosting
-provider instead of your domain name. This is not a problem as long as
-the mail server is properly configured. If you have a dedicated IP
-address for your server, you should try to configure a reverse DNS that
-represents your organization instead of the default name.
+*"Received: from..."* Doit correspondre à votre serveur de messagerie et être correctement configuré. Il se peut que cette entête contienne des informations sur votre fournisseur d'hébergement au lieu de votre nom de domaine. Ce n'est pas un problème tant que le serveur de messagerie est correctement configuré. Si vous avez une adresse IP dédiée à votre serveur, vous devez essayer de configurer un DNS inverse qui représente votre organisation au lieu du nom par défaut.
 
-*  "Received-SPF" header should list "pass" or "neutral". Sender
-Policy Framework is described later in more detail.
+*"Received-SPF"*  L'en-tête doit indiquer "pass" ou "neutral". Sender Policy Framework (SPF) est décrit plus loin en détail.
 
-Sending mass mailing is resource intensive. We don't recommend sending
-email messages from budget hosting providers. The time you will spend
-troubleshooting will often cost more than upgrading to a more
-professional host. Check with your hosting provider to find out whether
-they limit the number of email messages you can send and whether they
-run PHP in safe mode.
+L'envoi de courrier en nombre important nécessite beaucoup de ressources. Nous ne recommandons pas d'envoyer des messages électroniques à partir de fournisseurs d'hébergement "low-cost". Le temps que vous passerez en dépannage coûtera souvent plus cher que l'abonnement chez un hôte plus professionnel. Vérifiez avec votre fournisseur d'hébergement  les limitations du nombre d'envoi par 24 heures ou par heure et s'il exécute PHP en mode sans échec.
 
-Some of your recipients' mail servers use DNS based blacklisting
-services (DNSBL) which keep a blacklist of IP addresses likely to send
-spam. Mail from these servers will be flagged as spam and not reach its
-intended destination. If your server is blacklisted (for instance,
-because enough of your recipients flagged your email as spam, or because
-another website on your server has been flagged as spam), you will need
-to contact the organizations that have blacklisted you and convince them
-to remove you from their list.
+Certains serveurs de messagerie de vos destinataires utilisent DNSBL (services de liste noire) qui gardent une liste noire d'adresses IP susceptibles d'envoyer du spam. Le courrier de ces serveurs sera marqué comme spam et n'atteindra pas sa destination. Si votre serveur est mis en liste noire (par exemple, parce que un nombre suffisant de destinataires ont marqué votre courrier électronique comme du spam, ou parce qu'un autre site Web sur votre serveur a été marqué comme spam), vous devrez contacter les organisations qui vous ont mis en liste noire et les convaincre de votre bonne foi.
 
-They are several websites that help you testing whether you are in a
-DNSBL. A web search for "blacklisting email" will turn some up. Test
-regularly to find whether you are on a blacklist.
+Il existe plusieurs sites Web qui vous aident à tester si vous êtes dans un DNSBL. Une recherche sur le Web pour "blacklisting email" va transformer certains envois. Testez régulièrement pour savoir si vous êtes sur une liste noire.
 
-Configuring sender policy framework (SPF)
------------------------------------------
+Configuration du Sender Policy Framework (SPF)
+----------------------------------------------
 
-By default, the Internet allows any mail server to send any email
-claiming to be from anyone. This makes it easy for spammers to forge
-addresses and send spam using your email address (or any other). SPF
-allows you to create a special DNS record listing the IP addresses of
-the mail servers that can legitimately send email from
-@*yourdomain.org*.
+Par défaut, Internet permet à tout serveur de messagerie d'envoyer un courrier électronique prétendant appartenir à n'importe qui. Cela permet aux spammeurs de fabriquer facilement des adresses et d'envoyer du spam à l'aide de votre adresse de courrier électronique (ou de tout autre). SPF vous permet de créer un enregistrement DNS spécial répertoriant les adresses IP des serveurs de messagerie qui peuvent légitimement envoyer des e-mails à partir de @*votredomaine.org
 
-If your domain name already has an SPF record, make sure that it
-includes the IP address of your CiviCRM mail server (which might be a
-different from the host used for the web server or from your mail
-servers), and if it doesn't, add this IP address.
+Si votre nom de domaine a déjà un enregistrement SPF, assurez-vous qu'il inclut l'adresse IP de votre serveur de messagerie CiviCRM (qui peut être différent de l'hôte utilisé pour le serveur Web ou de vos serveurs de messagerie). Si ce n'est pas le cas, ajoutez cette adresse IP.
 
-If you don't have an SPF record, consider adding one. You will need to
-add at least your mail server and CiviCRM server (if they are different)
-to the SPF record.
+Si vous n'avez pas d'enregistrement SPF, pensez à en ajouter un. Vous devrez ajouter au moins votre serveur de messagerie et le serveur CiviCRM (s'ils sont différents) à l'enregistrement SPF.
 
-You can read more about SPF at
-[http://www.openspf.org](http://www.openspf.org).
+Vous pouvez en savoir plus sur le SPF ici : [http://www.openspf.org](http://www.openspf.org)
 
-## Configuring inbound email processing
+## Configuration du traitement des e-mails entrants
 
-This section explains configuration for bounce processing and auto
-filing incoming emails. Configuring **Scheduled Jobs** to do the actual
-bounce processing is discussed later in this chapter.
+Cette section explique la configuration du traitement des rebonds et le réception automatique des courriels entrants. La configuration de **Tâches planifiées** pour effectuer le traitement des rebonds réels est développée plus loin dans ce chapitre.
 
-### Bounce processing
+### Traitement des rebonds
 
-CiviCRM can automatically receive the [bounced email
-notification](http://en.wikipedia.org/wiki/Bounce_message) and, based on
-the [type of bounce](http://tools.ietf.org/html/rfc3463) reported by the
-recipient's server, flag your contacts accordingly. To accomplish this
-you will need to set up an email mailbox to receive bounced email
-messages and a schedule the **Bounces Fetcher** job that will
-periodically read this mailbox and update your contacts in CiviCRM.
+CiviCRM peut recevoir automatiquement la [notification d'email renvoyée] (http://en.wikipedia.org/wiki/Bounce_message) et, selon le [type de rebond] (http://tools.ietf.org/html/rfc3463) signalé par le serveur du destinataire, impactant vos contacts en conséquence. Pour ce faire, vous devrez configurer une boîte aux lettres de messagerie pour recevoir des e-mails non reçus ainsi qu'un calendrier **job - Bounces Fetcher**  qui lira périodiquement cette boîte aux lettres et mettra à jour vos contacts dans CiviCRM.
 
-Administer > System Settings > Scheduled Jobs
+Administration> Paramètres système> Emplois planifiés
 
 ![Screen shot of bounce fetcher scheduled job](../img/administer-scheduledjobs.png)
 
-The bounce email address is an "invisible" email address visible only in
-the email message's envelope (hidden fields that precede the headers and
-message added by the user). Choose any name you like that is meaningful
-to you. In this example we have chosen *return*, so the email address we
-need to set up on a mail server for example.org is *return@example.org*.
+L'adresse e-mail de rebond est une adresse e-mail "invisible" que l'on voit uniquement dans les champs cachés qui précèdent les en-têtes et le message ajouté par l'utilisateur. Choisissez un nom significatif pour cela. Dans cet exemple, nous avons choisi *return*, l'adresse email que nous devons configurer sur un serveur de messagerie *example.org*  est *return@example.org*.
 
-For each email sent via CiviMail's mass mailing feature, a new unique
-"invisible" sender address is created using the [variable envelope
-return path or
-[VERP](http://en.wikipedia.org/wiki/Variable_envelope_return_path). When
-CiviCRM receives a bounce, it looks at the invisible sender address to
-decide which email bounced.
+Pour chaque e-mail envoyé via la fonctionnalité d'envoi massif de CiviMail, une nouvelle adresse d'expéditeur "invisible" unique est créée à l'aide du [chemin de retour d'enveloppe variable ou 
 
-CiviCRM then looks at the bounce pattern and type to decide what action
-to take. Bounce types fall into two basic categories: permanent failures
-(hard bounce) and transient failure (soft bounce). A single
-permanent failure triggers CiviCRM to set the contact's email as On
-Hold. For transient failures, CiviCRM waits for several bounces before
-setting the contact's email On Hold.
+For each email sent via CiviMail's mass mailing feature, a new unique "invisible" sender address is created using the [variable envelope return path ou VERP](http://en.wikipedia.org/wiki/Variable_envelope_return_path). Lorsque CiviCRM reçoit un rebond, il regarde l'adresse de l'expéditeur invisible pour décider quel email a rebondi. 
 
-The specific [threshold for each bounce
-type](http://wiki.civicrm.org/confluence/display/CRMDOC43/Bounce+Handling)
-can be found in the civcirm_mailing_bounce_pattern and
-civicrm_mailing_bounce_type. Multiple different bounce reply patterns
-are linked to a given type and threshold.
+CiviCRM examine ensuite le modèle et le type de rebond pour décider de l'action à entreprendre. Les types de rebond se répartissent en deux catégories de base: les défaillances permanentes (hard bounce) et les défaillances transitoires (soft bounce). Un seul défaut permanent déclenche CiviCRM pour définir l'adresse e-mail du contact en attente. Pour les défaillances transitoires, CiviCRM attend plusieurs rebonds avant de définir l'email du contact en attente.
+
+Le [seuil spécifique pour chaque type de rebond] (http://wiki.civicrm.org/confluence/display/CRMDOC43/Bounce+Handling) se trouve dans les tables "civcirm_mailing_bounce_pattern" et "civicrm_mailing_bounce_type". Plusieurs motifs de réponse de rebond différents sont liés à un type et un seuil donné.
 
 ### **Email-to-Activity processing**
 
