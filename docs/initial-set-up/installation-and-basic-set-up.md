@@ -227,7 +227,7 @@ Si vous ne voulez pas que les utilisateurs envoient des emails sortants depuis C
 
 CiviCRM utilisera l'adresse par défaut " De " définie ici lors de l'envoi de courriels automatisés. Si vous avez déjà entré une adresse e-mail dans l'écran Informations du domaine, cette adresse sera répertoriée ici (comme illustré sur le champ le plus à gauche de la capture d'écran suivante).
 
-![image](../img/From%20email.PNG)
+![image](../img/Fr_choix_from_email.PNG)
 
 Lorsque les utilisateurs envoient un courrier électronique à l'aide de CiviCRM, leur adresse de courriel principale est utilisée comme adresse " De " par défaut. Toutefois, ils peuvent également sélectionner l'une des adresses courriel générales définies ici comme alternative.
 
