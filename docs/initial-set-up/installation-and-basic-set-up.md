@@ -79,10 +79,15 @@ Vous pouvez désactiver un composant que vous avez déjà utilisé. Les données
 ### Préférences d'affichage
 Cet écran vous permet de modifier l'affichage des éléments à l'écran et les formulaires pour les tâches suivantes:
 
+![image](../img/Fr_preference_affichage.PNG)
+
 -   **Affichage des contacts**  - Contrôle les onglets affichés lors d'un enregistrement de contact. EXEMPLE:   Si votre organisation ne suit pas les relations entre les contacts, désélectionnez cette option pour simplifier l'affichage à l'écran. Les onglets des contributions, annonces de contributions, adhésions, événements, subventions et dossiers sont également masqués si le composant correspondant n'est pas activé.
 -   **Affichage des Groupes intelligents** - Contrôle l'affichage des groupes intelligents auxquels un contact appartient.
 -   **Modification des contacts** - Contrôle les sections incluses lors de l'ajout ou de l'édition d'un enregistrement de contact. EXEMPLE: Si votre organisation ne gére pas le sexe ni la date de naissance des individus, simplifiez le formulaire en désélectionnant les données démographiques.
 -   **Recherche de contacts** - Contrôle les sections comprises dans le formulaire "Recherche avancée". EXEMPLE: Si vous ne suivez pas les relations, vous ne rechercherez pas dans cette section. Simplifiez le formulaire en désélectionnant cette option.
+
+![image](../img/Fr_preference_affichage_2.PNG)
+
 -   **Tableau de bord de contact** - Permet à vos contacts de voir les groupes auxquels ils sont abonnés, leur historique de contribution, les informations d'inscription à un événement... et plus encore. Vous pouvez contrôler les sections qui doivent être incluses dans le tableau de bord ici. EXEMPLE: Si vous ne voulez pas que les électeurs voient leur propre historique de contribution, désélectionnez cette option.
 -   **Editeur WYSIWYG** - Sélectionnez **CKEditor** pour que les utilisateurs disposent d'un moyen simple d'entrer du texte dans les champs qui permettent le formatage HTML (comme par exemple la section d'introduction de vos pages de contribution en ligne). Vous pouvez configurer CKEditor (voir http://ckeditor.com/) comme vous le souhaitez pour ajouter ou supprimer des fonctionnalités. Sélectionnez **Zone de texte** si vous ne souhaitez pas fournir d'éditeur WYSIWYG.
 -   **Activer les formulaires Popup** - Cette option est activée par défaut. Décochez pour revenir à l'ouverture du formulaire en rafraîchissant la page.
