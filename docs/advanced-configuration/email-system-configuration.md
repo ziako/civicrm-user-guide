@@ -15,13 +15,13 @@ La configuration décrite ici fonctionne bien pour les envois jusqu'à environ 1
 
 Dans ce chapitre, nous utiliserons pour l'exemple une adresse de boîte aux lettres Gmail externe pour tester la configuration. Donc, la première étape est de créer un compte Gmail si vous n'en avez pas. Vous pouvez également utiliser une autre adresse pour tester les procédures de ce chapitre, mais vous devrez pouvoir afficher la source des messages reçus
 
-Une fois que votre système est correctement configuré, nous allons utiliser un cron CiviCRM dans **Travaux programmés** et s'assurer que vos envois programmés sont bien envoyés.
+Une fois que votre système est correctement configuré, nous allons utiliser un cron CiviCRM dans  **Travaux programmés**  et s'assurer que vos envois programmés sont bien envoyés.
 
 Configuration du service de messagerie sortant
 ----------------------------------------------
-Les paramètres de messagerie sortante sont configurés sur: **Administer> Paramètres système> Courriel sortant (SMTP / Sendmail)**. Les choix sont : 
+Les paramètres de messagerie sortante sont configurés dans: **Administer> Paramètres système> Courriel sortant (SMTP / Sendmail)**. Les choix sont : 
 
-![Screen shot of mail choices](../img/Administer-System Settings-Outbound Email.png)
+![Screen_shot_of_mail_choices](../img/Administer-System Settings-Outbound Email.png)
 
 -   **mail()**: C'est l'option par défaut et si elle fonctionne pour vous, vous devez l'utiliser.
 -   **SMTP**: Si vous avez un serveur de messagerie externe dédié, veuillez en spécifier les détails ici. Les messages de rebond générés avec SMTP sont légèrement plus complets que ceux de mail(), mais il n'y a aucun avantage pratique à utiliser SMTP si vous pouvez utiliser mail().
@@ -60,7 +60,7 @@ Explications :
 
 L'envoi de courrier en nombre important nécessite beaucoup de ressources. Nous ne recommandons pas d'envoyer des messages électroniques à partir de fournisseurs d'hébergement "low-cost". Le temps que vous passerez en dépannage coûtera souvent plus cher que l'abonnement chez un hôte plus professionnel. Vérifiez avec votre fournisseur d'hébergement les limitations du nombre d'envoi par 24 heures ou par heure et s'il exécute PHP en mode sans échec.
 
-Certains serveurs de messagerie de vos destinataires utilisent DNSBL (services de liste noire) qui gardent une liste noire d'adresses IP susceptibles d'envoyer du spam. Le courrier de ces serveurs sera marqué comme spam et n'atteindra pas sa destination. Si votre serveur est mis en liste noire (par exemple, parce que un nombre suffisant de destinataires ont marqué votre courrier électronique comme du spam, ou parce qu'un autre site Web sur votre serveur a été marqué comme spam), vous devrez contacter les hébergeurs qui vous ont mis en liste noire et les convaincre de votre bonne foi.
+Certains serveurs de messagerie de vos destinataires utilisent DNSBL (services de liste noire) et conservent une liste noire d'adresses IP susceptibles d'envoyer du spam. Le courrier de ces serveurs sera marqué comme spam et n'atteindra pas sa destination. Si votre serveur est mis en liste noire (par exemple, parce que un nombre suffisant de destinataires ont marqué votre courrier électronique comme du spam, ou parce qu'un autre site Web sur votre serveur a été marqué comme spam), vous devrez contacter les hébergeurs qui vous ont mis en liste noire et les convaincre de votre bonne foi.
 
 Il existe plusieurs sites Web qui vous aident à tester si vous êtes dans un DNSBL. Une recherche sur le Web pour "blacklisting email" va transformer certains envois. Testez régulièrement pour savoir si vous êtes sur une liste noire.
 
@@ -81,9 +81,9 @@ Cette section explique la configuration du traitement des rebonds et la récepti
 
 ### Traitement des rebonds
 
-CiviCRM peut recevoir automatiquement la [notification d'email renvoyée] (http://en.wikipedia.org/wiki/Bounce_message) selon le [type de rebond] (http://tools.ietf.org/html/rfc3463) signalé par le serveur du destinataire et impactant vos contacts en conséquence. Pour ce faire, vous devrez configurer une boîte aux lettres de messagerie pour recevoir des e-mails non reçus ainsi qu'un calendrier **job - Bounces Fetcher**  qui lira périodiquement cette boîte aux lettres et mettra à jour vos contacts dans CiviCRM.
+CiviCRM peut recevoir automatiquement la [notification d'email renvoyé](http://en.wikipedia.org/wiki/Bounce_message) selon le [type de rebond](http://tools.ietf.org/html/rfc3463) signalé par le serveur du destinataire et impactant vos contacts en conséquence. Pour ce faire, vous devrez configurer une boîte aux lettres de messagerie pour recevoir des e-mails non reçus ainsi qu'un calendrier **job - Bounces Fetcher**  qui lira périodiquement cette boîte aux lettres et mettra à jour vos contacts dans CiviCRM.
 
-Administration> Paramètres système> Travaux planifiés
+Administration> Paramètres système> Travaux planifiés :
 
 ![Screen shot of bounce fetcher scheduled job](../img/administer-scheduledjobs.png)
 
@@ -95,11 +95,11 @@ Lorsque CiviCRM reçoit un rebond, il regarde l'adresse de l'expéditeur invisib
 
 CiviCRM examine ensuite le modèle et le type de rebond pour décider de l'action à entreprendre. Les types de rebond se répartissent en deux catégories de base: les défaillances permanentes (hard bounce) et les défaillances transitoires (soft bounce). Un seul défaut permanent déclenche une action de CiviCRM pour définir l'adresse e-mail du contact en attente. Pour les défaillances transitoires, CiviCRM attend plusieurs rebonds avant de définir l'email du contact en attente.
 
-Le [seuil spécifique pour chaque type de rebond] (http://wiki.civicrm.org/confluence/display/CRMDOC43/Bounce+Handling) se trouve dans les tables "civcirm_mailing_bounce_pattern" et "civicrm_mailing_bounce_type". Plusieurs motifs de réponse de rebond différents sont liés à un type et un seuil donné.
+Le [seuil spécifique pour chaque type de rebond](http://wiki.civicrm.org/confluence/display/CRMDOC43/Bounce+Handling) se trouve dans les tables "civcirm_mailing_bounce_pattern" et "civicrm_mailing_bounce_type". Plusieurs motifs de réponse de rebond différents sont liés à un type et un seuil donné.
 
 ### **Traitement des E-mails en tant qu'activité**
 
-CiviCRM peut récupérer automatiquement le courrier électronique d'une boîte de réception spécifiée et l'inclure comme une activité d'email dans les contacts de type Individuel correspondant à l'expéditeur et aux destinataires de l'email. De nouveaux contacts individuels seront créés pour les adresses électroniques qui ne sont pas déjà affectées aux personnes de la base de données.
+CiviCRM peut récupérer automatiquement le courrier électronique d'une boîte de réception spécifiée et l'inclure comme une activité d'email dans les contacts de type "Individuel" correspondant à l'expéditeur et aux destinataires de l'email. De nouveaux contacts individuels seront créés pour les adresses électroniques qui ne sont pas déjà affectées aux personnes de la base de données.
 
 **NOTE**: Cette fonction est active uniquement pour les types de contacts individuels. Si le courrier entrant provient d'une adresse e-mail déjà enregistrée pour une organisation, un nouveau contact individuel avec cette même adresse e-mail sera créé et l'activité sera enregistrée pour ce nouveau contact individuel, et non dans l'organisation.
 
@@ -112,22 +112,22 @@ Il existe deux façons de faire (l'une ou l'autre ou les deux méthodes peuvent 
 
 Il existe plusieurs façons de configurer votre boîte aux lettres entrante:
 
--   **Sous-adressage:** Votre service de messagerie peut vous permettre d'ajouter un + *tag* ou - *tag* pour qualifier votre adresse e-mail (par exemple, *retour+test@example.org*). Plusieurs serveurs de messagerie, y compris Gmail, Yahoo! et Postfix fournissent ce sous-adressage par défaut.
-    Essayez de vous envoyer un e-mail en ajoutant une balise +*tag* or -*tag*. Si vous avez reçu le courrier envoyé avec une étiquette, cela signifie que vous pouvez utiliser directement la boîte aux lettres que vous avez créée (*return@example.org* dans notre exemple) comme [VERP] (http://en.wikipedia.org/Wiki//Variable_envelope_return_path).
+-   **Sous-adressage :** Votre service de messagerie peut vous permettre d'ajouter un + *tag*  ou - *tag*  pour qualifier votre adresse e-mail (par exemple, *retour+test@example.org*). Plusieurs serveurs de messagerie, y compris Gmail, Yahoo! et Postfix fournissent ce sous-adressage par défaut.
+    Essayez de vous envoyer un e-mail en ajoutant une balise +*tag*  or -*tag*. Si vous avez reçu le courrier envoyé avec une étiquette, cela signifie que vous pouvez utiliser directement la boîte aux lettres que vous avez créée (*return@example.org* dans notre exemple) comme [VERP](http://en.wikipedia.org/Wiki//Variable_envelope_return_path).
   
--  **Compte "Catch-all":** Si le sous-adressage ne fonctionne pas sur votre serveur de messagerie, vous devez définir le compte de messagerie que vous avez créé (*return@example.org*) comme compte "catch-all" . Tous les courriers envoyés à une adresse qui n'est pas un compte de messagerie réel finiront là, y compris tous les messages électroniques retournés.
+-  **Compte "Catch-all" :** Si le sous-adressage ne fonctionne pas sur votre serveur de messagerie, vous devez définir le compte de messagerie que vous avez créé (*return@example.org*) comme compte "catch-all" . Tous les courriers envoyés à une adresse qui n'est pas un compte de messagerie réel finiront là, y compris tous les messages électroniques retournés.
 
--  **Adresse externe**: Si aucune des méthodes précédentes ne fonctionne, envisagez de créer un nouveau compte sur un service tel que Gmail et de l'utiliser pour recevoir les emails renvoyés. Vous devrez définir des filtres dans ce compte afin qu'il ne détourne pas en tant que spam tous les emails retournés qu'il recevra.
+-  **Adresse externe** : Si aucune des méthodes précédentes ne fonctionne, envisagez de créer un nouveau compte sur un service tel que Gmail et de l'utiliser pour recevoir les emails renvoyés. Vous devrez définir des filtres dans ce compte afin qu'il ne détourne pas en tant que spam tous les emails retournés qu'il recevra.
 
 ### Ajout d'un compte de messagerie entrant pour le traitement des retours et/ou le courrier électronique
 
-Une fois que vous avez créé votre compte de messagerie pour recevoir des retours ou des courriers électroniques pour le dépôt automatique, vous devez configurer CiviMail pour qu'il sache comment le lire comme adresse de messagerie par défaut.: **Administer> CiviMail> Comptes courriel** 
+Une fois que vous avez créé votre compte de messagerie pour recevoir des retours ou des courriers électroniques pour le dépôt automatique, vous devez configurer CiviMail pour qu'il sache comment le lire en tant qu'adresse de messagerie par défaut : **Administer> CiviMail> Comptes courriel** : 
 
 ![Screen shot of the email box selection screen](../img/administer-civimail-mailaccount.png)
 
 ![Screen Shot of adding an email box](../img/administer-civimail-mailaccount-edit.png)
 
--   Spécifiez le serveur **: IP serveur, Nom d'utilisateur et le mot de passe** que vous avez utilisés lors de la création du compte.
+-   Spécifiez le serveur ** :  IP serveur, Nom d'utilisateur et le mot de passe** que vous avez utilisés lors de la création du compte.
 -   La **Partie locale** est facultative et n'est pertinente que si vous avez pu configurer un compte en utilisant un sous-adressage. Il doit s'agir du compte que vous avez créé avec '+' ou '-' ajouté, par exemple, "return+" ou "return-".
 -   Le **Domaine Internet** est le domaine de l'adresse courriel (la partie après @) de votre adresse de courrier électronique (exemple.org).
 -   Vous pouvez laisser **Adresse de retour** vide.
@@ -140,17 +140,17 @@ Une fois que la boîte de dialogue **Bounce Processing** est configurée, vous d
 Nous vous recommandons de tester le processus de retour en exécutant le processus manuellement avant de configurer CiviCRM pour traiter les messages électroniques renvoyés automatiquement. Cela peut se faire dans **Administer> Paramètres système> Travaux programmés**, option : **Fecht bounces** et sélectionnez **Plus> Exécuter maintenant**. Vérifiez le journal des travaux pour les messages d'erreur.
 Une fois que vous avez vérifié que CiviCRM peut traiter correctement le rebond, vous pouvez le configurer pour traiter automatiquement les réponses et les rebonds de façon régulière.
 
-## Planification du traitement du courrier entrant et sortant
+### Planification du traitement du courrier entrant et sortant
 
-Comme indiqué dans le chapitre précédent, le traitement du courrier et d'autres tâches peuvent être automatisés via la page d'administration des "Travaux programmés". La gamme complète des options est développée dans le wiki [Gérer les travaux programmés] (http://wiki.civicrm.org/confluence/display/CRMDOC43/Managing+Scheduled+Jobs). Vous trouverez ci-dessous des exemples spécifiques permettant d'activer le traitement de courrier CiviCRM.
+Comme indiqué dans le chapitre précédent, le traitement du courrier et d'autres tâches peuvent être automatisés via la page d'administration des "Travaux programmés". La gamme complète des options est développée dans le wiki [Gérer les travaux programmés](http://wiki.civicrm.org/confluence/display/CRMDOC43/Managing+Scheduled+Jobs). Vous trouverez ci-dessous des exemples spécifiques permettant d'activer le traitement de courrier CiviCRM.
 
 ### Planification à l'aide de la page d'administration des Travaux programmés
 
 Les envois de masse sont générés via l'interface Web de CiviMail et sont mis en file d'attente pour être envoyés à leurs destinataires. Pour planifier le traitement régulier de cette file d'attente et tous les retours reçus, allez dans **Administer> Paramètres système> travaux programmés** et recherchez **Fetch Bounces** et **Send Scheduled Mailings** . Modifiez-les à tour de rôle, en définissant leur **Fréquence d'éxécution ** programmée à "Hebdomadaire", "Quotidien" ou "Chaque lancement de la tâche planifiée." Les valeurs par défaut doivent être correctes pour les petites installations. Sélectionnez **Plus> Activer** pour chaque tâche.
 
-Dans cet exemple, en utilisant la fréquence par défaut des jobs tels que le [cron configuré pour s'exécuter à des intervalles de 15 minutes] (http://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs), les envois programmés seront envoyés tous les 15 minutes et les rebonds seront récupérés et traités chaque heure.
+Dans cet exemple, en utilisant la fréquence par défaut des jobs tels que le [cron configuré pour s'exécuter à des intervalles de 15 minutes](http://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs), les envois programmés seront envoyés tous les 15 minutes et les rebonds seront récupérés et traités chaque heure.
 
-Si vous devez envoyer un e-mail immédiatement, sans attendre la tâche cron, vous pouvez déclencher le processus d'envoi en allant à : ** Administer> Paramètres système> travaux programmés** puis sélectionner **Plus> Exécuter maintenant **. Utilisez cette capacité avec modération. cela pourrait utiliser beaucoup de ressources serveur et causer un ralentissement sensible. Les paramètres d'administration pour l'envoi d'e-mails sont généralement configurés pour minimiser la charge du serveur. La planification du travail est un moyen plus efficace d'envoyer des courriels de masse.
+Si vous devez envoyer un e-mail immédiatement, sans attendre la tâche cron, vous pouvez déclencher le processus d'envoi en allant à : ** Administer> Paramètres système> travaux programmés**  puis sélectionner **Plus> Exécuter maintenant **. Utilisez cette capacité avec modération car cela pourrait utiliser beaucoup de ressources serveur et causer un ralentissement sensible. Les paramètres d'administration pour l'envoi d'e-mails sont généralement configurés pour minimiser la charge du serveur. La planification du travail est un moyen plus efficace d'envoyer des courriels de masse.
 
 ### Planification des tâches de messagerie à l'aide de l'interface de ligne de commande
 
@@ -158,7 +158,7 @@ Comme alternative sur Linux et autres systèmes Unix, des travaux cron individue
 
 Le travail cron doit s'exécuter à l'aide d'un compte reconnu par votre CMS.
 
-Créez un compte dédié à cette tâche (par exemple *mailprocess, civimail, etc.*), donnez-lui un mot de passe long et sécurisé (par exemple *seol-lzprm42amv-psyc*) et affectez-le à CiviCRM, CiviMail et permettez d'afficher tous les contacts. Ne modifiez pas le mot de passe du compte sans modifier le mot de passe dans les fichiers de configuration de cette tâche cron.
+Créez un compte dédié à cette tâche (par exemple *mailprocess, civimail, cronmail, etc...*), donnez-lui un mot de passe long et sécurisé (par exemple *seol-lzprm42amv-psyc*) et affectez-le à CiviCRM, CiviMail et permettez-lui d'afficher tous les contacts. Ne modifiez pas le mot de passe du compte sans modifier le mot de passe dans les fichiers de configuration de cette tâche cron.
 
 Pour configurer une tâche cron, vous devez savoir si php-cli est installé. À partir du shell, tapez *php -v*. Si vous voyez **(cli)** dans le résultat, tel que :
 ```
@@ -209,8 +209,8 @@ PARAMSBOUNCE= -j -sdefault -umailprocess -pseol-lzprm42amv-psyc -e Job
 L'utilisateur qui exécute les scripts (*www-data* dans cet exemple) doit pouvoir écrire dans le dossier temporaire. Votre configuration peut spécifier un utilisateur différent.
 Vous n'avez pas à exécuter les deux scripts à la même fréquence. Le fichier crontab précédent vérifie toutes les 5 minutes si les e-mails doivent être envoyés, mais seulement toutes les 15 minutes si les e-mails renvoyés doivent être traités.
 
-**PARAMS** contient :
+**PARAMS**  contient :
 
-1.  Le site que vous utilisez, qui est **- sdefault** sur Drupal. Si vous exécutez plusieurs sites CiviCRM sur un seul serveur, vous devez spécifier le domaine de votre site, tel que **- sexample.org**.
+1.  Le site que vous utilisez, qui est **- sdefault**  sur Drupal. Si vous exécutez plusieurs sites CiviCRM sur un seul serveur, vous devez spécifier le domaine de votre site, tel que **- sexample.org**.
 2.  Le compte d'utilisateur : (**-umailprocess**).
 3.  Le mot de passe que vous avez défini : (**-pseol-lzprm42amv-psyc**).
