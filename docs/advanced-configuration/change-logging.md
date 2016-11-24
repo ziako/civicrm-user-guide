@@ -1,86 +1,47 @@
-Logging
-=======
+Enregistrement
+==============
 
 ![Screenshot of default logging](../img/configuration-default-logging.png)
 
-CiviCRM keeps an eye on the various changes that you make to contacts,
-memberships and so on. Each contact has a change log tab which is
-populated each time a contact is added or edited. The change log shows
-who changed the record and when the change was made. This light-weight
-logging is turned on by default and many users find it detailed enough.
+CiviCRM conserve une trace des différents changements que vous réalisez sur les contacts, adhésions,activités, etc... Chaque contact possède un onglet de journal des modifications qui est mis à jour automatiquement chaque fois qu'un contact est ajouté ou modifié. Le journal des modifications indique qui a modifié l'enregistrement et quand la modification a été effectuée. Cette journalisation résumée est activée par défaut et de nombreux utilisateurs trouvent qu'elle est suffisament détaillée.
+Une des principales informations manquantes cependant, est de voir  **"ce"**  qui a été changé. Mais "l'enregistrement détaillé" ajoute des informations sur ce qui a changé et fournit de nombreuses autres fonctionnalités
 
-One key missing piece, however, is information about *what* was
-changed. Detailed logging adds information on what has changed and
-provides many other features.
+Enregistrement détaillé
+----------------------
 
-Detailed logging
-----------------
+Une fois activée, la journalisation détaillée permet de suivre toutes les modifications apportées aux données dans CiviCRM. Chaque fois qu'un élément est mis à jour, CiviCRM conserve une historique de:
 
-When enabled, detailed logging tracks all changes made to data in
-CiviCRM. Each time something is updated, CiviCRM keeps a note of:
+-   Quelle était la valeur avant
+-   Quelle est la valeur actuelle
+-   Quand le changement a été fait
+-   Qui a fait le changement
 
--   what the value was before
--   what the value is after
--   when the change was made
--   who made the change
-
-When you turn on detailed logging, the screen will look something like
-the below. Clicking on update on the left hand side will show details
-of the change.
+Lorsque vous activez l'enregistrement détaillé, (voir écran suivant). vous pouvez consulter les détails de la modifications en cliquant sur le côté gauche.
 
 ![Change log image](../img/change-log.png)
 
-This logging extends to almost all data that exists in CiviCRM,
-including your contact, membership, event, etc., and also all of
-the 'meta data' in your install, such as Activity Types, Case types,
-Contribution Types, etc.
+Cette journalisation s'étend à presque toutes les données existant dans CiviCRM, y compris contacts, adhésions, événements, etc., ainsi que toutes les données des composants de votre installation, telles que les types d'activité, les types de cas, les types de contribution, etc.
 
-With detailed logging turned on, any changes made to your data can be
-reverted, which means you can worry less about unwanted changes to the
-data, and whether they are done by administrative staff or by contacts
-interacting via your website - either maliciously or accidentally.
+Avec la journalisation détaillée activée, toutes les modifications apportées à vos données peuvent être annulées, ce qui signifie que vous pourriez moins faire attention aux modifications indésirables si elles sont effectuées par votre personnel administratif ou par des contacts interagissant via votre site Web - intentionnellement ou accidentellement !
 
-As you can imagine, logging all changes to the database can result in
-the collection of quite a lot of data and will have a small performance
-impact on your database. For this reason, we turn of logging by default
-in CiviCRM and let people turn it on if they require it. Before you
-decide whether you want to turn on logging, you might want to have a
-look at other ways in which time based logging happens in CiviCRM.
+Comme vous pouvez l'imaginer, l'enregistrement de toutes les modifications apportées à la base de données peut entraîner la collecte d'un grand nombre de données et un impact négatif sur votre base de données. Pour cette raison, nous utilisons l'enregistrement par défaut dans CiviCRM et laissons le soin aux administrateurs d'activer la journalisation si tel est le besoin. Avant de décider si vous souhaitez activer la journalisation, vous voudrez peut-être avoir un aperçu d'autres façons dont la journalisation, basées sur la date, se produit dans CiviCRM :
 
-Activities vs. logging
-----------------------
+Activités vs. Enregistrement
+----------------------------
 
-The use of activities to record data in CiviCRM is often useful as an
-alternative to logging. Since each activity happens at a specific point
-in time, you can view the activity tab on a contact record as a log of
-changes to that contact over time. This isn't to suggest that each time
-you make a change to a contact in CiviCRM you should record an
-activity. Rather that, in some use cases, the data collected in the
-activity log provides a good enough log of changes to contacts over
-time, and supplementing that with a couple of manually recorded
-activities may cater adequately enough for your logging needs.
+L'utilisation d'activités pour enregistrer des données dans CiviCRM est souvent utile comme alternative à l'enregistrement journalier. Chaque activité se produisant à un moment spécifique, vous pouvez ainsi afficher l'onglet activité dans un enregistrement de contact comme un journal des modifications apportées à ce contact au fil du temps. Cela ne signifie pas que chaque fois que vous modifiez un contact dans CiviCRM, vous devez enregistrer une activité. Dans certains cas d'utilisation, les données recueillies dans le journal des activités fournissent un journal suffisant des changements effectifs. De plus complété avec d'autres activités enregistrées manuellement cela peut répondre largement à vos besoins de journalisation.
 
-Membership logs
----------------
+Enregistrements d'adhésion
+--------------------------
 
-In a similar way to activities, over time a membership will grow into a
-historical record of the membership, with a record of any contributions
-that went toward that membership and any renewals, up-sells, etc. It
-might be that this out-of-the-box logging meets your needs and means
-that you don't need to turn on detailed logging.
+De la même façon que les activités, l'adhésion est un dossier historique des membres, avec un registre de toutes les contributions versées et de tout renouvellement, etc... Il est probable que cette journalisation spécifique corresponde à vos besoins, vous n'aurez pas donc besoin d'activer l'enregistrement détaillé
 
-Reverting changes
------------------
+Annuler les modifications
+-------------------------
 
-One of the great benefits of turning on detailed logging is the ability
-to revert any changes that you make to you data. For a lot of contact
-fields we make this easy by creating a revert button at the bottom of
-the screen that shows details of the change.
+L'un des grands avantages de l'activation de la journalisation détaillée est la possibilité de rétablir les modifications que vous apportez à vos données. Pour un grand nombre de champs de contact, nous simplifions cette tâche en affichant un bouton de retour en bas de l'écran qui montre les détails de la modification.
 
 ![Screenshot of change log revert](../img/change-log-revert.png)
 
-This screen isn't available for all contact changes, however, data is
-still being recorded behind the scenes. If you do need to revert data
-that cannot be reverted via the user interface, you should contact your
-system administrator or get help from someone that is familiar with
-CiviCRM's detailed logging functionality.
+Cet écran n'est pas disponible pour toutes les modifications de contact, cependant, les données sont toujours affichées. Si vous devez rétablir des données qui ne peuvent pas être renvoyées via l'interface utilisateur, vous devez contacter votre administrateur système ou obtenir l'aide d'une personne qui connaît la fonctionnalité de journalisation détaillée de CiviCRM.
+
