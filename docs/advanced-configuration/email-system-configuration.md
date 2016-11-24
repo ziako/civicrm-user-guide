@@ -21,7 +21,7 @@ Configuration du service de messagerie sortant
 ----------------------------------------------
 Les paramètres de messagerie sortante sont configurés dans: **Administer> Paramètres système> Courriel sortant (SMTP / Sendmail)**. Les choix sont : 
 
-![Screen_shot_of_mail_choices](../img/Administer-System Settings-Outbound Email.png)
+![image](../img/Fr_courrier_sortant.PNG)
 
 -   **mail()**: C'est l'option par défaut et si elle fonctionne pour vous, vous devez l'utiliser.
 -   **SMTP**: Si vous avez un serveur de messagerie externe dédié, veuillez en spécifier les détails ici. Les messages de rebond générés avec SMTP sont légèrement plus complets que ceux de mail(), mais il n'y a aucun avantage pratique à utiliser SMTP si vous pouvez utiliser mail().
@@ -85,7 +85,7 @@ CiviCRM peut recevoir automatiquement la [notification d'email renvoyé](http://
 
 Administration> Paramètres système> Travaux planifiés :
 
-![Screen shot of bounce fetcher scheduled job](../img/administer-scheduledjobs.png)
+![image](../img/Fr_taches_periodiques.PNG)
 
 L'adresse e-mail de rebond est une adresse e-mail "invisible" que l'on voit uniquement dans les champs cachés qui précèdent les en-têtes et le message ajouté par l'utilisateur. Choisissez un nom significatif pour cela. Dans cet exemple, nous avons choisi *return*, l'adresse email que nous devons configurer sur un serveur de messagerie *example.org*  est *return@example.org*.
 
@@ -125,7 +125,7 @@ Une fois que vous avez créé votre compte de messagerie pour recevoir des retou
 
 ![Screen shot of the email box selection screen](../img/administer-civimail-mailaccount.png)
 
-![Screen Shot of adding an email box](../img/administer-civimail-mailaccount-edit.png)
+![image](../img/Fr_creer_compte_courriel.PNG)
 
 -   Spécifiez le serveur ** :  IP serveur, Nom d'utilisateur et le mot de passe** que vous avez utilisés lors de la création du compte.
 -   La **Partie locale** est facultative et n'est pertinente que si vous avez pu configurer un compte en utilisant un sous-adressage. Il doit s'agir du compte que vous avez créé avec '+' ou '-' ajouté, par exemple, "return+" ou "return-".
@@ -209,8 +209,7 @@ PARAMSBOUNCE= -j -sdefault -umailprocess -pseol-lzprm42amv-psyc -e Job
 L'utilisateur qui exécute les scripts (*www-data* dans cet exemple) doit pouvoir écrire dans le dossier temporaire. Votre configuration peut spécifier un utilisateur différent.
 Vous n'avez pas à exécuter les deux scripts à la même fréquence. Le fichier crontab précédent vérifie toutes les 5 minutes si les e-mails doivent être envoyés, mais seulement toutes les 15 minutes si les e-mails renvoyés doivent être traités.
 
-**PARAMS**  contient :
-
+**PARAMS=**  contient :
 1.  Le site que vous utilisez, qui est **- sdefault**  sur Drupal. Si vous exécutez plusieurs sites CiviCRM sur un seul serveur, vous devez spécifier le domaine de votre site, tel que **- sexample.org**.
 2.  Le compte d'utilisateur : (**-umailprocess**).
 3.  Le mot de passe que vous avez défini : (**-pseol-lzprm42amv-psyc**).
