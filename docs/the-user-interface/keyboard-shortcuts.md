@@ -1,20 +1,16 @@
-Keyboard shortcuts
+Raccourcis clavier
 ==================
+Si vous êtes sur un PC, les activités courantes peuvent être effectuées avec des raccourcis clavier appelées clés d'accès.(Appel de touches d'accès plutôt que de cliquer dans les menus de navigation). Malheureusement, il n'y a pas de raccourcis clavier pour les Mac. 
 
-If you are on a PC, many common activities can be done with keyboard
-shortcuts (aka access keys rather than clicking through the navigation
-menus. (Unfortunately, there are no keyboard shortcuts for Macs.) In
-CiviCRM on-screen help, keyboard shortcuts are called Access Keys.
 
-Access keys
------------
+Clés d'accès
+------------
 
--   Add a new Individual contact: `<ALT>+<SHIFT>+I`
--   Add a new Organisation contact: `<ALT>+<SHIFT>+O`
--   Add a new Household contact: `<ALT>+<SHIFT>+H`
--   Add a new Group: `<ALT>+<SHIFT>+G`
--   Add a new Activity: `<ALT>+<SHIFT>+A`
--   Save a page (when it edit mode) `<ALT>+<SHIFT>+S` 
--   Add a new record (e.g. add a new contribution when you are on the
-    contribution tab):`<ALT>+<SHIFT>+N`
+-   Ajouter un nouveau contact individuel : `<ALT>+<SHIFT>+I`
+-   Ajouter un nouveau contact Organisation : `<ALT>+<SHIFT>+O`
+-   Ajouter un nouveau coontact Famille : `<ALT>+<SHIFT>+H`
+-   Ajouter un nouveau groupe : `<ALT>+<SHIFT>+G`
+-   Ajouter une nouvelle Activité : `<ALT>+<SHIFT>+A`
+-   Enregistrer une page (en mode d'édition) : `<ALT>+<SHIFT>+S` 
+-   Ajouter un nouvel enregistrement (exemple : ajouter une nouvelle contribution lorsque vous êtes sur l'onglet de contribution) : `<ALT>+<SHIFT>+N`
 
