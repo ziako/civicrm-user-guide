@@ -1,92 +1,44 @@
-Mapping your data
-=================
+Correspondance de vos données
+=============================
 
-Your existing data may be coming from multiple sources, some electronic,
-some paper based and some residing in people's memory. "Mapping" refers
-to the activity of taking existing data that was labeled in a certain
-way and "slotting" it into a CiviCRM structure. This is a very important
-step and skipping it may cause undesired consequences in the future. For
-example, you may not be able to control or report on data the way you
-expect.
+Vos données existantes peuvent provenir de sources multiples, certaines sur support électronique ou imprimées sur papier et d'autres font appel la mémoire de vos membres. «La correspondance» fait référence à l'activité consistant à prendre des données existantes organisées d'une certaine manière et à les «placer» dans une structure CiviCRM. Il s'agit d'une étape très importante et ce passage peut causer des conséquences indésirables à l'avenir. Par exemple, il se peut que vous ne puissiez pas contrôler ou organiser les données de la façon dont vous esperez.
 
-Everyone thinks about data differently, based on experience with another
-CRM or no CRM at all. For example, "Donation", "Opportunity", and
-"Contribution" all refer to money given to your organization. CiviCRM
-was designed to be flexible and adaptable, so you should have no problem
-finding the proper place for every piece of information relevant to your
-organization.
+Chacun pense différemment à ses données en fonction de l'expérience avec un autre CRM ou pas de CRM du tout. Par exemple, «Dons», «Opportunité» et «Contribution» font tous référence aux sommes versées à votre organisation. CiviCRM a été conçu pour être flexible et adaptable, de sorte que vous ne devriez avoir aucun problème à trouver la place correspondante à chaque élément d'information pertinent pour votre organisation.
 
-Resist the temptation to add custom fields right away. Instead of adding
-a new field for manually entering membership expiration dates, learn
-about CiviCRM's membership module that automates membership duration,
-expiration and renewal reminders. Having multiple fields to collect the
-same data will cause confusion later. Avoid data duplication by making
-informed choices up front. 
+Résistez à la tentation d'ajouter des champs personnalisés immédiatement. Exemple: Au lieu d'ajouter un nouveau champ pour saisir manuellement les dates d'expiration des adhésions, découvrez le module d'adhésion de CiviCRM qui automatise la durée de l'adhésion, les rappels d'expiration et de renouvellement. Le fait d'avoir plusieurs champs pour collecter les mêmes données entraînera plus tard une confusion . Évitez la duplication des données en faisant des choix éclairés dès maintenant.
 
-The following sections will introduce you to options CiviCRM provides
-out of the box with tips along the way for mapping your data. Instead of
-using "flat" spreadsheets, **relationships** will tie your data
-together. Using relationships, you will be able to create a more
-complete picture of the community that supports your organization. 
+Les sections suivantes vous présenteront les options qu'utilise CiviCRM pour vous proposer des conseils sur la façon d'organiser vos données. Au lieu d'utiliser des feuilles de calcul «insipides», **les relations** lieront vos données ensemble. En utilisant les relations, vous serez en mesure de créer une vue plus complète de la communauté qui participe et soutient votre organisation.
 
-Basic information about your constituents
------------------------------------------
+Informations de base sur vos contacts
+-------------------------------------
 
-CiviCRM comes with default fields to store constituent names, addresses,
-phone numbers, emails, notes and other contact information.
-Since CiviCRM was designed for non-profits, the mapping of your most
-basic constituent information should be very easy. 
+CiviCRM est créé avec des champs par défaut pour stocker les noms de contacts, adresses, numéros de téléphone, courriels, notes et autres informations. CiviCRM a été conçu pour les organismes sans but lucratif, la gestion de vos informations basiques devrait en être que plus facile.
 
-CiviCRM divides constituents into 3 categories (Contact Types) based on
-who or what they are:
+CiviCRM divise en 3 catégories les Types de contacts en fonction de qui ou de ce qu'ils sont:
 
--   Individuals: any person your organisation wants to keep a record of
--   Organizations: this could be another non-profit, a company, a
-    chapter of your organisation, or a committee. You will generally
-    want to create at least one contact of the Organization type to
-    represent your organization. This is particularly useful when you
-    are configuring memberships
--   Households: a family or group of people who share a physical
-    location
+-   Individuels : Toute personne physique pour qui votre organisation veut conserver des informations. 
+-   Organisations : une entreprise, une personne morale, un association, une section de votre organisation, ou un comité. Vous devez nécessairement créer au moins un contact du type Organisation pour représenter votre organisme. Cela est particulièrement utile lorsque vous configurez des abonnements.
+-   Familles : Une famille ou un groupe de personnes qui partagent un lieu physique
 
-Each contact type comes with different fields, according to the
-different kinds of data you will probably want to track. For example,
-gender only applies to individuals, not organisations or households, so
-the gender field is only available for Individual contact types and
-subtypes.
+Chaque type de contact est paramétré de base avec différents champs, en fonction des différents types de données que vous allez suivre. Par exemple, le genre (sexe) ne s'applique qu'aux individuels, ni aux organisations ni aux familles de sorte que ce domaine de genre n'est disponible que pour les types de contacts individuels et les sous-types(étudiants, bénévoles,...)
 
-To read more on built-in CiviCRM basic constituents fields and how to
-use them, please see the *Contacts* chapter in *Organising Your Data*.
+Pour en savoir plus sur les champs constitués de CiviCRM et comment les utiliser, consultez le chapitre *Contacts* de *Organisation de vos données*.
 
-Information about your constituents that is specific to your organization (basic introduction to Custom Fields)
+Informations sur les constituants spécifiques à votre organisation (introduction de base aux champs personnalisés)
 ---------------------------------------------------------------------------------------------------------------
 
-Many organizations collect data specific to their mission or structure.
-Even though CiviCRM comes with fields to store basic data that all
-non-profits collect, similarities between non-profits end at a certain
-point. For example, your organisation may be interested in information
-about constituent allergies (for individuals) or service area
-(organizations).
+De nombreuses organisations recueillent des données spécifiques à leur activité, leur mission ou à leur structure. Même si CiviCRM est livré avec des champs pour stocker les données de base que tous les organismes sans but lucratif recueillent, les similitudes entre les organismes à but non lucratif se terminent à un certain point. Par exemple, votre organisation peut être intéressée par des informations sur les allergies (pour les individus) ou au secteur d'activité (organisations).
 
-When mapping data into CiviCRM, decide if the information pertains to an
-individual, organization, or household. Additional information like
-"service area" only makes sense for Organizations. To find out how you
-can create custom fields, please see the *Custom fields* chapter in
-*Organising Your Data*.
+Lors de l'organisation de vos données dans CiviCRM, décidez si l'information concerne une personne, une organisation ou un ménage. Des informations supplémentaires comme "secteur d'activité" n'ont de sens que pour les organisations. Pour savoir comment créer des champs personnalisés, consultez le chapitre *Champs personnalisés* dans *Organiser vos données*.
 
-Relationships between constituents
+Relations entre les enregistrements
 ----------------------------------
 
-Relationships capture current and historical information about how two
-records connect to each other.
+Les relations saisissent les informations actuelles et historiques sur la façon dont deux enregistrements sont liés.
 
-You or your colleagues probably know more about your constituents than
-what has been written down. You may not have previously collected that
-information because there was no space in your "flat" spreadsheet or you
-may have collected it as a "mental note" about a given person or
-organization. The name of their family members, place of employment,
-and relationship to other constituents in your database can all be
-captured with a Relationship. 
+Vous même ou vos collègues en savez probablement plus sur vos contacts que sur ce qui a est écrit. Vous n'avez peut-être pas par le passé recueilli cette information parce qu'il n'y avait pas assez d'espace dans votre feuille de calcul ou que vous l'avez peut-être recueillie mais par vos propres connaissances ou relations avec une personne ou une organisation donnée. Le nom de leurs membres de la famille, le lien avec un employeur et l'interaction avec les autres membres de votre base de données peuvent tous être saisis avec une **Relation**.
+
+
 
 CiviCRM comes with a predefined set of relationship Types including
 "employer--employee", "parent--child", and "employee--employer". You can
