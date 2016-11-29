@@ -19,7 +19,7 @@ Une fois que votre système est correctement configuré, nous allons utiliser un
 
 Configuration du service de messagerie sortant
 ----------------------------------------------
-Les paramètres de messagerie sortante sont configurés dans: **Administer> Paramètres système> Courriel sortant (SMTP / Sendmail)**. Les choix sont : 
+Les paramètres de messagerie sortante sont configurés dans : **Administer> Paramètres système> Courriel sortant (SMTP / Sendmail)**.  Les choix sont : 
 
 ![image](../img/Fr_courrier_sortant.PNG)
 
@@ -67,7 +67,7 @@ Il existe plusieurs sites Web qui vous aident à tester si vous êtes dans un DN
 Configuration du Sender Policy Framework (SPF)
 ----------------------------------------------
 
-Par défaut, Internet permet à tout serveur de messagerie d'envoyer un courrier électronique prétendant appartenir à n'importe qui. Cela permet aux spammeurs de fabriquer facilement des adresses et d'envoyer du spam à l'aide de votre adresse de courrier électronique (ou de tout autre). SPF vous permet de créer un enregistrement DNS spécial répertoriant les adresses IP des serveurs de messagerie qui peuvent légitimement envoyer des e-mails à partir de @*votredomaine.org
+Par défaut, Internet permet à tout serveur de messagerie d'envoyer un courrier électronique prétendant appartenir à n'importe qui. Cela permet aux spammeurs de fabriquer facilement des adresses et d'envoyer du spam à l'aide de votre adresse de courrier électronique (ou de tout autre). SPF vous permet de créer un enregistrement DNS spécial répertoriant les adresses IP des serveurs de messagerie qui peuvent légitimement envoyer des e-mails à partir de @*votredomaine.org*
 
 Si votre nom de domaine a déjà un enregistrement SPF, assurez-vous qu'il inclut l'adresse IP de votre serveur de messagerie CiviCRM (qui peut être différent de l'hôte utilisé pour le serveur Web ou de vos serveurs de messagerie). Si ce n'est pas le cas, ajoutez cette adresse IP.
 
@@ -87,7 +87,7 @@ Administration> Paramètres système> Travaux planifiés :
 
 ![image](../img/Fr_taches_periodiques.PNG)
 
-L'adresse e-mail de rebond est une adresse e-mail "invisible" que l'on voit uniquement dans les champs cachés qui précèdent les en-têtes et le message ajouté par l'utilisateur. Choisissez un nom significatif pour cela. Dans cet exemple, nous avons choisi *return*, l'adresse email que nous devons configurer sur un serveur de messagerie *example.org*  est *return@example.org*.
+L'adresse e-mail de rebond est une adresse e-mail "invisible" que l'on voit uniquement dans les champs cachés qui précèdent les en-têtes et le message ajouté par l'utilisateur. Choisissez un nom significatif pour cela. Dans cet exemple, nous avons choisi *return*. l'adresse email que nous devons configurer sur un serveur de messagerie *example.org*  est *return@example.org*.
 
 Pour chaque e-mail envoyé via la fonctionnalité d'envoi massif de CiviMail, une nouvelle adresse d'expéditeur "invisible" unique est créée à l'aide du [chemin de retour d'enveloppe variable ou VERP](http://en.wikipedia.org/gwki/Variable_envelope_return_path).
 
@@ -95,7 +95,7 @@ Lorsque CiviCRM reçoit un rebond, il regarde l'adresse de l'expéditeur invisib
 
 CiviCRM examine ensuite le modèle et le type de rebond pour décider de l'action à entreprendre. Les types de rebond se répartissent en deux catégories de base: les défaillances permanentes (hard bounce) et les défaillances transitoires (soft bounce). Un seul défaut permanent déclenche une action de CiviCRM pour définir l'adresse e-mail du contact en attente. Pour les défaillances transitoires, CiviCRM attend plusieurs rebonds avant de définir l'email du contact en attente.
 
-Le [seuil spécifique pour chaque type de rebond](http://wiki.civicrm.org/confluence/display/CRMDOC43/Bounce+Handling) se trouve dans les tables "civcirm_mailing_bounce_pattern" et "civicrm_mailing_bounce_type". Plusieurs motifs de réponse de rebond différents sont liés à un type et un seuil donné.
+Le [seuil spécifique pour chaque type de rebond](http://wiki.civicrm.org/confluence/display/CRMDOC43/Bounce+Handling) se trouve dans les tables :  "civcirm_mailing_bounce_pattern" et "civicrm_mailing_bounce_type". Plusieurs motifs de réponse de rebond différents sont liés à un type et un seuil donné.
 
 ### **Traitement des E-mails en tant qu'activité**
 
@@ -105,7 +105,7 @@ CiviCRM peut récupérer automatiquement le courrier électronique d'une boîte 
 
 Il existe deux façons de faire (l'une ou l'autre ou les deux méthodes peuvent être configurées en même temps):
 
--   **Adresse e-mail spéciale :**  Configurez une adresse e-mail spéciale pour votre organisation, Ex. Civiemails@example.com. Les utilisateurs peuvent ensuite ajouter cette adresse dans le champ Cci pour vos e-mails sortants. Ils seront automatiquement déposées dans CiviCRM comme décrit ci-dessus. La personne qui reçoit le courrier électronique ne verra cette adresse spéciale si le champ Cci est utilisé. 
+-   **Adresse e-mail spéciale :**  Configurez une adresse e-mail spéciale pour votre organisation. ( Exemple :  Civiemails@example.com). Les utilisateurs peuvent ensuite ajouter cette adresse dans le champ Cci pour vos e-mails sortants. Ils seront automatiquement déposées dans CiviCRM comme décrit ci-dessus. La personne qui reçoit le courrier électronique ne verra cette adresse spéciale si le champ Cci est utilisé. 
 -   **Dossier IMAP :**  Configurez un dossier dans votre boîte de réception IMAP où vous pourrez glisser les e-mails que vous voulez archivér dans CiviCRM. Cela fonctionne avec les emails entrants et sortants (cela nécessite bien entendu, que votre courrier électronique soit configuré en utilisant IMAP).
 
 ### Adresse e-mail spéciale pour les e-mails entrants
@@ -146,11 +146,11 @@ Comme indiqué dans le chapitre précédent, le traitement du courrier et d'autr
 
 ### Planification à l'aide de la page d'administration des Travaux programmés
 
-Les envois de masse sont générés via l'interface Web de CiviMail et sont mis en file d'attente pour être envoyés à leurs destinataires. Pour planifier le traitement régulier de cette file d'attente et tous les retours reçus, allez dans **Administer> Paramètres système> travaux programmés** et recherchez **Fetch Bounces** et **Send Scheduled Mailings** . Modifiez-les à tour de rôle, en définissant leur **Fréquence d'éxécution ** programmée à "Hebdomadaire", "Quotidien" ou "Chaque lancement de la tâche planifiée." Les valeurs par défaut doivent être correctes pour les petites installations. Sélectionnez **Plus> Activer** pour chaque tâche.
+Les envois de masse sont générés via l'interface Web de CiviMail et sont mis en file d'attente pour être envoyés à leurs destinataires. Pour planifier le traitement régulier de cette file d'attente et tous les retours reçus, allez dans **Administer> Paramètres système> travaux programmés** et recherchez **Fetch Bounces** et **Send Scheduled Mailings** . Modifiez-les à tour de rôle, en définissant leur **Fréquence d'éxécution** programmée à "Hebdomadaire", "Quotidien" ou "Chaque lancement de la tâche planifiée." Les valeurs par défaut doivent être correctes pour les petites installations. Sélectionnez ensuite  **Plus> Activer** pour chaque tâche.
 
 Dans cet exemple, en utilisant la fréquence par défaut des jobs tels que le [cron configuré pour s'exécuter à des intervalles de 15 minutes](http://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs), les envois programmés seront envoyés tous les 15 minutes et les rebonds seront récupérés et traités chaque heure.
 
-Si vous devez envoyer un e-mail immédiatement, sans attendre la tâche cron, vous pouvez déclencher le processus d'envoi en allant à : ** Administer> Paramètres système> travaux programmés**  puis sélectionner **Plus> Exécuter maintenant **. Utilisez cette capacité avec modération car cela pourrait utiliser beaucoup de ressources serveur et causer un ralentissement sensible. Les paramètres d'administration pour l'envoi d'e-mails sont généralement configurés pour minimiser la charge du serveur. La planification du travail est un moyen plus efficace d'envoyer des courriels de masse.
+Si vous devez envoyer un e-mail immédiatement, sans attendre la tâche cron, vous pouvez déclencher le processus d'envoi en allant à : **Administer> Paramètres système> travaux programmés**  puis sélectionner **Plus> Exécuter maintenant**. Utilisez cette capacité avec modération car cela pourrait utiliser beaucoup de ressources serveur et causer un ralentissement sensible. Les paramètres d'administration pour l'envoi d'e-mails sont généralement configurés pour minimiser la charge du serveur. La planification du travail est un moyen plus efficace d'envoyer des courriels de masse.
 
 ### Planification des tâches de messagerie à l'aide de l'interface de ligne de commande
 
