@@ -39,7 +39,7 @@ pages:
     - 'Aperçu': 'organising-your-data/overview.md'
     - "Comment organiser vos données": 'organising-your-data/mapping-your-data.md'
     - 'Contacts': 'organising-your-data/contacts.md'
-    - 'Groups and tags': 'organising-your-data/groups-and-tags.md'
+    - "Groupes et étiquettes": 'organising-your-data/groups-and-tags.md'
     - 'Smart groups': 'organising-your-data/smart-groups.md'
     - 'Activities': 'organising-your-data/activities.md'
     - 'Relationships': 'organising-your-data/relationships.md'
