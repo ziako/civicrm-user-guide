@@ -37,7 +37,7 @@ pages:
     - 'Restauration des contacts': 'the-user-interface/undelete.md'
 - Organiser vos données:
     - 'Aperçu': 'organising-your-data/overview.md'
-    - 'Mapping your data': 'organising-your-data/mapping-your-data.md'
+    - "Comment organiser vos données": 'organising-your-data/mapping-your-data.md'
     - 'Contacts': 'organising-your-data/contacts.md'
     - 'Groups and tags': 'organising-your-data/groups-and-tags.md'
     - 'Smart groups': 'organising-your-data/smart-groups.md'
