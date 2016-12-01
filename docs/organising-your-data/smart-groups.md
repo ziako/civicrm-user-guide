@@ -2,7 +2,7 @@ Groupes intelligents
 ====================
 
 Les groupes intelligents sont assimilés comme étant des **«recherches enregistrées»**. Ils sont utiles pour suivre les groupes de contacts répondant à certains critères, par exemple «tous les membres basés en Europe». 
-La création d'un groupe intelligent est simple: Menu **Recherche** : vous effectuez une recherche en fonction de vos critères, puis choisissez «Créer un groupe intelligent». Une fois le groupe intelligent créé, chaque fois que vous demandez de voir les contacts dans un groupe, CiviCRM effectuera une recherche et affichera les contacts qui répondent aux critères que vous avez spécifiés.
+La création d'un groupe intelligent est simple : Menu **Recherche** : vous effectuez une recherche en fonction de vos critères, puis choisissez «Créer un groupe intelligent». Une fois le groupe intelligent créé, chaque fois que vous demandez de voir les contacts dans un groupe, CiviCRM effectuera une recherche et affichera les contacts qui répondent aux critères que vous avez spécifiés.
 
 Les groupes intelligents sont une partie vraiment puissante et utile de CiviCRM. Ils sont utiles dans de nombreuses situations. Passez du temps à bien en comprendre le fonctionnement et comment vous pouvez être en mesure de les utiliser.
 
@@ -10,7 +10,7 @@ Quand puis-je utiliser un groupe intelligent ?
 -------------------------------
 Voici deux exemples :
 
-### Groupes et profils intelligents: une liste d'adhésion 
+### Groupes et profils intelligents: une liste d'adhésions 
 
 Un groupe intelligent peut être utilisé en association avec un profil pour afficher une liste de membres sur votre site Web. Pour ce faire, créez un groupe intelligent qui inclut les membres de votre organisation et créez un profil qui inclut les champs que vous souhaitez afficher dans votre liste. Vous devez alors configurer le profil pour qu'il affiche uniquement les contacts qui se trouvent dans ce groupe intelligent. Lorsqu'un contact devient membre - par exemple, lorsqu'il remplit votre formulaire d'adhésion et paye en ligne - il sera automatiquement ajouté au groupe intelligent et sera donc publié dans votre liste de membres.
 
@@ -21,9 +21,10 @@ Supposons qu'une personne se soit inscrite ou a participé à un événement et 
 Création de groupes intelligents
 --------------------------------
 Des groupes intelligents peuvent être créés à partir des résultats de recherche générés par de nombreux formulaires de recherche de CiviCRM. 
-Nous voulons créer un groupe intelligent de tous les donateurs à qui nous n'avons pas encore été envoyé une lettre de remerciement, ceci pour nous aider à gérer notre flux de travail d'envoi de remerciement des donateurs. Lorsque nous envoyons des lettres, les donateurs qui les reçoivent quitteront automatiquement le groupe intelligent, ce qui nous permettra d'avoir une liste toujours précise de personnes à qui envoyer des lettres.
 
-Vous pouvez utiliser la "Recherche multicritères" pour créer ce groupe intelligent (vous pouvez le tester sur le site de démonstration  [-http: //demo.civicrm.org] (http://demo.civicrm.org) ...si vous n'avez pas encore de contributions dans votre installation CiviCRM).
+Nous pouvons créer un groupe intelligent de tous les donateurs à qui nous n'avons pas encore envoyé une lettre de remerciement, pour nous aider à gérer notre flux de travail d'envoi de remerciement aux donateurs. Alors, après l'envoi des lettres, les donateurs qui les reçoivent quitteront automatiquement le groupe intelligent, ce qui nous permettra d'avoir une liste toujours précise de personnes à qui envoyer des lettres.
+
+Vous pouvez utiliser la "Recherche multicritères" pour créer ce groupe intelligent (vous pouvez le tester sur le site de démonstration  [http: //demo.civicrm.org] (http://demo.civicrm.org) ...si vous n'avez pas encore de contributions dans votre installation CiviCRM).
 
 1.  Allez dans **Rechercher> Recherche multicritères**  
 2.  Faites défiler jusqu'à la section **Contributions**.
@@ -50,7 +51,7 @@ Dans l'écran des paramètres de groupe, cliquez sur **Modifier les critères de
 
  ![image](../img/Groups&tags_edit%20Smart%20Group%20criteria.png)
  
-Cela affichera un écran semblable à celui que vous avez utilisé à l'origine pour créer le groupe intelligent avec les résultats de recherche affichés. Cliquez sur la barre en haut de l'écran pour afficher les critères que vous avez utilisés pour définir le groupe intelligent. Vous pouvez ensuite mettre à jour les critères, et dès que vous êtes satisfait des résultats, sélectionnez tous les enregistrements et choisissez **Update Smart Group** dans le menu déroulant "Actions".
+Cela affichera un écran semblable à celui que vous avez utilisé à l'origine pour créer le groupe intelligent avec les résultats de recherche affichés. Cliquez sur la barre en haut de l'écran pour afficher les critères que vous avez utilisés pour définir le groupe intelligent. Vous pouvez ensuite mettre à jour les critères et, dès que vous êtes satisfait des résultats, sélectionnez tous les enregistrements et choisissez **Update Smart Group** dans le menu déroulant "Actions".
 
 ![image](../img/Groups&tags_actions%20Update.png)
 
