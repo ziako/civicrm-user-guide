@@ -1,110 +1,59 @@
-Searching
+Recherche
 =========
 
-This chapter covers different ways to find information you've stored in
-CiviCRM. Two of the techniques in this chapter - finding contacts and
-the "search-action" workflow, described in the second bullet below - are
-core functions in CiviCRM, so most, if not all, users will find this
-chapter helpful.
+Ce chapitre couvre les différentes méthodes pour trouver les informations que vous avez enregistrées dans CiviCRM. 
+Vous trouverez ci-après deux techniques de recherche qui sont les fonctions de base dans CIVICRM : la recherche de contacts et la recherche d'action. Les utilisateurs trouvent ces méthodes très utiles.
 
-We will start off with some simple searches and then move on to more
-advanced techniques. CiviCRM beginners should be familiar with
-Quicksearch, Advanced Search and the component searches. More advanced
-users should also look at reports, custom searches and Search Builder.
+Nous allons commencer par quelques recherches simples et ensuite passer à des techniques plus avancées. Les débutants de CiviCRM doivent être familiarisés avec la recherche rapide, la recherche avancée et les recherches de composants. Les utilisateurs les plus avancés peuventt également consulter les rapports, les recherches personnalisées et le Générateur de recherche.
 
-There are three main reasons to search:
+Il y a trois raisons principales de faire des recherches :
 
--   To find a specific contact: the Quick search box can find contacts
-    by name, email address or a variety of other characteristics.
--   To perform an action on a contact or contacts that meet certain
-    criteria: a common workflow in CiviCRM, called a search-action, is
-    to find contacts that meet certain criteria and then perform an
-    action on them. For example, you might want to find all contacts in
-    the advisory group in order to invite them to a meeting, find all
-    those whose memberships have recently expired to send a renewal
-    reminder, or find all contacts aged under 25 in a specific location
-    to send them an email about an upcoming event nearby.
--   For ad-hoc reporting.
+-   Pour trouver un contact particulier : le champ de recherche rapide peut trouver des contacts par nom, adresse e-mail ou une variété d'autres caractéristiques.
+-   Pour effectuer une action sur un ou plusieurs contacts qui répondent à certains critères: la recherche d'action dans CIVICRM permet de trouver des contacts qui répondent à certains critères, puis effectuer une action sur eux. Par exemple, vous pouvez trouver tous les contacts d'un groupe pour les inviter à une réunion, ou tous ceux dont les adhésions ont récemment expiré pour envoyer un rappel de renouvellement ou bien tous les contacts âgés de moins de 25 ans d'une même ville pour envoyer un courriel sur un événement à venir proche du domicile.
+-   Pour créer un rapport spécifique : la recherche est souvent utile pour un type de rapport spécifique mais présente des limites. Par exemple, vous ne pouvez pas grouper les résultats par critères particuliers, résumer ou produire facilement des graphiques des résultats. Pour obtenir des rapports plus avancés consultez la section *CiviReport*.
 
-As a form of ad-hoc reporting, searching is often useful but does have
-limitations. For example, you can't group results by particular
-criteria, summarize, or easily produce graphs of the results. For more
-advanced reporting, see the *CiviReport* section.
-
-Quick search
+Recherche rapide
 --------------
 
 ![Quicksearch](../img/quicksearch.png)
 
-The easiest way to find a specific contact is to use the Quick search
-box that appears in the navigation menu at the top left of the screen. You may choose to search by one of several criteria. Once you click in the box you can start typing immediately to use the default Name/Email search or you can click again to expose several other criteria in a dropdown selection list. Contacts that match the phrase you enter will appear in a dropdown list below the box. For example, if you are searching with Name/Email and you have left
-automatic wildcard enabled then going to **Administer > Customize Data and Screens >
-Search Preferences** entering "peter" will find:
+La manière la plus simple de trouver un contact spécifique consiste à utiliser la zone de recherche rapide qui apparaît dans le menu de navigation en haut à gauche de l'écran. Vous pouvez choisir de faire une recherche parmi plusieurs critères. Dès que vous cliquez dans la case, vous pouvez commencer à taper immédiatement pour utiliser la recherche par défaut : "Nom / E-mail".  Vous pouvez aussi cliquer à nouveau pour choisir plusieurs autres critères dans une liste déroulante. Les contacts correspondants au mot que vous entrez apparaîtront dans une liste déroulante sous la boîte. 
 
--   people who's first or last name is **Peter**
--   people who have Peter appearing as part of their name, e.g. Mary
-    **Peter**son
--   people who have Peter as part of their email address, e.g.
-    blue**peter**@gmail.com  
--   organisations with Peter in their name, e.g. Al**peter**
-    Community Centre.
+Par exemple, si vous recherchez avec Nom / Email et que vous avez laissé le caractère générique de recherche approximative activé, allez dans **Administer> Personnaliser les données et les écrans> Préférences de recherche** pour vérifier.
 
-You don't need to type the full name of the person - just the first few
-letters.
+Ainsi en entrant "pierre", vous trouverez:
 
-Note: If you search by **phone** then you will need to enter the digits of the phone number without any formatting. The **phone** search is done against a field that consists only of digits with all non-numeric characters stripped out.
+-   Les personnes dont le prénom ou le nom de famille est **Pierre**
+-   Les personnes qui ont Pierre comme faisant partie de leur nom, ex. Marie **Pierre** LEBRETON
+-   Les personnes qui ont Pierre dans leur adresse électronique, ex. jean.**pierre**@gmail.com
+-   les organisations avec Pierre en leur nom, ex.  Association **Pierre** Insertion.
 
-Advanced search
+Vous n'avez pas besoin de taper le nom complet de la personne... juste les premières lettres.
+Remarque: Si vous effectuez une recherche par **téléphone**, vous devrez entrer les chiffres du numéro de téléphone sans aucun formatage. La recherche de **téléphone** est effectuée sur un champ composé uniquement de chiffres dont tous les caractères non numériques ont été retirés.
+
+Recherche multicritère
 ---------------
 ![Screen shot of advanced search](../img/user-interface-advanced-search-main-screen.png)
 
-Advanced search allows you to search across all the information you have
-about your contacts. For example, you could find "all contacts in
-Venezuela" or "all advisory group members". If you specify two or more
-categories of information, the search displays every contact that
-matches all the categories. For instance, you can combine the two
-criteria just mentioned to find "all advisory group members in
-Venezuela".
+La recherche avancée vous permet de rechercher dans toutes les informations que vous avez sur vos contacts. Par exemple, vous pourriez trouver «tous les contacts en Italie» ou «tous les membres du groupe adhérents». Si vous spécifiez deux catégories d'informations ou plus, la recherche affiche tous les contacts correspondant à toutes les catégories. Vous pouvez aussi combiner les deux critères mentionnés pour trouver «tous les membres du groupe adhérents en Italie».
 
-The Advanced search screen is accessible from the navigation menu
-**Search > Advanced Search**. On this screen, search criteria are
-grouped into sections which refer to different types of data that you
-can search on, such as address data, notes and information from
-components such as Contributions or Events. Each group of criteria is
-shown as a blue bar (known as an "accordion" because it expands when you
-click on it). For example, if you want to search for all people in your
-database from 16 to 18 years old, click on the Demographics accordion.
-When it opens, you can specify the birth date range you are interested
-in.
+L'écran "Recherche multicritère" est accessible depuis le menu de navigation  **Recherche> Recherche multicritère**. Sur cet écran, les critères de recherche sont regroupés en sections qui font référence à différents types de données sur lesquelles vous pouvez effectuer une recherche, telles que des données d'adresse, des notes et des informations provenant de composants tels que Contributions ou Evénements. Chaque groupe de critères est représenté sous la forme d'une barre bleue (connue sous le nom d'«accordéon» car elle s'élargit lorsque vous cliquez dessus). Par exemple, si vous souhaitez rechercher toutes les personnes de votre base de données de 16 à 18 ans, cliquez sur l'accordéon de données démographiques. Lorsqu'il s'ouvre, vous pouvez spécifier la période de la date de naissance qui vous intéresse.
 
-#### Display Settings For Results
+#### Paramètres d'affichage des résultats
 
 ![Screen shot of Display Results As](../img/user-interface-display-results-as.png)
 
-Advanced Search returns your results as Contact records by default.
-However, you may want to get another record type instead. For example,
-you may want to search on the Membership renewal activity to find
-everyone who renewed their membership last week then display the results
-as Memberships so that you can export name, address and Membership
-expiration date to create and then post out membership cards to those
-contacts. Simply select the record type you want from the **Display Results As** dropdown.
+La Recherche multicritère renvoie vos résultats en tant que "Vue par défaut". Vous pouvez obtenir un autre type d'affichage. Par exemple, vous pouvez rechercher sur l'activité Renouvellement d'adhésion pour trouver tous ceux qui ont renouvelé leur adhésion la semaine dernière, puis afficher les résultats sous la forme d'adhésions afin d'exporter le nom, l'adresse et la date d'expiration de l'adhésion et lister les membres concernés. Il suffit alors de sélectionner le type d'affichage souhaité dans la liste déroulante **Views For Display Contact**.
 
 #### Views for Display Contacts
 
 ![Screen shot of Display Contacts](../img/user-interface-new-contact-view-profile.png)
 
-Advanced search allows you to change the columns displayed in your
-search results. The default columns are Name, Street Address, City,
-State, Postal Code, Country, Email and Phone. If you want to display a
-different set of columns (perhaps to include a custom field or remove a
-column you don't need), create a Profile with the Search Views option
-selected. Make sure that the fields in this Profile are set to "Expose
-Publicly and for Listings" visibility, and are marked as Results Columns.
-(For more information about creating Profiles, which are described in
-detail in the Profiles chapter in the Configuration section.)
+La recherche multicritère vous permet de modifier les colonnes affichées dans vos résultats de recherche. Les colonnes par défaut sont Nom, Adresse, Ville, État, Code Postal, Pays, Email et Téléphone. Si vous souhaitez afficher un ensemble différent de colonnes (peut-être pour inclure un champ personnalisé ou supprimer une colonne dont vous n'avez pas besoin), créez un profil avec l'option de vues de recherche sélectionnée. Assurez-vous que les champs Visibilité de ce profil est activé comme "Exposer publiquement et pour les listes", et que le champ "colonne de résultats" soit activé. (Pour plus d'informations sur la création de profils voir le chapitre Profils de la section Configuration.)
 
-For example you may want to include columns for Gender and Date of Birth, while eliminating Country.
-Create a profile that includes birth date, gender and address fields.
+Par exemple, vous pouvez inclure des colonnes pour le sexe et la date de naissance, tout en éliminant le pays.
+
+Créez un profil qui inclut la date de naissance, le sexe et les champs d'adresse.
 
 ![Screen shot of Search View setting in a profile](../img/user-interface-profile-search-view-setting.png)
 
@@ -112,76 +61,57 @@ Create a profile that includes birth date, gender and address fields.
 
 ![Screen shot of a profile](../img/user-interface-new-contact-view-profile.png)
 
-Read more about creating profiles in the Profiles section of the chapter
-on *Organising Your Data*.
+Pour en savoir plus sur la création de profils consultez la section *Profils* du chapitre *Organisation de vos données*.
 
-Combining this feature with the "Batch Update via Profile" action
-provides a powerful method of viewing and updating a specific set of
-fields across a batch of contact records.
+La combinaison de cette fonctionnalité avec l'action "Mise à jour par lots via profil" fournit une méthode puissante de visualisation et de mise à jour d'un ensemble spécifique de champs d'un lot d'enregistrements de contacts.
 
-### Search settings
-The Search Operator determines whether your criteria are combined with AND statements, or combined with OR statements. For example, you may want to find all individuals who are in the Volunteers group AND who have a Volunteer Training activity recorded for them. In this case use the AND operator. If you need to find everyone who is in the Volunteers group OR has a Volunteer Training activity recorded, use the OR operator.
+### Paramètres de recherche
 
-The Search in Trash allows you to search contacts that have been deleted but not deleted permanently. When a contact is deleted, the contact and all related data are moved to trash. Only users with the relevant permission will be able to search in trash and will be able to restore the contact from trash.
+L'opérateur de recherche détermine si vos critères sont combinés avec des instructions ET ou OU . Par exemple, vous voulez trouver tous les contacts qui font partie du groupe Volontaires ET qui ont une activité de formation des bénévoles. Dans ce cas, utilisez l'opérateur ET. Si vous avez besoin de trouver tous ceux qui sont dans le groupe des Volontaires OU ont une activité de formation des bénévoles, utilisez l'opérateur OR.
+
+La recherche dans la corbeille vous permet de rechercher des contacts qui ont été supprimés mais pas supprimés définitivement. Lorsqu'un contact est supprimé, le contact et toutes les données associées sont déplacées vers la corbeille. Seuls les utilisateurs disposant de la permission appropriée pourront rechercher dans la corbeille et pourront restaurer le contact de la corbeille.
 
 ![Screen shot of Search in Trash](../img/user-interface-search-in-trash.png)
 
-### The Date Range Filter
+### Le filtre de plage de dates
 
 ![Screen shot of Date Range Filter](../img/user-interface-date-filter.png)
 
-Most component searches include a date range filter. The images below
-show examples of both:
+La plupart des recherches dans CIVICRM comprennent un filtre de plage de dates. Les images ci-dessous montrent deux exemples:
 
--   by using an absolute date range, e.g. "1st Jan 2010" to "31 July
-    2010"
--   by using a relative date range, e.g. "Previous week"
+-   En utilisant une plage de dates absolue, ex. "1er Jan 2010" au "31 juillet 2010"
+-   En utilisant une plage de dates relative, ex. "Semaine précédente"
 
-Relative date ranges are especially useful for searches that you would
-like to then save as Smart Groups (automatically populated groups that
-are configured to include contacts that share a certain set of
-characteristics or activities). For more information see the *Groups and
-tags* chapter.
+Les plages de dates relatives sont particulièrement utiles pour les recherches que vous souhaitez enregistrer sous forme de groupes intelligents (groupes remplis automatiquement qui sont configurés pour inclure des contacts qui partagent un certain ensemble de caractéristiques ou d'activités). Pour plus d'informations, reportez-vous au chapitre *Groupes et étiquettes*.
 
 ![Screen shot of Relative Date Range Filter](../img/user-interface-date-filter-relative.png)
 
-For example you may want to use a relative date range search to find:
-
--   Contacts who have contributed in the last 7 days (Relative date
-    range - "From 1 Week ago")
--   This (financial) years registered Event Participants (Relative date
-    range - "This Year")
--   Contacts who are a certain age
+Par exemple, vous pouvez utiliser une recherche relative à la période pour trouver:
 
 
-Relative dates filters based on the time interval "week" assume that Sunday is the first day of the week.   This is not true in all countries, for example Europe and many countries in Asia/Pacific region consider Monday to be the first day of the week. To set which day is the first day of the week, you need to go to **Administer >> Localization >> Date Format**.
+-   Contacts ayant contribué au cours des 7 derniers jours (intervalle de date relatif - "Depuis 1 semaine")
+-   Les participants aux événement de l'année (Période de référence - «Cette année»)
+-   Les contacts qui ont un certain âge
+
+Les filtres de dates relatives basés sur l'intervalle de temps «semaine» supposent que dimanche est le premier jour de la semaine. Ce n'est pas vrai dans tous les pays, par exemple en Europe et dans de nombreux pays de la région Asie / Pacifique le lundi est le premier jour de la semaine. Pour définir quel est le premier jour de la semaine, vous devez aller à **Administrer >> Localisation >> Format de date**.
 
 ![Screen shot of how to change the first day of the week](../img/user-interface-searching-week-begins.png)
 
 
-#### **Combining search criteria**
+#### **Combinaison des critères de recherche**
 
-Different criteria are combined by "ANDing" them. For example, if you
-select the tag "major donor" and the country "Mexico", the search will
-return major donors from Mexico. The search will not return major
-donors who are *not* from Mexico, nor those from Mexico who are *not*
-major donors.
+Certains critères peuvent être combinés par "ET". Par exemple, si vous sélectionnez l'étiquette «donateur» et le pays «Italie», la recherche renverra les principaux donateurs d'Italie. La recherche ne renverra pas les  donateurs qui ne sont pas *d'Italie, ni ceux d'Italie qui ne sont pas * donateurs*.
 
-You can change the default search operator from AND to OR in the Search Settings.
+Vous pouvez modifier l'opérateur de recherche par défaut de ET par OU dans les paramètres de recherche.
 
-Within criteria groups that allow you to check boxes for more than one
-value, these options are also combined by "ANDing". For example, if you
-can search for contacts whose Preferred Communication Method is both
-Email *AND* SMS.
+Dans les groupes de critères qui vous permettent de cocher des cases pour plus de valeurs, ces options sont également combinées par "ET". Par exemple, si vous pouvez rechercher des contacts dont le Moyen de communication préférée est à la fois E-mail *ET*  SMS.
 
-With fields that allow you to select more than one value from a dropdown list,
-the values are always combined with "OR". For example, you could find contacts
-that live in Alaska or in Arizona.
+Avec des champs qui vous permettent de sélectionner plus d'une valeur dans une liste déroulante, les valeurs sont toujours combinées avec "OU". Par exemple, vous pouvez trouver des contacts qui vivent en Italie ou en Espagne.
 
 ![Screen shot of combining search criteria](../img/user-interface-searching-states.png)
 
-Search Builder
---------------
+Constructeur de recherche
+-------------------------
 
 Advanced search lets you choose from a wide range of criteria in a
 user-friendly panel, but this has limitations. Search builder allows you
@@ -193,8 +123,10 @@ Search Builder allows you to choose from a range of operators:
 
 
 | Operator  | Purpose | Example |
+
 | -- | -- | -- |
 | = | Equals. Matches on the exact value you specify | **"First Name" = "Bob"** will find contacts who's first name is exactly "Bob" |
+
 |  ≠  | Not equals. Matches on everything that is not the specified value. | **"Gender" ≠ "Female"** will find contacts who are not female |
 |  > , ≥  | Greater-than, greater-than-or-equal-to | **"Birth Date" ≥ "Jan 1 2000"** will find contacts born on or after Jan 1 2000  |
 | < , ≤ | Less-than, less-than-or-equal-to | **"Last Name" < "J"** will find contacts whose name starts with a letter that comes before J in the alphabet  |
