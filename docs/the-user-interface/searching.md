@@ -37,19 +37,19 @@ Recherche multicritère
 
 La recherche avancée vous permet de rechercher dans toutes les informations que vous avez sur vos contacts. Par exemple, vous pourriez trouver «tous les contacts en Italie» ou «tous les membres du groupe adhérents». Si vous spécifiez deux catégories d'informations ou plus, la recherche affiche tous les contacts correspondant à toutes les catégories. Vous pouvez aussi combiner les deux critères mentionnés pour trouver «tous les membres du groupe adhérents en Italie».
 
-L'écran "Recherche multicritère" est accessible depuis le menu de navigation  **Recherche> Recherche multicritère**. Sur cet écran, les critères de recherche sont regroupés en sections qui font référence à différents types de données sur lesquelles vous pouvez effectuer une recherche, telles que des données d'adresse, des notes et des informations provenant de composants tels que Contributions ou Evénements. Chaque groupe de critères est représenté sous la forme d'une barre bleue (connue sous le nom d'«accordéon» car elle s'élargit lorsque vous cliquez dessus). Par exemple, si vous souhaitez rechercher toutes les personnes de votre base de données de 16 à 18 ans, cliquez sur l'accordéon de données démographiques. Lorsqu'il s'ouvre, vous pouvez spécifier la période de la date de naissance qui vous intéresse.
+L'écran "Recherche multicavancée" est accessible depuis le menu de navigation  **Recherche> Recherche avancée**. Sur cet écran, les critères de recherche sont regroupés en sections qui font référence à différents types de données sur lesquelles vous pouvez effectuer une recherche, telles que des données d'adresse, des notes et des informations provenant de composants tels que Contributions ou Evénements. Chaque groupe de critères est représenté sous la forme d'une barre bleue (connue sous le nom d'«accordéon» car elle s'élargit lorsque vous cliquez dessus). Par exemple, si vous souhaitez rechercher toutes les personnes de votre base de données de 16 à 18 ans, cliquez sur l'accordéon de données démographiques. Lorsqu'il s'ouvre, vous pouvez spécifier la période de la date de naissance qui vous intéresse.
 
 #### Paramètres d'affichage des résultats
 
 ![Screen shot of Display Results As](../img/user-interface-display-results-as.png)
 
-La Recherche multicritère renvoie vos résultats en tant que "Vue par défaut". Vous pouvez obtenir un autre type d'affichage. Par exemple, vous pouvez rechercher sur l'activité Renouvellement d'adhésion pour trouver tous ceux qui ont renouvelé leur adhésion la semaine dernière, puis afficher les résultats sous la forme d'adhésions afin d'exporter le nom, l'adresse et la date d'expiration de l'adhésion et lister les membres concernés. Il suffit alors de sélectionner le type d'affichage souhaité dans la liste déroulante **Views For Display Contact**.
+La Recherche avancée renvoie vos résultats en tant que "Vue par défaut". Vous pouvez obtenir un autre type d'affichage. Par exemple, vous pouvez rechercher sur l'activité Renouvellement d'adhésion pour trouver tous ceux qui ont renouvelé leur adhésion la semaine dernière, puis afficher les résultats sous la forme d'adhésions afin d'exporter le nom, l'adresse et la date d'expiration de l'adhésion et lister les membres concernés. Il suffit alors de sélectionner le type d'affichage souhaité dans la liste déroulante **Views For Display Contact**.
 
 #### Views for Display Contacts
 
 ![Screen shot of Display Contacts](../img/user-interface-new-contact-view-profile.png)
 
-La recherche multicritère vous permet de modifier les colonnes affichées dans vos résultats de recherche. Les colonnes par défaut sont Nom, Adresse, Ville, État, Code Postal, Pays, Email et Téléphone. Si vous souhaitez afficher un ensemble différent de colonnes (peut-être pour inclure un champ personnalisé ou supprimer une colonne dont vous n'avez pas besoin), créez un profil avec l'option de vues de recherche sélectionnée. Assurez-vous que les champs Visibilité de ce profil est activé comme "Exposer publiquement et pour les listes", et que le champ "colonne de résultats" soit activé. (Pour plus d'informations sur la création de profils voir le chapitre Profils de la section Configuration.)
+La recherche avancée vous permet de modifier les colonnes affichées dans vos résultats de recherche. Les colonnes par défaut sont Nom, Adresse, Ville, État, Code Postal, Pays, Email et Téléphone. Si vous souhaitez afficher un ensemble différent de colonnes (peut-être pour inclure un champ personnalisé ou supprimer une colonne dont vous n'avez pas besoin), créez un profil avec l'option de vues de recherche sélectionnée. Assurez-vous que les champs Visibilité de ce profil est activé comme "Exposer publiquement et pour les listes", et que le champ "colonne de résultats" soit activé. (Pour plus d'informations sur la création de profils voir le chapitre Profils de la section Configuration.)
 
 Par exemple, vous pouvez inclure des colonnes pour le sexe et la date de naissance, tout en éliminant le pays.
 
@@ -88,9 +88,8 @@ Les plages de dates relatives sont particulièrement utiles pour les recherches 
 
 Par exemple, vous pouvez utiliser une recherche relative à la période pour trouver:
 
-
--   Contacts ayant contribué au cours des 7 derniers jours (intervalle de date relatif - "Depuis 1 semaine")
--   Les participants aux événement de l'année (Période de référence - «Cette année»)
+-   Contacts ayant contribué au cours des 7 derniers jours (intervalle de date relatif : "Depuis 1 semaine")
+-   Les participants aux événement de l'année (Période de référence : «Cette année»)
 -   Les contacts qui ont un certain âge
 
 Les filtres de dates relatives basés sur l'intervalle de temps «semaine» supposent que dimanche est le premier jour de la semaine. Ce n'est pas vrai dans tous les pays, par exemple en Europe et dans de nombreux pays de la région Asie / Pacifique le lundi est le premier jour de la semaine. Pour définir quel est le premier jour de la semaine, vous devez aller à **Administrer >> Localisation >> Format de date**.
@@ -100,7 +99,7 @@ Les filtres de dates relatives basés sur l'intervalle de temps «semaine» supp
 
 #### **Combinaison des critères de recherche**
 
-Certains critères peuvent être combinés par "ET". Par exemple, si vous sélectionnez l'étiquette «donateur» et le pays «Italie», la recherche renverra les principaux donateurs d'Italie. La recherche ne renverra pas les  donateurs qui ne sont pas *d'Italie, ni ceux d'Italie qui ne sont pas *donateurs*.
+Certains critères peuvent être combinés par "ET". Par exemple, si vous sélectionnez l'étiquette «donateur» et le pays «Italie», la recherche renverra les principaux donateurs d'Italie. La recherche ne renverra pas les  donateurs qui ne sont pas *d'Italie*, ni ceux d'Italie qui ne sont pas *donateurs*.
 
 Vous pouvez modifier l'opérateur de recherche par défaut de ET par OU dans les paramètres de recherche.
 
@@ -154,11 +153,11 @@ Notez que vous pouvez également utiliser la recherche multicritères en associa
 Recherche personnalisées
 ------------------------
 
-Les recherches personnalisées sont conçues pour répondre à des besoins spécifiques qui ne peuvent être facilement résolus en utilisant **Recherche multicritères** ou **Constructeur de recherche**.
+Les recherches personnalisées sont conçues pour répondre à des besoins spécifiques qui ne peuvent être facilement résolus en utilisant **Recherche avancée** ou **Constructeur de recherche**.
 
 Dans le menu de navigation accédez à **Recherche**> **Recherche personnalisées**, vous verrez la liste des recherches personnalisées disponibles. Ces recherches personnalisées ont été écrites par des membres de la communauté CiviCRM pour répondre à leurs propres besoins. Vous pouvez aussi partager les votres avec la communauté dont les besoins sont similaires. Prenez le temps d'explorer ces recherches dont certaines peuvent vous être utile, et vous donneront une idée de ce qui est possible. 
 
-Bien que certaines de ces recherches puissent être effectuées dans la Recherche multicritères (surtout dans les versions ultérieures), ces recherches personnalisées sont déjà configurées pour afficher les résultats en fonction de vos besoins et peuvent proposer plus de colonnes utiles de résultats. 
+Bien que certaines de ces recherches puissent être effectuées dans la Recherche avancée (surtout dans les versions ultérieures), ces recherches personnalisées sont déjà configurées pour afficher les résultats en fonction de vos besoins et peuvent proposer plus de colonnes utiles de résultats. 
 
 Voici une brève description des recherches personnalisées disponibles :
 
@@ -172,7 +171,7 @@ Il existe également une recherche personnalisée intégrée très utile, «Incl
 
 ![Include/Exclude Search](../img/IncludeExclude.png)
 
-En combinant les options Inclure et Exclure, vous pouvez trouver des contacts qui se trouvent dans un groupe, mais exclure uniquement les membres du groupe qui correspondent à un autre critère. Par exemple, vous pouvez trouver tous les contacts qui sont abonnés à la newsletter ou des bénévoles, mais exclure les membres du conseil d'administration, peut-être pour créer une nouvelle liste de diffusion pour recevoir un message ciblant les cercles les plus externes de vos contacts.
+En combinant les options Inclure et Exclure, vous pouvez trouver des contacts qui se trouvent dans un groupe, mais exclure uniquement les membres du groupe qui correspondent à un autre critère. Par exemple, vous pouvez trouver tous les contacts qui sont abonnés à la newsletter ou des bénévoles, et exclure les membres du conseil d'administration, peut-être pour créer une nouvelle liste de diffusion pour envoyer un message ciblant les cercles les plus externes de vos contacts.
 
 ### **Nom et statut des ménages**
 
@@ -235,69 +234,38 @@ Recherche de données personnalisées à plusieurs valeurs.
 
 ### **Contributions effectuées dans l'année X et non dans l'année Y**
 
-Rechercher des contributions qui ont été faites dans une anné et pas dans une autre. Cela est utile pour suivre les donateurs semi-réguliers et les encourager à faire un don plus régulièrement. Voir aussi les rapports LYBUNT et SYBUNT.
+Rechercher les contributions qui ont été faites dans une année et pas dans une autre. Cela est utile pour suivre les donateurs semi-réguliers et les encourager à faire un don plus régulièrement. Voir aussi les rapports LYBUNT et SYBUNT.
 
 Aucun des champs n'est requis. Vous pouvez choisir de rechercher une plage de montant spécifié ainsi qu'une période de temps et si vous souhaitez exclure des montants minimum ou maximum.
 
-Il est possible d'écrire vos propres recherches personnalisées, mais vous devrez être à l'aise avec MySQL et PHP. Voir le wiki de développeur à [http://wiki.civicrm.org/confluence/display/CRMDOC/Develop](http://wiki.civicrm.org/confluence/display/CRMDOC/Develop)  pour plus d'informations sur la façon de faire. Si vous créez une recherche personnalisée et qui pourrait être utile à d'autres utilisateurs, pensez à la partager avec la communauté.
+Il est possible d'écrire vos propres recherches personnalisées, mais vous devrez être à l'aise avec MySQL et PHP. Voir le wiki de développeur à [http://wiki.civicrm.org/confluence/display/CRMDOC/Develop](http://wiki.civicrm.org/confluence/display/CRMDOC/Develop)  pour plus d'informations sur la façon de faire. Si vous créez une recherche personnalisée qui pourrait être utile à d'autres utilisateurs, pensez à la partager avec la communauté.
 
 
-The 'search-action' workflow
+Utiliser "recherche + action"
 ----------------------------
 
-After you retrieve your search results, you can perform a number of
-actions. An Actions box appears above the results. You can select either
-all records or specific records, then carry out an action with the
-selected records. Different actions are covered in more detail in the
-chapter on Everyday Tasks.
+Après avoir récupéré vos résultats de recherche, vous pouvez effectuer un certain nombre d'actions. Une zone Actions s'affiche au-dessus des résultats. Vous pouvez sélectionner tous les enregistrements ou cocher uniquements ceux qui vous interessent pour effectuer une action avec les enregistrements seulement sélectionnés. Les différentes actions sont traitées plus en détail dans le chapitre sur les tâches quotidiennes.
 
 ![Screen shot of Action Dropdown](../img/user-interface-searching-actions-dropdown.png)
 
-Some of the most commonly used actions are Add Contacts to Group, Export
-Contacts, Map Contacts, and creating and printing Mailing Labels. (To
-use Map Contacts, you will need to configure Mapping and Geocoding. You
-can read more about this in the *Installation* chapter of the
-*Configuration* section of this manual).
+Les actions les plus couramment utilisées sont Add Contacts to Group, Export Contacts, Map Contacts, et créer et imprimer des Mailing Labels. (Pour utiliser Map Contacts, vous devez configurer Mapping and Geocoding. Pour en savoir plus, consultez le chapitre *Installation* de la section *Configuration* de ce manuel).
+Par exemple, pour envoyer un courriel à un certain nombre de contacts, cochez les contacts qui vous intéressent, puis sélectionnez **Envoyer un e-mail aux contacts** dans la liste déroulante des actions.
 
-For example, to send email to a selected number of contacts, mark the
-contacts you are interested in and then select **Send Email to Contacts** in
-the dropdown list of actions.
-
-The contact summary pop-up
+La fenêtre du résumé des contacts
 --------------------------
-
-You can see a pop-up box with detailed information for any contact
-listed in your search results by hovering over the contact icon in the
-left column, as shown below. You can adjust the fields shown in this
-"pop-up view" by modifying the fields included in the "Summary Overlay"
-profile (**Administer** > **Customize Data and Screens** >
-**Profiles**).
+Cette boîte de dialogue contextuelle contient des informations détaillées pour tout contact figurant dans vos résultats de recherche en cliquant sur l'icône de contact dans la colonne de gauche, comme indiqué ci-dessous. Vous pouvez ajuster les champs affichés dans cette "fenêtre contextuelle" en modifiant les champs inclus dans le profil "Résumé de la superposition" (**Administer **> ** Personnaliser les données et les écrans**> **Profils**).
 
 ![Screen shot of Contact Summary pop-up](../img/user-interface-searching-summary-overlay.png)
 
-The wildcard (%)
+Le caractère générique (%)
 ----------------
 
-Understanding wildcards greatly expands your search options. A wildcard
-represents any character (letter, numeral or punctuation mark). In
-CiviCRM, the wildcard is represented by the % symbol (you may be
-familiar with other symbols such as * from other applications). It is
-most easily understood through examples.
+L'utilisation du caractère caractère générique (%) augmente considérablement vos options de recherche. Un caractère générique représente tout caractère (lettre, chiffre ou signe de ponctuation). Dans CiviCRM, le caractère générique est représenté par le symbole "%" (dans d'autres application c'est souvent * ) . Voici un exemple : 
 
-Suppose that somebody asked you to find a contact with a first name
-similar to "Michael", but possible something different such as
-"Michelle" or "Michał". If you search for "Mich%" you will find all
-these variations, including a contact who is supposed to be named
-"Michael" but whose name was misspelled as "Micheal". Wildcards can be
-used before, after, or even within words. For example, searching on
-'Mich%el' will exclude "Michał" and "Micheal" but still find "Michelle"
-and "Michael".  
+Supposons que l'on vous a demandé de trouver un contact avec un prénom tel que "Michael", mais aussi se rapprochant de "Michelle" ou "Michal". Si vous recherchez "Mich%" vous trouverez toutes les variations, y compris un contact qui est censé être nommé "Michael" mais dont le nom a été mal orthographié comme "Micheal". Les caractères génériques peuvent être utilisés avant, après ou même avec des mots. Par exemple, la recherche sur 'Mich% el' exclura "Michał" et "Micheal" mais trouvera "Michelle" et "Michael".
 
-Case sensitivity
+Sensibilité à la casse
 ------------------
+Notez que lorsque vous recherchez des chaînes de caractères, la recherche n'est pas sensible à la casse. Par exemple, si vous recherchez 'brooklyn', la recherche renverra des chaînes avec des lettres majuscules si la chaîne existe.
+Ex. «Brooklyn» ou «BROOKLYN». Saisir "mi%el" en minuscules trouvera également des contacts avec un majuscule 'M' dans leur nom.
 
-Note that when you search for character strings, the search is not
-case-sensitive. For example, if you search for 'brooklyn', the search
-will return strings with capitalised letters if the string exists, e.g.
-'Brooklyn' or 'BROOKLYN'. Entering "mi%el" in lowercase will also find
-contacts with an upper case 'M' in their name.
