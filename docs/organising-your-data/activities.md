@@ -14,6 +14,8 @@ Vous pouvez également ajouter des champs personnalisés aux types d'activités 
 Vous pouvez également créer un champ personnalisé qui sera utilisé pour un type d'activité spécifique. Par exemple, vous pouvez différentier **réunions** en tant que **réunion de personnel**, **réunion de client**, **réunion avec d'autres organisations.** etc...  
 Pour en savoir plus sur la création de champs personnalisés, reportez-vous au chapitre **Champs personnalisés**. Pour plus de détails sur la production de rapports, consultez la section **Rapports**. 
 
+![image](../img/Fr_activite_creation.PNG)
+
 Les activités ont les attributs suivants par défaut:
 
 -   **Type d'activité** : Le type d'activité (voir ci-dessous)
@@ -69,8 +71,10 @@ Dès que vous êtes dans l'**écran d'activité** les options récurrentes peuve
 -   **Repetition Start Date and Time**
 -   **Répéter chaque**: Heure, Jour, semaine, Mois, Année
 -   **Répéter le **: Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi
--   **Fin**: After a specific number of occurrences or on a specific date
+-   **Fin**: Après un certain nombre d'occurrences ou à une date précise
 -   **Exclure les Dates**: Plusieurs dates peuvent être sélectionnées
+
+![repeter activité](../img/Fr_activité_repeter.PNG)
 
 ![image](../img/recurringactivityscreen.png)
 
