@@ -26,11 +26,10 @@ Administer > Configure > Global Settings > Localization.
 
 ![2](../img/CiviCRM_update-CiviCore-2-en.png "2")
 
-Translations
+Traductions
 ------------
 
-CiviCRM accommodates different languages, however the developers rely on
-the community to translate the text displayed. 
+CiviCRM peut s'adapter à plusieurs langues, cependant l'équipe de développement dépend de la communauté pour traduire les textes qui sont affichés à l'écran.
 
 A number of languages have already been provided to a greater or lesser
 extent. Some have more than 90% of the text translated, others only 5%,
