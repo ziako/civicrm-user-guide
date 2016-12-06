@@ -31,13 +31,7 @@ Traductions
 
 CiviCRM peut s'adapter à plusieurs langues, cependant l'équipe de développement dépend de la communauté pour traduire les textes qui sont affichés à l'écran.
 
-A number of languages have already been provided to a greater or lesser
-extent. Some have more than 90% of the text translated, others only 5%,
-and a number of languages have not been translated at all. Please check
-the online translation tool Transifex
-([http://www.transifex.net/projects/p/civicrm/](http://www.transifex.net/projects/p/civicrm/))
-to find out about your language of interest. Download and install it on
-your CiviCRM installation to find out how well it will suit your needs.
+Un certain nombre de traductions sont déjà disponibles. Certaines traductions sont complétées à 90%, d'autres seulement 5%. Vous pouvez consulter le résumé du projet CiviCRM sur Transifex ([http://www.transifex.net/projects/p/civicrm/](http://www.transifex.net/projects/p/civicrm/)) pour voir l'état de la traduction d'une langue. Vous pouvez télécharger et installer la traduction dans votre instance de CiviCRM pour évaluer si cela répondra à vos besoins.
 
 You may find that although the translation is correct, you would want to
 use different terms in your situation. You are very much encouraged to
