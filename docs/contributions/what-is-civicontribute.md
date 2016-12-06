@@ -1,30 +1,23 @@
-What is CiviContribute?
+Qu'est-ce que CiviContribute?
 =======================
 
-CiviContribute is the component that lets you record and report on financial
-and in-kind contributions to your organization.  It allows you to:
+CiviContribute est le composant qui vous permet d'enregistrer et d'éditer un compte-rendu sur les contributions financières et en nature à votre organisation. Cela vous permet de:
 
--  accept donations and other financial or in-kind contributions
--  process membership signups and renewals
--  accept and manage events fees.
--  run specific fundraising campaigns
--  let your supporters fundraise for you through personalised campaign pages
--  quickly enter contribution and membership payments using "batches"
--  export batches of financial transactions to import to your accounting software
--  report and evaluate fundraising results and trends
+-  accepter les dons et autres contributions financières ou en nature
+-  traiter les inscriptions et les renouvellements de membres
+-  gérer les frais des événements.
+-  organiser des campagnes de financement spécifiques
+-  recueillir des fonds grâce à des pages de campagne personnalisées
+-  saisir rapidement les contributions et les paiements d'adhésion en utilisant les "lots"
+-  exporter des lots de transactions financières vers votre logiciel de comptabilité
+-  faire des compte-rendus et évaluer les résultats et les tendances des collectes de fonds
 
-Throughout CiviCRM, the term *contribution* refers to any financial
-transaction or payment taking place in the system such as a donation,
-event fee payment or membership fee payment and includes in-kind contributions.
+Dans CiviCRM, nous utilisons le terme *Contribution* pour désigner toute transaction financière ou paiement intervenant dans le cadre de la gestion du système... comme un don, un paiement de frais d'événement, un paiement de cotisation, ou des contributions en nature.
 
 Scenario: Contributing to Leadership
 ------------------------------------
 
-A community arts group, Arts in Action, conducts leadership workshops
-for youth under 25 throughout the year. They use CiviCRM extensively in
-the planning and execution of these workshops, combining the CiviEvent
-and CiviContribute components to make the administration of the
-workshops as efficient as possible.
+A community arts group, Arts in Action, conducts leadership workshops for youth under 25 throughout the year. They use CiviCRM extensively in the planning and execution of these workshops, combining the CiviEvent and CiviContribute components to make the administration of the workshops as efficient as possible.
 
 The workshops are funded in three ways: participant fees, local arts
 funding, and donations. Most of the donations are from previous workshop
