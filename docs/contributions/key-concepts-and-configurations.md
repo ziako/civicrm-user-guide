@@ -13,7 +13,7 @@ CiviCRM répond à ces besoins en utilisant **types financiers** pour simplifier
 
 Chaque **type financier** est lié à un certain nombre de **comptes financiers** qui peuvent effectuer le suivi des recettes, des actifs, des charges et des subventions (le cas échéant), tel qu'indiqué pour les quatre types financiers par défaut de l'image suivante.
 
-![financial types and accounts](../img/civicontribute-financial-types-and-accounts.png)
+![image](../img/Fr_contribution_type_financier.PNG)
 
 Les **Comptes financiers** doivent être basés sur le plan comptable de votre organisation. Dans CiviCRM, chaque contribution doit être affectée à un type financier. Lorsque la contribution est enregistrée, les débits et crédits appropriés sont automatiquement enregistrés dans les comptes financiers liés à ce type financier. (Si vous utilisez des ensembles de tarif ou de prix, chaque option doit être liée à un type financier différent et CiviCRM enregistrera toujours les débits et crédits appropriés pour tous les comptes financiers liés).
 
@@ -27,7 +27,7 @@ Généralement, vous aurez besoin d'un type financier pour chaque type de recett
 
 Pour créer un nouveau type financier, allez :  **Administer> CiviContribute> Types financiers**, puis cliquez sur **Ajouter Type financier**
 
-![Adding Financial Type](../img/civicontribute-financial-types-add-new.png)
+![image](../img/Fr_contribution_creer_type_financier.PNG)
 
 Lorsque vous créez un nom spécifique pour Type financier, CiviCRM crée automatiquement un compte de recette similairement nommé et l'affecte ainsi que les comptes par défaut pour l'actif, les dépenses et le coût des recettes au nouveau type financier. pour modifier les comptes attribués à un type financier, vous pouvez le faire en cliquant sur **Comptes** à droite du type financier approprié puis **Administer> CiviContribute> Types financiers**. Le but de ce processus en deux étapes est de simplifier le cas d'utilisation courante où une organisation ne dispose que d'un compte de banque de dépôts, de comptes débiteurs et de comptes fournisseurs, mais offre plus de flexibilité pour des configurations avancées.
 
@@ -41,7 +41,7 @@ Pour modifier les comptes financiers aller à :  **Administer> CiviContribute> C
 
 Les seuls champs obligatoires sont Nom et Type de compte financier. Les comptes de recettes sont définis lorsque vous créez le type financier.
 
-![Editing Financial Account](../img/civicontribute-financial-account-edit.png)
+![image](../img/Fr_contribution_creer_compte_financier.PNG)
 
 Les autres champs que vous créez seront déterminés par votre organisation comptable. Si vous prévoyez d'exporter des transactions financières de CiviCRM dans votre logiciel de comptabilité, vous aurez besoin du code comptable (sans espace supplémentaire ou manquant). Si vous utilisez Quickbooks, vous aurez également besoin du code de type de compte.
 
@@ -57,11 +57,15 @@ Pour commencer à accepter des paiements en ligne, vous devez [configurer un pro
 
 Allez à **Administer> CiviContribute> Méthodes de paiement**  pour modifier les options existantes qui peuvent être utilisées pour les contributions ou pour ajouter une nouvelle option via **Ajouter des méthodes de paiement**. Les options courantes - carte de crédit, espèces, chèque, carte de débit et EFT - sont installées par défaut. Vous devez demander à votre comptable de confirmer que chaque méthode de paiement est liée au compte approprié.
 
+![image](../img/Fr_contribution_moyen_de_paiement.PNG)
+
 ## **Cartes de Crédit Acceptées**
 
 Allez à **Administer> CiviContribute> Cartes de crédit acceptées** pour modifier les cartes de crédit acceptables existantes ou définir une nouvelle option via **Ajouter carte de crédit accepté**.
 
 Remarque: Si les informations de facturation sont collectées sur le site Web du processeur de paiement, vous devrez configurer les cartes de crédit / les méthodes de paiement acceptées sur ce site.
+
+![image](../img/Fr_contribution_moyen_de_paiement.PNG)
 
 ## Besoin de champs de données supplémentaires
 
