@@ -33,9 +33,7 @@ CiviCRM peut s'adapter à plusieurs langues, cependant l'équipe de développeme
 
 Un certain nombre de traductions sont déjà disponibles. Certaines traductions sont complétées à 90%, d'autres seulement 5%. Vous pouvez consulter le résumé du projet CiviCRM sur Transifex ([http://www.transifex.net/projects/p/civicrm/](http://www.transifex.net/projects/p/civicrm/)) pour voir l'état de la traduction d'une langue. Vous pouvez télécharger et installer la traduction dans votre instance de CiviCRM pour évaluer si cela répondra à vos besoins.
 
-You may find that although the translation is correct, you would want to
-use different terms in your situation. You are very much encouraged to
-take part in the translation of your language.
+Il peut arriver que dans certaines situations, la traduction soit correcte, mais que vous auriez préféré utiliser un autre terme dans votre contexte. Dans ce cas, nous recommandons d'entrer en contact avec les autres traducteurs pour en discuter.
 
 Facilities
 ----------
