@@ -1,143 +1,75 @@
-# Key concepts and configurations
+# Concepts clés et configurations
 
-This section explains the key concepts underpinning CiviContribute and outlines
-the high-level configuration needed for its use.
+Cette section explique les concepts clés sous-jacents de CiviContribute et décrit la configuration nécessaire à sa performance.
 
-Before you begin it is helpful to list out the types of contributions your
-organisation receives (or wants to receive), and identify which of those you
-want to track using CiviCRM.
+This section explains the key concepts underpinning CiviContribute and outlines the high-level configuration needed for its use.
 
-## Financial types, financial accounts and accounting codes
+Avant de commencer, il est utile d'énumérer les types de contributions que votre organisation reçoit (ou souhaite recevoir) et d'identifier celles que vous souhaitez gérer en utilisant CiviCRM.
 
-Organisations that use CiviCRM have differing needs in terms of financial
-reporting.  Some just want to know the total donation or membership income
-recorded in CiviCRM whereas others want to be able to export a full set of
-double-entry financial transactions to import into their accounting software.
 
-CiviCRM caters for both those groups by using **Financial types** to hide the
-complexity of double-entry bookkeeping from everyone who doesn't need to know
-about it, whilst still recording those transactions for organisations that do
-need them.
+## Types financiers, comptes financiers et comptes comptables
 
-Each **financial type** is linked to a number of **financial accounts** that
-can track income, assets, fees and premiums (if applicable) as
-required as shown for the four default financial types in the following image.
+Les organisations qui utilisent CiviCRM ont des besoins différents en termes de compte rendus financiers. Certains veulent juste savoir le total des dons ou le montant total des adhésions enregistrées dans CiviCRM, alors que d'autres veulent être en mesure d'exporter un ensemble complet d'opérations financières à double entrée dans leur logiciel de comptabilité.
 
+CiviCRM répond à ces besoins en utilisant **types financiers** pour masquer la complexité de la comptabilité à double entrée aux personnes non initiées, tout en enregistrant les opérations comptables pour les organisations qui en ont besoin.
+
+Chaque **type financier** est lié à un certain nombre de **comptes financiers** qui peuvent effectuer le suivi des recettes, des actifs, des charges et des subventions (le cas échéant), tel qu'indiqué pour les quatre types financiers par défaut de l'image suivante.
 
 ![financial types and accounts](../img/civicontribute-financial-types-and-accounts.png)
 
+Les **Comptes financiers** doivent être basés sur le plan comptable de votre organisation. Dans CiviCRM, chaque contribution doit être affectée à un type financier. Lorsque la contribution est enregistrée, les débits et crédits appropriés sont automatiquement enregistrés dans les comptes financiers liés à ce type financier. (Si vous utilisez des ensembles de tarif ou de prix, chaque option doit être liée à un type financier différent et CiviCRM enregistrera toujours les débits et crédits appropriés pour tous les comptes financiers liés).
 
-The **financial accounts** should be based on your organisation's
-Chart of Accounts. In CiviCRM each contribution must be assigned a financial type.
-When the contribution is saved the appropriate debits and credits are
-automatically recorded for the financial accounts linked ot that financial type.
-(If you are using
-price sets, each option in the price set could be linked to a different
-financial type and CiviCRM will still record the appropriate debits and
-credits for all linked financial accounts.)  
+Il est souhaitable que vous consultiez votre comptable avant de créer ou de modifier les types financiers et les comptes Comptables existants.
 
-You should consult with your organization's bookkeeper or accountant before
-setting up new or modifying the existing the financial types and financial
-accounts.
+### Types Financiers
 
-### Financial Types
+Les types financiers standard inclus dans CiviCRM sont les tarifs d'événement, les cotisations des membres, les don et les contributions de campagne comme indiqué dans l'image ci-dessus, mais vous pouvez modifier les comptes existants ou mettre en place de nouveaux types financiers pour répondre à vos besoins.
 
-The standard financial types included with CiviCRM are event fee, member dues,
-donation and campaign contribution  as shown in the image above, but you can
-modify these existing accounts or set up new financial types to suit your needs.
+Généralement, vous aurez besoin d'un type financier pour chaque type de recettes que vous enregistrez dans CiviCRM pour suivre vos comptes. Donc, si vous faites un compte rendu des appels de dons non imposable, les dons pour les manifestations et les dons récurrents séparément, alors le fait de n'avoir qu'un seul type de financement «Dons» dans CiviCRM ne fonctionnera pas, vous aurez besoin d'un type financier appelé «Appel dons défiscalisés», Un autre appelé «Dons récurrents»....
 
-Generally you will need one financial type for each type of income (revenue)
-you receive in CiviCRM and track in your accounts. So if you report on tax
-appeal donations, festive appeal donations and recurring donations separately
-then having only one "Donation" financial type in CiviCRM will not work, you
-will need one financial type called "Tax Appeal", another called "Festive
-Appeal" and yet another called "Recurring donations".
-
-To create a new financial type navigate to **Administer > CiviContribute >
-Financial Types**,  and click on **Add Financial Type**
+Pour créer un nouveau type financier, allez :  **Administer> CiviContribute> Types financiers**, puis cliquez sur **Ajouter Type financier**
 
 ![Adding Financial Type](../img/civicontribute-financial-types-add-new.png)
 
-When you create a Financial Type of a specific name, CiviCRM automatically
-creates a similarly named revenue (income) account and assigns it and
-the default accounts for asset, expenses and cost of sales to the new financial
-type. If you need to edit the accounts allocated to a financial type,
-you can do so by clicking on **Accounts** to the right of the appropriate
-financial type on **Administer > CiviContribute > Financial Types**.
-The aim behind this two step process is to
-simplify the common use case where an organisation has only one each of
-Deposit Bank Account, Accounts Receivable and Accounts Payable, but provide
-flexibility for more sophisticated setups.
+Lorsque vous créez un nom spécifique pour Type financier, CiviCRM crée automatiquement un compte de recette similairement nommé et l'affecte ainsi que les comptes par défaut pour l'actif, les dépenses et le coût des recettes au nouveau type financier. pour modifier les comptes attribués à un type financier, vous pouvez le faire en cliquant sur **Comptes** à droite du type financier approprié puis **Administer> CiviContribute> Types financiers**. Le but de ce processus en deux étapes est de simplifier le cas d'utilisation courante où une organisation ne dispose que d'un compte de banque de dépôts, de comptes débiteurs et de comptes fournisseurs, mais offre plus de flexibilité pour des configurations avancées.
 
 ![Editing accounts linked to financial type](../img/civicontribute-financial-types-linked-accounts.png)
 
-### Financial Accounts
+### Comptes financiers 
 
-As with financial types, the list of preconfigured financial accounts will
-suit the needs of many organisations but it can also be customized if your
-organisation requires changes or additions. (Remember, each new financial type
-will add a new revenue account with the same name.)
+Comme pour les types financiers, la liste des comptes financiers préconfigurés répond aux besoins de nombreuses organisations, mais elle peut également être personnalisée si votre organisation nécessite des modifications ou des ajouts. (N'oubliez pas que chaque nouveau type financier ajoutera un nouveau compte de recettes portant le même nom.)
 
-You edit financial accounts at **Administer > CiviContribute > Financial Accounts**.
+Pour modifier les comptes financiers aller à :  **Administer> CiviContribute> Comptes financiers**.
 
-The only required fields are Name and Financial Account Type. For revenue
-accounts these are set when you create the financial type.
+Les seuls champs obligatoires sont Nom et Type de compte financier. Les comptes de recettes sont définis lorsque vous créez le type financier.
 
 ![Editing Financial Account](../img/civicontribute-financial-account-edit.png)
 
-How many of the other fields you fill in will be determined by your workflow.
-If you plan to export financial transactions from CiviCRM to import into your
-accounting software package you will need the accounting code (without
-extra or missing spaces).  If you are using Quickbooks you will also need the
-account type code.
+Les autres champs que vous créez seront déterminés par votre organisation comptable. Si vous prévoyez d'exporter des transactions financières de CiviCRM dans votre logiciel de comptabilité, vous aurez besoin du code comptable (sans espace supplémentaire ou manquant). Si vous utilisez Quickbooks, vous aurez également besoin du code de type de compte.
 
-NOTE: Changing the financial account name will also change the financial type name.
+REMARQUE: la modification du nom du compte financier modifiera également le nom du type financier.
 
-## **Payment processors**
+## **Processeurs de paiement**
 
-CiviCRM provides you with the ability to take payments online on your
-website. You can take payments for a variety of reasons including
-fundraising campaigns, membership dues and event attendance.
+CiviCRM vous offre la possibilité d'accepter des paiements en ligne sur votre site Web. Vous pouvez autoriser des paiements en ligne pour une variété de raisons, y compris les campagnes de collecte de fonds, les cotisations des membres et la participation à certains événements.
 
-To start taking payments online you need to [configure a payment processor](../contributions/payment-processors)
-which will connect your website to the credit card and banking
-infrastructure that actually processes the payment.
+Pour commencer à accepter des paiements en ligne, vous devez [configurer un processeur de paiement](../contributions/processeurs de paiement) qui va connecter votre site à l'infrastructure bancaire et de carte de crédit qui traite effectivement le paiement.
 
-## **Payment Methods**
+## **Méthodes de paiement**
 
-Navigate to **Administer > CiviContribute > Payment Methods** to
-edit existing options that can be used for contributions or to add a new
-option through **Add Payment Methods**. The common options - credit
-card, cash, check, debit card, and EFT - are installed by default. You should
-get your accountant or bookkeeper to confirm that each payment method is linked
-to the correct Asset account.
+Allez à **Administer> CiviContribute> Méthodes de paiement**  pour modifier les options existantes qui peuvent être utilisées pour les contributions ou pour ajouter une nouvelle option via **Ajouter des méthodes de paiement**. Les options courantes - carte de crédit, espèces, chèque, carte de débit et EFT - sont installées par défaut. Vous devez demander à votre comptable de confirmer que chaque méthode de paiement est liée au compte Asset approprié.
 
+## **Cartes de Crédit Acceptées**
 
-## **Accepted Credit Cards**
+Allez à **Administer> CiviContribute> Cartes de crédit acceptées** pour modifier les cartes de crédit acceptables existantes ou définir une nouvelle option via **Ajouter carte de crédit accepté**.
 
-Navigate to **Administer > CiviContribute > Accepted Credit Cards** to
-edit existing acceptable credit cards or define a new option through
-**Add Accepted Credit Card**.
+Remarque: Si les informations de facturation sont collectées sur le site Web du processeur de paiement, vous devrez configurer les cartes de crédit / les méthodes de paiement acceptées sur ce site.
 
-Note: If billing information is collected on the payment processor's website
-then you will need to configure accepted credit cards/payment methods on that
-site.
+## besoin de champs de données supplémentaires
 
+CiviContribute dispose d'un ensemble de champs prédéfinis pour suivre les informations sur les contributions. Si vous devez suivre plus d'informations sur les contributions, vous pouvez le faire en définissant de nouveaux champs de données personnalisés. Des données personnalisées peuvent être utiles pour catégoriser davantage vos contributions ou suivre des informations supplémentaires.
 
-## Data needs and fields
+Conseil : Notez toutes les informations que vous souhaitez suivre sur vos contributions, y compris les compte rendus (décrits plus loin dans ce chapitre), puis comparez vos besoins de données aux champs prédéfinis de CiviCRM. Une façon simple de le faire est de regarder l'écran pour ajouter une nouvelle contribution. Beaucoup de fonctionnalités utiles sont intégrées dans les champs de contribution de base, il est donc inutile de les dupliquer avec des champs personnalisés, mais votre organisation peut avoir des besoins spécifiques qui nécessitent des champs personnalisés.
 
-CiviContribute has a set of predefined fields to track contribution
-information. If you need to track more information about contributions,
-you can do this by defining new custom data fields. Custom data might be
-useful to further categorize your contributions or track additional
-information.
+Si vous devez créer des champs personnalisés pour répondre à vos besoins, lisez [Création de champs personnalisés](../organizing-your-data / creating-custom-fields).
 
-Write down all the information you want to track about your
-contributions, including reports (described later in this chapter), then
-compare your data needs to CiviCRM's predefined fields. An easy way to
-do this is to look at the screen for adding a new contribution. A lot
-of useful functionality is built in to the core contribution fields so
-there's no point in duplicating them with custom fields, but your
-organisation may have specific needs that require custom fields.
-
-If you do need to create custom fields to meet your needs, read [Creating Custom Fields](../organising-your-data/creating-custom-fields).
