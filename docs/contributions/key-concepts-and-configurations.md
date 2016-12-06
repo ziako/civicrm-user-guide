@@ -65,7 +65,7 @@ Allez à **Administer> CiviContribute> Cartes de crédit acceptées** pour modif
 
 Remarque: Si les informations de facturation sont collectées sur le site Web du processeur de paiement, vous devrez configurer les cartes de crédit / les méthodes de paiement acceptées sur ce site.
 
-![image](../img/Fr_contribution_moyen_de_paiement.PNG)
+![image](../img/Fr_contribution_carte_de_paiement.PNG)
 
 ## Besoin de champs de données supplémentaires
 
