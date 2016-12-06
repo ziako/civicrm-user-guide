@@ -1,17 +1,15 @@
 # Concepts clés et configurations
+---------------------------------
 
-Cette section explique les concepts clés sous-jacents de CiviContribute et décrit la configuration nécessaire à sa performance.
+Cette section explique les concepts clés de CiviContribute et décrit la configuration nécessaire à sa performance.
 
-This section explains the key concepts underpinning CiviContribute and outlines the high-level configuration needed for its use.
-
-Avant de commencer, il est utile d'énumérer les types de contributions que votre organisation reçoit (ou souhaite recevoir) et d'identifier celles que vous souhaitez gérer en utilisant CiviCRM.
-
+Avant de commencer, il est utile d'énumérer les types de contributions que votre organisation reçoit (ou souhaite recevoir) et bien identifier celles que vous souhaitez gérer en utilisant CiviCRM.
 
 ## Types financiers, comptes financiers et comptes comptables
 
-Les organisations qui utilisent CiviCRM ont des besoins différents en termes de compte rendus financiers. Certains veulent juste savoir le total des dons ou le montant total des adhésions enregistrées dans CiviCRM, alors que d'autres veulent être en mesure d'exporter un ensemble complet d'opérations financières à double entrée dans leur logiciel de comptabilité.
+Les organisations qui utilisent CiviCRM ont des besoins différents en termes de compte rendus financiers. Certains veulent juste savoir le total des dons ou le montant total des adhésions enregistrées dans CiviCRM, alors que d'autres veulent être en mesure d'exporter un ensemble complet d'opérations financières en parties double dans leur logiciel de comptabilité.
 
-CiviCRM répond à ces besoins en utilisant **types financiers** pour masquer la complexité de la comptabilité à double entrée aux personnes non initiées, tout en enregistrant les opérations comptables pour les organisations qui en ont besoin.
+CiviCRM répond à ces besoins en utilisant **types financiers** pour simplifier la complexité de la comptabilité en parties double aux personnes non initiées, tout en enregistrant les opérations comptables pour les organisations qui en ont besoin.
 
 Chaque **type financier** est lié à un certain nombre de **comptes financiers** qui peuvent effectuer le suivi des recettes, des actifs, des charges et des subventions (le cas échéant), tel qu'indiqué pour les quatre types financiers par défaut de l'image suivante.
 
@@ -57,7 +55,7 @@ Pour commencer à accepter des paiements en ligne, vous devez [configurer un pro
 
 ## **Méthodes de paiement**
 
-Allez à **Administer> CiviContribute> Méthodes de paiement**  pour modifier les options existantes qui peuvent être utilisées pour les contributions ou pour ajouter une nouvelle option via **Ajouter des méthodes de paiement**. Les options courantes - carte de crédit, espèces, chèque, carte de débit et EFT - sont installées par défaut. Vous devez demander à votre comptable de confirmer que chaque méthode de paiement est liée au compte Asset approprié.
+Allez à **Administer> CiviContribute> Méthodes de paiement**  pour modifier les options existantes qui peuvent être utilisées pour les contributions ou pour ajouter une nouvelle option via **Ajouter des méthodes de paiement**. Les options courantes - carte de crédit, espèces, chèque, carte de débit et EFT - sont installées par défaut. Vous devez demander à votre comptable de confirmer que chaque méthode de paiement est liée au compte approprié.
 
 ## **Cartes de Crédit Acceptées**
 
@@ -65,11 +63,11 @@ Allez à **Administer> CiviContribute> Cartes de crédit acceptées** pour modif
 
 Remarque: Si les informations de facturation sont collectées sur le site Web du processeur de paiement, vous devrez configurer les cartes de crédit / les méthodes de paiement acceptées sur ce site.
 
-## besoin de champs de données supplémentaires
+## Besoin de champs de données supplémentaires
 
-CiviContribute dispose d'un ensemble de champs prédéfinis pour suivre les informations sur les contributions. Si vous devez suivre plus d'informations sur les contributions, vous pouvez le faire en définissant de nouveaux champs de données personnalisés. Des données personnalisées peuvent être utiles pour catégoriser davantage vos contributions ou suivre des informations supplémentaires.
+CiviContribute dispose d'un ensemble de champs prédéfinis pour suivre les informations sur les contributions. Si vous devez suivre plus d'informations sur les contributions, vous pouvez le faire en définissant de nouveaux champs de données personnalisés. Ces données peuvent être utiles pour mieux catégoriser vos contributions ou suivre des informations supplémentaires.
 
-Conseil : Notez toutes les informations que vous souhaitez suivre sur vos contributions, y compris les compte rendus (décrits plus loin dans ce chapitre), puis comparez vos besoins de données aux champs prédéfinis de CiviCRM. Une façon simple de le faire est de regarder l'écran pour ajouter une nouvelle contribution. Beaucoup de fonctionnalités utiles sont intégrées dans les champs de contribution de base, il est donc inutile de les dupliquer avec des champs personnalisés, mais votre organisation peut avoir des besoins spécifiques qui nécessitent des champs personnalisés.
+Conseil : Notez toutes les informations que vous souhaitez suivre sur vos contributions, y compris les compte rendus (décrits plus loin dans ce chapitre), puis comparez vos besoins de données aux champs prédéfinis de CiviCRM. Une façon simple de le faire est de regarder l'écran pour ajouter une nouvelle contribution. Beaucoup de fonctionnalités utiles sont déjà intégrées dans les champs de contribution de base, il est donc inutile de les dupliquer avec des champs personnalisés, mais votre organisation peut avoir des besoins spécifiques qui nécessitent des champs personnalisés.
 
-Si vous devez créer des champs personnalisés pour répondre à vos besoins, lisez [Création de champs personnalisés](../organizing-your-data / creating-custom-fields).
+Si vous devez créer des champs personnalisés pour répondre à vos besoins, lisez : [Création de champs personnalisés](../organizing-your-data / creating-custom-fields).
 
