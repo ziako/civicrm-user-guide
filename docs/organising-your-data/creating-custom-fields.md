@@ -15,9 +15,9 @@ Autrement dit, un champ est une unité d'information inscrite dans la base de do
 Ensembles de champs personnalisés
 -----------------
 
-Les champs personnalisés font toujours partie d'un ensemble de champs personnalisés. Ce que recouvre chacun de ces ensembles peut être aussi large ou pointu que vous le désirez. Vous pouvez par exemple créer l'ensemble de champs personnalisés « Diplômes obtenus » et l'associer à tous vos types de contact, en créer un deuxième baptisé « Statut logement » et l'associer à un type de contact précis (« Individus »), et ajouter un troisième ensemble associé à un composant particulièr (CiviMember ou CiviEvent) ou à un autre élément tel que Groupes ou Relations. L'étendue d'un ensemble de champs personnalisés est une des rares décisions irréversibles dans CiviCRM. Vous ne pourrez pas y apporter de modifications après avoir créé votre ensemble: il est donc important de bien réfléchir à l'avance aux champs personnalisés que vous voulez y associer.
+Les champs personnalisés font toujours partie d'un ensemble de champs personnalisés. Ce que recouvre chacun de ces ensembles peut être aussi large ou pointu que vous le désirez. Vous pouvez par exemple créer l'ensemble de champs personnalisés « Prescripteur " et l'associer à tous vos types de contact, en créer un deuxième baptisé « Statut logement » et l'associer à un type de contact précis (« Individus »), et ajouter un troisième ensemble associé à un composant particulièr (CiviMember ou CiviEvent) ou à un autre élément tel que Groupes ou Relations. L'étendue d'un ensemble de champs personnalisés est une des rares décisions irréversibles dans CiviCRM. Vous ne pourrez pas y apporter de modifications après l'avoir créé : il est donc important de bien réfléchir à l'avance aux champs personnalisés que vous voulez y associer.
 
-Quand vous créez des ensembles de champs personnalisés, demandez-vous :
+CONSEIL : Quand vous créez des ensembles de champs personnalisés, demandez-vous :
 
 -   Comment les champs de cet ensemble seront-ils utilisés?
 -   Pour quel type de contact ou de dossier ces champs seront-ils pertinents?
@@ -32,6 +32,7 @@ Pour créer un ensemble de champs personnalisés - et les champs personnalisés 
 ![image](../img/Custom%20Field%20Set.png)
 
 Nous allons maintenant vous décrire chacun des champs.
+
 ### Nom de l'ensemble
 
 Ce nom va servir de légende à votre ensemble de champs si vous choisissez de faire apparaître celui-ci dans le corps du texte. Si vous optez plutôt pour un affichage par onglet, le nom de l'ensemble servira d'étiquette pour l'onglet de navigation.
@@ -61,9 +62,9 @@ Si vous avez créé plus d'un ensemble, le champ Ordre vous permet de détermine
 
 ### Entrées multiples
 
-Un champ ne contient en général qu'une seule entrée. Par exemple, une personne a les cheveux blonds ou noirs, mais pas les deux à la fois. Mais certains champs sont plus complexes, et peuvent demander plusieurs entrées différentes. Par exemple, pour un champ comme « Formation Universitaire », il faut probablement prévoir la saisie de plusieurs diplômes, dont chacun représente une entrée distincte.
+Un champ ne contient en général qu'une seule entrée. Par exemple, une personne a les cheveux blonds ou noirs, mais pas les deux à la fois. Mais certains champs sont plus complexes, et peuvent demander plusieurs entrées différentes. Par exemple, pour un champ comme « Formation Universitaire », il faut prévoir la saisie de plusieurs diplômes, dont chacun représente une entrée distincte.
 
-CiviCRM offre cette fonction pour les ensembles de champs assignés aux contacts (la catégorie générale, ou un type de contact en particulier). Pour utiliser cette fonction, sélectionnez l'option « Cet Ensemble de champs personnalisés accepte-t-il les entrées multiples? » 
+CiviCRM offre cette fonction pour les ensembles de champs attriués aux contacts (la catégorie générale, ou un type de contact en particulier). Pour utiliser cette fonction, sélectionnez l'option « Cet Ensemble de champs personnalisés accepte-t-il les entrées multiples? » 
 
 Cette option compte plusieurs restrictions : 
 
@@ -181,9 +182,9 @@ Permet de contrôler l'ordre dans lequel les champs apparaissent. Vous pouvez af
 
 Vous pouvez désigner une valeur par défaut pour un champ. Cette valeur sera automatiquement affichée ou sélectionnée lorsque les utilisateurs accèdent à un formulaire contenant ce champ.
 
-### Aide pré-formulaire et post-formulaire
+### Aide avant et après formulaire
 
-Idéalement, votre nom de champ est suffisament clair pour que les utilisiteurs sachent comment le remplir. Mais dans les cas où il ya une certaine ambiguïté, ou  que vous souhaitiez préciser la façon dont un certain champ est utilisé, vous pouvez entrer le texte d'aide ici. Si vous l'entrez dans l'aide de pré-formulaire, votre texte d'aide s'affiche au-dessus du champ de formulaire et si vous entrez du texte dans l'aide post-formulaire, il apparaît sous le champ de formulaire.
+Idéalement, votre nom de champ est suffisament clair pour que les utilisiteurs sachent comment le remplir. Mais dans les cas où il ya une certaine ambiguïté, ou  que vous souhaitiez préciser la façon dont un certain champ est utilisé, vous pouvez entrer le texte d'aide ici. Si vous l'entrez dans l'aide avant formulaire, votre texte d'aide s'affiche au-dessus du champ de formulaire et si vous entrez du texte dans l'aide aprèsformulaire, il apparaît sous le champ de formulaire.
 
 Le texte d'aide apparaît dans toutes les utilisations du champ dans les pages d'administration et est inséré comme texte d'aide par défaut lorsque des champs sont affectés à un profil (voir «profils»). La personne qui crée le profil peut supprimer ou modifier le texte d'aide sans impact sur la définition du champ personnalisé d'origine.
 
@@ -221,7 +222,6 @@ Lorsque vous créez un nouvel ensemble, vous avez la possibilité de saisir init
 Si vous le souhaitez, vous pouvez également marquer l'un des choix comme option par défaut.
 Les options inactives sont masquées lorsque le champ est présenté.
 
-
 ### Gestion des ensembles de champs personnalisés.
 
 Vous pouvez afficher une liste de tous les champs personnalisés dans un ensemble de champs personnalisés définis à tout moment en naviguant sur **Administer> Personnaliser les données et les écrans> Données personnalisées** et en cliquant sur "Afficher et modifier les champs personnalisés" pour l'ensemble de champs choisi.
@@ -232,20 +232,20 @@ Outre les options prévues dans les paramètres d'édition du champ , éditez le
 
 Choisir entre champs, groupes et étiquettes
 ----------------------------------------
-Les champs de données, les groupes et les étiquettes sont trois manières principales d'associer des informations aux contacts. Bien qu'il puisse être tentant de créer un champ de données personnalisé pour chaque attribut de vos données, prenez le temps d'étudier toutes les alternatives. Ils offrent une fonctionnalité puissante que vous pouvez manquer si vous comptez uniquement sur des données personnalisées. En outre, l'utilisation de champs de données pour les informations où ils pourraient être stockés plus efficacement dans des groupes ou des étiquettes peut ralentir votre système. Enfin, l'utilisation appropriée des groupes et des étiquettes facilite considérablement la tâche du personnel administratif pour retrouver les données.
+Les champs de données, les groupes et les étiquettes sont trois manières principales d'associer des informations aux contacts. Bien qu'il puisse être tentant de créer un champ de données personnalisé pour chaque attribut de vos données, prenez le temps d'étudier toutes les alternatives. Groupes et étiquettes offrent de puissantes fonctionnalités que vous pourriez occulter si vous comptez uniquement sur des données personnalisées. En outre, l'utilisation de champs de données pour les informations où ils pourraient être stockés plus efficacement dans des groupes ou des étiquettes peut ralentir votre système. Enfin, l'utilisation appropriée des groupes et des étiquettes facilite considérablement la tâche du personnel administratif pour retrouver les données.
 
 Voici quelques conseils qui peuvent vous aider à choisir:
 
    - Les données pouvant prendre un large éventail de valeurs, telles que l'adresse ou la biographie d'une personne, doivent être stockées dans un champ de données personnalisé alphanumérique.
    - Les champs de données personnalisés peuvent être regroupés et affichés dans leur propre onglet sur l'enregistrement du contact.
    - Comme son nom l'indique, les groupes sont utilisés pour grouper des contacts. Par exemple, vous pouvez affecter les membres du conseil d'administration à un groupe, le personnel à un autre, les bénévoles à un autre, etc... Si vous utilisez Joomla ou Drupal, vous pouvez attribuer des autorisations en fonction de l'appartenance a un groupe. Vous pouvez également définir un groupe auquel CiviCRM ajoute automatiquement des contacts et les supprime en fonction de certaines caractéristiques. Cette fonction est appelée "Groupe dynamique".(Smart Group)
-   - Si vous envisagez d'utiliser CiviMail pour les envois en masse et que vous souhaitez que certains contacts reçoivent un courrier particulier, ces contacts doivent être affectés à un groupe. Par exemple, vous aurez peut-être un communiqué de presse adressé seulement à certains contacts : les journalistes. Ces contacts doivent être affectés à un groupe particulier. Ce groupe pourrait être aussi un Groupe dynamique.   
+   - Si vous envisagez d'utiliser CiviMail pour les envois en masse et que vous souhaitez que certains contacts reçoivent un courrier particulier, ces contacts doivent être affectés à un groupe. Par exemple, vous aurez peut-être un communiqué de presse a adresser seulement à certains contacts : les journalistes. Ces contacts doivent être affectés à un groupe particulier. Ce groupe utilisé pourrait être alors un Groupe dynamique.   
    - Les étiquettes et les groupes peuvent être structurés hiérarchiquement. Par exemple, un groupe ou une étiquette intitulée «Régions» peut avoir un sous-groupe ou une sous-étiquette pour chaque région géographique couverte par votre organisation (voir «Etude de cas sur les balises hiérarchiques» plus loin dans cette section).
    - Les étiquettes prennent en charge des options de recherche plus puissantes que les champs de données ou les groupes. Par exemple, vous pouvez effectuer une recherche dans plusieurs variables avec les opérateurs ET et OU. Les champs de données ne prennent en charge que les listes de mots (qui sont effectivement les mêmes qu'un opérateur ET), à l'exception des champs désignés comme des cases à cocher, qui supportent les opérateurs OR.
 - Les étiquettes ont une interface utilisateur plus sophistiquée que les champs de données ou les groupes. L'interface permet a l'utilisateur d'ajouter et de supprimer des étiquettes sans recharger la page en mode édition.
-- Des champs de données personnalisés peuvent être affectés à un type d'enregistrement spécifique (par exemple, les seuls ménages), tandis que les étiquettes seront attribués à tous les types une fois que les variables sont définies.
+- Des champs de données personnalisés peuvent être affectés à un type d'enregistrement spécifique (par exemple, les Entreprises uniquement), tandis que les étiquettes seront attribués à tous les types une fois que les variables sont définies.
 
-Limites de stockage du ensemble de champs personnalisés
+Limites de stockage d'un ensemble de champs personnalisés
 ------------------------------------
 
 Un grand nombre d'ensembles de champs personnalisés avec un nombre très important de champs peut causer des problèmes lors de la recherche, l'exportation de données ou l'exécution de compte rendus. Il est difficile de donner des limites spécifiques au nombre d'ensembles de données que vous devez créer ou au nombre de champs que vous devez ajouter aux ensembles de champs. Cela dépend beaucoup du type de données que vous collectez et du serveur sur lequel votre installation est hébergée. En cas de doute vous devez en discuter avec votre administrateur système ou le fournisseur de services CiviCRM.
