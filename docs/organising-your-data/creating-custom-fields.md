@@ -5,17 +5,18 @@ Ce chapitre explique comment améliorer les données de base de CiviCRM par des 
 
 Par exemple, vous pouvez compléter les informations recueillies pour les organisations par une série d'onglets que vous pouvez cocher pour chacun des clients de ces organisations. Vous pouvez aussi limiter les champs personnalisés à certains types de contacts. Vous pouvez ainsi avoir un champ personnalisé pour un type de contact, disons « étudiant », avec une liste de tous ses cours.
 
-CiviCRM enregistre les champs de vos "données personnalisée"s dans des ensembles de "champs personnalisé"s. Ajouter des données personnalisées implique donc deux étapes :
+CiviCRM enregistre les champs de vos données personnalisées dans des "ensembles de champs personnalisés". 
+Ajouter des données personnalisées implique donc deux étapes :
 
 1.  Créer un ensemble de champs personnalisés pour un type de contact donné. Il servira ensuite de contenant pour les champs personnalisés.
 2.  Ajouter les champs personnalisés pour cet ensemble. (Il peut être utile de lire d'abord les informations sur les types de champs personnalisés, mais avant de créer ces champs vous devez d'abord créer l'ensemble de champs.)
 
 Autrement dit, un champ est une unité d'information inscrite dans la base de données : langue maternelle d'un individu, date de fins d'études, etc. Un ensemble est un regroupement de champs qui renferment des données sur un même objet ou un même domaine.
 
-Ensembles de champs personnalisés
+Ensemble de champs personnalisés
 -----------------
 
-Les champs personnalisés font toujours partie d'un ensemble de champs personnalisés. Ce que recouvre chacun de ces ensembles peut être aussi large ou pointu que vous le désirez. Vous pouvez par exemple créer l'ensemble de champs personnalisés « Prescripteur " et l'associer à tous vos types de contact, en créer un deuxième baptisé « Statut logement » et l'associer à un type de contact précis (« Individus »), et ajouter un troisième ensemble associé à un composant particulièr (CiviMember ou CiviEvent) ou à un autre élément tel que Groupes ou Relations. L'étendue d'un ensemble de champs personnalisés est une des rares décisions irréversibles dans CiviCRM. Vous ne pourrez pas y apporter de modifications après l'avoir créé : il est donc important de bien réfléchir à l'avance aux champs personnalisés que vous voulez y associer.
+Les champs personnalisés font toujours partie d'un "ensemble de champs personnalisés". Ce que recouvre chacun de ces ensembles peut être aussi large ou pointu que vous le désirez. Vous pouvez par exemple créer l'ensemble de champs personnalisés « Prescripteur " et l'associer à tous vos types de contact, en créer un deuxième baptisé « Statut logement » et l'associer à un type de contact précis (« Individus »), et ajouter un troisième ensemble associé à un composant particulièr (CiviMember ou CiviEvent) ou à un autre élément tel que Groupes ou Relations. L'étendue d'un ensemble de champs personnalisés est une des rares décisions irréversibles dans CiviCRM. Vous ne pourrez pas y apporter de modifications après l'avoir créé : il est donc important de bien réfléchir à l'avance aux champs personnalisés que vous voulez y associer.
 
 CONSEIL : Quand vous créez des ensembles de champs personnalisés, demandez-vous :
 
@@ -54,7 +55,7 @@ Cette option permet de vous assurer que vos champs personnalisés n'apparaissent
 - Organisation : champs servant spécifiquement au type de contact "Organisation".
 - Participants : champs qui apparaissent dans le dossier d'inscription d'un participant. Vous pouvez choisir entre trois options : les champs généraux, applicables à toutes les inscriptions, les champs applicables à un rôle de participant précis et les champs qui s'appliquent aux inscriptions à un type d'événement particulier.
 - Promesses de dons : champs servant spécifiquement aux promesses de dons.
-- Relations : assigne vos champs à toutes les relations ou à un type de relation précis, tel que _conjoint_ ou _employé par_.
+- Relations : assigne vos champs à toutes les relations ou à un type de relation précis, tel que *conjoint* ou *employé par*.
 
 ### Ordre
 
@@ -95,22 +96,22 @@ Il y a deux façons d'afficher les champs dans un onglet : **Onglet** et **Ongle
 
 Si actif, cela signifie que vous pouvez consulter et modifier les champs. Si l'ensemble n'est pas actif, il ne s'affiche pas dans l'interface d'utilisateur ùais ses champs demeurent dans le système de CiviCRM. Cette option peut s'avérer utile pour la gestion de vos données, en particulier si vous effectuez une migration à partir d'une base de données pré-existante.
 
-Il se peut par exemple que votre base de données existante contienne des champs que vous souhaitez transférer dans CiviCRM pour vos archives, mais que vous comptiez utiliser une nouvelle structure de données. Supposons par exemple que vous importiez vos listes de membres à partir d'une base de données MS Access. Chaque entrée dans Access contient un champ d'identification unique (sa clé), qui n'est d'aucune utilité dans CiviCRM. Plutôt que d'ignorer complètement ce champ, vous pouvez archiver son contenu dans un champ personnalisé, importer vos données, puis désactiver ce nouveau champ pour le rendre invisible, ce qui allégerait votre interface. Il vous suffit de ne pas cocher l'option Activer ce champ.
+Il se peut par exemple que votre base de données extérieure contienne des champs que vous souhaitez transférer dans CiviCRM pour vos archives, mais vous comptez utiliser une nouvelle structure de données. Supposons par exemple que vous importiez vos listes de membres à partir d'une base de données MS Access. Chaque entrée dans Access contient un champ d'identification unique (sa clé), qui n'est d'aucune utilité dans CiviCRM. Plutôt que d'ignorer complètement ce champ, vous pouvez archiver son contenu dans un champ personnalisé, importer vos données, puis désactiver ce nouveau champ pour le rendre invisible, ce qui allégerait votre interface. Il vous suffit de ne pas cocher l'option Activer ce champ.
 
 Bien qu'invisible pour les utilisateurs, la valeur d'un champ inactif demeure dans le système pour utilisation future. Vous pouvez le consulter si jamais il vous faut comparer la valeur d'un champ avec un document imprimé, ou vous assurer qu'il n'y a pas d'écarts entre vos archives.
 
 Un champ que vous avez activé peut toujours être désactivé dans le formulaire qui définit ce champ.
 
-### Aide pré-formulaire, aide post-formulaire
+### Aide avant et après formulaire
 
 Si vous entrez du texte dans l'aide avant-formulaire, votre texte d'aide apparaîtra au-dessus de l'ensemble de champs personnalisés. Si vous entrez du texte dans l'aide après-formulaire, il apparaîtra en-dessous. Utilisez l'aide à ce niveau pour les instructions qui s'appliquent à tout votre ensemble de champs personnalisés.
 
 Champs personnalisés
--------------
+--------------------
 
 Après la création d'un ensemble de champs personnalisé, vous pouvez créer les champs de données personnalisés. Cliquez sur **Afficher et modifier les champs personnalisés** suivi de **Nouveau champ personnalisé**  et vous verrez l'écran comme ci-dessous. Nous expliquerons chacune des options de cette section.
 
-Après avoir terminé les options de configuration du champ, cliquez sur «*Enregistrer*» pour enregistrer le champ et retourner à la liste des champs pour votre jeu de champs personnalisé actuel ou cliquez sur «Enregistrer et Nouveau» pour enregistrer le champ et commencer à définir un nouveau champ.
+Après avoir terminé les options de configuration du champ, cliquez sur «*Enregistrer*» pour enregistrer le champ et retourner à la liste des champs de votre ensemble de champs personnalisés ou cliquez sur «Enregistrer et Nouveau» pour enregistrer le champ et commencer à définir un nouveau champ.
 
 À l'exception des données et de la sélection du type de champ d'entrée, toutes les options de configuration peuvent être modifiées après la création initiale du champ. Vous pouvez également trouver utile de prévisualiser vos champs personnalisés, ainsi que l'ensemble des champs personnalisés, comme vous les avez définis. Cela est particulièrement utile pour vérifier la mise en page des champs de bouton radio et de case à cocher avec un grand nombre de choix.
 
@@ -118,10 +119,10 @@ Après avoir terminé les options de configuration du champ, cliquez sur «*Enre
 
 ### Étiquette du champ
 
-Le texte à côté du champ lorsqu'il est affiché à l'utilisateur. Le texte saisi ici correspond également à l'étiquette affichée lorsque vous exportez des données. Lorsque vous utilisez des champs dans un profil, vous pouvez remplacer l'étiquette de champ. Ainsi, sur cet écran, vous pouvez choisir des intitulés plus conviviaux et qui conviennent aux utilisateurs lors de leur affichage dans les profils.
+Le texte à côté du champ lorsqu'il est affiché à l'utilisateur. Le texte saisi ici correspond également à l'étiquette affichée lorsque vous exportez des données. Lorsque vous utilisez des champs dans un profil, vous pouvez remplacer l'étiquette de champ. Ainsi, sur cet écran, vous pouvez choisir des intitulés plus adaptés à votre activité et qui conviennent aux utilisateurs lors de leur affichage dans les profils.
 
 ### Type
-Les champs personnalisés peuvent être de différents types, dont beaucoup ont probablement été rencontrés lors du remplissage de formulaires sur des sites Web. Lorsque vous créez un champ personnalisé, CiviCRM présente une liste déroulante de types de données à partir de laquelle vous pouvez sélectionner celle qui représente le mieux les données que vous souhaitez stocker. Le menu de gauche (illustré dans la figure suivante) indique le format des données que vous souhaitez stocker, alors que le menu de droite indique la manière dont vous souhaitez interagir avec l'utilisateur.
+Les champs personnalisés peuvent être de différents types, dont beaucoup ont probablement été rencontrés lors du remplissage de formulaires sur des sites Web. Lorsque vous créez un champ personnalisé, CiviCRM présente une liste déroulante de types de données à partir de laquelle vous pouvez sélectionner celle qui représente le mieux les données que vous souhaitez stocker. Le menu de gauche (illustré dans la figure suivante) indique le paramètre de format des données, alors que le menu de droite indique la manière dont vous souhaitez interagir avec l'utilisateur.
 
 ![datainputfieldtype.png](../img/CiviCRM-DataBasic-datainputfieldtype-en.png "datainputtype")
 
@@ -158,11 +159,11 @@ Les types de champs sont :
    - **Lien**: un hyperlien actif sur Internet.
    - **Contact Reference**: un widget d'autocomplétion pour un contact CiviCRM existant.
 
-CONSEIL : Nous vous suggérons d'expérimenter la création de différents types de champs pour avoir une idée de leur comportement. Les différentes options ont des implications lors de l'utilisation. Par exemple, les cases à cocher vous permettent d'utiliser OU ainsi que les recherches ET dans la recherche avancée, alors que la sélection multiple ne le permet pas.
+CONSEIL : Nous vous suggérons d'expérimenter la création de différents types de champs pour avoir une idée de leur comportement. Les différentes options ont des implications lors de l'utilisation. Par exemple, les cases à cocher vous permettent d'utiliser "OU" ainsi que les recherches "ET" dans la recherche avancée, alors que la sélection multiple ne le permet pas.
  
 **Afficher en table ?**
 
-Cette case à cocher n'apparaît que lorsque vous créez un champ dans un jeu de champs multi-enregistrements que vous avez choisi d'afficher sous l'onglet ** avec table **. Elle est cochée par défaut. Si vous désélectionnez cette option, le champ ne sera pas affiché dans la table. Vous pouvez le faire pour les champs moins importants si vous disposez d'un nombre de données trop large pour votre écran.
+Cette case à cocher n'apparaît que lorsque vous créez un champ dans un jeu de champs multi-enregistrements que vous avez choisi d'afficher sous l'onglet **avec table**. Elle est cochée par défaut. Si vous désélectionnez cette option, le champ ne sera pas affiché dans la table. Vous pouvez le faire pour les champs moins importants si vous disposez d'un nombre de données trop large pour votre écran.
 
 ![image](../img/z_sprint14_MultirowCustom3.png)
 
@@ -184,11 +185,11 @@ Vous pouvez désigner une valeur par défaut pour un champ. Cette valeur sera au
 
 ### Aide avant et après formulaire
 
-Idéalement, votre nom de champ est suffisament clair pour que les utilisiteurs sachent comment le remplir. Mais dans les cas où il ya une certaine ambiguïté, ou  que vous souhaitiez préciser la façon dont un certain champ est utilisé, vous pouvez entrer le texte d'aide ici. Si vous l'entrez dans l'aide avant formulaire, votre texte d'aide s'affiche au-dessus du champ de formulaire et si vous entrez du texte dans l'aide aprèsformulaire, il apparaît sous le champ de formulaire.
+Idéalement, votre nom de champ est suffisament clair pour que les utilisiteurs sachent comment le remplir. Mais dans les cas où il ya une certaine ambiguïté, ou que vous souhaitiez préciser la façon dont un certain champ est utilisé, vous pouvez entrer le texte d'aide ici. Si vous l'entrez dans l'aide avant formulaire, votre texte d'aide s'affiche au-dessus du champ de formulaire et si vous entrez du texte dans l'aide après formulaire, il apparaît sous le champ de formulaire.
 
 Le texte d'aide apparaît dans toutes les utilisations du champ dans les pages d'administration et est inséré comme texte d'aide par défaut lorsque des champs sont affectés à un profil (voir «profils»). La personne qui crée le profil peut supprimer ou modifier le texte d'aide sans impact sur la définition du champ personnalisé d'origine.
 
-### Requis (obligatoire)
+### Requis = (obligatoire)
 
 Lorsque sélectionné, une valeur doit être fournie pour ce champ avant que le formulaire puisse être validé. Sinon un message d'erreur indiquera à la personne de remplir les champs requis.
 
@@ -200,13 +201,13 @@ Affiche le champ dans un groupe de champs personnalisés dans la page "Recherche
 
 ### Actif
 
-Comme pour la case à cocher "Actif" dans le formulaire définissant le jeu de champs personnalisé, cette zone détermine si le champ est désactivé ou activé lorsque CiviCRM l'affiche à l'utilisateur.
+Comme pour la case à cocher "Actif" dans le formulaire définissant l'ensemble de champs personnalisé, cette zone détermine si le champ est désactivé ou activé lorsque CiviCRM l'affiche à l'utilisateur.
 
 ### Consulter seulement
 
 Permet de désigner un champ comme visible mais non éditable. Il existe deux utilisations générales pour ce champ:
 
-  - Pour stocker les données importées à partir d'un autre système qui puisse être consultées par un utilisateur mais que vous ne souhaitez pas qu'elles puissent être modifiées.
+  - Pour stocker les données importées à partir d'un autre système qui puissent être consultées par un utilisateur mais que vous ne souhaitez pas qu'elles puissent être modifiées.
   - Pour stocker des données qui ne sont pas entrées directement à travers l'interface utilisateur mais plutôt par une méthode définie par votre développeur.
   
 ### Options à choix multiples
@@ -215,12 +216,12 @@ Pour les types de champs qui impliquent la sélection à partir d'un ensemble d'
 
 Si vous choisissez d'utiliser le même ensemble d'options pour plusieurs champs, vous serez averti lors de toute modification que cela affectera un ensemble d'options utilisé par plusieurs champs.
 
-Lorsque vous créez un nouvel ensemble, vous avez la possibilité de saisir initialement jusqu'à dix options à choix multiples dans une table. Si vous avez besoin de plus de dix options, vous pouvez créer un nombre illimité de choix supplémentaires après avoir enregistré ce nouveau champ en utilisant le lien «Modifier les options de choix multiples». Aller à: **Administer **> ** Personnaliser**> **Données personnalisées**> **Afficher et modifier les champs personnalisés**> **Modifier les options de choix multiples**. Vous pouvez accéder à cet écran à une date ultérieure pour modifier l'étiquette, l'ordre et l'état actif de toute option à choix multiples, ou ajouter d'autres choix.
+Lorsque vous créez un nouvel ensemble, vous avez la possibilité de saisir initialement jusqu'à dix options à choix multiples dans une table. Si vous avez besoin de plus de dix options, vous pouvez créer un nombre illimité de choix supplémentaires après avoir enregistré ce nouveau champ en utilisant le lien «Modifier les options de choix multiples». Aller à: **Administer **> ** Personnaliser**> **Données personnalisées**> **Afficher et modifier les champs personnalisés**> **Modifier les options de choix multiples**. Vous pouvez accéder à cet écran ultérieurement pour modifier l'étiquette, l'ordre et l'état actif de toute option à choix multiples, ou ajouter d'autres choix.
 
 ![CustomMultipleOptions](../img/CiviCRM-Configuring-CustomMultipleOptions-en.PNG "CustomMultipleOptions")
 
 Si vous le souhaitez, vous pouvez également marquer l'un des choix comme option par défaut.
-Les options inactives sont masquées lorsque le champ est présenté.
+Les options inactives sont masquées lorsque le champ est affiché.
 
 ### Gestion des ensembles de champs personnalisés.
 
@@ -232,7 +233,7 @@ Outre les options prévues dans les paramètres d'édition du champ , éditez le
 
 Choisir entre champs, groupes et étiquettes
 ----------------------------------------
-Les champs de données, les groupes et les étiquettes sont trois manières principales d'associer des informations aux contacts. Bien qu'il puisse être tentant de créer un champ de données personnalisé pour chaque attribut de vos données, prenez le temps d'étudier toutes les alternatives. Groupes et étiquettes offrent de puissantes fonctionnalités que vous pourriez occulter si vous comptez uniquement sur des données personnalisées. En outre, l'utilisation de champs de données pour les informations où ils pourraient être stockés plus efficacement dans des groupes ou des étiquettes peut ralentir votre système. Enfin, l'utilisation appropriée des groupes et des étiquettes facilite considérablement la tâche du personnel administratif pour retrouver les données.
+Les champs de données, les groupes et les étiquettes sont trois manières principales d'associer des informations aux contacts. Bien qu'il puisse être tentant de créer un champ de données personnalisé pour chaque attribut de vos données, prenez le temps d'étudier toutes les alternatives. Groupes et étiquettes offrent de puissantes fonctionnalités que vous pourriez occulter si vous comptez uniquement sur des données personnalisées. En outre, l'utilisation de champs de données pour les informations qui  pourraient être stockés plus efficacement dans des groupes ou des étiquettes peut ralentir votre système. Enfin, l'utilisation appropriée des groupes et des étiquettes facilite considérablement la tâche du personnel administratif pour retrouver les données.
 
 Voici quelques conseils qui peuvent vous aider à choisir:
 
