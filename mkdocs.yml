@@ -1,4 +1,4 @@
-site_name: "Guide d'utilisation et d'administration de CiviCRM"
+hsite_name: "Guide d'utilisation et d'administration de CiviCRM"
 site_url: http://rtfd.civicrm.org
 repo_url: https://github.com/civicrm-french/civicrm-user-guide
 site_description: 'Un guide pour les utilisateurs et administrateurs de CiviCRM.'
@@ -33,7 +33,7 @@ pages:
 - L'interface utilisateur:
     - 'Menu, tableau de bord, indicateurs': 'the-user-interface/menu-dashboard-and-dashlets.md'
     - 'Raccourcis clavier': 'the-user-interface/keyboard-shortcuts.md'
-    - 'Searching': 'the-user-interface/searching.md'
+    - 'Recherches': 'the-user-interface/searching.md'
     - 'Restauration des contacts': 'the-user-interface/undelete.md'
 - Organiser vos données:
     - 'Aperçu': 'organising-your-data/overview.md'
@@ -43,7 +43,7 @@ pages:
     - 'Groupes dynamiques': 'organising-your-data/smart-groups.md'
     - "Activités": 'organising-your-data/activities.md'
     - 'Relationships': 'organising-your-data/relationships.md'
-    - 'Creating Custom Fields': 'organising-your-data/creating-custom-fields.md'
+    - "Créer des champs personnalisés": 'organising-your-data/creating-custom-fields.md'
     - 'Profiles': 'organising-your-data/profiles.md'
 - Common workflows:
     - 'Importing Data into CiviCRM': 'common-workflows/importing-data-into-civicrm.md'
@@ -53,8 +53,8 @@ pages:
     - 'Postal mail communications': 'common-workflows/postal-mail-communications.md'
     - 'Automating tasks': 'common-workflows/automating-tasks.md'
 - Contributions:
-    - 'What is CiviContribute?': 'contributions/what-is-civicontribute.md'
-    - 'Key concepts and configurations': 'contributions/key-concepts-and-configurations.md'
+    - "Qu'est-ce que CiviContribute?": 'contributions/what-is-civicontribute.md'
+    - "Configuration et Concepts clés" : 'contributions/key-concepts-and-configurations.md'
     - 'Online contributions': 'contributions/online-contributions.md'
     - 'Offline fundraising': 'contributions/offline-fundraising.md'
     - 'Manual entry of contributions': 'contributions/manual-entry-of-contributions.md'
