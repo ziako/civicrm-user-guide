@@ -1,244 +1,131 @@
-What You Need To Know
-=====================
+Ce que vous avez besoin de savoir
+=================================
 
-This chapter outlines some key concepts and questions that are useful
-for planning the use of CiviCRM's email capabilities. This chapter
-should be read before you start sending emails to contacts. Detailed
-information on how to carry out the activities mentioned can be found in
-the **Everyday Tasks** section. 
+Ce chapitre décrit quelques concepts et questions clés qui sont utiles pour planifier l'utilisation des capacités de  la messagerie de CiviCRM. Ce chapitre doit être lu avant de commencer à envoyer des courriels aux contacts. Vous trouverez des informations détaillées sur la façon d'exécuter les activités mentionnées dans la section **Tâches quotidiennes**.
 
-Key Concepts
--------------
+Les concepts clés
+-----------------
 
-As you might expect for a web-based CRM, email plays a central role in
-CiviCRM. Broadly speaking, there are three situations in which email is
-sent from CiviCRM:
+Comme on peut s'y attendre pour un CRM basé sur le Web, le courrier électronique joue un rôle central dans CiviCRM. D'une manière générale, il existe trois situations dans lesquelles le courrier électronique est envoyé par CiviCRM:
 
--   to individuals and small groups of people via the Send Email action
--   to a large group of people as a mass mailing via CiviMail
--   to individuals who trigger an email as part of workflows in other
-    components, for example, an event registration confirmation email  
+- aux particuliers et à de petits groupes de personnes via l'action Envoyer un email
+- à un groupe important de personnes ou d'organisations comme un mailing de masse via CiviMail
+- aux personnes qui déclenchent un courrier électronique dans le cadre de leur tâches de travail dans d'autres composants, par exemple un courrier électronique de confirmation d'enregistrement d'événement
 
-The advantage of sending email through CiviCRM (rather than through your
-email client or through a bulk email tool other than CiviMail) is that
-every email sent, via the Send Email action or using CiviMail, is
-treated as an activity and stored in the activity history of each
-recipient. This allows you to see, for example, that John Doe made a
-donation three days after he received your April newsletter, or that
-your volunteer coordinator emailed Jane Smith and asked her to staff the
-information table at an upcoming event. 
+L'avantage d'envoyer un courrier électronique via CiviCRM (plutôt que via votre client de messagerie électronique ou via un outil de messagerie en masse autre que CiviMail) est que chaque email envoyé via l'action Envoyer un e-mail ou utilisant CiviMail est traité comme une activité et est enregistré dans l'historique de l'activité de chaque contact. Cela vous permet de voir, par exemple, que John Doe a fait un don trois jours après qu'il ait reçu votre bulletin d'avril, ou que votre coordonnateur des bénévoles a envoyé un courriel à Jane Smith pour lui demander de fournir un tableau d'information pour un événement à venir.
 
-### Send Email versus CiviMail 
+### Envoi de courriel ou CiviMail ?
 
-CiviCRM offers two options for sending email to contacts:
+CiviCRM offre deux options pour l'envoi d'e-mails aux contacts :
 
--   Send an email as an activity for a contact: this is suitable for
-    sending emails to individuals and small groups.
--   Send a mailing to a group using CiviMail: this is ideal for mass
-    mailings or scheduled emails to small groups.
+- Envoyer un e-mail en tant qu'activité pour un contact: adapté pour l'envoi des courriels aux individus et aux groupes peu nombreux.
+- Envoyer un mailing à un groupe à l'aide de CiviMail:  idéal pour les envois en masse ou les emails planifiés pour les groupes peu nombreux.
 
-In order to send mass emails, the CiviMail component must be enabled and
-set up (see the Set-up chapter in this section for details). The Send
-Email action is available even when the CiviMail component is disabled.
+Pour envoyer des courriels de masse, le composant CiviMail doit être activé et configuré (voir le chapitre Configuration dans cette section pour plus de détails). L'action Envoyer un message électronique est disponible même lorsque le composant CiviMail est désactivé.
 
-There are crucial differences between the Send Email action and the
-CiviMail component:
+Il existe des différences essentielles entre l'action Envoyer un e-mail et le composant CiviMail :
 
--   Emails sent via the Send Email action are limited to a maximum of 50
-    email addresses, and there is no reporting other than an activity
-    record for each recipient.
--   CiviMail emails have sophisticated bounce processing and reporting.
--   CiviMail allows recipients to manage their own subscriptions.
--   CiviMail can be configured to automatically track replies.
+- Les courriels envoyés par l'intermédiaire de l'action "Envoyer un e-mai"l sont limités à un maximum de 50 adresses e-mail, et il n'y a pas de rapport autre qu'une activité
+- Les courriels de CiviMail comportent des traitements et des rapports élaborés.
+- CiviMail permet aux destinataires de gérer leurs propres abonnements.
+- CiviMail peut être configuré pour suivre automatiquement les réponses.
 
-CiviMail requires more work to configure, and there are more steps
-involved; however, once you have enabled and configured CiviMail, you
-will have greatly enhanced mass email capabilities.
+CiviMail nécessite du travail de configuration, et il y a plusieurs étapes nécessaires. Cependant, une fois que vous avez  configuré et activé CiviMail, vous aurez considérablement amélioré les capacités de messagerie de masse.
 
-Working out which method to use for each email might not be immediately
-apparent. Over time, the best practices and the right tool for each
-situation will become more obvious and can be shared among your users.
+La définition de la méthode appropriée pour chaque courrier électronique pourrait ne pas être immédiatement apparente. Avec le temps, de meilleures pratiques et le bon outil pour chaque situation deviendra plus évident et pourra être partagé avec vos utilisateurs.
 
-#### When to use the Send Email action
+#### Quand utiliser l'action Envoyer un message électronique ?
 
-As long as you are contacting fewer than 50 recipients and you don't
-need to track whether recipients opened the email or clicked on any
-links, the Send Email action is quicker and easier than sending a mass
-mailing in CiviMail.
+Tant que vous contactez moins de 50 destinataires et que vous n'avez pas besoin de vérifier si les destinataires ont ouvert le courrier électronique ou cliqué sur les liens, l'action "Envoyer un e-mail" est plus rapide et plus facile que d'envoyer un courrier électronique massif dans CiviMail.
 
-The Send Email activity offers all the functionality of sending through
-an email client: you can attach files, CC and BCC contacts, and use
-message templates. 
+L'activité Envoyer un courrier électronique offre toutes les fonctionnalités d'envoi via un client de messagerie: vous pouvez joindre des fichiers, des contacts CC et BCC et utiliser des modèles de message. (texte brut ou HTML)
 
-Note that CiviCRM records only the messages you send; replies from the
-recipient come to your email address and are not recorded in the
-database. For this reason, you should not rely on the Send Email action
-for conducting extended email exchanges. If you want to record the fact
-that you had an email exchange with somebody, you could create an
-activity called Email Exchange and copy and paste your email
-conversation in the body as you would a record of a telephone call.
+Notez que CiviCRM enregistre uniquement les messages que vous envoyez. Les réponses du destinataire arrivent à votre adresse e-mail et ne sont pas enregistrés dans la base de données. Pour cette raison, vous ne devez pas compter sur l'action Envoyer un e-mail pour effectuer des échanges de courriels étendus. Si vous voulez enregistrer le fait que vous avez eu un échange de courriel avec quelqu'un, vous pouvez créer une activité appelée "Echange d'emails" et copier/coller votre conversation dans le corps du message comme vous feriez l'enregistrement d'un appel téléphonique.
 
-You can also record emails sent through your email client using the
-autofiling outbound email option described below.
+Vous pouvez également enregistrer les courriels envoyés par l'intermédiaire de votre client de messagerie électronique à l'aide de l'option d'envoi automatique de courrier électronique décrite ci-dessous.
 
-#### When to use CiviMail 
+#### Quand utiliser CiviMail ?
 
-If you want to send mail to 50 or more contacts at once, you must use
-CiviMail.
+Si vous souhaitez envoyer du courrier à 50 contacts ou plus à la fois, vous devez utiliser CiviMail.
 
-You also should use CiviMail whenever you want to capture statistics
-about the success of your mailing, including bounce statistics and
-click-throughs. For more information on this, see **Reporting and
-Analysis**. 
+Vous devez également utiliser CiviMail chaque fois que vous souhaitez avoir des statistiques sur le résultat de votre envoi, y compris les statistiques de rebond et de clics. Pour plus d'informations à ce sujet, voir **Rapport et analyse**.
 
-CiviMail also enables people to sign up for your mailing lists on your
-website, and automatically keeps track of their unsubscription or
-opt-out requests. It also lets you file any emails that your recipients
-send as replies to the mailing, and send them an autoresponse to their
-replies.
+CiviMail permet également à vos contacts de s'inscrire à vos listes de diffusion sur votre site Web et effectue automatiquement le suivi de leurs demandes de désabonnement ou d'exclusion. Il vous permet également d'enregistrer tous les courriels que vos destinataires envoient comme réponses à l'envoi, et de leur adresser une réponse automatique.
 
-### Choosing recipients
+### Choix des destinataires
 
-Send Email allows you to choose recipients in two ways: from a contact
-record and from search results. 
+Envoyer un e-mail vous permet de choisir les destinataires de deux façons:
 
-CiviMail also allows you to choose recipients in two ways: with Groups
-marked as Mailing Lists, which must be created prior to setting up your
-mailing, and from search results. However, there is one complication
-with using search results: All mail sent from CiviMail must have an
-unsubscribe link. If recipients are included in a Group, any unsubscribe
-requests simply remove them from the mailing list for that Group. But if
-they are not in a Group, they must be added to one when they unsubscribe
-so the unsubscription request can be recorded in CiviCRM. 
+-  A partir d'un enregistrement de contact et de résultats de recherche.
+-  A partir des groupes marqués comme des listes de diffusion (ils doivent être créés avant de configurer votre envoi), et des résultats de recherche. Cependant il faut faire attention avec l'utilisation des résultats de recherche : Tous les courriers envoyés par CiviMail doivent avoir un lien de désabonnement. Si les destinataires sont inclus dans un groupe, les demandes de désinscription doivent simplement les supprimer de la liste de diffusion de ce groupe. Mais s'ils ne sont pas dans un groupe, ils doivent être ajoutés à un seul lorsqu'ils se désabonnent afin que la demande de désinscription puisse être enregistrée dans CiviCRM.
 
-### Personalisation with tokens 
+### Personnalisation avec les champs de fusion 
 
-Emails sent with both Send Email and CiviMail can include personalised
-text, such as a person's name. This is done with tokens, which are
-placeholders that CiviCRM recognizes and replaces with an appropriate
-value when sending each message. You can include tokens for standard
-fields and also custom data fields that you have created. Note that
-there are some tokens available in CiviMail that are not available in
-the Send Email activity.
+Les courriels envoyés avec Send Email et CiviMail peuvent inclure du texte personnalisé, comme le Nom ou le Prénom d'une personne. Cela se fait avec des Champs de fusion qui sont des espaces réservés que CiviCRM reconnaît et remplace par une valeur appropriée lors de l'envoi de chaque message. Vous pouvez inclure des Champs de fusion pour les champs standards et les champs de données personnalisés que vous avez créés. Notez qu'il existe quelques Champs de fusion disponibles dans CiviMail qui n'existent pas dans l'activité Envoyer un e-mail.
 
-A particularly useful token is the checksum. The checksum allows you to
-give people links to contribution forms, profiles, petitions, and event
-registration forms that are prefilled with information that is already
-in their contact record. 
+Un Champs de fusion particulièrement utile est la "somme de contrôle" (Checksum). La somme de contrôle vous permet de donner aux personnes des liens vers des formulaires de contribution, des profils, des pétitions et des formulaires d'inscription d'événements qui sont remplis d'informations contenues dans leur dossier de contact.
 
-This saves your constituents the hassle of filling out forms and
-increases the chances they will take action (e.g., donate, sign up for
-an event, sign the petition). It can also be a simple way to keep your
-data current by asking people to review and update their contact
-information.
+Cela évite à vos correspondants la peine de remplir des formulaires et augmente les chances qu'ils agissent positivement : par exemple, faire un don, s'inscrire à un événement, signer une pétition. Vous pouvez également demander à vos correspondants de vérifier et de mettre à jour leurs coordonnées : bon moyen simple de garder vos données à jour...
 
-Detailed instructions for using tokens, including custom tokens and
-using checksums, are available in the **Everyday Tasks** section,
-under the heading "Using tokens in emails." 
+Des instructions détaillées sur l'utilisation des Champs de fusion, y compris les Champs de fusion personnalisés et l'utilisation des sommes de contrôle, sont disponibles dans la section **Tâches quotidiennes** sous la rubrique «Utilisation de Champs de fusion dans les courriels».
 
-### From Email Addresses 
+### Adresse d'envoi  
 
-Both mass and regular email can be sent from your personal address, from
-a general email address associated with your organisation, or from
-another person's address. For example, an assistant can send official
-email messages under the name of his manager.
+L'envoi de mail et les courriels de masse peuvent être envoyés à partir de votre adresse personnelle, d'une adresse électronique générale associée à votre organisation ou de l'adresse d'une autre personne. Par exemple, un assistant peut envoyer des messages électroniques officiels sous le nom de son manager.
 
-### Headers and Footers
+### En-têtes et pieds de page
 
-In mass mailings only, you can include customised headers and footers.
-You can configure custom headers and footers under **Administer >
-CiviMail > Headers, Footers, and Automated Messages**. 
+Dans les mailings de masse uniquement, vous pouvez inclure des en-têtes et des pieds de page personnalisés. Vous pouvez configurer ces en-têtes et pieds de page sous **Administer> CiviMail> En-têtes, pieds de page et messages automatisés**.
 
-### Templates
+### Modèles de courriels 
 
-Templates for emails or parts of emails help to streamline your
-communications by reusing entire emails or parts of emails such as
-headers and footers. Email templates can be created either beforehand or
-when you send an email, and edited at any time.
+Les modèles de courriels ou de parties d'e-mails aident à rationaliser vos communications en réutilisant des courriels entiers ou des parties d'e-mails tels que des en-têtes et des pieds de page. Les modèles de courrier électronique peuvent être créés à l'avance ou lorsque vous envoyez un courrier électronique, puis modifiés à tout moment.
 
-### Reporting
+### Rapports 
 
-CiviMail can track mass mailings, providing useful information to help
-you understand the areas your recipients are interested in and gauge the
-effectiveness of your communications. You can track how many recipients
-opened the email and which links in the email were popular.
+CiviMail peut faire le suivi des envois de masse. Civimail apporte des informations utiles pour vous aider à comprendre quels sont les centres d'intêret de vos destinataires et mesurer l'efficacité de vos communications. Vous pouvez suivre ainsi le nombre de destinataires qui ont ouvert le courrier électronique et quels liens dans le courrier électronique étaient les plus consultés.
 
-#### Mailing List Sign-Up and Unsubscribing
+#### Inscription et désabonnement à la liste d'envoi
 
-CiviCRM allows you to publish a sign-up page or form (called a profile)
-where people can sign up for your mailing list on your website. It
-requires that you allow recipients to unsubscribe from any mailing list
-*and* opt out of ever getting email from you, and CiviCRM will
-automatically keep track of these requests. For more information, see
-the **Set-Up** chapter. 
+CiviCRM vous permet de publier une page d'inscription ou un formulaire (appelé profil) où le public et les contacts peuvent s'inscrire à votre liste de diffusion sur votre site Web. Cela nécessite que vous autorisiez les destinataires à se désabonner de toute liste de diffusion * et * à ne plus recevoir de courrier électronique de votre part. CiviCRM suivra automatiquement ces demandes. Pour plus d'informations, voir le chapitre **Installation**.
 
-### Autofiling external emails in CiviCRM
+### Archivage automatique d'emails externes dans CiviCRM
 
-CiviCRM lets you automatically record email sent via your email client
-in contact records in your database. To do this, you need to set up a
-special email address that you include in the BCC field of an email you
-are sending. This will be read by the database and converted into an
-activity. This activity gets filed in the record of the contact that
-matches the email address. If that email address does not exist in your
-database a new contact record will be created. See the **Email System
-Configuration** chapter of the **Intial Setup** section for details.
+CiviCRM vous permet d'enregistrer automatiquement les e-mails envoyés via votre client de messagerie habituel dans les enregistrements de contact de votre base de données. Pour ce faire, vous devez configurer une adresse e-mail spéciale que vous incluez dans le champ BCC d'un courrier électronique que vous envoyez. Ceci sera lu par la base de données et converti en une activité. Cette activité est classée dans le dossier du contact correspondant à l'adresse e-mail. Si cette adresse e-mail n'existe pas dans votre base de données, un nouvel enregistrement de contact sera créé. Reportez-vous au chapitre **Configuration du système de messagerie** de la section **Configuration Initiale** pour plus de détails.
 
-Key Questions
--------------
+Questions clés 
+---------------
+CONSEIL : Lorsque vous prévoyez l'utilisation des fonctions de messagerie électronique de CiviCRM, il peut être utile de répondre à ces questions pour orienter votre configuration et votre utilisation :
 
-When planning your use of CiviCRM's email capabilities, it may be
-helpful to answer these questions to guide your setup and use:
+- Avez-vous des types de courriels que vous envoyez régulièrement et souhaitez-vous créer des modèles ?
+- Avez-vous du contenu que vous souhaitez inclure dans l'en-tête et/ou le pied de page dans chaque envoi ?
+- Voulez-vous une page Web où les personnes puissent s'abonner à vos e-mails?
+- Quels types de courriels importants voulez-vous enregistrer dans les dossiers de vos contacts ?
 
--   Are there any types of emails that you send again and again and thus
-    want to create templates for?
--   Is there content you'd like to include in the header and/or footer
-    in every mailing?
--   Do you want a web page where people can sign up for your emails?
--   What kinds of emails are important to you to store in recipients'
-    contact records? 
+Lorsque vous prévoyez d'envoyer un courriel spécifique par le biais de CiviCRM, il est utile de considérer les éléments suivants:
 
-When planning to send a specific email through CiviCRM, it is helpful to
-consider the following:
+- A combien de personnes envoyez-vous votre email ?
+- Voulez-vous savoir qui ouvre votre courriel et clique sur les liens qu'il contient ?
+- Avez-vous créé une liste (un groupe ou un groupe intelligent) à partir de laquelle envoyer votre courriel ?
+- Voulez-vous que les destinataires puissent afficher votre courriel dans une fenêtre de navigateur s'ils ont du mal à le consulter à partir de leur navigateur de messagerie électronique ?
+- Qui doit être l'expéditeur du courriel?  une adresse générique de l'organisation, ou personnalisée avec le nom d'une personne.
 
--   How many people are you sending your email to?
--   Do you want to know who is opening your email and clicking on links
-    in it? 
--   Have you created a list (a Group or Smart Group) to which to send
-    your email?
--   Do you want recipients to be able to view your mailing in a browser
-    window if they have trouble viewing it from their email browser?
--   Who should be the sender of the email? This could be a generic
-    organisation address, or personalised with someone's name.
+### Relation avec les composants 
 
-### **Other considerations**
+De nombreux composants de CiviCRM interagissent avec les fonctionnalités de messagerie et avec CiviMail, par exemple pour envoyer des courriels de confirmation, de remerciement ou de réception. Les sections de ce manuel, relatives à chaque composante, contiendront des informations sur la personnalisation de ces courriels et doivent être lues en parallèle avec cette section. cela vous permettra de comprendre comment fonctionne le courrier électronique dans le contexte plus large de CiviCRM.
 
-### 
+#### Questions de confidentialité  
 
-Many CiviCRM components interact with email functionality and with
-CiviMail, for example to send confirmation, thank-you and receipt
-emails. The sections of this book relating to each component will
-include some information about customising these emails, and should be
-read in conjunction with this section in order to give you a full
-understanding of how email works in the broader context of CiviCRM.
+Nous vous encourageons à bien examiner les questions de confidentialité. Certains pays ont des lois différentes concernant la confidentialité des courriels, y compris les options d'exclusion/désabonnement. Il peut également y avoir des problèmes liés aux outils de suivi de CiviMail. Par exemple, vous pouvez éviter de suivre qui a cliqué sur le lien  *«comment traiter les problèmes de drogue»*  sur un envoi spécifique.
 
-#### Privacy issues
+En France, l'e-mailing commercial se distingue du spam par une démarche d'opt-in, basée sur le recueil libre, loyal et informé du consentement des destinataires. Les cases précochées de collecte sont bannies, tandis que les modalités d'opposition doivent faire l'objet d'un détail précis. Les seules exceptions à ce principe concernent le démarchage dans le cadre d'une relation-client, sous réserve que les biens et services proposés soient identiques aux achats antérieurs, et les sollicitations liées aux fonctions professionnelles exercées par les destinataires.
 
-We encourage you to consider privacy issues. Different countries have
-different laws relating to email privacy, including opt out/unsubscribe
-options. There may also be issues related to CiviMail's tracking tools;
-for instance, you may wish to avoid tracking who has clicked on the "how
-to deal with drug issues*"* link on a specific mailing.
+Mention d'information à inscrire sur le bulletin d'adhésion (Source CNIL) :  
+*Les informations recueillies sont nécessaires pour votre adhésion. Elles font l'objet d'un traitement informatique et sont destinées au secrétariat de l'association. En application des articles 39 et suivants de la loi du 6 janvier 1978 modifiée, vous bénéficiez d'un droit d'accès et de rectification aux informations qui vous concernent.
+Si vous souhaitez exercer ce droit et obtenir communication des informations vous concernant, veuillez vous adresser à ......... [indiquez-ici le service en charge de traiter les demandes] *
 
-#### Spam and email deliverability
+#### Spam et envoi de courrier électronique
 
-When sending mass emails, there is always a risk that your emails will
-be marked as spam. This affects both the delivery of your current email
-and also the future delivery of all emails sent from your server.
-Managing these issues is complex and outside the scope of this book. If
-your organisation does not have a system administrator, consultant, or
-email hosting service that is knowledgeable about these issues, you may
-want to seek the advice of an expert. 
-
-
+Lors de l'envoi de courriels de masse, il existe toujours un risque que vos e-mails soient marqués comme spam. Cela affecte à la fois la livraison de votre courrier électronique actuel mais également la livraison future de tous les courriels envoyés à partir de votre serveur. La gestion de ces questions est complexe et sort du cadre de ce livre. Si votre organisation ne dispose pas d'un administrateur système, d'un consultant ou d'un service d'hébergement de messagerie connaissant bien ces questions, vous pouvez demander l'avis d'un expert.
 
 
