@@ -6,7 +6,7 @@ Ce chapitre décrit quelques concepts et questions clés qui sont utiles pour pl
 Les concepts clés
 -----------------
 
-Comme on peut s'y attendre pour un CRM basé sur le Web, le courrier électronique joue un rôle central dans CiviCRM. D'une manière générale, il existe trois situations dans lesquelles le courrier électronique est envoyé par CiviCRM:
+Comme on peut s'y attendre pour un CRM basé sur le Web, le courrier électronique joue un rôle central dans CiviCRM. D'une manière générale, il existe trois situations dans lesquelles le courrier électronique est envoyé par CiviCRM :
 
 - aux particuliers et à de petits groupes de personnes via l'action Envoyer un email
 - à un groupe important de personnes ou d'organisations comme un mailing de masse via CiviMail
@@ -54,7 +54,7 @@ CiviMail permet également à vos contacts de s'inscrire à vos listes de diffus
 
 ### Choix des destinataires
 
-Envoyer un e-mail vous permet de choisir les destinataires de deux façons:
+Envoyer un e-mail vous permet de choisir les destinataires de deux façons :
 
 -  A partir d'un enregistrement de contact et de résultats de recherche.
 -  A partir des groupes marqués comme des listes de diffusion (ils doivent être créés avant de configurer votre envoi), et des résultats de recherche. Cependant il faut faire attention avec l'utilisation des résultats de recherche : Tous les courriers envoyés par CiviMail doivent avoir un lien de désabonnement. Si les destinataires sont inclus dans un groupe, les demandes de désinscription doivent simplement les supprimer de la liste de diffusion de ce groupe. Mais s'ils ne sont pas dans un groupe, ils doivent être ajoutés à un seul lorsqu'ils se désabonnent afin que la demande de désinscription puisse être enregistrée dans CiviCRM.
@@ -93,7 +93,7 @@ CiviCRM vous permet de publier une page d'inscription ou un formulaire (appelé 
 
 CiviCRM vous permet d'enregistrer automatiquement les e-mails envoyés via votre client de messagerie habituel dans les enregistrements de contact de votre base de données. Pour ce faire, vous devez configurer une adresse e-mail spéciale que vous incluez dans le champ BCC d'un courrier électronique que vous envoyez. Ceci sera lu par la base de données et converti en une activité. Cette activité est classée dans le dossier du contact correspondant à l'adresse e-mail. Si cette adresse e-mail n'existe pas dans votre base de données, un nouvel enregistrement de contact sera créé. Reportez-vous au chapitre **Configuration du système de messagerie** de la section **Configuration Initiale** pour plus de détails.
 
-Questions clés 
+### Questions clés 
 ---------------
 CONSEIL : Lorsque vous prévoyez l'utilisation des fonctions de messagerie électronique de CiviCRM, il peut être utile de répondre à ces questions pour orienter votre configuration et votre utilisation :
 
