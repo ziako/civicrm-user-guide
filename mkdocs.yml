@@ -1,4 +1,4 @@
-hsite_name: "Guide d'utilisation et d'administration de CiviCRM"
+site_name: "Guide d'utilisation et d'administration de CiviCRM"
 site_url: http://rtfd.civicrm.org
 repo_url: https://github.com/civicrm-french/civicrm-user-guide
 site_description: 'Un guide pour les utilisateurs et administrateurs de CiviCRM.'
