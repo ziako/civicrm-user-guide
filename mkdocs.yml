@@ -54,7 +54,7 @@ pages:
     - 'Automating tasks': 'common-workflows/automating-tasks.md'
 - Contributions:
     - "Qu'est-ce que CiviContribute?": 'contributions/what-is-civicontribute.md'
-    - "Configuration et Concepts clés" : 'contributions/key-concepts-and-configurations.md'
+    - "Configuration et Concepts clés": 'contributions/key-concepts-and-configurations.md'
     - 'Online contributions': 'contributions/online-contributions.md'
     - 'Offline fundraising': 'contributions/offline-fundraising.md'
     - 'Manual entry of contributions': 'contributions/manual-entry-of-contributions.md'
@@ -77,16 +77,16 @@ pages:
     - 'Pledges Reports and Analysis': 'pledges/pledges-reports-and-analysis.md'
 - Évènements:
     - "Qu'est-ce que CiviEvent?": 'events/what-is-civievent.md'
-    - 'Planification et gestion des événements  ': 'events/event-planning-and-management.md'
+    - "Planification et gestion des événements": 'events/event-planning-and-management.md'
     - 'Créer un événement': 'events/creating-an-event.md'
     - 'Online event registration': 'events/online-event-registration.md'
-    - "Integrer un événement sur votre site": 'events/integrating-events-with-your-website.md'
+    - "Intégrer un événement sur votre site": 'events/integrating-events-with-your-website.md'
     - 'Manual event registration': 'events/manual-event-registration.md'
     - 'Keeping track of events and participants': 'events/keeping-track-of-events-and-participants.md'
     - 'Complex event fees': 'events/complex-event-fees.md'
     - "Modèle d'événement": 'events/event-templates.md'
     - 'Rapports': 'events/reports.md'
-    - 'Données personnalisées': 'events/custom-data-for-events.md'
+    - "Données personnalisées": 'events/custom-data-for-events.md'
     - "Répéter les Evénements": 'events/repeating-events.md'
 - Membership:
     - 'What is CiviMember': 'membership/what-is-civimember.md'
