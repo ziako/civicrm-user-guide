@@ -1,28 +1,11 @@
-Localising CiviCRM
+Régionalisation de CiviCRM
 ==================
 
-CiviCRM is written with English-language code and strings for display.
-It has, however, also been built for organisations worldwide. They need
-to be able to adapt the tool to local circumstances and demands without
-modifying the tool technically.
+Le code, les interfaces et la documentation de CiviCRM ont été initialement développés en anglais. Cependant, le logiciel a été conçu pour pouvoir s'adapter à toutes les organisations peu importe où elles sont. Ces organisations doivent pouvoir adapter le logiciel selon leurs circonstances, sans qu'il soit nécessaire de modifier le code d'origine.
 
-Localising CiviCRM (or any software) affects much more than you might
-initially think. To adapt CiviCRM to a local language is not just a
-matter of translating the text displayed on the screen. Consider for
-example the currency used in a given country (USD or $ in United
-States, GBP or £ in Great Britain), date and time formats (for example:
-November 16th, 2009 will be commonly written as 11/16/2009 in United
-States, but in Russia the format will be 16.11.2009) or the formatting
-of numbers (the same number will be written slightly differently in
-different countries: 1 234 567,89 in Slovakia or Hungary, but
-1,234,567**.**89 in Japan or the United States).
+Pour régionaliser CiviCRM (ou tout autre logiciel), il ne suffit pas de simplement pouvoir changer la langue des textes affichés à  l'écran. Considérons par exemple, la devise monétaire utilisée dans un pays (USD ou $ aux États-Unis, GBP ou £ au Royaume-Uni), le format de la date et de l'heure (le 16 novembre 2016 pourrait être écrit sous la forme de 11/16/2016 aux États-Unis, mais 16.11.2016 en Russie) ou le format des chiffres (1 234 567,89 en Slovakie ou Hongrie, mais 1,234,567**.**89 au Japan ou aux États-Unis).
 
-CiviCRM provides plenty of functionality to support these language and
-region specific needs. The development team is constantly developing new
-tools in this area too. The Localization screen (shown in the following
-screenshot) lets an administrator select the right locale for the
-language and country of the organization using CiviCRM. Go to:
-Administer > Configure > Global Settings > Localization.
+CiviCRM offre plusieurs fonctionnalités pour s'adapter aux besoins qui peuvent varier selon la langue et selon la région. L'équipe de développement de CiviCRM développe régulièrement de nouveaux outils pour simplifier ce processus. L'écran de Régionalisation (ou Localisation) affiché dans la saisie d'écran ci-dessous permet de configurer les bons paramètres de préférences régionales de CiviCRM. Pour y accéder, se rendre à Administrer > Localisation > Langue, devises et localisation.
 
 ![2](../img/CiviCRM_update-CiviCore-2-en.png "2")
 
