@@ -119,19 +119,6 @@ The basic steps in online translation are:
 5.  When you are finished, you can click on the "Send for review" button
     at the end of the page.
 
-### Offline translation
-
-Most translation is usually done with an offline translation tool. One
-of the most common is PoEdit (see
-[http://www.poedit.net](http://www.poedit.net/)), which is free software
-and has a big community of users. The exact steps in translation using
-an offline tool depend on your tool of choice, but should follow the
-following steps:
-
-1.  Download the files from transifex.net you want to translate, 
-2.  Load the files up in your translation tool and do your translations.
-3.  Send them back to the site when you are done.
-
 ### Building a translation memory
 
 PoEdit and other translation software will help you build a translation
