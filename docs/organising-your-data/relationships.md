@@ -1,17 +1,9 @@
-Relationships
+Relations entre contacts
 =============
 
-CiviCRM allows you to represent connections between contacts by creating
-relationships. For example, if a mother and son are both in your
-database, it can be useful to be able to look at either record and see
-that they are related to each other.
+CiviCRM vous permet de représenter les connexions entre les contacts en créant des relations. Exemple, si une mère et son fils sont tous les deux dans votre base de données, il peut être utile de pouvoir regarder l'un ou l'autre des dossiers et voir qu'ils sont liés l'un à l'autre.
 
-You can also track relationships between organisations, or between
-individuals and organisations. For example, entering an organisation in
-the Current Employer field of an individual contact's record
-automatically creates an "Employee of" relationship from the individual
-to the organisation, and an "Employer of" relationship from the
-organisation to the individual.
+Vous pouvez également suivre les relations entre les organisations, ou entre les contacts individuels et les organisations. Par exemple, la saisie d'une organisation dans le domaine de l'employeur actuel de l'enregistrement d'un contact individuel crée automatiquement une relation «employé de l'individu à l'organisation", et une relation «employeur de l'organisation à l'individu".
 
 Creating relationships between contacts
 ---------------------------------------
