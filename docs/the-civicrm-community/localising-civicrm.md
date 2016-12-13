@@ -30,10 +30,46 @@ Bien que certaines soient encore en cours de développement, un certain nombre d
     ([http://wiki.civicrm.org/confluence/display/CRMDOC/Localisation+community+building+howto](http://wiki.civicrm.org/confluence/display/CRMDOC/Localisation+community+building+howto))
     Explique comment aborder le processus de localisation. 
 4.  Une FAQ
-    ([http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ)](http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ)
-    Sur le wiki CiviCRM couvre les questions les plus fréquentes sur la localisation.
+    ([http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ)](http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ) . Le wiki CiviCRM couvre les questions les plus fréquentes sur la localisation.
 
-Comment commencer ? 
+Utilisation de CiviCRM dans une autre langue que l'US-English
+------------------------------------------------------
+Utiliser une traduction existante pour configurer CiviCRM :
+
+1 - Téléchargez la distribution de traductions - civicrm-(version)-l10n.tar.gz - sur la page de téléchargement de CiviCRM. Cet archive contient tous les fichiers des dernières traductions disponibles.
+
+2 - Décompresser l'archive, vous verrez un répertoire appelé civicrm, contenant deux sous-répertoires appelés l10n et sql. Le répertoire l10n contient un ensemble de sous-répertoires nommés à l'aide de leurs codes locaux. (Exemple: les fichiers de traduction en français canadien seront situés dans /civicrm/l10n/fr_CA)
+
+3 - Copiez ce répertoire l10n, ainsi que tous ses sous-répertoires dans votre répertoire racine CiviCRM comme indiqué ci-dessous. (Note: si vous créez manuellement le dossier "l10n" ,il doit s'écrire : "(elle minuscule)-dix-n")
+
+-   Pour Joomla : site_root/administrator/component /com_civicrm/civicrm. Ex : Si vous voulez le langage en_GB ce sera : site_root/administrator/components/com_civicrm/civicrm/l10n/en_GB/
+-   Pour Drupal : site_root/sites/all/modules/civicrm. Ex : Si vous voulez le langage en_GB ce sera : site_root/sites/all/modules/civicrm/l10n/en_GB/
+-  Pour Wordpress :  site_root/wp-content/plugins/civicrm/civicrm. Notez le double civicrm! Donc si vous voulez la langue en_GB, vous aurez : site_root/wp-content/plugins/civicrm/civicrm/l10n/en_GB/
+
+Mise à jour de vos fichiers de traduction
+-----------------------------------------
+
+Les fichiers "civicrm-(version)-l10n.tar.gz" sont mis à jour lors d'une nouvelle version de CiviCRM. Les langues sont incluses dans ce fichier quand elles atteignent 20% d'achèvement.
+
+Mais vous pouvez avoir besoin de mettre à jour vos fichiers de traduction avant la prochaine version pour diverses raisons:
+
+-  Vous participez à l'amélioration de la traduction de CiviCRM dans votre langue.
+-  Une chaîne a été mal traduite et vous êtes impatient de la corriger.
+-  Une chaîne avec un mauvais balisage (ex: la syntaxe du lien ou la variable placeholder a été mal saisie, causant des bugs, en particulier bugs javascript impair, des parties de l'écran qui ne peut pas être chargé, etc).
+
+Si tel est le cas, la meilleure façon de mettre à jour vos traductions régulièrement est d'utiliser l'extension "l10n update" : [https://github.com/cividesk/com.cividesk.l10n.update/](https://github.com/cividesk/com.cividesk.l10n.update/)
+
+L'extension "l10n update" effectuera une vérification quotidienne pour mettre à jour les fichiers de traduction pour le noyau CiviCRM, ainsi que pour les extensions.
+
+Mais aussi :
+
+Tous les jours, à 10h00, heure du Pacifique, le site Web CiviCRM met à jour les fichiers de traduction mis à jour. Ils sont disponibles à l'adresse suivante: https://download.civicrm.org/civicrm-l10n-core/mo/xx_XX/civicrm.mo
+
+Par exemple, pour l'espagnol: Https://download.civicrm.org/civicrm-l10n-core/mo/es_ES/civicrm.mo
+
+Pour plus d'informations vous pouvez consulter le wiki ici :[https://wiki.civicrm.org/confluence/display/CRMDOC/i18n+Administrator's+Guide%3A+Using+CiviCRM+in+your+own+language](https://wiki.civicrm.org/confluence/display/CRMDOC/i18n+Administrator's+Guide%3A+Using+CiviCRM+in+your+own+language)
+
+Comment commencer une traduction ? 
 ---------------
 
 Vous souhaitez aider la communauté à traduire CiviCRM dans une nouvelle langue ou améliorer la traduction en cours? Voici comment le faire (à condition d'avoir un peu d'expérience technique) :
@@ -69,8 +105,6 @@ Transifex est l'outil à utiliser pour la traduction en ligne. Il n'a pas autant
 
 Les étapes de base de la traduction en ligne sont les suivantes:
 
-
-
 1.  Sélectionnez un composant sur  
     [http://www.transifex.net/projects/p/civicrm/](http://www.transifex.net/projects/p/civicrm/). 
     Cela affiche la liste des équipes linguistiques pour ce composant.
@@ -98,37 +132,20 @@ Vous devez absolument traduire ces termes dans votre langue et vous assurer que 
 
 Construire et partager une mémoire de traduction commune est comme un glossaire spécialisé qui peut être utilisé automatiquement par des outils de traduction contribue également à assurer la cohérence. Le système d'aide de PoEdit explique comment construire cette base de données (la plupart des autres logiciels de traduction en font autant).
 
+Esprit d'équipe et réunion participative
+----------------------------------------
+Une bonne façon de faire des progrès dans la traduction est d'organiser des *réunions de traduction*. Cela implique d'amener autant de personnes que possible dans la même salle pour traduire autant de documents que possible. Voici quelques points à garder à l'esprit lors de l'organisation d'une réunion de traduction:
 
-Team building and sprints
--------------------------
 
-A good way to make progress in translation is to organize *translation
-sprints*. This means getting as many people as possible together in the
-same room to translate as many documents as they can. Here are a few
-things to keep in mind when organizing a translation sprint:
+- Choisissez un bureau agréable, où vos collègues pourront se connecter en ligne (suffisamment d'ordinateurs pour tout le monde, ou des pupitres pour installer des ordinateurs portables avec une bonne connexion Internet).
+-  Donnez au préalable des instructions sur la façon d'installer un outil de traduction hors ligne tel que PoEdit, et avoir des personnes prêtes à aider les autres pour l'installer et l'utiliser.
+- Créez le glossaire avant la réunion et imprimez une quantité suffisante de copies. Présentez le glossaire, discutez des termes qui n'ont pas de consensus.
+- Déterminez les objectifs de la réunion : quel composant sera traduit et quel pourcentage votre équipe essaie d'atteindre.
+- Créez des sous-équipes avec des objectifs clairs: par composant ou fichier ou une partie de celui-ci.
+- Si vos traducteurs ne sont pas familiers avec CiviCRM, faites une démonstration des fonctionnalités que votre équipe est sur le point de traduire.
+- Désignez clairement quelqu'un qui peut être interrompu pour répondre aux questions.
+- Assurez-vous que vous avez en réserve suffisamment de café, de thé, de chocolat, etc... pour que tout le monde passe la nuit !
+- A la fin de la réunion, présentez le résultat de la traduction dans une installation de démonstration CiviCRM .
+- Débattez pour savoir si l'équipe a atteint son objectif et comment l'améliorer.
 
--   Choose a good location, where people will be able to get online
-    (enough computers for everybody, or desks to set up laptops and with
-    a decent Internet connection). 
--   Provide instructions in advance on how to install an offline
-    translation tool such as PoEdit, and have people ready to help
-    others install and use it. 
--   Create the glossary in advance. Present the glossary, discuss terms
-    which do not have consensus, make sure everybody has access to a
-    copy of the glossary, and print a sufficient amount of copies
-    beforehand.
--   Determine goals for the sprint: which component will be translated,
-    and what percentage your team is trying to achieve.
--   Make sub-teams with clear objectives: per component or file or a
-    part of it.
--   If your translators are not familiar with CiviCRM, do a demo of the
-    features your team is about to translate.
--   Clearly designate someone who can be interrupted in order to answer
-    questions.
--   Make sure you've got enough coffee, tea, chocolate, etc. in reserve
-    to keep everybody going through the night.
--   At the end of the sprint, present the result of the translation in a
-    demo CiviCRM installation.
--   Discuss whether the team has reached its goal and how to improve
-    further.
 
