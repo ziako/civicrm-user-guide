@@ -162,10 +162,10 @@ pages:
     - 'Integrating with Drupal': 'website-integration/integrating-with-drupal.md'
     - 'Integrating with WordPress': 'website-integration/integrating-with-wordpress.md'
     - 'Integrating with Joomla': 'website-integration/integrating-with-joomla.md'
-- The CiviCRM Community:
+- La communauté CiviCRM:
     - 'The CiviCRM Community': 'the-civicrm-community/the-civicrm-community.md'
     - 'Bug Reporting': 'the-civicrm-community/bug-reporting.md'
-    - 'Localising CiviCRM': 'the-civicrm-community/localising-civicrm.md'
+    - 'Régionaliser CiviCRM': 'the-civicrm-community/localising-civicrm.md'
     - 'Contributing to this manual': 'the-civicrm-community/contributing-to-this-manual.md'
 - Appendices:
     - 'History of this book': 'appendices/history-of-this-book.md'
