@@ -9,47 +9,40 @@ CiviCRM offre plusieurs fonctionnalités pour s'adapter aux besoins qui peuvent 
 
 ![2](../img/CiviCRM_update-CiviCore-2-en.png "2")
 
+Si vous souhaitez utiliser CiviCRM dans une autre langue que l'anglais, il est important de choisir cette langue lors de l'installation. En installant directement en français, par exemple, CiviCRM s'assurera que toutes les configurations par défaut et modèles de messages soient en français. Si vous changez la langue à un autre moment, il faudra manuellement traduire ces configurations. Il y a également quelques subtilités à prendre en compte si vous souhaitez utiliser CiviCRM dans plus d'une langue (le mode multi-lingue).
+
 Traductions
 ------------
 
 CiviCRM peut s'adapter à plusieurs langues, cependant l'équipe de développement dépend de la communauté pour traduire les textes qui sont affichés à l'écran.
 
-Un certain nombre de traductions sont déjà disponibles. Certaines traductions sont complétées à 90%, d'autres seulement 5%. Vous pouvez consulter le résumé du projet CiviCRM sur Transifex ([http://www.transifex.net/projects/p/civicrm/](http://www.transifex.net/projects/p/civicrm/)) pour voir l'état de la traduction d'une langue. Vous pouvez télécharger et installer la traduction dans votre instance de CiviCRM pour évaluer si cela répondra à vos besoins.
+Un certain nombre de traductions sont déjà disponibles. Certaines traductions sont complétées à 90%, d'autres seulement 5%. Vous pouvez consulter le résumé du projet CiviCRM sur Transifex ([http://www.transifex.net/projects/p/civicrm/](http://www.transifex.net/projects/p/civicrm/)) pour voir l'état de la traduction d'une langue. Vous pouvez télécharger et installer la traduction dans votre instance de CiviCRM pour évaluer si cela répondra à vos besoins ou [consulter un site démo](https://civicrm.org/demo) s'il y en a un de disponible dans votre langue.
 
-Il peut arriver que dans certaines situations, la traduction soit correcte, mais que vous auriez préféré utiliser un autre terme dans votre contexte. Dans ce cas, nous vous recommandons d'entrer en contact avec les autres traducteurs pour en discuter.
+En français, il y a deux traductions de CiviCRM: une plus générale qui devrait répondre aux besoins de la France, de la Belgique, de la Swisse et des autres pays francophones, et une autre traduction qui est mieux adaptée aux besoins du Québec/Canada.
 
-Les aides à la traduction
--------------------------
-Bien que certaines soient encore en cours de développement, un certain nombre d'aides dans CiviCRM soutiennent la communauté dans ses efforts de traduction. Notamment :
+Il peut arriver que dans certaines situations, la traduction soit correcte, mais que vous auriez préféré utiliser un autre terme dans votre contexte. Dans ce cas, nous vous recommandons d'entrer en contact avec les autres traducteurs pour en discuter. Pour les traductions françaises, vous pouvez poster sur le [forum francophone](https://forum.civicrm.org/index.php?board=58.0).
 
-1.  Transifex est un outil en ligne qui permet aux groupes de traducteurs de traduire des chaînes de texte et de garder un aperçu de ses progrès. Inscrivez-vous, recherchez votre langue, rejoignez l'équipe ou, si votre langue n'est pas disponible, commencez à traduire.
-2.  Un glossaire 
-    ([http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations](http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations))  
-    Le wiki de CiviCRM vous aidera à maintenir la cohérence de vos traductions. Il vous aidera également à obtenir un aperçu de la quantité de travail à fournir pour traduire les chaînes de texte que vos utilisateurs verront le plus souvent et qu'il serait donc le plus utile à traduire.    
-3.  Une page wiki sur les astuces 
-    ([http://wiki.civicrm.org/confluence/display/CRMDOC/Localisation+community+building+howto](http://wiki.civicrm.org/confluence/display/CRMDOC/Localisation+community+building+howto))
-    Explique comment aborder le processus de localisation. 
-4.  Une FAQ
-    ([http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ)](http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ) . Le wiki CiviCRM couvre les questions les plus fréquentes sur la localisation.
+Installation de CiviCRM en français
+-----------------------------------
 
-Utilisation de CiviCRM dans une autre langue que l'US-English
-------------------------------------------------------
-Utiliser une traduction existante pour configurer CiviCRM :
+Nous recommandons de configurer CiviCRM en français dès l'installation initiale. Il est possible de changer la langue après l'installation, mais ceci ne reconfigurera pas les nombreuses configurations de CiviCRM (liste de types d'adresses, types d'activités, modèles de messages, etc). Les étapes ci-dessous sont pour le français, mais s'appliquent également pour toute autre langue.
 
-1 - Téléchargez la distribution de traductions - civicrm-(version)-l10n.tar.gz - sur la page de téléchargement de CiviCRM. Cet archive contient tous les fichiers des dernières traductions disponibles.
+Pour installer CiviCRM en français:
 
-2 - Décompresser l'archive, vous verrez un répertoire appelé civicrm, contenant deux sous-répertoires appelés l10n et sql. Le répertoire l10n contient un ensemble de sous-répertoires nommés à l'aide de leurs codes locaux. (Exemple: les fichiers de traduction en français canadien seront situés dans /civicrm/l10n/fr_CA)
+1 - Téléchargez la distribution de traductions - civicrm-(version)-l10n.tar.gz - sur la [page de téléchargement de CiviCRM](https://www.civicrmfr.org/telecharger). Cette archive contient tous les fichiers des dernières traductions disponibles. Les langues sont incluses dans ce fichier quand elles atteignent 20% d'achèvement.
 
-3 - Copiez ce répertoire l10n, ainsi que tous ses sous-répertoires dans votre répertoire racine CiviCRM comme indiqué ci-dessous. (Note: si vous créez manuellement le dossier "l10n" ,il doit s'écrire : "(elle minuscule)-dix-n")
+2 - Décompresser l'archive, vous verrez un répertoire appelé civicrm, contenant deux sous-répertoires appelés `l10n` et `sql`. Le répertoire l10n contient un ensemble de sous-répertoires nommés à l'aide de leurs codes de langue. Par exemple: le fichier de traduction pour le français du Canada sera situé dans `/civicrm/l10n/fr_CA/civicrm.mo`. Le fichier des configurations initiales sera dans `/civicrm/sql/civicrm_data.fr_CA.mysql`.
 
--   Pour Joomla : site_root/administrator/component /com_civicrm/civicrm. Ex : Si vous voulez le langage en_GB ce sera : site_root/administrator/components/com_civicrm/civicrm/l10n/en_GB/
--   Pour Drupal : site_root/sites/all/modules/civicrm. Ex : Si vous voulez le langage en_GB ce sera : site_root/sites/all/modules/civicrm/l10n/en_GB/
--  Pour Wordpress :  site_root/wp-content/plugins/civicrm/civicrm. Notez le double civicrm! Donc si vous voulez la langue en_GB, vous aurez : site_root/wp-content/plugins/civicrm/civicrm/l10n/en_GB/
+3 - Copiez ces répertoires `l10n` et `sql`, ainsi que tous leurs sous-répertoires dans votre répertoire racine CiviCRM comme indiqué ci-dessous. (Note: si vous créez manuellement le dossier "l10n", il doit s'écrire : "(elle minuscule)-dix-n", c'est une abréviation commune pour le mot « localisation »)
+
+-   Pour Joomla : `site_root/administrator/component/com_civicrm/civicrm`. Ex : Si vous voulez la langue `fr_FR`, vous devriez avoir : `site_root/administrator/components/com_civicrm/civicrm/l10n/fr_FR/civicrm.mo` et `site_root/administrator/components/com_civicrm/civicrm/sql/civicrm_data.fr_FR.mysql`.
+-   Pour Drupal : `site_root/sites/all/modules/civicrm`. Ex : Si vous voulez la langue `fr_FR` : `site_root/sites/all/modules/civicrm/l10n/fr_FR/civicrm.mo` et `site_root/sites/all/modules/civicrm/sql/civicrm_data.fr_FR.mysql`.
+-  Pour Wordpress : `site_root/wp-content/plugins/civicrm/civicrm`. Notez le double civicrm! Donc si vous voulez la langue fr_FR, vous aurez : `site_root/wp-content/plugins/civicrm/civicrm/l10n/fr_FR` et `site_root/wp-content/plugins/civicrm/civicrm/sql/civicrm_data.fr_FR.mysql`.
 
 Mise à jour de vos fichiers de traduction
 -----------------------------------------
 
-Les fichiers "civicrm-(version)-l10n.tar.gz" sont mis à jour lors d'une nouvelle version de CiviCRM. Les langues sont incluses dans ce fichier quand elles atteignent 20% d'achèvement.
+Les fichiers "civicrm-(version)-l10n.tar.gz" sont mis à jour lors d'une nouvelle version de CiviCRM.
 
 Mais vous pouvez avoir besoin de mettre à jour vos fichiers de traduction avant la prochaine version pour diverses raisons:
 
@@ -61,13 +54,29 @@ Si tel est le cas, la meilleure façon de mettre à jour vos traductions réguli
 
 L'extension "l10n update" effectuera une vérification quotidienne pour mettre à jour les fichiers de traduction pour le noyau CiviCRM, ainsi que pour les extensions.
 
-Mais aussi :
+Vous pouvez aussi faire la mise à jour manuellement. Tous les jours, à 10h00, heure du Pacifique, le site Web CiviCRM met à jour les fichiers de traductions. Ils sont disponibles à l'adresse suivante: `https://download.civicrm.org/civicrm-l10n-core/mo/xx_XX/civicrm.mo`.
 
-Tous les jours, à 10h00, heure du Pacifique, le site Web CiviCRM met à jour les fichiers de traduction mis à jour. Ils sont disponibles à l'adresse suivante: https://download.civicrm.org/civicrm-l10n-core/mo/xx_XX/civicrm.mo
+Par exemple:
 
-Par exemple, pour l'espagnol: Https://download.civicrm.org/civicrm-l10n-core/mo/es_ES/civicrm.mo
+- fr_FR: https://download.civicrm.org/civicrm-l10n-core/mo/fr_FR/civicrm.mo
+- fr_CA: https://download.civicrm.org/civicrm-l10n-core/mo/fr_CA/civicrm.mo
 
-Pour plus d'informations vous pouvez consulter le wiki ici :[https://wiki.civicrm.org/confluence/display/CRMDOC/i18n+Administrator's+Guide%3A+Using+CiviCRM+in+your+own+language](https://wiki.civicrm.org/confluence/display/CRMDOC/i18n+Administrator's+Guide%3A+Using+CiviCRM+in+your+own+language)
+Pour plus d'information vous pouvez consulter la page wiki : [https://wiki.civicrm.org/confluence/display/CRMDOC/i18n+Administrator's+Guide%3A+Using+CiviCRM+in+your+own+language](https://wiki.civicrm.org/confluence/display/CRMDOC/i18n+Administrator's+Guide%3A+Using+CiviCRM+in+your+own+language) (en anglais).
+
+Les aides à la traduction
+-------------------------
+
+Bien que certaines traductions soient encore en cours de développement, un certain nombre d'aides dans CiviCRM soutiennent la communauté dans ses efforts de traduction. Notamment :
+
+1.  Transifex est un outil en ligne qui permet aux groupes de traducteurs de traduire des chaînes de texte et de garder un aperçu de ses progrès. [Inscrivez-vous](https://www.transifex.com/signup/), recherchez votre langue, rejoignez l'équipe ou, si votre langue n'est pas disponible, commencez à traduire.
+2.  Un glossaire 
+    ([http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations](http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations))  
+    Le wiki de CiviCRM vous aidera à maintenir la cohérence de vos traductions. Il vous aidera également à obtenir un aperçu de la quantité de travail à fournir pour traduire les chaînes de texte que vos utilisateurs verront le plus souvent et qu'il serait donc le plus utile à traduire.
+3.  Une page wiki sur les astuces 
+    ([http://wiki.civicrm.org/confluence/display/CRMDOC/Localisation+community+building+howto](http://wiki.civicrm.org/confluence/display/CRMDOC/Localisation+community+building+howto))
+    Explique comment aborder le processus de localisation. 
+4.  Une « foire aux questions »
+    ([http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ)](http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ). Cette page wiki de CiviCRM couvre les questions les plus fréquentes sur la localisation.
 
 Comment commencer une traduction ? 
 ---------------
