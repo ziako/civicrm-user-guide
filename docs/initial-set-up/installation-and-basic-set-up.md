@@ -10,10 +10,12 @@ Avant d'explorer l'installation de CiviCRM, assurez-vous d'avoir lu le chapitre 
 
 CiviCRM doit être installé sur un ordinateur configuré avec un serveur Web (tel que Apache ou ngnx), PHP et MySQL. Certaines personnes préfèrent tester CiviCRM sur leur propre ordinateur local avant de l'installer sur un serveur web dédié. Si vous n'avez pas les préalables ci-dessus sur votre ordianteur, vous pouvez télécharger des plateformes de développement Web telles que WAMP, XAMPP, MAMPP et LAMP, qui installeront rapidement un serveur Web Apache, PHP et MySQL. (Les deux premières sont pour Windows et les deux autres pour Macintosh et Linux respectivement).
 
-Avant de pouvoir commencer l'installation, vous devez décider quel système de gestion de contenu (CMS) vous souhaitez intégrer pour construire et gérer votre site : Choisir entre les options open-source: Drupal, Joomla ou Wordpress!.
+Avant de commencer l'installation, vous devez décider quel système de gestion de contenu (CMS) vous souhaitez intégrer pour construire et gérer votre site : Drupal, Joomla! ou WordPress. Pour plus d'information à ce sujet, voir la section [Choisir son CMS](../website-integration/choosing-your-cms.md)
 
 Vous trouverez des instructions complètes sur l'installation de CiviCRM ici : [
 http://wiki.civicrm.org/confluence/display/CRMDOC/Installation+and+Upgrades](http://wiki.civicrm.org/confluence/display/CRMDOC/Installation+and+Upgrades%20)[](http://wiki.civicrm.org/confluence/display/CRMDOC/Installation+and+Upgrades%20)
+
+Pour une installation en français (ou toute autre langue que l'anglais), veuillez consulter la section [Régionalisation de CiviCRM](../the-civicrm-community/localising-civicrm.md).
 
 Intallation locale ou Internet ?
 --------------------------------
@@ -41,14 +43,13 @@ Utilisez cette liste de contrôle pour paramétrer et enregistrer les tâches de
 
 ### Localisation
 
-La localisation implique l'adaptation de CiviCRM pour une utilisation dans un pays ou une langue spécifique en traduisant le texte affiché à l'écran et en définissant des formats régionaux spécifiques pour les dates et la monnaie. Par défaut, CiviCRM est initialisé pour les États-Unis. Si vous utilisez CiviCRM dans un pays différent, vous devez paramétrer et mettre à jour les valeurs sur cet écran. 
+La localisation implique l'adaptation de CiviCRM pour une utilisation dans un pays ou une langue spécifique en traduisant le texte affiché à l'écran et en définissant des formats régionaux spécifiques pour les dates et la monnaie. Par défaut, CiviCRM est initialisé pour les États-Unis. Si vous utilisez CiviCRM dans un pays différent, vous devez paramétrer et mettre à jour les valeurs sur cet écran.
 
 CiviCRM a été traduit dans de nombreuses langues différentes et les traductions sont incluses lorsque vous téléchargez CiviCRM. Ces traductions sont fournies par les membres de la communauté. Si CiviCRM n'est pas disponible dans votre langue, vous pouvez envisager de le traduire. Vous trouverez un guide de traduction sur le wiki.
 
 Vous pouvez aussi configurer votre site pour prendre en charge plusieurs langues. Dans ce mode, vos utilisateurs pourront choisir parmi une liste de langues disponibles après leur connexion. Vous pouvez également créer et stocker des versions multilingues de texte. Les exemples comprennent des étiquettes de champs personnalisées, une page de contribution en ligne, des informations sur les campagnes et des descriptions d'événements.
 
-Pour plus d'info, consulter:
-[http://wiki.civicrm.org/confluence/pages/viewpage.action?pageId=88408149](http://wiki.civicrm.org/confluence/pages/viewpage.action?pageId=88408149)
+Pour plus d'info, consulter la section [Régionalisation de CiviCRM](../the-civicrm-community/localising-civicrm.md).
 
 Sous Localisation, vous trouverez également les **Formats de date** :
 
