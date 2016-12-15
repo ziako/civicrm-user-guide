@@ -1,227 +1,104 @@
-# Profiles
+# Profils
 
-A Profile is a collection of fields from your database. Profiles are a
-powerful tool that have many different uses across all components of
-CiviCRM. Profiles are used to collect data (e.g., on a sign-up form),
-and to display data to the user (e.g., as a member directory). They can
-be used both internally (e.g., to create simplified data entry screens
-for staff) and externally (to display up-to-date information in from
-database).
+Un profil est une sélection de champs de votre base de données. Les profils sont un outil puissant qui a de nombreuses utilisations différentes pour tous les composants de CiviCRM. Les profils sont utilisés pour collecter des données (par exemple, sur un formulaire d'inscription) et pour afficher des données à l'utilisateur (par exemple, en tant que liste de membres). Ils peuvent être utilisés à la fois en interne (par exemple, pour créer des écrans de saisie de données simplifiés pour le personnel) et à l'externe (pour afficher des informations actualisées de la base de données).
 
-You can add any core and custom fields to a profile, including
-multi-value custom fields. There are also a couple of other special
-fields you can add to profiles, namely, Groups, which will include all
-set of checkboxes - one for each of your public groups, and tags, which
-includes all public tags.
+Vous pouvez ajouter tous les champs de base et personnalisés à un profil, y compris les champs personnalisés à plusieurs valeurs. Il y a également quelques autres champs spéciaux que vous pouvez ajouter aux profils, à savoir, Groupes, qui inclura toutes les cases à cocher (une pour chacun de vos groupes publics)  et des étiquettes, qui incluent toutes les étiquettes  publiques.
 
-By creating a Profile, you are able to pick and choose only those fields
-that are relevant for a specific purpose. The diagram below provides a
-visual explanation of how existing fields become part of a Profile.
+En créant un Profil, vous êtes en mesure de sélectionner et de choisir uniquement les champs pertinents dans un but spécifique. Le diagramme ci-dessous fournit une explication visuelle de la façon dont les champs existants deviennent une partie d'un profil.
 
 ![Profiles](../img/CiviCRM-Icons-db1-en.png "Profiles")
 
-This section will outline how to use Profiles for both collecting and
-sharing data, and share several ways of using profiles that can save
-time for anyone managing data in your organization.
+Cette section explique comment utiliser les profils pour collecter et partager des données ainsi que plusieurs façons d'utiliser des profils permettant de gagner du temps pour toute personne qui gère des données dans votre organisation.
 
-## Different uses for Profiles
+## Différentes utilisations des Profils
 
-This section briefly discusses many different ways that Profiles can be
-used. You can find step-by-step instructions for creating and using
-Profiles later in this chapter.
+Cette section décrit brièvement plusieurs façons dont les profils peuvent être utilisés. Vous trouverez des instructions détaillées pour créer et utiliser les profils plus loin dans ce chapitre.
 
-### Collecting information on public pages
+### Collecte d'informations sur les pages publiques
 
-A Profile can be used to collect information from your constituents.
-Profiles can be displayed on standalone pages, or embedded into
-contribution, membership sign-up, and/or event registration pages. You
-can add more than one Profile to a page. You can also choose required
-fields and add text in the Profile that will help users fill out the
-form.
+Un profil peut être utilisé pour recueillir des informations auprès de vos membres ou du public. Les profils peuvent être affichés sur des pages autonomes ou incorporés dans des pages de contribution, d'inscription de membre ou d'enregistrement à un événement. Vous pouvez ajouter plus d'un profil à une page. Vous pouvez également choisir les champs requis et ajouter du texte dans le profil pour aider les utilisateurs à remplir le formulaire.
 
-Some examples:
+Exemples:
 
--   A volunteer sign-up form containing the predefined fields for first
-    name, last name, mailing address, and a custom field for volunteer
-    interests
--   A Profile containing custom fields about food preferences that can
-    be added to the registration pages for any event where food will be
-    served
+- Un formulaire d'inscription de volontaires contenant les champs prédéfinis pour le prénom, le nom de famille, l'adresse postale et un champ personnalisé pour les motivations des bénévoles
+- Un profil contenant des champs personnalisés sur les préférences alimentaires qui peut être ajouté aux pages d'inscription pour tout événement où des repas seront servis.
 
-For example, this profile is being used to collect address information
-on a donation page.
+Dans l'exemple ci-dessous, un profil est utilisé pour recueillir des informations d'adresse sur une page de don.
 
 ![image](../img/baykeeper-profile.png)
 
-### Displaying information on public pages
+### Affichage d'informations sur les pages publiques
 
-A Profile can display information, from the database, on public pages.
-This saves time, because you only have to enter information in your
-database, rather than in your database *and* on your website.
+Un profil peut afficher des informations, à partir de la base de données, sur des pages publiques. Cela permet d'économiser du temps, car vous n'avez qu'à saisir des informations dans votre base de données, plutôt que dans votre base de données *et* sur votre site Web.
 
-For example, a membership-based organisation can provide a searchable
-membership directory on their website that is updated as soon as a new
-member joins. Also, an organization that wants to thank its donors
-publicly can list their names on a web page as soon as contributions are
-made.
+Par exemple, une organisation peut afficher un répertoire d'adhérents consultable sur son site Web, mis à jour automatiquement dès qu'un nouveau membre est enregistré. De même, une organisation qui veut remercier ses donateurs publiquement peut inscrire leurs noms sur une page Web dès que les contributions sont versées.
 
-A mini case study: Native Americans in Philanthropy (NAP) wanted to
-create a membership directory that their members could use to search and
-connect with each other. Before CiviCRM, they would create a very
-expensive annual print directory and mail it to every member. This
-process was time-consuming and expensive, and some data would be
-out-of-date before the members received their directory. Using a
-searchable Profile on their website instead meant significant resource
-savings and, because their website became a portal for their members to
-connect, it helped to advance their mission.
+Une mini étude de cas: Native Americans in Philanthropy (NAP) voulait créer un répertoire d'adhérents que leurs membres pourrait utiliser pour rechercher et se connecter les uns avec les autres. Avant CiviCRM, ils créaient un répertoire d'impression annuel très coûteux et l'envoyait par la poste à chaque membre. Ce processus était long et onéreux, et certaines données seraient périmées avant que les membres ne reçoivent leur répertoire. L'utilisation d'un profil consultable sur leur site Web a généré d'importantes économies de ressources. Le site Web est devenu un portail permettant aux membres de se connecter entre eux et a contribué à faire progresser leur mission dans de meilleures conditions.
 
-Details on using Profiles this way are included later in this chapter.
+Les détails sur l'utilisation des profils de cette façon sont inclus plus loin dans ce chapitre.
 
-### Customising your user interface
+### Personnalisation de votre interface utilisateur
 
-Profile forms may also be used as simplified data entry forms. If you
-have volunteers or interns who perform manual data entry for your
-organisation, you can make their task easier by creating a profile form
-that shows only the fields they need to input. This greatly simplifies
-data entry and reduces the chance of data being entered incorrectly.
+Les formulaires de profil peuvent également être utilisés comme formulaires simplifiés de saisie de données. Si vous avez des bénévoles ou des stagiaires qui effectuent une saisie manuelle de données pour votre organisation, vous pouvez faciliter leur tâche en créant un formulaire de profil qui ne montre que les champs dont ils ont besoin pour saisir. Cela simplifie grandement la saisie des données et réduit la possibilité de saisie incorrecte des données.
 
-You can also use a Profile to display selected fields in the results of
-an advanced search. For instance, you could create a Profile that
-includes the phone number field and a custom field for volunteer
-interests; when used to display search results, it would provide an
-on-screen call list for your volunteer coordinator.
+Vous pouvez également utiliser un profil pour afficher les champs sélectionnés dans les résultats d'une recherche avancée. Par exemple, vous pouvez créer un profil qui inclut le champ numéro de téléphone et un champ personnalisé pour les intérêts des bénévoles. Lorsqu'il est utilisé pour afficher les résultats de recherche, il proposera une liste de contacts à appeler pour votre coordonnateur de bénévolat.
 
-Details on using Profiles this way are available in the *Customizing the
-User Interface* chapter in *Initial Set-up*.
+Les détails sur l'utilisation des profils de cette façon sont disponibles dans le chapitre *Personnaliser l'interface utilisateur* de *Configuration initiale*.
 
-### Updating multiple records at the same time
+### Mise à jour de plusieurs enregistrements en même temps
 
-There is often a need to update a large number of records all at once.
-For example, after an event, you may have an attendance list, and you
-want to mark everyone who registered as Attended or No-show accordingly.
-Or, you may want to update the Thank-You Sent field for a week's worth
-of donations all at once.
+Il est souvent nécessaire de mettre à jour un grand nombre d'enregistrements à la fois. Par exemple, après un événement, vous pouvez avoir une liste de présence importante, et vous voulez enregistrer toutes les personnes inscrites comme Présent ou Absent mais aussi mettre à jour le champ de remerciement envoyé pour une semaine de dons...cela en une seule fois 
 
-Actions that allow you to update multiple records at the same time is available from the  **Actions** dropdown menu for most kinds of search results. (Search, Advanced Search, Find Contributions, Find Memberships,
-Find Participants, and Find Activities) and from the event participant
-lists generated from the Manage Events screen.
+Les actions qui vont vous permettre de mettre à jour plusieurs enregistrements en même temps sont disponibles dans le menu déroulant **Actions** pour la plupart des types de résultats de recherche. (Recherche, Recherche avancée, Rechercher des contributions, Trouver des membres, Rechercher des participants et Rechercher des activités) et des listes de participants à l'événement générées à partir de l'écran Gérer les événements.
 
-The **Update multiple ...** function pulls up a view of your search
-results containing the fields in your profile and allows you to change
-the contents of the fields on a single screen and save them all at once.
-Details on using profiles this way are included later in this chapter.
+La fonction **Update multiple ...** affiche une vue de vos résultats de recherche contenant les champs de votre profil et vous permet de modifier le contenu des champs sur un seul écran et de les enregistrer tous à la fois. Les détails sur l'utilisation de profils de cette façon sont inclus plus loin dans ce chapitre.
 
-### Managing email lists
+### Gérer les listes de courriels
 
-Another use of Profiles is to present a form where people can sign up to
-receive emails from your organisation. Groups that you use to track
-different email lists can be added as check boxes, and when visitors to
-your website submit the form, they are automatically added to the email
-lists they have checked.
+Une autre utilisation de Profils est de présenter un formulaire où les personnes peuvent s'inscrire pour recevoir des courriels, newsletter et diverses infos de votre organisation. Les groupes que vous utilisez pour suivre des listes de diffusion différentes peuvent être ajoutés sous forme de cases à cocher et lorsque les visiteurs de votre site Web soumettent le formulaire, ils sont automatiquement ajoutés aux listes de courrier électronique qu'ils ont cochées.
 
-Details about using Profiles to manage email lists are found in the
-*Set-up* chapter of the *Email* section of this book.
+Pour plus d'informations sur l'utilisation des profils pour gérer les listes de diffusion, reportez-vous au chapitre *Configuration* de la section *Email* de ce manuel.
 
 ## Planning your Profiles
 
-Because Profiles can be used for so many different purposes, there are a
-lot of choices to make and settings to configure when setting them up.
-There are settings for the Profile as a whole and settings for each
-field you add—and the choice of what those fields are. Choices you make
-about one aspect will affect choices you can make about others. For
-example, some types of Profiles limit the kinds of fields you can
-include, and some combinations of fields are not allowed in any type of
-profile. Because of this complexity, it's important to understand the
-consequences of certain settings and carefully plan what you will use
-your profile for, and what you need in it, before you create it. You may
-also need to use some trial and error before you hit on the right
-solution for your purpose.
+Parce que les profils peuvent être utilisés à des fins différentes, il ya beaucoup de choix à faire et de paramètres à configurer lors de leur mise en place. Il ya des paramètres pour le profil dans son ensemble et des paramètres pour chaque champ que vous ajoutez, ainsi que le choix de ces champs. Les choix que vous faites sur un aspect affecteront les choix que vous pouvez faire sur les autres. Par exemple, certains types de profils limitent les types de champs que vous pouvez inclure et certaines combinaisons de champs ne sont autorisées dans aucun type de profil. En raison de cette complexité, il est important de comprendre les conséquences de certains paramètres et de planifier soigneusement ce que vous utiliserez dans votre profil et ce dont vous avez besoin avant de le créer. Vous devrez peut-être faire probablement quelques essais ou erreurs avant de trouver la bonne solution pour votre objectif.
 
-Here are some guidelines on which fields can be added to a Profile:
+Voici quelques conseils sur les champs qui peuvent être ajoutés à un profil:
 
--   Profiles that are used for Search Views can contain only fields from Contact records (and
-    the different Contact types, e.g. Individual).
--   Contact fields are available in all Profiles; however, you cannot
-    mix fields from different Contact types (e.g. Individual and
-    Organization).
--   To add fields (like Street Address or Email) that apply to more than
-    one Contact type, choose fields from Contacts rather than the
-    specific type. The Organization field menu, for example, contains
-    only those fields that do not also apply to other Contact types.
--   Except in Search Results Profiles, you can combine Contact fields
-    with fields from one—and only one—of the other record types:
-    Activity, Participants, Contributions, and Membership.
--   If you try to combine fields with an unsupported combination of
-    record types, you'll get an error when you try to save the field.
+- Les profils utilisés pour les affichages de recherche peuvent contenir uniquement les champs des enregistrements de contact (et les différents types de contact, par exemple individuels).
+- Les champs de contact sont disponibles dans tous les profils. Toutefois, vous ne pouvez pas mélanger les champs de différents types de contact (par exemple, individuel et organisation).
+- Pour ajouter des champs (comme l'adresse ou l'e-mail) qui s'appliquent à plusieurs types de contacts, choisissez les champs de Contacts plutôt que le type spécifique. Le menu des champs Organisation, par exemple, contient uniquement les champs qui ne s'appliquent pas également à d'autres types de contacts.
+- Sauf dans les profils de résultats de recherche, vous pouvez combiner les champs de contact avec les champs d'un et d'un seul autre type d'enregistrement : Activité, Participants, Contributions et Adhésion.
+- Si vous essayez de combiner des champs avec une combinaison non prise en charge de types d'enregistrements, vous obtiendrez une erreur lorsque vous essayez d'enregistrer le champ.
 
-## Creating and managing profiles
+## Création et gestion de profils
 
-Creating a Profile is a multi-step process. First, you create the
-Profile and choose its settings. There are basic settings and Advanced
-Settings. Next, you add the fields and choose settings for those as
-well.
+La création d'un profil est un processus en plusieurs étapes. Tout d'abord, vous créez le profil et choisissez ses paramètres. Il existe des paramètres de base et des paramètres avancés. Ensuite, vous ajoutez les champs et choisissez également ses paramètres.
 
-### Creating a Profile and understanding Profile settings
+### Création d'un profil et compréhension des paramètres de profil
 
-This section walks you through all the Profile settings and explains how
-they affect how your Profiles work. As you look over it, you may notice
-that the list of settings is quite long. It's important to understand
-that most settings apply only to one type of Profile use. Each time you
-create a Profile you will be able to ignore many settings, as they will
-not apply to your intended use.
+Cette section vous guide à travers tous les paramètres du profil et explique comment ils affectent le fonctionnement de vos profils. Comme vous le voyez, vous pouvez remarquer que la liste des paramètres est assez longue. Il est important de comprendre que la plupart des paramètres s'appliquent uniquement à un type d'utilisation de profil. Chaque fois que vous créez un profil, vous serez en mesure d'ignorer de nombreux paramètres, car ils ne s'appliquent pas à votre utilisation prévue.
 
-1.  Go to: **Administer > Customize Data and Screens > Profiles** and
-    click on **Add Profile**.
-2.  **Profile Name**: Give the profile a meaningful name.
-3.  **Used For**: Your choices are Standalone Form or Directory; Search
-    Views; Drupal User
-    Registration; and View/Edit Drupal User Account. You can check more
-    than one box in the Used For field, to make your Profile available
-    for more than one use; just remember that checking Search Views will
-    limit your field choices to Contact and Contact type records only.
-4.  **Order**: This field determines controls the order in which
-    Profiles are presented when more than one Profile is included in a
-    page. Lower numbers are displayed ahead of higher numbers. The field
-    is filled in automatically when a Profile in created; change the
-    number if you wish.
-5.  **Pre-form Help** and **Post-form Help**: These fields allow you to
-    write text that appears either before or after your Profile to guide
-    people in filling out forms.
-6.  **Is this CiviCRM Profile Active?**: This box is checked
-    automatically; it is what allows the Profile to appear as options
-    for insertion into forms and use by the Batch Update function. When
-    creating Profiles, you obviously want to leave it checked; later on,
-    if you want to take a Profile out of use in your organization, you
-    can edit the Profile and un-check the box.
+1. Allez dans : **Administrer> Personnaliser les données et les écrans> Profils** et cliquer sur **Ajouter un profil**.
+2. **Nom du profil** : Donnez au profil un nom significatif.
+3. **Utilisé pour** : Vos choix sont "Formulaire ou liste autonome" ou "Vue des résultats". Vous pouvez cocher plusieurs cases dans ce champ pour rendre votre profil disponible à plusieurs utilisations. N'oubliez pas que la vérification des "Vues de résultats" limitera vos choix de champ aux enregistrements de type Contact et Contact uniquement.
+4. **Numéro d'ordre** : Ce champ détermine l'ordre dans lequel les profils sont présentés lorsque plusieurs profils sont inclus dans une page. Les nombres inférieurs sont affichés devant des nombres plus élevés. Le champ est automatiquement rempli lors de la création d'un Profil. Changer le nombre si vous le souhaitez.
+5. **Aide avant formulaire** et **Aide après formulaire** : Ces champs vous permettent d'écrire du texte qui apparaît avant ou après votre profil pour guider les utilisateurs à remplir les formulaires.
+6. **Ce profil CiviCRM est-il actif ?** : Cette case est cochée automatiquement. C'est ce qui permet au profil d'apparaître comme options pour l'insertion dans des formulaires et l'utilisation de la fonction de mise à jour de lot. Lorsque vous créez des profils, vous devez évidemment la laisser cochée. Ultérieurement, si vous souhaitez supprimer un profil vous pouvez modifier le profil et désélectionner cette case.
 
-### Advanced settings
+### Paramètres avancés
 
-Profiles have a number of advanced settings which are applicable in
-various different contexts. Not everything listed under Advanced
-Settings applies to every Profile; some apply only to specific Profile
-uses. You can skip over any settings that do not apply to the way you
-will use your Profile. To access advanced settings click on the gray
-advanced settings bar and a set of fields will appear
+Les profils ont un certain nombre de paramètres avancés qui sont applicables dans des contextes différents. Tout ce qui est répertorié sous Paramètres avancés s'applique à tous les profils. Certains ne s'appliquent qu'à des utilisations spécifiques du profil. Vous pouvez ignorer tous les paramètres qui ne s'appliquent pas à la façon dont vous utiliserez votre profil. Pour accéder aux paramètres avancés, cliquez sur la barre de paramètres avancés gris et un ensemble de champs apparaîtra
 
-#### **Limit listings to a specific group**
+#### **Restreindre les listes à un groupe spécifique ?**
 
-This is important only for Profiles that will be used to display
-information on your website (e.g., if you will be allowing web visitors
-to search your data, as in a membership directory).
+Ceci est important uniquement pour les profils qui seront utilisés pour afficher des informations sur votre site Web (par exemple, si vous autorisez les visiteurs Web à rechercher vos données, comme dans un répertoire d'adhésion).
 
-1.  Select the Group whose information you want to make publicly
-    viewable/searchable from this field's dropdown menu. For example, if
-    you want to display a directory of active members, create a Smart
-    Group of all members that have a status of New, Current, and Grace.
-2.  Choose the Smart Group in this field. (Remember, smart groups are
-    dynamic lists of records; when new memberships are added, the
-    corresponding contact will automatically be included in the
-    directory.)
-3.  If you do not choose a Group from the dropdown menu in this field,
-    by default CiviCRM will allow a search to expose every record in
-    your database. In most cases this is a bad idea, as you probably
-    don't want anyone who comes to your website to know who is in your
-    whole database.
+1. Sélectionnez le groupe dont vous voulez afficher les informations à partir du menu déroulant de ce champ. Par exemple, si vous souhaitez afficher un répertoire de membres actifs, créez un groupe dynamique de tous les membres ayant un statut de nouveau, de courant et de grâce.
+2. Choisissez le groupe intelligent dans ce champ. (Rappelez-vous que les groupes dynamiques sont des listes d'enregistrements et lors de l'ajout de nouvelles appartenances, le contact correspondant sera automatiquement inclus dans le répertoire.)
+3. Si vous ne choisissez pas un groupe dans le menu déroulant de ce champ, par défaut CiviCRM permettra une recherche pour afficher chaque enregistrement de votre base de données. Dans la plupart des cas, c'est une très mauvaise idée !, car vous ne voulez probablement pas que n'importe qui, visitant votre site Web, sache qui est dans votre base de données entière.
+
+Traduction en cours
 
 #### **Add new contacts to a group**
 
