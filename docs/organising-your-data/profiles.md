@@ -1,6 +1,6 @@
 # Profils
 
-Un profil est une sélection de champs de votre base de données. Les profils sont un outil puissant qui a de nombreuses utilisations différentes pour tous les composants de CiviCRM. Les profils sont utilisés pour collecter des données (par exemple, sur un formulaire d'inscription) et pour afficher des données à l'utilisateur (par exemple, en tant que liste de membres). Ils peuvent être utilisés à la fois en interne (par exemple, pour créer des écrans de saisie de données simplifiés pour le personnel) et à l'externe (pour afficher des informations actualisées de la base de données).
+Un profil est une sélection de champs de votre base de données. Les profils sont un outil puissant qui ont de nombreuses utilisations différentes dans tous les composants de CiviCRM. Les profils sont utilisés pour collecter des données (par exemple, sur un formulaire d'inscription) et pour afficher des données à l'utilisateur (par exemple, en tant que liste de membres). Ils peuvent être utilisés à la fois en interne (par exemple, pour créer des écrans de saisie de données simplifiés pour le personnel) et à l'externe (pour afficher des informations actualisées de la base de données).
 
 Vous pouvez ajouter tous les champs de base et personnalisés à un profil, y compris les champs personnalisés à plusieurs valeurs. Il y a également quelques autres champs spéciaux que vous pouvez ajouter aux profils, à savoir, Groupes, qui inclura toutes les cases à cocher (une pour chacun de vos groupes publics)  et des étiquettes, qui incluent toutes les étiquettes  publiques.
 
@@ -16,11 +16,11 @@ Cette section décrit brièvement plusieurs façons dont les profils peuvent êt
 
 ### Collecte d'informations sur les pages publiques
 
-Un profil peut être utilisé pour recueillir des informations auprès de vos membres ou du public. Les profils peuvent être affichés sur des pages autonomes ou incorporés dans des pages de contribution, d'inscription de membre ou d'enregistrement à un événement. Vous pouvez ajouter plus d'un profil à une page. Vous pouvez également choisir les champs requis et ajouter du texte dans le profil pour aider les utilisateurs à remplir le formulaire.
+Un profil peut être utilisé pour recueillir des informations auprès de vos membres ou du public. Les profils peuvent être affichés sur des pages autonomes ou incorporés dans des pages de contribution, d'inscription de membre ou d'enregistrement à un événement. Vous pouvez ajouter plus d'un profil sur une page. Vous pouvez également choisir les champs requis et ajouter du texte dans le profil pour aider les utilisateurs à remplir le formulaire.
 
 Exemples:
 
-- Un formulaire d'inscription de volontaires contenant les champs prédéfinis pour le prénom, le nom de famille, l'adresse postale et un champ personnalisé pour les motivations des bénévoles
+- Un formulaire d'inscription de volontaires contenant les champs prédéfinis pour le prénom, le nom de famille, l'adresse postale et un champ personnalisé pour les motivations des volontaires.
 - Un profil contenant des champs personnalisés sur les préférences alimentaires qui peut être ajouté aux pages d'inscription pour tout événement où des repas seront servis.
 
 Dans l'exemple ci-dessous, un profil est utilisé pour recueillir des informations d'adresse sur une page de don.
@@ -29,11 +29,11 @@ Dans l'exemple ci-dessous, un profil est utilisé pour recueillir des informatio
 
 ### Affichage d'informations sur les pages publiques
 
-Un profil peut afficher des informations, à partir de la base de données, sur des pages publiques. Cela permet d'économiser du temps, car vous n'avez qu'à saisir des informations dans votre base de données, plutôt que dans votre base de données *et* sur votre site Web.
+Un profil peut afficher des informations, à partir de la base de données, sur des pages publiques. Cela permet d'économiser du temps, car vous n'avez plus à saisir des informations dans votre base de données, plutôt que dans votre base de données *et* sur votre site Web.
 
 Par exemple, une organisation peut afficher un répertoire d'adhérents consultable sur son site Web, mis à jour automatiquement dès qu'un nouveau membre est enregistré. De même, une organisation qui veut remercier ses donateurs publiquement peut inscrire leurs noms sur une page Web dès que les contributions sont versées.
 
-Une mini étude de cas: Native Americans in Philanthropy (NAP) voulait créer un répertoire d'adhérents que leurs membres pourrait utiliser pour rechercher et se connecter les uns avec les autres. Avant CiviCRM, ils créaient un répertoire d'impression annuel très coûteux et l'envoyait par la poste à chaque membre. Ce processus était long et onéreux, et certaines données seraient périmées avant que les membres ne reçoivent leur répertoire. L'utilisation d'un profil consultable sur leur site Web a généré d'importantes économies de ressources. Le site Web est devenu un portail permettant aux membres de se connecter entre eux et a contribué à faire progresser leur mission dans de meilleures conditions.
+Une mini étude de cas: Native Americans in Philanthropy (NAP) voulait créer un répertoire d'adhérents que leurs membres pourrait utiliser pour rechercher et se connecter les uns avec les autres. Avant CiviCRM, ils créaient un répertoire d'impression annuel très coûteux et l'envoyait par la poste à chaque membre. Ce processus était long et onéreux, et certaines données étaient périmées avant que les membres ne reçoivent leur répertoire. L'utilisation d'un profil consultable sur leur site Web a généré d'importantes économies de ressources. Le site Web est devenu un portail permettant aux membres de se connecter entre eux et a contribué à faire progresser leur mission dans de meilleures conditions.
 
 Les détails sur l'utilisation des profils de cette façon sont inclus plus loin dans ce chapitre.
 
@@ -59,9 +59,9 @@ Une autre utilisation de Profils est de présenter un formulaire où les personn
 
 Pour plus d'informations sur l'utilisation des profils pour gérer les listes de diffusion, reportez-vous au chapitre *Configuration* de la section *Email* de ce manuel.
 
-## Planning your Profiles
+## Planification de vos profils
 
-Parce que les profils peuvent être utilisés à des fins différentes, il ya beaucoup de choix à faire et de paramètres à configurer lors de leur mise en place. Il ya des paramètres pour le profil dans son ensemble et des paramètres pour chaque champ que vous ajoutez, ainsi que le choix de ces champs. Les choix que vous faites sur un aspect affecteront les choix que vous pouvez faire sur les autres. Par exemple, certains types de profils limitent les types de champs que vous pouvez inclure et certaines combinaisons de champs ne sont autorisées dans aucun type de profil. En raison de cette complexité, il est important de comprendre les conséquences de certains paramètres et de planifier soigneusement ce que vous utiliserez dans votre profil et ce dont vous avez besoin avant de le créer. Vous devrez peut-être faire probablement quelques essais ou erreurs avant de trouver la bonne solution pour votre objectif.
+Parce que les profils peuvent être utilisés à des fins différentes, il ya beaucoup de choix à faire et de paramètres à configurer lors de leur mise en place. Il ya des paramètres pour le profil dans son ensemble et des paramètres pour chaque champ que vous ajoutez, ainsi que le choix de ces champs. Les choix que vous faites sur un aspect affecteront les choix que vous pouvez faire sur les autres. Par exemple, certains types de profils limitent les types de champs que vous pouvez inclure et certaines combinaisons de champs ne sont autorisées dans aucun type de profil. En raison de cette complexité, il est important de comprendre les conséquences de certains paramètres et de planifier soigneusement ce que vous utiliserez dans votre profil et ce dont vous avez besoin avant de le créer. Vous devrez peut-être faire probablement quelques essais ou erreurs avant de trouver la bonne solution pour réaliser votre objectif.
 
 Voici quelques conseils sur les champs qui peuvent être ajoutés à un profil:
 
@@ -98,71 +98,41 @@ Ceci est important uniquement pour les profils qui seront utilisés pour affiche
 2. Choisissez le groupe intelligent dans ce champ. (Rappelez-vous que les groupes dynamiques sont des listes d'enregistrements et lors de l'ajout de nouvelles appartenances, le contact correspondant sera automatiquement inclus dans le répertoire.)
 3. Si vous ne choisissez pas un groupe dans le menu déroulant de ce champ, par défaut CiviCRM permettra une recherche pour afficher chaque enregistrement de votre base de données. Dans la plupart des cas, c'est une très mauvaise idée !, car vous ne voulez probablement pas que n'importe qui, visitant votre site Web, sache qui est dans votre base de données entière.
 
-Traduction en cours
+#### **Ajouter de nouveaux contacts à un groupe**
 
-#### **Add new contacts to a group**
-
-Any *new* contacts that fill out this Profile will be added to the
-Group. You can use this, for example, to add anyone who fills out your
-volunteer sign-up form to a Volunteers Group.
-Note that by default contacts will not receive any confirmation that they have been added to this group or
-be asked to validate their email address.
-To have contacts who complete the profile form receive an email, go to **Administer >> CiviMail >> CiviMail Component Settings** and check the checkbox **"Enable Double Opt-in for Profiles which use the "Add to Group" setting"**. They must respond (opt-in) before they are added to the group.
+Tous les *nouveaux* contacts qui remplissent ce profil seront ajoutés a un groupe. Vous pouvez, par exemple, ajouter une personne qui remplit votre formulaire d'inscription à un groupe de bénévoles. Notez que par défaut, les contacts ne reçoivent aucune confirmation quand ils ont été ajoutés à ce groupe ou quand ils doivent valider leur adresse électronique. Pour que les contacts qui remplissent le formulaire de profil reçoivent un courriel, allez à **Administer > CiviMail > CiviMail Component Settings** et cochez la case **"Activer le double opt-in pour les profils qui utilisent le paramètre "Ajouter au groupe" "**. Ils doivent répondre (opt-in) avant d'être ajoutés au groupe.
 
 ![Screen shot of dobule opt-in setting](../img/organizing-data-double-opt-in.png)
 
-Also note that if you want to offer more than one group, you might be better off using the groups profile field.
+Notez que si vous souhaitez proposer plus d'un groupe, il est préférable d'utiliser le champ Profil de groupe.
 
-#### **Notify when profile form is submitted**
+#### **Notifier quand le formulaire de profil est envoyé**
 
-This setting, which is is also applicable only when using a Profile
-as a sign-up form, allows you to send an email automatically whenever
-the form is submitted. For example, maybe your volunteer coordinator
-wants to get an email whenever anyone fills out the volunteer sign-up
-form. Simply enter the email address in the field; if you want to send
-email to multiple addresses, separate them with a comma.
+Ce paramètre, qui est applicable uniquement lors de l'utilisation d'un profil en tant que formulaire d'inscription, vous permet d'envoyer un message automatiquement chaque fois que le formulaire est envoyé. Par exemple, votre coordonnateur des bénévoles peut vouloir envoyer un courriel chaque fois que quelqu'un remplit le formulaire d'inscription des bénévoles. Entrez simplement l'adresse e-mail dans le champ. Si vous souhaitez envoyer un e-mail à plusieurs adresses, séparez-les par une virgule.
 
-#### **Redirect URL**
+#### **URL de redirection**
 
-This applies only to Profiles that are being used as standalone
-forms; it will not apply when the Profile is embedded in an event
-sign-up or contribution form. The Redirect URL field allows you to send
-people to a specific web page after they submit their form. For example,
-you may want to create a web page that thanks people for submitting
-their information. If this field is left blank, people will be directed
-to a page which displays the information they've just entered.
+Ceci s'applique uniquement aux profils qui sont utilisés comme des formulaires autonomes. La redirection ne s'applique pas lorsque le profil est incorporé dans un formulaire d'inscription ou de contribution. Le champ URL de redirection vous permet de diriger les personnes vers une page Web spécifique après avoir soumis un formulaire. Par exemple, vous pouvez créer une page Web qui remercie les gens de soumettre leurs informations. Si ce champ est laissé vide, les gens seront dirigés vers une page qui affiche les informations qu'ils viennent d'entrer.
 
-#### **Cancel redirect URL**
+#### **Annuler l'URL de redirection**
 
-Performs exactly the same way as Redirect URL, except that it
-applies when people cancel their form submission.
+S'exécute exactement de la même manière que l'URL de redirection, sauf qu'elle s'applique lorsque les utilisateurs annulent leur soumission de formulaire.
 
-#### **Include reCAPTCHA?**
+#### **Inclure reCAPTCHA ?**
 
-This applies when profiles are being filled in by anonymous
-users. CAPTCHA is a type of spam-blocking software that requires the
-visitor to fill in text displayed in a graphic file. This prevents
-automated web-crawling spiders (robots) from completing the form. It is
-highly recommended that you include it.
+Concerne lorsque les profils sont remplis par des utilisateurs anonymes. CAPTCHA est un type de logiciel anti-spam qui oblige le visiteur à remplir le texte affiché dans un fichier graphique. Cela empêche les robots automatisés de naviguer sur le Web et de remplir un formulaire. Il est fortement recommandé de l'inclure.
 
-You must set up a free reCAPTCHA account and enter some configuration
-information in CiviCRM to use this feature. Go to **Administer > System
-Settings > Undelete, Logging and ReCAPTCHA** to configure your account;
-instructions for signing up are included on that page.
+Vous devez configurer un compte reCAPTCHA et saisir quelques informations de configuration dans CiviCRM pour utiliser cette fonctionnalité. Allez dans **Administer> Paramètres système> Undelete, Logging et ReCAPTCHA** pour configurer votre compte. Les instructions d'inscription sont incluses sur cette page.
 
-#### **Drupal user account registration option**
+#### **Option d'enregistrement de compte utilisateur Drupal**
 
-This setting applies to Profiles that are used in public pages and
-determines whether people can or must use your form to sign up for an
-account with your website in addition to submitting the information on
-the form. This can be useful for ensuring people have to sign up for a
-user account as part of becoming a member or registering for an event.
+Ce paramètre s'applique aux profils qui sont utilisés dans les pages publiques et détermine si les personnes peuvent ou doivent utiliser votre formulaire pour avoir un compte utilisateur sur votre site Web avant de soumettre les informations du formulaire. Cela peut être utile pour s'assurer que les personnes qui doivent s'inscrire à un compte d'utilisateur peuvent devenir membre ou s'inscrire à un événement.
 
-#### **WordPress user account registration option**
+#### **Option d'inscription au compte utilisateur WordPress**
 
-Like Drupal, Wordpress allows CiviCRM Profiles to create accounts as
-described above. Within WordPress **Settings > General** "Membership [
-] Anyone can register" must be clicked.
+Comme Drupal, Wordpress permet aux profils CiviCRM de créer des comptes comme décrit ci-dessus. Dans WordPress **Paramètres> Général** "Adhésion [] N'importe qui peut s'inscrire" doit être cliqué.
+
+Traduction en cours :
 
 #### **What to do upon duplicate match**
 
