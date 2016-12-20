@@ -100,7 +100,7 @@ Ceci est important uniquement pour les profils qui seront utilisés pour affiche
 
 #### **Ajouter de nouveaux contacts à un groupe**
 
-Tous les *nouveaux* contacts qui remplissent ce profil seront ajoutés a un groupe. Vous pouvez, par exemple, ajouter une personne qui remplit votre formulaire d'inscription à un groupe de bénévoles. Notez que par défaut, les contacts ne reçoivent aucune confirmation quand ils ont été ajoutés à ce groupe ou quand ils doivent valider leur adresse électronique. Pour que les contacts qui remplissent le formulaire de profil reçoivent un courriel, allez à **Administer > CiviMail > CiviMail Component Settings** et cochez la case **"Activer le double opt-in pour les profils qui utilisent le paramètre "Ajouter au groupe" "**. Ils doivent répondre (opt-in) avant d'être ajoutés au groupe.
+Tous les *nouveaux* contacts qui correspondent à ce profil seront ajoutés a un groupe. Vous pouvez, par exemple, ajouter une personne qui remplit votre formulaire d'inscription à un groupe de bénévoles. Notez que, par défaut, les contacts ne reçoivent aucune confirmation quand ils ont été ajoutés à ce groupe ou quand ils doivent valider leur adresse électronique. Pour que les contacts qui remplissent le formulaire de profil reçoivent un courriel, allez à **Administer > CiviMail > CiviMail Component Settings** et cochez la case **"Activer le double opt-in pour les profils qui utilisent le paramètre "Ajouter au groupe" "**. Ils doivent répondre (opt-in) avant d'être ajoutés au groupe.
 
 ![Screen shot of dobule opt-in setting](../img/organizing-data-double-opt-in.png)
 
@@ -132,122 +132,51 @@ Ce paramètre s'applique aux profils qui sont utilisés dans les pages publiques
 
 Comme Drupal, Wordpress permet aux profils CiviCRM de créer des comptes comme décrit ci-dessus. Dans WordPress **Paramètres> Général** "Adhésion [] N'importe qui peut s'inscrire" doit être cliqué.
 
+#### **Que faire en cas de doublon**
+
+Ce paramètre s'applique aux profils utilisés dans les pages publiques. Il contrôle ce qui se passe lorsque les données de contact fournies par le profil correspondent à un enregistrement déjà existant. Vous devez choisir une de ces options, par défaut «Avertissement d'émission et ne pas enregistrer» est choisi. La correspondance entre les profils est utilisée sur la règle de déduplication **non supervisée** (pour plus d'informations sur les règles de déduplication, voir le chapitre *Deduping and Merging* de la section *Travailler avec vos données*). Notez que s'il ya plusieurs contacts correspondants, le premier enregistrement correspondant est utilisé.
+
+Voici les options et leurs effets sur le fonctionnement de votre formulaire:
+
+- "Avertissement de problème et ne pas enregistrer" Cette option est ignorée si le Profil est incorporé dans une contribution en ligne, une inscription d'adhésion ou un formulaire d'inscription à un événement. Dans ces cas, une correspondance de contact entraîne la liaison de la transaction au contact correspondant. Dans d'autres cas, l'utilisateur reçoit un message indiquant qu'un enregistrement existe déjà dans la base de données et qu'il ne pourra pas le soumettre.
+- "Mettre à jour le contact correspondant" ajoute les nouvelles informations du formulaire à l'enregistrement de contact et, s'il ya des champs de formulaire qui sont déjà remplis dans l'enregistrement, écrase les champs d'enregistrement existants. Par exemple, si le formulaire inclut des champs d'adresse, le texte que l'utilisateur entre dans le formulaire remplacera ce qui était déjà dans les champs d'adresse de la base de données.
+- "Autoriser la création de contact en double" ignore les correspondances potentielles et crée un nouvel enregistrement de contact pour tous les formulaires soumis. Cela signifie que toutes les soumissions de formulaire seront enregistrées et qu'aucune donnée ne sera écrasée. Cependant, ceci peut produire beaucoup d'enregistrements en double qui devront être supprimés plus tard (voir le chapitre *Deduping and Merging* dans la section *Working with Your Data*).
+
+#### **Recherche de proximité**
+
+Cela s'applique si vous utilisez le profil d'un répertoire consultable. Si activé, il s'ajoute un bloc de recherche de proximité aux critères de recherche. Ce bloc contient un champ pour l'adresse de début, et un autre qui permet à l'utilisateur de définir un rayon de recherche (à quelle distance de l'adresse de départ voulez-vous rechercher). Choisissez "Aucun" si la recherche de proximité n'est pas pertinente pour votre utilisation ou "Facultatif" si vous souhaitez offrir une recherche de proximité à vos utilisateurs, et "Obligatoire" si vous souhaitez forcer l'utilisateur à saisir une adresse de début et un rayon de recherche.
+
+#### **Activer le mappage pour ce profil?**
+
+Cela s'applique uniquement si vous utilisez le profil d'un répertoire consultable. Une carte de localisation sera ajoutée aux résultats de la recherche.
+
+#### **Inclure les liens d'édition de profil dans les résultats de recherche?**
+
+Cela s'applique uniquement si vous utilisez le profil d'un répertoire consultable. Dans les listes de résultats il est ajouté un lien pour modifier les champs Profil dans les enregistrements de contact retournés. Seuls les utilisateurs ayant la permission de modifier les contacts de résultat verront ce lien
+
+#### **Inclure les liens d'informations de compte d'utilisateur Drupal dans les résultats de recherche?**
+
+Cela s'applique uniquement si vous utilisez le profil d'un répertoire consultable. Un lien sera inclus dans les résultats des informations de compte d'utilisateur Drupal des contacts résultants (c'est-à-dire leur page Mon compte). Ce lien sera inclus uniquement pour les contacts de résultat qui ont un compte d'utilisateur sur votre site Web.
+
+
+Une fois que vous avez enregistré les paramètres de profil, vous pouvez ajouter des champs au profil. Si vous envisagez de référencer des champs personnalisés dans un formulaire de profil, assurez-vous que ces champs ont été créés.
+
+## Ajout de champs et sélection des paramètres de champ dans les Profils
+
+Cette section vous guide à travers tous les paramètres de champs et explique comment ils affectent la façon dont vos profils fonctionnent. Comme pour les paramètres de profil en général, il n'est pas nécessaire d'en tenir compte à chaque utilisation.
+
+1. Cliquez sur **Ajouter champ**.
+2. **Nom du champ** : Choisissez le type d'enregistrement du champ désiré dans le menu déroulant **- select -**. Cela affichera Un menu déroulant secondaire affichera tous les champs disponibles pour ce type d'enregistrement. Choisissez le champ que vous souhaitez ajouter à votre profil.
+3. **Étiquette de champ** : Il s'agit de l'étiquette de champ qui s'affichera sur toutes les utilisations de votre profil. Il est initialisé avec l'étiquette de champ par défaut. Toutefois, les étiquettes de champs par défaut sont souvent déroutantes pour les utilisateurs de vos formulaires, vous pouvez donc les réécrire ici. Par exemple, le champ "Postal Code"  peut être renommé "Code postal" si vos utilisateurs sont plus familiers avec ce terme.
+4. **Obligatoire?** : Cochez cette case pour rendre le champ  obligatoire chaque fois que le Profil est utilisé. Ceci est particulièrement utile lorsque vous voulez vous assurer que certaines informations (par exemple, Prénom, Nom de famille, Email) sont toujours incluses dans une soumission de formulaire. (Ceci n'est pas pertinent pour les utilisations des vues de recherche [connues sous la forme de résultats de recherche).
+5. **Afficher uniquement?**: Cochez cette case pour permettre aux utilisateurs d'afficher ce champ, mais pas de le modifier. Si votre profil est utilisé pour afficher des résultats de recherche, les champs marqués View Only ne seront pas inclus. Ce paramètre n'est pas pertinent lorsqu'un Profil est utilisé uniquement pour collecter des informations.
+6. **Visibilité** : Si le Profil est utilisé pour un répertoire consultable, définissez la Visibilité de tous les champs que vous souhaitez inclure dans le formulaire de recherche dans "Pages publiques" ou "Pages publiques et Liste"s. Pour les champs qui seront utilisés sur les formulaires d'inscription, définissez Visibilité sur "Utilisateur et Admin uniquement". Cela garantit que les autres visiteurs du formulaire ne peuvent pas afficher les données de la base de données. Pour utiliser les champs des vues de recherche, vous devez définir la visibilité sur les "pages publique"s ou sur les "pages et les listes publiques". Le choix de l'une des options de la page publique affiche deux paramètres supplémentaires:
+      - **Recherchable?** : Ceci s'applique uniquement aux utilisations de répertoire consultables. Cochez la case si vous souhaitez inclure le champ dans le formulaire de recherche.
+      - **Colonne des résultats** : Ceci s'applique uniquement aux vues de recherche (connues sous le nom de résultats de recherche). Si choisi, le champ n'apparaîtra pas dans votre vue de recherche.
+
 Traduction en cours :
 
-#### **What to do upon duplicate match**
-
-This setting applies to Profiles that are used in public pages.
-It controls what happens when the contact data submitted from the
-Profile matches an existing contact record. You must choose one of these
-options. "Issue warning and do not save" is chosen by default. Matching
-in Profiles uses on the **Unsupervised** deduplication rule (see the
-*Deduping and Merging* chapter in the *Working with Your Data* section
-for more information about deduplication rules). Note that if there are
-multiple matching contacts, the first matching record is used.
-
-Here are the options and their effects how your form works:
-
--   "Issue warning and do not save" This option is ignored if the
-    Profile is embedded in an online contribution, membership sign-up or
-    event registration form. In these cases, a contact match results in
-    the transaction being linked to the matching contact. In other
-    cases, the user will receive a message that a record already exists
-    in the database, and they will be unable to submit the form.
--   "Update the matching contact" adds new information from the form to
-    the contact record and, if there are any form fields that are
-    already filled-out in the record, overwrites the existing record
-    fields. For example, if the form includes address fields, the text
-    that the user enters in the form will replace what was already in
-    the database address fields.
--   "Allow duplicate contact to be created" ignores any potential
-    matches and creates a new contact record for all submitted forms.
-    This means that all form submissions will be saved and no data will
-    be overwritten; however, it may produce a lot of duplicate records
-    that will need to be deduped later (see the *Deduping and Merging*
-    chapter in the *Working with Your Data* section).
-
-#### **Proximity search**
-
-This applies if you are using the Profile for a searchable
-directory; it adds a proximity search block to the search criteria. This
-block contains a field for start address, and another that allows the
-user to set a search radius (how far from the start address they want to
-search). Choose None if proximity search is not relevant to your
-directory, Optional if you want to offer proximity search to your users,
-and Required if you want to force the user to enter a start address and
-a search radius.
-
-#### **Enable mapping for this profile?**
-
-This applies only if you are using the Profile for a searchable
-directory; it adds a map to the search results.
-
-#### **Include profile edit links in search results?**
-
-This applies only if you are using the Profile for a searchable
-directory; it adds a link in the results listings to edit the Profile
-fields in the returned contact records. Only users with permission to
-edit the result contacts will see this link.
-
-#### **Include Drupal user account information links in search results?**
-
-This applies only if you are using the Profile for a searchable
-directory; it includes a link in the results to the resulting contacts'
-Drupal user account information (i.e., their My Account page). This link
-will be included for only result contacts who have a user account on
-your website.
-
-Once you've saved the profile settings, it's time to add fields to the
-profile. If you plan to reference custom fields in a profile form, make
-sure that those fields have already been created.
-
-## Adding fields and choosing field settings in Profiles
-
-This section walks you through all the field settings and explains how
-they affect how your Profiles work. As with the overall Profile
-settings, not all of them are necessary to consider for each use.
-
-1.  Click **Add Field**.
-2.  **Field Name**: Choose the record type where your desired field
-    appears from the **- select -** dropdown menu. This will bring up a
-    secondary dropdown menu listing all available fields for that record
-    type. Choose the field you want to add to your Profile.
-3.  **Field Label**: This is the field label that will display on all
-    uses of your Profile. It is prefilled with the default field label.
-    However, the default field labels are often confusing for users of
-    your forms, so you can rewrite them here. For example, the Postal
-    Code field can be renamed Zip Code if your audience is more familiar
-    with that term.
-4.  **Required?**: Check this box to make this required anytime the
-    Profile is used. This is most useful when you want to make sure that
-    certain information (e.g., First Name, Last Name, Email) is always
-    included in a form submission. (This is not relevant to Search Views
-    usages [known as Search Results in 4.1 and previous].)
-5.  **View Only?**: Check this box to allow users to view but not edit
-    this field. If your Profile is used to expose search results, fields
-    marked View Only will not be included. This setting is not relevant
-    when a Profile is being used only to collect information.
-6.  **Visibility**: If the Profile is being used for a searchable
-    directory, set the Visibility of any fields you want to include on
-    the search form to Public Pages or Public Pages and Listings. For
-    fields that will be used on sign-up forms, set Visibility to User
-    and User Admin only. This ensures that other visitors to the form
-    can't view any data from the database. To use fields for Search
-    Views, you must set Visibility to Public Pages or Public Pages and
-    Listings. Choosing either of the Public Page options pops up two
-    additional settings:
-    -   **Searchable?**: This applies only to searchable directory uses.
-        Check the box if you want to include the field in the search
-        form.
-    -   **Results Column?**: This applies only to Search Views (known as
-        Search Results in 4.1 and previous). Check it or the field will
-        not appear in your Search View.
-
-7.  **Field Pre Help** and **Field Post Help**: These fields allow you
-    to write text that appears in the user interface to guide people in
-    filling out forms. Field pre help appears inline. Field post help
-    will create a small speech bubble which when clicked appear in a
-    yello
+7.  **Field Pre Help** and **Field Post Help**: These fields allow you     to write text that appears in the user interface to guide people in     filling out forms. Field pre help appears inline. Field post help     will create a small speech bubble which when clicked appear in a     yello
 8.  **Order**: You can use this field to control the order in which
     fields display in the Profile. Lower numbers are displayed ahead of
     higher numbers.
