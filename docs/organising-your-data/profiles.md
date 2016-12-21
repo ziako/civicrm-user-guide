@@ -158,7 +158,6 @@ Cela s'applique uniquement si vous utilisez le profil d'un répertoire consultab
 
 Cela s'applique uniquement si vous utilisez le profil d'un répertoire consultable. Un lien sera inclus dans les résultats des informations de compte d'utilisateur Drupal des contacts résultants (c'est-à-dire leur page Mon compte). Ce lien sera inclus uniquement pour les contacts de résultat qui ont un compte d'utilisateur sur votre site Web.
 
-
 Une fois que vous avez enregistré les paramètres de profil, vous pouvez ajouter des champs au profil. Si vous envisagez de référencer des champs personnalisés dans un formulaire de profil, assurez-vous que ces champs ont été créés.
 
 ## Ajout de champs et sélection des paramètres de champ dans les Profils
@@ -169,214 +168,136 @@ Cette section vous guide à travers tous les paramètres de champs et explique c
 2. **Nom du champ** : Choisissez le type d'enregistrement du champ désiré dans le menu déroulant **- select -**. Cela affichera Un menu déroulant secondaire affichera tous les champs disponibles pour ce type d'enregistrement. Choisissez le champ que vous souhaitez ajouter à votre profil.
 3. **Étiquette de champ** : Il s'agit de l'étiquette de champ qui s'affichera sur toutes les utilisations de votre profil. Il est initialisé avec l'étiquette de champ par défaut. Toutefois, les étiquettes de champs par défaut sont souvent déroutantes pour les utilisateurs de vos formulaires, vous pouvez donc les réécrire ici. Par exemple, le champ "Postal Code"  peut être renommé "Code postal" si vos utilisateurs sont plus familiers avec ce terme.
 4. **Obligatoire?** : Cochez cette case pour rendre le champ  obligatoire chaque fois que le Profil est utilisé. Ceci est particulièrement utile lorsque vous voulez vous assurer que certaines informations (par exemple, Prénom, Nom de famille, Email) sont toujours incluses dans une soumission de formulaire. (Ceci n'est pas pertinent pour les utilisations des vues de recherche [connues sous la forme de résultats de recherche).
-5. **Afficher uniquement?**: Cochez cette case pour permettre aux utilisateurs d'afficher ce champ, mais pas de le modifier. Si votre profil est utilisé pour afficher des résultats de recherche, les champs marqués View Only ne seront pas inclus. Ce paramètre n'est pas pertinent lorsqu'un Profil est utilisé uniquement pour collecter des informations.
+5. **Afficher uniquement?** : Cochez cette case pour permettre aux utilisateurs d'afficher ce champ, mais pas de le modifier. Si votre profil est utilisé pour afficher des résultats de recherche, les champs marqués View Only ne seront pas inclus. Ce paramètre n'est pas pertinent lorsqu'un Profil est utilisé uniquement pour collecter des informations.
 6. **Visibilité** : Si le Profil est utilisé pour un répertoire consultable, définissez la Visibilité de tous les champs que vous souhaitez inclure dans le formulaire de recherche dans "Pages publiques" ou "Pages publiques et Liste"s. Pour les champs qui seront utilisés sur les formulaires d'inscription, définissez Visibilité sur "Utilisateur et Admin uniquement". Cela garantit que les autres visiteurs du formulaire ne peuvent pas afficher les données de la base de données. Pour utiliser les champs des vues de recherche, vous devez définir la visibilité sur les "pages publique"s ou sur les "pages et les listes publiques". Le choix de l'une des options de la page publique affiche deux paramètres supplémentaires:
-      - **Recherchable?** : Ceci s'applique uniquement aux utilisations de répertoire consultables. Cochez la case si vous souhaitez inclure le champ dans le formulaire de recherche.
-      - **Colonne des résultats** : Ceci s'applique uniquement aux vues de recherche (connues sous le nom de résultats de recherche). Si choisi, le champ n'apparaîtra pas dans votre vue de recherche.
+      - **Interrogeable?** : Ceci s'applique uniquement aux utilisations de répertoire consultables. Cochez la case si vous souhaitez inclure le champ dans le formulaire de recherche.
+      - **Colonne de résultat** : Ceci s'applique uniquement aux vues de recherche (connues sous le nom de résultats de recherche). Si choisi, le champ n'apparaîtra pas dans votre vue de recherche.
+7. **Aide avant et après le champ** : Ces champs vous permettent d'écrire du texte qui apparaît dans l'interface utilisateur pour guider les gens dans le remplissage des formulaires. La pré-aide de champ apparaît en ligne. 
+8. **Numéro d'ordre** : Vous pouvez utiliser ce champ pour contrôler l'ordre dans lequel les champs s'affichent dans le profil. Les nombres inférieurs sont affichés devant des nombres plus élevés.
+9. **Actif?** : Laissez cette case cochée pour vous assurer que le champ s'affiche lorsque le Profil est utilisé.
+10. Cliquez sur **Enregistrer et Nouvelle entrée** pour ajouter d'autres champs au Profil, ou **Enregistrer** si vous n'avez plus de champs à ajouter.
 
-Traduction en cours :
+## Gestion des profils
 
-7.  **Field Pre Help** and **Field Post Help**: These fields allow you     to write text that appears in the user interface to guide people in     filling out forms. Field pre help appears inline. Field post help     will create a small speech bubble which when clicked appear in a     yello
-8.  **Order**: You can use this field to control the order in which
-    fields display in the Profile. Lower numbers are displayed ahead of
-    higher numbers.
-9.  **Active?**: Leave this box checks to ensure that the field appears
-    when the Profile is used.
-10. Click **Save and New** to add more fields to the Profile, or
-    **Save** if you have no more fields to add.
+Tous vos profils sont disponibles pour l'affichage et l'édition dans **Administer> Personnaliser les données et les écrans> Profils**. Vous pouvez ajouter des champs et modifier les paramètres du champ (dans **Champs**) et modifier les paramètres du profil (dans **Paramètres**). Vous pouvez également voir comment vos profils apparaissent, obtenir des liens et intégrer le code pour vos profils et copier les profils à utiliser comme base pour créer d'autres profils (dans ** plus **).
 
-## Managing Profiles
+## Utilisation des profils
 
-All your profiles are available for viewing and editing at **Administer > Customize Data and Screens > Profiles**. You can add fields and edit
-field settings (at the **Fields** link) and change Profile settings (at
-**Settings**). You can also look at how your Profiles will appear, get
-links and embed code for your Profiles, and copy Profiles to use as a
-basis for building other Profiles (at **more**).
+Cette section contient des instructions spécifiques pour les différentes utilisations de profil décrits ci-dessus.
 
-## Using Profiles
+### Formulaires autonomes avec profils
 
-This section contains specific instructions for the different profile
-uses discussed above.
+Dans Drupal et Joomla! il y a deux façons d'utiliser des formulaires autonomes dès que vous avez créé votre Profil conformément aux instructions ci-dessus:
 
-### Standalone forms with Profiles
+- Utiliser la page créée automatiquement par CiviCRM pour contenir le profil. 
+     Allez au menu : **Administrater> Personnaliser les données et les écrans> Profils**. Cliquez sur le lien **plus** de votre profil et choisissez **Utiliser le mode de création de profil** dans le menu contextuel. Vous pouvez ensuite publier ce lien où vous le souhaitez: dans un courriel, sur un blog, etc.
+- Coller le code HTML du formulaire dans une page que vous avez construite sur votre site Web. 
+     Pour Obtenir le code HTML allez à  **Administer> Personnaliser les données et les écrans> Profils**.  Cliquez sur le lien **plus** de votre profil et choisissez **Fragment de formulaire HTML** dans le menu contextuel. Copiez le code qui apparaît sur l'écran suivant et collez-le où vous le souhaitez.
 
-There are two ways in Drupal and Joomla! to use standalone forms once
-you have created your Profile according to the instructions above:
-
--   Use the page created automatically by CiviCRM to hold the Profile.
-    Get the link to this page at **Administer > Customize Data and
-    Screens > Profiles**. Click the **more** link next to your Profile
-    and choose **Use Profile-Create Mode** from the pop-up menu. You can
-    then publish this link wherever you want: in an email, on a blog,
-    etc.
--   Paste the HTML code for the form in a page you've built on your
-    website. Get the code at **Administer > Customize Data and Screens > Profiles**. Click the **more** link next to your Profile and
-    choose **HTML Form Snippet** from the pop-up menu. Copy the code
-    that appears on the next screen and paste it wherever you want.
-
-In WordPress, there is an additional third way. When creating or editing
-a post, click on the CiviCRM button to insert a CiviCRM shortcode into
-the post.
+Dans WordPress, il ya une troisième voie supplémentaire. Lors de la création ou de la modification d'un message, cliquez sur le bouton CiviCRM pour insérer un code court CiviCRM dans le message.
 
 ![image](../img/2013-09-04_15-29-47_1.png)
 
-On the popup form, select Profile as the desired frontend element.
+Dans le formulaire contextuel, sélectionnez Profil comme élément frontal souhaité.
 
 ![image](../img/2013-09-04_15-15-35.png)
 
-Use the second select widget to specify the profile you would like to
-use. Finally, select the purpose of the form — create, edit or view —
-and click Insert Form.
+Utilisez le second widget de sélection pour spécifier le profil que vous souhaitez utiliser. Enfin, sélectionnez le but du formulaire (créer, modifier ou afficher) et cliquez sur Insérer un formulaire.
 
 ![image](../img/2013-09-04_15-16-45.png)
 
-### Multi-value fields in profiles
+### Champs de valeurs multiples dans les profils
 
-Multi-value custom field sets allow you to have more than one set of
-custom data per contact. They are handy for modelling data that repeats,
-for example, work experience data. You can expose these multiple value
-custom fields via profiles. In the screen shot below, we have created a
-profile that is used to collect name and work experience data. Notice
-that the multi-value custom data appears slightly differently in the
-profile to facilitate adding, editing and deleting multiple instances of
-these records.
+Les ensembles de champs personnalisés à plusieurs valeurs vous permettent d'avoir plusieurs jeux de données personnalisées par contact. Ils sont utiles pour modéliser des données qui se répètent, par exemple, des données d'expérience de travail. Vous pouvez afficher ces champs personnalisés à plusieurs valeurs via des profils. Dans la capture d'écran ci-dessous, nous avons créé un profil qui est utilisé pour collecter les données de nom et d'expérience de travail. Notez que les données personnalisées multi-valeurs apparaissent légèrement différemment dans le profil pour faciliter l'ajout, l'édition et la suppression de plusieurs instances de ces enregistrements.
 
 ![image](../img/multi-value-profile.png)
 
-### Making directories with Profiles
+### Création d'annuaires avec des profils
 
-To put a directory onto your website:
+Pour mettre un annuaire (ou une liste de contats) sur votre site Web :
 
-1.  Create your Profile as described above. Be sure to consider these
-    Advanced Settings, as they are especially helpful when using
-    profiles for directories.
+1. Créez votre profil comme décrit ci-dessus. Dans le profil, allez dans l'onglet des paramètres avancés. Ces paramètres sont particulièrement utiles lors de l'utilisation de profils pour les répertoires.
 
- -   **Enable mapping**: a really cool feature available in CiviCRM is
-     giving visitors the ability to map contacts in your directory
-     using Google or Yahoo! maps. They can then obtain directions to a
-     record's address dynamically. To use this feature, you must have
-    already enabled mapping under **Administer > System Settings >
-     Mapping and Geocoding**.
- -   **Include profile edit links:** check this box if you want to
-     include a link in the directory listings to allow people to edit
-     data in the profile's fields. Only users with permission to edit
-     the contact will see this link. More often than not you will not
-     need to enable this setting, as it is not commonly used in the
-     membership directory scenario.
- -   **Include Drupal user information** (Drupal only): check this box
-     if you want to include a link in the directory listings to view a
-     contacts' Drupal user account information (e.g. their My Account
-     page). This link will only be included for contacts who have a
-     user account on your website.
+- **Autoriser la géolocalisation pour ce profil ?** : Cette fonctionnalité, vraiment cool, disponible dans CiviCRM donne aux visiteurs la possibilité de mapper les contacts de votre liste en utilisant les cartes Google ou Yahoo!. Ils peuvent alors obtenir des plans et itinéraires vers l'adresse d'un enregistrement de façon dynamique. Pour utiliser cette fonctionnalité, vous devez avoir activé le mappage sous **Administer> Paramètres système> Mappage et géocodage**.
 
+- ** Inclure les liens d'édition de profil dans les résultats de recherche**  : Cochez cette case si vous souhaitez inclure un lien dans les listes pour permettre aux utilisateurs d'éditer des données dans les champs du profil. Seuls les utilisateurs ayant la permission de modifier le contact verront ce lien. Le plus souvent, vous n'aurez pas besoin d'activer ce paramètre, car il n'est pas couramment utilisé comme scénario.
+ 
+- **Inclure les liens d'information sur le compte utilisateur (Drupal ou Joomla) dans les résultats de recherche ?** : Cochez cette case si vous souhaitez inclure un lien dans les listes de contacts pour afficher les informations de compte d'utilisateur d'un contact (par exemple, leur page "Mon compte"). Ce lien ne sera inclus que pour les contacts disposant d'un compte d'utilisateur sur votre site Web.
+ 
     ![profile_adv_settings](../img/CiviCRM-CapturingExposing-buildprofile-profile_adv_settings-en.jpg "profile_adv_settings")
 
-Now it's time to include the fields that will make up the directory. For
-profiles used as directories you have total control over which fields:
+Vous pouvez alors inclure les champs qui composeront la liste. Pour les profils utilisés comme listes, vous disposez d'un contrôle total sur les champs suivants qui:
 
--   are searchable in the directory
--   appear in the results columns of your search
--   appear in the record detail View page.
+- sont consultables dans le répertoire
+- apparaissent dans les colonnes des résultats de votre recherche
+- apparaissent dans la page Détails de l'enregistrement.
 
-The important options you must configure in the fields for directory
-purposes are shown below:
+Les options importantes que vous devez configurer dans les champs à des fins d'annuaire sont indiquées ci-dessous:
 
 ![directory_fields](../img/CiviCRM-CapturingExposing-buildprofile-directory_fields-en.jpg "directory_fields")
 
--   Visibility for all fields in your directory must be set to **Public
-    Pages** or **Public Pages and Listings**. The difference between these
-    two options is that those configured as Public Pages and Listings
-    will have the field in detail view hot-linked, enabling the user to
-    generate a follow-up search for other records which also have that
-    same field value. For example, you might set City to Public Pages
-    and Listings. After the user conducts a search and views the details
-    for a record they can click on the city value and run an immediate
-    search. The search will run as if they had selected that city in the
-    profile search screen.
--   The **Searchable** option determines if visitors to your directory
-    can search the directory by this field. In common directory uses,
-    almost every field is set to searchable. The more fields you set to
-    searchable, the more power you provide to your visitors to find the
-    information they need.
--   The **Results Column** check-box determines if the field is
-    displayed as a column in the list of results. For example, your
-    directory may have a field for website, and if you set the website
-    field to appear in the results column, it will appear in the results
-    table. If you do not check the results column the field will still
-    appear in the view mode for a record. In other words, checking
-    Results Column? will allow the field to appear in the results column
-    AND in detail view mode.
+- Les champs visibles de votre liste doivent être définis sur **Pages publiques** ou **Pages publiques et listes**. La différence entre ces deux options est que celles configurées en tant que Pages Publiques et Listes auront le champ en vue détaillée directement lié. ce qui  permettra à l'utilisateur de générer une recherche de suivi pour d'autres enregistrements qui ont également la même valeur de champ. Par exemple, vous pouvez définir "Ville" comme "Pages publiques et listes". Lorsque l'utilisateur effectue une recherche et affiche les détails d'un enregistrement, il peut cliquer sur la valeur de la ville et effectuer une recherche immédiate. La recherche s'exécute comme s'ils avaient sélectionné cette ville dans l'écran de recherche de profil.
+- L'option **Interrogeable** détermine si les visiteurs de votre liste peuvent rechercher par ce champ. Dans les utilisations courantes d'une liste, presque tous les champs sont définis pour être recherchés. Plus vous définissez de champs de recherche, plus vous fournissez de puissance à vos visiteurs pour trouver les informations dont ils ont besoin.
+- La case **Colonne des résultats** détermine si le champ est affiché sous la forme d'une colonne dans la liste des résultats. Par exemple, votre liste peut avoir un champ pour le site Web. Si vous définissez le champ du site Web pour apparaître dans la colonne des résultats, il apparaîtra bien dans le tableau des résultats. Si vous ne cochez pas la colonne des résultats, le champ apparaît toujours en mode d'affichage dans un enregistrement. En d'autres termes, la case "Colonne de résultats?" permet au champ d'apparaître dans la colonne de résultats ET en mode d'affichage de détail.
 
-The image below shows the search mode for our membership directory.
+L'image ci-dessous montre le mode de recherche pour notre liste d'adhésion.
 
 ![Member Directory Search
 Form](../img/CiviCRM-CapturingExposing-buildprofile-MemberDirSearchForm-en.png "MemberDirSearchForm")
 
-Once you hit search you get this result set. Profile fields that have
-Results Column checked are shown in the listing.
+Dès que vous avez lancé la recherche, vous obtenez ce jeu de résultats. Les champs de profil dont les Colonnes de Résultats ont été cochés sont affichés dans la liste..
 
 ![MemberDirResults](../img/CiviCRM-CapturingExposing-buildprofile-MemberDirResults-en.png "MemberDirResults")
 
-Clicking the view link gives you more details about the constituent,
-showing all profile fields.
+En cliquant sur le lien de vue, vous obtiendrez plus de détails sur le composant, affichant tous les champs du profil.
 
 ![Profile Member
 View](../img/CiviCRM-CapturingExposing-buildprofile-MemberView-en.png "MemberView")
 
-As we've seen, building a directory for your website can provide a
-valuable tool for your constituents.
+Comme nous l'avons vu, la construction d'une liste pour votre site Web peut fournir de précieux outils à vos utilisateurs.
 
-### **Linking to your directory**
+### **Lien vers votre liste**
 
-You have several options to link to your directory:
+Vous avez plusieurs options pour créer un lien vers votre liste et l'afficher sur votre site:
 
--   **Drupal:** link to the directory search page using this path:
-    http://www.myorganization.org/civicrm/profile?reset=1&gid=N where N
-    is the ID of the profile directory.
-    -   If you add **&force=1** to the above URL it will directly show a
-        result set.
-    -   If you add **&force=1&search=0**it will hide the search criteria
-        and directly show the result set.
--   **Joomla!:** use the Menu Manager to create a front-end menu item.
-    After creating a new menu item, select CiviCRM and choose the
-    profile search option. In the parameters pane, choose the specific
-    profile to use.
--   **Wordpress:** this feature is not yet implemented.
--   You can also prepopulate any search criteria in the URL. These
-    options are described here:
+- **Drupal** : pour créer un lien vers la page de recherche d'annuaire vous pouvez utiliser ce chemin: http://www.myorganization.org/civicrm/profile?reset=1&gid=N où N est l'ID de la liste de profil.
+    - Si vous ajoutez **& force = 1** à l'URL ci-dessus, vous affichez directement le résultat.
+    - Si vous ajoutez **& force = 1 & search = 0**, vous masquez les critères de recherche et affichez directement le résultat.
+ - ** Joomla!: ** utilisez le Gestionnaire de menus pour créer un élément de menu frontal. Après avoir créé un nouvel élément de menu, sélectionnez CiviCRM et choisissez l'option de recherche de profil. Dans le volet Paramètres, choisissez le profil spécifique à utiliser.
+ - ** Wordpress: ** cette fonctionnalité n'est pas encore implémentée.
+- Vous pouvez également préremplir des critères de recherche dans l'URL. Ces options sont décrites ici:
     [http://wiki.civicrm.org/confluence/display/CRMDOC/Linking+Profiles](http://wiki.civicrm.org/confluence/display/CRMDOC/Linking+Profiles)
+    
+### Mise à jour de plusieurs enregistrements en même temps
 
-### Updating multiple records at the same time
+Vous pouvez **Mettre à jour plusieurs adhésions** à partir des résultats d'une recherche **Trouver des adhésions** ou des résultats de recherche avancés lorsque **Afficher les résultats en tant que** est défini sur **Membres**. Vous aurez besoin d'un profil contenant uniquement les champs d'adhésion concernés.
 
-You can **Update multiple memberships** from the results of a **Find memberships** search or from the advanced search results when **Display results as** is set to **Memberships**. You will need a profile that contains only membership fields.
+De même, vous avez besoin de contacts, de contributions, d'activités ou de résultats de recherche de participants et de profils contenant uniquement des contacts, des contributions, des activités ou seulement des champs de participants pour mettre à jour plusieurs contacts, plusieurs contributions, plusieurs activités ou plusieurs participants respectivement.
 
-Similarly you need contact, contribution, activity or participant search results and profiles containing only contact, only contribution, only activity or only participant fields to update multiple contacts, multiple contributions, muliple activities or multiple participants respectively.
-
-You can update up to 100 records at one time using the **Update multiple ...**
-functions.
-
+Vous pouvez mettre à jour jusqu'à 100 enregistrements en même temps en utilisant les fonctions **Update multiple ...**.
 ____
-**Example:**
+**Exemple:**
 
-You have a custom contact field called "Diving Skill Level" and you have just run a Intermediate Diving course.  You want to set the "Diving Skill level" to "Intermediate" for all people who attended the course.
+Vous avez un champ de contact personnalisé appelé «Niveau de compétence en plongée» et vous venez d'exécuter un cours de plongée intermédiaire. Vous souhaitez définir le niveau de compétence «Plongée» à «Intermédiaire» pour toutes les personnes qui ont suivi le cours.
 
-Go to the Advanced Search screen and set the appropriate filters in the Event accordion. Leave **Display Results As** set to **Contacts** as you want to update a contact custom field. CLick on **Search**.
+Accédez à l'écran **Recherche avancée** et définissez les filtres appropriés dans l'accordéon Evenement. Laissez **Afficher les résultats comme** défini sur **Contacts** comme vous souhaitez mettre à jour un champ personnalisé de contact. Cliquer sur **Rechercher**.
 
-You will go to the "Update multiple contacts" screen.
+Vous accédez à l'écran "Mettre à jour plusieurs contacts".
 
   ![Update Multiple Records](../img/update-multiple-records.PNG)
 
-From the drop-down list, choose the Profile you want to use and click **Continue**.
+Dans la liste déroulante, choisissez le Profil que vous souhaitez utiliser et cliquez sur **Continuer**.
 
-The next screen will contain a grid. Each row shows the contact's name and the fields in your profile. You should update the field values for each contact as needed.
+L'écran suivant contiens une grille. Chaque ligne indique le nom du contact et les champs de votre profil. Vous devez mettre à jour les valeurs de champ pour chaque contact si besoin.
 
 ![Update Multiple Records Profile View](../img/update-multiple-records-profile.PNG)
 
+Pour définir si un champ à la même valeur pour toutes les lignes, entrez cette valeur pour le premier contact, puis cliquez sur l'icône Copier (l'image de deux documents qui est à côté de chaque titre de colonne). La valeur sera automatiquement copiée dans tous les enregistrements affichés.
 
-To set a field to the same value for all rows, enter that value for the first contact and then click the Copy icon (the image of two documents that is next to each column title). The value will automatically be copied into all the records displayed.
-
-Click **Update Contacts** to save all your changes or **Cancel** to cancel the changes.
+Cliquez sur **Mettre à jour les contacts** pour enregistrer vos changements ou sur **Annuler** pour annuler les modifications.
  ____
+ 
+ Traduction en cours
  
 **Batch update limitations**
 
