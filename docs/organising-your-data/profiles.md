@@ -242,8 +242,7 @@ Les options importantes que vous devez configurer dans les champs à des fins d'
 
 L'image ci-dessous montre le mode de recherche pour notre liste d'adhésion.
 
-![Member Directory Search
-Form](../img/CiviCRM-CapturingExposing-buildprofile-MemberDirSearchForm-en.png "MemberDirSearchForm")
+![Member Directory SearchForm](../img/CiviCRM-CapturingExposing-buildprofile-MemberDirSearchForm-en.png "MemberDirSearchForm")
 
 Dès que vous avez lancé la recherche, vous obtenez ce jeu de résultats. Les champs de profil dont les Colonnes de Résultats ont été cochés sont affichés dans la liste..
 
@@ -251,8 +250,7 @@ Dès que vous avez lancé la recherche, vous obtenez ce jeu de résultats. Les c
 
 En cliquant sur le lien de vue, vous obtiendrez plus de détails sur le composant, affichant tous les champs du profil.
 
-![Profile Member
-View](../img/CiviCRM-CapturingExposing-buildprofile-MemberView-en.png "MemberView")
+![Profile MemberView](../img/CiviCRM-CapturingExposing-buildprofile-MemberView-en.png "MemberView")
 
 Comme nous l'avons vu, la construction d'une liste pour votre site Web peut fournir de précieux outils à vos utilisateurs.
 
@@ -263,8 +261,8 @@ Vous avez plusieurs options pour créer un lien vers votre liste et l'afficher s
 - **Drupal** : pour créer un lien vers la page de recherche d'annuaire vous pouvez utiliser ce chemin: http://www.myorganization.org/civicrm/profile?reset=1&gid=N où N est l'ID de la liste de profil.
     - Si vous ajoutez **& force = 1** à l'URL ci-dessus, vous affichez directement le résultat.
     - Si vous ajoutez **& force = 1 & search = 0**, vous masquez les critères de recherche et affichez directement le résultat.
- - ** Joomla!: ** utilisez le Gestionnaire de menus pour créer un élément de menu frontal. Après avoir créé un nouvel élément de menu, sélectionnez CiviCRM et choisissez l'option de recherche de profil. Dans le volet Paramètres, choisissez le profil spécifique à utiliser.
- - ** Wordpress: ** cette fonctionnalité n'est pas encore implémentée.
+ - **Joomla!:**  utilisez le Gestionnaire de menus pour créer un élément de menu frontal. Après avoir créé un nouvel élément de menu, sélectionnez CiviCRM et choisissez l'option de recherche de profil. Dans le volet Paramètres, choisissez le profil spécifique à utiliser.
+ - **Wordpress :** cette fonctionnalité n'est pas encore implémentée.
 - Vous pouvez également préremplir des critères de recherche dans l'URL. Ces options sont décrites ici:
     [http://wiki.civicrm.org/confluence/display/CRMDOC/Linking+Profiles](http://wiki.civicrm.org/confluence/display/CRMDOC/Linking+Profiles)
     
@@ -275,7 +273,7 @@ Vous pouvez **Mettre à jour plusieurs adhésions** à partir des résultats d'u
 De même, vous avez besoin de contacts, de contributions, d'activités ou de résultats de recherche de participants et de profils contenant uniquement des contacts, des contributions, des activités ou seulement des champs de participants pour mettre à jour plusieurs contacts, plusieurs contributions, plusieurs activités ou plusieurs participants respectivement.
 
 Vous pouvez mettre à jour jusqu'à 100 enregistrements en même temps en utilisant les fonctions **Update multiple ...**.
-____
+
 **Exemple:**
 
 Vous avez un champ de contact personnalisé appelé «Niveau de compétence en plongée» et vous venez d'exécuter un cours de plongée intermédiaire. Vous souhaitez définir le niveau de compétence «Plongée» à «Intermédiaire» pour toutes les personnes qui ont suivi le cours.
@@ -295,126 +293,71 @@ L'écran suivant contiens une grille. Chaque ligne indique le nom du contact et 
 Pour définir si un champ à la même valeur pour toutes les lignes, entrez cette valeur pour le premier contact, puis cliquez sur l'icône Copier (l'image de deux documents qui est à côté de chaque titre de colonne). La valeur sera automatiquement copiée dans tous les enregistrements affichés.
 
 Cliquez sur **Mettre à jour les contacts** pour enregistrer vos changements ou sur **Annuler** pour annuler les modifications.
- ____
  
- Traduction en cours
- 
-**Batch update limitations**
+**Limites de mise à jour des lots**
 
--   You cannot perform batch updates for different types of contacts
-    (say, individuals and organisations) at the same time.
--   If you wish to update participant fields, you must do the update
-    from a Find Participants search (and only include participant fields
-    in your profile).
--   You can perform a batch update for up to 100 records at a time. If you find that updating a batch of 100 records is taking a long time, it may be quicker to update 4 batches of 25 records rather than one batch of 100 records.
+-   Vous ne pouvez pas effectuer de mises à jour par lots pour différents types de contacts (par exemple, individus et organisations) en même temps.
+-   Si vous souhaitez mettre à jour les champs des participants, vous devez effectuer la mise à jour à partir de la recherche Trouver les participants (et inclure uniquement les champs participant à votre profil).
+-   Vous pouvez effectuer une mise à jour par lot pour un maximum de 100 enregistrements à la fois. Si vous constatez que la mise à jour d'un lot de 100 enregistrements prend beaucoup de temps, il peut être plus rapide de mettre à jour 4 lots de 25 enregistrements plutôt qu'un lot de 100 enregistrements.
 
-### View/edit user account /new user registration with Profiles
+### Afficher/Modifier un compte d'utilisateur/un nouvel enregistrement d'utilisateur avec Profils
 
-For websites that have logged-in users, you may want to allow people to
-provide additional information as they register for an account on your
-website. Similarly, when people fill out a profile form you may want to
-encourage (or force) them to sign up for a user account.
+Pour les sites Web ayant des utilisateurs connectés, vous pouvez permettre aux utilisateurs de fournir des informations supplémentaires lorsqu'ils créent un compte sur votre site Web. De même, lorsque les gens remplissent un formulaire de profil, vous pouvez les encourager à créer à un compte d'utilisateur.
 
-To include a profile form during the user registration process:
+Pour inclure un formulaire de profil lors du processus d'inscription de l'utilisateur:
 
-1.  Create a profile that is used for User Registration:
+1.  Créez un profil utilisé pour l'enregistrement d'utilisateur: 
 
     ![addprofile_usedfor_reg](../img/CiviCRM-CapturingExposing-buildprofile-addprofile_usedfor_reg-en.jpg "addprofile_usedfor_reg")
-2.  Add the fields you want people to fill out as they register, using
-    the same process described above. Make sure the field visibility is
-    set to Public User Pages.
+2.  Ajoutez les champs que vous souhaitez que les gens remplissent au fur et à mesure qu'ils s'inscrivent, en utilisant le même processus décrit ci-dessus. Assurez-vous que la visibilité est définie sur Pages publiques.    
 
-**Including profiles in Drupal's My Account screen**
+**Inclure des profils dans l'écran Drupal "Mon compte"**
 
-You can embed one or more CiviCRM profiles directly into Drupal's My
-Account screen. This makes it easy for logged-in users to review and
-update their information whenever they visit their My Account page.
+Vous pouvez intégrer un ou plusieurs profils CiviCRM directement dans l'écran Mon compte de Drupal. Cela permet aux utilisateurs connectés d'examiner et de mettre à jour leurs informations chaque fois qu'ils visitent leur page Mon compte.
 
-To create a profile for this purpose:
+Pour créer un profil à cette fin:
 
-1.  Create a new profile, or navigate to an existing profile and click
-    Settings.
-2.  Select View/Edit User Account in Used For.
-3.  Click Save.
-4.  Add the fields you want people to be able to edit from their Drupal
-    My Account page.
+1.  Créez un nouveau profil ou accédez à un profil existant, puis cliquez sur Paramètres.
+2.  Sélectionnez View / Edit User Account in Used For.
+3.  Cliquez sur Save.
+4.  Ajoutez les champs que vous souhaitez pour que les utilisateurs puissent modifier "Mon compte" à partir de leur page Drupal .
 
-Note: the profile must include only fields related to the Individual
-contact type.
+Remarque: le profil doit inclure uniquement des champs relatifs au type de contact Individuel.
 
-**New account creation during profile sign-up**
+**Nouvelle création de compte lors de l'inscription de profil**
 
-If you want your constituents to create a Drupal or Joomla! account when
-filling out a profile, you can enable this with the "User account
-registration option" under **Customize Data and Screens > Profiles**  click **Settings** against a profile. Anonymous (not-logged-in) users will then be invited (or required) to create an account when they visit the profile. Logged-in users will just see the
-profile fields.
+Si vous voulez que les visiteurs créent un compte Drupal ou Joomla! lors du remplissage d'un profil, vous pouvez activer cette option avec l'option "Enregistrement de compte d'utilisateur" sous **Personnaliser les données et les écrans>Profils**  Cliquez sur **Paramètres** dans un profil. Les utilisateurs anonymes (non connectés) seront invités (ou obligés) de créer un compte lorsqu'ils visiteront le profil. Les utilisateurs connectés verront simplement les champs du profil.
 
-![Profile user registration
-options](../img/CiviCRM-CapturingExposing-buildprofile-CMS_user_reg-en.png "CMS_user_reg")
+![Profile user registration options](../img/CiviCRM-CapturingExposing-buildprofile-CMS_user_reg-en.png "CMS_user_reg")
 
-You must include a Primary Email Address field in the profile for this
-feature to function properly. This feature also works when the profile
-is embedded in an online contribution page or event registration page.
-Hence you can invite or force anonymous visitors to sign-up for an
-account when they register for an event.
+Vous devez inclure un champ "Adresse e-mail principale" dans le profil pour que cette fonctionalité agisse correctement. C'est également vrai lorsque le profil est incorporé dans une page de contribution en ligne ou une page d'enregistrement d'événement. Par conséquent, vous pouvez inviter ou forcer les visiteurs anonymes à créer un compte lorsqu'ils s'inscrivent à un événement.
 
-### Including Profiles in forms in CiviCRM components
+### Inclure un profil dans les formulaires des composants CiviCRM
 
-Often you will want to define certain fields for inclusion in event
-registration and contribution pages. The only significant difference is
-that you can include fields in your profile that are specific to
-participant records (for event registration forms) and contributions
-(for contribution pages). Read about including Profiles in contribution
-pages, event registration pages, and membership sign-up pages in the
-*Set-up* chapter of *Contributions*, *Events*, and *Memberships.*
+Vous pouvez aussi définir certains champs  à inclure dans l'enregistrement des événements et les pages de contribution. La seule différence importante est que vous pouvez inclure dans votre profil des champs spécifiques aux enregistrements des participants (pour les formulaires d'inscription à l'événement) et aux contributions (pour les pages de contribution). Vous trouverez des informations sur les profils dans les pages de contribution, les pages d'inscription d'événements et les pages d'inscription des membres dans le chapitre  *Paramétrage* de *Contributions*, *Événements* et *Adhésions* .
 
-Other sources of information about Profiles
+Autres sources d'information sur les profils
 -------------------------------------------
 
-Read more about Profiles in the following chapters:
+-   Dans le chapitre *Personnalisation de l'interface utilisateur* de *Configuration initiale* 
+-   Dans le chapitre *Paramétrage* de *Email*
+-   Dans le chapitre *Paramétrage* de *Contributions* 
+-   Dans le chapitre *Paramétrage* de *Evenements* 
+-   Dans le chapitre *Paramétrage* de *Adhésions* 
 
--   In the *Customizing the user interface* chapter of *Intitial Set-up*
--   In the *Set-up* chapter of *Email*
--   In the *Set-up* chapter of *Contributions*
--   In the *Set-up* chapter of *Events*
--   In the *Set-up* chapter of *Memberships*
-
-Alternatives to Profiles
+Alternatives aux profils
 ------------------------
 
-As you have seen, profiles can be put to a lot of different uses. It is
-worth bearing in mind that there are alternative approaches for many of
-these use cases. The alternatives available to you depend on the CMS
-that you are using and your skill set, and have advantages and
-disadvantages We've listed a few of the common ones below for you to
-investigate.
+Comme vous pouvez le constater les profils peuvent être utilisés pour de nombreuses utilisations différentes. Il convient de garder à l'esprit qu'il existe d'autres approches pour bon nombre de cas d'utilisation. Les solutions de rechange dont vous disposez dépendent du CMS (Drupal, Joomla, Wordpress) que vous utilisez et de vos compétences. Chacun présente des avantages et des inconvénients. Nous avons répertorié quelques-uns ci-dessous pour que vous puissiez vous interroger.
+As you have seen, profiles can be put to a lot of different uses. It is worth bearing in mind that there are alternative approaches for many of these use cases. The alternatives available to you depend on the CMS that you are using and your skill set, and have advantages and disadvantages We've listed a few of the common ones below for you to investigate.
 
-### Drupal specific alternatives
+### Alternatives spécifiques à Drupal
 
--   The Drupal Views module can be used to make sophisticated displays
-    of CiviCRM data. For example you might want to display a list of
-    members on your public website using Views.
--   Drupal Webform-Integration is the most powerful form-builder for
-    CiviCRM and includes many features missing from profiles, such as
-    the ability to work with multiple contacts, events, memberships, and
-    relationships, and offers greater flexibility in how forms are
-    displayed, offering pagination, draft-saving, advanced spam-control,
-    and conditional fields. For more information see the Drupal
-    Integration chapter
-    or https://drupal.org/project/webform_civicrm](https://drupal.org/project/webform_civicrm).
--   [](https://drupal.org/project/webform_civicrm)You can add fields
-    directly to Drupal user accounts without using an embedded profile.
-    These fields won't be available in CiviCRM but they will be more
-    available in Drupal, so depending on why you are collecting this
-    information, that may be appropriate for you.
+-   Le module Drupal Views peut être utilisé pour réaliser des affichages sophistiqués de données CiviCRM. Par exemple, vous pouvez afficher une liste de membres sur votre site public à l'aide de Views.
+-   Le module Drupal Webform-Integration est le plus puissant constructeur de formulaire pour CiviCRM et comprend de nombreuses fonctionnalités manquantes dans les profils, comme la capacité de travailler avec plusieurs contacts, événements, appartenances et relations, et offre une plus grande flexibilité dans la façon dont les formulaires sont affichés, offrant la pagination , Le mode économique, le contrôle des spams avancé, et les champs conditionnels. Pour plus d'informations, consultez le chapitre Intégration Drupal ou https://drupal.org/project/webform_civicrm](https://drupal.org/project/webform_civicrm).
+-   [](https://drupal.org/project/webform_civicrm) Vous pouvez ajouter des champs directement aux comptes d'utilisateurs Drupal sans utiliser de profil intégré. Ces champs ne seront pas disponibles dans CiviCRM mais ils seront disponibles dans Drupal. Donc selon la raison pour laquelle vous collectez ces informations, cela peut vous convenir.
 
+### L'API Civicrm
 
+Avec quelques compétences de codage de base (si vous avez envie et quelques compétences techniques, vous pouvez être en mesure de maitriser en un ou deux jours), vous pouvez utiliser l'API pour afficher de façon flexible les données sur votre site Web. Pour une introduction à l'utilisation de l'API : voir la * Documentation du développeur wiki * [(http://wiki.civicrm.org/confluence/display/CRMDOC/Develop](http://wiki.civicrm.org/confluence/display/CRMDOC/Develop)) 
 
-### The API
-
-With some basic coding skills (which if you are keen and reasonably
-technically minded you might be able to pick up in a day or so) you
-could use the API to flexibly display data on your website. See the
-*Developer Documentation wiki*
-[(http://wiki.civicrm.org/confluence/display/CRMDOC/Develop](http://wiki.civicrm.org/confluence/display/CRMDOC/Develop))
-for an introduction to using the API.
