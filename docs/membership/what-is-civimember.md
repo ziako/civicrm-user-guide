@@ -1,53 +1,34 @@
-What is CiviMember
+Qu'est-ce que CiviMember
 ==================
 
-CiviMember is the CiviCRM component that provides functionality to
-support and automate the management of memberships. CiviMember allows
-you to:
+CiviMember est un composant de CiviCRM qui offre des fonctionnalités pour gérer et automatiser la gestion des adhésions. CiviMember vous permet de:
 
--   define membership types and pricing schemes that meet your needs
--   create self-service options for online membership sign-up and
-    renewal, utilising CiviContribute
--   manage memberships manually through the administrative interface
--   create and schedule automated messages to welcome new members,
-    remind about upcoming renewal, etc.
--   track and report on your contacts through the membership cycle 
--   grant additional website privileges for members.
+- définir les types d'adhésion et les types de tarification qui répondent à vos besoins
+- créer des options en libre-service pour l'inscription en ligne et le renouvellement, en utilisant CiviContribute
+- gérer les adhésions manuellement via l'interface d'administration
+- créer et programmer des messages automatisés pour accueillir de nouveaux membres, rappeler le prochain renouvellement, etc.
+- suivre et signaler vos contacts par le cycle d'adhésion
+- accorder des privilèges supplémentaires aux membres de votre site Web.
 
-The chapters in this section take you through everything you need to
-know in order to get the most from CiviMember.
+Les chapitres de cette section vous indiquent tout ce que vous devez savoir pour tirer le meilleur parti de CiviMember.
 
-If you are new to CiviMember and planning to use it for your membership
-management it is a good idea to review this entire section whilst you
-are considering your organisation's membership scheme and working out
-how best to model it within CiviCRM. CiviMember provides a high degree
-of flexibility, enabling you to configure it to meet most requirements.
+Si vous débutez avec CiviMember et que vous prévoyez de l'utiliser pour votre gestion d'adhésion, il est judicieux de lire au préalable toute cette section pendant que vous envisagez le système d'adhésion de votre organisation et de déterminer la meilleure façon de le modéliser au sein de CiviCRM. CiviMember offre un haut degré de flexibilité, vous permettant de le configurer pour répondre à la plupart des vos exigences.
 
-Adopting a system like CiviCRM will normally require some changes in
-working practices, so it is important to work closely with the people
-within your organisation who will have day-to-day responsibility for
-managing memberships using CiviCRM as you develop your plans.
+L'adoption d'un système comme CiviCRM nécessitera normalement certains changements dans les pratiques de travail. Il est donc important de travailler en étroite collaboration avec les personnes, au sein de votre organisation, qui auront la responsabilité quotidienne de la gestion des adhésions en utilisant CiviCRM.
 
-Memberships can run from a day to a lifetime, they be free or paid, and
-have simple or complex pricing structures. They can be set up to
-auto-renew where a compatible payment processor is enabled.
+Les adhésions peuvent fonctionner d'une journée à une vie, elles peuvent être gratuites ou payantes, et ont des structures de tarifs simples ou complexes. Elles peuvent être configureés pour être renouvelées automatiquement en ligne lorsqu'un processeur de paiement compatible est activé.
 
-Memberships for any given contact are visible on the contact's summary
-screen and on the membership dashboard. They can be searched for through
-the Membership Search or Advanced Search, and CiviMember provides four
-membership reports, each of which can be customised to better meet your
-specific needs.
+Les adhésions pour un contact donné sont visibles sur l'écran de synthèse du contact et sur le tableau de bord des membres. Elles peuvent être recherchées dans le cadre de la recherche d'adhésion ou de la recherche avancée. CiviMember fournit en standard quatre rapports d'adhésion, chacun pouvant être personnalisé pour mieux répondre à vos besoins spécifiques.
 
-Conceptually, members are simply contacts in your CiviCRM database with
-one or more memberships. The contact may be an individual, a household,
-an organisation, or some other contact sub-type, but it is always a
-contact to which a membership is applied.
+Par définition, les membres sont simplement des contacts dans votre base de données CiviCRM avec une ou plusieurs adhésions. Le contact peut être un individu, un ménage, une organisation ou un autre sous-type de contact, mais c'est toujours un contact auquel une adhésion est appliquée.
 
-Scenario: Driving membership forward
+
+Scénario: Gérer des adhésions complexes
 ------------------------------------
 
-The Atlantic Region Public Transit Association (ARPTA) has a complex
-requirement with four membership categories:
+L'Association de transport en commun de l'Atlantique (ARPTA) a une exigence particulière avec quatre catégories d'adhésions:
+
+Traduction en cours.....
 
 -   **Regular Members:** Public transit systems. There are three tiered
     levels within this category, based on the size of the system.
