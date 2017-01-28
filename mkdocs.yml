@@ -44,7 +44,7 @@ pages:
     - "Activités": 'organising-your-data/activities.md'
     - 'Relationships': 'organising-your-data/relationships.md'
     - "Créer des champs personnalisés": 'organising-your-data/creating-custom-fields.md'
-    - 'Profiles': 'organising-your-data/profiles.md'
+    - "Les Profils": 'organising-your-data/profiles.md'
 - Common workflows:
     - 'Importing Data into CiviCRM': 'common-workflows/importing-data-into-civicrm.md'
     - 'Exporting Your Contacts': 'common-workflows/exporting-your-contacts.md'
