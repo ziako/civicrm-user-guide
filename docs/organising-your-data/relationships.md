@@ -10,110 +10,51 @@ Creating relationships between contacts
 
 ![image](../img/4.5%20Add%20Relationship.png)
 
-1.  Navigate to one of the records that you want to relate.
-2.  Click on **Add Relationship** from the **Actions** button on the
-    contact summary, or from the Relationships tab
-3.  Select the Relationship Type. In this case it would be either "Child
-    of" or "Parent of".
-4.  Begin to type the last name of the related person(s). If you
-    discover that a contact you want to connect is not yet in the
-    database, you can create a new contact from this screen.
-5.  Optionally enter further information, which includes Start Date and
-    End Date (in case the relationship is time limited), Description and
-    Notes. There are also two permission-related options, which allow
-    users of the database to edit this record. Finally there is an
-    Enabled box to indicate that the relationship is active, which is
-    checked by default.
-6.  When you have made the changes you want, click **Save
-    Relationship**.
+1. Accédez à l'un des enregistrements que vous souhaitez relier.
+2. Cliquez sur **Ajouter une relation** dans le bouton **Actions** du résumé de contact ou dans l'onglet Relations
+3. Sélectionnez le type de relation. Dans ce cas, ce serait soit «Enfant de» ou «Parent de».
+4. Commencez à saisir le nom de famille de la ou des personne(s) concernée(s). Si le contact que vous souhaitez connecter n'existe pas encore dans la base de données, vous pouvez créer un nouveau contact à partir de cet écran.
+5. Vous pouvez également saisir des informations supplémentaires, notamment la date de début et la date de fin (dans le cas où la relation est limitée dans le temps), la description et les notes. Il existe également deux options d'autorisation, qui permettent aux utilisateurs de la base de données de modifier cet enregistrement. Enfin, la zone Activé, qui est cochée par défaut, indique que la relation est active, .
+6. Lorsque vous avez effectué les modifications souhaitées, cliquez sur **Enregistrer la relation**.
 
-Connecting employees and employers
-----------------------------------
+Relier les employés et les employeurs
+-------------------------------------
 
-A quick way to connect employees (which are stored in CiviCRM as
-individuals) to employers (stored as organisations) is to use the
-Current Employer field within an individual's record. This will set the
-current employer field in the contact record and create a relationship
-between the contacts.
+Une façon rapide de relier les employés (qui sont stockés dans CiviCRM en tant qu'individus) aux employeurs (stockés en tant qu'organisations) consiste à utiliser le champ Employeur actuel dans le dossier d'une personne. Cela définira le champ employeur actuel dans l'enregistrement de contact et créer une relation entre les contacts.
 
-1.  Navigate to the record of the individual who you want to connect to
-    an organisation.
-2.  Click the Edit button to edit the individual's record.
-3.  Begin typing the organisation name into the Current Employer field.
-    As you type, matching names of organisations that already exist as
-    contacts in CiviCRM will appear in a dropdown autocomplete list
-    below the Current Employer field. If the organisation is already a
-    contact in CiviCRM you can select it from the dropdown list by
-    pressing the down arrow key or by clicking on it. If the
-    organisation does not already exist as a CiviCRM contact, simply
-    enter the full organisation name.
-4.  After the organisation's full name is entered in the Current
-    Employer field either press the Enter key or click the Save button.
-    If the organisation is a pre-existing contact, an Employee/Employer
-    relationship will be created between the individual and the
-    organisation. If the organisation does not already exist, a new
-    organisation contact will be created and the relationship will be
-    created between the individual and the organisation. You can click
-    on the Relationships tab to view your newly created relationship
-    Employee of and see any existing relationships.
+1. Accédez à l'enregistrement de l'individu que vous souhaitez connecter à une organisation.
+2. Cliquez sur le bouton Modifier pour modifier l'enregistrement de l'individu.
+3. Commencez à taper le nom de l'organisation dans le champ Employeur actuel. Au fur et à mesure que vous tapez, les noms correspondants des organisations qui existent déjà en tant que contacts dans CiviCRM apparaissent dans une liste déroulante de saisie semi-automatique sous le champ Employeur actuel. Si l'organisation est déjà un contact dans CiviCRM, vous pouvez la sélectionner dans la liste déroulante en appuyant sur la flèche vers le bas ou en cliquant dessus. Si l'organisation n'existe pas déjà en tant que contact CiviCRM, entrez simplement le nom complet de l'organisation.
+4. Une fois que le nom complet de l'organisation est entré dans le champ Employeur actuel, appuyez sur la touche Entrée ou cliquez sur le bouton Enregistrer. Si l'organisation est un contact préexistant, une relation Employé / Employeur sera créée entre le particulier et l'organisation. Si l'organisation n'existe pas déjà, un nouveau contact d'organisation sera créé et la relation sera créée entre l'individu et l'organisation. Vous pouvez cliquer sur l'onglet Relations pour afficher votre relation nouvellement créée et voir les relations existantes.
 
-Adding contacts to organisations
---------------------------------
+Ajout de contacts aux organisations
+-----------------------------------
 
-1.  Select the desired contacts from your search results as described
-    above.
-2.  Select **Add relationship - to organization from the dropdown** from the Actions menu.
-3.  On the **Add Contacts to Organization** screen, select the **Relationship
-    Type** from the dropdown menu.
-4.  Enter part of the desired organisation name in the **Find Target
-    Organization field**, then click **Search**.
-5.  Organisations that match your search will appear in the **Mark Target
-    Contact(s) for this Relationship** section below the Search and
-    Cancel buttons. If the organisation you're looking for appears in
-    this list, click the radio button next to that organisation and then
-    click the **Add to Organization button** below. If the organisation
-    you're looking for does not appear in this list, try entering
-    something different into the **Find Target Organization** field and
-    clicking **Search** again. If you are still unable to find your desired
-    organisation it may not exist; click **Cancel**, add a new organisation,
-    and try again.
-6.  After you've successfully chosen an organisation and clicked the **Add
-    to Organization** button, you should see a message stating that the
-    number of participants that you selected have been added to the
-    organisation.
-7.  Click **Done** to return to your search results.
+1. Sélectionnez les contacts souhaités dans vos résultats de recherche comme décrit ci-dessus.
+2. Sélectionnez **Ajouter une relation - à l'organisation dans le menu déroulant** dans le menu Actions.
+3. Dans l'écran **Ajouter des contacts à l'organisation**, sélectionnez **Type de relation** dans le menu déroulant.
+4. Entrez une partie du nom de l'organisation souhaitée dans le champ **Rechercher l'organisation cible**, puis cliquez sur **Rechercher**.
+5. Les organisations qui correspondent à votre recherche apparaîtront dans la zone **Marquez les contacts cibles pour cette relation** située sous les boutons Rechercher et Annuler. Si l'organisation que vous recherchez apparaît dans cette liste, cliquez sur le bouton radio en regard de cette organisation, puis cliquez sur le bouton **Ajouter à l'organisation** ci-dessous. Si l'organisation que vous recherchez n'apparaît pas dans cette liste, essayez d'entrer quelque chose de différent dans le champ **Trouver une organisation cible** et de cliquer sur **Rechercher** à nouveau. Si vous ne parvenez toujours pas à trouver votre organisation souhaitée, elle peut ne pas exister. Cliquez sur **Annuler**, ajoutez une nouvelle organisation et réessayez.
+6. Une fois que vous avez choisi une organisation et cliquez sur le bouton **Ajouter à l'organisation**, vous devriez voir un message indiquant que le nombre de participants que vous avez sélectionné a été ajouté à l'organisation.
+7. Cliquez sur **Terminé** pour revenir aux résultats de votre recherche.
 
-Adding contacts to households
+Ajout de contacts aux ménages
 -----------------------------
 
-1.  Select the desired contacts from your search results as described
-    above.
-2.  Select **Add relationship - to household** from the dropdown **Actions** menu.
-3.  Select the **Relationship Type** from the dropdown menu. Note that while
-    CiviCRM will not stop you from adding multiple contacts as **Head of
-    Household** for a single household, this may cause problems later on
-    in any situation where you are expecting **Head of Household** to refer
-    to only one individual per household. Therefore, the **Household
-    Member of** option may be the better choice in most situations.
-4.  Enter part of the name of the household to which you are adding
-    contacts (such as a last name shared by household members) in the
-    **Find Target Household** field, then click **Search**.
-5.  Households that match your search will appear in the **Mark Target
-    Contact(s) for this Relationship** section below the Search and
-    Cancel buttons. If the household you're looking for appears in this
-    list, click the radio button next to that household and then click
-    the **Add to Household** button below. If the household you're looking
-    for does not appear in this list, try entering something different
-    into the **Find Target Household** field and clicking **Search** again. If
-    you are still unable to find your desired household it may not
-    exist; click the **Cancel** button, add a new household, and try again.
-6.  After you've successfully chosen a household and clicked the **Add to
-    Household** button, you should see a message stating that the number
-    of participants that you selected have been added to the household.
-7.  Click **Done** to return to your search results.
+1. Sélectionnez les contacts souhaités dans vos résultats de recherche comme décrit ci-dessus.
+2. Sélectionnez **Ajouter une relation - au ménage** dans le menu déroulant **Actions**.
+3. Sélectionnez le **Type de relation** dans le menu déroulant. Notez que si CiviCRM ne vous empêche pas d'ajouter plusieurs contacts comme **chef de ménage** pour un seul ménage, cela peut causer des problèmes plus tard dans toute situation où vous attendez **chef de ménage** de se référer à un seul Par ménage. Par conséquent, l'option **membre du ménage de** peut être le meilleur choix dans la plupart des situations.
+4. Entrez une partie du nom du ménage auquel vous ajoutez des contacts (tel qu'un nom de famille partagé par les membres du ménage) dans le champ **Rechercher ménage cible**, puis cliquez sur **Rechercher**.
+5. Les ménages qui correspondent à votre recherche apparaîtront dans la zone **Marquez les contacts cibles pour cette relation** située sous les boutons Rechercher et Annuler. Si le ménage que vous recherchez apparaît dans cette liste, cliquez sur le bouton radio en regard de ce ménage, puis cliquez sur le bouton **Ajouter au ménage** ci-dessous. Si le ménage que vous recherchez n'apparaît pas dans cette liste, essayez d'entrer quelque chose de différent dans le champ **Rechercher un ménage cible** et de cliquer **Recherche** à nouveau. Si vous ne trouvez toujours pas le ménage désiré, il peut ne pas exister. Cliquez sur le bouton **Annuler**, ajoutez un nouveau ménage et réessayez.
+6. Une fois que vous avez choisi un ménage et cliqué sur le bouton **Ajouter au ménage**, vous devriez voir un message indiquant que le nombre de participants que vous avez sélectionné a été ajouté au ménage.
+7. Cliquez sur **Terminé** pour revenir aux résultats de votre recherche.
 
-Creating new relationship types
--------------------------------
+Création de nouveaux types de relations
+---------------------------------------
+
+
+-----Traduction en cours ------
+
 
 CiviCRM comes with a set of common relationship types that can be
     used to indicate relationships between contacts. If you need to
