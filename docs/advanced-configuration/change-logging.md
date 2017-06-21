@@ -16,7 +16,7 @@ Une fois activée, la journalisation détaillée permet de suivre toutes les mod
 -   Quand le changement a été fait
 -   Qui a fait le changement
 
-Lorsque vous activez l'enregistrement détaillé, (voir écran suivant). vous pouvez consulter les détails de la modifications en cliquant sur le côté gauche.
+Lorsque vous activez l'enregistrement détaillé, (voir écran suivant). vous pouvez consulter les détails de la modification en cliquant sur le côté gauche.
 
 ![Change log image](../img/change-log.png)
 
