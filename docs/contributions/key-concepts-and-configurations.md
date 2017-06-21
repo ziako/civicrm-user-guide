@@ -21,7 +21,7 @@ Il est souhaitable que vous consultiez votre comptable avant de créer ou de mod
 
 ### Types Financiers
 
-Les types financiers standard inclus dans CiviCRM sont les tarifs d'événement, les cotisations des membres, les don et les contributions de campagne comme indiqué dans l'image ci-dessus, mais vous pouvez modifier les comptes existants ou mettre en place de nouveaux types financiers pour répondre à vos besoins.
+Les types financiers standard inclus dans CiviCRM sont les tarifs d'événement, les cotisations des membres, les dons et les contributions de campagne comme indiqué dans l'image ci-dessus, mais vous pouvez modifier les comptes existants ou mettre en place de nouveaux types financiers pour répondre à vos besoins.
 
 Généralement, vous aurez besoin d'un type financier pour chaque type de recettes que vous enregistrez dans CiviCRM pour suivre vos comptes. Donc, si vous faites un compte rendu des appels de dons non imposable, les dons pour les manifestations et les dons récurrents séparément, alors le fait de n'avoir qu'un seul type de financement «Dons» dans CiviCRM ne fonctionnera pas, vous aurez besoin d'un type financier appelé «Appel dons défiscalisés», Un autre appelé «Dons récurrents»....
 
@@ -29,7 +29,7 @@ Pour créer un nouveau type financier, allez :  **Administer> CiviContribute> Ty
 
 ![image](../img/Fr_contribution_creer_type_financier.PNG)
 
-Lorsque vous créez un nom spécifique pour Type financier, CiviCRM crée automatiquement un compte de recette similairement nommé et l'affecte ainsi que les comptes par défaut pour l'actif, les dépenses et le coût des recettes au nouveau type financier. pour modifier les comptes attribués à un type financier, vous pouvez le faire en cliquant sur **Comptes** à droite du type financier approprié puis **Administer> CiviContribute> Types financiers**. Le but de ce processus en deux étapes est de simplifier le cas d'utilisation courante où une organisation ne dispose que d'un compte de banque de dépôts, de comptes débiteurs et de comptes fournisseurs, mais offre plus de flexibilité pour des configurations avancées.
+Lorsque vous créez un nom spécifique pour Type financier, CiviCRM crée automatiquement un compte de recette similairement nommé et l'affecte ainsi que les comptes par défaut pour l'actif, les dépenses et le coût des recettes au nouveau type financier. Pour modifier les comptes attribués à un type financier, vous pouvez le faire en cliquant sur **Comptes** à droite du type financier approprié puis **Administer> CiviContribute> Types financiers**. Le but de ce processus en deux étapes est de simplifier le cas d'utilisation courante où une organisation ne dispose que d'un compte de banque de dépôts, de comptes débiteurs et de comptes fournisseurs, mais offre plus de flexibilité pour des configurations avancées.
 
 ![Editing accounts linked to financial type](../img/civicontribute-financial-types-linked-accounts.png)
 
