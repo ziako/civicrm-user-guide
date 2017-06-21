@@ -1,7 +1,7 @@
 Configuration de la messagerie électronique
 ===========================================
 
-Ce chapitre traite de la configuration système nécessaire pour que CiviCRM puisse envoyer et recevoir des courriels. Il s'agit d'une tâche complexe qui nécessite des compétences du niveau administrateur système. La configuration correcte de votre système de courrier électronique est cruciale pour empêcher votre serveur de recevoir des spam ou être black listé.
+Ce chapitre traite de la configuration système nécessaire pour que CiviCRM puisse envoyer et recevoir des courriels. Il s'agit d'une tâche complexe qui nécessite des compétences du niveau administrateur système. La configuration correcte de votre système de courrier électronique est cruciale pour empêcher votre serveur de recevoir des spams ou être black listé.
 
 Reportez-vous à la "Section des courriers électroniques" au chapitre "Configuration des tâches" pour configurer l'envoi des messages après que les paramètres de configuration du courrier électronique soient effectués.
 
