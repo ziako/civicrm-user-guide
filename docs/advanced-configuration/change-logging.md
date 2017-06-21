@@ -3,7 +3,7 @@ Enregistrement
 
 ![Screenshot of default logging](../img/configuration-default-logging.png)
 
-CiviCRM conserve une trace des différents changements que vous réalisez sur les contacts, adhésions,activités, etc... Chaque contact possède un onglet de journal des modifications qui est mis à jour automatiquement chaque fois qu'un contact est ajouté ou modifié. Le journal des modifications indique qui a modifié l'enregistrement et quand la modification a été effectuée. Cette journalisation résumée est activée par défaut et de nombreux utilisateurs trouvent qu'elle est suffisament détaillée.
+CiviCRM conserve une trace des différents changements que vous réalisez sur les contacts, adhésions,activités, etc... Chaque contact possède un onglet de journal des modifications qui est mis à jour automatiquement chaque fois qu'un contact est ajouté ou modifié. Le journal des modifications indique **qui** a modifié l'enregistrement et **quand** la modification a été effectuée. Cette journalisation résumée est activée par défaut et de nombreux utilisateurs trouvent qu'elle est suffisament détaillée.
 Une des principales informations manquantes cependant, est de voir  **"ce"**  qui a été changé. Mais "l'enregistrement détaillé" ajoute des informations sur ce qui a changé et fournit de nombreuses autres fonctionnalités
 
 Enregistrement détaillé
