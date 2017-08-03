@@ -20,7 +20,7 @@ Pour démarrer la configuration sur les types d'adhésions :
 1.  Allez à : **Adminitrer>CiviMember>Types d'adhésion**.
 2.  Selectionner : **Ajouter un type d'adhésion**
 
-![new](../img/New_membership_type.png) 
+ ![image](../img/New_membership_type.png) 
 
 -   **Nom**:
 Le nom est affiché dans tout le système, tant sur les pages publiques que dans les pages de backend. Passez donc un peu de temps à penser à un nom qui est approprié aux deux publics. Il peut être changé ultérieurement (bien que cela puisse entraîner un travail supplémentaire dans la mise à jour des reçus d'adhésion s'ils ont été personnalisés en fonction des noms d'adhérents)
@@ -28,7 +28,7 @@ Le nom est affiché dans tout le système, tant sur les pages publiques que dans
 - **Description**:
 Ceci n'est pas obligatoire, mais vous pouvez indiquer à quel type de contacts il est destiné, etc.
 
--   **Organisation pour l'adhésion**: 
+- **Organisation pour l'adhésion**: 
 CiviCRM est capable de gérer les adhésions de plusieurs organisations, c'est-à-dire qu'un club sportif local pourrait utiliser une seule instance de CiviCRM pour gérer les adhésions d'un club de tennis, d'un club de golf et d'un club de judo.
 Pour cette raison, lors de la définition d'un type d'adhésion, vous devez spécifier l'organisation pour laquelle le contact deviendra membre. Chaque organisation doit déjà exister en tant que contact dans CiviCRM. De nombreuses d'organisations souhaitent seulement modéliser les adhésions de leur propre organisation. Dans ce cas, vous pouvez simplement choisir l'organisation par défaut.
 
@@ -46,108 +46,86 @@ Le type par défaut "Cotisation" convient à de nombreuses organisations. Toutef
     spécifiques pour des contacts publics, ainsi que lors de l'enregistrement 
     d'une adhésion dans le back-end. CiviCRM gère les adhésions payées en liant 
     les enregistrements d'adhésion aux documents de contribution. Un dossier 
-    d'adhésion documente la *relation* d'un contact avec l'organisation, tandis
+    d'adhésion documente la "relation" d'un contact avec l'organisation, tandis
     que la transaction financière correspondante indique la valeur monétaire 
     associée à cette adhésion..
     
 ![image](../img/membership_contribution.png)
 
+    CiviCRM respecte cette distinction en enregistrant le dossier d'adhésion
+    sous l'onglet adhésion, l'opération financière sous la rubrique Contribution,
+    et crée un lien entre les eux enregistrements
 
-    CiviCRM respects this distinction by storing the membership record under
-    the membership tab, storing the financial record under the Contributions
-    tab, and then creating a link between the two records.
+-   **Option de renouvellement automatique**: CiviCRM offre une fonctionnalité de renouvellement automatique qui soumettra automatiquement une transaction répétée au processeur de paiement lorsque l'adhésion actuelle expire. Cela peut être un bon moyen de retenir les membres. Cette fonctionnalité n'est pas disponible pour tous les processeurs de paiement, de sorte que vous devrez vérifier si le vôtre est configuré pour les paiements récurrents avant de sélectionner l'une des options de renouvellement automatique ici. Vous devrez sélectionner et configurer un service de paiement supporté (Authorize.net, PayPal Pro ou PayPal Website Standard) afin de permettre aux membres de renouveler automatiquement leur adhésion.  Pour plus d'informations sur les processeurs de paiement, voir
 
--   **Auto-renew**: CiviCRM offers an auto-renew functionality that will automatically
-submit a repeat transaction to the payment processor when the current
-membership expires. This can be a good way to increase membership
-retention. This functionality is not available for all payment processor
-so you will need to check if yours is configured for recurring payments
-before selecting one of the auto-renew options here. For information on
-payment processors see
 [http://wiki.civicrm.org/confluence/display/CRMDOC/Payment+Processors.](http://wiki.civicrm.org/confluence/display/CRMDOC/Payment+Processors)
 
-    You can offer or require auto-renewal for a membership type. However
-    auto-renew memberships can only be offered for memberships that have a
-    duration (discussed below) of one year or less.
+    Vous pouvez autoriser ou nécessiter un renouvellement automatique pour un type d'adhésion.
+    Toutefois le renouvelement automatiquement des adhésions ne peut être permis que pour les 
+    adhésions qui ont un une durée d'un an ou moins.
 
--   **Duration**: In the **Duration** field you should enter the number of days, months or years that your membership lasts for each time someone signs up or
-renews.
+-   **Unité de durée pour le type d'adhésion**: Dans le champ **Durée** vous devez entrer 
+le nombre de jours, de mois ou d'années auxquels votre adhésion dure chaque fois que 
+quelqu'un s'inscrit ou renouvelle. ((par exemple : 30 jours, 2 mois, 5 ans, à vie)
 
--   **Period type**: The options for Period type are rolling and fixed.
- **Rolling** memberships start on the day the member signs up.
-**Fixed** memberships start on the particular calendar date you specify.
+-   **Periode type**: Les options pour le type de période sont Glissante et Fixe.
+      **Glissante**: Les adhésions commencent le jour où le membre s'inscrit.
+      **Fixe** : Les adhésions commencent à la date de calendrier particulière que vous avez spécifiée.
 
-    When you set the Period type to fixed, extra fields will appear
-    depending on the duration you have specified.
+         Lorsque vous définissez le type de période sur la liste, des champs supplémentaires 
+         apparaîtront selon la durée que vous avez spécifiée. 
+  
+    Si la durée est spécifiée en **années**, deux champs supplémentaires seront affichés:
 
-    If the Duration is specified in **years** two extra fields will be
-    displayed: 
+    -  Le champ **Fixed Period Start Date** est la date à laquelle toutes les adhésions commencent 
+    (par exemple, 1er janvier ou 15 avril).
 
-    -       The **Fixed Period Start Date** is the calendar date that all
-    memberships start on (eg January 1st or April 15th).
+    -  Le champ **Fixed Period Rollover Date** Détermine la date de fin de l'adhésion 
+    lorsqu'une personne s'inscrit partiellement au cours de votre année d'adhésion. 
+    Son utilisation est mieux illustrée par un exemple : Considérez un type d'adhésion 
+    avec **Durée** d'un an, et **Date de début de la période fixe** du 1er janvier 
+    et **Date de retour de la période fixe** du 1er septembre
 
-    -   The **Fixed Period Rollover Date** determines the end date for the
-    membership when a person signs up part way through your membership
-    year. Its use is best illustrated through an example. Consider a
-    membership type with a **Duration** of one year, a **Fixed Period
-    Start Date** of January 1 and a **Fixed Period Rollover Date** of
-    September 1
-
-         *      Anyone signing up between 1 January 2014 and 31 August 2014 will
-        have a membership end date of 31 December 2014. 
-         -   Anyone signing up on or after 1 September 2014 will have a
-        membership end date of 31 December 2015.( ie they will receive
-        up to 15 months membership for the 1 year price.)
-
-    If the Duration is specified in **months** one extra field will be
-    displayed:
+     - Toute personne ayant signé entre le 1er janvier 2017 et le 
+         31 août 2017 aura une date de fin d'adhésion au 31 décembre 2017.
+     - Toute personne qui s'inscrit à compter du 1er septembre 2017 aura 
+         une date de fin d'adhésion au 31 décembre 2018. (c.-à-d. Ils auront 
+         jusqu'à 15 mois d'adhésion pour le prix de 1 an).
+         
+Si la durée est spécifiée en **mois** un champ supplémentaire sera affiché :
     
-    -   The **Fixed Period Rollover Date** determines if the membership
-        duration starts at the beginning of the current calendar month or
-        the beginning of the next calendar month. Consider a 6 month
-        membership type with **Fixed Period Rollover Date** set to 15:
+    - La "Date de prorogation de la période fixe" détermine si la durée de l'adhésion 
+    commence au début du mois civil ou au début du mois calendaire suivant. 
     
-        -   Someone signing up on days 1-14 January will have a membership
-            end date of 30 June. 
-        -   Someone signing up on days 15-31 January would have a membership
-            end date of 31 July.
-
-    Example: If **Duration =** 12 months, **Period type** = Fixed, and **Fixed
-    Period Rollover Date** = 1, then anyone joining during August 2014 will
-    have an expiry date of 31 August 2015. 
-
--   **Relationship Type**: Memberships can be **inherited** from one contact to another. An example of this would be a professional trade organisation that signs up
-a company as the (primary) member and wants employees of the company
-receive the benefits of membership.
-
-    In order to support this feature we define a **relationship type** along
-    which the membership inherits. 
+    Considérez un type d'adhésion de 6 mois avec "Date de prorogation de la période fixe" réglé à 15:
+    - La "Date de prorogation de la période fixe" détermine si la durée de l'adhésion 
+    commence au début du mois civil ou au début du mois calendaire suivant. 
     
-    The pop-up help screen gives examples of the relationship types to
-    select for this feature. Once you have selected a relationship type, you
-    enter a number in **Max related** to set a maximum for the number of
-    inherited memberships linked to each primary member. This would be
-    useful, in the example above, to limit the number of employees that can
-    become a member by virtue of their employment to 10 maximum. 
+    Considérez un type d'adhésion de 6 mois avec "Date de prorogation de la période fixe" réglé à 15:
+       
+        - Quelqu'un qui s'inscrit entre le 1er et 14 janvier aura une fin d'adhésion au 30 juin
 
+        - Quelqu'un qui s'inscrit entre le 15 et le 31 janvier aurait une fin d'adhésion au 31 juillet.
+        
+     Exemple: si "Durée = 12 mois", "Type de période = Fixe, et "Date de prorogation...= 1", 
+     alors quiconque inscrit en août 2017 aura une date d'expiration du 31 août 2018.
+   
+
+-   **Type de relation** : les membres peuvent être **"héritiers"** d'un contact à l'autre. Exemple : une organisation commerciale professionnelle enregistrée en tant que membre (principal) veut que les employés de la société reçoivent les avantages de l'adhésion.
+
+Afin de supporter cette fonctionnalité, nous définissons un **Type de relation** pour lequel le statut d'adhérent peut être attribué automatiquement aux contacts en relation
+     - L'écran d'aide contextuelle donne des exemples de types de relation à sélectionner pour cette fonctionnalité.
+     - Une fois que vous avez sélectionné un type de relation, vous entrez un nombre dans le champ **Max de relations** pour définir le nombre maximum d'adhésions héritées liées à chaque membre principal. Il serait utile, dans l'exemple ci-dessus, de limiter le nombre d'employés qui peuvent devenir membres en raison de leur emploi à 10 maximum.
+   
  ![image](../img/Membership_relationship_type.png) 
 
-    With inherited memberships, we distinguish between the primary member
-    and the members that inherit their membership due to their relationship with the primary member.
+    Avec les adhésions héritées, nous distinguons le membre principal et les membres 
+    qui héritent de leur appartenance en raison de leur relation avec le membre principal.
+    
+- **Visibilité**: Choisir **Public** signifie que ce type d'adhésion pourra être sélectionné pour être inclus sur les formulaires d'inscription en ligne. Si certains types d'adhésion ne doivent être gérés que manuellement par un administrateur (par exemple, adhésions honoraires et à vie), vous devez choisir **Administrateur** ici.
+- **Order**: Détermine si ce type d'adhésion apparaît dans une liste d'options déroulantes des types d'adhésion ou sur les pages d'inscription des membres.
+- **Activé**: Si vous avez des types d'adhésion qui ne sont plus d'actualité ou qui ne sont pas encore disponibles, vous pouvez désactiver cette case. Cela éliminera ces adhésions de l'interface utilisateur. Il ne supprimera pas les données d'adhésion et ce type d'adhésion pourra être réactivé à une date ultérieure.
 
-
--   **Visibility**: Choosing **Public** means that this membership type will be able to be selected for inclusion on online membership sign up forms. If certain
-membership types are only to be handled by an administrator manually
-(e.g., honorary and lifetime memberships) you should choose **Admin**
-here. 
-
--   **Order**: This determines where this membership type appears in a drop down
-options list of membership types, and on membership sign up pages.
-
--   **Enabled**: If you have membership types that are no longer offered or not yet
-available you may wish to untick this box. This will remove these
-memberships from the user interface. It will not delete the membership
-data and the membership can be re-enabled at a later date.
 
 Membership status rules 
 -------------------------
