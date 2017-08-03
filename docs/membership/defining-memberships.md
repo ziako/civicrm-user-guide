@@ -20,7 +20,7 @@ Pour démarrer la configuration sur les types d'adhésions :
 1.  Allez à : **Adminitrer>CiviMember>Types d'adhésion**.
 2.  Selectionner : **Ajouter un type d'adhésion**
 
-![image](/img/New_membership_type.png) 
+![image](../img/New_membership_type.png) 
 
 -   **Nom**:
 Le nom est affiché dans tout le système, tant sur les pages publiques que dans les pages de backend. Passez donc un peu de temps à penser à un nom qui est approprié aux deux publics. Il peut être changé ultérieurement (bien que cela puisse entraîner un travail supplémentaire dans la mise à jour des reçus d'adhésion s'ils ont été personnalisés en fonction des noms d'adhérents)
@@ -42,9 +42,15 @@ Sinon, vous devez entrer le montant minimum qui doit être payé pour ce type d'
 
 Le type par défaut "Cotisation" convient à de nombreuses organisations. Toutefois, si vous avez des besoins comptables plus complexes, vous pouvez spécifier différents types financiers qui vous permettront de comptabiliser différents paiements d'adhésion de différentes façons. Pour plus de détails, consultez le chapitre *Intégration comptable* dans la section *Contributions*. Si vous avez besoin de plus de contrôle fin par rapport aux types financiers, vous voudrez peut-être regarder *les jeux de prix*.
 
-    Notez que le type financier peut être remplacé par des pages d'inscriptions spécifiques pour des contacts publics, ainsi que lors de l'enregistrement d'une adhésion dans le back-end. CiviCRM gère les adhésions payées en liant les enregistrements d'adhésion aux documents de contribution. Un dossier d'adhésion documente la *relation* d'un contact avec l'organisation, tandis que la transaction financière correspondante indique la valeur monétaire associée à cette adhésion..
+    Notez que le type financier peut être remplacé par des pages d'inscriptions 
+    spécifiques pour des contacts publics, ainsi que lors de l'enregistrement 
+    d'une adhésion dans le back-end. CiviCRM gère les adhésions payées en liant 
+    les enregistrements d'adhésion aux documents de contribution. Un dossier 
+    d'adhésion documente la *relation* d'un contact avec l'organisation, tandis
+    que la transaction financière correspondante indique la valeur monétaire 
+    associée à cette adhésion..
     
-![image](/img/membership_contribution.png)
+![image](../img/membership_contribution.png)
 
 
     CiviCRM respects this distinction by storing the membership record under
