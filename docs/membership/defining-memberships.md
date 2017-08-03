@@ -1,98 +1,46 @@
-Defining memberships
+Définition des adhésions
 ====================
 
-This chapter describes how to set up one or more **membership
-types** that you can use to manage your organisation's members. It also
-explains the concept of **membership statuses** and how your
-organisation can use them to define a membership life-cycle.
+Ce chapitre décrit comment configurer un ou plusieurs types d'adhésion que vous pouvez utiliser pour gérer les membres de votre organisation. Cela explique également le concept des statuts d'adhésion et la façon dont votre organisation peut les utiliser pour définir un cycle de vie d'adhésion.
 
-Membership types
+Types d'adhésions
 ----------------
 
-Membership types are a basic building block for membership management in
-CiviCRM. Typically an organisation will set up a membership type for
-each of the different memberships that they offer. For the simplest
-membership structures, one membership type may be enough. For more
-complex membership structures, more membership types may be required.
-For example, an organisation may define three membership types for
-'regular', 'student', and 'honorary' members. 
-Or an organisation may choose to use membership types as subcriptions to 
-their different publications, either free or paying ones.
+Les types d'adhésion sont un élément de base pour la gestion des membres dans CiviCRM. En règle générale, une organisation mettra en place un type d'adhésion pour chacune des différentes adhésions qu'elles offrent. Pour les structures d'adhésion les plus simples, un type d'adhésion peut suffire. Pour des structures d'adhésions plus complexes, il est peut-être nécessaire d'utiliser plusieurs types d'adhésion. Par exemple, une organisation peut définir trois types d'adhésion pour les membres «Actifs», «bénévoles» et «Honoraires». Une organisation peut aussi choisir d'utiliser les types d'adhésions comme des abonnements ou souscriptions à leurs différentes publications, gratuites ou payantes.
 
-There are a number of options that can be configured for a membership
-type, and these are best discussed by working through the membership
-type form. A solid understanding of the options will help you decide on
-how many membership types your organisation needs and how they should be
-configured.
+Plusieurs options peuvent être configurées pour un type d'adhésion, et celles-ci sont paramétrées en fonction du formulaire de type d'adhésion. Une compréhension solide des options vous aidera à décider du nombre de types d'adhésion dont votre organisation a besoin et de la manière dont elles doivent être configurées.
 
-In this chapter we will cover the most common set-up for membership
-types. Some organisations, with more complex membership structures, have
-requirements that go beyond what is available with membership types
-alone. These organisations may find that **membership price sets** give
-them the extra flexibility they need. Since membership price sets are
-an advanced topic, they are covered in their own chapter *Membership
-price sets.*
+Dans ce chapitre, nous couvrirons la configuration la plus courante pour les types d'adhésion. Certaines organisations, avec des structures d'adhésion plus complexes, ont des exigences qui vont au-delà de ce qui est disponible avec les types d'adhésion seuls. 
+Ces organisations trouveront dans le chapitre sur **les Ensembles de prix d'adhésion** la flexibilité supplémentaire dont ils ont besoin. Les ensembles de prix d'adhésion sont un sujet avancé, ils sont expliqués dans le chapitre "*Ensembles de prix d'adhésion*".
 
-If you are having trouble modelling your membership structure in
-CiviCRM, ask in the forums about the problems you are having. There may
-be other ways to model your data, or simple changes you can make to
-CiviCRM's behaviour to better fit your needs.
+Si vous rencontrez des problèmes pour modéliser votre structure d'adhésion dans CiviCRM, demandez sur le forum CIVICRM la réponse aux problèmes que vous rencontrez. Il peut y avoir d'autres façons de modéliser vos données, ou des modifications simples que vous pouvez apporter au comportement de CiviCRM pour mieux répondre à vos besoins.
 
-To start learning about membership types: 
+Pour démarrer la configuration sur les types d'adhésions :
 
-1.  Go to **Administer > CiviMember > Membership Types**
-2.  Select **Add Membership Type** 
+1.  Allez à : **Adminitrer>CiviMember>Types d'adhésion**.
+2.  Selectionner : **Ajouter un type d'adhésion**
 
 ![image](../img/z-sprint154%20-%20new_membership_type.png) 
--   **Name**:
-The name is displayed throughout the system, on both public and
-backend pages so spend some time thinking about a name that is
-appropriate to both audiences. It can be changed at a later date (though
-this may result in extra work in updating membership receipts if they
-have been customised based on membership names)
+
+-   **Nom**:
+Le nom est affiché dans tout le système, tant sur les pages publiques que dans les pages de backend. Passez donc un peu de temps à penser à un nom qui est approprié aux deux publics. Il peut être changé ultérieurement (bien que cela puisse entraîner un travail supplémentaire dans la mise à jour des reçus d'adhésion s'ils ont été personnalisés en fonction des noms d'adhérents)
 
 - **Description**:
-This is not required but you may wish to fill it in with a description
-of the membership, what type of contacts it is aimed at, etc. 
+Ceci n'est pas obligatoire, mais vous pouvez indiquer à quel type de contacts il est destiné, etc.
 
--   **Membership organisation**: CiviCRM is able to manage the memberships of more than one organisation,
-i.e. a local sports centre could use a single CiviCRM instance to manage
-the memberships of a tennis club, a football club, and a hockey club.
-For this reason, when defining a membership type, you specify the
-organisation that the contact will become a member of. Each
-organisation must already exist as a CiviCRM organisation contact. Many
-organisations are only interested in modelling the memberships of one
-organisation (their own organisation). In this instance you can just
-choose the default organisation.
+-   **Organisation pour l'adhésion**: 
+CiviCRM est capable de gérer les adhésions de plusieurs organisations, c'est-à-dire qu'un club sportif local pourrait utiliser une seule instance de CiviCRM pour gérer les adhésions d'un club de tennis, d'un club de golf et d'un club de judo.
+Pour cette raison, lors de la définition d'un type d'adhésion, vous devez spécifier l'organisation pour laquelle le contact deviendra membre. Chaque organisation doit déjà exister en tant que contact dans CiviCRM. De nombreuses d'organisations souhaitent seulement modéliser les adhésions de leur propre organisation. Dans ce cas, vous pouvez simplement choisir l'organisation par défaut.
 
-    If you wish to enable online sign ups or renewals, the CiviCRM data
-    model requires that a contact can only have one active membership with a
-    single organisation at any given time. However, some organisations may
-    want people to have two or more memberships of the same organisation
-    that run concurrently. For example, an organisation focused on child
-    health might want to offer a membership for parents that includes a
-    parenting magazine and a membership for health professionals that
-    includes a peer-reviewed journal and discounts at training events.
-    Parents who are health professionals may want both memberships. A
-    'workaround' for this is to create 'dummy' organisations for each of the
-    possible concurrent memberships. For the situation just described, we
-    would need to create an extra organisation for health professionals.
-    Note that you don't have to expose the dummy organisation to your
-    members on the website, it is only for administrative purposes. 
+    Si vous souhaitez activer les inscriptions ou les renouvellements en ligne, le modèle de données CiviCRM exige qu'un contact ne puisse avoir qu'une seule adhésion active avec une seule organisation à un moment donné. Cependant, certaines organisations peuvent vouloir que les gens aient deux membres ou plus à la même organisation simultanément. Par exemple, une organisation axée sur la santé des enfants pourrait vouloir offrir une adhésion aux parents qui comprend un magazine pour les parents et une adhésion aux professionnels de la santé qui comprend un journal professionnel et des réductions pour les événements de formation. Les parents qui sont des professionnels de la santé peuvent vouloir les deux adhésions.
+    Une «solution de contournement» pour cela, consiste à créer des organisations "fictives" pour chacune des adhésions simultanées possibles. Dans ce cas particulier, nous devrions créer une organisation supplémentaire pour les professionnels de la santé. Notez que vous ne devez pas exposer l'organisation fictive à vos membres sur le site, uniquement pour des raisons administratives.
+   
+-   **Cotisation minimum**: Pour des adhésions gratuites, vous devez entrer 0 (zéro) dans ce champ.
+Sinon, vous devez entrer le montant minimum qui doit être payé pour ce type d'adhésion. La raison pour laquelle nous appelons ce champ le montant *minimum* est que nous avons une option pour encourager les gens à payer plus que le minimum pour une adhésion s'ils le souhaitent.
 
--   **Minimum fee**: If your memberships are free you should enter 0 (zero) in this field.
-Otherwise you should enter the minimum amount that must be paid for this
-membership type. The reason we call this field the *minimum* amount is
-that we have an option to encourage people pay more than the minimum for
-a membership if they want to. 
+-   **Type d'opération**: Le type financier par défaut pour un type d'adhésion est **Cotisations**
 
--   **Financial type**: The default financial type for a membership type is **Member Dues**.
-This is appropriate for many organisations. However, if you have more
-complex accounting needs, you can specify different financial types that
-will allow you to account for different membership payments in different
-ways. For more details see the *Accounting Integration* chapter in the
-*Contributions* section. If you need more fine grained control over
-financial types you may want to look at using *membership price sets*.
+Le type par défaut "Cotisation" convient à de nombreuses organisations. Toutefois, si vous avez des besoins comptables plus complexes, vous pouvez spécifier différents types financiers qui vous permettront de comptabiliser différents paiements d'adhésion de différentes façons. Pour plus de détails, consultez le chapitre *Intégration comptable* dans la section *Contributions*. Si vous avez besoin de plus de contrôle fin par rapport aux types financiers, vous voudrez peut-être regarder *les jeux de prix*.
 
     Note that the financial type can be overridden for specific public
     membership sign up pages, and also when recording a membership in the
