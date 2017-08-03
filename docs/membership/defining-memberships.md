@@ -20,7 +20,7 @@ Pour démarrer la configuration sur les types d'adhésions :
 1.  Allez à : **Adminitrer>CiviMember>Types d'adhésion**.
 2.  Selectionner : **Ajouter un type d'adhésion**
 
-![image](../img/z-sprint154%20-%20new_membership_type.png) 
+![image](/img/New_membership_type.png) 
 
 -   **Nom**:
 Le nom est affiché dans tout le système, tant sur les pages publiques que dans les pages de backend. Passez donc un peu de temps à penser à un nom qui est approprié aux deux publics. Il peut être changé ultérieurement (bien que cela puisse entraîner un travail supplémentaire dans la mise à jour des reçus d'adhésion s'ils ont été personnalisés en fonction des noms d'adhérents)
@@ -33,7 +33,7 @@ CiviCRM est capable de gérer les adhésions de plusieurs organisations, c'est-�
 Pour cette raison, lors de la définition d'un type d'adhésion, vous devez spécifier l'organisation pour laquelle le contact deviendra membre. Chaque organisation doit déjà exister en tant que contact dans CiviCRM. De nombreuses d'organisations souhaitent seulement modéliser les adhésions de leur propre organisation. Dans ce cas, vous pouvez simplement choisir l'organisation par défaut.
 
     Si vous souhaitez activer les inscriptions ou les renouvellements en ligne, le modèle de données CiviCRM exige qu'un contact ne puisse avoir qu'une seule adhésion active avec une seule organisation à un moment donné. Cependant, certaines organisations peuvent vouloir que les gens aient deux membres ou plus à la même organisation simultanément. Par exemple, une organisation axée sur la santé des enfants pourrait vouloir offrir une adhésion aux parents qui comprend un magazine pour les parents et une adhésion aux professionnels de la santé qui comprend un journal professionnel et des réductions pour les événements de formation. Les parents qui sont des professionnels de la santé peuvent vouloir les deux adhésions.
-    Une «solution de contournement» pour cela, consiste à créer des organisations "fictives" pour chacune des adhésions simultanées possibles. Dans ce cas particulier, nous devrions créer une organisation supplémentaire pour les professionnels de la santé. Notez que vous ne devez pas exposer l'organisation fictive à vos membres sur le site, uniquement pour des raisons administratives.
+    Une "solution de contournement" pour cela, consiste à créer des organisations "fictives" pour chacune des adhésions simultanées possibles. Dans ce cas particulier, nous devrions créer une organisation supplémentaire pour les professionnels de la santé. Notez que vous ne devez pas exposer l'organisation fictive à vos membres sur le site, uniquement pour des raisons administratives.
    
 -   **Cotisation minimum**: Pour des adhésions gratuites, vous devez entrer 0 (zéro) dans ce champ.
 Sinon, vous devez entrer le montant minimum qui doit être payé pour ce type d'adhésion. La raison pour laquelle nous appelons ce champ le montant *minimum* est que nous avons une option pour encourager les gens à payer plus que le minimum pour une adhésion s'ils le souhaitent.
@@ -42,17 +42,9 @@ Sinon, vous devez entrer le montant minimum qui doit être payé pour ce type d'
 
 Le type par défaut "Cotisation" convient à de nombreuses organisations. Toutefois, si vous avez des besoins comptables plus complexes, vous pouvez spécifier différents types financiers qui vous permettront de comptabiliser différents paiements d'adhésion de différentes façons. Pour plus de détails, consultez le chapitre *Intégration comptable* dans la section *Contributions*. Si vous avez besoin de plus de contrôle fin par rapport aux types financiers, vous voudrez peut-être regarder *les jeux de prix*.
 
-    Note that the financial type can be overridden for specific public
-    membership sign up pages, and also when recording a membership in the
-    back end.
+    Notez que le type financier peut être remplacé par des pages d'inscriptions spécifiques pour des contacts publics, ainsi que lors de l'enregistrement d'une adhésion dans le back-end. CiviCRM gère les adhésions payées en liant les enregistrements d'adhésion aux documents de contribution. Un dossier d'adhésion documente la *relation* d'un contact avec l'organisation, tandis que la transaction financière correspondante indique la valeur monétaire associée à cette adhésion..
     
-    CiviCRM handles paid memberships by linking membership records to
-    contribution records. A membership record documents a contact's
-    *relationship* with the organisation, while the corresponding financial
-    transaction indicates the monetary value associated with that
-    membership.
-
-![image](../img/membership_contribution.png)
+![image](/img/membership_contribution.png)
 
 
     CiviCRM respects this distinction by storing the membership record under
