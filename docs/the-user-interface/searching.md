@@ -29,6 +29,11 @@ Ainsi en entrant "pierre", vous trouverez:
 -   les organisations avec Pierre en leur nom, ex.  Association **Pierre** Insertion.
 
 Vous n'avez pas besoin de taper le nom complet de la personne... juste les premières lettres.
+
+CiviCRM permet également d'enregistrer un surnom ou un pseudo lors de la saisie de nouveaux contacts. Par exemple, "Joe" peut être un pseudo pour "Joseph" et "IBM" peut être un surnom pour "International Business Machines". Lorsque vous installez CiviCRM pour la première fois, vous trouverez "Joseph" lors de la recherche de "Joe" et vous trouverez "International Business Machines" lors de la recherche de "IBM"
+
+Vous pouvez modifier ce comportement à partir de l'écran *Preferences de recherche* décrit ci-dessus en modifiant le paramètre * Include Nickname * à * yes *.
+
 Remarque: Si vous effectuez une recherche par **téléphone**, vous devrez entrer les chiffres du numéro de téléphone sans aucun formatage. La recherche de "téléphone" est effectuée sur un champ composé uniquement de chiffres dont tous les caractères non numériques ont été retirés.
 
 Recherche avancée
