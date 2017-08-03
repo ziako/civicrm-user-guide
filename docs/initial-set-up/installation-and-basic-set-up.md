@@ -24,9 +24,12 @@ La plupart des organisations accèdent à CiviCRM via Internet. Toutefois certai
 
 Mises à jour
 ------------
++New versions of CiviCRM are released every month. Although +are the way that you will typically +add major new features to CiviCRM, you will need to apply upgrades to your +CiviCRM core software periodically to keep your site secure, and also if you +want to take advantage of smaller new features and improvements.
 
-Les nouvelles versions de CiviCRM sont diffusées environ deux fois par an (une au printemps et une en automne).
-Vous devrez appliquer les mises à jour à votre site CiviCRM régulièrement si vous souhaitez profiter des nouvelles fonctionnalités et des améliorations, et aussi pour maintenir votre site sécurisé. Certaines mises à niveau contiennent des correctifs de sécurité et il est crucial que ces dernières soient appliquées immédiatement. Il est important que vous planifiez des ressources (personnes et temps) pour appliquer les mises à niveau à votre site. Vous pouvez executer, par prudence, les mises à niveau sur une copie de votre site en production pour s'assurer que le processus fonctionne correctement. Il est  essentiel de faire une sauvegarde de votre site et de votre base de données avant d'exécuter une mise à niveau, même si vous aviez testé le processus sur un site de test..
+De nouvelles versions de CiviCRM sont diffusées chaque mois. Vous pouvez ajouter des extensions et fonctionnalités majeures à CIVICRM par [extensions](../introduction/extensions).
+Vous devrez appliquer les mises à jour à votre site CiviCRM régulièrement si vous souhaitez profiter des nouvelles fonctionnalités et des améliorations, et aussi pour maintenir votre site sécurisé. Certaines mises à niveau contiennent des correctifs de sécurité et il est crucial que ces dernières soient appliquées immédiatement. Il est important que vous planifiez des ressources (personnes et temps) pour appliquer les mises à niveau à votre site. 
+Vous devez lire complètement les notes de version pour comprendre comment une mise à jour peut changer votre site
+Vous pouvez executer, par prudence, les mises à niveau sur une copie de votre site en production pour s'assurer que le processus fonctionne correctement. Il est  essentiel de faire une sauvegarde de votre site et de votre base de données avant d'exécuter une mise à niveau, même si vous aviez testé le processus sur un site de test..
 
 Les mises à jour sont un processus important. De nombreuses organisations emploient les services de professionnels agréés par CIVICRM pour les réaliser.
 
@@ -90,11 +93,11 @@ Cet écran vous permet de modifier l'affichage des éléments à l'écran et les
 ![image](../img/Fr_preference_affichage_2.PNG)
 
 -   **Tableau de bord de contact** - Permet à vos contacts de voir les groupes auxquels ils sont abonnés, leur historique de contribution, les informations d'inscription à un événement... et plus encore. Vous pouvez contrôler les sections qui doivent être incluses dans le tableau de bord ici. EXEMPLE: Si vous ne voulez pas que les électeurs voient leur propre historique de contribution, désélectionnez cette option.
--   **Editeur WYSIWYG** - Sélectionnez **CKEditor** pour que les utilisateurs disposent d'un moyen simple d'entrer du texte dans les champs qui permettent le formatage HTML (comme par exemple la section d'introduction de vos pages de contribution en ligne). Vous pouvez configurer CKEditor (voir http://ckeditor.com/) comme vous le souhaitez pour ajouter ou supprimer des fonctionnalités. Sélectionnez **Zone de texte** si vous ne souhaitez pas fournir d'éditeur WYSIWYG.
--   **Activer les formulaires Popup** - Cette option est activée par défaut. Décochez pour revenir à l'ouverture du formulaire en rafraîchissant la page.
--   **Affichage du nom individuel** - Format d'affichage du nom des des contacts individuels.
+-   **Editeur WYSIWYG** - Sélectionnez **CKEditor** pour que les utilisateurs disposent d'un moyen simple d'entrer du texte dans les champs qui permettent le formatage HTML (comme par exemple la section d'introduction de vos pages de contribution en ligne)
+ Vous pouvez configurer CKEditor (http://ckeditor.com/) pour ajouter ou supprimer des fonctionnalités souhaitées et modifier l'ordre d'affichage des éléments dans la barre d'outils à l'aide de la page de configuration intégrée. Cliquez sur le bouton "Configure CKEditor" pour accéder à cette page de configuration. Sélectionnez ** Textarea ** si vous ne souhaitez pas utiliser un éditeur WYSIWYG.
+-   **Activer les formulaires Popup** - Cette option est activée par défaut. Décochez pour revenir à l'ouverture normale du formulaire en rafraîchissant la page.
+-   **Affichage du nom individuel**  - Format d'affichage du nom des des contacts individuels.
 -   **Nom de classement individuel** - Format de nom de tri pour le tri des contacts individuels.
-
 
 ### Paramètre d'adresse
 
@@ -111,7 +114,7 @@ Après avoir vérifié les champs et les mises en page par défaut, contrôlez l
     {contact.city}{, }{contact.state_province}{ }{contact.postal_code}
     {contact.country}*  
 
-    Vous devez inclure ici le champ (token) *{contact.addressee}* afin d'inclure le nom du destinataire dans vos étiquettes. Les utilisateurs peuvent choisir parmi une variété de types d'étiquettes, correspondant au code du fabricant d'étiquettes, lorsqu'ils génèrent des étiquettes à partir d'une liste de contacts. Vous devez tester votre format avec le type d'étiquette et l'imprimante que vous prévoyez d'utiliser pour vérifier le cadrage.
+    Vous devez inclure ici le champ (token) *{contact.addressee}* afin d'inclure le nom du destinataire dans vos étiquettes. Les utilisateurs peuvent choisir parmi une variété de types d'étiquettes (correspondant au code du fabricant d'étiquettes) lorsqu'ils génèrent des étiquettes à partir d'une liste de contacts. Vous devez tester votre format avec le type d'étiquette et l'imprimante que vous prévoyez d'utiliser pour vérifier le cadrage.
     
 -  **Affichage de l'adresse** - Contrôle la disposition des adresses de contact et lieux d'événement affichées sur les écrans de CiviCRM. Le format par défaut est:
 
@@ -125,7 +128,6 @@ Après avoir vérifié les champs et les mises en page par défaut, contrôlez l
     Ce format s'applique également aux lieux d'événements, malgré l'utilisation du type d'enregistrement *contact* dans la mise en page. Le token *{contact.address_name}* est particulièrement utile pour les événements où vous devez inclure un nom de lieu  (par exemple, "Parc des expositions").
   
 -  **Edition de l'adresse** - Modifiez les champs d'édition d'adresse disponibles ici. Vous pouvez masquer les champs que vous n'avez pas l'intention d'utiliser afin de simplifier les formulaires. EXEMPLE: Si vous ne prévoyez pas d'enregistrer la latitude et la longitude des contacts, vous pouvez les désélectionner. 
-
 
 -  **Normalisation de l'adresse**- CiviCRM utilise les normes d'adressage postal du service postal des États-Unis (USPS) pour analyser une adresse dans les champs qui contiennent les éléments d'adresse: numéro de rue, nom de rue et appt / unité /etc... Il est préférable de saisir des informations d'adresse qui sont conformes aux normes d'adressage postal de votre pays, non seulement pour la cohérence de vos données, mais aussi pour tirer le meilleur parti de la fonction d'analyse des adresses. Lorsque l'analyse d'adresse est activée, vous pouvez modifier et/ou afficher l'adresse analysée en cliquant sur "Modifier les éléments d'adresse".
       
