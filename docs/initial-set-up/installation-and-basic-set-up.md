@@ -24,9 +24,8 @@ La plupart des organisations accèdent à CiviCRM via Internet. Toutefois certai
 
 Mises à jour
 ------------
-+New versions of CiviCRM are released every month. Although +are the way that you will typically +add major new features to CiviCRM, you will need to apply upgrades to your +CiviCRM core software periodically to keep your site secure, and also if you +want to take advantage of smaller new features and improvements.
 
-De nouvelles versions de CiviCRM sont diffusées chaque mois. Vous pouvez ajouter des extensions et fonctionnalités majeures à CIVICRM par [extensions](../introduction/extensions).
+De nouvelles versions de CiviCRM sont diffusées chaque mois. Vous pouvez ajouter des extensions et fonctionnalités majeures à CIVICRM par [extensions](../introduction/extensions.md).
 Vous devrez appliquer les mises à jour à votre site CiviCRM régulièrement si vous souhaitez profiter des nouvelles fonctionnalités et des améliorations, et aussi pour maintenir votre site sécurisé. Certaines mises à niveau contiennent des correctifs de sécurité et il est crucial que ces dernières soient appliquées immédiatement. Il est important que vous planifiez des ressources (personnes et temps) pour appliquer les mises à niveau à votre site. 
 Vous devez lire complètement les notes de version pour comprendre comment une mise à jour peut changer votre site
 Vous pouvez executer, par prudence, les mises à niveau sur une copie de votre site en production pour s'assurer que le processus fonctionne correctement. Il est  essentiel de faire une sauvegarde de votre site et de votre base de données avant d'exécuter une mise à niveau, même si vous aviez testé le processus sur un site de test..
