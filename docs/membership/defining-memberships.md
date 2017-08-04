@@ -65,12 +65,12 @@ Le type par défaut "Cotisation" convient à de nombreuses organisations. Toutef
     adhésions qui ont un une durée d'un an ou moins.
 
 -   **Unité de durée pour le type d'adhésion**: Dans le champ **Durée** vous devez entrer 
-le nombre de jours, de mois ou d'années auxquels votre adhésion dure chaque fois que 
-quelqu'un s'inscrit ou renouvelle. ((par exemple : 30 jours, 2 mois, 5 ans, à vie)
+le nombre de jours, de mois ou d'années auxquels votre adhésion sera active chaque fois que 
+quelqu'un s'inscrit ou renouvelle. (par exemple : 30 jours, 2 mois, 5 ans, à vie)
 
 -   **Periode type**: Les options pour le type de période sont Glissante et Fixe.
       **Glissante**: Les adhésions commencent le jour où le membre s'inscrit.
-      **Fixe** : Les adhésions commencent à la date de calendrier particulière que vous avez spécifiée.
+      **Fixe**: Les adhésions commencent à la date de calendrier particulière que vous avez spécifiée.
 
          Lorsque vous définissez le type de période sur la liste, des champs supplémentaires 
          apparaîtront selon la durée que vous avez spécifiée. 
@@ -127,108 +127,48 @@ Afin de supporter cette fonctionnalité, nous définissons un **Type de relation
 - **Activé**: Si vous avez des types d'adhésion qui ne sont plus d'actualité ou qui ne sont pas encore disponibles, vous pouvez désactiver cette case. Cela éliminera ces adhésions de l'interface utilisateur. Il ne supprimera pas les données d'adhésion et ce type d'adhésion pourra être réactivé à une date ultérieure.
 
 
-Membership status rules 
+Règles des statuts d'adhésion 
 -------------------------
+Les règles de statut d'adhésion vous permettent de déclencher la prise en charge initiale d'une adhésion. Ces règles sont définies en fonction de la date d'inscription, de début ou de fin de l'adhésion. Examinons d'abord ce que signifient ces dates.
 
-Membership status rules allow you to define a journey that contacts take
-through their membership. These rules are defined in terms of the join,
-start or end date of the membership. So let's first have a look at what
-these dates mean.
+Les membres ont trois dates principales: la date d'inscription, la date de début et la date de fin. La **date d'inscription** est la date à laquelle le contact s'est inscrit ou est inscrit en vue d'une adhésion à votre organisation. À moins qu'elle ne soit modifié manuellement, cette date ne changera jamais. La **date de début** est la date où la *période continue* de l'adhésion a commencé. La **date de fin** est le dernier jour de l'adhésion actuelle.
 
-Memberships have three primary dates, the join date, start date and end
-date. The **join date** is the date the contact first signed up for a
-membership with your organisation. Unless it is altered manually it
-will never change from that first value. The **start date** is the date
-the current *continuous period* of membership began. The **end date**
-is the last day of the current membership.
+Par défaut, les statuts d'adhésion sont les suivants:
 
-By default the journey through membership statuses is as follows:
+-   **En attente:** quelqu'un qui a demandé l'adhésion mais n'a pas payé.
+    Ce statut ne peut pas être modifié manuellement, ce qui signifie que vous ne pouvez pas modifier le statut "En attente" vers   "Nouveau", sauf si vous mettez à jour le dossier de contribution associé. 
+    Par exemple, si vous avez l'option "paiement plus tard" activée pour l'adhésion de Joe Smith, le statut de son adhésion ne sera changé en "nouveau" jusqu'à ce que vous modifiez l'état de cotisation de son paiement à "Complète".
+-   **Nouveau**: le membre vient de s'inscrire pour une adhésion ou un paiement en attente est régularisé. Par défaut, le délai est de 3 mois après la date de début de l'adhésion.
+-  **Courant**: les nouveaux membres passent à ce statut après la fin de la nouvelle période. Comme on pouvait s'y attendre le statut actuel dure jusqu'à la date de fin d'adhésion.
+- **Grace**: lorsque la fin de la période d'adhésion est atteinte, quelqu'un qui n'a pas renouvelé l'adhésion est inscrit avec ce statut pour une période de temps. Ils sont toujours comptés comme membres.   
+- **Expiré**: lorsque le délai de grâce expire, le membre passe à ce statut et n'est plus considéré comme membre.
+- **Décédé**: ce statut conserve un dossier de contact "décédé" dans le système, mais supprime le contact de toutes communications. Cet état est défini automatiquement en fonction du drapeau décédé d'un contact.
 
--   **Pending:** someone who has requested membership but has not paid.
-    This status cannot be amended manually meaning that you can not
-    change the status from pending to new unless you update the
-    associated contribution record. For example, if you have the pay
-    later option enabled for membership and Joe Smith signs up for your
-    membership and chooses the pay later option, the status of his
-    membership will not be changed to new until you change the
-    contribution status of his related payment to Completed. 
--   **New**: member has just signed up for a membership or a pending
-    payment has arrived. By default this lasts until 3 months after the
-    membership start date. 
--   **Current**: new members move to this status after the new period
-    has finished. As might be expected, the current status lasts until
-    the membership end date.
--   **Grace**: when the end of the membership period is reached, someone
-    who has not renewed membership enters this status for a period of
-    time. They are still counted as a member. 
--   **Expired**: when the grace period expires, the member moves to this
-    status and is no longer counted as a member.
--   **Deceased**: this status keeps a deceased contact's record in the
-    system but removes the contact from all further communications. This
-    status is set automatically based on a contact's deceased flag). 
+Vous pouvez forcer un statut d'adhésion en sélectionnant **Forcer le statut** sur un enregistrement d'adhésion et en choisissant un statut. Donc, une adhésion avec une modification de statut restera dans ce statut et ne sera pas mise à jour conformément aux règles d'état de l'adhésion décrites ci-dessus.
 
-You can force a membership to have its status overridden by selecting
-**membership override** on a membership record and choosing a status. As
-might be expected, a membership with status override will remain at that
-status, and not be updated according to the membership status rules
-described above. 
-
-At **Administer > CiviMember > Membership Status Rules** you will find a
-summary of the existing status rules.
+Sous **Administer> CiviMember> Règles des statuts d'adhésion**, vous trouverez un résumé des règles d'état existantes.
 
 ![image](../img/z-sprint14-membership%20status.png)
 
-To decide on which status should be applied, CiviCRM looks to see if the
-membership has a status override. If it does, it applies that status. If
-not, it looks at each status in turn starting at the top of the Status
-Rules page until it finds one that is valid. That is to say, it looks to
-see if today's date is between the start and end date for the membership
-status at the top of the list. If it is, it applies that status, if not
-it moves to the next status and repeats this process until it finds a
-status that matches.
+Pour décider quel statut doit être appliqué, CiviCRM cherche à voir si l'adhésion a un statut prioritaire. Si c'est le cas, cela s'applique à ce statut. Si ce n'est pas le cas, le système liste les statuts en commençant par le haut de la page "Règles de statut d'adhésion" jusqu'à ce qu'il en trouve un qui est valide. C'est-à-dire, si la date du jour se situe entre le début et la fin de l'état de l'adhésion en haut de la liste. Si c'est le cas, il applique ce statut, sinon il passe au prochain état et répète ce processus jusqu'à ce qu'il trouve un état qui correspond.
 
-When you edit or add a new membership status the following form appears.
+Lorsque vous modifiez ou ajoutez un nouveau statut de membre, le formulaire suivant apparaît.
 
 ![image](../img/membership_status_rules.png) 
 
-You can add new statuses and edit existing statuses (except for Pending
-and Deceased) using this form. To create a new status, you need to
-specify when the status should start and stop. This is done in relation
-to a membership event (i.e. the join date, start date, or end date).
-e.g. 'one month after the membership start date would be configured with
-'start date' and '1 month' or 'five days before the membership end date'
-would be configured with 'end date' and '-5 days'.
+Vous pouvez ajouter de nouveaux statuts et modifier les statuts existants (à l'exception de En attente et Décédé) en utilisant ce formulaire. Pour créer un nouveau statut, vous devez préciser quand le statut doit commencer et arrêter. Cela se fait par rapport à un événement d'adhésion (c'est-à-dire la date d'inscription, la date de début ou la date de fin). Par exemple. «Un mois après la date de début de l'adhésion serait configuré avec «date de début» et «1 mois» ou «cinq jours avant la date de fin d'adhésion» serait configuré avec «date de fin» et «-5 jours».
 
-You also specify whether contacts with this membership status should be
-considered members or non-members by checking or unchecking the 'Current
-membership' tick box. (This results in a Yes or No in the Member column
-on the status rules summary page.) Renewing contacts with a status that
-defines them as members will have their existing membership end date
-extended by the duration of the renewal. Renewing contacts with a
-status that defines them as non-members get a new start date for their
-membership and an end date based on that new start date.
+Vous pouvez spécifier également si les contacts avec ce statut d'adhésion doivent être considérés comme des membres ou des non-membres en cochant ou en désélectionnant la case à cocher "L'adhésion actuelle". (Il en résulte un Oui ou Non dans la colonne Membre sur la page récapitulative des règles de statut.) 
+- Renouveler les contacts avec un statut qui les définit affectera une date de fin d'adhésion existante prolongée par la durée du renouvellement. 
+- Renouveler les contacts avec un statut qui les définit comme non-membres leur donnera une nouvelle date de début en vue de leur adhésion et une date de fin en fonction de cette nouvelle date de début.
 
-Keeping membership statuses updated
------------------------------------
+Maintenir les statuts d'adhésion à jour
+----------------------------------------
 
-When a membership is added or renewed the membership status is
-automatically set based on your status rules. For example, a newly
-created membership will be assigned the status "New" by default. If your
-membership statuses are not updating automatically, make sure that
-the **Update Membership Statuses** scheduled job is enabled and runs at
-least once a day. Refer to the [Scheduled
-Jobs](http://booki.flossmanuals.net/initial-set-up/scheduled-jobs)
-chapter for configuration details and consult your system administrator
-if appropriate. 
+Lorsqu'une adhésion est ajoutée ou renouvelée, l'état de l'adhésion est défini automatiquement en fonction de vos règles d'état. Par exemple, une adhésion nouvellement créée recevra le statut "Nouveau" par défaut. Si vos statuts d'adhésion ne se mettent pas à jour automatiquement, assurez-vous que le travail **Mise à jour des statuts d'adhésion** est activé et s'exécute au moins une fois par jour.
+ -Reportez-vous au chapitre [Travaux programmés](http://booki.flossmanuals.net/initial-set-up/scheduled-jobs) pour les détails de la configuration ou consultez votre administrateur système, le cas échéant.
+ 
+Collecte d'informations supplémentaires sur vos membres
+-------------------------------------------------------
+Parfois, vous souhaitez collecter des informations supplémentaires sur vos membres. Vous pouvez créer un ou plusieurs ensembles de champs personnalisés pour cela. Les ensembles de champs personnalisés peuvent être créés pour toutes les adhésions ou les types d'adhésion spécifiques. Si les informations que vous souhaitez collecter varient selon le type d'adhésion, vous devez configurer plusieurs champs personnalisés pour les associer aux différents types d'adhésion. (Reportez-vous au chapitre *Champs personnalisés* dans la section *Organiser vos données*
 
-Collecting additional information about your members 
-------------------------------------------------------
-
-Sometimes you want to collect additional information about your
-members. You can create one or more custom field sets for this
-purpose. Custom field sets can be created for either all memberships or
-specific membership types. If the information you want to collect
-varies according to the membership type then you should set up more than
-one custom field set linking it to the specific membership type(s). 
-(Refer to *Custom Fields* chapter in the *Organising Your Data* section
-for more details.) 
