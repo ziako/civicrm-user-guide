@@ -88,9 +88,9 @@ pages:
     - 'Rapports': 'events/reports.md'
     - "Données personnalisées": 'events/custom-data-for-events.md'
     - "Répéter les Evénements": 'events/repeating-events.md'
-- Adhésions:
-    - 'Qu'est-ce que CiviMember': 'membership/what-is-civimember.md'
-    - 'Définition des adhésions': 'membership/defining-memberships.md'
+- "Adhésions":
+    - "Qu'est-ce que CiviMember": 'membership/what-is-civimember.md'
+    - "Définition des adhésions": 'membership/defining-memberships.md'
     - 'Online membership sign up': 'membership/online-membership-sign-up.md'
     - 'Manual entry of memberships': 'membership/manual-entry-of-memberships.md'
     - 'Membership price sets': 'membership/membership-price-sets.md'
