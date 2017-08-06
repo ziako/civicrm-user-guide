@@ -1,161 +1,82 @@
-Manual entry of memberships
+Entrée manuelle des adhésions
 ===========================
 
-Although CiviCRM provides a tool set allowing website contacts to
-self-serve and become members without intervention required on the part
-of office staff (which can be very powerful and save organisations a lot
-of administration time), there are many situations when memberships need
-to be processed manually. This chapter describes the various ways in
-which office staff (or any appropriately permissioned users) can
-manually create and process memberships, including: 
+CiviCRM fournit un ensemble d'outils permettant aux contacts une interaction directe sur le site Web pour devenir membres sans intervention nécessaire de la part du personnel administratif (ce qui est une fonction très puissante permettant un gain de temps au personnel administratif). Il existe de nombreuses situations dans lesquelles les adhésions doivent être traitées manuellement. Ce chapitre décrit les différentes façons dont le personnel administratif (ou les utilisateurs autorisés) peuvent créer et traiter manuellement des adhésions, y compris:
 
--   Creating new membership records one by one (including gift
-    memberships where the payment comes from a different contact) 
--   Batch data entry of members 
--   Importing Memberships
+- Créer de nouveaux enregistrements d'adhésion un par un (y compris les adhésions gratuites où le paiement provient d'un contact différent)
+- Entrér des données des membres par lots 
+- Importer des adhésions   
 
-CiviMember Access Control
+Contrôle d'accès à CiviMember
 -------------------------
 
-As with other CiviCRM functions, Administer > User & Permissions >
-Permissions allows you to control access to various CiviMember features.
+Comme pour les autres fonctions de CiviCRM, **Administer> User & Permissions> Permissions** vous permet de contrôler l'accès à diverses fonctionnalités de CiviMember.
 
+Pour les utilisateurs qui doivent chercher et afficher les adhésions :
+- Attribuez l'autorisation **Accéder à CiviMember** et **Voir les contributions** si des paiements sont concernés et assurez-vous que l'utilisateur est autorisé pour afficher les contact pour l'enregistrement associé.
+Pour les utilisateurs qui doivent créer et afficher les adhésions :
+- attribuez l'autorisation **Accéder à CiviMember** et  **Voir les contributions** si des paiements sont concernés et assurez-vous que l'utilisateur affiche les autorisations de contact pour l'enregistrement associé.
 
--   For users who need to find and view memberships - assign the
-    **access CiviMember** permission, the **view contributions**
-    permission if payments are involved and make sure the user has view
-    contact permissions for the associated record. 
--   For users who need to create and/or edit membership records - assign
-    the **edit memberships** permission, the **edit contributions**
-    permission if payments are involved and make sure the user has edit
-    contact permission for the associated contact record.
-
-More details on permissions can be found at
+Pour plus de précision sur les permissions voir : 
 [http://wiki.civicrm.org/confluence/display/CRMDOC/Default+Permissions+and+Roles](http://wiki.civicrm.org/confluence/display/CRMDOC/Default+Permissions+and+Roles)
-. 
 
-Creating a New Membership Record
+Création d'un nouveau dossier d'adhésion
 --------------------------------
 
-You can create a new membership record in a couple ways, by looking at
-an existing contact's record, or through the Memberships menu. Using
-the membership menu is useful because you can create a new contact at
-the same time as adding the new membership record. 
+Vous pouvez créer un nouvel enregistrement d'adhésion de deux façons : directement dans le contact ou dans le menu **Adhésions**. L'utilisation du menu **Adhésions** est pratique car vous pouvez créer un nouveau contact en même temps que l'ajout du nouvel enregistrement d'adhésion :**Nouvelle adhésion**
 
-An advantage of creating a new membership record directly from an
-existing contact's record is that if you have set up a payment processor
-that allows credit card transactions directly on your site, you may
-select the **Submit Credit Card Membership** option and process the
-membership payment immediately.
+Un des avantages de créer une nouvelle adhésion directement à partir d'un contact existant est que si vous avez configuré un processeur de paiement qui autorise les transactions par carte de crédit sur votre site, vous pouvez sélectionner l'option **Soumettre une carte de crédit** et traiter le paiement de l'adhésion immédiatement.
 
-When you use the **Memberships** menu to create a new membership, you do
-not have the option to submit credit card information, but can still
-have the option to record other types of payments like checks and cash.
+Lorsque vous utilisez le menu **Adhésions** pour créer une nouvelle adhésion, vous n'avez pas la possibilité de soumettre des informations sur la carte de crédit, mais vous pouvez enregistrer d'autres types de paiements comme les chèques et les espèces.
 
+### Via un enregistrement de contact existant
 
-### Via an existing contact record
-
--   From a contact's record, click the **Memberships** tab then
-    click **Add Membership**. If you have set up a payment processor that
-    allows credit card transactions directly on your site, you can
-    select the **Submit Credit Card Membership** option and process the
-    payment immediately.
+- À partir du dossier d'un contact, cliquez sur l'onglet **Adhésions** puis cliquez sur "Ajouter Adhésion". Si vous avez configuré un processeur de paiement qui autorise les transactions par carte de crédit directement sur votre site, vous pouvez sélectionner l'option **Soumettre une carte de crédit** et traiter immédiatement le paiement.
 
 ![image](../img/manual-add-membership.png) 
 
-Many of the fields on "New Membership" form will be auto-completed if
-left blank. Fields include:
+Sur le formulaire **Nouvelle adhésion**  plusieurs champs seront complétés automatiquement s'ils sont laissés en blanc. Les champs incluent:
 
--   **Membership Organization and Type:** select the name of the
-organization that the contact has a membership with and the type of
-membership ***OR*** 
+-   **Organisation et type d'adhésion:** Sélectionnez le nom de l'organisation avec laquelle le contact a une adhésion et le type d'adhésion ***OU***
 
--   **Choose Price Set**: select Choose Price Set rather than Membership
-Organization and Type if you have various fee structures for different
-classes of memberships. (see the chapter *membership price sets* for more
-details) 
+-   **Choisir une tarification**: Sélectionnez "Choisir une tarification" plutôt que l'organisation et le type d'adhésion si vous disposez de diverses structures tarifaires pour différentes catégories d'adhésion. (Voir le chapitre *Gestion des tarifications* pour plus de détails)
 
--   **Number of Terms:** enter the number of membership periods or terms
-associated with this membership record. The membership end date will
-then be set to an end date for this number of terms (this option is
-hidden when using membership price sets) 
+-   **Nombre de périodes :** Entrez le nombre de périodes d'adhésion ou les termes associés à ce dossier d'adhésion. La date de fin d'adhésion sera alors définie à une date de fin en fonction du nombre de termes (cette option est cachée lors de l'utilisation de la gestion des tarifications)
 
--   **Source**: if left blank the system will complete details regarding the
-record, including whether it was an offline or online transaction and
-who completed the record.
+-   **Source**: Si elle est laissée vide, le système complète les détails concernant l'enregistrement : transaction hors ligne ou en ligne et qui a rempli l'enregistrement.
 
--   **Campaign**: if the membership is connected with a larger campaign,
-select the name of the campaign. To learn more, see the *Campaign*
-section.
+-   **Campagne**: Si l'adhésion est associée à une campagne d'action spécifique, sélectionnez le nom de la campagne. Pour en savoir plus, consultez la section *Campagne*.
 
--   **Member Since**: the date the membership record was created will be
-auto-filled, but can be overridden if necessary.
+-   **Membre depuis le**: La date à laquelle l'adhésion a été créée sera rempli automatiquement, mais peut être remplacé si nécessaire. Par défaut: date de saisie.
 
--   **Start Date**: if the membership type is a rolling membership, the
-current date will be auto-filled. If the membership type is a fixed
-period, CiviCRM will determine the appropriate start date based on the
-membership type configuration. This can be overridden if necessary.
+-   **Date de début**: Si le type d'adhésion est une adhésion "glissante", la date actuelle sera remplie automatiquement. Si le type d'adhésion est une période fixe, CiviCRM déterminera la date de début appropriée en fonction de la configuration du type d'adhésion. Cela peut être remplacé si nécessaire.
 
--   **End Date**: this field is automatically calculated from the start date
-and filled in based on the membership type settings. This can be
-overridden if necessary.
+-   **Date de fin**: Ce champ est automatiquement calculé à partir de la date de début et rempli en fonction des paramètres du type d'adhésion. Cela peut être annulé si nécessaire.
 
--   **Auto-renew**: this field is only shown if you have chosen a
-Membership Type that has auto-renew functionality set in the Membership
-Type and are using the Submit Credit Card Membership option to create
-the Membership.
+-   **Auto-renouvellement**: Ce champ n'est affiché que si vous avez choisi un type d'adhésion qui a une fonction de renouvellement automatique définie dans le type d'adhésion et utilise l'option "Soumettre une carte de crédit" pour créer l'adhésion.
 
--   **Status Override?**: check this box to manually define a status for the
-membership record. As indicated by the title, it overrides the status
-automatically provided. You should use caution with this field as
-setting it will stop the status from automatically updating based on the
-membership status rules you have set up (see the chapter *Defining
-memberships).*
+-   **Forcer le statut?**: Cochez cette case pour définir manuellement un statut pour l'enregistrement de membre. Comme indiqué par le titre, il remplace l'état automatiquement fourni. Vous devriez faire preuve de prudence avec ce champ car le réglage empêchera l'état de se mettre à jour automatiquement en fonction des statuts de l'adhésion que vous avez configurés (voir le chapitre *Définir les adhésions*)
 
--   **Record Membership Payment?**: by checking the box and completing the
-transaction fields displayed, you will record the money paid for the
-membership. This creates a contribution record in addition to your
-membership record. After recording the membership, you will be able to
-view the membership record and see the related contribution record at
-the bottom.
+-   **Enregistrer le paiement de la cotisation ?**: En cochant cette case et en remplissant les champs de transaction affichés, vous enregistrerez le versement de l'adhésion. Un enregistrement de contribution est créé automatiquement en plus du dossier d'adhésion. Après avoir enregistré l'adhésion, vous pourrez voir le dossier d'adhésion et voir l'enregistrement de contribution correspondant.
 
-    -   **Record Payment from a Different Contact?**: this is often used for
-        Gift memberships.
-    -   **Financial Type**: select the appropriate financial type for this
-        payment. 
-    -   **Amount**: enter the amount of the membership payment.
-    -   **Received Date and Time**: enter the date and time the payment was
-        received.
-    -   **Paid By**: select the payment instrument in which this payment was
-        received, such as cash or check. You can learn more about
-        configuring Payment Instruments in the *Contributions* section.
-    -   **Check Number**: if the payment was received by check, enter the
-        check number.
-    -   **Transaction ID**: if you have a payment processor, CiviCRM will
-        store an auto-generated transaction id. For manual transactions,
-        you can enter a bank transfer ID or other identifier as applicable.
-    -   **Payment Status**: select the status of the membership payment
-        received. You can learn more about configuring Payment Instruments
-        in the *Contributions* section.
+    -   **Enregistrer le paiement d'un contact différent ?**: Ceci est souvent utilisé pour les attribution de gratuité
+    -   **Montant**: Entrez le montant du paiement de l'adhésion.
+    -   **Reçu**: Entrez la date et l'heure (heure : facultatif) de réception du paiement.
+     -  **Type d'opération**: Sélectionnez le type financier approprié pour ce paiement.
+    -   **Méthode de paiement**: Sélectionnez le moyen de paiement par lequel ce paiement a été reçu, par exemple en espèces ou en chèque. Vous pouvez en savoir plus sur la configuration des instruments de paiement dans la section *Contributions*.
+     -   **Numéro de chèque**: Si le paiement a été reçu par chèque, entrez le numéro de chèque si désiré.
+     -   **ID de Transaction**: Si vous disposez d'un processeur de paiement, CiviCRM stockera un identifiant de transaction généré automatiquement. Pour les transactions manuelles, vous pouvez entrer un identifiant de transfert bancaire ou un autre identifiant, le cas échéant.
+     -   **Etat du paiement**: Sélectionnez le statut du paiement de l'adhésion reçue. Vous pouvez en savoir plus sur la configuration des instruments de paiement dans la section *Contributions*.
 
--   **Send Confirmation and Receipt?:** check this box to send an email to
-the contact that their membership is confirmed
+     -   **Envoi Confirmation et reçu?:** Cochez cette case pour envoyer un courriel au contact confirmant son adhésion
+     -   **Réception de :** sélectionnez l'adresse email dont le reçu de confirmation provient de. Si l'adresse e-mail que vous souhaitez utiliser n'est pas répertoriée, vous pouvez l'ajouter en allant dans **Mailings> From Emails**.
+    -   **Réception a :** Sélectionnez l'adresse d'envoi du courriel de confirmation . Si l'adresse e-mail que vous souhaitez utiliser n'est pas répertoriée, vous pouvez l'ajouter en allant dans **Mailings> From Emails**.
+    -   **Message de réception:** vous pouvez entrer le texte ici pour envoyer un message spécial au membre. Si vous ne saisissez pas de texte, le message de confirmation et de réception par défaut sera utilisé.
+    
 
-    -   **Receipt From:** select the email address the confirmation receipt
-        is from. If the email address you want to use is not listed, you
-        can add it by going to**Mailings > From Emails**.
-    -   **Receipt Message:**you can enter text here to send a special
-        message to the member. If you don't enter text, the default
-        confirmation and receipt message will be used.
+### **Auto-renouvellement des adhésions via le Back end**
 
-### **Auto-renew Memberships via Back end**
-
-To manually create a membership that will auto-renew go to the contact's
-summary screen, select the **Memberships**tab and click on **Submit
-Credit Card Membership**. If you select a Membership Type that is set up
-for recurring, a checkbox labelled **Membership renewed automatically**
-will be exposed.
-
+Pour créer manuellement une adhésion qui se renouvellera automatiquement, reportez-vous à l'écran récapitulatif du contact, sélectionnez l'onglet **Adhésions** et cliquez sur **Soumettre l'adhésion par carte de crédit**. Si vous sélectionnez un type d'adhésion qui est configuré pour être récurrent, une case à cocher intitulée **L'adhésion renouvelée automatiquement** sera affichée.
 
 
 If you check Auto-renew, a recurring payment (subscription) request will
