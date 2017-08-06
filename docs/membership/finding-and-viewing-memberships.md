@@ -1,14 +1,14 @@
-Finding and viewing memberships
+Trouver et afficher des adhésions
 ===============================
 
-This chapter describes how to view and search your membership records.
+Ce chapitre décrit comment afficher et rechercher vos enregistrements d'adhésion.
 
-Viewing Your Memberships
+Affichage de vos adhésions
 ------------------------
 
-To see a summary of the status of your memberships over recent months,
-as well as details about these memberships, you can use the membership
-dashboard or view the membership in an individual's contact record.
+Pour voir un résumé de l'état de vos adhésions ainsi que les détails de ces adhésions au cours des derniers mois, vous pouvez utiliser le tableau de bord des adhésions ou consulter une adhésion dans le dossier individuel de chaque contact 
+
+
 
 ### The Membership Dashboard
 
