@@ -98,7 +98,7 @@ pages:
     - 'Membership Reports': 'membership/membership-reports.md'
     - 'Renewals': 'membership/renewals.md'
     - 'Cancelling and expiring memberships': 'membership/cancelling-and-expiring-memberships.md'
-    - 'Making member only websites': 'membership/making-member-only-websites.md'
+    - "Création d'accès réservés aux membres": 'membership/making-member-only-websites.md'
 - Email:
     - 'What is CiviMail?': 'email/what-is-civimail.md'
     - 'What You Need To Know': 'email/what-you-need-to-know.md'
