@@ -8,32 +8,30 @@ Affichage de vos adhésions
 
 Pour voir un résumé de l'état de vos adhésions ainsi que les détails de ces adhésions au cours des derniers mois, vous pouvez utiliser le tableau de bord des adhésions ou consulter une adhésion dans le dossier individuel de chaque contact 
 
-
-
 ### Le Tableau de bord des adhésions
 
-Pour visualiser rapidement vos adhésions récentes, utilisez le tableau de bord des adhésions : **Adhésions> Tableau de bord**. Cet écran contient deux blocs d'informations qui affichent un résumé ou vos adhésions récentes, classées selon le type et la plage de dates, et une liste de l'activité récente des membres.
+Le tableau de bord des adhésions permet d'afficher rapidement vos adhésions récentes, utilisez  : **Adhésions> Tableau de bord**. Cet écran contient deux blocs d'informations qui affichent un résumé des adhésions récentes, classées selon le type et la plage de dates, et une liste de l'activité récente des membres.
 
 ![image](../img/CiviCRM-CiviMember-Memebership-Summary_2.jpg)
 
-Tous les nombres de ce résumé ont un lien. Il suffit donc de cliquer sur un nombre pour analyser et afficher une liste des membres qui ont adhérés ou renouvelés au cours des deux derniers mois ou de l'année courante, ou qui sont considérés comme actifs en fonction des définitions de statut de l'adhésion. À partir de cette liste de membres, vous pouvez effectuer des actions supplémentaires sur les adhésions, telles que Supprimer, Modifier, Exporter, Envoyer un courriel.
+Ce tableau présente un résumé des nouvelles adhésions et des renouvellements d'adhésion et inclut des raccourcis pour voir les détails. Il suffit donc de cliquer sur un nombre pour analyser et afficher une liste des membres qui ont adhérés ou renouvelés au cours des deux derniers mois ou de l'année courante, ou qui sont considérés comme actifs en fonction des définitions de statut de l'adhésion. À partir de cette liste de membres, vous pouvez effectuer des actions supplémentaires sur les adhésions, telles que Supprimer, Modifier, Exporter, Envoyer un courriel.
 
 ### Affichage des enregistrements d'adhésion d'un contact
 
-Une autre façon de voir les enregistrements d'adhésion est de consulter un enregistrement de contact et d'examiner l'onglet Adhésion. Remarque: si l'adhésion d'un interlocuteur est "En attente", l'adhésion apparaîtra lorsque l'onglet sera cliqué, mais il ne sera PAS comptabilisé dans le numéro sur l'onglet.
-- Après avoir trouvé le contact que vous souhaitez gérer, cliquez sur l'onglet "**Adhésion**" pour afficher un résumé des enregistrements d'adhésion du contact.
+Une autre façon de voir les enregistrements d'adhésion est de consulter un enregistrement de contact et d'examiner l'onglet Adhésion. Remarque: si l'adhésion d'un interlocuteur est "En attente", l'adhésion apparaîtra lorsque l'onglet sera cliqué, mais il ne sera PAS comptabilisé dans l'onglet.
+- Après avoir trouvé le contact que vous souhaitez, cliquez sur l'onglet "**Adhésion**" pour afficher un résumé des enregistrements d'adhésion du contact.
 
 ![image](../img/CiviCRM_update-CiviCore-Contact_MembershipTabs-en.jpg)
 
-Les dossiers d'adhésion apparaissent sous forme de liste avec les adhésions actives (celles ayant un statut actuel) d'abord et suivies des adhésions anciennes ou annulées.
+Les dossiers d'adhésion apparaissent sous forme de liste avec les adhésions actives (celles ayant un statut actuel) et suivies des adhésions anciennes ou annulées.
 
 Vous pouvez modifier les enregistrements d'adhésion existants, renouveler une adhésion ou créer un nouvel enregistrement d'adhésion. Si vous avez configuré un processeur de paiement par carte de crédit en ligne dans CiviCRM, vous verrez deux options pour créer ou renouveler une adhésion: une pour la gestion d'un enregistrement hors ligne (pas de transaction en temps réel) et une pour la gestion d'un enregistrement en ligne (En utilisant une transaction en carte de crédit en temps réel), qui peut également être utilisé pour configurer le renouvellement automatique si le processeur le prend en charge. L'interface pour chaque processus est très similaire, sauf que l'option de carte de crédit comprend les options de traitement de paiement et d'enregistrement.
 
-Si vous regardez un enregistrement de contact en tant que membre principal pour un type d'adhésion, vous verrez une liste du contact qui a bénéficié de l'adhésion.
+Si vous affichez un enregistrement de contact, en tant que membre principal pour un type d'adhésion, vous verrez une liste du contact qui a bénéficié de l'adhésion.
 
 ![image](../img/membership%20everyday%20for%20limited%20inherited.png)
 
-Dans ce cas, un maximum de deux adhésions héritées sont autorisés pour les personnes qui sont des employés de l'organisation du membres principal. Si l'une des adhésions héritées disponibles n'est pas attribuée correctement à l'employé, vous pouvez cliquer sur **Supprimer** pour ce contact. Cela libérera une adhésion héritée pour attribuer une correspondance en sélectionnant **Créer**
+Dans ce cas, un maximum de deux adhésions héritées sont autorisées pour les personnes qui sont des employés de l'organisation du membres principal. Si l'une des adhésions héritées disponibles n'est pas attribuée correctement à l'employé, vous pouvez cliquer sur **Supprimer** pour ce contact. Cela libérera une adhésion héritée pour attribuer une correspondance en sélectionnant **Créer**
 
 ### ![image](../img/membership%20everyday%20for%20limited%20inheritedp2.png)
 
@@ -60,7 +58,7 @@ La recherche **Rechercher des membres** vous permet de rechercher en fonction de
 
 ![image](../img/memberships%20find%20memberships.JPG)
 
-La **Recherche avancée** vous permet de rechercher en fonction de certaines informations d'adhésion limitées (combinées avec d'autres informations de contact) et de renvoyer des listes de contacts. Vous pouvez également choisir Adhésion dans la colonne **Vue pour l'affichage de contacts** afin d'afficher les membres plutôt que les contacts. Pour en savoir plus sur l'utilisation de la recherche avancée, reportez-vous au chapitre "Recherche".
+La **Recherche avancée** vous permet également de rechercher en fonction de certaines informations d'adhésion (combinées avec d'autres informations de contact) et d'afficher des listes de contacts. Vous pouvez également choisir Adhésion dans la colonne **Vue pour l'affichage de contacts** afin d'afficher les membres plutôt que les contacts. Pour en savoir plus sur l'utilisation de la recherche avancée, reportez-vous au chapitre "Recherche".
 
 ![image](../img/z_sprint14_display%20Results%20as_1.png)
 
