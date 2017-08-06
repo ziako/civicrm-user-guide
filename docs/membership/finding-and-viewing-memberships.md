@@ -10,7 +10,7 @@ Pour voir un résumé de l'état de vos adhésions ainsi que les détails de ces
 
 
 
-### The Membership Dashboard
+### Le Tableau de bord des adhésions
 
 Pour visualiser rapidement vos adhésions récentes, utilisez le tableau de bord des adhésions : **Adhésions> Tableau de bord**. Cet écran contient deux blocs d'informations qui affichent un résumé ou vos adhésions récentes, classées selon le type et la plage de dates, et une liste de l'activité récente des membres.
 
