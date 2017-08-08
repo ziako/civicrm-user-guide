@@ -1,125 +1,72 @@
-Membership price sets
+Gestion des tarifications
 =====================
+Ce chapitre décrit comment configurer la gestion des tarifications afin que vos contacts puissent:
+ 
+-   S'inscrire à plusieurs sortes d'adhésion en même temps.
+-   S'inscrire à plusieurs adhésions en une seule transaction (par exemple, adhésions nationales et locales).
+-   Sélectionner des options publiques, non membres, telles que les brochures d'information lorsqu'elles souscrivent à une adhésion.
 
-This chapter describes how to configure membership price sets so that
-your contacts can:
-
--   Sign up for multiple membership terms at the same time. 
--   Sign up for more than one membership in a single transaction ( e.g.
-    National and local memberships).
--   Select non-membership options such as information booklets when they
-    sign up for a membership.
-
-Here's an example of how a membership price set that offers all these
-options could look: 
+Voici un exemple de la façon dont une tarification d'adhésion, qui offre toutes ces options, peut ressembler:
 
 ![image](../img/4.5_membership_price_sets_complete_price_set.PNG) 
  
+La tarification **du Club de natation de Donwell Swim** se compose de cinq **champs de tarif** : 
+Adhésion à l'association nationale, Adhésion annuelle au club, Clud d'équipement, Billets de tombola et dons.
 
-The Donwell Swim Club **price set** consists of five **price fields**:
-National Association Fees, Annual Club membership, Club Gear, raffle
-tickets and donation. 
- 
-It offers two membership types:
+Il y a deux types d'adhésion possible:
 
 ![image](../img/4.5_membership_price_sets_types_1.PNG) 
  
+Ces types d'adhésions doivent être définis avant de créer la tarification.
+(Voir le chapitre *Définition des adhésions*)..
 
-These membership types must be defined before you create the price set.
-(Refer to *Defining Memberships* chapter.) 
+Vous devez définir tous les types financiers dont vous aurez besoin avant de pouvoir créer une tarification. (Reportez-vous à la section *Contributions* pour obtenir des informations sur les types financiers)
 
-You must also have defined all the financial types you will need before
-you can create the price set. (Refer to the *Contributions* section for
-information on financial types)
+La tarification des adhésions peut être utilisée dans les pages de jointure ou de renouvellement en ligne ou pour les nouvelles inscriptions de membres traitées manuellement via le système de back office CiviCRM. Cependant, vous ne pouvez pas l'utiliser pour des renouvellements qui sont traités manuellement. Chaque adhésion doit être renouvelée individuellement (voir le chapitre *Renouvellements*) et en plus, vous devrez créer un ensemble de prix de contribution composé des éléments non membres que vous proposez. En outre, vous ne pouvez pas combiner des adhésions qui peuvent être renouvelées automatiquement avec des adhésions qui n'offrent pas de renouvellement automatique ou avec des éléments non membres.
 
-Membership price sets can be used in online join up or renewal pages or
-for new member sign ups processed manually through the CiviCRM back
-office system. However, they cannot be used for renewals that are
-processed manually. Each membership must be renewed individually (see
-the *Renewals* chapter) and in addition you may need to create a
-contribution price set consisting of the non-membership items you offer.
-Also, you cannot combine memberships that can be auto-renewed with
-memberships that do not offer auto-renewal or with non-membership items.
+Les tarifications peuvent être configurés de plusieurs façons. Vous devez toujours tester un tarif bien défini avant de l'utiliser directement sur votre site afin de vous assurer que vous l'avez configuré de la manière qui vous convient le mieux.
 
-
-Price sets can be configured in many ways and you should always test a
-price set thoroughly before using it on your live site to make sure that
-you have configured it in the way that fits your situation best.
-
-Creating a New Price Set
+Créer une nouvelle tarification 
 ------------------------
 
 ![image](../img/4.5_membership_price_sets_new_new_price_set_1.PNG) 
 
+1.  Menu **Adhésions> Nouvelle tarification** ou **Administrer > CiviMember> Nouvelle tarification**.
+2.  Entrez le nom de cette tarification **Titre**. Ce nom sera affiché à la fois au public dans le cadre du tarif proposé et au personnel administratif lorsqu'il doit choisir entre les ensembles de tarifs. Assurez-vous que le nom soit suffisamment descriptif pour les deux types d'utilisateurs.
+3.  Utilisé pour : choisir  **Adhésion**
+4.  Définissez le **Type d'opération par défaut** Le choix que vous faites a des implications comptables et vous devez vous référer à la section *Contributions* pour plus d'informations.
+5.  Ajoutez un texte d'aide pré ou post-formulaire si vous le souhaitez.
+6.  Assurez-vous que cette tarification soit active et **Enregistrer**
 
-1.  Navigate to**Memberships > New Price Set** or**Administer****>
-    CiviMember > New Price Set**.
-2.  Enter the price **set name**. This name will be displayed both to
-    the public as part of the price set and to admin staff when they
-    need to choose between price sets, so make sure it is descriptive
-    enough for both purposes.
-3.  Tick **Membership**
-4.  Set the**Default Financial Type**.****The choice you make has
-    accounting implications and you should refer to the *Contributions*
-    section for more information.
-5.  Add pre- or post-form help text if you want to.
-6.  Make sure the price set is active and **Save.** 
-
-You will be taken to a form to create the first **price field** for your
-**price set.**
+Un formulaire  s'affiche ensuite pour créer le premier **Champ de tarif** de votre **tarification**
 
 ![image](../img/4.5_membership_price_sets_new_new_price_field_1.PNG) 
 
-### Creating a New Price Field
+### Creation d'un nouveau champ de tarif 
 
-1.  Enter a name in the **Field Label**. This name will be displayed to
-    the public.
+1.  Entrez un nom dans **Intitulé du champ**. Ce nom sera affiché au public. 
 
-2.  Select the **Input Field Type**. There are 4 input types available
-    for price sets:****
+2.  Selectionnez **Type de champ de saisie**. Il y a 4 types d'entrée disponibles pour les tarifs
 
-    -   **Text/Numeric Quantity:** allows you to set a unit **Price**.
-        When the price set is displayed it shows a text box where a
-        quantity can be entered. The quantity entered is multiplied by
-        the unit price to calculate the amount.
+    -   **Quantité/texte numérique:** Permet de définir une unité **Prix**
+        Lorsque le jeu de tarif est affiché, il affiche une zone de texte où une quantité peut être saisie. La quantité saisie est multipliée par le prix unitaire pour calculer le montant.
+    -   **Selection:** Affiche un menu déroulant où une option peut être sélectionnée.
+    -   **Bouton radio:** Affiche plusieurs options dans une liste, une option peut être sélectionnée.    
+    -   **Cases à cocher:** Affiche plusieurs options dans une liste. Des sélections multiples sont autorisées.
 
-    -   **Select:** displays a dropdown box where one option can be
-        selected.
+   Chacun des ces types d'entrée sera utilisé dans un exemple de ce chapitre 
 
-    -   **Radio:** displays multiple options in a list; up to one option
-        can be selected.
+3.  **Type d'opération** : Sera réglé sur **Type financier par défaut** choisi lorsque ce tarif a été créé. Vous pouvez remplacer cette valeur si nécessaire.
 
-    -   **Checkbox:** displays multiple options in a list; multiple
-        selections are allowed.
+4.  **Afficher le montant ?** : Ceci affiche le montant du tarif à côté de l'étiquette. Si votre étiquette de champ inclut le montant, cela peut être décoché. Sinon, il doit rester coché.
 
-    Each of the input types will be used in an example in this chapter. 
+5.  **Numéro d'ordre**, **Aide à propos du champ**, **Obligatoire**and **Actif le** Sont suffisament explicites ou ont une aide adéquate fournie sur le formulaire.
 
-3.  **Financial Type** will be set to the **Default Financial Type**
-    chosen when this price set was created. You can override this value
-    if required.
+6.  **Actif le** et **Expire le**  peuvent être réglés de sorte que le champ de tarif ne soit pas visible jusqu'à la date **Actif le**, et non visible après la date **Expire le** ou n'est que Visible entre les dates ******Actif le** et **Expire le**. *Par exemple, vous pouvez utiliser ces champs pour augmenter le tarif à 12h00 le 1er janvier 2017 en définissant le tarif avec les anciens tarifs à **Expire le** 12/01/2017 12:00 am et le champ de prix avec les nouveaux prix soit **Actif le**  1/12/2017 12:00 am.***
 
-4.  **Display Amount?** This displays the price of the option next to
-    the label. If your field label includes the option price then this
-    can be unticked. Otherwise it should stay ticked.
+7. **La visibilité** peut être définie sur **Public** (visible sur votre site Web pour ceux qui peuvent voir la page d'inscription de membre) ou **Admin** (visible uniquement en back-end et uniquement pour les utilisateurs avec les autorisations appropriées).
 
-5.  **Order**, **Field Help**, **Required**and **Active** are either
-    self-explanatory or have adequate help provided on the form.
-
-6.  **Active On** and **Expire On** can be set so that the price field
-    is not visible until the **Active On** date, not visible after the
-    **Expire On**date or is only visible between the******Active On**
-    and **Expire On**dates**.**For example you could use these fields to
-    bring in a price rise at 12:00am on 1 January 2015 by setting the
-    price field with the old prices to **Expire On** 1/12/2015 12:00am
-    and the price field with the new prices to be **Active On**1/12/2015
-    12:00am.
-
-7.  **Visibility**can be set to **Public** (visible on your website to
-    those who can see the membership sign up page) or **Admin** (visible
-    only through the back end and then only to users with appropriate
-    permissions). 
-
-Multiple membership terms
+Conditions d'adhésion multiples :...en cours de traduction...!
 -------------------------
 
 The configuration for the National Membership price field illustrates
