@@ -71,19 +71,12 @@ Ces champs sont:
      -   **Réception de :** sélectionnez l'adresse email dont le reçu de confirmation provient de. Si l'adresse e-mail que vous souhaitez utiliser n'est pas répertoriée, vous pouvez l'ajouter en allant dans **Mailings> From Emails**.
     -   **Réception a :** Sélectionnez l'adresse d'envoi du courriel de confirmation . Si l'adresse e-mail que vous souhaitez utiliser n'est pas répertoriée, vous pouvez l'ajouter en allant dans **Mailings> From Emails**.
     -   **Message de réception:** vous pouvez entrer le texte ici pour envoyer un message spécial au membre. Si vous ne saisissez pas de texte, le message de confirmation et de réception par défaut sera utilisé.
-    
-
+  
 ### **Auto-renouvellement des adhésions via le Back end**
 
 Pour créer manuellement une adhésion qui se renouvellera automatiquement, reportez-vous à l'écran récapitulatif du contact, sélectionnez l'onglet **Adhésions** et cliquez sur **Soumettre l'adhésion par carte de crédit**. Si vous sélectionnez un type d'adhésion qui est configuré pour être récurrent, une case à cocher intitulée **Adhésion renouvelée automatiquement** sera affichée.
 
-
-If you check Auto-renew, a recurring payment (subscription) request will
-be submitted to the selected payment processor. If the request is
-successful, this membership will be automatically renewed on the last
-day of the membership period until the recurring payment is cancelled.
-Membership payment receipt emails will include a link for the member to
-cancel the auto-renewal.
+Si vous cochez "Renouvellement automatique", une demande de paiement récurrente (souscription) sera soumise au processeur de paiement sélectionné. Si la demande est validée, cette adhésion sera automatiquement renouvelée le dernier jour de la période d'adhésion jusqu'à ce que le paiement soit annulé. Les courriels de réception de paiement d'adhésion comprendront un lien pour que le membre annule, éventuellement, le renouvellement automatique.
 
 ### Via le menu **Adhésion** 
 
@@ -98,7 +91,7 @@ cancel the auto-renewal.
 Adhésions gratuites 
 ----------------
 
-Lorsque vous entrez une adhésion manuellement, vous pouvez sélectionner **Enregistrer le paiement à partir d'un contact différent?** pour enregistrer une adhésion offerte par quelqu'un d'autre. La personne qui paie l'adhésion peut être un contact existant ou un nouveau contact créé pendant le processus. Le paiement sera enregistré sur le dossier du payeur, mais l'adhésion sera crédité au destinataire. Le reçu sera envoyé au payeur. Vous devrez envoyer un courriel ou une lettre distincte pour informer le destinataire de la réception de son adhésion offerte par le payeur
+Lorsque vous entrez une adhésion manuellement, vous pouvez sélectionner **Enregistrer le paiement à partir d'un contact différent?** pour enregistrer une adhésion offerte par quelqu'un d'autre. La personne qui paie l'adhésion peut être un contact existant ou un nouveau contact créé pendant le processus. Le paiement sera enregistré sur le dossier du payeur, mais l'adhésion sera crédité au destinataire. Le reçu sera envoyé au payeur. Vous devrez envoyer un courriel ou une lettre distincte pour informer le destinataire de la réception de son adhésion offerte par le payeur.
 
 ![image](../img/gift%20membership.PNG)
 
@@ -109,68 +102,43 @@ CiviCRM offre une fonctionnalité **Entrée de données par lots** (dans le menu
 
 Cette fonction comporte un écran d'entrée de grille d'entrée par lots, et des outils que vous pouvez utiliser pour accélérer le traitement lorsque vous avez beaucoup d'adhésions à traiter en même temps. Il comprend une fonction de copie pour définir tous les champs à la même valeur et vous permet de créer de nouveaux contacts sans quitter l'écran de saisie du lot.
 
-Les champs d'information que vous souhaitez collecter dans la grille d'entrée d'entrée de lot sont déterminés par plusieurs profils réservés à CiviCRM. Si vous souhaitez collecter d'autres types d'informations qui ne sont actuellement pas inclus dans ces profils, vous devrez modifier ces profils pour refléter les champs que vous souhaitez afficher.
+Les champs d'informations que vous souhaitez collecter dans la grille d'entrée de lot sont déterminés par plusieurs profils réservés à CiviCRM. Si vous souhaitez collecter d'autres types d'informations qui ne sont actuellement pas inclus dans ces profils, vous devrez modifier ces profils pour refléter les champs que vous souhaitez afficher.
 
 Pour plus de détails sur cette fonctionnalité consultez le chapitre *Mise en place* de la section *Contributions*.
 
 Importer des adhésions
 -----------------------
 
-Cette fonctionnalité est très utile si vous disposez d'un grand nombre d'enregistrements d'adhésion provenant d'une source extérieure. Elle peut également être utilisée pour mettre à jour les adhésions existantes avec de nouvelles informations.
+Cette fonctionnalité est très utile si vous disposez d'un grand nombre d'enregistrements d'adhésion provenant d'une source extérieure (fichier csv). Elle peut également être utilisée pour mettre à jour les adhésions existantes avec de nouvelles informations.
 
 Il est important de lire le chapitre *Importation de données* dans la section *Flux de travail commun*, avant de commencer à importer des adhésions, car cela donne des informations générales pertinentes. Voici quelques détails spécifiques à l'importation d'adhésion qu'il faut connaître :
 
+- Les enregistrements de contact doivent exister avant d'importer des données d'adhésion. Si vous souhaitez importer des adhésions pour les contacts qui n'existent pas encore dans CiviCRM, vous devez d'abord importer les contacts. Vérifiez que les données de contact ont une ID externe afin que vous puissiez inclure cette ID avec vos données d'adhésion pour associer ces enregistrements aux contacts correspondants. Si vous importez des données d'adhésion pour des contacts qui existent déjà, vous aurez besoin de l'ID de contact interne ou des champs de votre Règle de correspondance sans duplication pour lier les données d'adhésions au contact correctement.
 
--   Contact records must exist before you import membership data. If
-    you want to import membership data for contacts that do not yet
-    exist in CiviCRM, you will first need to import the Contact data.
-    Make sure the contact data has an External ID so you can include
-    this External ID with your membership data to associate these
-    records with the related contacts. If you are importing membership
-    data for contacts that already exist, then you will need the
-    Internal Contact ID or the fields from your Unsupervised Duplicate
-    Matching Rule to associate the related membership data with the
-    correct contact.
--   Your import membership data file MUST contain both Membership Type
-    and Start Date. The membership types listed must exactly match the
-    membership types set up by your CiviCRM Administrator. The start
-    date should use the date format specified for your CiviCRM
-    installation. If your import file does not contain these fields then
-    you will not be able to import it. 
--   You must import membership data for different contact types
-    separately. Importing files with more than one contact type will not
-    work. (You must import new memberships and renewals separately
-    also.) 
+- L'importation de votre fichier de données d'adhésions DOIT contenir obligatoirement le type d'adhésion ET la date de début. Les types d'adhésions répertoriés doivent correspondre exactement aux types d'adhésion établis par votre administrateur CiviCRM. La date de début doit utiliser le format de date spécifié pour votre installation CiviCRM. Si votre fichier d'importation ne contient pas ces champs, vous ne pourrez l'importer.
 
-Now you are ready to import your membership data:
+- Vous devez importer des données d'adhésion par types de contacts différents séparément. L'importation de fichiers avec plus d'un type de contact ne fonctionnera pas. (Vous devez également importer séparément les nouvelles adhésions et renouvellements ).
 
-1. 
-Navigate to **Memberships > Import Memberships**.
-1. 
-On the Upload Data screen:
+Tout ceci étant bien vérifié, vous êtes prêt maintenant à importer vos données d'adhésion:
 
-    -   Select your import data file. It must be a CSV file. 
-    -   Select the checkbox if your source data contains column headers. 
-    -   Specify the contact type you are importing. 
-    -   Indicate what date format you are using.
-    -   Click **Continue >>**.
-1. 
-On the Match Fields screen, map your membership data with the
-appropriate CiviCRM fields under the Matching CiviCRM Field column.
-Note that you can **Save this field mapping** so you can re-use this
-mapping for future imports. 
-1. 
-On the Preview screen, you will see the preview of the results of your
-import. There is a table that lists the Total Rows in the uploaded file,
-the number if rows with errors and the number of valid rows. If you
-continue with the import, the rows with errors will be skipped. You can
-download a file with just these problem records and continue with the
-import. You can then edit the errors and do another import with them.
-Alternatively, you can fix the errors in your original CSV file and
-start the import again.
-1. 
-If there are no errors or you don't want to correct the found errors,
-click **Import Now>>**. You will be shown the progress of the
-import until it is complete. When the import is complete, you will see a
-summary of the import activity and its results. 
+Accédez à **Adhésions> Importer des adhésions**.
+
+1. Ecran Import:
+
+    -   Sélectionnez votre fichier de données d'importation. Il doit s'agir d'un fichier CSV.
+    -   Sélectionnez la case à cocher si vos données source contiennent des intitulés de colonnes.
+    -   Spécifiez le type de contact que vous importez : Particulier, Foyer, Organisation. 
+    -   Indiquez le format de date que vous utilisez.
+    -   Cliquez sur **Suivant**.
+    
+2. Ecran Correspondance des champs
+
+    -   Faites correcpondre vos données d'adhésion avec les champs CiviCRM appropriés sous la colonne "Faire correspondre aux champs CiviCRM". Notez que vous pouvez **Sauvegarder cette correspondance de champs** afin que vous puissiez la réutiliser pour des importations futures, puis cliquez sur **Suivant**.
+
+3. Ecran Prévisualisation
+
+    -   Vous voyez l'aperçu des résultats de votre importation. Il existe une table qui répertorie les lignes totales dans le fichier téléchargé, le nombre de lignes en erreurs et le nombre de lignes valides. Si vous continuez l'importation, les lignes avec des erreurs seront ignorées. Vous pouvez télécharger un fichier avec les enregistrements en erreurs et continuer l'importation. Vous pouvez ensuite éditer les erreurs et corriger les erreurs dans le fichier CSV d'origine ou utiliser le fichier des erreurs modifié et recommencer l'importation.
+
+4. S'il n'y a pas d'erreurs ou si vous ne souhaitez pas corriger les erreurs trouvées, cliquez sur **Importer maintenant**. Vous verrez la progression de l'importation jusqu'à ce qu'elle soit terminée. Lorsque l'importation est terminée, vous verrez un résumé de l'activité d'importation et ses résultats.
+
 
