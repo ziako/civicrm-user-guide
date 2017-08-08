@@ -92,7 +92,7 @@ pages:
     - "Qu'est-ce que CiviMember": 'membership/what-is-civimember.md'
     - "Définition des adhésions": 'membership/defining-memberships.md'
     - 'Online membership sign up': 'membership/online-membership-sign-up.md'
-    - 'Manual entry of memberships': 'membership/manual-entry-of-memberships.md'
+    - "Saisie manuelle des adhésions": 'membership/manual-entry-of-memberships.md'
     - 'Membership price sets': 'membership/membership-price-sets.md'
     - 'Finding and viewing memberships': 'membership/finding-and-viewing-memberships.md'
     - 'Membership Reports': 'membership/membership-reports.md'
