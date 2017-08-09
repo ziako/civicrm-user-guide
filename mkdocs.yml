@@ -94,7 +94,7 @@ pages:
     - 'Online membership sign up': 'membership/online-membership-sign-up.md'
     - "Saisie manuelle des adhésions": 'membership/manual-entry-of-memberships.md'
     - 'Membership price sets': 'membership/membership-price-sets.md'
-    - 'Finding and viewing memberships': 'membership/finding-and-viewing-memberships.md'
+    - "Trouver et afficher des adhésions": 'membership/finding-and-viewing-memberships.md'
     - 'Membership Reports': 'membership/membership-reports.md'
     - 'Renewals': 'membership/renewals.md'
     - 'Cancelling and expiring memberships': 'membership/cancelling-and-expiring-memberships.md'
