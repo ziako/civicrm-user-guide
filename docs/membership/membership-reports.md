@@ -1,58 +1,35 @@
-Membership Reports
+Rapports sur les adhésions 
 ==================
 
-There are a number of techniques for reporting on and analysing your
-memberships.
+Il existe plusieurs techniques pour obtenir un rapport et analyser vos adhésions.
 
-The membership dashboard gives a quick summary of your current
-memberships, displaying information for each membership type such as
-current totals of members, and then a break down for last month, this
-month and current year to date totals. You can also search for specific
-membership details using **Advanced Search** or **Find Memberships**. To
-learn more about the membership dashboard and using the search features
-to find your memberships, refer to the "Finding Memberships" chapter.
+Le tableau de bord des membres donne un résumé rapide de vos adhésions actuelles, affichant des informations pour chaque type d'adhésion, telles que le total actuel des membres, une ventilation pour le dernier mois, le mois en cours et les totaux de l'année en cours. Vous pouvez également rechercher des détails d'adhésions en utilisant **Recherche avancée** ou **Trouver des membres**. Pour en savoir plus sur le tableau de bord des adhésions et comment utiliser les fonctions de recherche pour trouver une adhésion, consultez le chapitre «Trouver des membres».
 
-This chapter will show you how to view and create membership reports as
-well as export membership information so you can do further analysis. 
+Ce chapitre vous montrera comment afficher et créer des rapports d'adhésion ainsi que d'exporter ces informations afin que vous puissiez effectuer d'autres analyses.
 
-Viewing Membership Reports
+Affichage des rapports d'adhésion
 --------------------------
-
-Out-of-the-box, CiviCRM comes with several membership reports designed
-to tell you something specific about your membership:
+CiviCRM est livré avec plusieurs rapports d'adhésions conçus pour vous permettre une analyse de vos adhésions:
 
 ![image](../img/membership%20report%20list_1.PNG) 
 
-
-The **Membership Summary** report shows information about members
-grouped by a date frequency you specify, such as month, week, quarter,
-year. For example, you can look at the number of members that have
-joined each month over a date range, membership types, or any other
-custom data that you collect about them. 
+Le rapport  **Membership Summary** affiche des informations sur les membres regroupés selon une fréquence de date que vous spécifiez, comme le mois, la semaine, le trimestre, l'année. Par exemple, vous pouvez consulter le nombre de membres qui vous ont rejoint chaque mois pendant une période, des types d'adhésion ou toute autre donnée personnalisée que vous collectez à leur sujet.
 
 ![image](../img/membership%20summary%20report.PNG)
 
-If you click on a highlighted field you will then see the corresponding
-**Membership Detail** report for that row. So clicking on **May 2015**
-for membership type **General** shows:
+Si vous cliquez sur un champ en surbrillance, vous verrez le rapport **Membership Detail** correspondant pour cette ligne. Alors cliquez sur **Mai 2015** pour le type d'adhésion **Général** montre:
 
 ![image](../img/membership%20detail%20from%20summary%20report.PNG)
 
-The **Membership Detail** report shows information for each
-membership record based on your selected criteria. 
+Le rapport **Membership Detail** affiche des informations pour chaque fiche d'adhérent en fonction des critères sélectionnés.
 
 ![image](../img/membership%20detail%20report.PNG) 
  
-
-The **Lapsed Memberships** report provides a list of memberships that
-lapsed or will lapse before the date you specify.
+Le rapport **Lapsed Memberships** fournit une liste des adhésions qui ont expiré ou seront caduques avant la date que vous avez spécifiée.
 
 ![image](../img/membership%20lapsed%20report.PNG) 
 
-
-The **Contribution and Membership Details** report will display
-information details of a contributions and those contributions connected
-to a membership records based on your report criteria.
+Le rapport **Contribution et Membership Details** affiche les informations détaillées des contributions ainsi que les contributions liées à une adhésion en fonction des critères sélectionnés.
 
 ![image](../img/membership%20contribution%20report.PNG) 
 
