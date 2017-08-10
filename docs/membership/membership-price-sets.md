@@ -13,7 +13,7 @@ Voici un exemple de la façon dont une tarification d'adhésion, qui offre toute
 La tarification **du Club de natation de Donwell Swim** se compose de cinq **champs de tarif** : 
 Adhésion à l'association nationale, Adhésion annuelle au club, Boutique du club, Billets de tombola et dons.
 
-Il y a deux types d'adhésion possible:
+Il y a deux types d'adhésions possible:
 
 ![image](../img/4.5_membership_price_sets_types_1.PNG) 
  
@@ -22,9 +22,9 @@ Ces types d'adhésions doivent être définis avant de créer la tarification.
 
 Vous devez définir tous les types financiers dont vous aurez besoin avant de pouvoir créer une tarification. (Reportez-vous à la section *Contributions* pour obtenir des informations sur les types financiers)
 
-La tarification des adhésions peut être utilisée dans les pages de jointure ou de renouvellement en ligne ou pour les nouvelles inscriptions de membres traitées manuellement via le système de back office CiviCRM. Cependant, vous ne pouvez pas l'utiliser pour des renouvellements qui sont traités manuellement. Chaque adhésion doit être renouvelée individuellement (voir le chapitre *Renouvellements*) et en plus, vous devrez créer un ensemble de prix de contribution composé des éléments de prix que vous proposez aux public non membres . En outre, vous ne pouvez pas combiner des adhésions avec renouvelement automatique et des adhésions sans renouvellement automatique ou avec des éléments non membres.
+La tarification des adhésions peut être utilisée dans les pages de jointure ou de renouvellement en ligne ou pour les nouvelles inscriptions de membres traitées manuellement via le système de back office CiviCRM. Cependant, vous ne pouvez pas l'utiliser pour des renouvellements traités manuellement. Chaque adhésion doit être renouvelée individuellement (voir le chapitre *Renouvellements*) et en plus, vous devrez créer un ensemble de prix de contribution composé des éléments de prix que vous proposez aux public non membres . En outre, vous ne pouvez pas combiner des adhésions avec renouvelement automatique et des adhésions sans renouvellement automatique ou avec des éléments non membres.
 
-Les tarifications peuvent être configurés de plusieurs façons. Vous devez toujours tester une tarification définie avant de l'utiliser directement sur votre site afin de vous assurer que vous l'avez configuré de la manière qui vous convient le mieux.
+Les tarifications peuvent être configurés de plusieurs façons. Vous devez toujours tester une tarification définie avant de l'utiliser directement sur votre site afin de vous assurer que vous l'avez configurée de la manière qui vous convient le mieux.
 
 Créer une nouvelle tarification 
 ------------------------
@@ -38,7 +38,7 @@ Créer une nouvelle tarification
 5.  Ajoutez un texte d'aide pré ou post-formulaire si vous le souhaitez.
 6.  Assurez-vous que cette tarification soit active et **Enregistrer**
 
-Un formulaire  s'affiche ensuite pour créer le premier **Champ de tarif** de votre **tarification**
+Un formulaire  s'affiche ensuite pour créer le premier **Champ de tarif** de votre **Tarification**
 
 ![image](../img/4.5_membership_price_sets_new_new_price_field_1.PNG) 
 
@@ -60,12 +60,12 @@ Un formulaire  s'affiche ensuite pour créer le premier **Champ de tarif** de vo
 
 4.  **Afficher le montant ?** : Ceci affiche le montant du tarif à côté de l'étiquette. Si votre étiquette de champ inclut le montant, cela peut être décoché. Sinon, il doit rester coché.
 
-5.  **Numéro d'ordre**, **Aide à propos du champ**, **Obligatoire**and **Actif le** Sont suffisament explicites et ont une aide adéquate fournie sur le formulaire.
+5.  **Numéro d'ordre**, **Aide à propos du champ**, **Obligatoire** et **Actif le** sont suffisament explicites et ont une aide adéquate fournie sur le formulaire.
 
 6.  **Actif le** et **Expire le** :  peuvent être réglés de sorte que le champ de tarif ne soit pas visible jusqu'à la date **Actif le**, et non visible après la date **Expire le** ou n'est que visible entre les dates **Actif le** et **Expire le**.
 -  *Par exemple, vous pouvez utiliser ces champs pour augmenter le tarif à 12h00 le 1er janvier 2017 en définissant le tarif avec les anciens tarifs à **Expire le** 12/01/2017 12:00 am et le champ de prix avec les nouveaux prix soit **Actif le**  1/12/2017 12:00 am.***
 
-7. **La visibilité** peut être définie sur **Public** (visible sur votre site Web pour ceux qui peuvent voir la page d'inscription de membre) ou **Admin** (visible uniquement en back-end et uniquement pour les utilisateurs avec les autorisations appropriées).
+7.  La **Visibilité** peut être définie sur **Public** (visible sur votre site Web pour ceux qui ont accès à la page d'inscription de membre) ou **Admin** (visible uniquement en back-end et uniquement pour les utilisateurs avec les autorisations appropriées).
 
 Conditions d'adhésion multiples :
 -------------------------
@@ -75,21 +75,21 @@ La configuration du champ "National Membership" affiche le type de champ **Radio
 
 Dans le champ **Type d'adhésion**, vous sélectionnez l'option souhaitée dans une liste déroulante parmi les types d'adhésion que vous avez configuré. Lorsque vous sélectionnez un type d'adhésion spécifique, **le nombre de périodes** est rempli automatiquement à 1, **Montant** et **Type financier** sont automatiquement remplis en fonction de la définition du **Type d'adhésion**. Toutes ces valeurs peuvent être modifiées au besoin. *Le type d'adhésion de l'Association nationale des associations a une durée de 1 an avec un droit minimum de 100 $.*
 
-La définition du **Nombre de périodes** à 2 donnera 2 ans d'adhésion. ***L'étiquette*** devra être modifiée si vous avez plus d'une option car chaque option doit avoir une ***étiquette*** différente. Le **Montant** peut être modifié à la valeur souhaitée. Cela vous permet d'offrir une concession et des frais standard pour le même nombre de périodes.
+La définition du **Nombre de périodes** à 2 donnera : 2 ans d'adhésion. ***L'étiquette*** devra être modifiée si vous avez plus d'une option car chaque option doit avoir une ***étiquette*** différente. Le **Montant** peut être modifié à la valeur souhaitée. Cela vous permet d'offrir une concession et des frais standard pour le même nombre de périodes.
 
-Comme nous n'avons pas inclu le prix de chaque option dans son **Label**, nous devrions avoir **Display Amount?** cochée.
+Comme nous n'avons pas inclu le tarif de chaque option dans son **Label**, nous devrions avoir **Afficher le Montant?** cochée.
 
 Définir un champ de tarif de cette façon réduira le nombre de types d'adhésion que vous devez créer. Vous n'avez besoin que d'un type d'adhésion à l'Association nationale d'un an avec un minimum de 100 $ pour ce champ de tarif, au lieu de trois types d'adhésion. Cependant, vous devez être conscient que vos membres ne pourront pas renouveler automatiquement si vous utilisez ce type de configuration pour plusieurs périodes.
 
 Membre de plusieurs organisations
 ----------------------------------------
 
-En plus des frais d'association nationale, les contacts peuvent s'inscrire à une adhésion au club de natation. Le type de champ **Selection** a été choisi pour ce champ.
+En plus des frais d'association nationale, les contacts peuvent s'inscrire à l'adhésion au club de natation. Le type de champ **Selection** a été choisi pour ce champ.
 
 ![image](../img/4.5_membership_price_sets_second_organisation_1.PNG) 
 
-Rappel, lorsque vous sélectionnez un type d'adhésion spécifique dans une liste déroulante, **le nombre de périodes** est remplit automatiquement à 1 , **Le montant** et **Type financier** sont auto-remplis en fonction de la définition du type d'adhésion. Vous pouvez modifier l'une de ces valeurs comme vous le souhaitez.
-Comme nous n'avons pas inclu le tarif de chaque option dans son **Label**, nous devrions avoir **Afficher le montant?** coché.
+Rappel, lorsque vous sélectionnez un type d'adhésion spécifique dans une liste déroulante, **le nombre de périodes** est rempli automatiquement à 1 , **Montant** et **Type financier** sont auto-remplis en fonction de la définition du type d'adhésion. Vous pouvez modifier l'une de ces valeurs comme vous le souhaitez.
+Comme nous n'avons pas inclu le tarif de chaque option dans son **Label**, nous devons avoir **Afficher le montant?** coché.
 
 La combinaison des deux champs de tarif décrits jusqu'à présent permettra à quelqu'un de s'inscrire pour un minimum de 1 et un maximum de 2 adhésions. Rappelez-vous que les deux membres doivent être liés à deux organisations différentes car un contact ne peut avoir qu'une seule adhésion active avec une organisation spécifique. (Voir le chapitre *Définition des membres* pour plus d'informations.)
 
@@ -98,47 +98,27 @@ Champs de tarif hors adhésion
 
 Vous pouvez également configurer les champs de tarif pour offrir des services supplémentaires, des abonnements ou d'autres options au public non membres.
 
-You can also configure price set fields to offer additional services, subscriptions or other non-membership options. 
 - Il existe trois champs de prix hors adhésion dans notre exemple. Le premier offre une sélection de matériel de natation de marque club. Le type de champ **checkbox** permet aux personnes de choisir plusieurs éléments parmi les options proposées.
 
 ![image](../img/Membership%20Pricesets%20non-member%20field_1.PNG) 
 
 Comme ce sont des produits plutôt que des adhésions, les champs **Type d'adhésion** et **Nombre de périodes** restent vides. Vous devez définir le **Label**, **Montant** et **Type financier** pour chaque option.
 
-Comme nous n'avons pas inclu le tarif de chaque option dans son **Label**, nous devrions avoir **Afficher le montant?** coché.
+Comme nous n'avons pas inclu le tarif de chaque option dans son **Label**, nous aurons **Afficher le montant?** coché.
 
+Si vous regardez les captures d'écran précédentes des trois champs de prix développés jusqu'à présent, vous devriez remarquer qu'ils contiennent tous les mêmes champs bien qu'ils correspondent à trois types de champs de saisie différents ; **Radio** et **Sélection**. Les types d'entrée sont interchangeables, vous permettant de choisir une seule option et peuvent être utilisés pour les options d'adhésion ou de non-adhésion. **Case à cocher** doit être utilisé si vos contacts sont autorisés à choisir plus d'une option dans un champ de prix unique. Il peut également être utilisé pour les options d'adhésion ou de non-adhésion.
 
-If you look back at the screen shots of the three price fields discussed
-so far you should notice that they all contain the same fields even
-though are for three different input field types. **Radio** and
-**Select** input types are interchangeable, both allow you to choose
-just one option and can be used for membership or non-membership
-options. **Checkbox**es must be used if your contacts are allowed to
-choose more than one option from a single price field. They also can be
-used for either membership or non-membership options.
-
-The fourth input field type is **Text/Numeric Quantity** and it can only
-be used for non-membership options. With this field type you usually
-include the **unit price** of the item on offer in the **field label**
-as shown in the following example or in the **field help**. This means
-that **Display Amount?** should not be ticked.
+Le quatrième type de champ de saisie est **Texte/Quantité numérique** et il ne peut être utilisé que pour des options hors adhésion. Avec ce type de champ, vous incluez habituellement le **prix unitaire** de l'article offert dans l'étiquette. Comme indiqué dans l'exemple suivant ou dans l'aide du **champ**. Cela signifie que **Afficher le Montant?** ne devrait pas être coché.
 
 ![image](../img/4.5_membership_price_sets_raffle_dates_fields_used.PNG)
 
-This will display as:
+Ce qui affichera : 
 
 ![image](../img/membership_price_set_raffle_preview_1.PNG)
 
-This price field will only be visible between the **Active On** and
-**Expire On**dates and lets us make sure that the raffle tickets can
-only be purchased during the selling period authorised by the relevant
-licensing authority.
+Ce champ de prix ne sera visible que entre les dates **Actif le** et **Expire le**  nous permettant de nous assurer que les tickets de tombola ne peuvent être achetés que pendant la période de vente autorisée selon les règlements en vigueur.
 
-The final price field is configured to allow people to give a donation.
-Notice that the **unit price** is 1 and it is not included in in the
-field label although the currency symbol is. The **Display Amount?** is
-not ticked. This is the best configuration to allow "any amount"
-donations. 
+Le champ de prix final est configuré pour permettre aux visiteurs de donner un don. Notez que le **Prix unitaire** est égal à 1 et qu'il n'est pas inclus dans l'intitulé du champ bien que le symbole de la devise y soit (€). La case **Afficher le Montant?** n'est pas coché. C'est la meilleure configuration pour permettre de choisir le montant des dons par les visiteurs.
 
 ![image](../img/4.5_membership_price_sets_donation.PNG)
 
