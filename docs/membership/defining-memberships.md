@@ -20,7 +20,7 @@ Pour démarrer la configuration sur les types d'adhésions :
 1.  Allez à : **Adminitrer>CiviMember>Types d'adhésion**.
 2.  Selectionner : **Ajouter un type d'adhésion**
 
-![image](civicrm-user-guide/docs/img/New-membership-type.PNG)
+![image](../img/new-membership-type.png)
 
 -   **Nom**:
 Le nom est affiché dans tout le système, tant sur les pages publiques que dans les pages de backend. Passez donc un peu de temps à penser à un nom qui est approprié aux deux publics. Il peut être changé ultérieurement (bien que cela puisse entraîner un travail supplémentaire dans la mise à jour des reçus d'adhésion s'ils ont été personnalisés en fonction des noms d'adhérents)
