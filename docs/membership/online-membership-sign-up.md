@@ -1,174 +1,88 @@
-Online membership sign up
+Adhésion des membres en ligne
 =========================
 
-This chapter explains how to allow visitors to your website to sign up
-as members of your organisation. It looks at the steps necessary to
-create membership sign up pages, some things to consider when doing so
-(including testing your membership pages), and the ways in which you can
-integrate membership sign up pages into your website.
+Ce chapitre explique comment permettre aux visiteurs de votre site Web de s'inscrire en tant que membres de votre organisation. Nous examinerons les étapes nécessaires pour créer des pages d'abonnement d'adhésion, certaines éléments sont à considérer lors de cette opération, y compris le test de vos pages d'adhésion et la façon dont vous pouvez integrer les pages d'adhésion sur votre site public.    
 
-Before reading this chapter, you may wish to read the chapter *Defining
-memberships* which gives useful background to many concepts (like
-membership types, membership statuses, and so on).
+Avant de lire ce chapitre, il est souhaitable d'avoir pris connaissance du chapitre *Définir les adhésions* qui donne un panorama utile à de nombreux concepts (comme les types d'adhésion, les statuts de l'adhésion, etc.).
 
-About membership sign up pages
---------------------------------
+À propos des pages d'adhésion
+-------------------------------------------
 
-Membership sign up pages are created in the same way as online
-contribution pages. In essence, you create an online contribution page
-and then add to this page the ability to sign up for a membership. The
-reason we do this is because the actual work flow for becoming a member
-of an organisation is normally quite similar to the work flow for
-contributing money to an organisation, and tying them together allows
-membership pages to take advantage of a lot of the functionality that
-contribution pages have, for example, we can offer premiums as part of
-the membership sign up.
+Les pages d'adhésions sont créées de la même manière que les pages de contribution en ligne. Essentiellement, vous créez une page de contribution en ligne, puis ajoutez à cette page la possibilité d'adhésion. La raison pour laquelle nous faisons cela est parce que la méthode réelle pour devenir membre d'une organisation est normalement assez similaire à la méthode de contribution financière à une organisation. Les lier ensemble permet aux pages d'adhésion de profiter d'une grande partie de la fonctionnalité qu'ont les pages de contribution, par exemple, vous pouvez offrir des cadeaux dans le cadre de nouvelles adhésions.
 
-Note that even if your membership is free, you should still use a
-contribution page for online sign up (see free memberships below for
-instructions on how to do this).
+Notez que, même si votre adhésion est gratuite, vous devez toujours utiliser une page de contribution pour l'adhésion en ligne (voir les adhésions gratuites ci-dessous pour obtenir les instructions sur la façon de le faire).
 
-Contribution pages are very powerful and have a lot of options that are
-grouped together into tabs. Once you have given your contribution page a
-name, these tabs are displayed at the top of the page as you work
-through the rest of the set up process.
+Les pages de contribution sont très puissantes et ont de nombreuses options regroupées en onglets. Dès que vous avez donné un nom à votre page de contribution, ces onglets sont affichés en haut de la page lorsque vous travaillez dans le reste du processus de configuration.
 
 ![image](../img/membership-tabs.png)
 
-In this chapter, we concentrate on the tabs and options of contribution
-pages that are most useful for memberships. A couple of tabs that are
-worth highlighting include the Memberships tab, which contains the bulk
-of the membership configuration, and the Profiles tab, which allows you
-to collect information about the people or organisations that are
-filling out your membership form.
+Dans ce chapitre, nous nous concentrerons sur les onglets et les options des pages de contribution qui sont les plus utiles pour les adhésions. Quelques onglets méritant d'être mis en évidence incluent l'onglet Adhésions, contenant la majeure partie de la configuration de l'adhésion. L'onglet Profils vous permet de collecter des informations sur les personnes ou les organisations qui remplissent votre formulaire d'adhésion.
 
-We recommend you also review the chapters on creating [online
-contribution pages](../contributions/online-contributions) which will give you
-a better understanding of all the
-tools you have at your disposal when creating membership pages.
+Nous vous recommandons également de consulter les chapitres sur la création de [pages de contribution en ligne](.../ contributions/contributions en ligne) qui vous permettront de mieux comprendre tous les outils dont vous disposez lors de la création de pages d'adhésion.
+- Menu : Adminitrer>civi contribute>Nouvelle page de contribution
 
-###The Title tab
+### L'onglet Titre  
 
-The title tab (which is also the first page that you see when you create
-a new membership page) allows you to set the title for the membership
-page and set some basic information like the Financial Type etc. that
-will be recorded for memberships that are made through this page.
+L'onglet titre (c'est la première page que vous voyez lorsque vous créez une nouvelle page d'adhésion) vous permet de définir le titre de la page d'adhésion et de définir certaines informations de base comme le type financier, etc., qui seront enregistrées pour les adhésions qui sont réalisées par cette page.
 
-This tab also has space for you to include an introductory message to be
-displayed on your membership page. You can include images and other
-simple HTML in this introductory text.
+Cet onglet vous permet également d'inclure un message d'introduction à afficher sur votre page d'adhésion. Vous pouvez inclure des images et du code HTML simple dans ce texte d'introduction.
 
-###Organisational memberships
+### Cotisation au nom d'une organisation
 
-The title tab contains a check box to allow people to become members *on
-behalf of* an organisation, which is the recommended way to offer
-organisational memberships. When enabled, you are prompted to select a
-profile (see the profiles chapter for more information) that will be
-used to collect organisational information. Organisational sign up can
-either be optional or required.
+L'onglet titre contient une case à cocher "*Permettre aux individus de contribuer et/ou d'adhérer au nom d'une organisation*" qui  permet  aux utilisateurs d'identifier une organisation comme donateur ou adhérent, ce qui est la manière recommandée d'offrir des adhésions aux organisations. La contribution ou l'adhésion sera attribuée à cette organisation. Lorsque cette case est activée, l'utilisateur est invité à sélectionner un profil (voir le chapitre des profils pour plus d'informations) utilisé pour collecter des informations sur l'organisation. Cette inscription pour une organisation peut être facultative ou obligatoire.
+Une fois cette page remplie cliquer sur **Suivant**
 
 ![image](../img/Title%20settings%201%20.jpg)
 
-### The Amounts tab
+### L'onglet Montant 
 
-The amounts tab allows you to set various financial options, including
-the payment processor that is used on the page. Note that you can select
-more than one payment processor which will give people who are signing
-up a choice. For more information on setting up payment processors, and
-things to consider when choosing a payment processor see the chapter
-*Payment processors*.
+L'onglet des montants vous permet de définir diverses options financières, y compris le processeur de paiement qui est utilisé sur la page. Notez que vous pouvez sélectionner plus d'un processeur de paiement pour donner le choix aux personnes qui acceptent. Pour plus d'informations sur la configuration des processeurs de paiement et sur les points à considérer lors du choix d'un processeur de paiement, voir le chapitre *Processeurs de paiement*.
 
 ![image](../img/contribution%20amounts.jpg)
 
-Note that the amounts tab *is not* the place where membership fees are
-configured - they are configured on the Memberships tab. If you want to
-use this page for collecting membership amounts and *do not* want to
-solicit extra contributions, leave the **Contribution Amounts section
-enabled** checkbox unticked. If you *do* want to solicit contributions
-on top of membership fees, then tick the box and either add some
-suggested contribution options or configure a contribution price set.
+Notez que l'onglet des montants *n'est pas* l'endroit où les frais d'adhésion sont configurés : ils sont configurés dans l'onglet Adhésions. Si vous souhaitez utiliser cette page pour collecter des montants d'adhésion et *ne* souhaitez pas solliciter des contributions supplémentaires, laissez la case **Section des montants de contribution activée** non cochée. Si vous *désirez solliciter des contributions en plus des frais d'adhésion*, cochez la case et ajoutez des options de contribution proposées ou configurez un ensemble de prix de contribution*.
 
-### Free memberships
+### Adhésions gratuites
 
-If you are offering **free memberships**, you should leave the 'Execute
-real-time monetary transactions' box unticked and choose a membership
-type with a zero value minimum fee.
+Si vous offrez **Adhésions gratuites**, vous devez laisser la boîte "Exécuter des transactions monétaires en temps réel" non cochée et choisir un type d'adhésion avec un tarif minimum de valeur zéro.
 
-### The Memberships tab
+### L'onglet Adhésions
 
-Since we are using this contribution page for membership sign up and
-renewal, we need to check the **Membership Section Enabled** to use this
-contribution page for memberships.
+Puisque nous utilisons cette page de contribution pour l'inscription et le renouvellement des adhésions, nous devons vérifier la **Section d'adhésion activée** pour utiliser cette page de contribution pour les adhésions.
 
-The first few boxes allow you add text that will be displayed when this
-page is used for initial membership sign up and for renewals. When a
-logged in user with a current or expired membership views the membership
-sign up page, CiviCRM automatically replaces the membership sign up page
-with a membership renewal page which contains the text from the renewals
-box.
+Les zones de texte (Message d'introduction — Nouvelles adhésions et Message d'introduction — Renouvellements) vous permettent d'ajouter du texte qui sera affiché lorsque cette page est utilisée pour l'inscription initiale et pour les renouvellements. Lorsqu'un utilisateur enregistré avec une adhésion actuelle ou expirée affiche la page d'inscription de membre, CiviCRM remplace automatiquement la page d'inscription de membre par une page de renouvellement d'adhésion qui contient le texte de la zone de renouvellement.
 
 ![image](../img/membership%20signup%201.jpg)
 
-After the text boxes, are a few options that you can use to configure
-the membership types available on the membership form.
+Après ces zones de texte, vous trouverez quelques options que vous pouvez utiliser pour configurer les types d'adhésion disponibles sur le formulaire d'adhésion.
 
 ![image](../img/MembershipTabOnlineCintribConfiguration.PNG)
 
-Looking at the simple use cases first, you select which membership types
-should be available on the page, which should be the default, and which
-can be auto-renewed (you'll need to have set up your membership types as
-auto-renew and have a payment processor that supports automatic
-recurring payments).
+Envisagez d'abord les cas d'utilisations simples. Sélectionnez les types d'adhésion qui devraient être disponibles sur la page, ceux qui devraient être par défaut et qui peuvent être renouvelés automatiquement (vous devrez configurer vos types d'adhésion comme renouvellement automatique avec un processeur de paiement qui supporte les paiements périodiques automatiques).
 
-If you enable auto-renew for a membership then on the web page users
-will see "Please renew my membership automatically. (Your initial
-membership fee will be processed once you complete the confirmation
-step. You will be able to cancel automatic renewals at any time by
-logging in to your account or contacting us.)" Membership payment
-receipt emails will include a link for the member to cancel the
-auto-renewal.
+Si vous activez le renouvellement automatique pour une adhésion, puis sur la page Web, les utilisateurs verront "Veuillez renouveler mon abonnement automatiquement". (*Vos frais d'adhésion initiaux seront traités une fois que vous aurez terminé l'étape de confirmation. Vous pourrez annuler les renouvellements automatiques à tout moment en vous connectant à votre compte ou en nous contactant*)". Les e-mails de réception de paiement d'adhésion incluentt un lien pour que le membre annule le renouvellement automatique.
 
-If you want, you can make membership signup optional. This is often
-useful if you have a contribution page on which you want to offer the
-ability to become a member, but not require it (you will need to check
-the box for "Contribution Amounts section enabled" on the Amounts tab).
-You can decide whether such payments are recorded separately from
-membership fee payments.
+Si vous le souhaitez, vous pouvez avoir une inscription d'adhésion optionnelle. Ceci est souvent utile si vous avez une page de contribution sur laquelle vous souhaitez offrir la possibilité de devenir membre, mais ne l'exigez pas (vous devrez cocher la case "Section des montants des contributions activés" dans l'onglet Montants). Vous pouvez décider si ces paiements sont enregistrés séparément des paiements des frais d'adhésion.
 
-If you cannot accomplish what you need using the Membership Types table
-(for example if you want to offer sign up to two memberships at the same
-time, or offer sign ups with multiple membership terms), then you should
-use a membership price set (which is covered in its own chapter
-*Membership price sets*).
+Si vous ne pouvez pas réaliser ce dont vous avez besoin en utilisant les "Types d'adhésion" (par exemple, si vous souhaitez offrir un abonnement à deux adhésions en même temps ou créer des inscriptions avec plusieurs statuts d'adhésion), vous devez utiliser un ensemble de prix d'adhésion (voir le chapitre *Gestion des tarifications*).
 
-Some of the things you can do with price sets include:
+Ce que vous pouvez faire avec la Gestion des tarifications :
 
--   allow users to sign up for multiple classes of membership (e.g.
-    "national" and "local" memberships) at the same time
--   let people sign up for multiple membership terms at the same time
--   offer other options such as a paid subscription in addition to
-    membership signup.
+-   Permettre  aux utilisateurs de s'inscrire à plusieurs types d'adhésion en même temps(par exemple, les adhésions «nationales» et «locales») 
+-   Permettre aux utilisateurs de se connecter à plusieurs statuts d'adhésion en même temps
+-   Offrir d'autres options telles que la souscription à des options payantes en plus de l'adhésion. 
 
-###The Receipt tab
+### L'onglet Réception
 
+Une fois que le visiteur du site a complété le formulaire d'inscription ou de renouvellement de l'adhésion, il sera redirigé vers une page de remerciement et pourra recevoir un reçu électronique généré et envoyé automatiquement. Cette quatrième étape vous permet de configurer cette option. Vous pouvez personnaliser le message qui s'ajoute au reçu d'adhésion sur cette page et l'adresse électronique d'envoi du reçu. Si vous souhaitez personnaliser davantage le modèle de courrier électronique de réception, vous pouvez le faire en utilisant l'écran **Civimail> Modèles de messages**.
 
-After the site visitor completes the membership signup or renewal form,
-they will be redirected to a thank-you page and can have an email
-receipt generated and sent to them. This fourth step in the wizard
-allows you to configure those options. You can customise the message
-that gets added to the membership receipt on this page, and the email
-address that the receipt will come from. If you want to further
-customise the receipt email template you can do so using the **Mailings > Message templates** screen.
-
-You may also want to CC or BCC every membership receipt to a staff
-member so they are alerted immediately every time someone becomes a
-member.
+Vous pouvez également choisir l'envoi "CC ou BCC" pour chaque reçu d'adhésion à un membre du personnel afin qu'ils soient alerté immédiatement chaque fois que quelqu'un devient membre.
 
 ![image](../img/membership%20page%20receipt%201.jpg)
 
 ![image](../img/membership%20page%20receipt%202.jpg)
 
-###The Tell-A-Friend tab
+### L'onglet Recommander à un ami
 
 
 CiviCRM allows you to add a tell-a-friend feature to the thank-you page.
