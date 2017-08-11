@@ -154,7 +154,7 @@ Pour décider quel statut doit être appliqué, CiviCRM cherche à voir si l'adh
 
 Lorsque vous modifiez ou ajoutez un nouveau statut de membre, le formulaire suivant apparaît.
 
-![image](../img/membership_status_rules.png) 
+![image](../img/Fr_statut_adhesion.png) 
 
 Vous pouvez ajouter de nouveaux statuts et modifier les statuts existants (à l'exception de En attente et Décédé) en utilisant ce formulaire. Pour créer un nouveau statut, vous devez préciser quand le statut doit commencer et arrêter. Cela se fait par rapport à un événement d'adhésion (c'est-à-dire la date d'inscription, la date de début ou la date de fin). Par exemple. «Un mois après la date de début de l'adhésion serait configuré avec «date de début» et «1 mois» ou «cinq jours avant la date de fin d'adhésion» serait configuré avec «date de fin» et «-5 jours».
 
