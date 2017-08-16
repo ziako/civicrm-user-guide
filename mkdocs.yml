@@ -11,7 +11,7 @@ pages:
 - Introduction:
     - "Qu'est-ce que CiviCRM ?": 'introduction/what-is-civicrm.md'
     - "Des exemples concrets": 'introduction/real-world-examples.md'
-    - "Composantes": 'introduction/components.md'
+    - "Composants": 'introduction/components.md'
     - 'Extensions': 'introduction/extensions.md'
     - "Qui est la communauté CiviCRM ?": 'introduction/who-is-civicrm.md'
 - Préparation:
