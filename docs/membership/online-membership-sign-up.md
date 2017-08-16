@@ -1,14 +1,14 @@
 Adhésion des membres en ligne
 =========================
 
-Ce chapitre explique comment permettre aux visiteurs de votre site Web de s'inscrire en tant que membres de votre organisation. Nous examinerons les étapes nécessaires pour créer des pages d'abonnement d'adhésion, certaines éléments sont à considérer lors de cette opération, y compris le test de vos pages d'adhésion et la façon dont vous pouvez integrer les pages d'adhésion sur votre site public.    
+Ce chapitre explique comment permettre aux visiteurs de votre site Web de s'inscrire en tant que membres de votre organisation. Nous examinerons les étapes nécessaires pour créer des pages d'abonnement d'adhésion, certains éléments sont à considérer lors de cette opération, y compris le test de vos pages d'adhésion et la façon dont vous pouvez integrer les pages d'adhésion sur votre site public.    
 
 Avant de lire ce chapitre, il est souhaitable d'avoir pris connaissance du chapitre *Définir les adhésions* qui donne un panorama utile à de nombreux concepts (comme les types d'adhésion, les statuts de l'adhésion, etc.).
 
 À propos des pages d'adhésion
 -------------------------------------------
 
-Les pages d'adhésions sont créées de la même manière que les pages de contribution en ligne. Essentiellement, vous créez une page de contribution en ligne, puis ajoutez à cette page la possibilité d'adhésion. La raison pour laquelle nous faisons cela est parce que la méthode réelle pour devenir membre d'une organisation est normalement assez similaire à la méthode de contribution financière à une organisation. Les lier ensemble permet aux pages d'adhésion de profiter d'une grande partie de la fonctionnalité qu'ont les pages de contribution, par exemple, vous pouvez offrir des cadeaux dans le cadre de nouvelles adhésions.
+Les pages d'adhésions sont créées de la même manière que les pages de contribution en ligne. Essentiellement, vous créez une page de contribution en ligne, puis ajoutez à cette page la possibilité d'adhésion. La raison pour laquelle nous faisons cela est parce que la méthode réelle pour devenir membre d'une organisation est normalement assez similaire à la méthode de contribution financière à une organisation. Les lier ensemble permet aux pages d'adhésion de profiter d'une grande partie de la fonctionnalité qu'ont les pages de contribution, par exemple, vous pouvez offrir des gratuités ou cadeaux dans le cadre de nouvelles adhésions.
 
 Notez que, même si votre adhésion est gratuite, vous devez toujours utiliser une page de contribution pour l'adhésion en ligne (voir les adhésions gratuites ci-dessous pour obtenir les instructions sur la façon de le faire).
 
@@ -60,9 +60,9 @@ Après ces zones de texte, vous trouverez quelques options que vous pouvez utili
 
 Envisagez d'abord les cas d'utilisations simples. Sélectionnez les types d'adhésion qui devraient être disponibles sur la page, ceux qui devraient être par défaut et qui peuvent être renouvelés automatiquement (vous devrez configurer vos types d'adhésion comme renouvellement automatique avec un processeur de paiement qui supporte les paiements périodiques automatiques).
 
-Si vous activez le renouvellement automatique pour une adhésion, puis sur la page Web, les utilisateurs verront "Veuillez renouveler mon abonnement automatiquement". (*Vos frais d'adhésion initiaux seront traités une fois que vous aurez terminé l'étape de confirmation. Vous pourrez annuler les renouvellements automatiques à tout moment en vous connectant à votre compte ou en nous contactant*)". Les e-mails de réception de paiement d'adhésion incluentt un lien pour que le membre annule le renouvellement automatique.
+Si vous activez le renouvellement automatique pour une adhésion, puis sur la page Web, les utilisateurs verront "Veuillez renouveler mon abonnement automatiquement". (*Vos frais d'adhésion initiaux seront traités une fois que vous aurez terminé l'étape de confirmation. Vous pourrez annuler les renouvellements automatiques à tout moment en vous connectant à votre compte ou en nous contactant*)". Les e-mails de réception de paiement d'adhésion incluent un lien pour que le membre annule le renouvellement automatique.
 
-Si vous le souhaitez, vous pouvez avoir une inscription d'adhésion optionnelle. Ceci est souvent utile si vous avez une page de contribution sur laquelle vous souhaitez offrir la possibilité de devenir membre, mais ne l'exigez pas (vous devrez cocher la case "Section des montants des contributions activés" dans l'onglet Montants). Vous pouvez décider si ces paiements sont enregistrés séparément des paiements des frais d'adhésion.
+Si vous le souhaitez, vous pouvez avoir une inscription d'adhésion optionnelle. Ceci est souvent utile si vous avez une page de contribution sur laquelle vous souhaitez offrir la possibilité de devenir membre, mais que vous ne l'exigiez pas (vous devrez cocher la case "Section des montants des contributions activés" dans l'onglet Montants). Vous pouvez décider si ces paiements sont enregistrés séparément des paiements des frais d'adhésion.
 
 Si vous ne pouvez pas réaliser ce dont vous avez besoin en utilisant les "Types d'adhésion" (par exemple, si vous souhaitez offrir un abonnement à deux adhésions en même temps ou créer des inscriptions avec plusieurs statuts d'adhésion), vous devez utiliser un ensemble de prix d'adhésion (voir le chapitre *Gestion des tarifications*).
 
@@ -84,147 +84,72 @@ Vous pouvez également choisir l'envoi "CC ou BCC" pour chaque reçu d'adhésion
 
 ### L'onglet Recommander à un ami
 
-
-CiviCRM allows you to add a tell-a-friend feature to the thank-you page.
-The page lets your members share details about your organization with
-their friends by emailing them a link and information. Those friends
-that are told about the membership sign up will also be added to CiviCRM
-if they do not already exist and their source field will show that they
-were added via tell-a-friend.
+CiviCRM vous permet d'ajouter une fonction "Recommander à un ami" à la page de remerciement.  
+La page permet à vos membres de partager des informations sur votre organisation avec leurs amis en leur envoyant un lien vers votre site. Les amis qui sont ainsi informés de l'inscription et l'adhésion seront également ajoutés à CiviCRM s'ils n'existent pas déjà et leur champ source montrera qu'ils ont été ajoutés via une recommandation d'un ami. 
 
 ![image](../img/tell%20a%20friend.jpg)
 
-###Collecting information as part of membership sign up (the Profiles tab)
+###Collecte d'informations dans le cadre de l'adhésion (onglet Profils)  
 
-You can use profiles to collect information about your members as they
-fill in the sign up form. By default, contribution pages will include
-only an email field. Adding a profile to the contribution form will add
-a collection of fields that CiviCRM will display as part of the
-membership sign up form. You can use profiles to collect extra
-information about the contact, for example their address, their
-interests, etc. If the person signing up to become a member is logged
-in, their profile fields will be populated with data from CiviCRM where
-available. Don't add a membership profile. Collection of that
-information occurs automatically during the online membership sign up
-process.
+Vous pouvez utiliser des profils pour recueillir des informations sur les membres qui remplissent le formulaire d'inscription. Par défaut, les pages de contribution ne comprennent qu'un champ de courrier électronique. L'ajout d'un profil au formulaire de contribution ajoutera, si besoin, plusieurs champs que CiviCRM affichera dans le formulaire d'inscription de membre. Vous pouvez utiliser des profils pour recueillir des informations supplémentaires sur le contact, par exemple leur adresse, leurs intérêts, etc. Si la personne qui s'inscrit pour devenir membre est connectée, ses champs de profil seront remplis avec les données de CiviCRM, le cas échéant. N'ajoutez pas de profil d'adhésion. La collecte de cette information se produit automatiquement pendant la procédure d'inscription en ligne.
 
 ![image](../img/membership-profiles.png)
 
-The profiles tab allows you to select an already existing profile to
-include on your membership page, and if you have permission, to edit an
-existing profile or create a new profile to be included on this page.
-**WARNING:** If you edit an existing profile here, it will be changed in
-all places where that profile is used.
+L'onglet profil vous permet de sélectionner un profil existant à inclure sur votre page d'adhésion, et si vous avez la permission, de modifier un profil existant ou de créer un nouveau profil à ajouter sur cette page.
 
-###Premiums tab
+**ATTENTION :** Si vous modifiez un profil existant ici, il sera modifié dans tous les endroits où ce profil est utilisé.
 
-Premiums are thank you gifts and incentives offered to people that
-donate to your organisation. They are most commonly associated with
-tiered donation levels (e.g. donate $50 to receive a T-shirt) but can
-also be used in conjunction with your membership pages. Before
-including premiums on a contribution page, you must configure them
-through **Contributions > Premiums (Thank-you Gifts)**.
+###L'onglet Primes 
 
-The Premiums tab of the contribution page wizard controls the
-introductory text, contact information, and other premium-related
-details.
+Les primes sont des cadeaux et des incitations offerts aux personnes qui font un don à votre organisation. Ils sont le plus souvent associés à des niveaux de dons échelonnés (par exemple, donnez 50 € pour recevoir un T-shirt) mais peuvent également être utilisés conjointement avec vos pages d'adhésion. Avant d'inclure les primes sur une page de contribution, vous devez les configurer par le biais de **Contributions> Primes (cadeaux de remerciement)**.
+
+L'onglet Primes de l'assistant de la page de contribution contrôle le texte d'introduction, les informations de contact et les autres détails liés aux primes.
+
+
 
 ![image](../img/membership-profiles.png)
 
-Testing membership sign up pages
+Test des pages d'adhésion  
 --------------------------------
+Dès que  la configuration de votre page d'adhésion est terminé, il est conseillé de tester le processus afin de vous assurer que tout est correct. Si vous souhaitez tester pour rechercher ou supprimer des adhésions, vous pouvez le faire en cliquant sur la case à cocher «Évaluer» **Trouver des membres**. La fonctionnalité de test est disponible sur **Contributions> Gérer les Pages de Contribution**, cliquez sur **Liens** à côté de votre page d'inscription / renouvellement de membre et cliquez sur **Test-drive**. Toutes les données d'adhésion que vous envoyez via le formulaire en mode test seront ajoutées à CiviCRM en tant que données de test et ne seront pas incluses dans les statistiques ou lors de la recherche d'adhésion.
 
-Once you finish configuring and setting up your membership page, you are
-advised to test drive the process to make sure everything is working
-according to your expectations. Test functionality is available on
-**Contributions** > **Manage Contribution Pages**, click **Links** next
-to your membership sign-up/renewal page and click **Test-drive**. Any
-membership data you send through the form in test mode will be added to
-CiviCRM as test data and not be included in any membership stats or when
-searching for members, etc. If you want to find and delete test
-memberships, you can do so by clicking the 'is test' check box in **Find
-Memberships**.
+Essayez de vous mettre à la place de quelqu'un qui veut devenir membre de votre organisation et testez le processus plusieurs fois, avec différentes combinaisons de champs à chaque fois. Assurez-vous que les données apparaissent comme prévu dans CiviCRM. Une fois que vous avez testé le processus et que vous avez apporté les modifications nécessaires, faites à nouveau tester le processus par les autres membres du personnel ou des amis de votre organisation.
 
-Try and put yourself in the eyes of someone who wants to become a member
-of your organisation and go through the process a number of times, with
-different combinations of fields each time. Make sure that the data all
-appears as you would expect in CiviCRM. Once you've tested the process
-and have made any necessary changes, get other members of staff or
-friends from outside your organisation to test the process.
+Lorsque vous utilisez l'option test d'enregistrement de l'adhésion par le processeur de paiement, vous voyez les mêmes pages d'inscription que les utilisateurs, mais le paiement en ligne n'est pas totalement débité de votre carte (voir *Processeurs de paiement* pour plus d'informations sur les processeurs fictifs et les détails de la carte que vous pouvez utiliser pour les transactions de test).
 
-When using the Test-drive Registration option, you see the same
-registration pages as a regular user, but the online payment isn't
-really debited from your card (see *Payment processors*for more
-information on dummy processors and card details you can use for test
-transactions).
+Il est intéressant de vérifier et tester périodiquement votre processus d'adhésion pour vous assurer qu'il est aussi harmonieux que possible. Vous recevrez des commentaires indirects de vos membres au fur et à mesure qu'ils utilisent le formulaire. S'ils n'entrent pas dans les données comme vous l'avez voulu, vous devrez apporter des modifications. De temps à autre, vous devez solliciter des commentaires directs de la part de personnes qui ont récemment adhérées pour vérifier si la procédure est facile à utiliser pour devenir membre. Vous pouvez aussi leur demander leur avis sur la façon dont vous pourriez améliorer votre formulaire.
 
-It is worthwhile periodically testing and reviewing your membership
-process to make sure that it is as smooth as possible. You will receive
-indirect feedback from your members as they use the form. If they are
-not entering data in the way you intended then you will need to make
-some changes. From time to time, you may want to solicit direct
-feedback from people who have recently become members to see how easy it
-was for them to become a member and ask their opinions on ways in which
-you could improve your form.
-
-Adding membership sign up pages to your website
+Ajouter les pages d'inscription à votre site
 -----------------------------------------------
 
-Once you've made your contribution page, you need to make it visible on
-your website. The method for this depends on the CMS. Instructions for
-each CMS are below.
+Une fois que vous avez créé votre page de contribution, vous devez la rendre visible sur votre site. La méthode dépend du CMS. Les instructions pour chaque CMS sont ci-dessous :
 
-Membership sign up pages are built to inherit your website theme and
-should look reasonably nice out of the box. You can include images on
-the HTML text areas in the page to make them look more attractive. Many
-organisations want to spend time improving the look and feel of their
-membership pages in order to increase membership sign up rates. The
-methods for changing the design of these pages are outside the scope of
-this book but a website designer who is familiar with your CMS and
-CiviCRM will be able to help.
+Les pages d'inscription aux membres sont conçues pour hériter du thème de votre site Web. Vous pouvez inclure des images sur les zones de texte HTML de la page pour les rendre plus attrayantes. De nombreuses organisations améliorent l'apparence de leurs pages d'adhésion afin d'augmenter les taux de participation. Les méthodes de modifications et de conceptions de ces pages ne sont pas traitées dans cette documentation, mais un concepteur de site Web qui connaît votre CMS et CiviCRM pourra vous aider.
 
-### In Drupal
+### Dans Drupal
+Accédez à **Contributions**> **Gérer les Pages de Contribution**> cliquez sur **Liens** à côté de votre page d'inscription / renouvellement de membre> cliquez sur **Live Page** pour afficher la page terminée. Vous pouvez ensuite copier l'URL et l'inclure dans une page de contenu ou l'affecter à un élément de menu
 
-Go to **Contributions** > **Manage Contribution Pages** > click
-**Links** next to your membership sign-up/renewal page > click **Live
-Page** to view the finished page. You can then copy the URL and include
-it in a content page or assign it to a menu item.
+### Dans Wordpress
+Accédez à **Contributions**> **Gérer les Pages de Contribution**> cliquez sur **Liens** à côté de votre page d'inscription / renouvellement de membre> cliquez sur **Live Page** Copiez l'URL et insérez-la dans un lien HTML ou un menu.
 
-### In Wordpress
+*Ou* utilisez un plugin tel que Page Links pour créer une URL 'slug'.
 
-Go to **Contributions** > **Manage Contribution Pages** > click
-**Links** next to your membership sign-up/renewal page > click **Live
-Page. **Copy the URL and insert it into an HTML link or menu.
-
-*Or* use a plugin such as Page Links To create a URL 'slug'.
-
-*Or* click the Wordpress shortcode icon to insert a form into any page
-or post.
+*Ou* cliquez sur l'icône de raccourci Wordpress pour insérer un formulaire dans n'importe quelle page.
 
 ![image](../img/Wordpress-Shortcodes-small.png)
 
-### In Joomla!
+### Dans Joomla!
+La façon la plus directe d'afficher votre page d'inscription/renouvellement d'adhésion sur votre site Web dans Joomla est en créant un élément de menu.
 
-The most direct way to expose your membership signup/renewal page to the
-front of your website in Joomla is by creating a menu item.
+- Accédez à un menu et créez un nouvel élément CiviCRM.
+- Dans la liste des options de menu, choisissez Contributions.
+- Dans la section des paramètres de base, sélectionnez la page de contribution que vous souhaitez afficher dans le menu déroulant.
+- Enregistrez l'élément de menu et affichez le site Web pour vérifier les fonctionnalités de la page.
 
--   Navigate to a menu and create a new CiviCRM item.
--   From the list of menu options, choose Contributions.
--   In the basic parameters section, select the contribution page you
-    would like exposed from the dropdown menu.
--   Save the menu item and view the website to confirm the page's
-    functionality.
-
-Permissions needed for online membership sign up/renewal.
+Autorisations requises pour l'inscription en ligne et le renouvellement.
 ---------------------------------------------------------
+Les rôles anonymes et authentifiés nécessitent les autorisations CMS suivantes pour pouvoir adhérer ou renouveler en ligne:
 
-Anonymous and Authenticated roles need the following CMS permissions to
-be able to join or renew online:
-
--   Profile listings and forms: This will let you collect core contact
-    information ( name, address etc.) when people sign up.
--   Access all custom data: You must enable this permission to collect
-    custom data.
--   Make online contributions: This permission must be granted unless
-    your memberships are free and you have no interest in accepting
-    donations when people sign up or renew.
+- Listes et formulaires de profil: pouvoir collecter les informations de contact de base (nom, adresse, etc.) lorsque les personnes s'inscrivent.
+- Accéder à toutes les données personnalisées: accepter cette autorisation pour collecter des données personnalisées.
+- Autoriser les contributions en ligne: Cette autorisation doit être accordée à moins que vos membres aient des cotisations gratuites et que vous n'ayez pas intérêt à accepter des dons lorsque les personnes s'inscrivent ou renouvelent.
