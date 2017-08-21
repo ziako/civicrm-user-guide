@@ -96,7 +96,7 @@ pages:
     - "Gestion des tarifs d'adhésions": 'membership/membership-price-sets.md'
     - "Trouver et afficher des adhésions": 'membership/finding-and-viewing-memberships.md'
     - "Rapports sur les adhésions": 'membership/membership-reports.md'
-    - 'Renewals': 'membership/renewals.md'
+    - 'Renouvellement': 'membership/renewals.md'
     - 'Cancelling and expiring memberships': 'membership/cancelling-and-expiring-memberships.md'
     - "Création d'accès réservés aux membres": 'membership/making-member-only-websites.md'
 - Email:
