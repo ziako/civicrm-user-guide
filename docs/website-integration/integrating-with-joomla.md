@@ -9,78 +9,29 @@ Creating Joomla! Menu Items for CiviCRM Content
 -----------------------------------------------
 Le contenu de CiviCRM peut être affiché sur votre site Web de deux manières différentes. La façon principale est de créer un élément de menu spécifique qui affichera les données de CiviCRM. Dans Joomla! Menu, naviguez jusqu'à **Menu principal-> Ajouter un lien de menu**.
 
+![image](../img/Joomla-lien-menu.PNG)
 
+Dans cet écran sélectionner le "type de lien de menu". Un nouvel écran affichera  les options ci-dessous  en cliquant sur Civicrm. 
 
-![image](../img/z_sprint14_Joomla!_Menu%20Item%20Type.png)
+![image](../img/Joomla-type-lien-menu.PNG)
 
-Once you are inside of the Edit Menu item screen you will then have the option to select the menu item type. There will be a subsection called civicrm with the below options.
+Sélectionner la page CiviCRM correspondante à ce que vous souhaitez afficher.
 
-![image](../img/z_sprint14_joomla!_Civi_Options.png)
-
-After choosing one of the below you will then need to go to **Basic
-Options**and select the corresponding CiviCRM page you wish to display.
-
-
-
--   **Contribution Page:** A specific contribution or membership page
-    that you would like to publish on your website
--   **Create Personal Campaign Pages:**This type enables you to provide
-    a direct link for an end users to create a personal campaign page
-    that is tied to a specific contribution page for peer to peer
-    fundraising. For instance, if you had an annual fundraiser called
-    Support CiviCRM and you wanted to enable your constituents to raise
-    money on your behalf you could create a Menu Item linking them
-    directly
--   **View Personal Campaign Page:**
--   **Custom Search:**Customer Searches can be created
--   **CiviCRM Dashboard:**Selecting this option enables you to show an
-    end user all of their related information i.e. previous
-    contributions they have made, active and expired memberships, event
-    registrations, etc. When selecting the CiviCRM Dashboard though you
-    will want to ensure that the Access level for this menu item is set
-    to Registered because CiviCRM need to know who exactly to display
-    information about. Thus by setting it to registered it will force
-    the end user to log in to be able to see their specific
-    information.
--   **Event Calendar:**This option takes all of your current events and
-    places them into a calendar view for your end user.
--   **Event Information Page:**This menu item type provides the summary
-    information for the event that you have selected and then provides a
-    link to directly register.
--   **Event Listing:**This type displays all of the upcoming events in a
-    list format. You have the ability to sort by each of the columns
-    however there is no search capability by default on the Event
-    Listing
--   **Event Registration Form:**
--   **Participant Listing:**Dependent upon if you enabled a participant
-    listing for your specific event you can display who will be
-    attending your event by selecting this option.
--   **Mailing List Subscription:**If you have configured groups as
-    mailing lists and have set the visibility to public you can enable
-    your end users to sign up for these mailing lists on their own by
-    selecting this menu item type.
--   **Profile Create Form:**You can collect information on your
-    constiuents
--   **Profile Edit Form:**If an end user is logged into your site and
-    you are presenting a Profile Edit Form they will have the ability to
-    view the information that your organization has on record for them.
-    In addition to that they will be able to edit that information and
-    save it to CiviCRM. For instance if you are presenting the **New
-    Individual** profile on your website as a Profile Edit Form, that
-    end user who is logged in will then have the ability to view and
-    update their first name, last name and email and save it to your
-    CiviCRM instance.
--   **Profile Search Form:**If you have configured a profile as a
-    standalone form or directory you have the ability to give an end
-    user the ability to search your database via this specific profile.
-    For instance, if you are a membership organization and you want to
-    provide a directory of those members to the public, you could create
-    a group called Members and then create a profile that limits the
-    results of the search to only those individuals or organizations in
-    that group.
--   **Profile View Form:**This menu item type allows you to display
-    information that you have on record for a logged in user. For
-    instance
+- **Contribution Page:** Une contribution spécifique ou une page d'adhésion que vous souhaitez publier sur votre site.
+- **Créer des pages de campagne personnelles:** Ce type de lien direct permet aux utilisateurs finaux de créer une page de campagne personnelle liée à une page de contribution spécifique pour la collecte de fonds entre pairs. Par exemple, si vous avez fait un appel de fonds annuel appelé "Support CiviCRM" et que vous vouliez permettre à vos membres de collecter de l'argent en votre nom, vous pouvez créer un élément de menu qui les relient directement
+- **Voir la page de campagne personnelle **
+- **Recherche personnalisée:** Les recherches des membres peuvent être créées
+- **Tableau de bord CiviCRM:** La sélection de cette option permet de montrer à l'utilisateur final toutes ses informations connexes, c'est-à-dire les contributions précédentes, les adhésions actives et périmées, les enregistrements d'événements, etc. Lors de la sélection du tableau de bord CiviCRM, vous assurez-vous que le niveau d'accès pour cet élément de menu est défini comme Enregistré parce que CiviCRM doit savoir à qui afficher exactement les informations. Ainsi, l'utilisateur final en se connectant pourra voir toutes les informations spécifiquesle concernant
+- **Calendrier des événements:** Cette option affiche tous vos événements actuels et les place dans une vue d'agenda pour votre utilisateur final.
+- **Page d'information sur l'événement:** Ce type d'élément de menu fournit les informations récapitulatives d'un événement que vous avez sélectionné et fournit un lien pour s'enregistrer directement.
+- **Liste des événements:** Affiche tous les événements à venir dans un format de liste. Vous avez la possibilité de trier par colonnes, mais il n'y a pas de fonctionnalité de recherche par défaut sur la liste des événements.
+- **Formulaire d'inscription à l'événement:**
+- **Liste des participants:** Si vous avez activé une liste de participants pour un événement spécifique, vous pouvez afficher qui assistera à votre événement en sélectionnant cette option.
+- **Abonnement à la liste de diffusion:** Si vous avez configuré des groupes en tant que listes de diffusion et que vous avez défini la visibilité publique, les utilisateurs finaux peuvent s'inscrire à directement à ces listes de diffusion.
+- **Formulaire de création de profil:** Vous pouvez collecter des informations complémentaires sur vos visiteurs
+- **Formulaire d'édition de profil:** Si un utilisateur final est connecté à votre site et que vous présentez un formulaire d'édition de profil, vous pourrez visualiser les informations que votre organisation a enregistrées. En plus de cela, ils pourront modifier cette information et l'enregistrer dans CiviCRM. Par exemple, si vous présentez le profil **Nouveau Individual** sur votre site Web en tant que formulaire de modification de profil, l'utilisateur final connecté aura alors la possibilité d'afficher et de mettre à jour son prénom, son nom et son courrier électronique et l'enregistrer dans votre instance CiviCRM.
+- **Formulaire de recherche de profil:** Si vous avez configuré un profil en tant que formulaire ou répertoire autonome, vous avez la possibilité de donner à l'utilisateur final la possibilité de rechercher dans votre base de données via ce profil spécifique. Par exemple, si vous souhaitez fournir un répertoire de vos membres au public, vous pouvez créer un groupe appelé Membres, puis créer un profil qui limite les résultats de la recherche uniquement aux personnes ou organisations de ce groupe.
+- **Formulaire de vue du profil:** Ce type d'élément de menu vous permet d'afficher les informations que vous avez enregistrées pour un utilisateur connecté. Par exemple
 
 Access Levels with CiviCRM Menu Item Types
 -------------------------------------------
