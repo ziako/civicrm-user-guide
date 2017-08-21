@@ -7,7 +7,7 @@ CiviCRM fonctionne avec les trois plus populaires CMS (Content Management System
 -   Joomla
 -   Wordpress
 
-Avant de commencer un projet, vous devriez envisager la façon dont vous  utiliserez CiviCRM, maintenant et à l'avenir.
+Avant de commencer un projet, vous devez envisager la façon dont vous utiliserez CiviCRM, maintenant et à l'avenir.
 Les deux importantes questions sont: qu’elles sont les informations de CiviCRM que nous voulons afficher sur notre site Web ? (ex.: la liste en direct de nos membres actuels)?
 Quelles sont les informations que nous voulons collecter par notre site Web et que nous voulons stocker dans CiviCRM ? (ex.: données sur les familles provenant d'un formulaire public, elles sont ajoutées automatiquement dans CiviCRM)?
 C'est que l'on appelle l'intégration. Le niveau d'intégration dont vous avez besoin vous aidera  à déterminer quel est le meilleur CMS pour vous.
@@ -28,4 +28,4 @@ Utilisateurs et Contacts
 ------------------------
 
 Le public, les visiteurs anonymes et ceux qui peuvent se connecter au site Web sont des **Utilisateurs**.
-Les individus et les organisations qui ont un dossier de CiviCRM sont des **Contacts**.
+Les individus et les organisations qui ont un dossier dans CiviCRM sont des **Contacts**.
