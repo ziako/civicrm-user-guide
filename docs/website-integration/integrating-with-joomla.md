@@ -1,24 +1,19 @@
-Integrating with Joomla
+Intégration avec Joomla!
 =======================
 
-CiviCRM integrates with Joomla! as a component. CiviCRM public forms
-such as online contribution pages and event registration pages can be
-exposed as menu items on the front-end of Joomla! sites, using your
-selected theme. When logged in to your Administration site, CiviCRM
-will be shown as a menu item under Components.
+CiviCRM s'intègre très facilement à Joomla! En tant que composant.
+Les formulaires publics CiviCRM tels que les pages de contribution en ligne et les pages d'inscription des événements peuvent être intégrés comme éléments de menu sur le front-end de votre site Joomla!, en utilisant votre thème personnel. Lorsque vous êtes connecté en tant qu'administrateur, CiviCRM est affiché comme élément de menu sous "Composants".
+
 
 Creating Joomla! Menu Items for CiviCRM Content
 -----------------------------------------------
+Le contenu de CiviCRM peut être affiché sur votre site Web de deux manières différentes. La façon principale est de créer un élément de menu spécifique qui affichera les données de CiviCRM. Dans Joomla! Menu, naviguez jusqu'à **Menu principal-> Ajouter un lien de menu**.
 
-CiviCRM content can be displayed on your website in a couple of
-different ways. The primary way is to create a specific Menu Item that
-pulls in CiviCRM data. Within your Joomla! menu navigate to **Menu -> YourMenu -> Add New Menu Item**.
+
 
 ![image](../img/z_sprint14_Joomla!_Menu%20Item%20Type.png)
 
-Once you are inside of the Edit Menu item screen you will then have the
-option to select the menu item type. There will be a subsection called
-civicrm with the below options.
+Once you are inside of the Edit Menu item screen you will then have the option to select the menu item type. There will be a subsection called civicrm with the below options.
 
 ![image](../img/z_sprint14_joomla!_Civi_Options.png)
 
