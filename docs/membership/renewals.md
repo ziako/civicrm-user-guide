@@ -1,7 +1,6 @@
 Les renouvellements de cotisations
 ===========================
-Ce chapitre traite des différentes façons dont vos contacts peuvent renouveler leur adhésion. Ceci inclus les renouvellements automatiques, les renouvellements en ligne et les renouvellements manuels soit sur une base individuelle, soit par la mise à jour par lots des membres via le profil. Tout d'abord, nous présenterons les moyens de faire savoir à vos membres que leur adhésion devrait être renouvelée.
-
+Ce chapitre traite des différentes façons dont vos contacts peuvent renouveler leur adhésion. Ceci inclus les renouvellements automatiques, les renouvellements en ligne et les renouvellements manuels soit individuellement, soit par la mise à jour par lots des membres via le profil. Tout d'abord, nous présenterons les moyens de faire savoir à vos membres que leur adhésion devrait être renouvelée.
 
 Les concepts de renouvellement 
 -------------------------
@@ -24,15 +23,15 @@ Si vous utilisez CiviCRM pour gérer des adhésions pour plusieurs organisations
 Rappels de renouvellement 
 -----------------
 
-Faire savoir à un membre que son adhésion est sur le point de finir est la première étape dans le processus de renouvellement. CiviCRM facilite les communications avec vos membres par courrier électronique ou par courrier postal.
+Faire savoir à un membre que son adhésion est sur le point d'arriver à échéance est la première étape dans le processus de renouvellement. CiviCRM facilite les communications avec vos membres par courrier électronique ou par courrier postal.
 
 ### Rappel par courriel 
 
-Un ou plusieurs courriels de rappel de renouvellement peuvent être envoyés automatiquement à l'aide de la fonction Rappels programmés (**Administration> Communications> Schedule Reminders**). Ceci est particulièrement utile quand les types d'adhésion, peuvent se terminer à tout moment au cours de l'année. Reportez-vous au chapitre [Rappels de renouvellements] (http://booki.flossmanuals.net/email/scheduled-reminders) dans la section *Email* de ce livre pour les étapes impliquées dans l'envoi d'un rappel planifié une fois que vous avez composé votre message .
+Un ou plusieurs courriels de rappel de renouvellement peuvent être envoyés automatiquement à l'aide de la fonction Rappels programmés (**Administration> Communications> Schedule Reminders**). Ceci est particulièrement utile quand les types d'adhésion peuvent se terminer à tout moment au cours de l'année. Reportez-vous au chapitre [Rappels de renouvellements](http://booki.flossmanuals.net/email/scheduled-reminders) dans la section *Email* de ce livre pour les étapes impliquées dans l'envoi d'un rappel planifié une fois que vous avez composé votre message .
 
-Ce que vous devez dire dans vos e-mails de rappel dépendra du type d'adhésion en relation avec la date de fin d'adhésion. Par exemple, les rappels de renouvellement envoyés trois mois à l'avance aux personnes qui se sont inscrites au nom des organisations (pour leur donner suffisamment de temps pour préparer un bon de commande et le paiement par leur département comptable) doivent être différents de ceux envoyés une semaine après à un contact individuel 
+Le texte de vos e-mails de rappel dépendra du type d'adhésion en relation avec la date de fin d'adhésion. Par exemple, les rappels de renouvellement envoyés trois mois à l'avance aux personnes qui se sont inscrites au nom des organisations (pour leur donner suffisamment de temps pour préparer un bon de commande et le paiement par leur département comptable) doivent être différents de ceux envoyés une semaine après à un contact individuel.
 
-Toutefois, si les membres peuvent renouveler en ligne, tous les rappels par courrier électronique de renouvellement doivent contenir dans le message un lien «spécial» Civimail : {contact.checksum}, (dans ce cas-ci vers la page de renouvellement de l'adhésion). Lorsqu'une personne clique sur le lien spécial, elle  remplira le formulaire de renouvellement avec toutes les données qui existent dans son dossier. Le lien spécial dure sept jours à compter du moment où il a été envoyé (bien que cela puisse être changé à **Administer> Paramètres du système> Divers (Undelete, PDF, Limits, Logging, Captcha, etc.)** Comme les pages d'adhésion sont un Type de pages de contribution, le lien {contact.checksum} à utiliser dans les e-mails de renouvellement où **N** est l'identifiant de votre page de renouvellementest :
+Toutefois, si les membres peuvent renouveler en ligne, tous les rappels par courrier électronique de renouvellement doivent contenir dans le message un lien «spécial» Civimail : {contact.checksum}, (dans ce cas-ci vers la page de renouvellement de l'adhésion). Lorsqu'une personne clique sur le lien spécial, elle  remplira le formulaire de renouvellement avec toutes les données qui existent dans son dossier. Ce lien spécial dure sept jours à compter du moment où il a été envoyé (bien que cela puisse être changé à **Administer> Paramètres du système> Divers (Undelete, PDF, Limits, Logging, Captcha, etc.)** Comme les pages d'adhésion sont un Type de pages de contribution, le lien {contact.checksum} à utiliser dans les e-mails de renouvellement où **N** est l'identifiant de votre page de renouvellemen test :
 
 -   Drupal:
     http://www.myorganization.org/civicrm/contribute/transact?reset=1&id=N&{contact.checksum}&cid={contact.contact_id}  
@@ -43,16 +42,19 @@ Toutefois, si les membres peuvent renouveler en ligne, tous les rappels par cour
     
 Comme pour tous les e-mails que vous envoyez, vous devez prévoir le temps de tester les modèles de rappel de renouvellement, surtout si vous avez des structures d'adhésion complexes et souhaitez personnaliser les messages en fonction des types de membres ou d'autres paramètres.
 
-Rappelez-vous que, par défaut, des rappels planifiés seront envoyés à des personnes qui l'ont opté pour la plupart ou pour recevoir tous les emails, sauf si vous excluez spécifiquement ces personnes. Si les contacts peuvent choisir de renouveler automatiquement leur adhésion, vous devez exclure les membres qui ont choisi cette option à partir des rappels planifiés.
+Rappelez-vous que, par défaut, des rappels planifiés seront envoyés à des personnes qui l'ont choisi pour la plupart ou pour recevoir tous les emails, sauf si vous excluez spécifiquement ces personnes. 
+Si les contacts peuvent choisir de renouveler automatiquement leur adhésion, vous devez exclure les membres qui ont choisi cette option à partir des rappels planifiés.
 
 ### Rappels postaux 
 
-Vous pouvez également envoyer des lettres à tous les membres qui doivent renouveler ou simplement envoyer des lettres à ceux qui ne possèdent pas d'adresse électronique et à ceux qui ont opté pour un envoi de tous les courriels. Reportez-vous à *Communications par courrier postal* dans la section *Flux de travail communs* pour trouver les moyens de générer ces lettres.
+Vous pouvez également envoyer des lettres à tous les membres qui doivent renouveler ou simplement envoyer des lettres à ceux qui ne possèdent pas d'adresse électronique et à ceux qui ont opté pour un envoi de tous les courriels. 
+Reportez-vous à *Communications par courrier postal* dans la section *Flux de travail communs* pour trouver les moyens de générer ces lettres.
 
 Renouvellement automatique des adhésions
 ---------------------------------
 
-Pour les membres qui ont choisi cette option lorsqu'ils ont adhérés pour la première fois, le paiement sera prélevé automatiquement à partir de leur carte de crédit préautorisée à leur date de renouvellement. Leur date de fin d'adhésion sera mise à jour et ils recevront les remerciements et les reçus appropriés de CiviCRM. (Voir *Définition d'adhésions* , *Adhésions en ligne inscrivez-vous* et *Entrée manuelle des adhésions* chapitre sur les détails de la mise en place des adhésions renouvelables automatiquement.)
+Pour les membres qui ont choisi cette option lorsqu'ils ont adhérés pour la première fois, le paiement sera prélevé automatiquement à partir de leur carte de crédit préautorisée à leur date de renouvellement. 
+Leur date de fin d'adhésion sera mise à jour et ils recevront les remerciements et les reçus appropriés de CiviCRM. (Voir *Définition d'adhésions* , *Adhésions en ligne* et *Entrée manuelle des adhésions* chapitre sur les détails de la mise en place des adhésions renouvelables automatiquement.)
 
 Renouvellements en ligne
 ---------------
@@ -64,8 +66,7 @@ Lorsque vous configurez des pages d'adhésion, il convient de rappeler que les m
 
 Lorsqu'une adhésion est souscrite à l'aide de la page d'inscription de l'adhésion en ligne (service en libre-service), le tableau de contact de cet utilisateur contiendra un lien "renouvelable" qui pointe vers cette page. Cependant, ce lien n'apparaîtra pas pour les membres dont l'adhésion initiale a été saisie manuellement, sauf si vous configurez une **page de renouvellement d'adhésion en ligne par défaut** comme suit:
 
-1. Si cela n'existe pas, créez une page d'adhésion qui inclut toutes les adhésions actuellement disponibles. (Vous devrez peut-être utiliser un prix établi pour cela si les frais d'adhésion doivent être attribués à plus que sur le type financier. Reportez-vous à *Ensembles de prix* pour plus de détails.)
-
+1. Si cela n'existe pas, créez une page d'adhésion qui inclut toutes les adhésions actuellement disponibles. (Vous devrez peut-être utiliser un prix établi pour cela si les frais d'adhésion doivent être attribués à plus que sur le type financier. Reportez-vous à *Gestion des tarifications* pour plus de détails.)
 2. Accédez à **Administrer> CiviMember> Paramètres du composant CiviMember**
 3. Pour la page Default Renouvellement d'adhésion en ligne, choisissez la page d'adhésion contenant tous vos types d'adhésion
 
@@ -85,44 +86,19 @@ Renouvellement manuel d'une adhésion pour un seul contact
 
 Mise à jour par lot des membres via le profil
 ----------------------------------
+Vous pouvez utiliser la fonction **Batch Update Membres via Profile** pour mettre à jour plusieurs enregistrements d'adhésion existants (ne pas confondre cela avec la fonction **Batch Data Entry** qui est utilisée pour ajouter les *nouvelles adhésions* et les paiements des membres ).
 
-You can use the **Batch Update Members Via Profile** feature to update
-multiple*existing* membership records (don't confuse this with the
-**Batch Data Entry** feature that is used for adding *new* memberships
-and member payments).
+Pour utiliser la mise à jour des adhésions par lots via le profil, vous pouvez utiliser les profils réservés par défaut de CiviCRM, **Entrée des données par lot** du menu adhésion ou du menu Contribution. 
+Vous pouvez aussi créer et configurer un profil contenant des champs relatifs à l'information d'adhésion que vous souhaitez afficher et mettre à jour. Vous pouvez en savoir plus sur la façon de configurer les profils dans le chapitre *Profils* de la section *Organiser vos données*.
 
-To use the Batch Update Members Via Profile, you can either use the
-CiviCRM default reserved profiles, **Membership Batch
-Entry** and **Contribution Batch Entry**, or you can create and
-configure a profile that contains fields pertaining to membership
-information that you want to display and update. You can read more about
-how to configure profiles in the *Profiles* chapter of the *Organising
-Your Data* section.
+Pour utiliser la fonction **Mise à jour par lot des adhésions via un profil**:
 
-To use the **Batch Update Members Via Profile** feature:
+1. Vous trouvez les adhésions que vous souhaitez mettre à jour en sélectionnant **Adhésions** > **Rechercher des adhésions** Entrez vos critères de recherche et cliquez sur **Rechercher**.
+2. Dans l'écran de résultats, sélectionnez les enregistrements d'adhésions voulus et sélectionnez **Mise à jour des lots via le profil** dans la case à cocher **- actions -** et cliquez sur **Aller**.
+3. Dans l'écran d'entrée de données par lot, onglet **Select Profile**, sélectionnez le profil que vous souhaitez utiliser dans la liste déroulante et cliquez sur **Continuer**. Vous pouvez en savoir plus sur la configuration d'un profil d'adhésion pour la mise à jour par lot dans le chapitre *Profils* de la section *Organiser vos données*.
+4. Dans l'écran Entrée des données du lot, vous pouvez mettre à jour les informations affichées en fonction du profil que vous avez sélectionné. Vous pouvez utiliser l'icône "auto-copie" en haut d'une colonne pour copier et coller la valeur du champ du premier enregistrement de cette colonne au reste des champs ci-dessous dans la colonne. Une fois que vous avez terminé la mise à jour, cliquez sur ** Mettre à jour les membres **.
 
-1.  Find the memberships you would like to update by selecting
-    **Memberships** > **Find Members.** Enter your search criteria and
-    click **Search**.
-2.  From the Find Members results screen, select the membership records
-    and select **Batch Update Members Via Profile** from the
-    **-actions-** dropdown box and click **Go**. 
-3.  From the Batch Profile Update for Membership screen, in **Select
-    Profile**, select the profile you want to use from the dropdown box
-    and click **Continue >>**. You can read more about setting up a
-    membership profile for batch update in the *Profiles* chapter of the
-    *Organising your data* section. 
-4.  From the Batch Update for Members screen, you can update the
-    information that is displayed based on the profile you selected.
-    You can use the "auto-copy" icon at the top of a column to copy and
-    paste the value from the field of the first record of that column to
-    the rest of the fields below in the column. Once you are done
-    updating, click **Update Memberships**. 
-
-    Below is an example of a Batch Update for Members screen that is using
-    a membership profile configured to display the **Membership Type** and
-    the **Membership Start Date** fields for use with the **Batch Update
-    Members Via Profile**. 
+      Vous trouverez ci-dessous un exemple d'une page "Entrée des données du lot" qui utilise un profil d'adhésion configuré pour afficher les champs **Type d'adhésion** et **Date de départ de l'adhésion** 
 
 ![image](../img/Memberships-Everydaytasks-batchupdateviaprofile-batchupdateformembers.jpg)
 
