@@ -158,10 +158,10 @@ pages:
     - 'Everyday tasks': 'grants/every-day-tasks.md'
     - 'Reports and analyis': 'grants/reports-and-analysis.md'
 - Website integration:
-    - 'Choosing your CMS': 'website-integration/choosing-your-cms.md'
+    - 'Choisir votre CMS': 'website-integration/choosing-your-cms.md'
     - 'Integrating with Drupal': 'website-integration/integrating-with-drupal.md'
-    - 'Integrating with WordPress': 'website-integration/integrating-with-wordpress.md'
-    - 'Integrating with Joomla': 'website-integration/integrating-with-joomla.md'
+    - "Intégration avec WordPress": 'website-integration/integrating-with-wordpress.md'
+    - "Intégration avec Joomla": 'website-integration/integrating-with-joomla.md'
 - La communauté CiviCRM:
     - 'The CiviCRM Community': 'the-civicrm-community/the-civicrm-community.md'
     - 'Bug Reporting': 'the-civicrm-community/bug-reporting.md'
