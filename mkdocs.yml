@@ -97,7 +97,7 @@ pages:
     - "Trouver et afficher des adhésions": 'membership/finding-and-viewing-memberships.md'
     - "Rapports sur les adhésions": 'membership/membership-reports.md'
     - 'Renouvellement': 'membership/renewals.md'
-    - 'Cancelling and expiring memberships': 'membership/cancelling-and-expiring-memberships.md'
+    - "Adhésions annulées ou expirées": 'membership/cancelling-and-expiring-memberships.md'
     - "Création d'accès réservés aux membres": 'membership/making-member-only-websites.md'
 - Email:
     - 'What is CiviMail?': 'email/what-is-civimail.md'
