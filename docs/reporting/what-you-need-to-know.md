@@ -1,12 +1,7 @@
 What You Need To Know
 =====================
 
-This chapter explains key ideas that are useful when planning your use
-of CiviReport. It should be read by system administrators before they
-start to configure CiviReport for daily use. It will also be useful for
-anyone who wants to better understand the thinking behind CiviReport.
-Skip this chapter if you just want to look at specific reports that have
-already been configured by your administrator.
+Ce chapitre explique les idées clés qui sont utiles lors de la planification de votre utilisation de CiviReport. Il doit être lu par les administrateurs système avant qu'ils ne commencent à configurer CiviReport pour une utilisation quotidienne. Ce sera également utile pour toute personne qui veut mieux comprendre la philosophie de CiviReport. Ignorez ce chapitre si vous souhaitez simplement utiliser des rapports spécifiques déjà configurés par votre administrateur.
 
 CiviReport can be used as a management tool in organisational planning
 and as an analysis tool for membership or donor development. Tabular or
