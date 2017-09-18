@@ -1,80 +1,41 @@
-What is CiviReport?
+Qu'est-ce CiviReport?
 ===================
 
-Reporting helps your organisation to evaluate its impact and achieve its
-mission. Sometimes this is a requirement for funders or other
-stakeholders. CiviReport allows you to create, run and schedule reports
-based on the data CiviCRM has about your contacts and their interactions
-with your organisation.
+Les rapports aident votre organisation à évaluer son impact et à atteindre ses objectifs.
+Parfois, c'est une exigence pour les bailleurs de fonds ou autre
+parties prenantes. CiviReport vous permet de créer, exécuter et planifier des rapports
+en fonction des données que CiviCRM stocke sur vos contacts et leurs interactions
+avec votre organisation.
 
-These reports are queries on the database using criteria and fields
-available in a report template. Reports can be delivered on the page
-when you run them, as a dashlet on the dashboard or a scheduled email
-which can include a CSV file or PDF.
+Ces rapports sont des requêtes sur la base de données qui utilisent les critères et les champs
+disponibles dans un modèle de rapport. Les rapports peuvent être affichés sur une page
+lorsque vous les exécutez, comme un lien sur le tableau de bord ou un courriel planifié
+qui peut inclure un fichier CSV ou un fichier PDF.
 
-Scenario: a simple report to help with fundraising
+Scénario: un rapport simple pour aider à collecter des fonds
 --------------------------------------------------
 
-1two3, a support organisation for street workers, has launched a capital
-campaign to raise money for a new shelter. Anne, the development
-director wanted to reach out to donors who made a large donation last
-year but haven't given money this year.
+1two3, organisation d'aide pour les travailleurs de rues, a lancé une campagne capitale pour recueillir des fonds pour la construction d'un nouvel hébergement. Anne, la directrice du développement voulait contacter les donateurs qui ont fait un don important l'année dernière mais n'ont pas donné d'argent cette année.
 
-She created an instance of the LYBUNT report ("Last year
-but unfortunately not this") which filters data to show people who gave
-more than €500 last year, then ran the report and used the Add to Group
-button to put these donors into a new group so she could send an email
-to everyone in the group with information about the capital campaign.
+Elle a créé une instance du rapport LYBUNT ("L'année dernière mais pas celle-ci") qui filtre les données pour lister les personnes qui ont donné plus de 500 € l'année dernière, puis a exécuté le rapport et utilisé le bouton "Ajouter au groupe" pour mettre ces donateurs dans un nouveau groupe afin qu'elle puisse envoyer un courriel à tous les membres du groupe avec des informations sur cette campagne capitale.
 
-Finally she added the report to her CiviCRM Dashboard so she can review
-progress getting this group of prior donors to contribute to the
-campaign. Anyone who donates will automatically drop off this list since
-they will no longer meet the criteria, and the list remaining in the
-dashlet can be used as the basis for follow up phone calls or
-other personalised contact.
+Enfin, elle a ajouté ce rapport à son tableau de bord CiviCRM afin qu'elle puisse examiner les progrès obtenus pour que ce groupe d'anciens donateurs contribue à la campagne actuelle. Quiconque fait un don sortira automatiquement de cette liste puisqu'il ne répond plus aux critères, et la liste restante pourra être utilisée comme base de suivi des appels téléphoniques ou d'autres contacts personnalisés.
 
-Scenario: a regular financial report
+Scénario: rapport financier périodique
 -------------------------------------
 
-WAM is an academic membership organisation with about 1,500 members.
-Their members renew their membership online and pay either online by
-card or by offline by direct debit. Mark, the finance officer, needs
-several reports to keep track of the money coming in and automation of
-this process was a key reason for the implementation of CiviCRM. All
-these reports are regular and are sent to him by email with a CSV
-attachement so he can import the details into either their accounting
-software or their online banking interface. While a couple of the key
-reports are outlined here, their requirements were fairly complex and
-some custom report templates were required alongside the standard ones.
+WAM est une association universitaire avec environ 1 500 membres.
+Leurs membres renouvellent leur adhésion en ligne et paient par carte ou hors ligne par prélèvement automatique. Marc, le comptable, a besoin de plusieurs rapports pour suivre les recettes financières. L'automatisation de ce processus a été une des principales raisons de la mise en œuvre de CiviCRM. 
+Tous ces rapports lui sont envoyés periodiquement par courrier électronique avec un fichier joint en CSV afin qu'il puisse importer les détails dans son logiciel de comptabilité ou leur interface bancaire en ligne. 
+Alors que quelques-uns des principaux rapports sont décrits ici, les exigences de WAM étaient assez complexes et des modèles de rapports personnalisés étaient nécessaires aux côtés des rapports standards
 
-Every Monday morning, Mark receives a list of all completed online
-payments for the previous week to import into Sage; this report contains
-the amount and time of the payment along with what it was for
-(membership or event) and a reference ID so it can be tracked back to
-the record in CiviCRM. At the end of every month, he receives a list of
-all members who pay by direct debit whose membership is due to expire in
-the following month. This allows him to set up the direct debit payments
-for these membership renewals by importing part of the list into their
-online banking interface.
+Tous les lundi matin, Marc reçoit une liste de tous les paiements en ligne enregistrés de la semaine précédente pour l'importer dans Sage. Ce rapport contient le montant et l'heure du paiement avec son origine (adhésion ou événement) et un identifiant de référence afin qu'il puisse être suivi dans CiviCRM. À la fin de chaque mois, il reçoit une liste de tous les membres qui paient par prélèvement automatique et dont l'adhésion expire le mois suivant. Cela lui permet de configurer les paiements de débit direct pour ces renouvellements d'adhésion en important une partie de la liste dans l'interface bancaire en ligne.
 
-These email reports save Mark several hours a month and allow him to
-focus on issues that contribute more to the effective management of
-WAM's financial resources.
+Ces rapports par courrier électronique font gagner à Marc plusieurs heures par mois ce qui lui permet de se concentrer sur des tâches qui contribuent davantage à la gestion efficace des ressources financières de WAM.
 
-Scenario: determining total contributions for a household
+Scenario: détermination des contributions totales pour un ménage
 ---------------------------------------------------------
+Une organisation à but non lucratif en Ohio conserve des dossiers individuels organisés par ménages. Une situation courante est que le mari dans le ménage a assisté à un certain nombre d'événements payants, tandis que sa femme s'est également inscrite à d'autres événements et a fait des dons distincts.
 
-A non-profit organisation in Ohio keeps records of individuals organised
-by households. A common situation is that the husband in the household
-has attended a number of paid events, while his wife has also registered
-for other events and made separate donations.
-
-Staff at the organisation want to see the total contributions received
-from everyone in a household so that when someone calls the office to
-enquire about a donation or event payment made by someone else in the
-family, all the relevant information is at hand. Staff can run the
-Donation Summary Report (Household) as required, using the name of the
-household to find all contributions and relevant information to answer
-the caller's questions.
-
+Le personnel de l'organisation souhaite voir le total des contributions reçues du ménage afin que lorsque quelqu'un appelle le bureau pour se renseigner sur un don ou un paiement d'événement effectué par quelqu'un d'autre de la famille, toutes les informations pertinentes soient à portée de main. Le personnel peut consulter le rapport de synthèse de dons du ménage selon les besoins, en utilisant le nom du ménage pour trouver toutes les contributions et les informations pertinentes pour répondre aux questions de l'appelant.
 

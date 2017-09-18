@@ -1,35 +1,38 @@
 Créer des champs personnalisés
 ======================
 
-Ce chapitre explique comment bonifier les données de base de CiviCRM par des champs personnalisés, qui représentent les données que vous voulez accumuler.
+Ce chapitre explique comment améliorer les données de base de CiviCRM par des champs personnalisés qui représentent les données que vous voulez acquérir en plus des données de base
 
-Par exemple, vous pouvez bonifier les organisations avec une série de boîtes que vous pouvez cocher pour chacun des clients de ces organisations. Vous pouvez aussi limiter les champs personnalisés à certains types de contacts. Vous pourriez ainsi avoir un champ personnalisé pour un type de contact, disons « étudiant », avec une liste de tous ses cours.
+Par exemple, vous pouvez compléter les informations recueillies pour les organisations par une série d'onglets que vous pouvez cocher pour chacun des clients de ces organisations. Vous pouvez aussi limiter les champs personnalisés à certains types de contacts. Vous pouvez ainsi avoir un champ personnalisé pour un type de contact, disons « étudiant », avec une liste de tous ses cours.
 
-CiviCRM emmagasine les champs pour vos données personnalisées dans des ensembles de champs personnalisés. Ajouter des données personnalisées implique donc deux étapes :
+CiviCRM enregistre les champs de vos données personnalisées dans des "ensembles de champs personnalisés". 
+Ajouter des données personnalisées implique donc deux étapes :
 
 1.  Créer un ensemble de champs personnalisés pour un type de contact donné. Il servira ensuite de contenant pour les champs personnalisés.
 2.  Ajouter les champs personnalisés pour cet ensemble. (Il peut être utile de lire d'abord les informations sur les types de champs personnalisés, mais avant de créer ces champs vous devez d'abord créer l'ensemble de champs.)
 
 Autrement dit, un champ est une unité d'information inscrite dans la base de données : langue maternelle d'un individu, date de fins d'études, etc. Un ensemble est un regroupement de champs qui renferment des données sur un même objet ou un même domaine.
 
-Ensembles de champs personnalisés
+Ensemble de champs personnalisés
 -----------------
 
-Les champs personnalisés font toujours partie d'un ensemble de champs personnalisés; ce que recouvre chacun de ces ensembles peut être aussi large ou pointu que vous le désirez. Vous pourriez par exemple créer l'ensemble de champs personnalisés « Nationalité » et l'associer à tous vos types de contact; en créer un deuxième baptisé « Statut d'immigration », et l'associer à un type de contact précis (« Individus »); et ajouter un troisième ensemble associé à une composante particulière (comme CiviMember ou CiviEvent) ou à un autre élément tel que Groupes ou Relations. L'étendue d'un ensemble de champs personnalisés est une des rares décisions irréversibles dans CiviCRM. Vous ne pourrez pas y apporter de modifications après avoir créé votre ensemble: il est donc important de bien réfléchir à l'avance aux champs personnalisés que vous voulez y associer.
+Les champs personnalisés font toujours partie d'un "ensemble de champs personnalisés". Ce que recouvre chacun de ces ensembles peut être aussi large ou pointu que vous le désirez. Vous pouvez par exemple créer l'ensemble de champs personnalisés « Prescripteur " et l'associer à tous vos types de contact, en créer un deuxième baptisé « Statut logement » et l'associer à un type de contact précis (« Individus »), et ajouter un troisième ensemble associé à un composant particulièr (CiviMember ou CiviEvent) ou à un autre élément tel que Groupes ou Relations. L'étendue d'un ensemble de champs personnalisés est une des rares décisions irréversibles dans CiviCRM. Vous ne pourrez pas y apporter de modifications après l'avoir créé : il est donc important de bien réfléchir à l'avance aux champs personnalisés que vous voulez y associer.
 
-Quand vous créez des ensembles de champs personnalisés, demandez-vous :
+CONSEIL : Quand vous créez des ensembles de champs personnalisés, demandez-vous :
 
 -   Comment les champs de cet ensemble seront-ils utilisés?
--   Pour quel type de contact ou de dossier [record] ces champs seront-ils pertinents?
+-   Pour quel type de contact ou de dossier ces champs seront-ils pertinents?
 -   Ces champs sont-ils susceptibles de servir dans un grand nombre de situations, ou au contraire sont-ils pertinents pour un type de contact précis, un événement particulier, un type de contribution, etc. ?
 
-Prendre le temps de bien répondre à ces questions vous évitera de vous encombrer d'une pléthore de champs inutiles. Si votre ensemble de champs personnalisés contient un champ « couleur des yeux », il ne vous sert à rien de l'associer à des types de contact comme Organisation ou Foyer : plutôt que d'associer votre ensemble à la grande catégorie Contacts, mieux vaut simplement l'associer à Individus. Ou supposons qu'une de vos données personnalisées soit spécifique à la page d'inscription d'un événement en particulier : associez ces données personnalisées à ce type d'événement seulement.
+Prendre le temps de bien répondre à ces questions vous évitera de vous encombrer d'une pléthore de champs inutiles. Si votre ensemble de champs personnalisés contient un champ « Niveau d'études », il ne vous sert à rien de l'associer à des types de contact comme Organisation ou Foyer : plutôt que d'associer votre ensemble à la grande catégorie Contacts, mieux vaut simplement l'associer à Individus. Ou supposons qu'une de vos données personnalisées soit spécifique à la page d'inscription d'un événement en particulier : associez ces données personnalisées à ce type d'événement seulement.
 
-Si vous avez beaucoup de champs personnalisés, il se peut que vous désiriez les classer par sujet. Par exemple, disons que vous avez associé 20 champs personnalisés aux individus, dont 12 correspondent à un bottin en ligne de vos membres. Plutôt que de regrouper ces 20 champs dans un seul ensemble, vous pourriez les séparer en deux groupes : un pour les champs liés au bottin, et l'autre pour le reste des détails sur les individus.
+Si vous avez beaucoup de champs personnalisés, vous pouvez les classer par sujet. Par exemple, vous avez associé 20 champs personnalisés aux individus dont 12 correspondent à un annuaire en ligne de vos membres. Plutôt que de regrouper ces 20 champs dans un seul ensemble, il vaut mieux les séparer en deux groupes : un pour les champs liés à l'annuaire, et l'autre pour le reste des détails sur les individus.
 
-Pour créer un ensemble de champs personnalisés - et les champs personnalisés eux-mêmes – rendez-vous à : Administrer CiviCRM > Données personnalisées > Nouvel ensemble de données personnalisées. Ce formulaire vous permet d'assigner un titre à votre ensemble de champs, de spécifier le type de dossier auquel vous le destinez, de choisir comment il va s'afficher, et entrer le texte d'information approprié. Le formulaire apparaît sur l'image qui suit; nous allons maintenant décrire chacun des champs.
+Pour créer un ensemble de champs personnalisés - et les champs personnalisés eux-mêmes – rendez-vous à :**Administrer CiviCRM > Données personnalisées > Nouvel ensemble de données personnalisées**. Ce formulaire vous permet d'assigner un titre à votre ensemble de champs, de spécifier le type de dossier auquel vous le destinez, de choisir comment il va s'afficher, et entrer le texte d'information approprié. Le formulaire apparaît sur l'image qui suit. 
 
 ![image](../img/Custom%20Field%20Set.png)
+
+Nous allons maintenant vous décrire chacun des champs.
 
 ### Nom de l'ensemble
 
@@ -40,19 +43,19 @@ Ce nom va servir de légende à votre ensemble de champs si vous choisissez de f
 Cette option permet de vous assurer que vos champs personnalisés n'apparaissent qu'aux endroits pertinents. Voici la liste de vos choix :
 
 - Activité : assigne vos champs à toutes les activités ou à un type d'activité, précis tel que rendez-vous ou appel téléphonique.
-- Adresses : crée un bloc d'adresses, qui permet à l'administrateur de créer des champs additionnels qui s'appliquent à une adresse.
+- Adresses : crée un bloc d'adresses, qui permet à l'utilisateur de créer des champs additionnels qui s'appliquent à une adresse.
 - Contacts : assigne vos champs à tous vos contacts.
 - Contributions : assigne vos champs à toutes vos contributions, ou à un type de contribution précis comme dons ou frais de participation à un événement.
-- Événements : assigne vos champs à tous vos événements, ou à un type d'événement précis comme conférence ou levée de fonds. Ces champs s'appliquent à un événement concret, et non pas au dossier d'inscription d'un participant.
+- Événements : assigne vos champs à tous vos événements ou à un type d'événement précis comme Conférence ou Formation. Ces champs s'appliquent à un événement concret, et non pas au dossier d'inscription d'un participant.
 - Subventions : pour les champs qui servent spécifiquement aux subventions.
 - Groupes : va apparaître dans la configuration des Groupes. Prenez note que ces champs ne peuvent pas faire l'objet d'une recherche.
 - Foyer : champs servant spécifiquement au type de contact foyer.
 - Individu : champs servant spécifiquement au type de contact individu.
-- Adhésion : champs qui serviront à tous les entrées relatives à une adhésion, ou à un type d'adhésion en particulier.
-- Organisation : champs servant spécifiquement au type de contact organisation.
-- Participants : champs qui apparaissent dans le dossier d'inscription d'un participant. Vous pouvez choisir entre trois options : les champs généraux, applicables à toutes les inscriptions; les champs applicables à un rôle de participant précis; et les champs qui s'appliquent aux inscriptions à un type d'événement particulier.
-- Promesses de dons : champs servant spécifiquement aux promesses de dons (pledge).
-- Relations : assigne vos champs à toutes les relations ou à un type de relation précis, tel que _conjoint_ ou _employé par_.
+- Adhésion : champs qui serviront à tous les entrées relatives à une adhésion ou à un type d'adhésion en particulier.
+- Organisation : champs servant spécifiquement au type de contact "Organisation".
+- Participants : champs qui apparaissent dans le dossier d'inscription d'un participant. Vous pouvez choisir entre trois options : les champs généraux, applicables à toutes les inscriptions, les champs applicables à un rôle de participant précis et les champs qui s'appliquent aux inscriptions à un type d'événement particulier.
+- Promesses de dons : champs servant spécifiquement aux promesses de dons.
+- Relations : assigne vos champs à toutes les relations ou à un type de relation précis, tel que *conjoint* ou *employé par*.
 
 ### Ordre
 
@@ -60,350 +63,194 @@ Si vous avez créé plus d'un ensemble, le champ Ordre vous permet de détermine
 
 ### Entrées multiples
 
-Un champ ne contient en général qu'une seule entrée. Par exemple, une personne a les cheveux blonds ou noirs, mais pas les deux à la fois. Mais certains champs sont plus complexes, et peuvent demander plusieurs entrées différentes. Pour un champ comme « Formation académique », par exemple, il faut probablement prévoir la saisie de plusieurs diplômes, dont chacun représente une entrée distincte.
+Un champ ne contient en général qu'une seule entrée. Par exemple, une personne a les cheveux blonds ou noirs, mais pas les deux à la fois. Mais certains champs sont plus complexes, et peuvent demander plusieurs entrées différentes. Par exemple, pour un champ comme « Formation Universitaire », il faut prévoir la saisie de plusieurs diplômes, dont chacun représente une entrée distincte.
 
-CiviCRM offre cette fonction pour les ensembles de champs assignés aux contacts (la catégorie générale, ou un type de contact en particulier). Pour utiliser cette fonction, sélectionnez l'option « Cet Ensemble de champs personnalisés accepte-t-il les entrées multiples? » 
+CiviCRM offre cette fonction pour les ensembles de champs attriués aux contacts (la catégorie générale, ou un type de contact en particulier). Pour utiliser cette fonction, sélectionnez l'option « Cet Ensemble de champs personnalisés accepte-t-il les entrées multiples? » 
 
 Cette option compte plusieurs restrictions : 
 
-- Elle s'applique à l'ensemble au complet; vous ne pouvez pas l'appliquer à un seul champ.
-- Elle doit utiliser l'affichage par onglet; l'affichage dans le corps du texte n'est pas permis.
+- Elle s'applique à l'ensemble au complet. Vous ne pouvez pas l'appliquer à un seul champ.
+- Elle doit utiliser l'affichage par onglet. L'affichage dans le corps du texte n'est pas permis.
 - Vous pouvez l'utiliser uniquement pour les Contacts. Les entrées multiples ne sont pas disponibles pour les Activités, les Contributions, etc.
-- Vous ne pouvez pas vous en servir pour un profil, comme ceux utilisés pour les Événements
-- En date de juillet 2010, les entrées multiples ne peuvent pas être exportées.
+- Vous ne pouvez pas vous en servir pour un profil, comme ceux utilisés pour les Événements.
+- Depuis juillet 2010, les entrées multiples ne peuvent pas être exportées.
 
 ### Options d'affichage
 
-Il y a deux manières d'afficher les ensembles de champs personnalisés d'un dossier : dans le corps du texte sur la page Résumé (sous l'onglet Résumé), ou sous un nouvel onglet qui s'ajoute aux autres (Résumé, Contribution, Groupe, et ainsi de suite). Nous suggérons d'utiliser l'affichage par onglet pour les champs que vous consulterez plus rarement, ou pour les ensembles qui contiennent de nombreux champs. Vous pourrez changer cette configuration par après.
+Il y a deux manières d'afficher les ensembles de champs personnalisés d'un dossier : dans le corps du texte sur la page Résumé (sous l'onglet Résumé), ou sous un nouvel onglet qui s'ajoute aux autres (Résumé,... Contribution, Groupe, etc...).
+CONSEIL : Nous suggérons d'utiliser l'affichage par onglet pour les champs que vous consulterez plus rarement, ou pour les ensembles qui contiennent de nombreux champs. Vous pourrez changer cette configuration par la suite.
 
-You can also specify that you want the custom field set to be
-"collapsed" on initial display. If you check this box, only the title
-for this field set is displayed when the page is initially loaded,
-because the fields are hidden. This is helpful for field sets that are
-infrequently used because it reduces the amount of space taken up by the
-data when the page opens. A similar "collapsed" property is available
-for the display of custom data in Advanced Search.
+Vous pouvez également spécifier que vous souhaitez que le champ personnalisé défini soit «réduit» sur l'affichage initial. Si vous cochez cette case, seul le titre de ce champ est affiché lorsque la page est chargée initialement, car les champs sont masqués. Ceci est utile pour les jeux de champs qui sont rarement utilisés car ils réduisent l'espace occupé par les données lorsque la page s'ouvre. Une propriété "réduite" similaire est disponible pour l'affichage de données personnalisées dans "Recherche avancée".
 
-Il y a deux façons d'afficher les champs dans un onglet. **Onglet** et **onglet avec table**.
+Il y a deux façons d'afficher les champs dans un onglet : **Onglet** et **Onglet avec table**.
 
-**Onglet avec table** provides a concise overview of the data in the set.
-New records can be added and existing records can be edited in pop-up
-windows. Under **more** there is the option to "copy a record". For
-consecutive records that have the same value in many fields this lets
-you edit just one or two fields and save the copy as a new record. 
+**Onglet avec table** offre un aperçu concis des données dans l'ensemble. De nouveaux enregistrements peuvent être ajoutés et les enregistrements existants peuvent être édités dans des fenêtres pop-up. Sous **plus**, il ya la possibilité de "copier un enregistrement". Pour les enregistrements consécutifs qui ont la même valeur dans de nombreux champs, cela vous permet de modifier un ou deux champs et d'enregistrer la copie en tant que nouvel enregistrement.
 
 ![image](../img/z-Sprint2014%20copy%20multli%20record.png)
 
-**Onglet** affiche les champs d'une façon semblable au style par défaut.
+**Onglet** affiche les champs de façon semblable au style par défaut.
 
 ![image](../img/z-Sprint14%20multi%20record%20old%20style%20table.png) 
 
 ### Cet ensemble de champs personnalisés est-il toujours actif ?
 
-Dire qu'un ensemble de champs personnalisé est actif signifie que vous pouvez en consulter et modifier les champs. Si l'ensemble n'est pas actif, ses champs demeurent dans le système de CiviCRM mais ils ne s'affichent pas dans l'interface d'utilisateur. Cette option peut s'avérer utile pour la gestion de vos données, en particulier si vous effectuez une migration à partir d'une base de données pré-existante.
+Si actif, cela signifie que vous pouvez consulter et modifier les champs. Si l'ensemble n'est pas actif, il ne s'affiche pas dans l'interface d'utilisateur ùais ses champs demeurent dans le système de CiviCRM. Cette option peut s'avérer utile pour la gestion de vos données, en particulier si vous effectuez une migration à partir d'une base de données pré-existante.
 
-Il se peut par exemple que votre base de données existante contienne des champs que vous souhaitez transférer dans CiviCRM pour vos archives, mais que vous comptiez utiliser une nouvelle structure de données. Supposons par exemple que vous importiez vos listes de membres à partir d'une base de données MS Access. Chaque entrée dans Access contient un champ d'identification unique (sa clé), qui n'est d'aucune utilité dans CiviCRM. Plutôt que d'ignorer complètement ce champ, vous pourriez archiver son contenu dans un champ personnalisé, importer vos données, puis désactiver le nouveau champ, ce qui le rendrait invisible et allégerait votre interface. Il vous suffirait de ne pas cocher l'option Activer ce champ.
+Il se peut par exemple que votre base de données extérieure contienne des champs que vous souhaitez transférer dans CiviCRM pour vos archives, mais vous comptez utiliser une nouvelle structure de données. Supposons par exemple que vous importiez vos listes de membres à partir d'une base de données MS Access. Chaque entrée dans Access contient un champ d'identification unique (sa clé), qui n'est d'aucune utilité dans CiviCRM. Plutôt que d'ignorer complètement ce champ, vous pouvez archiver son contenu dans un champ personnalisé, importer vos données, puis désactiver ce nouveau champ pour le rendre invisible, ce qui allégerait votre interface. Il vous suffit de ne pas cocher l'option Activer ce champ.
 
-Bien qu'invisible pour les utilisateurs, la valeur d'un champ inactif demeure dans le système pour référence future; vous pouvez la consulter si jamais il vous faut comparer la valeur d'un champ avec un document imprimé, ou vous assurer qu'il n'y a pas d'écarts entre vos archives.
+Bien qu'invisible pour les utilisateurs, la valeur d'un champ inactif demeure dans le système pour utilisation future. Vous pouvez le consulter si jamais il vous faut comparer la valeur d'un champ avec un document imprimé, ou vous assurer qu'il n'y a pas d'écarts entre vos archives.
 
 Un champ que vous avez activé peut toujours être désactivé dans le formulaire qui définit ce champ.
 
-### Aide pré-formulaire, aide post-formulaire
+### Aide avant et après formulaire
 
-Si vous entrez du texte dans l'aide pré-formulaire, votre texte d'aide apparaîtra au-dessus de l'ensemble de champs personnalisés; si vous entrez du texte dans l'aide post-formulaire, il apparaîtra en-dessous. Utilisez l'aide à ce niveau pour les instructions qui s'appliquent à tout votre ensemble de champs personnalisés.
+Si vous entrez du texte dans l'aide avant-formulaire, votre texte d'aide apparaîtra au-dessus de l'ensemble de champs personnalisés. Si vous entrez du texte dans l'aide après-formulaire, il apparaîtra en-dessous. Utilisez l'aide à ce niveau pour les instructions qui s'appliquent à tout votre ensemble de champs personnalisés.
 
 Champs personnalisés
--------------
+--------------------
 
-Once you have created a custom field set, you can create custom data
-fields within the set. Click "View and Edit Custom Fields" followed by
-"New Custom Field" and you will see the screen in the image below. We'll
-explain each of the options in this section.
+Après la création d'un ensemble de champs personnalisé, vous pouvez créer les champs de données personnalisés. Cliquez sur **Afficher et modifier les champs personnalisés** suivi de **Nouveau champ personnalisé**  et vous verrez l'écran comme ci-dessous. Nous expliquerons chacune des options de cette section.
 
-After completing the field configuration options, click 'Save' to record
-the field and return to the field listing for your current custom field
-set, or click 'Save and New' to save the field and begin defining a new
-field.
+Après avoir terminé les options de configuration du champ, cliquez sur «*Enregistrer*» pour enregistrer le champ et retourner à la liste des champs de votre ensemble de champs personnalisés ou cliquez sur «Enregistrer et Nouveau» pour enregistrer le champ et commencer à définir un nouveau champ.
 
-With the exception of the data and input field type selection, all of
-the configuration options may be modified after your initial creation of
-the field. You may also find it useful to preview your custom fields, as
-well as the whole set of custom fields, as you are defining them. This
-is particularly useful for checking the layout of radio button and
-check-box fields with a large number of choices.
+À l'exception des données et de la sélection du type de champ d'entrée, toutes les options de configuration peuvent être modifiées après la création initiale du champ. Vous pouvez également trouver utile de prévisualiser vos champs personnalisés, ainsi que l'ensemble des champs personnalisés, comme vous les avez définis. Cela est particulièrement utile pour vérifier la mise en page des champs de bouton radio et de case à cocher avec un grand nombre de choix.
 
 ![customdatafield.png](../img/CiviCRM-DataBasic-customdatafield-en.png "newcustomfield")
 
 ### Étiquette du champ
 
-The text next to the field when displayed to the user. Text entered here
-is also the label shown when you export data. When using fields in a
-profile, you can overwrite the Field Label. So on this screen you can
-choose names that are suitable for administrators, and give more
-user-friendly names when exposing them in profiles.
+Le texte à côté du champ lorsqu'il est affiché à l'utilisateur. Le texte saisi ici correspond également à l'étiquette affichée lorsque vous exportez des données. Lorsque vous utilisez des champs dans un profil, vous pouvez remplacer l'étiquette de champ. Ainsi, sur cet écran, vous pouvez choisir des intitulés plus adaptés à votre activité et qui conviennent aux utilisateurs lors de leur affichage dans les profils.
 
 ### Type
-
-Custom fields can be of many different types, many of which you've
-probably encountered when filling out forms on websites. When you create
-a custom field, CiviCRM presents a dropdown list of data types from
-which you can select that which best represents the data you plan to
-store. The menu on the left (shown open in the following figure)
-indicates the format of data you wish to store, whereas the menu on the
-right indicates the way you want to interact with the user.
+Les champs personnalisés peuvent être de différents types, dont beaucoup ont probablement été rencontrés lors du remplissage de formulaires sur des sites Web. Lorsque vous créez un champ personnalisé, CiviCRM présente une liste déroulante de types de données à partir de laquelle vous pouvez sélectionner celle qui représente le mieux les données que vous souhaitez stocker. Le menu de gauche (illustré dans la figure suivante) indique le paramètre de format des données, alors que le menu de droite indique la manière dont vous souhaitez interagir avec l'utilisateur.
 
 ![datainputfieldtype.png](../img/CiviCRM-DataBasic-datainputfieldtype-en.png "datainputtype")
 
-The types of fields are:
+Les types de champs sont :
 
--   **Alphanumeric** (i.e. text and number fields), which can be of the
-    following types:
-    -   Text: a simple area in which users can enter text.
-    -   Select: a dropdown box which limits choice to one selection.
-    -   Radio: a list of options where you can make one selection.
-        Unlike a Select box, all the options are visible on the screen
-        at the same time.
-    -   Yes and No: a special kind of radio list with two contrasting
-        options.
-    -   Check-box: a list of options that allows multiple selections.
-    -   Multi-select: a list of options in a single box. You can select
-        multiple selections using control+click.
-    -   Advanced Multi-select: two lists side by side in which items can
-        be moved from one to the other.
-    -   Autocomplete select: an autocomplete widget. The user can start
-        typing, and when the text entered uniquely identifies a
-        selection, the field automatically fills in the complete
-        selection.
--   **Note**: a longer text box which allows multiple lines. Notes come
-    in two flavours:
-    -   plain, and
-    -   rich text, which displays a WYSIWYG editor that allows HTML.
--   **Integer**, i.e. a whole number. This can be displayed as a: 
-    -   text box
-    -   select box
-    -   radio list.
--   **Number**: i.e. any number that includes decimals, such as 3.175.
-    This can be displayed as a:
-    -   text box
-    -   select box
-    -   radio list.
--   **Money**: similar to a number, but treated according to the local
-    currency as configured in CiviCRM's administrative pages. This can
-    be displayed as a:
-    -   text box
-    -   select box
-    -   radio list
--   **Date**: a way of entering a date (and optionally time) value using
-    a calendar widget. You can set a range of years which can be
-    selected prior to and after the current date.
--   **State/Province**: a list of available geographical locations as
-    configured in CiviCRM's Localization settings (Administer >
-    Configure > Global Settings >> Localization). Can be offered as
-    either a select box or a multi-select box.
--   **Country**: a list of geographical locations. Can be offered as
-    either a select box or a multi-select box.
--   **File**: offered as a browser where the user can select and upload
-    a file.
--   **Link**: an active internet hyperlink.
--   **Contact Reference**: an autocomplete widget for an existing
-    CiviCRM contact.
+- **Alphanumérique** (champs texte et nombre) peuvent être des types suivants:
+    - Texte: une zone simple dans laquelle les utilisateurs peuvent saisir du texte.
+    - Sélectionnez: une liste déroulante qui limite le choix à une sélection.
+    - Radio: une liste d'options où vous pouvez faire une sélection. Contrairement à une boîte de sélection, toutes les options sont visibles à l'écran en même temps.
+   - Oui / Non: liste radio avec deux options contrastées.
+   - Check-box: une liste d'options permettant plusieurs sélections.
+    - Multi-sélection: une liste d'options dans une seule case. Vous pouvez sélectionner plusieurs sélections à l'aide de la commande + clic.
+    - Multi-sélection avancée: deux listes côte à côte dans lesquelles les éléments peuvent être déplacés de l'un à l'autre.
+    - Autocomplete select: un widget d'autocomplétion. L'utilisateur peut commencer à taper et lorsque le texte saisi identifie une sélection, le champ remplit automatiquement la sélection complète.    
+ - **Note**: une zone de texte plus longue qui permet plusieurs lignes. Deux choix de texte :
+    - texte brut
+    - texte enrichi, qui affiche un éditeur WYSIWYG qui permet le HTML.
+  - **Entier** : un nombre entier qui peut être affiché sous forme de:
+    - Texte
+    - Boite de sélection
+    - Bouton radio
+  - **Nombre**: tout nombre qui comprend des décimales, comme 3.1416 et peut être affiché sous forme de:
+    - Texte
+    - Boite de sélection
+    - Bouton radio
+  - **Money**: similaire à un nombre, mais traité selon la devise locale configurée dans les pages d'administration de CiviCRM et peut être affiché sous forme de:
+    - Texte
+    - Boite de sélection
+    - Bouton radio
+  - **Date**:  une valeur de date (et éventuellement de temps) à l'aide du widget de calendrier. Vous pouvez définir une plage d'années qui peut être sélectionnée avant et après la date actuelle.
+  - **État / Province**: liste des lieux géographiques disponibles tels que configurés dans les paramètres de localisation de CiviCRM (Administer> Configurer> Paramètres globaux> Localisation). Peut être soit une boîte de sélection ou une boîte de sélection multiple.
+   - **Pays**: liste des pays. Peut être soit une boîte de sélection ou une boîte de sélection multiple.
+   - **Fichier**: l'utilisateur peut sélectionner et télécharger un fichier.
+   - **Lien**: un hyperlien actif sur Internet.
+   - **Contact Reference**: un widget d'autocomplétion pour un contact CiviCRM existant.
 
-We suggest you experiment with creating different field types to get an
-idea of how they behave. Different options have implications for use.
-For example, check-boxes enable you to use OR as well as AND searches in
-Advanced Search, whereas multi-select will not. 
+CONSEIL : Nous vous suggérons d'expérimenter la création de différents types de champs pour avoir une idée de leur comportement. Les différentes options ont des implications lors de l'utilisation. Par exemple, les cases à cocher vous permettent d'utiliser "OU" ainsi que les recherches "ET" dans la recherche avancée, alors que la sélection multiple ne le permet pas.
  
 **Afficher en table ?**
 
-This check box only appears when you are creating a field in a
-multi-record field set that you have elected to display as **tab with
-table**. It is checked by default. If you unselect this then the field
-will not be displayed in the table. You might want to do this for less
-important fields if you have a large dataset that is too wide for your
-screen. 
+Cette case à cocher n'apparaît que lorsque vous créez un champ dans un jeu de champs multi-enregistrements que vous avez choisi d'afficher sous l'onglet **avec table**. Elle est cochée par défaut. Si vous désélectionnez cette option, le champ ne sera pas affiché dans la table. Vous pouvez le faire pour les champs moins importants si vous disposez d'un nombre de données trop large pour votre écran.
 
-![image](../img/z_sprint14_MultirowCustom3.png) 
-Fields hidden in the table view will still be available when adding a
-new record or viewing, editing or copying a particular row.
+![image](../img/z_sprint14_MultirowCustom3.png)
+
+Les champs cachés dans la vue de la table seront toujours disponibles lors de l'ajout d'un nouvel enregistrement ou de l'affichage, de l'édition ou de la copie d'une ligne particulière.
 
 ![image](../img/z_sprint14_MultirowCustom2.png) 
 
 ### Taille du champ dans la base de donnée
 
-The database field length allows you to specify the number of characters
-that this field will contain. You should normally leave this at the
-maximum. In certain cases (for example if you are dealing with
-extremely large field sets) it might make sense to shorten this field to
-improve performance and decrease storage space, but setting a shorter
-length will not make a difference to the vast majority of users.
+La longueur d'un champ de base de données vous permet de spécifier le nombre de caractères que ce champ contiendra. Normalement, vous devez le laisser au maximum. Dans certains cas (par exemple si vous avez affaire à des ensembles de champs extrêmement importants), il peut être judicieux de raccourcir ce champ pour améliorer les performances et diminuer l'espace de stockage, mais la définition d'une longueur plus courte ne fera pas la différence pour la grande majorité des utilisateurs.
 
 ### Ordre
 
-Controls the order in which the fields appear. You may assign the order
-in the field edit form, or use the up/down icons on the main field
-listing table to adjust the field presentation. By default, new fields
-appear at the bottom of the field list within a set.
+Permet de contrôler l'ordre dans lequel les champs apparaissent. Vous pouvez affecter l'ordre dans le formulaire d'édition de champ ou utiliser les icônes haut / bas de la table de liste de champs principale pour ajuster la présentation des champs. Par défaut, dans un ensemble, les nouveaux champs apparaissent au bas de la liste des champs .
 
 ### Valeur par défaut
 
-Where applicable, you may designate a default value for a field. This
-value is automatically displayed or selected when users go to a form
-containing this field.
+Vous pouvez désigner une valeur par défaut pour un champ. Cette valeur sera automatiquement affichée ou sélectionnée lorsque les utilisateurs accèdent à un formulaire contenant ce champ.
 
-### Aide pré-formulaire et post-formulaire
+### Aide avant et après formulaire
 
-Ideally, your field name is self-explanatory and users will immediately
-know what to enter. But in those cases where there is some ambiguity, or
-where you wish to help regulate how a certain field is used, you may
-enter help text here. If you enter it in Pre-form Help, your help text
-appears above the form field, and if you enter text in Post-form Help it
-appears below the form field.
+Idéalement, votre nom de champ est suffisament clair pour que les utilisiteurs sachent comment le remplir. Mais dans les cas où il ya une certaine ambiguïté, ou que vous souhaitiez préciser la façon dont un certain champ est utilisé, vous pouvez entrer le texte d'aide ici. Si vous l'entrez dans l'aide avant formulaire, votre texte d'aide s'affiche au-dessus du champ de formulaire et si vous entrez du texte dans l'aide après formulaire, il apparaît sous le champ de formulaire.
 
-The help text appears in all uses of the field in administration pages
-and is inserted as the default help text when fields are assigned to a
-profile (see 'profiles'). The person creating the profile can remove or
-change the help text there without impact on the original custom field
-definition.
+Le texte d'aide apparaît dans toutes les utilisations du champ dans les pages d'administration et est inséré comme texte d'aide par défaut lorsque des champs sont affectés à un profil (voir «profils»). La personne qui crée le profil peut supprimer ou modifier le texte d'aide sans impact sur la définition du champ personnalisé d'origine.
 
-### Requis (obligatoire)
+### Requis = (obligatoire)
 
-When selected, a value must be provided for this field before the form
-can be submitted. Failure to do so will result in an error message
-directing the person to complete the required fields.
+Lorsque sélectionné, une valeur doit être fournie pour ce champ avant que le formulaire puisse être validé. Sinon un message d'erreur indiquera à la personne de remplir les champs requis.
 
-If you want a field to be required only when a user fills out a
-particular profile, you can leave this box unchecked and check the
-Required field later within the profile.
+Si vous souhaitez qu'un champ soit requis uniquement lorsqu'un utilisateur remplit un profil particulier, vous pouvez le désactiver et cocher la case "Requis" plus tard dans le profil.
 
-### Is this Field Searchable?
+### Ce champ est-il accessible dans la recherche ?
 
-Makes the field appear in a panel of custom fields in CiviCRM's Advanced
-Search page. While you may be tempted to mark every field as searchable,
-doing so may unnecessarily clutter the Advanced Search custom field
-panel, when in fact certain fields will probably never be used in that
-way. You may toggle this option on or off at any time, so do not be
-overly concerned about arriving at a final decision when you first
-define a custom field.
+Affiche le champ dans un groupe de champs personnalisés dans la page "Recherche avancée" de CiviCRM. Bien que vous soyez tenté de marquer tous les champs comme pouvant être consultés, cela peut inutilement encombrer le panneau de champ personnalisé Recherche avancée, alors qu'en fait, certains champs ne seront probablement jamais utilisés de cette façon. Vous pouvez activer ou désactiver cette option à tout moment. Ne soyez donc pas trop préoccupé par l'arrivée d'une décision finale lorsque vous définissez un champ personnalisé.
 
 ### Actif
 
-As with the active check-box in the form defining the custom field set,
-this box determines whether the field is disabled or enabled when
-CiviCRM displays it to the user.
+Comme pour la case à cocher "Actif" dans le formulaire définissant l'ensemble de champs personnalisé, cette zone détermine si le champ est désactivé ou activé lorsque CiviCRM l'affiche à l'utilisateur.
 
 ### Consulter seulement
 
-This allows you to designate a field as visible but uneditable. There
-are two general uses for this field:
+Permet de désigner un champ comme visible mais non éditable. Il existe deux utilisations générales pour ce champ:
 
--   To store data imported from another system that you want available
-    for reference to the user, but do not want them to be able to
-    modify.
--   To store data that is not entered directly through the user
-    interface but rather through a method set up by your developer.
-
+  - Pour stocker les données importées à partir d'un autre système qui puissent être consultées par un utilisateur mais que vous ne souhaitez pas qu'elles puissent être modifiées.
+  - Pour stocker des données qui ne sont pas entrées directement à travers l'interface utilisateur mais plutôt par une méthode définie par votre développeur.
+  
 ### Options à choix multiples
 
-For field types that involve selecting from a set of multiple options
-(such as Select, Radio, Check-box, Multi-select and Advanced
-Multi-select) you are given the choice of either using an existing set
-of options that you've already created for another custom field or
-create a new set. You can enter these values while creating the field,
-or enter the values later. The option's label is displayed on the form,
-while the option's value is stored in the contact record.
+Pour les types de champs qui impliquent la sélection à partir d'un ensemble d'options multiples (telles que Select, Radio, Check-box, Multi-select et Advanced Multi-select), vous avez le choix soit d'utiliser un ensemble d'options existantes, déjà créé pour un autre champ personnalisé, ou créer un nouvel ensemble. Vous pouvez saisir ces valeurs lors de la création du champ ou saisir les valeurs ultérieurement. L'étiquette de l'option est affichée sur le formulaire, tandis que la valeur de l'option est stockée dans l'enregistrement de contact.
 
-If you choose to use the same set of options for several fields, you
-will be notified when making any changes that this will affect an option
-set used by several fields.
+Si vous choisissez d'utiliser le même ensemble d'options pour plusieurs champs, vous serez averti lors de toute modification que cela affectera un ensemble d'options utilisé par plusieurs champs.
 
-When you create a new set, you have the option of initially entering up
-to ten multiple choice options in a table. If you need more than ten
-options, you can create an unlimited number of additional choices after
-saving this new field by using the 'Edit Multiple Choice Options' link.
-Go to: **Administer** > **Customize** > **Custom Data** > **View and
-Edit Custom Fields** > **Edit Multiple Choice Options**. You may go to
-this screen at a later date to modify the label, order and active status
-of any multiple choice option, or add more choices.
+Lorsque vous créez un nouvel ensemble, vous avez la possibilité de saisir initialement jusqu'à dix options à choix multiples dans une table. Si vous avez besoin de plus de dix options, vous pouvez créer un nombre illimité de choix supplémentaires après avoir enregistré ce nouveau champ en utilisant le lien «Modifier les options de choix multiples». Aller à: **Administer **> ** Personnaliser**> **Données personnalisées**> **Afficher et modifier les champs personnalisés**> **Modifier les options de choix multiples**. Vous pouvez accéder à cet écran ultérieurement pour modifier l'étiquette, l'ordre et l'état actif de toute option à choix multiples, ou ajouter d'autres choix.
 
 ![CustomMultipleOptions](../img/CiviCRM-Configuring-CustomMultipleOptions-en.PNG "CustomMultipleOptions")
 
-If desired, you can also mark one of the choices as the default option.
+Si vous le souhaitez, vous pouvez également marquer l'un des choix comme option par défaut.
+Les options inactives sont masquées lorsque le champ est affiché.
 
-Inactive options are hidden when the field is presented.
+### Gestion des ensembles de champs personnalisés.
 
-### Managing custom field sets. 
-
-You can view a listing of all the custom fields in a custom field set at
-any time by navigating to **Administer > Customize Data and Screens > Custom Data** and clicking 'View and Edit Custom
-Fields' for the relevant field set.
-
+Vous pouvez afficher une liste de tous les champs personnalisés dans un ensemble de champs personnalisés définis à tout moment en naviguant sur **Administer> Personnaliser les données et les écrans> Données personnalisées** et en cliquant sur "Afficher et modifier les champs personnalisés" pour l'ensemble de champs choisi.
 
 ![image](../img/Move_custom_fields.PNG) 
-As well as the expected options of edit field settings, edit multiple
-choice options (if applicable), preview, disable or delete, you also
-have the option to **Move** a custom field to another data set. You can
-move custom fields between sets used for all contacts or for contact
-sub-types but otherwise you can only move fields between data sets of
-the same type.
 
-Choosing between fields, groups and tags
+Outre les options prévues dans les paramètres d'édition du champ , éditez les options à choix multiple (s'il y a lieu), prévisualisez, désactivez ou supprimez, vous avez également la possibilité de déplacer un champ personnalisé vers un autre ensemble de données. Vous pouvez déplacer des champs personnalisés entre les ensembles utilisés pour tous les contacts ou pour les sous-types de contacts. Vous ne pouvez déplacer des champs que dans des ensembles de données du même type.
+
+Choisir entre champs, groupes et étiquettes
 ----------------------------------------
+Les champs de données, les groupes et les étiquettes sont trois manières principales d'associer des informations aux contacts. Bien qu'il puisse être tentant de créer un champ de données personnalisé pour chaque attribut de vos données, prenez le temps d'étudier toutes les alternatives. Groupes et étiquettes offrent de puissantes fonctionnalités que vous pourriez occulter si vous comptez uniquement sur des données personnalisées. En outre, l'utilisation de champs de données pour les informations qui  pourraient être stockés plus efficacement dans des groupes ou des étiquettes peut ralentir votre système. Enfin, l'utilisation appropriée des groupes et des étiquettes facilite considérablement la tâche du personnel administratif pour retrouver les données.
 
-Data fields, groups and tags are three major ways to associate
-information with contacts. Although it can be tempting to create a
-custom data field for every attribute of your data, take time to learn
-about the alternatives. They offer powerful functionality that you may
-miss out on if you rely only on custom data. Furthermore, using data
-fields for information where they could be stored more appropriately as
-groups or tags can slow your system. Finally, proper use of groups and
-tags makes it much easier for administrative staff to maintain the
-records.
+Voici quelques conseils qui peuvent vous aider à choisir:
 
-Some tips that may help you choose are:
+   - Les données pouvant prendre un large éventail de valeurs, telles que l'adresse ou la biographie d'une personne, doivent être stockées dans un champ de données personnalisé alphanumérique.
+   - Les champs de données personnalisés peuvent être regroupés et affichés dans leur propre onglet sur l'enregistrement du contact.
+   - Comme son nom l'indique, les groupes sont utilisés pour grouper des contacts. Par exemple, vous pouvez affecter les membres du conseil d'administration à un groupe, le personnel à un autre, les bénévoles à un autre, etc... Si vous utilisez Joomla ou Drupal, vous pouvez attribuer des autorisations en fonction de l'appartenance a un groupe. Vous pouvez également définir un groupe auquel CiviCRM ajoute automatiquement des contacts et les supprime en fonction de certaines caractéristiques. Cette fonction est appelée "Groupe dynamique".(Smart Group)
+   - Si vous envisagez d'utiliser CiviMail pour les envois en masse et que vous souhaitez que certains contacts reçoivent un courrier particulier, ces contacts doivent être affectés à un groupe. Par exemple, vous aurez peut-être un communiqué de presse a adresser seulement à certains contacts : les journalistes. Ces contacts doivent être affectés à un groupe particulier. Ce groupe utilisé pourrait être alors un Groupe dynamique.   
+   - Les étiquettes et les groupes peuvent être structurés hiérarchiquement. Par exemple, un groupe ou une étiquette intitulée «Régions» peut avoir un sous-groupe ou une sous-étiquette pour chaque région géographique couverte par votre organisation (voir «Etude de cas sur les balises hiérarchiques» plus loin dans cette section).
+   - Les étiquettes prennent en charge des options de recherche plus puissantes que les champs de données ou les groupes. Par exemple, vous pouvez effectuer une recherche dans plusieurs variables avec les opérateurs ET et OU. Les champs de données ne prennent en charge que les listes de mots (qui sont effectivement les mêmes qu'un opérateur ET), à l'exception des champs désignés comme des cases à cocher, qui supportent les opérateurs OR.
+- Les étiquettes ont une interface utilisateur plus sophistiquée que les champs de données ou les groupes. L'interface permet a l'utilisateur d'ajouter et de supprimer des étiquettes sans recharger la page en mode édition.
+- Des champs de données personnalisés peuvent être affectés à un type d'enregistrement spécifique (par exemple, les Entreprises uniquement), tandis que les étiquettes seront attribués à tous les types une fois que les variables sont définies.
 
--   Data that can take a wide range of values, such as a person's
-    address or biography, should be stored in an alphanumeric custom
-    data field.
--   Custom data fields can be grouped and displayed on their own tab on
-    the contact's record.
--   As the name implies, Groups are used to group contacts. For
-    instance, you'll probably assign board members to one group, staff
-    to another, volunteers to a third, and so on. If you use Drupal, you
-    can assign permissions based on group membership. You can also
-    define a group that CiviCRM automatically adds contacts to and
-    deletes contacts from, based on some characteristic. This feature is
-    called a Smart Group.
--   If you plan to use CiviMail for mass mailings and you want certain
-    contacts to get a particular mailing, those contacts must be
-    assigned to a Group. For instance, you may want a press release to
-    go only to certain contacts; those contacts should be assigned to a
-    particular group. This group could be a Smart Group.
--   Both Tags and Groups can be structured hierarchically. For instance,
-    a group or tag labeled 'Regions' can have a subgroup or subtag for
-    each geographic region your organisation covers (see "Case study in
-    hierarchical tags" later in this section).
--   Tags support more powerful search options than data fields or
-    groups. For instance, visitors can search through multiple tags with
-    both AND and OR operators. Data fields support only lists of words
-    (which is effectively the same as an AND operator), except for
-    fields represented as check-boxes, which support OR operators.
--   Tags have a more sophisticated user interface than data fields or
-    groups. The interface allows the visitor to add and remove tags
-    without reloading the page in edit mode.
--   Custom data fields can be assigned to a specific record type (e.g.,
-    only households), whereas tags will be assigned to all types once
-    the tags are defined.
-
-Custom field set storage limitations
+Limites de stockage d'un ensemble de champs personnalisés
 ------------------------------------
 
-A large number of custom field sets or custom field sets with a larger
-number of fields may cause problems when searching, exporting data or
-running reports. It is hard to give specific limits on the number of
-data sets you should create or the number of fields that you should add
-to field sets because a lot depends on the type of data you are
-collecting, and the server that your installation is hosted on, but if
-in doubt, you should discuss with your system administrator or CiviCRM
-service provider 
+Un grand nombre d'ensembles de champs personnalisés avec un nombre très important de champs peut causer des problèmes lors de la recherche, l'exportation de données ou l'exécution de compte rendus. Il est difficile de donner des limites spécifiques au nombre d'ensembles de données que vous devez créer ou au nombre de champs que vous devez ajouter aux ensembles de champs. Cela dépend beaucoup du type de données que vous collectez et du serveur sur lequel votre installation est hébergée. En cas de doute vous devez en discuter avec votre administrateur système ou le fournisseur de services CiviCRM.
+
+
 
 

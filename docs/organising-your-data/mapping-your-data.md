@@ -1,320 +1,131 @@
-Mapping your data
-=================
+Correspondance de vos données
+=============================
 
-Your existing data may be coming from multiple sources, some electronic,
-some paper based and some residing in people's memory. "Mapping" refers
-to the activity of taking existing data that was labeled in a certain
-way and "slotting" it into a CiviCRM structure. This is a very important
-step and skipping it may cause undesired consequences in the future. For
-example, you may not be able to control or report on data the way you
-expect.
+Vos données existantes peuvent provenir de sources multiples, certaines sur support électronique ou imprimées sur papier et d'autres font appel la mémoire de vos membres. «La correspondance» fait référence à l'activité consistant à prendre des données existantes organisées d'une certaine manière et à les «placer» dans une structure CiviCRM. Il s'agit d'une étape très importante et ce passage peut causer des conséquences indésirables à l'avenir : Par exemple, il se peut que vous ne puissiez pas contrôler ou organiser les données de la façon dont vous esperez.
 
-Everyone thinks about data differently, based on experience with another
-CRM or no CRM at all. For example, "Donation", "Opportunity", and
-"Contribution" all refer to money given to your organization. CiviCRM
-was designed to be flexible and adaptable, so you should have no problem
-finding the proper place for every piece of information relevant to your
-organization.
+Chacun pense différemment à ses données en fonction de l'expérience avec un autre CRM ou pas de CRM du tout. Par exemple, «Dons», «Opportunité» et «Contribution» font tous référence aux sommes versées à votre organisation. CiviCRM a été conçu pour être flexible et adaptable, de sorte que vous ne devriez avoir aucun problème à trouver la place correspondante à chaque élément d'information pertinent pour votre organisation.
 
-Resist the temptation to add custom fields right away. Instead of adding
-a new field for manually entering membership expiration dates, learn
-about CiviCRM's membership module that automates membership duration,
-expiration and renewal reminders. Having multiple fields to collect the
-same data will cause confusion later. Avoid data duplication by making
-informed choices up front. 
+Résistez à la tentation d'ajouter des champs personnalisés immédiatement. Exemple: Au lieu d'ajouter un nouveau champ pour saisir manuellement les dates d'expiration des adhésions, découvrez le module d'adhésion de CiviCRM qui automatise la durée de l'adhésion, les rappels d'expiration et de renouvellement. Le fait d'avoir plusieurs champs pour collecter les mêmes données entraînera plus tard une confusion . Évitez la duplication des données en faisant des choix éclairés dès maintenant.
 
-The following sections will introduce you to options CiviCRM provides
-out of the box with tips along the way for mapping your data. Instead of
-using "flat" spreadsheets, **relationships** will tie your data
-together. Using relationships, you will be able to create a more
-complete picture of the community that supports your organization. 
+Les sections suivantes vous présenteront les options qu'utilise CiviCRM pour vous proposer des conseils sur la façon d'organiser vos données. Au lieu d'utiliser des feuilles de calcul sans liens, **les relations** lieront vos données ensemble. En utilisant les relations, vous serez en mesure d'avoir une vue plus complète de la communauté qui participe et soutient votre organisation.
 
-Basic information about your constituents
------------------------------------------
+Informations de base sur vos contacts
+-------------------------------------
 
-CiviCRM comes with default fields to store constituent names, addresses,
-phone numbers, emails, notes and other contact information.
-Since CiviCRM was designed for non-profits, the mapping of your most
-basic constituent information should be very easy. 
+CiviCRM est créé avec des champs par défaut pour stocker les noms de contacts, adresses, numéros de téléphone, courriels, notes et autres informations. CiviCRM a été conçu pour les organismes sans but lucratif, la gestion de vos informations basiques devrait en être que plus facile.
 
-CiviCRM divides constituents into 3 categories (Contact Types) based on
-who or what they are:
+CiviCRM divise en 3 catégories les Types de contacts en fonction de qui ou de ce qu'ils sont:
 
--   Individuals: any person your organisation wants to keep a record of
--   Organizations: this could be another non-profit, a company, a
-    chapter of your organisation, or a committee. You will generally
-    want to create at least one contact of the Organization type to
-    represent your organization. This is particularly useful when you
-    are configuring memberships
--   Households: a family or group of people who share a physical
-    location
+-   Individuels : Toute personne physique pour qui votre organisation veut conserver des informations. 
+-   Organisations : une entreprise, une personne morale, un association, une section de votre organisation, ou un comité. Vous devez nécessairement créer au moins un contact du type Organisation pour représenter votre organisme. Cela est particulièrement utile lorsque vous configurez des abonnements.
+-   Familles : Une famille ou un groupe de personnes qui partagent un lieu physique
 
-Each contact type comes with different fields, according to the
-different kinds of data you will probably want to track. For example,
-gender only applies to individuals, not organisations or households, so
-the gender field is only available for Individual contact types and
-subtypes.
+Chaque type de contact est paramétré de base avec différents champs, en fonction des différents types de données que vous allez suivre. Par exemple, le genre (sexe) ne s'applique qu'aux individuels, ni aux organisations ni aux familles, de sorte que ce domaine de genre n'est disponible que pour les types de contacts individuels et les sous-types(étudiants, bénévoles,...)
 
-To read more on built-in CiviCRM basic constituents fields and how to
-use them, please see the *Contacts* chapter in *Organising Your Data*.
+Pour en savoir plus sur les champs constitués de CiviCRM et comment les utiliser, consultez le chapitre *Contacts* de *Organisation de vos données*.
 
-Information about your constituents that is specific to your organization (basic introduction to Custom Fields)
+Informations sur les constituants spécifiques à votre organisation (introduction de base aux champs personnalisés)
 ---------------------------------------------------------------------------------------------------------------
 
-Many organizations collect data specific to their mission or structure.
-Even though CiviCRM comes with fields to store basic data that all
-non-profits collect, similarities between non-profits end at a certain
-point. For example, your organisation may be interested in information
-about constituent allergies (for individuals) or service area
-(organizations).
+De nombreuses organisations recueillent des données spécifiques à leur activité, leur mission ou à leur structure. Même si CiviCRM est livré avec des champs pour stocker les données de base que tous les organismes sans but lucratif recueillent, les similitudes entre les organismes à but non lucratif ont leur limites. Par exemple, votre organisation peut être intéressée par des informations sur les maladies allergiques (pour les individus) ou au secteur d'activité (pour les organisations).
 
-When mapping data into CiviCRM, decide if the information pertains to an
-individual, organization, or household. Additional information like
-"service area" only makes sense for Organizations. To find out how you
-can create custom fields, please see the *Custom fields* chapter in
-*Organising Your Data*.
+Lors de l'organisation de vos données dans CiviCRM, décidez si l'information concerne une personne, une organisation ou un ménage. Des informations supplémentaires comme "secteur d'activité" n'ont de sens que pour les organisations. Pour savoir comment créer des champs personnalisés, consultez le chapitre *Champs personnalisés* dans *Organiser vos données*.
 
-Relationships between constituents
+Relations entre les enregistrements
 ----------------------------------
 
-Relationships capture current and historical information about how two
-records connect to each other.
+Les relations saisissent les informations actuelles et historiques sur la façon dont deux enregistrements sont liés.
 
-You or your colleagues probably know more about your constituents than
-what has been written down. You may not have previously collected that
-information because there was no space in your "flat" spreadsheet or you
-may have collected it as a "mental note" about a given person or
-organization. The name of their family members, place of employment,
-and relationship to other constituents in your database can all be
-captured with a Relationship. 
+Vous même ou vos collègues en savez probablement plus sur vos contacts que sur ce qui est écrit. Vous n'avez peut-être pas par le passé recueilli cette information parce qu'il n'y avait pas assez d'espace dans votre feuille de calcul ou que vous l'avez peut-être recueillie mais par vos propres connaissances ou relations avec une personne ou une organisation donnée. Le nom de leurs membres de la famille, le lien avec un employeur et l'interaction avec les autres membres de votre base de données peuvent tous être saisis avec une **Relation**.
 
-CiviCRM comes with a predefined set of relationship Types including
-"employer--employee", "parent--child", and "employee--employer". You can
-create more relationships to describe your organization specific
-relationships, for example you might define a relationship type of
-"vicar--church". When you create a new Relationship, you can define when
-the Relationship began and, if relevant, ends. Previous relationships
-can still be accessed when they end. For example, you can see where
-someone used to work even after the relationship has been severed.
+CiviCRM est livré avec un ensemble prédéfini de types de relations, y compris «employeur - employé», «parent - enfant» et «employé - employeur». Vous pouvez créer davantage de relations pour décrire les relations spécifiques de votre organisation, par exemple, vous pouvez définir un type de relation de «vicaire - église». Lorsque vous créez une nouvelle relation, vous pouvez définir le début de la relation et, le cas échéant, la fin. Les relations précédentes peuvent encore être consultées lorsqu'elles se terminent. Par exemple, vous pouvez voir où quelqu'un avait l'habitude de travailler, même après que la relation a été rompue.
 
-The term Household and relationship Types "household member of--head of
-the household" confuses many new CiviCRM users. It's useful to group
-individuals who share a common address in one household, so that they
-only receive one letter. The designation "head of the household" helps
-organizations know who the letter should address. For example, you want
-to address the parent and not the child.
+Le terme ménage et les types de relations «membre du ménage - chef de famille» trouble beaucoup de nouveaux utilisateurs de CiviCRM. Il est utile de regrouper les personnes qui partagent une adresse commune dans un ménage, de sorte qu'elles ne reçoivent qu'une seule lettre. La désignation «chef de famille» aide les organisations à savoir à qui s'adresser la lettre. Par exemple, vous voulez l'adresser aux parents et pas l'enfant.
 
-To read more about configuring and using relationships, please see the
-the *Relationships*chapter in *Organising Your Data*. 
+Pour en savoir plus sur la configuration et l'utilisation des relations, consultez le chapitre *Relations* dans *Organisation de vos données*.
 
-Activities
+Activités
 ----------
 
-It is important to know how and when constituents engage with your
-organization. Knowing that someone gives monthly or volunteers
-frequently and renews her membership yearly suggests that she may
-respond well to opportunities that strengthen her relationship with your
-organization. CiviCRM allows you to record interactions such as phone
-calls, emails, and meetings between staff and constituents. These
-features help an organization build a lasting memory of its
-relationships.
+Il est important de savoir quand et comment les membres s'engagent avec votre organisation. Sachant qu'un membre cotise mensuellement ou fréquemment et renouvelle son adhésion annuellement, ceci permet de penser qu'il peut répondre ponctuellement aux sollicitations qui renforcent sa relation avec votre organisation. CiviCRM vous permet d'enregistrer des interactions telles que des appels téléphoniques, des courriels et des réunions entre le personnel et les membres. Ces fonctionnalités aident une organisation à construire une mémoire durable de ses relations.
 
-CiviCRM calls these kinds of exchanges Activities. They are tightly
-linked to other CiviCRM modules. When you record contributions, event
-attendance, membership subscriptions, and emails, CiviCRM will
-automatically create a related activity in the Contact record. Decide
-whether your organization needs different activity types in addition to
-those provide, such as training, review, exam, support etc.
+CiviCRM appelle ce type d'échanges Activités et sont étroitement liés à d'autres modules de CiviCRM. Lorsque vous enregistrez les contributions, la présence aux événements, les cotisations et les courriels, CiviCRM créera automatiquement une activité connexe dans l'enregistrement de contact. Vous pouvez décider si votre organisation a besoin de plus de différents types d'activités que ceux proposées, comme la formation, journée portes ouvertes, information publiques, présentations, etc...
 
-To read more about configuring and using activities, please see the
-*Activites* chapter in *Organising Your Data*.
+Pour en savoir plus sur la configuration et l'utilisation des activités, consultez le chapitre *Activités*  dans  *Organisation de vos données*.
 
-Webinars, events, performances, and meetings (CiviEvents)
+Formations, événements, informations et réunions (CiviEvents)
+
+Webinars, events, informations, and meetings (CiviEvents)
 ---------------------------------------------------------
+CiviCRM vous aide à gérer et à suivre toutes activités par lesquelles vous réunissez les membres de votre communauté à un moment et à un endroit déterminés. Les formations, les événements, les informations et les réunions ont des dates et des heures spécifiques de début et de fin, des lieux de rencontre (y compris en ligne) et des intérets communs entre les personnes. Ils peuvent être facturés, ou gratuits, ou sans aucune inscription requise. CiviCRM est fourni avec les fonctionnalités qui permettent de promouvoir les événements et enregistrer les inscriptions. Si vous avez des dossiers sur les personnes ayant participé à des événements passés, vous pouvez transférer ces documents précieux dans CiviEvents.
 
-CiviCRM helps manage and track any occasion in which you bring community
-members together at a certain place and time. Webinars, events,
-performances, and meetings have specific start and end dates and times,
-meeting places (including online) and reasons for bringing people
-together. They can be ticketed, RSVP only, or no reservation required.
-CiviCRM comes with functionality to promote events and record
-registrations. If you have records of who has participated in past
-events, you can transfer these valuable records into CiviEvents.
+Le champ **Types d'événements** vous permet de distinguer les différents types d'événements que votre organisation organise. Ceci est utile pour évaluer combien de personnes ont participé à une série d'événements similaires ou si quelqu'un préfère un type d'événement sur un autre.
 
-The **Event Types** field helps you to distinguish between different
-types of events your organization hosts. This is helpful for evaluating
-how many people have participated in a similar series of events or
-whether someone prefers one kind of event over another.
+Pour en savoir plus sur la configuration et l'utilisation des relations, consultez la section *Événements*  plus loin dans ce manuel.
 
-To read more about configuring and using relationships, please see the
-*Events* section later in this book.
+Adhésions
+---------
+De nombreuses organisations offrent un programme structuré d'adhésion dans lequel les membres de la communauté peuvent s'inscrire pour recevoir certains avantages sur une période déterminée. Les membres peuvent choisir parmi plusieurs de niveaux de cotisations qui ont des avantages différents, généralement plus vous donnez à l'organisation et plus vous obtenez en retour. Les organisations peuvent également offrir l'adhésion,... peut-être comme un cadeau!. Par exemple, un bénévole de longue date pourrait recevoir une adhésion à vie à l'organisation. Des avantages supplémentaires peuvent inclure l'accès à l'annuaire des membres, le contenu de documents, des remises, etc. Les individus, les familles ou les ménages, les organisations peuvent tous s'inscrire pour des adhésions.
 
-Memberships
------------
+La principale différence entre les cotisations des membres et un don unique est que les adhésions définissent la relation de quelqu'un à l'organisation sur une période de temps donnée. Les Associations s'attendent souvent à ce que les adhésions soient renouvelées d'année en année, alors qu'un don est un apport unique. Les Associations doivent envoyer une lettre de confirmation de la contribution, mais elles ne s'engagent pas à offrir les mêmes prestations au donateurs en échange d'un don ou d'une contribution. 
 
-Many organizations offer a structured program in which community members
-can sign up to receive certain benefits for a pre-defined period of
-time. Members choose from a variety of dues levels that have associated
-benefits, generally the more you give the organization the more you get
-in return. Organizations can also give membership at no price, perhaps
-as an award. For example, a long-time volunteer might receive a
-life-time membership to the organization. Common benefits include access
-to member directories, extra content, discounts, etc. Individuals,
-families or households, and organizations can all sign up for
-memberships.
+Analysez votre structure d'adhésion actuelle avant d'importer des enregistrements d'adhésion dans CiviCRM. Prenez le temps d'éliminer les niveaux d'adhésion inutilisés ou de simplifier les avantages que vous proposez. La seule information que vous devez vraiment transférer pour chaque membre est la date de début, la durée, les cotisations d'adhésion payées, et le type d'adhésion.
 
-The main difference between membership dues and a donation is that
-memberships redefine someone's relationship to the organization for a
-period of time. Organizations often expect that memberships will be
-renewed from year to year, while a donation is a one-time gift.
-Organizations need to send an acknowledgement letter, but they have not
-promised to serve the donor advertised benefits in response to a
-donation or Contribution in CiviCRM.
+D'une manière générale, avoir plus de 10-15 types d'adhésion peut être difficile à gérer. Parfois, les associations peuvent avoir de nombreux types d'adhésion afin de préserver d'autres informations sur les adhérents dans le dossier d'adhésion. Il est recommandé de vérifier d'abord si CiviCRM a déjà des champs de données existants liés aux adhésions pour garder une trace de ces informations avant d'étendre les registres d'adhésion.
 
-Analyze your current membership structure before importing membership
-records into CiviCRM. Take time to eliminate unused membership levels or
-simplify the benefits you promise. The only information you really need
-to transfer for each member is start date, duration, membership dues
-paid, and type of membership.
+Certaines informations que vous avez peut-être déjà enregistrées sous forme d'informations statiques peuvent alors être calculées dynamiquement et affichées dans des rapports ou dans d'autres champs. Par exemple, CiviCRM peut calculer dynamiquement le nombre d'années pendant lesquelles un adhérent donné est membre en fonction de la date "Adhésion depuis".
 
-Generally speaking, having more than 10-15 membership types may be hard
-to manage. Sometimes organizations may have many membership types in
-order to preserve other information about constituents in the membership
-record. It's recommended to verify first whether or not CiviCRM already
-has existing data fields related to memberships to keep track of that
-information before extending membership records.
-
-Some information that you may have recorded as static information before
-can now be calculated dynamically, and displayed in reports or other
-fields. For example, CiviCRM can dynamically calculate the number of
-years a given constituent has been a member based on the
-"Membership since" date.
-
-To read more about configuring and managing memberships, please see the
-*Memberships*section later in this book.  
+Pour en savoir plus sur la configuration et la gestion des adhésions, consultez la section *Adhésions* plus loin dans ce manuel.
 
 Contributions
 -------------
 
-Contribution in CiviCRM refers to money, goods, or services coming in to
-your organization. Money is still money whether someone buys an event
-ticket, signs up for a membership, or any other activity that requires
-payment. CiviCRM allows you to record all money coming into your
-organization as a Contribution with different Types to preserve
-information about where it came from. You will also be able to specify
-the date the contribution came in, it's status (you can record a
-contribution as pending before the money is deposited to your bank
-account) and the form it was delivered in (check, cash, etc.).
+Les contributions dans CiviCRM se rapportent à l'argent, les biens ou les services entrant dans votre organisation. L'argent est toujours de l'argent si quelqu'un achète un billet d'événement, s'inscrit pour une adhésion, ou toute autre activité qui nécessite un paiement. CiviCRM vous permet d'enregistrer tout l'argent entrant dans votre organisation en tant que Contribution avec différents types pour préserver l'information d'où qu'elle soit originaire. Vous pourrez également préciser la date d'entrée de la contribution, son statut (vous pouvez enregistrer une contribution en attente avant que l'argent soit déposé sur votre compte bancaire) et le mode par lequelle elle a été réglée (chèque, espèces, virement, etc.).
 
-If you are planning to keep using an external donations system, you may
-leave transactions there. On the other hand, you may want to transfer to
-CiviCRM information about past event/webinar registrations because they
-tell you the history of constituent involvement in your organization.
-Also consider how far back you want to import the history of
-contributions. Large contributions should be preserved, but the fact
-that someone donated 5 dollars 10 years ago may no longer be relevant. 
+Si vous prévoyez de continuer à utiliser un système de dons externes, vous pouvez ignorer ces transactions. D'autre part, vous voudrez peut-être transférer à CiviCRM des informations sur les enregistrements d'événements / réunions antérieures, car ils vous indiquent l'historique de la participation des membres de votre organisation. Considérez également jusqu'où vous souhaitez importer l'historique des contributions. Des contributions importantes devraient être préservées, mais le fait qu'une personne a fait don de 5 euros il ya 10 ans peut ne plus être pertinent. A vous de juger !
 
-To read more about configuring and using relationships, please see the
-*Contributions* section later in this book. 
+Pour en savoir plus sur la configuration et l'utilisation des relations, consultez la section  *Contributions*  plus loin dans ce manuel.
 
-Campaigns
+Campagnes
 ---------
 
-Sometimes organizations host a fundraising gala, send an email appeal,
-and record contributions all to support one goal. E.g., raise $50,000
-to support a kids camp. Campaigns are usually time limited and tie
-together a range of activities and give you a high-level view to compare
-how people responded to your initiatives.
+Parfois, les organisations organisent une soirée de gala pour collecter des fonds, envoient une invitation par courrier électronique et enregistrent leurs contributions pour soutenir un seul projet. Par exemple, collecter 50 000 € pour aider un village  d'enfants. Les campagnes sont habituellement limitées dans le temps, concernent une gamme d'activités et vous donnent une vue détaillée pour comparer la façon dont le public a répondu à vos initiatives.
 
-You can start taking advantage of campaigns if your organization's
-fundraising initiatives fit well into a unique themes. Some examples of
-campaigns are year end pledge drives, or project specific fundraisers.
-Organizations often send several email appeals encouraging donors to
-support a particular project or fundraiser, such as a 'final notice' and
-one or more 'countdown' appeals.
+Vous pouvez commencer à profiter des campagnes si les initiatives de collecte de fonds de votre organisation s'inscrivent sur un thème unique. Quelques exemples de campagnes : Promesses de dons de fin d'année ou levées de fonds spécifiques pour soutenir un projet. Les organisations envoient souvent des appels de fonds par courrier électronique encourageant les donateurs à participer au financement d'une action particuliere ou une collecte de fonds, tel par exemple un «dernier avis» et un ou plusieurs appels... comme un «compte à rebours».
 
-Grouping and tagging constituents
----------------------------------
+Groupes et étiquettes
+---------------------
 
-Development directors, volunteer coordinators, and program managers
-store a wealth of information in their heads. They often make decisions
-about who to invite to an event, who should not receive an appeal,
-and/or who would be perfect for a volunteer opportunity.
+Les responsables de développement, les coordinateurs de bénévoles, les gestionnaires de programmes... stockent souvent une mine d'informations dans leur tête. Ils prennent souvent des décisions : qui inviter à un événement, qui ne devrait pas recevoir un appel, qui participerait à une action de bénévolat...
 
-Groups and tags can store that kind of information and act as the
-building blocks for creating email and invitation lists. **Groups** are
-useful to identify two or more contacts with something in common, as
-opposed to relationships which can only capture information about two
-contacts. Groups can also act as mailing lists. A group of people who
-subscribe to your newsletter(s) is a good start. 
+Les groupes et les étiquettes peuvent stocker ce type d'information et servir de base pour la création de listes d'e-mails et d'invitations. **Les groupes** sont utiles pour identifier plusieurs contacts ayant des caractéristiques communes, par opposition aux relations qui ne peuvent saisir que l'information sur deux contacts. Les groupes peuvent également servir de listes de diffusion. Un groupe de personnes qui s'abonnent à votre newsletter est un bon début.
 
-Organizations can have complex communication strategies, in which they
-send different letters to several subsets of their community. One
-Individual can be tagged member and volunteer, so that she receives
-member specific communications as well as volunteer specific
-communications. Groups are also useful to store issue or program
-specific communication preferences. For example, consider a group of
-people who have specifically requested not to receive fundraising
-appeals. When you go to create an email appeal mailing, you can exclude
-the group of Individuals who have requested not to receive fundraising
-appeals.
+Les organisations peuvent avoir des stratégies de communication complexes dans lesquelles elles envoient des courriers différentes à plusieurs sous-ensembles de leur communauté. Une personne peut être enregistrée comme membre et comme bénévole afin qu'elle reçoive des communications spécifiques aux membres et aux bénévoles. 
+Les groupes sont également utiles pour stocker des préférences de communication spécifiques aux événements ou aux programmes. Par exemple :  un groupe de personnes qui a spécifiquement demandé de ne pas recevoir des appels de collecte de fonds. Lorsque vous allez créer un courrier d'appel de fonds par courrier électronique, vous pouvez exclure ce groupe de personnes.
 
-Try to avoid creating groups based on information that can be stored by
-other fields in CiviCRM. You don't need a group for individuals who have
-opted-out of bulk mailings, because that option will be selected on
-their Contact record. CiviCRM automatically excludes these constituents
-from any bulk mailing. Likewise, you don't need a group called "donors"
-because you can run an advanced search to find any **Contact** record
-that has a **Contribution** associated with it, even between any date
-ranges. Most functions available to groups are also available through
-the search results screen.
+Essayez d'éviter de créer des groupes en fonction d'informations pouvant être stockées par d'autres champs dans CiviCRM. Vous n'avez pas besoin d'un groupe pour les personnes qui ont choisi de ne pas recevoir de mailing, parce que cette option sera sélectionnée sur leur enregistrement de contact. CiviCRM exclut automatiquement ces contacts de tout envoi de mailing. De même, vous n'avez pas besoin d'un groupe appelé «Donateur» car vous pouvez exécuter une recherche avancée pour trouver un **Contact**  qui a une  **Contribution**  qui lui est associée, même dans n'importe quelle plage de dates. La plupart des fonctions disponibles pour les groupes sont également disponibles dans l'écran des résultats de recherche.
 
-If you want new records that meet a particular criteria to be
-automatically added to a group, create a **Smart Group** from any
-**advanced search**. For example, you may want to have a Smart Group
-that calls the Contact record of all members who also donated more then
-$100 in the past year. When a member makes a new $100 donation after
-the group has been created, their record will be added to the Smart
-Group.
+Si vous souhaitez que de nouveaux enregistrements, répondant à un critère particulier, soient automatiquement ajoutés à un groupe, créez un **Groupe intelligent** à partir de **Recherche avancée**. Par exemple, vous pouvez avoir un Groupe intelligent  qui appelle l'enregistrement Contact de tous les membres qui ont également fait un don de plus de 100 € au cours de la dernière année. Lorsqu'un membre fait un nouveau don de 100 € après la création du groupe, son dossier sera ajouté au groupe intelligent.
 
-**Tags** are more like keywords that you want to associate with a
-record.  You can easily add or remove tags, but there is no easy way to
-see the history of changes. Relationships are a much better tool for
-seeing information history.
+**Les étiquettes** sont considérées comme des mots-clés que vous pouvez associer à un enregistrement. Vous pouvez facilement ajouter ou supprimer des tags, mais il n'existe aucun moyen simple de voir l'historique des modifications. Les relations sont un meilleur outil pour voir l'historique de cette information.
 
-Profiles
+Profils
 --------
 
-CiviCRM allows you to pull together sets of fields for different
-purposes, and help you reduce the amount of time staff spends on
-administrative tasks. These sets of fields are known as profiles.
+CiviCRM vous permet de combiner des ensembles de champs à des fins différentes et vous aider ainsi à réduire le temps passé par les utilisateurs pour les tâches administratives. Ces ensembles de champs sont appelés profils.
 
-Profiles are about how your data is edited or displayed to your staff or
-other groups of users, not how your data is stored.
+Les profils portent sur la façon dont vos données sont éditées ou affichées à vos utilisateurs, et non sur la façon dont vos données sont stockées.
 
-Read the *Profiles* chapter in this section for detailed information
-about how to make use of profiles.
+Lisez le chapitre  *Profils*  de cette section pour obtenir des informations détaillées sur l'utilisation des profils.
 
-Where next?
+Où aller ensuite ? 
 -----------
 
-In the sections above we've tried to describe how your existing data may
-be mapped into CiviCRM. We've only touched on basic CiviCRM
-functionality or "spaces" where your data may fit. To read more about
-how CiviCRM can work with your data, please see information in this book
-about specific CiviCRM components: **CiviEvent**, **CiviMember**,
-**CiviMail**, **CiviContribute**, **CiviCase**, **CiviCampaign**, and
-**CiviGrant**.
+Dans les sections ci-dessus, nous avons essayé de décrire comment vos données existantes peuvent être organisées dans CiviCRM. Nous avons seulement abordé les fonctionnalités de base de CiviCRM où vos données peuvent s'integrer. Pour en savoir plus sur la façon dont CiviCRM peut fonctionner avec vos données, consultez les informations contenues dans ce livre sur les composants CiviCRM spécifiques: **CiviEvent**, **CiviMember**, **CiviMail**, **CiviContribute**, **CiviCase**, **CiviCampaign**, et **CiviGrant**.
 
-Each of the above components will help you streamline administrative
-tasks related to event management, membership, sending communications,
-receiving contributions and donations, case management, conducting
-campaigns, administering grants programs, and more.
+Chacun de ces composants vous aidera à rationaliser et optimiser les tâches administratives liées à la gestion des événements, l'adhésion, l'envoi des communications, la réception des contributions et des dons, la gestion des cas, la conduite des campagnes, l'administration des programmes de subventions, et plus encore...
 
-The sections on **Survey**, **Petition**, and **CiviEngage** (the latter
-is actually a Drupal module) relate closely to **CiviCampaign** and
-their special functionality is described in the respective chapters.
+Les sections : **Enquête**, **Pétition** et **CiviEngage** (ce dernier est en fait un module Drupal) se rapportent étroitement à **CiviCampaign** et leurs fonctionnalités spéciales sont décrites dans les chapitres respectifs
 
-There is also a separate reporting section related specifically to using
-reports and doing analysis on your data for ongoing evaluation of your
-work. 
+Il existe également une section de rapport liée spécifiquement à l'utilisation des rapports et à l'analyse de vos données pour l'évaluation continue de votre travail.
+

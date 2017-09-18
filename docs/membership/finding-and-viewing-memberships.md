@@ -1,127 +1,66 @@
-Finding and viewing memberships
+Trouver et afficher des adhésions
 ===============================
 
-This chapter describes how to view and search your membership records.
+Ce chapitre décrit comment afficher et rechercher vos enregistrements d'adhésion.
 
-Viewing Your Memberships
+Affichage de vos adhésions
 ------------------------
 
-To see a summary of the status of your memberships over recent months,
-as well as details about these memberships, you can use the membership
-dashboard or view the membership in an individual's contact record.
+Pour voir un résumé de l'état de vos adhésions ainsi que les détails de ces adhésions au cours des derniers mois, vous pouvez utiliser le tableau de bord des adhésions ou consulter une adhésion dans le dossier individuel de chaque contact 
 
-### The Membership Dashboard
+### Le Tableau de bord des adhésions
 
-To see a quick snapshot of your recent memberships, use the membership
-dashboard: **Memberships > Dashboard**. This screen contains two
-blocks of information that display a summary or your recent memberships,
-categorised by type and date range, and a list of recent member
-activity.
+Le tableau de bord des adhésions permet d'afficher rapidement vos adhésions récentes, utilisez  : **Adhésions> Tableau de bord**. Cet écran contient deux blocs d'informations qui affichent un résumé des adhésions récentes, classées selon le type et la plage de dates, et une liste de l'activité récente des membres.
 
 ![image](../img/CiviCRM-CiviMember-Memebership-Summary_2.jpg)
 
+Ce tableau présente un résumé des nouvelles adhésions et des renouvellements d'adhésion et inclut des raccourcis pour voir les détails. Il suffit donc de cliquer sur un nombre pour analyser et afficher une liste des membres qui ont adhérés ou renouvelés au cours des deux derniers mois ou de l'année courante, ou qui sont considérés comme actifs en fonction des définitions de statut de l'adhésion. À partir de cette liste de membres, vous pouvez effectuer des actions supplémentaires sur les adhésions, telles que Supprimer, Modifier, Exporter, Envoyer un courriel.
 
-All of the summary numbers are hot-linked. Simply click on a number to
-drill down and view a list of members who have joined or renewed over
-the last two months or the year-to-date, or who are considered current
-according to the membership status definitions. From this list of
-members, you can perform additional actions with the memberships, such
-as Delete, Edit, Export, Send Email to Contacts.
+### Affichage des enregistrements d'adhésion d'un contact
 
-### Viewing A Contact's Membership Records
-
-Another way to view membership records is by viewing a specific
-contact's record and looking at the Membership tab. Note:If a contact's
-membership is "pending", the membership will show up when the tab is
-clicked but it will NOT be counted in the number on the tab.
-
--   After finding the contact you wish to manage, click the "Membership"
-    tab to view a summary of the contact's membership records.
+Une autre façon de voir les enregistrements d'adhésion est de consulter un enregistrement de contact et d'examiner l'onglet Adhésion. Remarque: si l'adhésion d'un interlocuteur est "En attente", l'adhésion apparaîtra lorsque l'onglet sera cliqué, mais il ne sera PAS comptabilisé dans l'onglet.
+- Après avoir trouvé le contact que vous souhaitez, cliquez sur l'onglet "**Adhésion**" pour afficher un résumé des enregistrements d'adhésion du contact.
 
 ![image](../img/CiviCRM_update-CiviCore-Contact_MembershipTabs-en.jpg)
 
-Membership records appear in a list with active memberships (those with
-a current status) first and followed by expired or canceled memberships.
+Les dossiers d'adhésion apparaissent sous forme de liste avec les adhésions actives (celles ayant un statut actuel) et suivies des adhésions anciennes ou annulées.
 
-You can edit existing membership records, renew a membership, or create
-a new membership record. If you have configured an online credit card
-payment processor for use in CiviCRM, you will see two options for
-creating or renewing a membership: one for handling an offline record
-(no real-time transaction taking place), and one for handling an online
-record (using a real-time credit card transaction), which can also be
-used to set up auto-renew if the processor supports this. The interface
-for each process is very similar, except that the credit card option
-includes payment processing and recording options.
+Vous pouvez modifier les enregistrements d'adhésion existants, renouveler une adhésion ou créer un nouvel enregistrement d'adhésion. Si vous avez configuré un processeur de paiement par carte de crédit en ligne dans CiviCRM, vous verrez deux options pour créer ou renouveler une adhésion: une pour la gestion d'un enregistrement hors ligne (pas de transaction en temps réel) et une pour la gestion d'un enregistrement en ligne (En utilisant une transaction en carte de crédit en temps réel), qui peut également être utilisé pour configurer le renouvellement automatique si le processeur le prend en charge. L'interface pour chaque processus est très similaire, sauf que l'option de carte de crédit comprend les options de traitement de paiement et d'enregistrement.
 
-If you are looking at the primary member contact record for a
-membership type that has inherited membership you will see a list of the
-contacta who have inherited the membership.
+Si vous affichez un enregistrement de contact, en tant que membre principal pour un type d'adhésion, vous verrez une liste du contact qui a bénéficié de l'adhésion.
 
 ![image](../img/membership%20everyday%20for%20limited%20inherited.png)
 
-In this case a maximum of two inherited memberships are allowed for
-people who are employees of the primary membership organisation. If one
-of the available inherited memberships is not assigned to the correct
-employee then you can click on **Delete** for that contact. This will
-free up an inherited membership for you to assign appropriately by
-selecting **Create.**
+Dans ce cas, un maximum de deux adhésions héritées sont autorisées pour les personnes qui sont des employés de l'organisation du membres principal. Si l'une des adhésions héritées disponibles n'est pas attribuée correctement à l'employé, vous pouvez cliquer sur **Supprimer** pour ce contact. Cela libérera une adhésion héritée pour attribuer une correspondance en sélectionnant **Créer**
 
 ### ![image](../img/membership%20everyday%20for%20limited%20inheritedp2.png)
 
-Sending email to members
+Envoi de courriel aux membres
 -------------------------
 
-After searching your records, you may want to send an email to selected
-contacts and include data field tokens to personalize the email message.
-To learn more about emailing and tokens in CiviCRM, see the section
-called "Email".
+Après avoir recherché vos enregistrements, vous pouvez envoyer un courriel aux contacts sélectionnés et y inclure des jetons de champs de données pour personnaliser le message électronique. Pour en savoir plus sur le courrier électronique et les jetons dans CiviCRM, consultez la section intitulée «Email».
 
-To send email to members:
+Pour envoyer un courriel aux membres :
 
--   Click on **Memberships > Find Members >**enter your criteria,
--   then on the "Find Members" search results screen, select the records
-    you want to import and in **-actions-** drop down, select **Send
-    Email to Contacts**.
+-   Cliquez sur **Adhésion> Trouver des membres>** saisissez vos critères, puis **Rechercher**
+-   Sur l'écran "Rechercher des adhésions", sélectionnez les enregistrements que vous souhaitez traiter et dans le menu déroulant **Actions**, sélectionnez **Courriel-envoi immédiat**.
 
-
-Searching based on membership data
+Recherches basées sur les données d'adhésion
 ----------------------------------
 
-CiviCRM makes an important distinction between contacts and memberships,
-which is blurred when we talking about 'members'. Consider the
-following question: 'How many members do we have?' This could be taken
-to mean 'how many contacts do we have that are members?', or 'how many
-memberships have we granted to contacts?'. The answer to these
-questions is often the same but what happens if one of your contacts has
-more than one membership? The answer is that you'll have two
-memberships but only one contact.
+CiviCRM fait une distinction importante entre les contacts et les adhésions, ce qui est flou lorsque nous parlons de «membres». Considérons la question suivante: «Combien de membres avons-nous?» Cela pourrait signifier «combien de contacts avons-nous qui sont membres?», Ou «combien d'adhésions avons-nous accordés aux contacts?». La réponse à ces questions est souvent la même, mais que se passe-t-il si l'un de vos contacts compte plusieurs membres? La réponse est que vous aurez deux adhésions mais un seul contact.  
+Il n'y a pas de bonne ou de mauvaise réponse à la question si nous examinons les contacts ou les adhésions. Cela dépend simplement de ce qui vous intéresse. Il est important de prendre cela en considération lors de la recherche.
 
-There's no right or wrong answer to the question should we look at
-contacts or memberships. It just depends on what you are interested
-in. It is important to take this into consideration when carrying out a
-search.
+La recherche **Rechercher des membres** vous permet de rechercher en fonction des données d'adhésion et d'afficher les données d'adhésion.
 
-The **Find members** search allows you to search based on membership
-data and return membership data.
-
--   Click on **Memberships > Find Members >**, enter your criteria.
-    Click the **Search** button.
+-   Cliquer sur **Adhésion > Rechercher des adhésions>**, renseignez vos critères : "membre depuis le"
+-   Cliquer sur le bouton **Rechercher**.
 
 ![image](../img/memberships%20find%20memberships.JPG)
 
-The **Advanced search** allows you to search based on some limited
-membership information (combined with other contact information) and
-return contacts. You can also choose membership from the **Display
-Results As** column to show members rather than contacts. To find out
-more about using Advanced Search, refer to the "Searching" chapter.
-
--   Click on **Search > Advanced Search** and in the **Display Settings For Resullts** accordion set **Display Results As** to **Memberships**, enter your criteria.
-     Click the **Search** button.
-
+La **Recherche avancée** vous permet également de rechercher en fonction de certaines informations d'adhésion (combinées avec d'autres informations de contact) et d'afficher des listes de contacts. Vous pouvez également choisir Adhésion dans la colonne **Vue pour l'affichage de contacts** afin d'afficher les membres plutôt que les contacts. Pour en savoir plus sur l'utilisation de la recherche avancée, reportez-vous au chapitre "Recherche".
 
 ![image](../img/z_sprint14_display%20Results%20as_1.png)
 
-Once you have found the membership information based on your criteria your search results will allow you to view some membership details. You then can perform further
-actions on your search results or a smaller subset of selected records,
-such as **Email - send now** or **Export members** by clicking
-on the **Actions** dropdown menu.
+Dès que vous avez trouvé les informations d'adhésion en fonction de vos critères, les résultats de vos recherches vous affichent certains détails d'adhésion. Vous pouvez ensuite effectuer d'autres actions sur vos résultats de recherche ou un sous-ensemble plus petit d'enregistrements sélectionnés, tels que **Couriel-Envoi immédiat** ou **Contact-Exporter** en cliquant sur le menu déroulant **Actions**.
+

@@ -1,20 +1,10 @@
-Undelete
-========
+Restauration des contacts
+=========================
 
-By default, deleted contacts are sent to the trash, and may be recovered
-at a later date by an administrator (or anyone holding the "access
-deleted contacts" permission"). To restore these contacts, go to
-**Advanced Search**, enter the contact’s details and check the **Search
-in Trash** check-box at the bottom of the **Basic Criteria** section.
+Par défaut, les contacts supprimés sont envoyés dans la corbeille de CIVICRM et peuvent être récupérés à une date ultérieure par un administrateur (ou toute autre personne détenant l'autorisation "accès aux contacts supprimés"). Pour restaurer ces contacts, aller à **Recherche multicritères**, et cochez la case **Rechercher dans la corbeille** dans la section  **Paramètre de recherche**.
 
-From the list of results, you can either recover contacts individually
-using the **Restore** link at the end of the row, or by choosing
-**Restore contacts** from the action drop-down menu.
+Dans la liste des résultats, vous pouvez soit récupérer les contacts individuellement en utilisant le lien **Restaurer** à la fin de la ligne, soit en choisissant **Restore contacts from trash** dans le menu déroulant **"Action"** pour les contacts sélectionnés.
+Si vous êtes sûr que vous n'avez plus besoin d'un contact, vous pouvez les supprimer définitivement.
 
-If you are sure that you no longer have a need for the particular
-contact, you can delete them permanently.
-
-Note that you can disable the trash function if you like in **Administer > System Settings > Misc (Undelete, PDFs, Limits, Logging, Captcha,
-etc.)**
-
+Notez que vous pouvez désactiver la fonction de corbeille si vous le souhaitez dans **Administer> Paramètres système> Divers> (corbeille, PDF, limites, journalisation, Captcha, etc.)**
 

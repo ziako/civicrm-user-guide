@@ -1,117 +1,69 @@
-Membership Reports
+Rapports sur les adhésions 
 ==================
 
-There are a number of techniques for reporting on and analysing your
-memberships.
+Il existe plusieurs techniques pour obtenir un rapport et analyser vos adhésions.
 
-The membership dashboard gives a quick summary of your current
-memberships, displaying information for each membership type such as
-current totals of members, and then a break down for last month, this
-month and current year to date totals. You can also search for specific
-membership details using **Advanced Search** or **Find Memberships**. To
-learn more about the membership dashboard and using the search features
-to find your memberships, refer to the "Finding Memberships" chapter.
+Le tableau de bord des membres donne un résumé rapide de vos adhésions actuelles, affichant des informations pour chaque type d'adhésion, telles que le total actuel des membres, une ventilation pour le dernier mois, le mois en cours et les totaux de l'année en cours. Vous pouvez également rechercher des détails d'adhésions en utilisant **Recherche avancée** ou **Trouver des membres**. Pour en savoir plus sur le tableau de bord des adhésions et comment utiliser les fonctions de recherche pour trouver une adhésion, consultez le chapitre «Trouver des membres».
 
-This chapter will show you how to view and create membership reports as
-well as export membership information so you can do further analysis. 
+Ce chapitre vous montrera comment afficher et créer des rapports d'adhésion ainsi que d'exporter ces informations afin que vous puissiez effectuer d'autres analyses.
 
-Viewing Membership Reports
+Affichage des rapports d'adhésion
 --------------------------
-
-Out-of-the-box, CiviCRM comes with several membership reports designed
-to tell you something specific about your membership:
+CiviCRM est livré avec plusieurs rapports d'adhésions conçus pour vous permettre une analyse de vos adhésions:
 
 ![image](../img/membership%20report%20list_1.PNG) 
 
-
-The **Membership Summary** report shows information about members
-grouped by a date frequency you specify, such as month, week, quarter,
-year. For example, you can look at the number of members that have
-joined each month over a date range, membership types, or any other
-custom data that you collect about them. 
+Le rapport  **Membership Summary** affiche des informations sur les membres regroupés selon une fréquence de date que vous spécifiez, comme le mois, la semaine, le trimestre, l'année. Par exemple, vous pouvez consulter le nombre de membres qui vous ont rejoint chaque mois pendant une période, des types d'adhésion ou toute autre donnée personnalisée que vous collectez à leur sujet.
 
 ![image](../img/membership%20summary%20report.PNG)
 
-If you click on a highlighted field you will then see the corresponding
-**Membership Detail** report for that row. So clicking on **May 2015**
-for membership type **General** shows:
+Si vous cliquez sur un champ en surbrillance, vous verrez le rapport **Membership Detail** correspondant pour cette ligne. par exemple si vous cliquez sur **Mai 2015** pour le type d'adhésion **Général** ceci vous donnera:
 
 ![image](../img/membership%20detail%20from%20summary%20report.PNG)
 
-The **Membership Detail** report shows information for each
-membership record based on your selected criteria. 
+Le rapport **Membership Detail** affiche des informations pour chaque adhérent en fonction des critères sélectionnés.
 
 ![image](../img/membership%20detail%20report.PNG) 
  
-
-The **Lapsed Memberships** report provides a list of memberships that
-lapsed or will lapse before the date you specify.
+Le rapport **Lapsed Memberships** fournit une liste des adhésions qui ont expiré ou seront caduques avant la date que vous avez spécifiée.
 
 ![image](../img/membership%20lapsed%20report.PNG) 
 
-
-The **Contribution and Membership Details** report will display
-information details of a contributions and those contributions connected
-to a membership records based on your report criteria.
+Le rapport **Contribution et Membership Details** affiche les informations détaillées des contributions ainsi que les contributions liées à une adhésion en fonction des critères sélectionnés.
 
 ![image](../img/membership%20contribution%20report.PNG) 
 
-Creating New Membership Reports
+Création de nouveaux rapports d'adhésions
 -------------------------------
 
-If you find that you want to create and save new membership reports with
-different criteria other than the out-of-the-box membership reports
-offer , you can do so by using the membership templates.
+Vous pouvez créer de nouveaux rapports sur les adhésions si vous estimez que les modèles standards ne vous conviennent pas. Voici comment proceder :
 
--   Click on **Reports > Membership Reports >** click the **New Member
-    Report** button
--   On the Create New Report Template screen, click on one of the
-    membership report templates, and begin entering your criteria
+-   Cliquez sur **Tous les rapports>Nouveau compte rendu** cliquez sur le bouton **Member report templates**
+-   Dans cette fenêtre, cliquez sur l'un des modèles de rapport d'adhésion et commencez à entrer vos critères dans les onglets "Colonnes, Groupement, Trier, Filtres"
 
 ![image](../img/memberships%20create%20new%20membership%20report_1.JPG)
 
--   Once you've entered your criteria, click the **Preview Report**
-    button to check your results
--   If you like what you see, you can then save this report as a new
-    membership report by clicking **Create Report**, then enter the
-    information you want to save this as a new membership report.
+-   Dès que vous avez saisi vos critères, cliquez sur **Voir les résultats** pour vérifier vos résultats.
+-   Si vous êtes satisfait du résultat, vous pouvez alors enregistrer ce rapport en tant que nouveau rapport d'adhésion en cliquant sur **Créer un rapport**, dans le menu déroulant "Action > Créer un compte rendu" puis donner un nom en tant que nouveau rapport d'adhésion.
 
-To learn more about working with reports, see the "Reporting" section.
+Pour en savoir plus sur le fonctionnement des rapports, consultez la section "Comptes rendus".
 
-Exporting membership records
+Export des informations d'adhésion
 ----------------------------
 
-You may decide to export membership records so that you can do more
-analysis, perform document mail merges, or create a specific type of
-reports outside of CiviCRM. Exporting membership records allows you to
-select a default set of primary fields or choose fields that are
-specific to the membership record for export.
+Vous pouvez choisir d'exporter des enregistrements d'adhésion afin que vous puissiez effectuer plus d'analyses, effectuer des fusion de courrier de documents ou créer un type spécifique de rapports externe à CiviCRM. L'exportation d'enregistrements d'adhésion vous permet de sélectionner un ensemble de champs primaires par défaut ou de choisir des champs spécifiques à l'enregistrement d'adhésion en vue de l'exportation.
 
-You will need to first search for the specific membership records you
-would like to export. To learn more about how to search for membership
-records, refer to the "Finding Memberships" chapter.
+Vous devrez d'abord rechercher les enregistrements d'adhésion spécifiques que vous souhaitez exporter. Pour en savoir plus sur la recherche de dossiers d'adhésion, consultez le chapitre «Trouver des membres».
 
-To export membership records:
+Pour exporter les enregistrements d'adhésion:
 
--   Click on **Memberships > Find Members >**, enter your search
-    criteria
--   Then on the "Find Members" search results screen, select the records
-    you want to import and in **-actions-** drop down, select **Export
-    Members**.
--   You can select **Export PRIMARY fields** or **Select fields for
-    import ** and click the **CONTINUE** button
-
+-   Cliquez sur **Adhésion> rechercher des adhésions**, entrez vos critères de recherche. 
+-   Sur l'écran de résultats de recherche "Trouver des adhésions", sélectionnez les enregistrements que vous souhaitez exporter et dans le menu déroulant **- actions -**, sélectionnez **Exporter les membres**.
+-   Vous pouvez sélectionner **Exporter les champs PRINCIPAUX** ou **Sélectionner les champs à exporter** et cliquez sur le bouton **Suivant**
+  
 ![image](../img/memberships%20export%20memberships%20screen.JPG)
 
--   If you selected **Export PRIMARY fields**, a file called
-    CiviCRM_Member_Search.csv will be created containing the
-    membership records based on your search criteria
--   If you selected**Select fields for import**, then include the
-    fields you would like to export, check the box for **Save this field
-    mapping** if you want to re-use this field mapping for a future
-    export, then click the**EXPORT** button. A file called
-    CiviCRM_Member_Search.csv will be created containing the
-    membership records based on your search criteria and the fields you
-    selected to export.
+- Si vous avez sélectionné **Exporter les champs PRINCIPAUX**, un fichier appelé CiviCRM_Member_Search.csv sera créé contenant les enregistrements d'adhésion en fonction de vos critères de recherche
+- Si vous avez sélectionné **Sélectionnez les champs à exporter**, incluez les champs que vous souhaitez exporter, cochez la case **Sauvegarder cette correspondance de champs** si vous souhaitez réutiliser ce mappage de champ pour une exportation future, Puis cliquez sur le bouton **Exporter**. Un fichier appelé CiviCRM_Member_Search.csv sera créé contenant les enregistrements d'adhésion en fonction de vos critères de recherche et des champs que vous avez sélectionnés.
 
 ![image](../img/memberships%20select%20fields%20to%20export.JPG)

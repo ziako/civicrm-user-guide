@@ -1,369 +1,190 @@
-Groups and tags
+Groupes et étiquettes
 ===============
 
-Groups and tags are two key methods of organising data in CiviCRM. When
-used properly, both allow for powerful segmentation and searching of
-your database.
+Les groupes et les étiquettes sont deux méthodes clés d'organisation des données dans CiviCRM. Lorsqu'elles sont utilisées correctement, les deux permettent une segmentation puissante et une recherche aisée dans votre base de données.
 
-Since both groups and tags are methods of categorisation, it can be
-difficult to determine whether a tag or a group is more appropriate in a
-given situation. Identifying the differences in their functionality will
-help you to decide which to use.
+Les  groupes et les étiquettes sont des méthodes de catégorisation et il peut être difficile de déterminer si une étiquette ou un groupe est plus approprié dans une situation donnée. Identifier les différences dans leurs fonctionnalités vous aidera à décider quoi utiliser.
 
-It can also be good to have a conceptual understanding of the
-differences between the two. Though there are different takes on how
-tags and groups should be used, a common philosophy is that tags should
-be used for descriptive categories of contacts, activities, and cases,
-while groups should be used for grouping people within an entity that
-needs to be treated like a cohesive unit (to send mailings to, for
-example). From this perspective, things like *volunteer*, *ally
-organisation*, *vegetarian* and *musician* would be tags with which you
-could categorise contacts while *Volunteer Committee, Allied
-Organisations Coalition, Vegetarian Newsletter*, and *This Awesome Band
-With A Bad Name* would be groups to which you could add contacts.
+Il faut différencier ces deux concepts. Bien qu'il existe différentes approches sur la façon dont les étiquettes et les groupes devraient être utilisés, une façon logique de procéder est que les étiquettes doivent être utilisées pour les catégories descriptives de contacts, les activités et les dossiers, alors que les groupes devraient être utilisés pour regrouper les personnes au sein d'une entité qui doit être traitée comme une unité cohérente (pour envoyer des envois à..., par exemple). Ainsi des dénominations comme *bénévolat*, *partenaire*, *végétarien* et *musicien* seraient des étiquettes avec lesquelles vous pourriez catégoriser les contacts. Mais  *Comité de soutien, Autres associations, Institutions, Public accueilli* ... seraient des groupes auxquels vous pourriez ajouter des contacts.
 
-Groups
+Groupes
 ------
 
-Groups are an incredibly important feature within CiviCRM. In addition
-to their fundamental use as collections of contacts that have something
-in common, they play a critical role in CiviMail and Profiles, and can
-be used to set up advanced access rights (on Drupal). Well-defined
-groups are one of the most important tools available when segmenting
-your CiviCRM contact database.
+Les groupes sont une fonctionnalité très importante au sein de CiviCRM. En plus de leur utilisation fondamentale en tant qu'unité de contacts ayant des caractéristiques communes. Ils jouent un rôle essentiel dans CiviMail et Profils. Ils peuvent être utilisés pour configurer des droits d'accès avancés (Joomla et Drupal). Des groupes bien définis sont l'un des outils les plus importants disponibles lors de la segmentation de votre base de données CiviCRM.
 
-There are two kinds of Groups – (Regular) **Groups** and **Smart Groups**.
+Il existe deux types de groupes :  **Groupes (régulier)** et **Groupes intelligents**.
 
--   Regular groups are just called **Groups**.  You manually place contacts into and remove contacts from a (regular) group. For example, you can manually assign your organisation's
-    board members to a Board of Directors group. You can then
-    easily send board-related emails to each person who is a member of
-    the Board of Directors group without having to search through
-    CiviCRM and select each member individually for the mailing.
--   **Smart Groups** are automatically populated groups that are
-    configured to include contacts that share a certain set of
-    characteristics or activities. As contacts are added or edited,
-    CiviCRM automatically checks them and adds them to Smart Groups if
-    they meet the characteristics that you have configured. For example,
-    you can create a Smart Group for "2010 Contributors from California"
-    that includes contacts who have made a contribution in the year 2010
-    (an activity) and have an address in California (a characteristic).
-    When new contacts located in California make a contribution in 2010,
-    they are automatically added to this group. Another example is a
-    Smart Group of all donors who have not yet been sent a thank-you
-    letter. As you send your letters, the donors receiving them will
-    automatically leave the smart group, allowing you to always have an
-    accurate list to work from.
+-  Les groupes réguliers sont simplement appelés **Groupes**. Vous y placez et supprimez manuellement des contacts.  Par exemple, vous pouvez affecter manuellement les membres du conseil d'administration de votre organisation à un groupe "Conseil d'administration". Vous pourrez ensuite facilement envoyer des courriels liés à votre conseil d'administration à chaque personne qui en est membre sans avoir à les chercher et les sélectionner individuellement.
 
-### Group settings and functionality
+- **Les groupes intelligents** sont des groupes remplis automatiquement et qui sont configurés pour inclure des contacts qui partagent un certain ensemble de caractéristiques ou d'activités. Lorsque des contacts sont ajoutés ou modifiés, CiviCRM les vérifie automatiquement et les ajoute aux groupes intelligents s'ils correspondent aux caractéristiques que vous avez configurées. Par exemple, vous pouvez créer un groupe intelligent pour «Adhérents 2016 de Paris» qui comprend les contacts qui ont versé une contribution en 2016 (une activité) et ont une adresse à Paris (une caractéristique). Lorsque de nouveaux contacts de Paris apportent leur contribution en 2016, ils sont automatiquement ajoutés à ce groupe. Un autre exemple est un groupe intelligent de tous les donateurs qui n'ont pas encore reçu de lettre de remerciement. Lorsque vous envoyez vos lettres, les donateurs qui les reçoivent quitteront automatiquement le groupe intelligent, vous permettant d'avoir toujours une liste exacte pour travailler.
 
-Each group should have a clear, easily understandable group name and a
-description of its purpose that other database users will be able to
-understand. Both the name and the description should allow users to
-quickly figure out what particular groups are for when working in
-different contexts (e.g. CiviMail). This clarity and specificity is
-especially important once your organisation has amassed many different
-groups. If a group is created for a specific person within your
-organisation, it is a good idea to mention who the group owner is in the
-description so that in the future someone can check if this group is
-still used or if it can be deleted.
+### Paramètres des groupes et fonctionnalités
 
-Groups can be assigned the following standard types:
+Chaque groupe doit avoir un nom de groupe clair et facilement compréhensible, ainsi qu'une description de son but afin que les autres utilisateurs de la base de données puisse le comprendre. Le nom et la description doivent permettre aux utilisateurs de déterminer rapidement ce que certains groupes font lorsqu'ils travaillent dans différents contextes (par exemple, CiviMail). Cette clarté et cette spécificité sont particulièrement importantes lorsque votre organisation gère de nombreux groupes différents. Si un groupe est créé pour une personne spécifique au sein de votre organisation, il est préférable de mentionner le nom du propriétaire du groupe dans la description afin que, dans le futur, quelqu'un puisse vérifier si ce groupe est toujours utilisé ou s'il peut être supprimé.
 
--   **Mailing List** is used if you plan to use this group as a mailing
-    list in CiviMail. This group type is available for both Regular and
-    Smart Groups.
--   **Access Control** (Drupal only) is used to assign CiviCRM access
-    permissions to a set of contacts. Only Regular Groups can be
-    assigned the Access Control group type.
+Les types suivants peuvent être affectés aux groupes:
 
-It is possible to create additional group types to reflect your specific
-needs. This is particularly useful if your organisation has hundreds of
-groups as group type can be used as a filter on the Manage Groups
-screen. To create additional group types go to **Administer>System
-Settings>Option Groups**and select Group Type.
+- **Mailing List** :  si vous envisagez d'utiliser ce groupe comme liste de diffusion dans CiviMail. Ce type de groupe est disponible pour les groupes réguliers et intelligents.
+- **Contrôle d'accès** : (Joomla,Drupal) permet d'attribuer des autorisations d'accès CiviCRM à un ensemble de contacts. Seuls les groupes réguliers peuvent se voir attribuer le type de groupe Contrôle d'accès.
 
-### Visibility
+Il est possible de créer des types de groupes supplémentaires pour refléter vos besoins spécifiques. Cela est particulièrement utile si votre organisation compte des centaines de groupes, car le type de groupe peut être utilisé comme filtre dans l'écran "Gérer les groupes". Pour créer d'autres types de groupe, allez dans **Administer> Paramètres système> Liste de choix ** et sélectionnez **Type de groupe**.
 
-Visibility determines permissions for joining and removing contacts from
-groups. Select "User and User Admin Only" if membership in this group is
-controlled only by authorised CiviCRM users. Select "Public Pages" if
-you want to allow contacts to join and remove themselves from this group
-via Registration and Account Profile forms.
+### Visibilité
 
-Some organisations find it useful to create a hierarchy of groups. In
-CiviCRM, this is done by creating one or more parent groups and then
-assigning other groups to them. When a user sends a mailing to a parent
-group or searches for contacts in a parent group, all contacts in the
-associated child groups are automatically included.
+La visibilité détermine les autorisations pour voir et supprimer les contacts des groupes. Sélectionnez "Utilisateur et administrateur seulement" si l'appartenance à ce groupe n'est contrôlée que par des utilisateurs autorisés de CiviCRM. Sélectionnez «Pages publiques» si vous souhaitez autoriser les contacts à se joindre et à se retirer de ce groupe via les formulaires d'inscription et de profil de compte en ligne.
 
-For example, an organisation that has a national office and 5 regional
-offices puts constituents in each region into their own group. Then they
-create a National group which is assigned as the parent group for all
-regional groups. The national office can now send mailings to the
-National group, knowing that all contacts in the regional groups that
-are children of the National group will be included.
+Certaines organisations trouvent utile de créer une hiérarchie de groupes. Dans CiviCRM, cela se fait en créant un ou plusieurs groupes parents, puis en leur assignant d'autres groupes. Lorsqu'un utilisateur envoie un courriel à un groupe parent ou recherche des contacts dans un groupe parent, tous les contacts dans les groupes enfants associés sont automatiquement inclus.
 
-### Group IDs
+-   Par exemple, une organisation dotée d'un bureau national et de cinq bureaux régionaux attribue les membres de chaque région dans leur propre groupe. Ensuite, ils créent un groupe national qui est assigné comme groupe parent pour tous les groupes régionaux. Le bureau national peut alors envoyer des courriels au groupe national, sachant que tous les contacts dans les groupes régionaux qui sont des enfants du groupe national seront inclus.
 
-CiviCRM assigns a unique numeric ID to each group. These group IDs can
-be used for a variety of operations. For example, the group ID can be
-used to define a URL for group sign-ups. You can find a group's ID by
-checking the ID column in the tabled list of groups at **Navigation Menu > Contacts > Manage Groups**.
+### ID des groupes 
 
-Tags
-----
+CiviCRM attribue un ID numérique unique à chaque groupe. Ces ID de groupe peuvent être utilisés pour diverses opérations. Par exemple, l'ID de groupe peut être utilisé pour définir une URL pour les enregistrements de groupe. Vous pouvez trouver cet ID  en cochant la colonne ID dans la liste des groupes affichée à **Menu de navigation> Contacts> Gérer les groupes**.
 
-**Tags** are used to categorise contacts, activities and cases in
-CiviCRM. You can create as many tags as needed to classify the contacts
-in your database, though it is advisable to avoid duplicating existing
-tags or adding too many tags that aren't really necessary. It can be
-useful to create a standard process for creating and using tags within
-your organisation to avoid these problems.
+Etiquettes
+---------
+**Les étiquettes** sont utilisés pour classer les contacts, les activités et les dossiers dans CiviCRM. Vous pouvez créer autant de étiquettes que nécessaire pour classifier les contacts dans votre base de données. Il est conseillé d'éviter la duplication des étiquettes existantes ou d'en ajouter qui ne seront pas vraiment nécessaires. 
+Il peut être utile de créer une procédure standard pour créer et utiliser les étiquettes au sein de votre organisation... afin d'éviter certains doublons.
 
-Groups versus tags {#groups-vs-tags}
-------------------
+Groupes vs Etiquettes 
+---------------------
+C'est une question courante pour tout projet. La philosophie décrite dans l'introduction de ce chapitre est une ligne directrice, mais ces règles peuvent être adaptées selon la façon dont vous avez l'intention d'utiliser votre segmentation de contacts.
 
-This is a common question on any project, and the philosophy described
-in the introduction of this chapter is a guideline, but rules might need
-to be bent based on how you intend to use your contact segmentation.
+Un avantage indéniable d'avoir des groupes et des étiquettes est que vous pouvez effectuer des recherches plus fines en utilisant AND et OR. 
+Par exemple, si vous avez des groupes de journalistes, de bénévoles et de membres et que vous utilisez des étiquettes pour identifier des centres d'intérêt tels que le développement, l'art et l'histoire, vous pouvez trouver tous les journalistes qui sont intéressés par l'art ou le développement, tous les bénévoles ou membres qui sont intéressés par l'histoire. Toute autre combinaison est possible.
 
-One interesting benefit of having both groups and tags is that you can
-perform more refined searches using AND and OR. For instance, if you
-have journalists, volunteers and members as groups and use tags to
-identify topics of interests such as development, art and history, you
-can find all the journalists who are interested in art or development,
-all the volunteers or members that are interested in history, or any
-other combination.
+Les groupes disposent de certaines fonctionnalités que les étiquettes n'ont pas:
 
-Beside that, groups have some features that tags don't:
--   Groups are integrated into several other CiviCRM functions (most
-    notably CiviMail).
+-  Les groupes sont intégrés dans plusieurs autres fonctions de CiviCRM (notamment CiviMail).
+-  Les contacts peuvent être ajoutés automatiquement aux groupes intelligents en fonction de leurs caractéristiques.
+-  Les groupes peuvent être associés aux "Drupal Organic Groups" et groupe d'utilisateur Joomla
 
--   Contacts can be added to smart groups automatically based on
-    characteristics.
--   Groups can be associated to Drupal Organic Groups.
+Observez cette règle : les étiquettes peuvent être appliquées aux contacts, aux activités et aux dossiers, alors que les groupes ne peuvent être composés que de contacts.
 
-Think of it this way: tags can be applied to contacts, activities, and
-cases, whereas groups can only consist of contacts.
+Ce qui suit décrit les avantages et les inconvénients des groupes et des étiquettes
 
-The following outlines the pros and cons of groups vs. tags
+#### Avantages des étiquettes
+-   Facile à configurer et à utiliser
+-   Facilité de recherche par étiquettes (en Recherche de base ou avancée) 
+-   Facile à combiner avec d'autres propriétés (comme domicile / code postal) pour créer des groupes intelligents
 
-#### Benefits of tags
--   Easy to setup and use
--   Easy to search by tags (can use either Basic or Advanced Search)
--   Easy to combine with other properties (like residence
-    state/province) to create Smart Groups
+#### Limitation des étiquettes
 
-#### Limitations of tags
+-   Vous ne pouvez pas créer d'étiquettes UNIQUEMENT pour être utilisées avec des types de contacts spécifiques (individuels)
+-   Lorsque vous exportez des étiquettes, elles sont toutes attribuées à un enregistrement et sont exportées dans une seule "cellule" en tant que liste (par exemple, «Professeur, bénévole»)
+-   Les étiquettes permettent des sélections multiples - ce qui peut ne pas convenir à des caractéristiques mutuellement exclusives (par exemple, «Démocrate», «Républicain», «Parti Vert»)
+-  Vous ne pouvez pas cacher de manière sélective ou autoriser les étiquettes dans les formulaires intégrés ou Profil et créer et modifier des formulaires (vous obtenez TOUTES les étiquettes TOUT LE TEMPS sur les formulaires d'édition)
 
--   You can not create Tags for use with specific types of contacts
-    (i.e. you can't create tags that are ONLY for use with Individual
-    contacts)
--   When you export Tags, all Tags assigned to a record are exported in
-    a single "cell" as a list (e.g. "Teacher, Volunteer")
--   Tags allow multiple selections - so they may not be appropriate for
-    mutually exclusive characteristics (e.g. "Democrat", "Republican",
-    "Green Party")
--   You cannot selectively hide or permission Tags on built-in or
-    Profile create and edit forms (you get ALL Tags ALL THE TIME on edit
-    forms)
+#### Avantages des groupes
+-  Les groupes sont le moyen le plus souple de segmenter vos contacts à des fins très variées.
+-  Les groupes facilitent les tâches récurrentes telles que l'envoi d'une lettre d'information, l'impression d'étiquettes postales, etc.
+-  Les groupes vous permettent de limiter l'accès aux groupes de contacts dits "spéciaux"
+ - Les groupes prennent en charge les actions "d'abonnement" et "désabonnement"  de l'utilisateur final - un historique de ces actions est conservé dans le système
+-  Les paramètres de visibilité vous permettent de décider quels groupes sont affichés aux utilisateurs finaux selon les formulaires de profil (c'est-à-dire que certains groupes peuvent être "privés")
+-  Vous pouvez créer des groupes intelligents qui combinent des membres du groupe A + groupe B
 
-#### Benefits of Groups
+#### Limitations des Groupes
 
--   Groups are the most flexible way of segmenting your contacts for a
-    wide variety of purposes.
--   Groups facilitate recurring tasks like sending an enewsletter,
-    printing mailing labels, etc.
--   Groups allow you to restrict access to "special" sets of contacts
--   Groups support both administrative and end-user "subscribe" and
-    "unsubscribe" actions - and a history of these actions is kept in
-    the system
--   Visibility settings allow you to decide which Groups are shown to
-    end-users on Profile forms (i.e. some Groups can be "private")
--   You can create Smart Groups that combine members of Group A + Group
-    B
+-  Tous les groupes existants sont répertoriés sous "Gérer les groupes" et dans les formulaires de recherche. Cela peut entraîner des «surcharges» de groupe si vous en avez trop créé.
+-  Les groupes utilisés pour les projets à court terme doivent être «purgés» lorsqu'ils ne sont plus nécessaires
+-  Lors de l'exportation des enregistrements de contact, tous les groupes auxquels un contact appartient sont exportés sous la forme d'une seule liste séparée par des virgules (par exemple : "Administrateurs, Abonnés à la Newsletter")
 
-#### Limitations of Groups
+Vous pouvez ajouter des contacts aux groupes de plusieurs façons:
 
--   All existing Groups are listed under Manage Groups and in the search
-    forms. This may cause group "overload" if your organization winds up
-    with "too many" Groups.
--   Groups used for short-term projects should be "purged" when they're
-    no longer needed
--   When exporting contact records, all the Groups a contact belongs to
-    are exported as a single comma-separate list (e.g.
-    "Administrators,Newsletter Subscribers")
+-  A travers la section étiquettes et groupes de l'écran d'édition des détails de contact
+-  Via l'onglet Groupe du contact
+-  En utilisant l'action "Ajouter des contacts au groupe / étiqueter des contacts" après avoir effectué une recherche
+-  En cliquant sur le lien Contacts d'un groupe dans **Menu Navigation> Contacts> Gérer les groupes**.
 
-You can add contacts to groups in multiple ways:
+Les deux premières méthodes permettent également de supprimer des contacts individuels d'un groupe. Les deux dernières méthodes permettent d'ajouter plusieurs contacts à plusieurs groupes à la fois.
 
--   through the Tags and Groups section of the Contact Details edit
-    screen
--   through a contact's Groups tab
--   by using the "Add Contacts to Group/Tag contacts" batch action after
-    conducting a search
--   by clicking a group's Contacts link in **Navigation Menu > Contacts > Manage Groups**.
+Les contacts individuels peuvent être ajoutés à un groupe soit dans l'écran d'édition de contact, soit via l'onglet Groupes. Plusieurs contacts peuvent être ajoutés simultanément à un groupe en effectuant une recherche, puis en sélectionnant Ajouter des contacts à un groupe à l'aide du menu déroulant  "Action". La deuxième méthode vous permet d'ajouter plusieurs contacts à un groupe en allant dans Gestion des groupes, en sélectionnant Membres pour le groupe concerné, puis en utilisant l'option "Ajouter des membres à ce groupe" en haut de l'écran.
 
-The first two methods also allow you to remove individual contacts from
-a group. The last two methods allow you to add multiple contacts to
-groups at once.
+Les contacts peuvent également être ajoutés à un groupe à la suite du remplissage d'un profil (voir ci-dessous).
 
-Individual contacts can be added to a Group either in the contact edit
-screen or via the Groups tab. Multiple contacts can be added to a group
-at once by conducting a search, and then selecting Add Contacts to a
-Group using the More Actions menu. The second way allows you to add
-multiple contacts to a group by going to Manage Groups, selecting
-Members for the relevant Group and then using the Add Members to this
-Group option at the top of the screen.
-
-Contacts can also be added to a group as a result of filling out a
-Profile (see below).
-
-Managing Groups
+Gestion des groupes
 ---------------
-
-To view and manage all groups, go to: Navigation Menu > Contacts >
-Manage Groups.
+Pour afficher et gérer tous les groupes, accédez à: **Menu de navigation> Contacts> Gérer les groupes**
 
 ![image](../img/ManageGroups.png)
 
-You can use the Find Groups form at the top of the Manage Groups screen
-to search for groups by name, type, visibility and whether the group is
-enabled or disabled. You can also scroll or browse through the list of
-groups further down the Manage Groups screen. This list includes both
-regular and smart groups.
+Vous pouvez  utiliser le formulaire "Rechercher des groupes" en haut de l'écran "Gérer les groupes" pour rechercher des groupes par nom, type, visibilité et si le groupe est activé ou désactivé. Vous pouvez également faire défiler ou parcourir la liste de groupes dans l'écran "Gérer les groupes". Cette liste comprend les groupes réguliers et les groupes intelligents.
 
-You can:
+Vous pouvez :
 
--   add contacts to a group by clicking the Contacts link in the group's
-    row
--   edit the group by clicking the Settings link
--   disable or delete a group using the links in the "more" pop-up
-    menu.
--   see how many contacts are currently in each group.
+-   Ajoutez des contacts à un groupe en cliquant sur le lien "Contacts" dans la ligne du groupe
+-   Modifier le groupe en cliquant sur le lien Paramètres
+-   Désactiver ou supprimer un groupe en utilisant les liens dans le menu contextuel "Plus".
+-   Voir le nombre de contacts actuel dans chaque groupe.
 
-Finding contacts in a group
----------------------------
+Trouver des contacts dans un groupe
+-----------------------------------
 
-The Contacts page for each group includes a form for finding contacts
-within the group. You can search contacts within a group by name, email
-address, contact type, group status (added, removed, or pending) and
-tags.
+La page Contacts de chaque groupe comprend un formulaire pour trouver des contacts dans le groupe. Vous pouvez rechercher des contacts au sein d'un groupe par nom, adresse e-mail, type de contact, statut de groupe (ajouté, supprimé ou en attente) ainsi que les étiquettes
 
 ![Groups_searchwithin](../img/CiviCRM_update-CiviCore-Groups_searchwithin-en.jpg "Groups_searchwithin")
 
-Groups and ACL
+Groupes et ACL
 --------------
+Les listes de contrôle d'accès (ACL) fournissent une autorisation plus fine que celle disponible dans les autorisations et les rôles de Joomla et Drupal. La configuration des listes de contrôle d'accès nécessite une bonne connaissance du concept, qui est expliqué en détail dans la documentation CiviCRM en ligne:
 
-Access Control Lists (ACL) provide finer grained permissioning than what
-is available through Drupal's Permissions and Roles. Setting up ACLs
-requires a good understanding of the concept, which is thoroughly
-explained in the online CiviCRM documentation here:
 [http://wiki.civicrm.org/confluence/display/CRMDOC/Access+Control](http://wiki.civicrm.org/confluence/display/CRMDOC/Access+Control%20)
 
-As with many processes, the key is to make sure you have assembled all
-the parts before you try to join them together. In this case, you must
-set up the required Groups, Custom Data Groups, Profiles and Roles
-before you can use them in ACL.
+Comme pour de nombreux processus, la clé du succès est de s'assurer que vous avez réuni toutes les pièces avant d'essayer d'aller plus loin. En l'occurence, vous devez configurer les groupes, groupes de données personnalisés, profils et rôles requis avant de pouvoir les utiliser dans les ACL.
 
-Note that ACL support for Joomla was introduced in Joomla version 1.6.
-
-Working with tags
------------------
-
-To view tags, go to: **Contacts > Manage Tags (Categories)** in the
-navigation menu.
-
-A tag can be edited or deleted using the respective links in its row.
-New tags can be created by clicking the Add Tag button on the Manage
-Tags (Categories) screen or by going to Contacts > New Tag in the
-navigation menu.
+Travailler avec les étiquettes
+------------------------------
+Pour afficher les étiquettes, accédez à: **Contacts> Gérer les étiquettes** dans le menu de navigation.
+Une étiquette peut être éditée ou supprimée en utilisant les liens respectifs dans sa ligne. Vous pouvez créer de nouvelles étiquettes en cliquant sur le bouton "Ajouter une étiquette" ou en allant dans "Contacts> Nouvelle étiquette" dans le menu de navigation.
 
 ![admin_tags](../img/CiviCRM_update-CiviCore-resized_600x158_admin_tags-en.png "admin_tags")
 
-Each tag should have a clear and unique name and an explanatory
-description to help users understand the tag's purpose. Tags can be
-structured hierarchically and designated as subtags of an existing tag
-by selecting a Parent tag from the dropdown list.
+Chaque étiquette doit avoir un nom clair et unique et une description explicative pour aider les utilisateurs à comprendre le but de l'étiquette. Les étiquettes peuvent être structurées hiérarchiquement et désignées comme sous-étiquettes d'une étiquette existante en sélectionnant une étiquette Parent dans la liste déroulante.
 
-Tags can be designated for use for contacts, activities and/or cases. If
-a tag is designated for use for contacts, it will be available for all
-contact types and subtypes; tags cannot be specifically designated for
-use for only one type of contact.
+Des étiquettes peuvent être utilisées pour les contacts, les activités et / ou les dossiers. Si une étiquette est destinée à être utilisée pour les contacts, elle sera disponible pour tous les types et sous-types de contact. Les étiquettes ne peuvent pas être spécifiquement désignées pour être utilisées pour un seul type de contact.
 
-Tags are a flexible tool and every user can create more if needed.
-However, very important tags can be locked to prevent them from being
-modified or deleted by users who do not have the "administer reserved
-tags" permission (this permission is available in Drupal only).
+Les étiquettes sont un outil flexible et chaque utilisateur peut en créer autant que nécessaire. Les étiquettes très importantes peuvent être verrouillées pour empêcher qu'elles ne soient modifiées ou supprimées par les utilisateurs qui n'ont pas l'autorisation "administrer les étiquettes réservées".
 
-Tags can be assigned to contacts, activities and cases in the following
-ways:
+Les balises peuvent être attribuées aux contacts, aux activités et aux dossiers de la manière suivante:
 
--   while creating or editing the record
--   from the Contact Summary Tags tab
--   by using the Tag Contacts batch action after conducting a search.
+-  Lors de la création ou de la modification de l'enregistrement
+-  Tout en créant ou en éditant l'enregistrement 
+-  À partir de l'onglet Résumé des étiquettes de contact
+-  À l'aide de l'action "Tag Contacts" après avoir effectué une recherche. 
+Vous pouvez également utiliser les deux premières méthodes pour supprimer les étiquettes.
 
-You can also use the first two methods to remove tags.
-
-Tag sets
+Ensemble d'étiquettes
 --------
+Les ensembles d'étiquettes sont une forme libre de classement des contacts et sont semblables aux étiquettes ordinaires, mais ils diffèrent principalement par : 
 
-Tag sets are a free-form way of tagging contacts and are similar to
-regular tags, but they differ from regular tags in a few key ways:
+-  Ils agissent en tant que «container» pour vous permettre de regrouper des étiquettes (c'est-à-dire un ensemble d'étiquettes comme «logement social», «Hébergé» ou «logement zone rurale»)
+-  Ils permettent de créer des étiquettes à la volée sans avoir à accéder à la page "Gérer les étiquettes" 
+-  Ils permettent d'ajouter un champ de recherche supplémentaire dans la section "Critères de base" de la "Recherche avancée"
 
--   they act as a "bucket" to allow you to group tags (i.e. an Issues
-    People Care About tag set might contain the tags "affordable
-    housing", "racial justice", or "water quality")
--   they allow tags to be created on the fly without you having to
-    access the Manage Tags page
--   adding them creates an additional search field in the Basic Criteria
-    section of the Advanced Search
-
-Tag sets are created by going to: **Contacts > Manage Tags
-(Categories)**in the navigation menu and clicking the Add Tag Set
-button. Give the tag set a name, a description, and indicate whether the
-tag set will apply to contacts, activities, or cases.
+Pour créer un ensemble d'étiquettes dans le menu de navigation allez à : **Contacts> Gérer les étiquettes**  cliquez sur le bouton "Ajouter un jeu d'étiquettes". Attribuez un nom, une description et indiquez si le jeu d'étiquettes s'appliquera aux contacts, aux activités ou aux dossiers.
 
 ![image](../img/Tag%20Set%20-%20Create.png)
 
-Clicking the Reserved checkbox makes a tag set more permanent - this
-will prevent a tag set from being deleted by someone without
-Administrator permission. (Read more about permissions, in the
-*Permissions and Access Control* chapter of *Initial Set Up* section.)
+Si vous cliquez sur la case "Réservé?", l'étiquette est définie de façon permanente. Cela empêche qu'un groupe d'étiquettes soit supprimé par une personne sans autorisation de l'administrateur. (Pour en savoir plus sur les autorisations, voir le chapitre *Permissions et contrôle d'accès* de la section *Configuration initiale*).
 
-Now you can use the tag set to freely tag a contact, activity, or case
-record.
+Vous pouvez maintenant utiliser l'ensemble d'étiquettes pour classifier librement un contact, une activité ou un enregistrement de dossier.
 
-When you create a new tag set, a new field shows up on the edit pages of
-the entity's activities or cases as well as in the Tags tab for
-contacts. For example, if you create a tag set called "Issues Folks Care
-About" an associate it with Contacts, you will see the tag set next time
-you go to the Tags tab of a contact's record.
+Lorsque vous créez un nouvel ensemble d'étiquettes, un nouveau champ apparaît sur les pages d'édition des activités ou des dossiers ainsi que dans l'onglet "Etiquette" pour les contacts. Par exemple, si vous créez un ensemble d'étiquettes intitulé «Contacts hors secteur»  associé aux Contacts, vous verrez l'étiquette définie la prochaine fois que vous accéderez à l'onglet "Etiquette" de l'enregistrement d'un contact.
 
 ![image](../img/Tag%20Set%20-%20Creating%20tags%20on%20the%20fly.png)
 
+Il s'agit là d'un champ de saisie semi-automatique: lorsque vous commencez à taper, CiviCRM recherche les étiquettes correspondantes dans ce jeu d'étiquette et affiche les correspondances sous le champ. Vous pouvez sélectionner une variable existante ou en créer une nouvelle en tapant la variable entière et en appuyant sur la touche Entrée. L'étiquette s'affiche alors dans le champ dans une zone. En cliquant sur le X, vous annulerez l'enregistrement que vous éditez (contact, dossier ou activité)
 
-This is an autocomplete field: as you begin to type, CiviCRM looks for
-matching tags in this tag set and displays any matches below the field.
-You can select an existing tag or create a new one by typing the entire
-tag and pressing the Enter key. The tag will then appear within the
-field in a box. Clicking on the X will untag the record that you are
-editing (contact, case or activity).
+Les étiquettes créées dans un ensemble d'étiquettes apparaîtront automatiquement dans la liste **Contacts> Gérer les étiquettes (catégories)** et peuvent être consultées et éditées à partir de là. Toutefois, les balises créées dans un ensemble d'étiquettes ne seront disponibles que dans ce jeu d'étiquettes spécifique.
 
-Tags created within a tag set will automatically appear in the normal
-**Contacts > Manage Tags (Categories)**list and can be viewed and
-edited from there. However, tags created within a tag set will only be
-available within that particular tag set.
 
-### A Note About Searching on Tags and Tag Sets
+### Note sur la recherche des étiquettes et ensemble d'étiquettes 
 
-For each tag set you create, a new field will appear in the Basic
-Criteria section of Advanced Search. You can only search on tags that
-already exist in this tag set.
+Pour chaque jeu d'étiquettes que vous créez, un nouveau champ apparaît dans la section "Critères de base" de la **Recherche multicritères**. Vous pouvez uniquement rechercher des étiquettes qui existent déjà dans ce jeu d'étiquettes.
 
-Searching in the All Tags field will allow you to find records with tags
-(regular or tagset tag) which contain a complete or partial word or
-phrase. EXAMPLE: If you have several tags that contain the word 'Donor',
-you can find contacts tagged with any of them by entering 'Donor' in
-this field.
+La recherche dans le champ "Toutes les étiquettes" vous permettra de trouver des enregistrements avec des étiquettes contenant un mot ou une phrase complete ou partielle. EXEMPLE: Si vous avez plusieurs balises contenant le mot 'Donateur', vous pouvez trouver des contacts étiquetés avec l'un d'entre eux en entrant 'Donateur' dans ce champ.
 
-Read extensively on using Advanced Search in the Searching section.
+Lisez attentivement l'utilisation de la **Recherche multicritères**  dans la section **Recherche**.
+
+
+

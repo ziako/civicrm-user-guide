@@ -1,228 +1,160 @@
-Localising CiviCRM
+Régionalisation de CiviCRM
 ==================
 
-CiviCRM is written with English-language code and strings for display.
-It has, however, also been built for organisations worldwide. They need
-to be able to adapt the tool to local circumstances and demands without
-modifying the tool technically.
+Le code, les interfaces et la documentation de CiviCRM ont été initialement développés en anglais. Cependant, le logiciel a été conçu pour pouvoir s'adapter à toutes les organisations peu importe où elles sont. Ces organisations doivent pouvoir adapter le logiciel selon leurs circonstances, sans qu'il soit nécessaire de modifier le code d'origine.
 
-Localising CiviCRM (or any software) affects much more than you might
-initially think. To adapt CiviCRM to a local language is not just a
-matter of translating the text displayed on the screen. Consider for
-example the currency used in a given country (USD or $ in United
-States, GBP or £ in Great Britain), date and time formats (for example:
-November 16th, 2009 will be commonly written as 11/16/2009 in United
-States, but in Russia the format will be 16.11.2009) or the formatting
-of numbers (the same number will be written slightly differently in
-different countries: 1 234 567,89 in Slovakia or Hungary, but
-1,234,567**.**89 in Japan or the United States).
+Pour régionaliser CiviCRM (ou tout autre logiciel), il ne suffit pas de simplement pouvoir changer la langue des textes affichés à  l'écran. Considérons par exemple, la devise monétaire utilisée dans un pays (USD ou $ aux États-Unis, GBP ou £ au Royaume-Uni), le format de la date et de l'heure (le 16 novembre 2016 pourrait être écrit sous la forme de 11/16/2016 aux États-Unis, mais 16.11.2016 en Russie) ou le format des chiffres (1 234 567,89 en Slovakie ou Hongrie, mais 1,234,567**.**89 au Japan ou aux États-Unis).
 
-CiviCRM provides plenty of functionality to support these language and
-region specific needs. The development team is constantly developing new
-tools in this area too. The Localization screen (shown in the following
-screenshot) lets an administrator select the right locale for the
-language and country of the organization using CiviCRM. Go to:
-Administer > Configure > Global Settings > Localization.
+CiviCRM offre plusieurs fonctionnalités pour s'adapter aux besoins qui peuvent varier selon la langue et selon la région. L'équipe de développement de CiviCRM développe régulièrement de nouveaux outils pour simplifier ce processus. L'écran de Régionalisation (ou Localisation) affiché dans la saisie d'écran ci-dessous permet de configurer les bons paramètres de préférences régionales de CiviCRM. Pour y accéder, se rendre à Administrer > Localisation > Langue, devises et localisation.
 
 ![2](../img/CiviCRM_update-CiviCore-2-en.png "2")
 
-Translations
+Si vous souhaitez utiliser CiviCRM dans une autre langue que l'anglais, il est important de choisir cette langue lors de l'installation. En installant directement en français, par exemple, CiviCRM s'assurera que toutes les configurations par défaut et modèles de messages soient en français. Si vous changez la langue à un autre moment, il faudra manuellement traduire ces configurations. Il y a également quelques subtilités à prendre en compte si vous souhaitez utiliser CiviCRM dans plus d'une langue (le mode multi-lingue).
+
+Traductions
 ------------
 
-CiviCRM accommodates different languages, however the developers rely on
-the community to translate the text displayed. 
+CiviCRM peut s'adapter à plusieurs langues, cependant l'équipe de développement dépend de la communauté pour traduire les textes qui sont affichés à l'écran.
 
-A number of languages have already been provided to a greater or lesser
-extent. Some have more than 90% of the text translated, others only 5%,
-and a number of languages have not been translated at all. Please check
-the online translation tool Transifex
-([http://www.transifex.net/projects/p/civicrm/](http://www.transifex.net/projects/p/civicrm/))
-to find out about your language of interest. Download and install it on
-your CiviCRM installation to find out how well it will suit your needs.
+Un certain nombre de traductions sont déjà disponibles. Certaines traductions sont complétées à 90%, d'autres seulement 5%. Vous pouvez consulter le résumé du projet CiviCRM sur Transifex ([http://www.transifex.net/projects/p/civicrm/](http://www.transifex.net/projects/p/civicrm/)) pour voir l'état de la traduction d'une langue. Vous pouvez télécharger et installer la traduction dans votre instance de CiviCRM pour évaluer si cela répondra à vos besoins ou [consulter un site démo](https://civicrm.org/demo) s'il y en a un de disponible dans votre langue.
 
-You may find that although the translation is correct, you would want to
-use different terms in your situation. You are very much encouraged to
-take part in the translation of your language.
+En français, il y a deux traductions de CiviCRM: une plus générale qui devrait répondre aux besoins de la France, de la Belgique, de la Swisse et des autres pays francophones, et une autre traduction qui est mieux adaptée aux besoins du Québec/Canada.
 
-Facilities
-----------
+Il peut arriver que dans certaines situations, la traduction soit correcte, mais que vous auriez préféré utiliser un autre terme dans votre contexte. Dans ce cas, nous vous recommandons d'entrer en contact avec les autres traducteurs pour en discuter. Pour les traductions françaises, vous pouvez poster sur le [forum francophone](https://forum.civicrm.org/index.php?board=58.0).
 
-A number of facilities in CiviCRM support the community in its
-translation efforts, though some are still under development.
+Installation de CiviCRM en français
+-----------------------------------
 
-1.  Transifex is an online tool that enables groups of translators to
-    translate strings of text and keep an overview on its progress.
-    Register there, look for your language, join the team or, if your
-    language is not available, start translating.
-2.  A glossary
-    ([http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations](http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations))
-    on CiviCRM's wiki will help you maintain consistency in your
-    translations. It will also help you get some insight on how much
-    work it will be to translate those strings of text that your users
-    will most often see and that would therefore be the first to
-    translate.
-3.  A tips and tricks wiki page
-    ([http://wiki.civicrm.org/confluence/display/CRMDOC/Localisation+community+building+howto](http://wiki.civicrm.org/confluence/display/CRMDOC/Localisation+community+building+howto))
-    explains how to set up your localization community.
-4.  A FAQ
-    ([http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ)](http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ)
-    on the CiviCRM wiki covers localisation.
+Nous recommandons de configurer CiviCRM en français dès l'installation initiale. Il est possible de changer la langue après l'installation, mais ceci ne reconfigurera pas les nombreuses configurations de CiviCRM (liste de types d'adresses, types d'activités, modèles de messages, etc). Les étapes ci-dessous sont pour le français, mais s'appliquent également pour toute autre langue.
 
-Getting Started
----------------
+Pour installer CiviCRM en français:
 
-Feel like helping translating CiviCRM to a new language or improving the
-current translation? Here's how to do it (provided you have a bit of a
-technical background):
+1 - Téléchargez la distribution de traductions - civicrm-(version)-l10n.tar.gz - sur la [page de téléchargement de CiviCRM](https://www.civicrmfr.org/telecharger). Cette archive contient tous les fichiers des dernières traductions disponibles. Les langues sont incluses dans ce fichier quand elles atteignent 20% d'achèvement.
 
-1.  Go to transifex.net and create an account.
-2.  Look for your language on
-    [http://www.transifex.net/projects/p/civicrm/teams/](http://www.transifex.net/projects/p/civicrm/teams/)
-    and either join a team, or request the creation of a new one if
-    needed.
-3.  Start translating!
+2 - Décompresser l'archive, vous verrez un répertoire appelé civicrm, contenant deux sous-répertoires appelés `l10n` et `sql`. Le répertoire l10n contient un ensemble de sous-répertoires nommés à l'aide de leurs codes de langue. Par exemple: le fichier de traduction pour le français du Canada sera situé dans `/civicrm/l10n/fr_CA/civicrm.mo`. Le fichier des configurations initiales sera dans `/civicrm/sql/civicrm_data.fr_CA.mysql`.
 
-### Team work
+3 - Copiez ces répertoires `l10n` et `sql`, ainsi que tous leurs sous-répertoires dans votre répertoire racine CiviCRM comme indiqué ci-dessous. (Note: si vous créez manuellement le dossier "l10n", il doit s'écrire : "(elle minuscule)-dix-n", c'est une abréviation commune pour le mot « localisation »)
 
-The CiviCRM translation work flow is still a work-in-progress and until
-the process becomes more mature, you should probably refer to
-[http://wiki.civicrm.org/confluence/pages/viewpage.action?pageId=88408149](http://wiki.civicrm.org/confluence/pages/viewpage.action?pageId=88408149)
-for the most current instructions.
+-   Pour Joomla : `site_root/administrator/component/com_civicrm/civicrm`. Ex : Si vous voulez la langue `fr_FR`, vous devriez avoir : `site_root/administrator/components/com_civicrm/civicrm/l10n/fr_FR/civicrm.mo` et `site_root/administrator/components/com_civicrm/civicrm/sql/civicrm_data.fr_FR.mysql`.
+-   Pour Drupal : `site_root/sites/all/modules/civicrm`. Ex : Si vous voulez la langue `fr_FR` : `site_root/sites/all/modules/civicrm/l10n/fr_FR/civicrm.mo` et `site_root/sites/all/modules/civicrm/sql/civicrm_data.fr_FR.mysql`.
+-  Pour Wordpress : `site_root/wp-content/plugins/civicrm/civicrm`. Notez le double civicrm! Donc si vous voulez la langue fr_FR, vous aurez : `site_root/wp-content/plugins/civicrm/civicrm/l10n/fr_FR` et `site_root/wp-content/plugins/civicrm/civicrm/sql/civicrm_data.fr_FR.mysql`.
 
-The work flow is heavily based on teamwork. Hopefully, there is already
-a team of translators for your language that you can join. This team
-will have built a glossary, will have started a translation set and will
-be able to review your translations and give constructive criticism. If
-such a team does not yet exist, the opportunity is all yours to create
-one.
+Mise à jour de vos fichiers de traduction
+-----------------------------------------
 
-Components and files
---------------------
+Les fichiers "civicrm-(version)-l10n.tar.gz" sont mis à jour lors d'une nouvelle version de CiviCRM.
 
-There are quite a lot of strings (phrases) to translate in CiviCRM. To
-make it easier to translate the part that you are interested in
-(hopefully the one you know best), the strings that need translation
-have been divided into *components*, which are CiviCRM plugins (e.g.,
-CiviCRM core, CiviMail, CiviContribute, etc.). A separate component
-should be available for each version of CiviCRM, starting with version
-3.2 (or 3.1, for language teams that have chosen to do so). 
+Mais vous pouvez avoir besoin de mettre à jour vos fichiers de traduction avant la prochaine version pour diverses raisons:
 
-Each component itself contains a number of files, which themselves
-contain the strings to translate. The main component "CiviCRM" (the
-*core*) has close to 20 files (for *countries*, *provinces*, *menu*,
-etc.). 
+-  Vous participez à l'amélioration de la traduction de CiviCRM dans votre langue.
+-  Une chaîne a été mal traduite et vous êtes impatient de la corriger.
+-  Une chaîne avec un mauvais balisage (ex: la syntaxe du lien ou la variable placeholder a été mal saisie, causant des bugs, en particulier bugs javascript impair, des parties de l'écran qui ne peut pas être chargé, etc).
 
-Tools and technical details
----------------------------
+Si tel est le cas, la meilleure façon de mettre à jour vos traductions régulièrement est d'utiliser l'extension "l10n update" : [https://github.com/cividesk/com.cividesk.l10n.update/](https://github.com/cividesk/com.cividesk.l10n.update/)
 
-The process you use to do translation depends on whether you prefer to
-do translation online or offline. Online translation does not require
-installation of any software. Offline translation is done with files
-downloaded from the translation website, using software that offers more
-features than the online system.
+L'extension "l10n update" effectuera une vérification quotidienne pour mettre à jour les fichiers de traduction pour le noyau CiviCRM, ainsi que pour les extensions.
 
-### Online translation
+Vous pouvez aussi faire la mise à jour manuellement. Tous les jours, à 10h00, heure du Pacifique, le site Web CiviCRM met à jour les fichiers de traductions. Ils sont disponibles à l'adresse suivante: `https://download.civicrm.org/civicrm-l10n-core/mo/xx_XX/civicrm.mo`.
 
-Transifex is the tool to use for online translation. It does not have as
-many features as an offline tool such as PoEdit, but it's the easiest
-way to contribute translations and do the occasional quick correction.
-Every translator should have an account on the Transifex site, because
-translation teams can use the forums and messaging system to coordinate
-their work.
+Par exemple:
 
-The basic steps in online translation are:
+- fr_FR: https://download.civicrm.org/civicrm-l10n-core/mo/fr_FR/civicrm.mo
+- fr_CA: https://download.civicrm.org/civicrm-l10n-core/mo/fr_CA/civicrm.mo
 
-1.  Select a component on
-    [http://www.transifex.net/projects/p/civicrm/](http://www.transifex.net/projects/p/civicrm/).
-    This will display the list of language teams for this component.
-2.  Click on the icon in the Options column next to the language you are
-    interested in. This brings you to the list of files for this
-    component.
-3.  Click on the "pencil and paper" icon. This brings you to the online
-    translation screen, which lists all the translatable strings in this
-    file.
-4.  For each string, you can then enter a translation.
-5.  When you are finished, you can click on the "Send for review" button
-    at the end of the page.
+Pour plus d'information vous pouvez consulter la page wiki : [https://wiki.civicrm.org/confluence/display/CRMDOC/i18n+Administrator's+Guide%3A+Using+CiviCRM+in+your+own+language](https://wiki.civicrm.org/confluence/display/CRMDOC/i18n+Administrator's+Guide%3A+Using+CiviCRM+in+your+own+language) (en anglais).
 
-### Offline translation
-
-Most translation is usually done with an offline translation tool. One
-of the most common is PoEdit (see
-[http://www.poedit.net](http://www.poedit.net/)), which is free software
-and has a big community of users. The exact steps in translation using
-an offline tool depend on your tool of choice, but should follow the
-following steps:
-
-1.  Download the files from transifex.net you want to translate, 
-2.  Load the files up in your translation tool and do your translations.
-3.  Send them back to the site when you are done.
-
-### Building a translation memory
-
-PoEdit and other translation software will help you build a translation
-memory for your language. This translation memory can either be
-restricted to translations done in CiviCRM, or include translations from
-other projects. If you include other projects, automatic translation
-might be able to translate more strings, but you will lose consistency
-and most strings will be marked as fuzzy. This could be a way to
-bootstrap a new translation, though.
-
-Building a translation memory based on words from the glossary could go
-a long way in insuring the consistency of your team's work. 
-
-### Using version control (mostly for programmers) 
-
-Transifex keeps files in a version control system,
-[http://github.com/civicrm/l10n](http://github.com/civicrm/l10n). This
-is useful to some users who find interacting with the Github site easier
-than downloading each file separately from Transifex. 
-
-### Consistency & consensus 
-
-To insure a good consistency in the translation, every team is
-encouraged to build and use a glossary and employ peer review. You can
-find a glossary of common terms on
-[http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations](http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations).
-You definitely should translate these terms to your language, and make
-sure your team reaches a consensus on all terms.
-
-Building and sharing a common translation memory, which is like a
-specialized glossary that can be used automatically by translation
-tools, also helps to insure consistency. The PoEdit help system
-explains how to build this database (and most other translation software
-should do the same).
-
-Team building and sprints
+Les aides à la traduction
 -------------------------
 
-A good way to make progress in translation is to organize *translation
-sprints*. This means getting as many people as possible together in the
-same room to translate as many documents as they can. Here are a few
-things to keep in mind when organizing a translation sprint:
+Bien que certaines traductions soient encore en cours de développement, un certain nombre d'aides dans CiviCRM soutiennent la communauté dans ses efforts de traduction. Notamment :
 
--   Choose a good location, where people will be able to get online
-    (enough computers for everybody, or desks to set up laptops and with
-    a decent Internet connection). 
--   Provide instructions in advance on how to install an offline
-    translation tool such as PoEdit, and have people ready to help
-    others install and use it. 
--   Create the glossary in advance. Present the glossary, discuss terms
-    which do not have consensus, make sure everybody has access to a
-    copy of the glossary, and print a sufficient amount of copies
-    beforehand.
--   Determine goals for the sprint: which component will be translated,
-    and what percentage your team is trying to achieve.
--   Make sub-teams with clear objectives: per component or file or a
-    part of it.
--   If your translators are not familiar with CiviCRM, do a demo of the
-    features your team is about to translate.
--   Clearly designate someone who can be interrupted in order to answer
-    questions.
--   Make sure you've got enough coffee, tea, chocolate, etc. in reserve
-    to keep everybody going through the night.
--   At the end of the sprint, present the result of the translation in a
-    demo CiviCRM installation.
--   Discuss whether the team has reached its goal and how to improve
-    further.
+1.  Transifex est un outil en ligne qui permet aux groupes de traducteurs de traduire des chaînes de texte et de garder un aperçu de ses progrès. [Inscrivez-vous](https://www.transifex.com/signup/), recherchez votre langue, rejoignez l'équipe ou, si votre langue n'est pas disponible, commencez à traduire.
+2.  Un glossaire 
+    ([http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations](http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations))  
+    Le wiki de CiviCRM vous aidera à maintenir la cohérence de vos traductions. Il vous aidera également à obtenir un aperçu de la quantité de travail à fournir pour traduire les chaînes de texte que vos utilisateurs verront le plus souvent et qu'il serait donc le plus utile à traduire.
+3.  Une page wiki sur les astuces 
+    ([http://wiki.civicrm.org/confluence/display/CRMDOC/Localisation+community+building+howto](http://wiki.civicrm.org/confluence/display/CRMDOC/Localisation+community+building+howto))
+    Explique comment aborder le processus de localisation. 
+4.  Une « foire aux questions »
+    ([http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ)](http://wiki.civicrm.org/confluence/display/CRMDOC/Internationalisation+FAQ). Cette page wiki de CiviCRM couvre les questions les plus fréquentes sur la localisation.
+
+Comment commencer une traduction ? 
+---------------
+
+Vous souhaitez aider la communauté à traduire CiviCRM dans une nouvelle langue ou améliorer la traduction en cours? Voici comment le faire (à condition d'avoir un peu d'expérience technique) :
+
+1.  Aller sur transifex.net et créer un compte.
+2.  Recherchez votre langue sur  
+    [http://www.transifex.net/projects/p/civicrm/teams/](http://www.transifex.net/projects/p/civicrm/teams/)
+    ...et rejoignez une équipe, ou demandez la création d'un nouveau language si nécessaire.
+3.  Commencez à traduire!
+
+### Un travail d'équipe
+
+Le flux de travail de traduction de CiviCRM est encore en cours jusqu'à ce que le processus devienne plus mature, vous pouvez  vous référer à cette page pour de plus récentes instructions : 
+[http://wiki.civicrm.org/confluence/pages/viewpage.action?pageId=88408149](http://wiki.civicrm.org/confluence/pages/viewpage.action?pageId=88408149)
+
+Le travail de traduction est fortement basé sur le travail d'équipe. J'espère que vous avez déjà une équipe de traducteurs pour votre langue. Cette équipe doit construire un glossaire, lancer un jeu de traduction, réviser vos traductions et apporter une critique constructive. Si une telle équipe n'existe pas encore, c'est l'occasion de créer la vôtre.
+
+Composants et fichiers
+--------------------
+
+Il ya beaucoup de chaînes (phrases) à traduire dans CiviCRM. Pour faciliter la traduction de la partie qui vous intéresse (espérons celle que vous connaissez le mieux), les chaînes qui ont besoin de traduction ont été divisées en *composants*, qui sont des plugins de CiviCRM (CiviCRM, CiviMail, CiviContribute, etc. .). Un composant distinct est disponible pour chaque version de CiviCRM, à partir de la version 3.2 
+
+Chaque composant contient un certain nombre de fichiers, qui contiennent eux-mêmes les chaînes à traduire. Le composant principal "CiviCRM" (le *noyau*) contient près de 20 fichiers (pour *Pays*, *Provinces*, *Menu*, etc.).
+
+Outils et détails techniques
+---------------------------
+
+Vous avez deux processus pour effectuer la traduction : en ligne ou hors ligne selon votre choix. La traduction en ligne ne nécessite pas l'installation d'un logiciel. La traduction hors ligne se fait en téléchargeant les fichiers à partir du site de traduction, avec un logiciel qui offre plus de fonctionnalités que le système en ligne.
+
+### Traduction en ligne 
+
+Transifex est l'outil à utiliser pour la traduction en ligne. Il n'a pas autant de fonctionnalités qu'un outil hors ligne tel que PoEdit, mais c'est la manière la plus simple de contribuer aux traductions et de faire des corrections rapides et occasionnelles. Chaque traducteur doit avoir un compte sur le site Transifex, car les équipes de traduction utilisent les forums et le système de messagerie pour coordonner leur travail.
+
+Les étapes de base de la traduction en ligne sont les suivantes:
+
+1.  Sélectionnez un composant sur  
+    [http://www.transifex.net/projects/p/civicrm/](http://www.transifex.net/projects/p/civicrm/). 
+    Cela affiche la liste des équipes linguistiques pour ce composant.
+2.  Cliquez sur l'icône dans la colonne Options à côté de la langue qui vous intéresse. Cela vous amène à la liste des fichiers de ce composant.
+3.  Cliquez sur l'icône "crayon et papier". Cela vous amène à l'écran de traduction en ligne, qui répertorie toutes les chaînes traduisibles dans ce fichier.
+4.  Pour chaque chaîne, vous pouvez saisir une traduction.
+5.  Lorsque vous avez terminé, cliquez sur le bouton «Envoyer pour examen» à la fin de la page.
+
+### Construire une mémoire de traduction
+
+PoEdit et d'autres logiciels de traduction vous aideront à construire une mémoire de traduction pour votre langue. Cette mémoire de traduction peut soit être restreinte aux traductions effectuées dans CiviCRM, soit inclure des traductions d'autres projets. Si vous incluez d'autres projets, la traduction automatique peut traduire plus de chaînes, mais vous perdrez la cohérence et la plupart des chaînes seront marquées comme floues. Cela pourrait être cependant un moyen de démarrer une nouvelle traduction.
+
+Construire une mémoire de traduction basée sur des mots du glossaire peut être un travail assez long pour assurer la cohérence du travail de votre équipe.
+ 
+### Utilisation du contrôle de version (principalement pour les programmeurs)
+
+Transifex conserve les fichiers dans un système de contrôle de version : 
+[http://github.com/civicrm/l10n](http://github.com/civicrm/l10n). Ceci est utile à certains utilisateurs qui trouvent l'interaction avec le site Github plus facile que le téléchargement de chaque fichier séparément par Transifex. 
+
+### Cohérence et consensus 
+
+Afin d'assurer une bonne cohérence dans la traduction, chaque équipe est encouragée à construire et à utiliser un glossaire et à utiliser l'examen par les pairs. Vous pouvez trouver un glossaire de termes communs sur
+[http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations](http://wiki.civicrm.org/confluence/display/CRM/Glossary+for+translations). 
+Vous devez absolument traduire ces termes dans votre langue et vous assurer que votre équipe parvienne à un consensus sur tous les termes définis.
+
+Construire et partager une mémoire de traduction commune est comme un glossaire spécialisé qui peut être utilisé automatiquement par des outils de traduction contribue également à assurer la cohérence. Le système d'aide de PoEdit explique comment construire cette base de données (la plupart des autres logiciels de traduction en font autant).
+
+Esprit d'équipe et réunion participative
+----------------------------------------
+Une bonne façon de faire des progrès dans la traduction est d'organiser des *réunions de traduction*. Cela implique d'amener autant de personnes que possible dans la même salle pour traduire autant de documents que possible. Voici quelques points à garder à l'esprit lors de l'organisation d'une réunion de traduction:
+
+
+- Choisissez un bureau agréable, où vos collègues pourront se connecter en ligne (suffisamment d'ordinateurs pour tout le monde, ou des pupitres pour installer des ordinateurs portables avec une bonne connexion Internet).
+-  Donnez au préalable des instructions sur la façon d'installer un outil de traduction hors ligne tel que PoEdit, et avoir des personnes prêtes à aider les autres pour l'installer et l'utiliser.
+- Créez le glossaire avant la réunion et imprimez une quantité suffisante de copies. Présentez le glossaire, discutez des termes qui n'ont pas de consensus.
+- Déterminez les objectifs de la réunion : quel composant sera traduit et quel pourcentage votre équipe essaie d'atteindre.
+- Créez des sous-équipes avec des objectifs clairs: par composant ou fichier ou une partie de celui-ci.
+- Si vos traducteurs ne sont pas familiers avec CiviCRM, faites une démonstration des fonctionnalités que votre équipe est sur le point de traduire.
+- Désignez clairement quelqu'un qui peut être interrompu pour répondre aux questions.
+- Assurez-vous que vous avez en réserve suffisamment de café, de thé, de chocolat, etc... pour que tout le monde passe la nuit !
+- A la fin de la réunion, présentez le résultat de la traduction dans une installation de démonstration CiviCRM .
+- Débattez pour savoir si l'équipe a atteint son objectif et comment l'améliorer.
+
 

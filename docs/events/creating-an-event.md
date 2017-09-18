@@ -13,7 +13,7 @@ Le premier écran que vous voyez lors de la création demande des informations d
 Vous pouvez cliquer sur l'un des points d'interrogation bleu pour afficher une aide sur chacun des champs à remplir. En cliquant sur le crayon à droite de certains champs vous ouvrez un écran où vous pouvez modifier les options disponibles.
 Notez qu'en fonction de vos autorisations vous ne serez pas en mesure de voir ce crayon et vous ne pourrez modifier ces options
 
-![image](../img/4.5_new_event.PNG)
+![image](../img/Fr_nouvel_evenement.PNG)
 
 **From template** : vous permet de créer un événement à partir d'un modèle (voir le chapitre *Event templates* dans ce document)  plutôt que d'en créer un à partir de zéro.
 

@@ -1,376 +1,165 @@
-Set-up
-======
+Configuration
+========
 
-This chapter describes how to set up information such as From email
-addresses, Mailing List Groups and email templates. It assumes that the
-basic functionality necessary for your server to send and process emails
-in the first place has already been configured. See *Email System
-Configuration* in *Advanced configuration* for details.
+Ce chapitre décrit comment configurer des informations telles que  l'adresse électronique d'envoi des mails, des groupes de liste de diffusion et des modèles de courrier électronique. Cela suppose que la fonctionnalité de base nécessaire à votre serveur pour envoyer et traiter des courriels a déjà été configurée. Voir *Configuration du système de messagerie* dans *Configuration avancée* pour plus de détails.
 
-Configuring your organisation's contact information
+Configuration des coordonnées de votre organisation
 ---------------------------------------------------
 
-In order to send mass emails you must fill in some basic information:
-your organisation's name, a short description, your email address, and
-your postal address. CiviMail requires that you include the sender's
-postal address along with unsubscribe/opt-out links in any mass mailing
-you send, in order to comply with privacy laws in many countries. This
-information is made available via tokens and must be included in any
-mail sent with CiviMail.
+Afin d'envoyer des courriels de masse, vous devez remplir quelques informations de base : le nom de votre organisation, une brève description, votre adresse de courrier électronique et votre adresse postale. CiviMail requiert que vous incluiez l'adresse postale de l'expéditeur ainsi que les liens de désabonnement/d'exclusion dans tout envoi de masse afin de vous conformer aux lois sur la protection de la vie privée. Ces informations sont mises à disposition via des champs de fusion et doivent être obligatoirement incluses dans tout courriel envoyé avec CiviMail.
 
-To configure this information, go to: **Administer > Communications >
-Organization Address and Contact Info**.
+Pour configurer ces informations, allez à: **Administrer> Communications> Adresse de l'organisation et informations de contact**.
 
-Mailing groups
+Groupes de diffusion
 --------------
 
-CiviMail uses Groups to organise recipients of mass mailings. To create
-a group, go to **Contacts > New Group**. When you create and configure
-a Group for this purpose, make sure to check Mailing List under Group
-Type so that it is available as a Mailing List in CiviMail. You can then
-do a search and add contacts to the Group.
+CiviMail utilise les Groupes pour organiser les destinataires des envois en masse. Pour créer un groupe, allez dans **Contacts> Nouveau groupe**. Lorsque vous créez et configurez un groupe à cet effet, assurez-vous de vérifier la liste de diffusion sous "Type de groupe" pour qu'il soit disponible en tant que liste de diffusion dans CiviMail. Vous pouvez ensuite effectuer une recherche et ajouter des contacts au groupe.
 
-You can also create Smart Groups based on search results, which will
-update the Group with any contacts that fit the search criteria. For
-example, based on the results of Advanced Search you can create a Smart
-Group of contacts who have active memberships, or a Smart Group of
-contacts in a given city. As people become members or move to the city
-you've searched on, they will be automatically added to the Smart Group.
-This makes it possible to to send mailings without having to first
-update the contacts in a group.
+Vous pouvez également créer des groupes dynamiques basés sur les résultats de recherche, ce qui mettra à jour le groupe avec tous les contacts qui correspondent aux critères de recherche. Par exemple, en fonction des résultats de la Recherche avancée, vous pouvez créer un groupe dynamique de contacts qui ont des abonnements actifs ou un groupe dynamique de contacts dans une ville donnée. À mesure que les personnes deviennent membres ou déménagent dans la ville que vous avez recherchée, ils seront automatiquement ajoutés au groupe dynamique. Cela permet d'envoyer des courriels sans avoir à mettre à jour les contacts d'un groupe.
 
-To create a **Smart Group**:
+Pour créer un groupe dynamique consultez la section "Groupe dynamique" dans le chapitre "Organisez vos données"
 
-1.  Go to **Advanced Search** or **Find Contact** and run a search query
-    based on the criteria for your group.
-2.  On the search results page, click the radio button that selects all
-    the records.
-3.  From the **Actions** drop-down menu, select **Group - create smart group**.
-4.  The next screen provides a review of the criteria chosen for the
-    Smart Group. Give the Smart Group a name and (optionally) a
-    description, and make the Smart Group a Mailing List.
-5.  Click **Save Smart Group**.
-
-**Note:** You can also create a Smart Group based on a Participant
-search. However, the Smart Group save page will not offer you the option
-to make this group a Mailing List. To make this Smart Group available to
-CiviMail, you must change its settings through **Contacts > Manage
-Groups**. This same thing happens if you use the Advanced Search and
-choose Event Participants under "Display results as."
-
-You cannot create smart groups based on Membership, Contributions or
-Pledge searches, or based on results of an Advanced Search if the
-"Display results as" option is set to anything but Contacts.
-
-Allow people to sign up for your mailing lists online
+Permettre aux personnes de s'inscrire à vos listes de diffusion en ligne
 -------------------------------------------------------
 
-CiviCRM makes it possible for people to sign themselves up for your
-mailing lists online.
+CiviCRM permet aux personnes de s'inscrire eux-mêmes à vos listes de diffusion en ligne.
 
-To allow this, you must designate the group as a mailing list. If you
-didn't do this when you created the Group, go to **Contacts** >
-**Manage Groups**. Click **Settings** on the group that holds your
-mailing list recipients and check the Mailing List next to Group Type.
-You must also change the Visibility to Public Pages.
+Pour cela, vous devez désigner le groupe comme une liste de diffusion. Si vous n'avez pas fait cela lorsque vous avez créé le groupe, allez dans **Contacts**> **Gérer les groupes**. Cliquez sur **Paramètres** dans le groupe qui contient vos destinataires et vérifiez la liste de diffusion en regard de Type de groupe. Vous devez également modifier la visibilité des pages publiques.
 
-For this to work for users who don't have a log-in to your CiviCRM, you
-must ensure that anonymous users in Drupal have the following permission
-checked: "Access CiviMail subscribe/unsubscribe pages."
+Pour que cela fonctionne pour les utilisateurs public ou anonymes qui n'ont pas de connexion à votre CiviCRM, vous devez vous assurer que les utilisateurs anonymes de Drupal, Joomla, Wordpress ont la permission suivante cochée: "Accès aux pages d'abonnement/désabonnement de CiviMail".
 
-### Using the subscribe link
+### Utilisation du lien d'abonnement
 
-One way to allow users to subscribe to an email list online is by
-directing them to www.*yourdomain.org*/civicrm/mailing/subscribe. You
-and anyone who accesses this link can subscribe to the available mailing
-list groups.
+Pour permettre aux utilisateurs de s'abonner à une liste de courriels en ligne vous devez les diriger vers www. *votre_site.fr* /civicrm/mailing/subscribe. Quiconque accède à ce lien peut s'abonner aux groupes de liste de diffusion disponibles.
 
-### Using a profile
+### Utilisation d'un profil
 
-Alternatively, you can collect more information when people sign up to
-your mailing lists with the use of a profile that is then displayed on a
-public page. Guidelines on what is you need to think about when using
-profiles for mailing list sign-ups are below; for more complete
-information about profiles, how they work, and how to set them up, see
-the **Profiles** chapter in the **Data in CiviCRM** section.
+Vous pouvez aussi recueillir d'autres d'informations lorsque les gens s'inscrivent à vos listes de diffusion par l'utilisation d'un profil qui est ensuite affiché sur une page publique. Pour plus d'informations sur les profils, leur fonctionnement et leur configuration, reportez-vous au chapitre **Profiles**
 
-For example, you could create a new Profile called Newsletter Sign-up.
-Add to this profile the fields that you'd like website visitors who want
-to join your mailing list to fill out. Each of the fields in the profile
-must have its Visibility set to Public Pages.
+CONSEIL : vous pouvez créer un nouveau profil appelé Bulletin d'inscription. Ajouter à ce profil les champs d'informations que vous souhaitez obtenir pour les personnes qui veulent s'inscrire à votre liste de diffusion. Chacun des champs du profil doit avoir sa visibilité définie sur Pages publiques.
 
-For each field you include, you can choose whether it is required or
-optional for people filling out the public form. The one exception is
-that the profile must include an email field that is required. This is
-so that an email can be sent to the person to confirm that they wanted
-to sign up for the mailing list. Until they confirm, they will have a
-status of "Pending" in the mailing list group.
+Pour chaque champ que vous incluez, vous pouvez choisir s'il est obligatoire ou facultatif pour les personnes qui remplissent le formulaire public. La seule exception est que le profil doit inclure **obligatoirement** un champ de courrier électronique. C'est pour qu'un email de confirmation puisse être envoyé à la personne qui souhaite s'inscrire à la liste de diffusion. dans l'attente de leur confirmation les inscrits  auront un statut de «En attente» dans le groupe de liste de diffusion.
 
-There are two ways to display the profile publicly:
+Il existe deux façons d'afficher le profil en mode public :
 
-1.  Share a link directly. Return to the listing of profiles (at
-    **Administer > Custom Data and Screens > Profiles**) and click
-    **More** to the far right of your profile. Click **Use
-    Profile-Create Mode**. Your browser will open up the public page;
-    you can publish this link to allow users to sign up for your mailing
-    lists.
-2.  Embed this set of fields as a form in your website. Return to the
-    listing of profiles (at **Administer > Custom Data and Screens >
-    Profiles**) and click **More** to the far right of your profile.
-    Select **HTML Form Snippet**. This will open a window in your
-    browser that has a box with HTML code in it. Copy and paste the
-    contents of the box into a page on your website. Website visitors
-    will be able to sign up to your mailing lists on this page.
+1. Partager un lien directement : Retournez à la liste des profils (**Administer> Données et écrans personnalisés> Profils**) et cliquez sur **Plus** à l'extrême droite de votre profil. Cliquez sur **Utiliser le mode de création de profil**. Votre navigateur ouvrira la page publique. Vous pouvez publier ce lien pour permettre aux utilisateurs de s'inscrire à vos listes de diffusion.
 
-Alternatively, for Wordpress you can display the form publicly by using a shortcode. On any Wordpress Page, click the **CiviCRM** button above the editor. For **Page Type** select **Profile**. On the next drop-down that appears, select the name of the profile that you have created. Select **Edit** on the radio button option just below the drop-downs, so that you give users access to edit data in your database (i.e. to add their email address and name to your database). Click **Insert Form** and the shortcode will be added to the editor.
+2. Intégrez cet ensemble de champs comme un formulaire dans votre site Web : Retournez à la liste des profils (**Administer> Données et écrans personnalisés> Profils**) et cliquez sur **Plus** à l'extrême droite de votre profil. Sélectionnez **Extrait de formulaire HTML**. Cela ouvrira une fenêtre dans votre navigateur avec le code HTML de ce profil. Copiez et collez le contenu de la boîte dans une page de votre site Web. Les visiteurs du site pourront s'inscrire à vos listes de diffusion sur cette page.
 
-### Using a Webform (Drupal)
+Pour Wordpress, vous pouvez afficher le formulaire publiquement en utilisant un code court. Sur n'importe quelle page Wordpress, cliquez sur le bouton **CiviCRM** au-dessus de l'éditeur. Pour **Type de page** sélectionnez **Profil**. Dans la liste déroulante suivante, sélectionnez le nom du profil que vous avez créé. Sélectionnez **Modifier** dans l'option du bouton radio juste en dessous des menus déroulants, afin que vous puissiez accéder aux données de votre base de données (c'est-à-dire ajouter leur adresse électronique et leur nom à votre base de données). Cliquez **Insérer formulaire** et le code court sera ajouté à l'éditeur.
 
-Many Drupal site administrators prefer to use a webform instead of a
-profile to create their newsletter sign-up, because it provides
-additional features such as advanced spam control and flexible theming.
-For more information see:
+### Utilisation d'un formulaire Web (Drupal)
 
+Beaucoup d'administrateurs de sites Drupal préfèrent utiliser un formulaire Web au lieu d'un profil pour créer leur abonnement au bulletin, car il offre des fonctionnalités supplémentaires telles que le contrôle du spam avancé et un thème flexible. Pour plus d'informations, voir:
 [http://wiki.civicrm.org/confluence/display/CRMDOC/Webform+CiviCRM+Integration](http://wiki.civicrm.org/confluence/display/CRMDOC/Webform+CiviCRM+Integration)
 
-### Adding people to your mailing list group by using a profile
+### Ajout de personnes à votre groupe de liste de diffusion à l'aide d'un profil
 
-To get a user automatically added to your mail list group(s) when they fill out your Newsletter Sign-up form (CiviCRM profile), you have two options:
+Pour qu'un utilisateur soit automatiquement ajouté à vos groupes de liste de diffusion lorsqu'ils remplissent votre formulaire d'inscription à la newsletter (profil CiviCRM), vous avez deux options:
 
-Option A: On the profile, you can add a field for the mailing lists groups that you want
-users to be able to sign up for. Go to the profile's fields and click **Add Field**. For Field Name,
-select Contacts. When the possible selections load in the second field,
-select Group(s). In Field Label, you can leave "Group(s)" or you may
-want to change it to something more intuitive to your website visitors
-such as "Newsletter Sign-up." Visibility for this field must be set
-to Public Pages. When the profile displays publicly, this field will
-show check boxes for all Mailing List Groups that have their Visibility
-set to Public Pages. This way users can add themselves to all of your Mailing List Groups that they want to by putting a tick on the appropriate checkboxes.
+Option 1 : Dans le profil, vous pouvez ajouter un champ pour que les utilisateurs puissent vous inscrire dans les groupes de listes de diffusion. Accédez aux champs du profil et cliquez sur **Ajouter champ**. Pour le "Nom du champ", sélectionnez "Contacts". Lorsque les sélections possibles sont affichées dans le deuxième champ, sélectionnez "Groupe(s)". Dans l'étiquette de champ, vous pouvez laisser "Groupe(s)" ou vous pouvez le modifier pour un terme plus intuitif aux visiteurs de votre site Web tel que «inscrivez-vous à la newsletter». La visibilité de ce champ doit être définie sur Pages publiques. Lorsque le profil s'affiche publiquement ce champ affiche des cases à cocher pour tous les groupes de liste de diffusion dont la visibilité est définie sur Pages publiques. De cette façon, les utilisateurs peuvent s'ajouter à tous vos groupes de liste de diffusion qu'ils souhaitent en cochant les cases appropriées.
 
-Option B: Go to the profile settings. In the Advanced Settings section, select your desired Mailing List Group for **Add new contacts to a Group?**. Now when users fill out your form, they will be automatically added to this group.
+Option 2 : Accédez aux paramètres du profil. Dans la section Paramètres avancés, sélectionnez le groupe de liste de diffusion souhaité pour **Ajouter de nouveaux contacts à un groupe**. Maintenant, lorsque les utilisateurs remplissent votre formulaire, ils seront automatiquement ajoutés à ce groupe.
 
-### Mailing list confirmation workflow
+### Suivi de confirmation d'inscription à une liste de diffusion
 
-For this to work, first make sure that you have put a tick on the desired **Enable Double Opt-in** options in **Administer > Administration Console > CiviMail Component Settings**.
+Pour que cela fonctionne, vérifiez d'abord que vous avez coché les options **Enable Double Opt-in** dans **Administer> Console d'administration> Paramètres du composant CiviMail**.
 
-After people subscribe to mailing list groups—via the subscribe link or
-a profile—CiviCRM will automatically send them an email asking them to
-confirm their subscription. Until they click the confirmation link in
-the email, their contact information will appear in CiviCRM with their
-group subscription set to Pending. When they confirm, CiviCRM will
-automatically change their group subscription status to Added and they
-will be sent a welcome message. (Note: When users subscribe to multiple
-groups at once, a confirmation email is sent for each group
-separately.)
+Une fois abonné aux groupes de liste de diffusion - via le lien d'abonnement ou un profil - CiviCRM enverra automatiquement un courriel demandant de confirmer l'abonnement. Jusqu'à ce qu'ils cliquent sur le lien de confirmation dans le courrier électronique, leurs coordonnées apparaîtront dans CiviCRM avec leur abonnement de groupe défini "En attente". Lorsqu'ils confirment, CiviCRM va automatiquement modifier leur statut d'abonnement de groupe à "Ajouté" et il sera envoyé un message de bienvenue. (Remarque: lorsque les utilisateurs s'abonnent à plusieurs groupes à la fois, un e-mail de confirmation est envoyé pour chaque groupe séparément.)
 
-Scheduled jobs and cron jobs
+Tâches planifiées et jobs cron
 ----------------------------
 
-After people have signed up on your mailing list(s), you will want to be able to send them mass mailings. You will also want to automatically handle any bounced email messages. These topics are dealt with in detail in the **Everyday tasks** and **Maintaining Healthy Email Lists** parts of this book, respectively. Here in this section we are going to look at some backend and server options that enable the sending of mass mailings and the bounce handling to happen.
+Après que les personnes se soient inscrites à votre mailing list, vous êtes en mesure de leur envoyer des envois de masse. Vous pourrez également gérer automatiquement tous les messages électroniques renvoyés. Ces rubriques sont traitées en détail dans les parties **tâches journalières** et **Maintien d'une liste de courriel** de ce livre. Ici, nous allons examiner quelques options backend et serveur qui permettent l'envoi de mailings de masse et comment le rebond se produit.
 
-Go to **Administer > System Settings > Scheduled Jobs** and you will see all scheduled jobs that CiviCRM uses to do certain tasks on a regular basis. One such task is the actual sending of mass mailings, which is handled by the **Send Scheduled Mailings** scheduled job. Another task is the processing of bounced emails, for which the **Fetch Bounces** scheduled job is responsible. You will need to enable these two scheduled jobs (and any others that you want to be run on a regular basis). Without these two, CiviMail will not be sending any mailings and will not be processing the bounces.
+Allez dans **Administration> Paramètres système> Tâches planifiés** et vous verrez tous les travaux planifiés que CiviCRM utilise pour effectuer certaines tâches régulièrement. Une telle tâche est l'envoi réel des envois de masse, qui est géré par   **Envoyez des mailings programmés**. Une autre tâche est le traitement des e-mails renvoyés, pour lesquels la  tâche planifiée  **Fetch Bounces** est responsable. Vous devez activer ces deux tâches planifiées (et toutes celles que vous souhaitez exécuter régulièrement). Sans ces deux, CiviMail n'envoie pas d'envois et ne traitera pas les rebonds.
 
-Now, CiviCRM's scheduled jobs cannot self-trigger themselves. Something on your server has to trigger them. The most common option for this is to set up a cron job on your server. This cron job can trigger one or more (or all) of the scheduled jobs. For more detailed explanations and examples of how to do this, see the [Managing Scheduled Jobs](http://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs) wiki page.
+Maintenant, les "Tâches planifiées" de CiviCRM ne peuvent pas s'auto-déclencher d'elles-mêmes. Une action sur votre serveur doit les déclencher. L'option la plus courante consiste à configurer une tâche cron sur votre serveur. Cette tâche cron peut déclencher une ou plusieurs (ou toutes) les tâches planifiées. Pour des explications plus détaillées et des exemples de la façon de le faire, consultez la page wiki [Gestion des tâches planifiées](http://wiki.civicrm.org/confluence/display/CRMDOC/Managing+Scheduled+Jobs).
 
-Automated Messages and mailing list management
+Gestion automatisée des messages et des listes de diffusion
 ------------------------------------------------
 
-CiviCRM sends emails automatically when your participants take certain
-actions:
+CiviCRM envoie des emails automatiquement lorsque vos participants font certaines actions :
 
--   When someone signs up for a mailing list, they get a confirmation
-    email with a link that that they must click.
--   When they confirm, they get a welcome email.
--   When they unsubscribe, opt-out of all emails from your domain, or
-    resubscribe to a list they have previously unsubscribed from, they
-    get a confirmation email that does not require any action.
--   When they reply to a message you have sent through CiviMail, you can
-    set up an autoresponse to their reply.
+- Quand quelqu'un s'inscrit pour une liste de diffusion, il recoit un email de confirmation avec un lien sur lequel il doit cliquer.
+- Lorsqu'il confirme, il reçoit un courriel de bienvenue.
+- Lorsqu'il se désabonne de tous les courriels de votre site ou qu'ils se réinscrit à une liste dont il a déjà été désabonné, il reçoit un courriel de confirmation qui ne nécessite aucune action.
+- Lorsqu'il répond à un message que vous avez envoyé via CiviMail, vous pouvez configurer une réponse automatique à sa réponse.
 
-In CiviCRM, these are called Automated Messages, and you can edit them
-and add new ones at **Mailings > Headers, Footers, and Automated
-Messages**.
+Dans CiviCRM, nous appelons cela des messages automatisés. Vous pouvez les modifier et en ajouter de nouveaux dans **publipostage> en-têtes, pieds de page et messages automatisés**.
 
-For more information on email list management see the chapter entitled
-**Maintaining Healthy Email Lists** which explores how CiviCRM handles
-unsubscribes, bounces and email holds.
+Pour plus d'informations sur la gestion des listes d'e-mails, reportez-vous au chapitre **Gestion des listes de courrier électronique**, qui explore comment CiviCRM gère les désabonnements, les rebonds, etc...
 
-Creating and maintaining message templates
-------------------------------------------
+Création et maintenance de modèles de messages
+----------------------------------------------
 
-Message templates help to streamline your communications by allowing you
-to reuse entire emails or parts of emails in both mass mailings and when
-using the Send Email activity.
+Les modèles de messages aident à rationaliser vos communications en vous permettant de réutiliser des courriels entiers ou des parties de courriels dans les envois de masse et lors de l'utilisation de l'activité Envoyer par courrier électronique.
 
-The easiest way to create a new message template is to check the Save as
-New Template box on the message creation screen. This is available both
-when using the Send Email activity and when sending a mass mailing.
+La manière la plus simple de créer un nouveau modèle de message consiste à cocher la case Enregistrer comme nouveau modèle sur l'écran de création de message. Cette fonction est disponible à la fois lors de l'utilisation de l'activité Envoyer un e-mail et lors d'un envoi de masse.
 
-You can also create message templates from scratch or edit existing
-templates by going to **Mailings > Message Templates** OR **Administer > Communications > Message Templates**.
+Vous pouvez également créer des modèles de messages à partir de zéro ou modifier des modèles existants en allant dans **Mailings> Modèles de message** ou **Administrer> Communications> Modèles de message**.
 
-1.  Click on **Add Message Template**.
-2.  Enter a Message Title and a Message Subject. You can choose to use
-    tokens to personalize your subject line.
-3.  Scroll down to the HTML Format section and create your template.
-    There are online resources, not specific to CiviCRM, that offer
-    instructions on creating an HTML email templates. One suggestion is
-    to find and copy an email template from a website that offers
-    samples.
-4.  In the WYSIWYG editor toolbar, there is an icon called "Source" (the
-    appearance and labelling of this icon changes depending on whether
-    you are using Drupal, Joomla, or WordPress). When you click on it,
-    the template changes the view to show the HTML code that is being
-    used. If you want to paste in HTML from a template you found
-    externally, or if you want to write HTML directly into your template
-    or modify the HTML that you've created with the WYSIWYG editor, you
-    need to switch to this view.
+1. Cliquez sur ** Ajouter modèle de message **.
+2. Entrez un titre et un sujet de message. Vous pouvez choisir d'utiliser des champs de fusion pour personnaliser votre ligne d'objet.
+3. Faites défiler jusqu'à la section Format HTML et créez votre modèle. CONSEIL : Il existe des ressources en ligne, non spécifiques à CiviCRM, qui offrent des instructions sur la création d'un modèle de courrier électronique HTML. Vous pouvez trouver et copier un modèle de courrier électronique à partir d'un site Web qui propose des échantillons.
+4. Dans la barre d'outils de l'éditeur WYSIWYG, il ya une icône appelée "Source" (l'apparence et l'étiquetage de cette icône varient selon que vous utilisez Drupal, Joomla ou WordPress). .Lorsque vous cliquez dessus, le modèle modifie la vue pour afficher le code HTML utilisé. Vous devez passer à cette vue si vous souhaitez coller en HTML à partir d'un modèle que vous avez trouvé à l'extérieur, ou si vous souhaitez écrire directement le code HTML dans votre modèle ou modifier le code HTML que vous avez créé avec l'éditeur WYSIWYG.
 
-Message templates are available even when CiviMail is disabled.
+Les modèles de messages sont disponibles même lorsque CiviMail est désactivé.
 
-### Tips for creating templates
+### Conseils pour la création de modèles
 
-HTML code allowed in emails is more restricted than HTML used for web
-pages. For instance, it needs to use tables for layout, inline CSS, and
-must not include background images. Here are some tips for creating a
-template that will look good in all mail clients:
+Le code HTML autorisé dans les courriels est plus restreint que le HTML utilisé pour les pages Web. Par exemple, il doit utiliser des tables pour la mise en page, CSS en ligne, et ne doit pas inclure des images d'arrière-plan. Voici quelques conseils pour créer un modèle qui sera correct dans tous les clients de messagerie:
 
--   **Table border**: The HTML <table> element includes an optional
-    border attribute. Since the default value is 0, it doesn't appear
-    unless you choose to use it. Adding it (or editing it if it is
-    available) and setting it to 1 (e.g. `<table border="1">`) allows
-    you to see the edges of your table and helps identify potential
-    places to fix problems. Please note that HTML email templates
-    usually have multiple tables and nested tables (tables inside
-    tables). Make changes one at a time and switch to the HTML view to
-    see the results. A table usually has more than one parameter, so
-    make sure to place spaces between parameters.
--   **Table cellpadding and cellspacing**: these table parameters are
-    very useful when trying to improve the readability of your email.
-    Play with these settings in different tables and see what works for
-    you.
--   **Width**: Do not send an email that is wider than 600 pixels, to
-    ensure maximum compatibility across email clients. Make sure your
-    outermost table does not exceed 600 pixels. Do the same for any
-    other tables inside your main table. Also make sure that the total
-    width of each image does not exceed 600 pixels. Images have a width
-    parameter, but they can also have a horizontal padding parameter
-    that, if set, can increase the width of the image.
--   **Images**: these need to be online and accessible in order for you
-    to use them. First edit your image so that its width and height is
-    appropriate for your email template. Next, save it so that its file
-    size is as small as possible. If you do not have image editing
-    software, or do not know how to use it, there are free online
-    resources that can help you resize your image.
--   **HTML editor**: CiviCRM comes with two WYSIWYG editors (CKEditor
-    and TinyMCE) and Textarea, a plain text editor. If you have another
-    editor configured as part of your Drupal, Joomla, or WordPress
-    installation, you can choose to use that instead. go to:
-    **Administer** > **Customize Data and Screens** > **Display
-    Preferences** > and select a different WYSIWYG Editor.
+- **Table border** : L'élément HTML (table) inclut un attribut de bordure facultatif. Comme la valeur par défaut est 0, elle n'apparaît que si vous choisissez de l'utiliser. Si vous l'ajoutez (ou si vous l'éditez s'il est disponible) et que vous le définissez sur 1 (par exemple, `<table border =" 1 ">`), vous pouvez voir les contours de votre table et les identifier. Veuillez noter que les modèles de courrier électronique HTML comportent généralement plusieurs tables et tables imbriquées (tables à l'intérieur des tables). Effectuez les modifications une à une et passez à la vue HTML pour afficher les résultats. Une table a généralement plus d'un paramètre, alors assurez-vous de placer des espaces entre les paramètres.
+- **Table cellpadding et cellspacing** : ces paramètres de table sont très utiles lorsque vous essayez d'améliorer la lisibilité de votre email. Jouez avec ces paramètres dans différentes tables et voyez ce qui fonctionne pour vous.
+- **Width** : N'envoyez pas un email de plus de 600 pixels pour assurer une compatibilité maximale entre les différents clients de messagerie. Assurez-vous que votre table extérieure ne dépasse pas 600 pixels. Faites de même pour toutes les autres tables à l'intérieur de votre table principale. Assurez-vous également que la largeur totale de chaque image ne dépasse pas 600 pixels. Les images ont un paramètre de largeur, mais elles peuvent également avoir un paramètre de rembourrage horizontal qui, s'il est défini, peut augmenter la largeur de l'image.
+- **Images**: Elles doivent être en ligne et accessibles pour que vous puissiez les utiliser. Commencez par modifier votre image afin que sa largeur et sa hauteur conviennent à votre modèle de courrier électronique. Ensuite, enregistrez-le pour que sa taille de fichier soit aussi petite que possible. Si vous n'avez pas de logiciel de retouche d'image ou si vous ne savez pas comment l'utiliser, il existe des ressources en ligne gratuites qui peuvent vous aider à redimensionner votre image.
+- **Editeur HTML**: CiviCRM est livré avec deux éditeurs WYSIWYG (CKEditor et TinyMCE) et Textarea, un éditeur de texte brut. Si vous avez un autre éditeur configuré dans le cadre de votre installation Drupal, Joomla ou WordPress, vous pouvez choisir de l'utiliser à la place. Aller à: **Administer**> **Personnaliser les données et les écrans**> **Préférences d'affichage**> et sélectionner un autre éditeur WYSIWYG.
 
-To see examples of message templates, see
+Pour voir des exemples de modèles de messages, consultez :  
 [http://wiki.civicrm.org/confluence/display/CRMDOC/Sample+CiviMail+Messages](http://wiki.civicrm.org/confluence/display/CRMDOC/Sample+CiviMail+Messages)
 [](http://wiki.civicrm.org/confluence/display/CRMDOC41/Sample+CiviMail+Messages).
 
-### Plain text and HTML formats
+### Texte brut et format HTML
 
-All messages can be sent either in plain text or in HTML. Today the vast
-majority of people use email clients that can read messages received in
-HTML. However, the best practice is to offer the option to send a plain
-text email version to ensure all recipients can view the message. Plain
-text email readers may display HTML email as blank. HTML email may also
-present accessibility issues to people using screen readers.
+Tous les messages peuvent être envoyés en texte brut ou en HTML. Aujourd'hui, la grande majorité des gens utilisent des clients de courrier électronique qui peuvent lire les messages reçus en HTML. Cependant, une bonne pratique consiste à offrir la possibilité d'envoyer une version de courrier électronique en texte brut pour s'assurer que tous les destinataires peuvent afficher le message. Les lecteurs de courrier électronique en texte brut peuvent afficher un message HTML vierge. Le courrier électronique HTML peut également présenter des problèmes d'accessibilité aux personnes utilisant des lecteurs d'écran.
 
-However, there is a risk that if users modify an email based on a
-template that contains both plain text and HTML, they will forget to
-modify the plain text version of this message. This will mean that
-people using plain text-only email clients will receive an incorrect or
-incomplete message.
+Toutefois, si les utilisateurs modifient un courrier électronique à partir d'un modèle contenant du texte brut et du HTML, ils peuvent oublier de modifier la version texte de ce message. Cela signifie que les personnes utilisant des clients de messagerie texte uniquement recevront un message incorrect ou incomplet.
 
-One solution to this problem is to either use plain text emails only or
-to set templates without the plain text option and ask users to create a
-plain text version before sending their mailings.
+CONSEIL : Une solution à ce problème est soit d'utiliser des courriels en texte brut uniquement ou de définir des modèles sans l'option de texte brut et de demander aux utilisateurs de créer une version de texte brut avant d'envoyer leurs mailings.
 
-To create a plain text version of a message from HTML:
+Créer une version texte d'un message HTML:
 
-1.  Copy and paste the text from HTML Format field into the Plain Text
-    Format field. When you do this, make sure you are not in the Source
-    view; you don't want all the code, just the text. When you copy from
-    the WYSIWYG view, the plain text field will automatically strip out
-    the formatting and any other elements that do not work in plain
-    text.
-2.  Copy the URLs of all links to the appropriate places in the Plain
-    Text Format field.
-3.  If the HTML version contained tables, modify the layout of your text
-    manually to ensure the text version is readable.
+1. Copiez et collez le texte du champ Format HTML dans le champ Format de texte brut. Lorsque vous effectuez cette opération, assurez-vous que vous n'êtes pas dans la vue Source... Vous ne voulez pas tout le code, juste le texte ! Lorsque vous copiez à partir de la vue WYSIWYG, le champ de texte brut supprimera automatiquement la mise en forme et tous les autres éléments qui ne fonctionnent pas en texte brut.
+2. Copiez éventuellement les URL de tous les liens vers les endroits appropriés dans le champ Format de texte brut.
+3. Si la version HTML contenait des tables, modifiez la mise en page de votre texte manuellement pour vous assurer que la version texte est lisible.
 
-Creating headers and footers
+Création d'en-têtes et de pieds de page
 ----------------------------
 
-Headers and footers can be used only in mass mailings using CiviMail.
-They are not available unless CiviMail is enabled.
+Les en-têtes et les pieds de page ne peuvent être utilisés que dans les envois de masse à l'aide de CiviMail. Ils ne sont disponibles que si CiviMail est activé.
 
-The header is the area at the top of the email; it should include
-elements that you want to be displayed before the main content body,
-such as the logo of your organization and the title of the newsletter.
+L'en-tête est la zone en haut de l'e-mail. Elle doit inclure les éléments que vous souhaitez afficher avant le corps du contenu principal, comme le logo de votre organisation et le titre du bulletin.
 
-The footer is always the last thing in the email. The footer is an ideal
-place for the compulsory unsubscribe tokens (see **What You Need to
-Know** for more information).
+Le pied de page est toujours la fin du courrier électronique. Le pied de page est un endroit idéal pour les champs obligatoires de désinscription  (voir **Ce que vous devez savoir** pour plus d'informations).
 
-You can manage the content of headers and footers in **Mailings >
-Headers, Footers, and Automated Messages**. You can create different
-headers and footers for different purposes; for example, you might want
-to create a set of headers with different images and titles that can be
-used for different campaigns or programs. It is recommended to style
-them similarly, to present a coherent visual identity across all your
-messages.
+Vous pouvez gérer le contenu des en-têtes et des pieds de page dans **Envois> En-têtes, Pieds de page et Messages automatisés**. Vous pouvez créer différents en-têtes et pieds de page à des fins différentes. Par exemple, vous pouvez créer un ensemble d'en-têtes avec différentes images et titres pouvant être utilisés pour différentes campagnes ou programmes. Il est recommandé de les styler de manière similaire afin de présenter une identité visuelle cohérente à travers tous vos messages.
 
-After headers and footers are configured, staff who prepare a new
-mailing will be able to select them from available headers and footers.
-This helps staff create more standardized mailings with elements that
-help your readers identify the contents of the mailing or find
-information.
+Une fois les en-têtes et les pieds de page configurés, le personnel qui prépare un nouvel envoi pourra les sélectionner dans les en-têtes et les pieds de page disponibles. Cela aide le personnel à créer des envois normalisés avec des éléments qui aident vos lecteurs à identifier le contenu de l'envoi ou à trouver des informations.
 
-Like the Message Templates, headers and footers have both a text and an
-HTML version. Unlike Message Templates, however, the header and footer
-creation pages do not offer a WYGIWYG editor. You will need to write
-header and footer HTML directly or use another HTML editor to produce
-the HTML code.
+Comme les modèles de message, les en-têtes et les pieds de page ont à la fois un texte et une version HTML. Contrairement aux modèles de message, cependant, les pages de création d'en-tête et de pied de page n'offrent pas d'éditeur WYGIWYG. Vous devrez écrire l'en-tête et le pied de page HTML directement ou utiliser un autre éditeur HTML pour produire le code HTML.
 
-Testing templates
+Tester vos modèles de message
 -----------------
 
-Once your templates are ready, we strongly recommend that you test them
-in various email clients, such as Mozilla Thunderbird, MS Outlook, Mac
-Mail and web-based e-mail such as Gmail, Yahoo and Hotmail. An easy way
-to do this is to create a group that includes a test contact for each of
-those destinations and use it each time you create a new mailing.
+Une fois que vos modèles sont prêts, nous vous recommandons fortement de les tester dans différents clients de messagerie tels que Mozilla Thunderbird, MS Outlook, Mac Mail et courrier électronique sur le Web tels que Gmail, Yahoo et Hotmail. CONSEIL : Une façon simple de le faire est de créer un groupe qui comprend un contact de test pour chacune de ces destinations et de l'utiliser chaque fois que vous créez un nouvel envoi.
 
-Because email clients can display the HTML very differently from each
-other, we recommended that you keep the HTML as simple as possible and
-use only inline CSS or tables for formatting. Include as much of the
-layout as possible in the templates so that each new mailing will not
-require too much reviewing, since the template will have already been
-tested.
+CONSEIL : Comme les clients de messagerie peuvent afficher le code HTML très différemment, nous vous recommandons de conserver un code HTML aussi simple que possible et d'utiliser uniquement des CSS ou des tables en ligne pour le formatage. Inclure autant que possible de la mise en page dans les modèles de sorte que chaque nouvel envoi ne nécessite pas trop de révision, puisque le modèle aura déjà été testé.
 
-Auto-filing email conversations in CiviCRM
+Conversion automatique d'e-mails dans CiviCRM
 ------------------------------------------
 
-It is possible to have emails sent to and from your regular email client
-automatically filed in CiviCRM. This is done by including a designated
-email address in the To, Cc, or Bcc field (Bcc is recommended, as it is
-invisible to the recipient.) Emails that include this designated email
-get filed as an activity for the contact(s) that match the other email
-addresses in the From, To, and Cc fields. If any of these email
-addresses are not already in the system, a new contact record will be
-created. (Technically, this can work for inbound emails as well;
-however, it does depend on the person sending the mail to you including
-the auto-filing address in the To, Cc, or Bcc field.)
+Il est possible d'envoyer des courriels vers et depuis votre client de messagerie ordinaire automatiquement dans CiviCRM. Cela se fait en incluant une adresse e-mail désignée dans le champ À, Cc ou Cci (Bcc est recommandé, car il est invisible pour le destinataire). Les e-mails qui incluent ce courrier électronique désigné sont classés comme une activité pour le(s) contact(s) qui correspondent aux adresses de messagerie dans les champs De, To et Cc. Si l'une de ces adresses de messagerie ne se trouve pas déjà dans le système, un nouvel enregistrement de contact sera créé. (Techniquement, cela peut également fonctionner pour les courriels entrants, mais cela dépend de la personne qui vous envoie le courrier, y compris l'adresse de dépôt automatique dans le champ À, Cc ou Cci.)
 
-For this, your administrator should have configured IMAP or other mail
-accounts and set them up in CiviMail (see **Email System
-Configuration**, especially **Adding an incoming email account for
-handling bounces or auto filing to CiviMail**, in **Initial Set-Up** for
-more details).
+Pour cela, votre administrateur doit avoir configuré IMAP ou d'autres comptes de messagerie et les configurer dans CiviMail (voir **Configuration du système de messagerie**, en particulier **Ajout d'un compte de messagerie entrant pour le traitement des rebonds ou le dépôt automatique à CiviMail**, **Initial Set-Up **  pour plus de détails).
+

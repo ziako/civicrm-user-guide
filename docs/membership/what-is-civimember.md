@@ -1,107 +1,45 @@
-What is CiviMember
+Qu'est-ce que CiviMember ?
 ==================
 
-CiviMember is the CiviCRM component that provides functionality to
-support and automate the management of memberships. CiviMember allows
-you to:
+CiviMember est un composant de CiviCRM qui offre des fonctionnalités pour gérer et automatiser la gestion des adhésions. CiviMember vous permet de:
 
--   define membership types and pricing schemes that meet your needs
--   create self-service options for online membership sign-up and
-    renewal, utilising CiviContribute
--   manage memberships manually through the administrative interface
--   create and schedule automated messages to welcome new members,
-    remind about upcoming renewal, etc.
--   track and report on your contacts through the membership cycle 
--   grant additional website privileges for members.
+- définir les types d'adhésion et les types de tarification qui répondent à vos besoins
+- créer des options en libre-service pour l'inscription et le renouvellement en ligne, en utilisant CiviContribute
+- gérer les adhésions manuellement via l'interface d'administration
+- créer et programmer des messages automatisés pour accueillir de nouveaux membres, rappeler le prochain renouvellement, etc.
+- suivre et signaler vos contacts dans le cycle d'adhésion
+- accorder des privilèges supplémentaires aux membres de votre site Web.
 
-The chapters in this section take you through everything you need to
-know in order to get the most from CiviMember.
+Les chapitres de cette section vous indiquent tout ce que vous devez savoir pour tirer le meilleur parti de CiviMember.
 
-If you are new to CiviMember and planning to use it for your membership
-management it is a good idea to review this entire section whilst you
-are considering your organisation's membership scheme and working out
-how best to model it within CiviCRM. CiviMember provides a high degree
-of flexibility, enabling you to configure it to meet most requirements.
+Si vous débutez avec CiviMember et que vous prévoyez de l'utiliser pour votre gestion d'adhésion, il est judicieux de lire au préalable toute cette section pour analyser le système d'adhésion de votre organisation et de déterminer la meilleure façon de le modéliser au sein de CiviCRM. CiviMember offre un haut degré de flexibilité, vous permettant de le configurer et répondre à la plupart des vos exigences.
 
-Adopting a system like CiviCRM will normally require some changes in
-working practices, so it is important to work closely with the people
-within your organisation who will have day-to-day responsibility for
-managing memberships using CiviCRM as you develop your plans.
+L'adoption d'un système comme CiviCRM nécessitera normalement certains changements dans les pratiques de travail. Il est donc important de travailler en étroite collaboration avec les personnes, au sein de votre organisation, qui auront la responsabilité quotidienne de la gestion des adhésions en utilisant CiviCRM.
 
-Memberships can run from a day to a lifetime, they be free or paid, and
-have simple or complex pricing structures. They can be set up to
-auto-renew where a compatible payment processor is enabled.
+Les durées d'adhésions peuvent aller d'une journée à une vie, elles peuvent être gratuites ou payantes, et avoir des structures de tarification simples ou complexes. Elles peuvent être configurées pour être renouvelées automatiquement en ligne lorsqu'un processeur de paiement compatible est activé.
 
-Memberships for any given contact are visible on the contact's summary
-screen and on the membership dashboard. They can be searched for through
-the Membership Search or Advanced Search, and CiviMember provides four
-membership reports, each of which can be customised to better meet your
-specific needs.
+Les adhésions pour un contact donné sont visibles sur l'écran de synthèse du contact et sur le tableau de bord des membres. Elles peuvent être recherchées dans le cadre de la recherche d'adhésion ou de la recherche avancée. CiviMember fournit en standard quatre comptes rendus d'adhésion, chacun pouvant être personnalisé pour mieux répondre à vos besoins spécifiques.
 
-Conceptually, members are simply contacts in your CiviCRM database with
-one or more memberships. The contact may be an individual, a household,
-an organisation, or some other contact sub-type, but it is always a
-contact to which a membership is applied.
+Par définition, les membres sont simplement des contacts dans votre base de données CiviCRM avec une ou plusieurs adhésions. Le contact peut être un individu, un ménage, une organisation ou un autre sous-type de contact, mais c'est toujours un contact auquel une adhésion est appliquée.
 
-Scenario: Driving membership forward
+
+Scénario: Gérer des adhésions complexes
 ------------------------------------
 
-The Atlantic Region Public Transit Association (ARPTA) has a complex
-requirement with four membership categories:
+L'Association de transport en commun de l'Atlantique (ARPTA) a une exigence particulière avec quatre catégories d'adhésions:
 
--   **Regular Members:** Public transit systems. There are three tiered
-    levels within this category, based on the size of the system.
-    Membership is organization-based, and all employees of the member
-    organization receive access to member benefits, such as discounted
-    rates at Association events.
--   **Affiliate Members:** Businesses providing goods and services to
-    the transit industry. Membership fees are the same for all Affiliate
-    Members. Membership is organization-based, and up to 10 employees of
-    the member organization receive access to member benefits, such as
-    discounted rates at Association events.
--   **Associate Members:** Students, government representatives, public
-    interest groups, research institutions, and other interested
-    parties. Membership fees are the same for all Associate Members.
-    Membership is individual-based.
--   **Honorary Members:** Retired transit system executives and others
-    who have made a notable contribution to the industry and
-    Association. Membership is individual-based and free for life.
+-   **Membres réguliers :** Systèmes de transport en commun. Il existe trois niveaux d'adhésions échelonnés dans cette catégorie, en fonction de la taille du système. L'adhésion est axée sur l'organisation et tous les employés de l'organisation membres reçoivent des avantages sociaux, tels que les taux réduits lors des événements de l'Association.
+-   **Membres affiliés :** Les entreprises fournissant des biens et des services à l'industrie du transport en commun. Les frais d'adhésion sont les mêmes pour tous les membres affiliés. L'adhésion est basée sur l'entreprise, et jusqu'à 10 employés de l'entreprise membre reçoivent l'accès aux avantages des membres, tels que les taux réduits lors des événements de l'Association.
+-   **Membres associés :** Étudiants, représentants gouvernementaux, groupes d'intérêt public, établissements de recherche et autres parties intéressées. Les frais d'adhésion sont les mêmes pour tous les membres associés. L'adhésion est individuelle.
+-   **Membres d'honneur :** Les cadres du système de transport en commun retraités et d'autres personnes qui ont apporté une contribution notable à l'industrie et à l'Association. L'adhésion est individuelle et gratuite à vie.
 
-When the ARPTA membership administrator, Sue, initially configured
-CiviMember she created a separate membership type for each of the four
-member categories described above. This was easily managed by
-CiviMember. Initially, they carried on with manually processing
-membership renewals and new sign-ups while the system bedded in. 
+Lorsque Sue, l'administrateur de l'ARPTA, a initialement configuré CiviMember, elle a créé un type d'adhésion pour chacune des quatre catégories de membres décrites ci-dessus. Ce qui a été facilement géré par CiviMember. Pendant ce temps, les employés ont continué le traitement manuel des nouvelles adhésions et les renouvellements pendant que le système était mis en place.
 
-Last year ARPTA's board agreed that they needed to boost membership
-income by improving their membership recruitment and renewal rates,
-whilst keeping tight control, and if possible reducing, the amount of
-time spent on membership administration.
+L'année dernière, le conseil d'administration de l'ARPTA a décidé qu'il fallait augmenter le nombre des membres en améliorant le taux de recrutement et de renouvellement des membres, tout en gardant un contrôle strict et, si possible, en réduisant le temps consacré à l'administration des adhésions.
 
-To help achieve this they used CiviContribute and CiviMember to set up
-online sign-up and renewal pages for Regular and Affiliate Members. They
-were then able to run targeted membership recruitment campaigns linking
-to the online sign-up pages so that potential members could quickly join
-online. At the same time, existing members were encouraged to renew
-online, by logging in to the member section on the ARPTA website.
+Pour y parvenir, CiviContribute et CiviMember ont permis de créér des pages d'inscription et de renouvellement en ligne pour les membres réguliers et affiliés. L'ARPTA par la suite a été en mesure d'exécuter des campagnes ciblées de recrutement d'adhésion en ligne par les pages d'inscription en ligne afin que des membres potentiels puisse rapidement adhérer. Parallèlement, les membres existants ont été encouragés à renouveler leur adhésion en ligne, en se connectant à la section membre sur le site Web d'ARPTA.
 
-These steps streamlined ARPTA's sign-up process, eliminated a lot of
-admin work and gave Sue a clear view of new sign-ups, recent renewals
-and expired members that need to be chased. Through CiviContribute, she
-can produce a monthly spreadsheet for her accounts department with all
-membership fees received, which they import into their accounting
-software. With the time she saves on paperwork she is able to engage
-more with members and is much more involved in the annual conference,
-which ARPTA manages using CiviEvent.
+Ces mesures ont simplifié le processus d'inscription d'ARPTA, réduit de beaucoup le travail administratif et donné à Sue une vue claire des nouvelles inscriptions, des renouvellements récents et des membres dont l'adhésion a expirée et qui doivent être relancés. Grâce à CiviContribute, elle peut produire une feuille de calcul mensuelle pour son service de comptabilité avec tous les frais d'adhésion reçus, qui pourra être ensuite importée dans leur logiciel de comptabilité. Avec le temps qu'elle économise sur la "paperasse", elle est en mesure de s'occuper davantage des membres.
 
-ARPTA's board were also pleased with the results of the move to online
-sign-up and renewal, which, in conjunction with their marketing
-campaign, led to a 30% jump in new members over a year. Their analysis
-also showed a 40% improvement in membership retention (in part because
-Sue was able to devote more time to contacting lapsed and expired
-members, and in part because members reported that they found it easy
-and convenient to renew online, and were prompted to do so by the
-reminder emails that Sue had set up using the Schedule Reminders
-feature. Their market research also showed that members appreciated the
-fact that they were being contacted more regularly by Sue, and felt more
-engaged with ARPTA as a result.
+Suite à ces changements, le conseil d'administration d'ARPTA a également été satisfait des résultats des inscriptions et renouvellements en ligne qui, en fonction des campagnes de marketing, ont entraîné une hausse de 30% de nouveaux membres sur un an. Leur analyse a également révélé une amélioration de 40% du renouvellement des membres (en partie parce que Sue a pu y consacrer plus de temps pour communiquer auprès des anciens membres ou dont l'adhésion était échue). Les membres ont déclarés qu'ils trouvaient facile et commode de renouveler en ligne leur adhésion. Les courriels de rappel que Sue avait mis en place pour présenter les nouvelles fonctionnalités et le rappel des horaires d'ouverture y ont largement contribué. Leur étude de marché a également montré que les membres ont apprécié d'avoir été contactés plus régulièrement par Sue et se sentait plus engagé avec ARPTA.
+
