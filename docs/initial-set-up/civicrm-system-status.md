@@ -7,7 +7,7 @@ L'état du système
 
 Les items en *rouge* doivent être vérifiés aussitôt que possible. Un item en rouge signifie généralement qu'une technicalité pourrait empêcher CiviCRM de fonctionner correctement.
 
-Les items en *orange* devraient être vérifiés également. Ces items sont moins urgents, mais pourraient néanmoins avoir des conséquences sur le bon fonctionnement de CiviCRM.
+Les items en *orange* doivent également être vérifiés . Ces items sont moins urgents, mais pourraient néanmoins avoir des conséquences sur le bon fonctionnement de CiviCRM.
 
 Les items en *vert* sont correctement configurés et sont affichés pour information seulement.
 
