@@ -19,7 +19,7 @@ Si vous connaissez une autre organisation qui utilise CiviCRM, parlez-leur de le
 
 Le forum [CiviCRM StackExchange](https://civicrm.stackexchange.com/) est un très bon endroit pour demander et obtenir des réponses aux questions. Essayez de formuler votre question séparément avant de la poster et de la soumettre aussi concise que possible - en essayant autant que possible d'utiliser les noms et les termes utilisés dans CiviCRM (par opposition à ceux utilisés par votre organisation). Ceci peut considérablement améliorer le service que vous recevez de ce forum!
 
-Ce sont des bénévoles qui répondent aux questions sur Stack Exchange, donc plus il est facile pour eux de comprendre, plus rapide seront les réponses.
+Ce sont des bénévoles qui répondent aux questions sur Stack Exchange, donc plus il leur sera facile pour eux de comprendre, plus rapide seront les réponses.
 Si vous souhaitez poser des questions ou contribuer aux discussions, vous devez d'abord vous inscrire.
 
 Enfin, notons que depuis 2016, une plateforme très active de discussion (chat) est disponible à l'adresse suivante : [https://chat.civicrm.org](https://chat.civicrm.org). En cas de doute, n'hésitez pas à vous y connecter et poser votre question !
