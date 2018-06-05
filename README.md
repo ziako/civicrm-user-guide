@@ -2,7 +2,7 @@
 
 Note: Ce dépôt contient les _fichiers sources_ pour le guide de l'utilisateur de CiviCRM en français. C'est l'endroit où l'on peut contribuer à améliorer le contenu du guide.
 
-**[Cliquer ici pour consulter la version officielle du guide de l'utiliateur en français.](http://docs.civicrm.org/user/fr/stable)**
+**[Cliquer ici pour consulter la version officielle du guide de l'utilisateur en français.](http://docs.civicrm.org/user/fr/stable)**
 
 Ce guide est une traduction du [guide de l'utilisateur en anglais](https://github.com/civicrm/civicrm-user-guide) de CiviCRM. Nous tentons de rester au plus près du guide original dans la mesure du possible mais il est possible que nous ajoutions des sections pour des particularités régionales.
 
