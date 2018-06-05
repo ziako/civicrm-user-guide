@@ -12,7 +12,7 @@ Objectif
 
 Pour débuter, prenez quelques minutes pour définir l'objectif souhaité en adoptant un logiciel tel que CiviCRM. Par exemple :
 
-*Investir dans notre bases de données de 12 000 constituants réduira notre surcharge administrative afin de permettre à notre équipe de mieux se concentrer sur les activités de levée de fonds et sur les projets de sensibilisation.*
+*Investir dans notre base de données de 12 000 contacts réduira notre surcharge administrative afin de permettre à notre équipe de mieux se concentrer sur les activités de levée de fonds et sur les projets de communication et de développement.*
 
 Évaluation
 ----------
@@ -25,11 +25,11 @@ Pour débuter, prenez quelques minutes pour définir l'objectif souhaité en ado
 
 **Énumérez les conséquences des limitations de vos solutions actuelles**. Par exemple :
 
--   **Portrait incomplet de nos participants.** : Nous n'avons pas de portrait global de qui est un donateur, bénévole ou abonné de notre newsletter.
+-   **Profil incomplet de nos participants.** : Nous n'avons pas de profil global de qui est un donateur, bénévole ou abonné de notre newsletter.
 -   **Impossible d'inclure tous nos donateurs potentiels pour les solliciter proactivement.** Avec toutes nos différentes listes de contacts, nous ne pouvons pas efficacement les cibler dans nos campagnes de levée de fonds, de sensibilisation ou de promotion de nos évènements.
--   **Utilisation inefficace du personnel.** Du précieux temps du personnel de l'association est gaspillé avec la double-saisie de l'information, la fusion de différentes listes provenant de différents systèmes ou à la fusion de doublons.
+-   **Utilisation inefficace du personnel.** Du temps précieux du personnel de l'association est gaspillé avec la double-saisie de l'information, la fusion de différentes listes provenant de différents systèmes ou à la fusion de doublons.
 -   **Manque de communication.** Difficulté de communication à travers les différents départements à propos des interactions avec les participants (ex: les donateurs ne sont pas informés si les membres étaient présents à la dernière assemblée générale).
--   **Vulnérabilité des données.** Manque de sauvegardes fiables de toutes les données (ex: certains fichiers Excel sont perdus sur le portable d'un employé), difficilté de les protéger contre des pertes malicieuses ou accidentelles.
+-   **Vulnérabilité des données.** Manque de sauvegardes fiables de toutes les données (ex: certains fichiers Excel sont perdus sur le portable d'un employé), difficulté de les protéger contre des pertes malicieuses ou accidentelles.
 
 **Enfin, l'inventaire des sources de données actuelles** qui pourraient être consolidées et partagées entre les différents départements. Par exemple :
 
