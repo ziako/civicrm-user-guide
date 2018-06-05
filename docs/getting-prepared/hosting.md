@@ -6,28 +6,28 @@ Avant d'installer CiviCRM, il faut considérer attentivement où héberger l'app
 Hébergement interne
 -------------------
 
-Si vous avez un département d'informatique ou des employés avec un profil technique, vous voudrez peut-être héberger CiviCRM à l'interne. Pour ce faire, il faudra :
+Si vous avez un département d'informatique ou des employés avec un profil technique, vous voudrez peut-être héberger CiviCRM en interne. Pour ce faire, il faudra :
 
-- Des serveurs ou ordinateurs didiés pouvant disponibles pour faire fonctionner un serveur web 24x7.
+- Des serveurs ou ordinateurs dédiés disponibles pour faire fonctionner un serveur web 24x7.
 - Un espace dans vos bureaux où il est possible de faire fonctionner le matériel informatique, idéalement dans un endroit climatisé.
-- Une batterie (UPS) pour s'assurer que le serveur ne sera pas affecté par les pannes d'électricité.
-- Une connexion Internet stable et suffisamment performante pour permettre l'accès à partir de l'extérieur du bureau, avec une adresse IP fixe.
+- Un onduleur (UPS) pour s'assurer que le serveur ne sera pas affecté par les pannes d'électricité.
+- Une connexion Internet stable et suffisamment performante pour permettre l'accès externe, avec une adresse IP fixe.
 
-Il y a d'autres facteurs à considérer. Si vous avez un réseau interne, le serveur web devrait être isolé des autres ordinateurs de votre bureau pour réduire les risques de sécurité (dans le jargon: une zone démilitarisée, DMZ). Un serveur web peut, potentiellement, augmenter les risques en servant de porte d'entrée dans le reste de votre réseau privé. Il est également suggéré de calculer les coûts de maintenance d'un serveur interne, pour mieux comparer avec les coûts d'un serveur hébergé à l'externe.
+Il y a d'autres facteurs à considérer. Si vous avez un réseau interne, le serveur web devra être isolé des autres ordinateurs de votre bureau pour réduire les risques de sécurité (dans le jargon: une zone démilitarisée, DMZ). Un serveur web peut, potentiellement, augmenter les risques en servant de porte d'entrée sur le reste de votre réseau privé. Il est également suggéré de calculer les coûts de maintenance d'un serveur interne, pour mieux comparer avec les coûts d'un hébergement externe.
 
 Hébergement externe
 -----------------
 
-Vous pouvez héberger CiviCRM avec un fournisseur d'hébergement externe, mais tout en faisant vous-même l'installation et la configuration de CiviCRM. Dans ce cas, il est recommandé de louer un serveur virtuel privé (VPS) pour avoir le plein contrôle sur les logiciels qui seront disponibles sur le serveur (PHP, MySQL, etc) et pour pouvoir les configurer selon les exigences de CiviCRM.
+Vous pouvez héberger CiviCRM avec un fournisseur d'hébergement externe, mais tout en faisant vous-même l'installation et la configuration de CiviCRM. Dans ce cas, il est recommandé de louer un serveur virtuel privé (VPS) pour avoir le plein contrôle sur les logiciels qui seront disponibles sur le serveur (PHP, MySQL, etc...) et pour pouvoir les configurer selon les exigences de CiviCRM.
 
-La majorité des hébergeurs mutualisés restreignent certaines fonctions et ne peuvent pas répondre aux exigences de CiviCRM. Les hébergeurs mutualisés sont aussi susceptibles à des problèmes de performance, ce qui aura un impact négatif sur la perception de l'outil.
+La majorité des hébergeurs mutualisés restreignent certaines fonctions et ne peuvent pas répondre aux exigences de CiviCRM. Les hébergeurs mutualisés sont parfois susceptibles de problèmes de performance, ce qui aura un impact négatif sur la perception de l'outil.
 
 **Il est fortement recommandé de faire un essais à court terme avec un hébergeur avant de s'engager sur une plus longue période.**
 
 Hébergement existant
 -------------------
 
-Si vous avez déjà un hébergement pour votre site web, contactez-les pour déterminer s'ils supportent les outils nécessaires pour faire fonctionner CiviCRM. Sinon, vous avez deux options :
+Si vous avez déjà un hébergeur pour votre site web, contactez-le pour déterminer s'il supporte les outils nécessaires pour faire fonctionner CiviCRM. Sinon, vous avez deux options :
 
 ### Migrer vers un autre hébergement
 
@@ -39,7 +39,7 @@ Selon le système de gestion de contenu que vous utilisez, la procédure pour mi
 
 ### Héberger CiviCRM sur un site (serveur) séparé
 
-Si vous ne pouvez pas migrer votre site web vers un autre hébergement, vous pouvez ouvrir un second compte d'hébergement chez un autre hébergeur et rouler les deux sites côte à côte.
+Si vous ne pouvez pas migrer votre site web vers un autre hébergement, vous pouvez ouvrir un second compte d'hébergement chez un autre hébergeur et utiliser les deux sites côte à côte.
 
 Dans ce cas, vous pouvez créer un nouveau « sous-site », par exemple sur https://civicrm.exemple.ca et y ajouter des liens à partir de votre site principal (ex: pour les formulaire de dons).
 
