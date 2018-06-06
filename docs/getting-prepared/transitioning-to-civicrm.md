@@ -16,7 +16,7 @@ L'adoption d'un logiciel comme CiviCRM aura un impact significatif sur le foncti
 L'équipe de gestion de projet
 ---------------------------
 
-Une équipe pouvant représenter les différents département de votre organisation aidera à mener à terme votre projet avec succès. Entourez-vous aussi d'un mélange de membres de votre organisation ayant une expérience dans la gestion de l'organisme, mais aussi de personnes impliquées dans le travail au quotidien. Ceci assurera de ne pas perdre la vue d'ensemble, tout en s'assurant que le projet sera utile aux employés de première ligne.
+Une équipe pouvant représenter les différents département de votre organisation aidera à mener à terme votre projet avec succès. Entourez-vous aussi d'un mélange de membres de votre organisation ayant une expérience dans la gestion de l'organisme, mais aussi de personnes impliquées dans le travail au quotidien. Ceci permettra de ne pas perdre la vue d'ensemble, tout en s'assurant que le projet sera utile aux employés de première ligne.
 
 Vous serez parfois en terrain inconnu et ceci peut à l'occasion être une source de stress. Votre équipe peut vous offrir un soutien moral et une  perspective différente lorsque vous en avez besoin.
 
@@ -25,7 +25,7 @@ La gestion d'un projet basé sur CiviCRM nécessitera un investissement de temps
 Objectifs
 -----
 
-Vous devriez avoir une bonne idée des objectifs souhaités par l'adoption de CiviCRM. Ceci peut être, par exemple, de réduire de 25% le travail administratif lors de la gestion d'événements ou d'augmenter le volume de dons de 25% avec le même nombre d'employés. Ces objectifs devraient être spécifiques, mesurables, atteignables, pertinents et temporellement définis (indicateurs « SMART »).
+Vous devez avoir une bonne idée des objectifs souhaités par l'adoption de CiviCRM. Ceci peut être, par exemple, de réduire de 25% le travail administratif lors de la gestion d'événements ou d'augmenter le volume de dons de 25% avec le même nombre d'employés. Ces objectifs doivent être spécifiques, mesurables, atteignables, pertinents et temporellement définis (indicateurs « SMART »).
 
 Ces objectifs d'affaires vous aideront à diriger et gérer votre projet. Par exemple, si l'équipe de gestion de projet désire implémenter certaines personnalisations qui nécessiteront d'allouer un budget, vos objectifs d'affaires vous aideront à garder le cap sur les raisons pour lesquelles vous avez choisi d'implémenter CiviCRM et sur ce que vous voulez faire à long terme.
 
@@ -40,7 +40,7 @@ De plus, les utilisateurs pourraient avoir de la difficulté à articuler leurs 
 
 L'implémentation du CMS (Drupal, WordPress ou Joomla) avant ou après l'implémentation de CiviCRM est une autre façon de séparer le projet en étapes. En plus de faciliter la gestion du projet, cela permet aux utilisateurs de mieux comprendre la différence entre le CRM et le CMS.
 
-### Projets pilotes
+### Projet pilote
 
 Un projet pilote peut aider à réduire les risques lors de l'implémentation. Par exemple, plutôt que de changer d'un coup toute la gestion d'événements vers CiviCRM, faites l'essai d'organiser un seul événement sur CiviCRM, puis faites une évaluation de votre expérience. Vous pourrez ensuite incorporer les apprentissages de cette expérience dans le processus de développement.
 
@@ -61,11 +61,11 @@ Même si vos besoins organisationnels ne changent pas, il faut aussi tenir compt
 Formation
 --------
 
-La formation est un bloc important de tout projet CiviCRM. Les formations peuvent se faire sous toutes les formes et de toutes les tailles, selon vos utilisateurs, mais il est souvent recommandé de le faire à l'aide de ressources que vous pourrez re-utiliser ultérieurement (guides utilisateurs, plans de cours, etc).
+La formation est un bloc important de tout projet CiviCRM. Les formations peuvent se faire sous toutes les formes et de toutes les durées selon vos utilisateurs, mais il est souvent recommandé de le faire à l'aide de ressources que vous pourrez re-utiliser ultérieurement (guides utilisateurs, plans de cours, etc).
 
 L'utilisateur moyen peut facilement être désorienté par l'éventail de fonctionnalités de CiviCRM. N'oubliez pas d'expliquer clairement les concepts de base, surtout à vos collègues qui n'étaient pas impliqués dans le projet dès le début.
 
-Tout couvrir en une seule session de formation ne sera probablement pas très efficace; vos collègues ont besoin de temps pour digérer les nouvelles idées. Organisez de petites sessions de formation pour présenter les nouveaux concepts et des fonctionnalités spécifiques, suivi d'une période de tests et de discussions. Adapter votre formation à votre auditoire : vos collègues n'ont pas tous besoin d'une formation de deux heures pour comprendre la gestion d'événements. Si possible, impliquer vos collègues dans l'organisation de la formation, ceci augmentera le sentiment que ce projet leur appartient et favorisera une culture de partage de connaissances.
+Tout couvrir en une seule session de formation ne sera probablement pas très efficace. Vos collègues ont besoin de temps pour digérer les nouvelles idées. Organisez de petites sessions de formation pour présenter les nouveaux concepts et des fonctionnalités spécifiques, suivi d'une période de tests et de discussions. Adapter votre formation à votre auditoire : vos collègues n'ont pas tous besoin d'une formation de deux heures pour comprendre la gestion d'événements. Si possible, impliquer vos collègues dans l'organisation de la formation, ceci augmentera le sentiment que ce projet leur appartient et favorisera une culture de partage de connaissances.
 
 La formation doit se faire en continu. De nouveaux membres se joindront à votre organisation et devront être formés, certains utilisateurs voudront s'approprier des fonctionnalités plus avancées, et il faudra offrir une formation d'appoint suite à une mise à jour importante du logiciel ou lors de l'ajout de fonctionnalités. Prévoyez suffisamment de temps pour la formation, surtout si un événement majeur approche.
 
@@ -81,6 +81,6 @@ Gestion du changement
 
 L'introduction d'un nouveau (ou du premier) CRM peut apporter des changements importants dans les processus de votre organisation. Ces changements peuvent être politiques, pratiques ou techniques. Dans tous les cas, l'adoption de plusieurs changements en même temps peut être une source de stress.
 
-Pour compenser, assurez-vous de donner à vos employés suffisamment de temps pour accepter et soutenir l'adoption de chaque changement dont ils partagent la responsabilité, plutôt que de leur donner l'impression qu'ils sont forcéz à un changement. Commencez par mettre le point sur les tâches simples, puis présentez les tâches plus difficiles au fur et à mesure que les employés se sentent à l'aise avec le nouveau système. Montrez-leur comment le nouveau système permettra de faciliter leur travail et comment leurs commentaires ont été incorporés lors des phases de développement.
+Pour compenser, assurez-vous de donner à vos employés suffisamment de temps pour accepter et soutenir l'adoption de chaque changement dont ils partagent la responsabilité, plutôt que de leur donner l'impression qu'ils sont forcés à un changement. Commencez par mettre le point sur les tâches simples, puis présentez les tâches plus difficiles au fur et à mesure que les employés se sentent à l'aise avec le nouveau système. Montrez-leur comment le nouveau système permettra de faciliter leur travail et comment leurs commentaires ont été incorporés lors des phases de développement.
 
 Une bonne planification peut minimiser les risques liés au changement, mais votre planning doit aussi être flexible. Un planning  trop rigide pourrait vous empêcher d'arriver à la meilleure solution.
