@@ -1,155 +1,95 @@
-Accounting Integration
+Intégration comptable
 ======================
 
-The accounting integration feature allows you to export all the double-entry
-financial transactions for a batch of contributions so that you can import
-them into your accounting software. You can create a new accounting batch then
-assign existing contributions to it, or re-use a batch created during
-batch data entry as an accounting batch.
+La fonction d'intégration comptable vous permet d'exporter toutes les transactions financières en partie double pour un lot de contributions afin que vous puissiez les importer dans votre logiciel de comptabilité. Vous pouvez créer un nouveau lot de comptabilisation, puis lui affecter des contributions existantes ou réutiliser un lot créé lors de la saisie de données par lot en tant que lot de comptabilisation.
 
-Use a batch created through Batch Data Entry
+Utiliser un lot créé via la saisie de données par lots
 ---------------------------------------------
 
-Batch entry of transactions is covered in [Manual Entry of Contributions](../contributions/manual-entry-of-contributions)
+La saisie par lots des transactions est traitée dans [Saisie manuelle des contributions](../contributions/manual-entry-of-contributions)
 
-After you validate and close a batch, it will appear in the accounting batch
-listing with a status of Closed.
+Après avoir validé et fermé un lot, il apparaîtra dans la liste des lots de la comptabilité avec le statut Fermé.
 
-Create a New Batch from Existing Transactions
+Créer un nouveau lot à partir de transactions existantes
 -----------------------------------------------
 
-### Create the batch
+### Créer le lot
 
-Go to **Contributions > Accounting Batches** and select **New Batch.**
-This opens the batch creation screen where you define the batch parameters
+Allez à **Contributions> Lots comptables** et sélectionnez **Nouveau lot.** 
+Cela ouvre l'écran de création de lot dans lequel vous définissez les paramètres de lot   
 
-![New Accounting Batch](../img/civicontribute-accounting-integration-new-batch.png)
+![Nouveau lot comptable](../img/civicontribute-accounting-integration-new-batch.png)
 
--  Enter the batch name (required). CiviCRM will create a default batch
-name ("Batch N" + open date), which you can edit.
--  You may optionally enter a description of the batch.
--  If you want this batch to contain only transactions paid by a specific
-Payment Instrument, select it from the drop down: Credit Card, Debit
-Card, Check, Cash, or EFT, or any custom Payment Instruments you may
-have set up.
--  If you know in advance the number of transactions that will be in the
-batch, enter it in Number of Transactions. When you close the batch,
-CiviCRM will verify that you have entered the correct number. (You will
-have the opportunity to override the warning if they do not match.)
--  If you know in advance the total amount of the transactions that will be
-in the batch, enter it in Total Amount. When you close your batch,
-CiviCRM will verify the totals entered match this number. (You will have
-the opportunity to override the warning if they do not match.)
-- **Save**
+-  Entrez le nom du lot (obligatoire). CiviCRM créera un nom de lot par défaut ("lot N" + date d'ouverture), que vous pouvez modifier.
+-  Vous pouvez éventuellement entrer une description du lot. 
+-  Si vous souhaitez que ce lot contienne uniquement les transactions payées par un instrument de paiement spécifique, sélectionnez-le dans la liste déroulante: Carte de crédit, Carte de débit, Chèque, Espèces ou TEF, ou tout autre instrument de paiement personnalisé que vous avez configuré.     
+-  Si vous connaissez à l'avance le nombre de transactions qui seront dans le lot, saisissez-le dans "Nombre de transactions". Lorsque vous fermez le lot, CiviCRM vérifie que vous avez entré un nombre correct. (Vous aurez la possibilité de modifier l'avertissement s'il ne correspond pas.)     
+-  Si vous connaissez à l'avance le montant total des transactions qui seront dans le lot, entrez-le dans "Montant total". Lorsque vous fermez votre lot, CiviCRM vérifie que les totaux entrés correspondent à ce montant. (Vous aurez la possibilité de remplacer l'avertissement s'il ne corresponde pas.)      
+- **Enregistrez**
 
-You can later return to edit these parameters as long as the batch
-remains open.
+Vous pouvez revenir plus tard pour modifier ces paramètres tant que le lot reste ouvert.  
 
-### Assign Transactions to a Batch
+### Affecter des transactions à un lot 
 
-After creating a new accounting batch or opening an one you will be on the transaction assignment screen.
+Après avoir créé un nouveau lot de comptabilité ou en avoir ouvert un, vous serez l'écran d'assignation de transaction.   
 
-![Transaction Assignment Screen](../img/civicontribute-accounting-batches-transactions.png)
+![Ecran de Transaction](../img/civicontribute-accounting-batches-transactions.png)
 
-At the top of the screen the defined parameters of the batch are displayed:
+En haut de l'écran, les paramètres définis du lot sont affichés:  
 
--   created by
--   status (open, closed, or exported)
--   the description entered when the batch was created
--   the specified payment instrument
--   the number of entered transactions
--   the number of assigned transactions
--   the entered total amount of the transactions
--   the assigned total amount (which will update as you assign
-    transactions to the batch)
--   the date the batch was opened.
+-   créé par
+-   statut (ouvert, fermé, ou exporté)
+-   la description entrée lors de la création du lot 
+-   l'instrument de paiement spécifié  
+-   le nombre de transactions saisies  
+-   le nombre de transactions attribuées   
+-   le montant total saisi des transactions  
+-   le montant total attribué (qui sera mis à jour lorsque vous affectez des transactions au lot)  
+-   la date à laquelle le lot a été ouvert.   
 
-Below that is a list of transactions assigned to the batch. This will be
-empty until you assign transactions to the batch. There is also an
-action dropdown selection that will not be available until transactions
-are assigned to the batch.
+Au-dessous, une liste des transactions affectées au lot. Ce sera vide jusqu'à ce que vous affectez des transactions au lot. Il existe également une sélection de liste déroulante d'actions qui ne sera pas disponible tant que les transactions ne seront pas affectées au lot.   
 
-Next comes the **Edit Search Criteria** accordion. Click to open the search pane.
-If a Payment Instrument was selected when the batch was created, this option
-will be selected by default. Specify the criteria for the contributions
-you want to add to the batch.
+Vient ensuite l'accordéon **Editer les critères de recherche**. Cliquez pour ouvrir le volet de recherche. Si un instrument de paiement a été sélectionné lors de la création du lot, cette option sera sélectionnée par défaut. Spécifiez les critères pour les contributions que vous souhaitez ajouter au lot.
 
-At the bottom of the page is the search results list. You may assign a single
-transaction to the batch by clicking "Assign" at the end of the result row. Or
-you may select multiple transactions and use the action menu above the results
-to select "Assign to Batch." The transactions will be added to the
-assigned transaction list, and will be removed from the search results
-list.
+Au bas de la page se trouve la liste des résultats de la recherche. Vous pouvez assigner une seule transaction au lot en cliquant sur "Affecter" à la fin de la ligne de résultat. Ou bien vous pouvez sélectionner plusieurs transactions et utiliser le menu d'action au-dessus des résultats pour sélectionner "Affecter à un lot". Les transactions seront ajoutées à la liste des transactions affectées et seront supprimées des résultats de la liste de recherche
+  
 
-### View and Remove Assigned Transactions
+### Afficher et supprimer les transactions attribuées
 
-Once you have assigned transactions to the batch, they will appear in
-the assigned transactions list in the middle of the page. If you need to
-remove transactions from the batch, select "Remove" at the end of a row
-of an individual transaction, or select multiple transactions and use
-the action menu above the list to select "Remove from Batch."
+Une fois que vous avez affecté des transactions au lot, elles apparaîtront dans la liste des transactions affectées au milieu de la page.
+Si vous devez supprimer des transactions du lot, sélectionnez "Supprimer" à la fin d'une ligne d'une transaction individuelle, ou sélectionnez plusieurs transactions et utilisez le menu d'action au-dessus de la liste pour sélectionner "Supprimer du lot".
+Vous verrez également les modifications apportées au tableau des paramètres en haut de la page, reflétant le nouveau nombre et le montant total des transactions assignées.
 
-You will also see changes to the parameters table at the top of the
-page, reflecting the new number and total amount of assigned
-transactions.
+Si vous voulez retourner et éditer le lot plus tard, il vous suffit de retourner à la page principale du traitement par lots. L'état du lot restera "Ouvert".
 
-If you want to return and edit the batch later, simply return to the
-Accounting Batch main page. The batch status will remain "Open."
 
-## Close and Export a Completed Batch
+## Fermer et exporter un lot terminé   
 
-Once you have completed assigning the transactions, you may close the
-batch, or close and export it.
+Une fois que vous avez terminé l'affectation des transactions, vous pouvez fermer le lot, ou le fermer et l'exporter. 
 
-If you attempt to close the batch and your assigned number of
-transactions does not match the entered number of transactions, or if
-the assigned total transaction amount does not match the entered total
-amount, a "Mismatch" error message will appear. You may close the error
-message and return to the batch to correct the mismatch, or you may
-click "OK" to override the error; the entered transaction number and
-total amount will update to match the assigned transaction number and
-total amount, and the batch will be closed.
+Si vous tentez de fermer le lot et que le nombre de transactions que vous avez indiqué ne correspond pas au nombre de transactions entrées, ou si le montant total de la transaction ne correspond pas au montant total saisi, un message d'erreur "Incompatibilité" s'affiche. Vous pouvez fermer le message d'erreur et revenir au lot pour corriger la non-concordance, ou vous pouvez cliquer sur "OK" pour remplacer l'erreur; le numéro de transaction saisi et le montant total seront mis à jour pour correspondre au numéro de transaction attribué et au montant total, et le lot sera fermé 
 
-If you close the batch without exporting it, the batch status will
-change to Closed. You may re-open the batch later, before exporting it,
-or you may export the transactions later.
+Si vous fermez le lot sans l'exporter, l'état du lot devient "Fermé". Vous pouvez réouvrir le lot plus tard, avant de l'exporter, ou vous pouvez exporter plus tard les transactions.
 
-If you close and export the batch, you may choose your export format.
-CSV will produce a spreadsheet of comma-separated values. IIF will
-produce a file in Intuit Interchange Format, which is used by Intuit
-products such as Quickbooks to import transactions. Once the
-transactions are exported, the batch status changes to Exported. An
-exported batch cannot be re-opened.
+Si vous fermez et exportez le lot, vous pouvez choisir votre format d'exportation.
 
-## Searching and Acting on Batches
+CSV produira une feuille de calcul de valeurs séparées par des virgules. IIF produira un fichier au format Intuit Interchange, qui est utilisé par les produits Intuit tels que Quickbooks pour importer des transactions. Une fois les transactions exportées, l'état du lot devient "Exporté". Un lot exporté ne peut pas être réouvert.
 
-Go to **Contributions > Accounting Batches** and select **Open Batches** to go
-to the Accounting Batch main page. Here you may filter the list of
-displayed batches by status (Open, Closed, or Exported); batch name; the
-user who created it; the Payment Instrument; the entered number of
-transactions; and the entered total amount.
 
-If a batch has the status Open, select "Transactions" to assign or
-remove transactions, or select "Edit" to edit the batch parameters.
-Under "more" you can choose to close, export, or delete the batch.
+## Rechercher et agir sur des lots 
 
-If a batch has the status Closed, select "Transactions" to view the
-assigned transactions, or select "Export" to export the assigned
-transactions to a CSV or IFF export file. Under "more" you can choose to
-re-open or delete the batch.
+Allez à **Contributions> Comptabilisation des lots** et sélectionnez **Ouvrir les lots** pour accéder à la page principale du traitement comptable. Ici, vous pouvez filtrer la liste des lots affichés par statut (ouvert, fermé ou exporté); nom du lot; l'utilisateur qui l'a créé; l'instrument de paiement; le nombre entré de transactions; et le montant total saisi.
 
-If a batch has the status Exported, select "Transactions" to view the
-transactions assigned to the batch; select "Download" to export the CSV
-or IIF file of assigned transactions; or select "Delete" to delete the
-batch. Once a batch is exported it cannot be re-opened.
+Si un lot a le statut Ouvert, sélectionnez "Transactions" pour affecter ou supprimer des transactions, ou sélectionnez "Modifier" pour modifier les paramètres du lot. Sous "plus", vous pouvez choisir de fermer, exporter ou supprimer le lot.
 
-From the search results page, you may also take action on more than one
-batch. Select all the batches to be updated, and choose an option from
-the action dropdown menu: Re-open, Close, Export, or Delete.
+Si un lot a le statut Fermé, sélectionnez "Transactions" pour afficher les transactions affectées, ou sélectionnez "Exporter" pour exporter les transactions affectées vers un fichier d'exportation CSV ou IFF. Sous "plus", vous pouvez choisir de réouvrir ou de supprimer le lot.
 
-Finding Transactions by Batch
+Si un lot a le statut Exporté, sélectionnez "Transactions" pour afficher les transactions affectées au lot; sélectionnez "Télécharger" pour exporter le fichier CSV ou IIF des transactions affectées; ou sélectionnez "Supprimer" pour supprimer le lot. Une fois qu'un lot est exporté, il ne peut pas être réouvert.
+
+À partir de la page de résultats de recherche, vous pouvez également effectuer des actions sur plusieurs lots. Sélectionnez tous les lots à mettre à jour et choisissez une option dans le menu déroulant des actions: Réouvrir, Fermer, Exporter ou Supprimer.
+
+
+Recherche de transactions par lots
 -----------------------------
 
-From the Advanced Search Contribution pane, or from Find Contributions,
-you can search by Batch Name. Select a batch and the results will return
-all transactions stored in the batch.
+Dans le volet Recherche de Contribution avancée ou dans Rechercher des contributions, vous pouvez effectuer une recherche par nom de lot. Sélectionnez un lot et les résultats renverront toutes les transactions stockées dans le lot.
