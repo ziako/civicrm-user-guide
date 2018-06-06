@@ -1,9 +1,7 @@
 Qu'est-ce que CiviCampaign?
 ==============================
 
-CiviCampaign vous permet de lier des événements, des mailings, des activités et des contributions dans une "enveloppe" commune.
-Vous pouvez ainsi suivre la progression de vos efforts vers l'atteinte d'un but ou d'une campagne.
-Cela permet aussi aux organisations de mesurer et d'analyser l'efficacité de ces efforts.
+CiviCampaign vous permet de lier des événements, des mailings, des activités et des contributions sous une «enveloppe» afin que vous puissiez suivre la progression de tous vos efforts vers un objectif ou une campagne spécifique. Cela permet aux organisations de mesurer et d'analyser l'efficacité de leurs efforts de sensibilisation et de mobilisation.
 
 CiviCampaign vous permet de :
 -   créer des sondages et des pétitions ;
@@ -26,11 +24,11 @@ L'organisateur crée une campagne qu'il va nommer "Mobilize the Masses 2011" (Mo
 
 Utilisant CiviCampaign, l'organisateur va :
 -   créer une campagne comme "enveloppe". Elle va permettre d'y lier toutes les activités relatives à cette campagne dont sa durée et le budget à atteindre ;
--   créer un groupe composé des contacts qu'ils ont "ciblés" comme candidats potentiels aux activités de cette campagne ;
--   appeler les membres les plus actifs pour aider à organiser des comités locaux et trouver des soutiens et, ensuite, enregistrer en tant qu'activité, les contacts téléphoniques dans chaque fiche contact en indiquant la campagne et la réponse des membres ;
+-   créer un groupe composé des contacts "ciblés" comme candidats potentiels aux activités de cette campagne
+-   contacter les membres les plus actifs pour aider à l'organisation de comités locaux et trouver des soutiens et, ensuite, enregistrer en tant qu'activité, les contacts téléphoniques dans chaque fiche contact en indiquant la campagne et la réponse des membres
 -   envoyer un emailing de masse d'appel aux dons ;
--   créer un événement pour suivre les participants à la mobilisation... tout en indiquant la campagne liée lors de la phase de crétaion de cet événement.
+-   créer un événement pour suivre les participants à la mobilisation... tout en indiquant la campagne liée lors de la phase de création de cet événement.
 
-De façon périodique, tout au long de cette campagne, le responsable est amené à chercher les activités liées à cette campagne, les personnes impactées que que soit leur rôle, mesurer l'efficacité de leurs actions et de l'atteinte du budget cible et, si nécessaire, d'ajuster la stratégie.
+De façon périodique, tout au long de cette campagne, le responsable est amené à chercher les activités liées à cette campagne, les personnes impactées que que soit leur rôle, mesurer l'efficacité de leurs actions et de l'atteinte du budget prévu et, si nécessaire, d'ajuster la stratégie.
 
 Tout au long de l'année, les organisateurs peuvent rattacher, à cette "enveloppe", des événements et mailings ultérieurs, ainsi que d'autres activités. A l'issue de la campagne, ces informations peuvent être revue dans le contexte global de la campagne.
