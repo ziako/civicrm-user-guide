@@ -16,7 +16,7 @@ Créer une facture
 
 Une fois la facturation activée, vous pouvez facilement imprimer des factures ou les envoyer par courrier électronique pour les contributions complètes ou en attente à partir de l'onglet **Contribution** d'un contact.
 
-1. Accédez à l'onglet "Contact" du Contact
+1. Accédez à l'onglet "Contribution" du Contact
 2. Affichez l'enregistrement pour lequel vous souhaitez créer une facture
 
 ![image](../img/contribution_summary.png)
