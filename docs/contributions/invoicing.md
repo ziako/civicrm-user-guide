@@ -1,71 +1,56 @@
-Invoicing
+Facturation
 =========
 
-Invoicing works for all Financial Types and Completed and Pending
-Contribution Statuses and has to be enabled. To enable invoicing go
-to **Administer > CiviContribute > CiviContribute Component Settings** and
-check the "Enable Tax and Invoicing" box.
+La facturation fonctionne pour tous les types financiers et statuts de contributions terminés et en attente et doit être activée. Pour activer la facturation, accédez à **Administrer> CiviContribute> Paramètres du composant CiviContribute** et cochez la case "Activer les taxes et la facturation".
 
-In this screen you can set certain settings for invoices as well:
+Dans cet écran, vous pouvez également définir certains paramètres pour les factures:
 
--   add a prefix for invoices
--   the interval of days, weeks, or years until due date
--   customized notes or standard terms you want to appear on your
-    invoice
+- ajouter un préfixe pour les factures
+- l'intervalle de jours, semaines ou années jusqu'à la date d'échéance
+- des notes personnalisées ou des conditions standard que vous souhaitez voir apparaître sur votre facture
 
 ![image](../img/civicontribute_comp_settings.png)
 
-Creating an Invoice
+Créer une facture
 --------------------
 
-Once Invoicing has been enabled, you can easily email or print invoices
-for Complete or Pending Contributions from a contact's **Contribution**
-Tab.
+Une fois la facturation activée, vous pouvez facilement imprimer des factures ou les envoyer par courrier électronique pour les contributions complètes ou en attente à partir de l'onglet **Contribution** d'un contact.
 
-1.  Go to Contact's Contribution tab
-2.  View the record you want to create an invoice for
+1. Accédez à l'onglet "Contact" du Contact
+2. Affichez l'enregistrement pour lequel vous souhaitez créer une facture
 
 ![image](../img/contribution_summary.png)
 
-1.  Once you are viewing the record you have the option to Print Invoice
-    or Email Invoice. Printing an Invoice will download a pdf and
-    Emailing an Invoice will provide an additional Options screen.
+1. Dès que vous consultez le dossier du contact, vous avez la possibilité d'imprimer la facture ou l'envoyer par courriel. L'impression d'une facture génèrera un pdf et envoyer une facture par email fournira un écran "Options supplémentaire".
 
 ![image](../img/contributiion_view_Screen.png)
 
-1.  Once you have chosen the Email Invoice option you have options
-    before sending:
+1. Une fois que vous avez choisi l'option Facture par Email vous avez des options avant d'envoyer:
 
--   From Email Address
+- De l'adresse e-mail
 
--   Type an additional message
+- Tapez un message supplémentaire
 
 ![image](../img/email_invoice.png)
 
-Here is an example of a printed invoice. Invoices can be customized.
+Voici un exemple de facture imprimée. Les factures peuvent être personnalisées.
 
 ![image](../img/invoice.png)
 
-Invoice Customization
+Personnalisation de facture
 -----------------------
 
-The out of the box template code populates the Company Name, Address,
-and Website Information listed on the top right of invoices come
-directly from the Organization Address and Contact Info. To make any
-edits to this information, you can access it at **Administer Console >
-Configuration Checklist > Organization Address and Contact Info**.
+Le code du modèle prérempli renseigne le nom de l'entreprise, l'adresse et les informations du site Web figurant en haut à droite des factures, directement à partir de l'adresse de l'organisation et des informations de contact. Pour apporter des modifications à ces informations, vous pouvez y accéder à l'adresse **Administer Console> Liste de contrôle de la configuration> Adresse de l'organisation et informations de contact**.
 
-The look of the invoice and invoice image can be edited and customized
-in **Administer > CiviCRM > Message Templates > System Workflow Messages > Contributions-Invoice.**
+L'aspect de la facture et de l'image de la facture peut être modifié et personnalisé dans **Administrer> CiviCRM> Modèles de messages> Messages de flux de travail système> Contributions-Facture.**
 
-To change the image on the invoice you will need to modify the code on
-line 10, replacing the image source (img src).
+Pour changer l'image sur la facture, vous devrez modifier le code sur la ligne 10, en remplaçant la source de l'image (img src).
 
 ```html
 <td><img src = "{$resourceBase}/i/civi99.png" height = "34px" width
 = "99px"></td>
 ```
-For more advanced configuration with accounting software packages like
-QuickBooks, you should involve your organization's bookkeeper or
-accountant in setting up your Financial Types and Financial Accounts.
-See Accounting Integration and the Wiki Page for more information.
+
+Pour une configuration plus avancée avec des logiciels de comptabilité tels que QuickBooks, vous devez impliquer le comptable de votre organisation dans la configuration de vos types financiers et comptes financiers.
+
+Voir "Intégration comptable" et la page Wiki pour plus d'informations.
