@@ -116,58 +116,34 @@ Ensuite, continuez à entrer d'autres transactions dans le lot
 
 Une fois que vous avez saisi les paiements dans le lot, cliquez sur **Valider et traiter le lot**. Le statut du lot sera défini sur "**Fermé**" et sera disponible pour les recherches et les rapports ultérieurs.
 
+Si le nombre total ou le nombre d'éléments ne correspondent pas aux valeurs que vous avez saisies lors de la création du lot, vous serez alerté lors de la fermeture si le nombre ou le total ne correspond pas. Dans ce cas, vous:
 
+- Vous pouvez remplacer le nombre et le total saisis en cliquant sur le bouton **Ignorer l'incohérence et traiter le lot?**, auquel cas les valeurs du lot seront mises à jour pour correspondre aux transactions du lot, puis le statut du lot est défini à "**Fermé**", OU
 
-
-
-If the total amount or count of items do not match the values you
-entered when you created the Batch, you will be alerted when closing if
-the count or total don't match. In this case, you either:
-
--   You can override the entered count and total by clicking**Ignore
-    Mismatch & Process the Batch?** button, in which case the batch
-    values are updated to match the transactions in the batch, and then
-    the status of the batch will be set to “**Closed**”, OR
--   You can continue entering or editing the payments for the batch,
-    then **Validate & Process the Batch** again.
+- Vous pouvez continuer à saisir ou modifier les paiements pour le lot, puis **Valider et traiter le lot** à nouveau.
 
 ![image](../img/CiviCRM-Contributions-everydaytasks-ignoremismatchbatch.jpg)
 
-### Search for contribution, membership or pledge payments in verified and processed batches
+### Recherche de cotisations, d'adhésions ou de promesses de dons dans des lots vérifiés et traités 
 
-You can search for contribution or membership payments in verified and
-processed batches in a several ways:
+Vous pouvez rechercher des contributions ou des paiements d'adhésion dans des lots vérifiés et traités de plusieurs manières:
 
--   From the menu, click on **Searches > Find Contributions** , enter
-    criteria for the contributions, and under **Batch Name**, select the
-    batch you want;
--   From the menu, click on **Searches > Advanced Search**, enter
-    criteria about the contact, then open the Contributions area and
-    enter any contribution criteria, and under **Batch Name**, select
-    the batch you want;
--   From the menu, click on **Contributions > Batches** , then select
-    **Closed** in the **Status**field;
--   From the menu, click on **Memberships > Batches** , then select
-    **Closed** in the **Status** field;
--   From the menu, click on **Pledge Payments > Batches**, then
-    select **Closed** in the **Status** field;
--   From the menu, click **Reports > Create Reports from Templates**,
-    then click **Contribution Report Detail**, enter your report
-    criteria and under Set Filters area, next to**Batch Name**, select
-    “**is one of**” or “**is not one of**” and select the name(s) of the
-    batch(es) you want.
+You can search for contribution or membership payments in verified and processed batches in a several ways:
 
-### Configuring Profiles for Batch Entry of Contribution, Membership and Pledge Payments
+- Dans le menu, cliquez sur **Rechercher> Rechercher des contributions**, entrez les critères pour les contributions, et sous **Nom du lot**, sélectionnez le lot que vous voulez.
+- Dans le menu, cliquez sur **Rechercher> Recherche avancée**, entrez les critères du contact, puis ouvrez la section Contributions et entrez les critères de contribution, et sous **Nom du lot**, sélectionnez le lot souhaité.
+- Dans le menu, cliquez sur **Contributions> Lots**, puis sélectionnez **Fermé** dans le champ **Statut**.
+- Dans le menu, cliquez sur **Adhésion> Lots**, puis sélectionnez **Fermé** dans le champ **Statut**.
+- Dans le menu, cliquez sur **Paiement de dons> Lots**, puis sélectionnez **Fermé** dans le champ **Statut**;
+- Dans le menu, cliquez sur **Rapports> Créer des rapports à partir de modèles**, puis sur **Détails du rapport de contribution**, entrez vos critères de rapport et sous Définir les filtres, à côté de **Nom du lot**, sélectionnez "**est l'un des** "ou" **n'est pas un de** "et sélectionnez le (s) nom (s) du (des) lot (s) que vous voulez.
 
-To alter the profile used when you want to create a new contact for an
-Individual, Household, or Organization while recording the contribution,  update the reserved
-profiles called **New Individual**, **New Household**,
-or **New Organization** accordingly. To change the fields of
-information you want to collect for these contacts:
 
--   Go to the menu and click **Administer > Customize Data and Screens > Profiles**, then click on **Reserved Profiles** tab. Click on
-    **Fields** next to called **New Individual, New Household**, or
-    **New Organization**.
+### Configuration des profils pour la saisie par lots des paiements de contribution, d'adhésion et dons 
+
+Pour modifier le profil utilisé lorsque vous souhaitez créer un nouveau contact pour un individu, un ménage ou une organisation lors de l'enregistrement de la contribution, mettez à jour les profils réservés appelés **Nouveau particulier**, ** ouveau ménage** ou **Nouvelle organisation** en conséquence. Pour modifier les champs d'informations que vous souhaitez collecter pour ces contacts:
+
+
+-   Go to the menu and click **Administer > Customize Data and Screens > Profiles**, then click on **Reserved Profiles** tab. Click on     **Fields** next to called **New Individual, New Household**, or     **New Organization**.
 -   You can then add, edit or rearrange the fields as you want to see
   them in the batch entry input grid. *To find out more about how to
   use profiles, see the chapter called “Profiles” in the “User
