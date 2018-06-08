@@ -1,47 +1,42 @@
 # Entrée manuelle des contributions 
 
-Lorsque votre organisation reçoit une contribution d'un contact, vous pouvez l'ajouter à son enregistrement. Ceci sera fait automatiquement si le paiement est effectué via CiviCRM (par exemple, un abonnement ou un frais d'événement avec une inscription en ligne) mais les paiements hors ligne (espèces, chèques, etc.) devront être enregistrés manuellement pour s'assurer que les rapports générés par CiviCRM seront précis.
+Lorsque votre organisation reçoit une contribution d'un contact, vous pouvez l'ajouter à son enregistrement. Ceci sera fait automatiquement si le paiement est effectué via CiviCRM (par exemple: une cotisation, un abonnement ou le règlement de frais d'événement avec une inscription en ligne) mais les paiements hors ligne (espèces, chèques, etc.) devront être enregistrés manuellement pour s'assurer que les rapports générés par CiviCRM soient précis.
 
 
 ## Ajouter des contributions manuellement une par une
 
-
-## Adding contributions manually one by one
-
-Si le donneur n'existe pas déjà dans la base de données, vous devez d'abord créer un nouvel enregistrement de contact. Voir [Contacts] (../ organisation-vos-données / contacts) pour des informations sur la façon de procéder. Une fois l'enregistrement créé, vous pouvez entrer la contribution.
+Si le donneur n'existe pas déjà dans la base de données, vous devez d'abord créer un nouvel enregistrement de contact. Voir [Contacts](../ organisation-vos-données / contacts) pour des informations sur la façon de procéder. Une fois l'enregistrement créé, vous pouvez entrer la contribution.
 
 Pour entrer manuellement une contribution pour un contact dans votre base de données:
 
 1. Recherchez l'enregistrement du contact à l'aide de l'un des outils de recherche de contacts, par exemple **Rechercher> Rechercher des contacts**.
 2. Sélectionnez l'onglet **Contributions** du contact.
-3. Cliquez sur **Enregistrer la contribution (Chèque, Espèces, EFT ...)**. Alternativement, si vous avez configuré un processeur de paiement qui autorise les transactions par carte de crédit directement sur votre site, vous pouvez sélectionner l'option **Soumettre la carte de crédit** et traiter le paiement immédiatement.
-4. Remplissez le nouveau formulaire de contribution. La capture d'écran suivante montre le formulaire de contribution hors ligne (c'est-à-dire les contributions par chèque, espèces, EFT, etc.). Si vous avez choisi d'enregistrer une contribution par carte de crédit, le formulaire de carte de crédit est presque identique à l'exception des champs liés au paiement.
+3. Cliquez sur **Enregistrer la contribution (Chèque, Espèces...)**. Si vous avez configuré un processeur de paiement qui autorise les transactions par carte de crédit directement sur votre site, vous pouvez sélectionner l'option **Soumettre la carte de crédit** et traiter le paiement immédiatement.
+4. Remplissez le nouveau formulaire de contribution. La capture d'écran suivante montre le formulaire de contribution hors ligne (c'est-à-dire les contributions par chèque, espèces, etc.). Si vous avez choisi d'enregistrer une contribution par carte de crédit, le formulaire de carte de crédit est presque identique à l'exception des champs liés au paiement.
 
-![Image](../ img / New% 20Contribution% 20by% 20Contact.png)
+![Image](../img/New% 20Contribution% 20by% 20Contact.png)
 
 5. Notez le type financier, le montant, la date de réception (la date par défaut est la date du jour), la date de réception (indiquée sur le reçu généré par le système) et le statut (la valeur par défaut est Terminé). Tous les champs personnalisés pour les contributions apparaîtront également sur ce formulaire.
-6. Le champ **Soft Credit To** fonctionne avec les pages de campagne personnelles (PCP) qui exploitent l'aide de vos contacts pour les campagnes. Lorsque vous saisissez un don manuellement sur le formulaire de contribution du contributeur, vous pouvez attribuer un crédit souple au propriétaire du PCP. Il y a plus d'informations sur les PCP et les pages de collecte de fonds de la campagne dans le chapitre "Configuration" de la section CiviContribute.
+6. Le champ **Bénéficiaire (Soft Credit To)** fonctionne avec les pages de campagne personnelles (PCP) qui exploitent la participation de vos contacts pour les campagnes. Lorsque vous saisissez un don manuellement sur le formulaire de contribution du contributeur, vous pouvez attribuer un crédit souple au propriétaire du PCP. Il y a plus d'informations sur les PCP et les pages de collecte de fonds de campagne dans le chapitre "Configuration" de la section CiviContribute.
 7. La section **Détails supplémentaires** près du bas de l'écran offre d'autres options, y compris l'ajout d'une note sur la contribution et la saisie de la date à laquelle une lettre de remerciement a été envoyée.
 8. Les deux dernières sections vous permettent d'indiquer si la contribution était en l'honneur de quelqu'un d'autre (**Renseignements sur le bénéficiaire**) et s'il y a une prime associée à la contribution (**Information sur les primes**).
 9. Cliquez sur **Enregistrer** ou sur **Enregistrer et Nouveau** si vous entrez d'autres contributions.
 
-Si vous constatez que vous saisissez plus de quelques contributions en même temps, pensez à utiliser la méthode **Entrées de données par lot**.
+Si vous constatez que vous devez saisir plusieurs contributions en même temps, pensez à utiliser la méthode **Entrées de données par lot**.
 
 ## Inscription par lots de la contribution, de l'adhésion ou des paiements d'engagement
 
-La fonction **Entrées de données par lot** vous permet d'entrer des contributions hors ligne, des adhésions ou des promesses de dons que vous avez reçues à l'aide d'un écran de saisie par lots où vous pouvez utiliser les icônes «autocopy» en haut de chaque colonne pour remplir rapidement dans les valeurs de champ. Il facilite la saisie de données lorsque vous avez beaucoup de paiements à enregistrer en même temps. Il vous permet également de vérifier le montant total et le nombre d'articles du lot par rapport aux paiements enregistrés sur votre ou vos bordereaux de dépôt.
+La fonction **Entrées de données par lot** vous permet d'entrer des contributions hors ligne, des adhésions ou des dons que vous avez reçus à l'aide d'un écran de saisie par lots où vous pouvez utiliser les icônes «autocopy» en haut de chaque colonne pour remplir rapidement les valeurs des champs. Ceci facilite la saisie de données lorsque vous avez beaucoup de paiements à enregistrer en même temps. Cela vous permet également de vérifier le montant total et le nombre d'articles du lot par rapport aux paiements enregistrés sur votre ou vos bordereaux de dépôt.
 
 Chaque lot contient des paiements de cotisations ou des paiements d'adhésion ou des paiements de dons. Pendant la saisie des données par lot, vous pouvez créer de nouveaux contacts à la volée. Vous pouvez enregistrer le lot et revenir plus tard pour continuer à entrer les paiements. Si vous disposez des autorisations appropriées, vous pouvez également modifier le nombre total et le nombre d'éléments dans la définition du lot si nécessaire.
 
 Voici un mémo simple pour la saisie de données en masse:
 
 1. Créez un nouveau lot pour la saisie de données.
-2. Entrez les cotisations, les cotisations ou les paiements de gage (chèque, espèces, TEF, etc.).
+2. Entrez les cotisations, les cotisations ou les paiements de gage (chèque, espèces, etc.).
 3. Validez et traitez les totaux du lot ou sauvegardez le lot.
 
 Les détails de chaque étape sont énumérés ci-dessous.
-
-
 
 ### 1. Créer un nouveau lot pour la saisie de données 
 
@@ -54,7 +49,7 @@ Dans le menu, cliquez sur **Contributions> Entrée de données par lots** ou **A
 Entrez les informations suivantes:
 
 - **Nom du lot**: CiviCRM créera un nom de lot par défaut ("Lot N" + date d'ouverture), que vous pouvez modifier (champ obligatoire)
-- **Type**: sélectionnez le type de paiement, par ex. Contribution, adhésion ou paiement de dons. Cela permet de sélectionner le profil réservé approprié à afficher dans l'écran de la grille de saisie par lots (profil d'entrée de lot de contribution, profil d'entrée de lot d'adhésion ou profil d'entrée de lot de paiement de don)
+- **Type**: sélectionnez le type de paiement, par ex. Contribution, adhésion ou dons. Cela permet de sélectionner le profil réservé approprié à afficher dans l'écran de la grille de saisie par lots (profil d'entrée de lot de contribution, profil d'entrée de lot d'adhésion ou profil d'entrée de lot de paiement de don)
 - **Statut**: la valeur par défaut sera "Ouvert" (Note: une fois qu'un lot a un "statut fermé", le lot ne sera plus modifiable)
 - **Nombre d'articles**: total des postes de paiement dans le lot (champ obligatoire)
 - **Montant total**: montant total de tous les postes de paiement du lot (champ obligatoire)
@@ -63,93 +58,67 @@ Vous pouvez modifier ou supprimer des informations sur les lots ultérieurement 
 
 ![image](../img/CiviCRM-Contributions-everydaytasks-batches-lists.jpg)
 
-### 2. Saisie de paiements de contribution, d'adhésion ou don (chèque, espèces, TEF, etc.) 
+### 2. Saisie de paiements de contribution, d'adhésion ou don (chèque, espèces, etc.) 
 
-Dès que vous avez entré les informations sur le lot, vous pouvez commencer à entrer des paiements sur chaque ligne.
+Dès que vous avez entré les informations sur le lot, vous pouvez commencer à saisir des paiements sur chaque ligne.
 
 ![image](../img/CiviCRM-Contributions-everydaytasks-batchentrycontrib.jpg)
 
 Il y a huit champs qui apparaissent pour tous les lots:
 
--  **Contact**. In this column you can:
-    -   start entering the name of an existing contact and CiviCRM will
-    return a list of potential contact names for you to select, OR
-    -   create a new contact by clicking the drop-down box for “-create new
-    contact-“ and selecting the type of contact you want to create: **New
-    Individual**, **New Organization**, or **New Household** and enter the
-    information about the contact here.
-    Note: If contact information such as phone number or email address
-are included in the grid profile, those values will be populated for
-an existing contact and can be updated as needed.
--   **Financial Type**
--   **Amount**
--   **(Payment) Status**
--   **Received – Date and Time**
--   **Send Receipt:** check the box if you want to send a receipt via email
--   **Soft Credit**
--   **Soft Credit Type**
+-  **Contact**. Dans cette colonne, vous pouvez:
+- Commencez à entrer le nom d'un contact existant et CiviCRM renverra une liste de noms de contacts potentiels pour que vous puissiez sélectionner, OU
+- créez un nouveau contact en cliquant sur la liste déroulante pour "créer un nouveau contact" et en sélectionnant le type de contact que vous souhaitez créer: **Nouvelle individuel**, **Nouvelle organisation** ou **Nouveau ménage** et entrez les informations sur le contact ici.
+Remarque: Si des informations de contact telles que le numéro de téléphone ou l'adresse e-mail sont incluses dans la grille du profil, ces valeurs renseignées pour un contact existant peuvent être mises à jour si nécessaire.
+-   **Type financier**
+-   **Montant**
+-   **(Statut) de paiement**
+-   **Reçu - Date et heure**
+-   **Envoyer un reçu: cochez la case si vous voulez envoyer un reçu par courriel**
+-   **Bénéficiaire (Soft Credit)**
+-   **type de Bénéficiaire (Soft Credit Type)**
 
-When batch entering contribution payments the additional fields in the
-standard profile are:
+Lorsque vous saisissez par lot des paiements de contribution, les champs supplémentaires du profil standard sont:
 
--   **Source** : enter text that describes the source of the payment
--   **Paid by**: enter the type of payment vehicle, e.g. cash, check,
-    EFT, etc.
--   **Check Number**: if paid by check
--   **Invoice ID**
+- **Source**: entrez du texte qui décrit la source du paiement
+- **Payé par**: entrez le type de moyen de paiement, par ex. espèce, chèque, etc.
+- **Numéro de chèque**: si payé par chèque
+- **ID de facture**
 
-When batch entering membership payments you can choose to add a new
-membership or renew an existing membership. The extra fields in the
-standard profile are:
+Lorsque vous saisissez par lots les paiements d'adhésion, vous pouvez choisir d'ajouter un nouvel abonnement ou de renouveler un abonnement existant. Les champs supplémentaires dans le profil standard sont:
 
--   **Type**: For a new membership you will select the organisation and
-    type of membership. For the renewal you can change the membership
-    type.
--   **Member Since:** When you open the batch entry form, this is
-    populated with the current date If you choose to renew a membership
-    it will change to display the start date for that membership. It can
-    be edited as needed.
--   **Start Date**(reserved): This is blank. You only need to fill in
-    this field if you want the start date to be other than the default.
--   **End Date(reserved)**: If this is left empty, CiviCRM will use the
-    membership rules to set it to the correct date.
--   **Source**: Enter text that describes the source of the payment.
--   **Paid by**: Enter the type of payment vehicle, e.g. cash, check,
-    EFT, etc.
--   **Check Number**: Enter if paid by check.
--   **Invoice ID**
+- **Type**: Pour un nouvel abonnement, vous sélectionnez l'organisation et le type d'adhésion. Pour le renouvellement, vous pouvez changer le type d'adhésion.
+- **Membre depuis:**  Lorsque vous ouvrez le formulaire de saisie par lots, celui-ci est rempli avec la date actuelle. Si vous choisissez de renouveler un abonnement, il changera pour afficher la date de début de cette adhésion mais elle peut être modifié au besoin.
+- **Date de début** (réservé): Ce champ est vide. Vous n'avez besoin de remplir ce champ que si vous souhaitez que la date de début soit différente de la valeur par défaut.
+- **Date de fin** (réservé): Si cette case est laissée vide, CiviCRM utilisera les règles d'adhésion pour la mettre à la bonne date.
+- **Source**: entrez du texte qui décrit la source du paiement
+- **Payé par**: entrez le type de moyen de paiement, par ex. espèce, chèque, etc.
+- **Numéro de chèque**: si payé par chèque
+- **ID de facture**
 
-When batch entering pledge payments you can assign the payment to any of
-the pending pledges for that contact. If you have the appropriate
-permissions, you can also alter the amount or schedule for the pledge
-payment. (Click on **adjust payment amount** next to the **Amount**
-field.)The extra fields in the standard profile are:
+Lorsque vous saisissez par lots des paiements de promesse de dons, vous pouvez affecter le paiement à l'un des engagements en attente pour ce contact. Si vous disposez des autorisations appropriées, vous pouvez également modifier le montant ou le calendrier du paiement de nantissement. (Cliquez sur **ajuster le montant du paiement** à côté du champ **Montant**.) Les champs supplémentaires dans le profil standard sont:
 
--   **Source**: enter text that describes the source of the payment
--   **Paid by**: enter the type of payment vehicle, e.g. cash, check,
-    EFT, etc.
--   **Check Number**: if paid by check
--   **Invoice ID**
+- **Source**: entrez du texte qui décrit la source du paiement
+- **Payé par**: entrez le type de moyen de paiement, par ex. espèce, chèque, etc.
+- **Numéro de chèque**: si payé par chèque
+- **ID de facture**
 
-### 3. Validate and Process the Batch Totals or Save the Batch
+### 3. Valider et traiter les totaux du lot ou sauvegarder le lot
 
-You can enter all transactions for the batch in one session, or simply
-save the batch and complete the data entry at a later time.
+Vous pouvez saisir toutes les transactions pour le lot en une seule session, ou simplement enregistrer le lot et compléter l'entrée de données ultérieurement.
 
-If you want to continue entering information into this batch at a later
-time, click **Save & Continue Later**.
+Si vous souhaitez continuer à entrer des informations dans ce lot ultérieurement, cliquez sur **Enregistrer et continuer plus tard**.
 
-To find and add/edit more transactions into the batch later:
+Pour rechercher et ajouter ou modifier plus de transactions dans le lot ultérieurement:
 
--   From the menu, click on **Contributions > Batch Data Entry** or
-    click on **Membership > Batch Data Entry**, then click on**Enter
-    Records** next to the batch you want
+- Dans le menu, cliquez sur **Contributions> Entrées de données par lot** ou cliquez sur **Cotisation> Entrées de données par lot**, puis cliquez sur **Enter Records** à côté du lot que vous voulez
+Ensuite, continuez à entrer d'autres transactions dans le lot
 
-Then continue entering more transactions in the batch
+Une fois que vous avez saisi les paiements dans le lot, cliquez sur **Valider et traiter le lot**. Le statut du lot sera défini sur "**Fermé**" et sera disponible pour les recherches et les rapports ultérieurs.
 
-Once you are finished entering payments into a batch, click **Validate &
-Process the Batch**. The status of the batch will be set to
-“**Closed**” and will available for searches and reporting later.
+
+
+
 
 If the total amount or count of items do not match the values you
 entered when you created the Batch, you will be alerted when closing if
