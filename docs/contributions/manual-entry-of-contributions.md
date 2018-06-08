@@ -14,7 +14,7 @@ Pour entrer manuellement une contribution pour un contact dans votre base de don
 3. Cliquez sur **Enregistrer la contribution (Chèque, Espèces...)**. Si vous avez configuré un processeur de paiement qui autorise les transactions par carte de crédit directement sur votre site, vous pouvez sélectionner l'option **Soumettre la carte de crédit** et traiter le paiement immédiatement.
 4. Remplissez le nouveau formulaire de contribution. La capture d'écran suivante montre le formulaire de contribution hors ligne (c'est-à-dire les contributions par chèque, espèces, etc.). Si vous avez choisi d'enregistrer une contribution par carte de crédit, le formulaire de carte de crédit est presque identique à l'exception des champs liés au paiement.
 
-![Image](../img/New% 20Contribution% 20by% 20Contact.png)
+![Image](../img/New%20Contribution%20by%20Contact.png)
 
 5. Notez le type financier, le montant, la date de réception (la date par défaut est la date du jour), la date de réception (indiquée sur le reçu généré par le système) et le statut (la valeur par défaut est Terminé). Tous les champs personnalisés pour les contributions apparaîtront également sur ce formulaire.
 6. Le champ **Bénéficiaire (Soft Credit To)** fonctionne avec les pages de campagne personnelles (PCP) qui exploitent la participation de vos contacts pour les campagnes. Lorsque vous saisissez un don manuellement sur le formulaire de contribution du contributeur, vous pouvez attribuer un crédit souple au propriétaire du PCP. Il y a plus d'informations sur les PCP et les pages de collecte de fonds de campagne dans le chapitre "Configuration" de la section CiviContribute.
