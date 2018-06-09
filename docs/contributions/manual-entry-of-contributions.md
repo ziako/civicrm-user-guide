@@ -22,7 +22,7 @@ Pour entrer manuellement une contribution pour un contact dans votre base de don
 8. Les deux dernières sections vous permettent d'indiquer si la contribution était en l'honneur de quelqu'un d'autre (**Renseignements sur le bénéficiaire**) et s'il y a une prime ou un cadeau associé à la contribution (**Information sur les primes**).
 9. Cliquez sur **Enregistrer** ou sur **Enregistrer et Nouveau** si vous devez entrer d'autres contributions.
 
-Si vous constatez que vous devez saisir plusieurs contributions en même temps, pensez à utiliser la méthode **Entrées de données par lot**.
+**!!! CONSEIL**  Si vous constatez que vous devez saisir plusieurs contributions en même temps, pensez à utiliser la méthode **Entrées de données par lot**.
 
 ## Inscription par lots de la contribution, de l'adhésion ou des paiements d'engagement
 
