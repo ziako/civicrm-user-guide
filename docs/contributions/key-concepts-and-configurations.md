@@ -9,7 +9,7 @@ Avant de commencer, il est utile d'énumérer les types de contributions que vot
 
 Les organisations qui utilisent CiviCRM ont des besoins différents en termes de compte rendus financiers. Certains veulent juste savoir le total des dons ou le montant total des adhésions enregistrées dans CiviCRM, alors que d'autres veulent être en mesure d'exporter un ensemble complet d'opérations financières en parties double dans leur logiciel de comptabilité.
 
-CiviCRM répond à ces besoins en utilisant **types financiers** pour simplifier la complexité de la comptabilité en parties double aux personnes non initiées, tout en enregistrant les opérations comptables pour les organisations qui en ont besoin.
+CiviCRM répond à ces besoins en utilisant des **types financiers** pour simplifier la complexité de la comptabilité en parties double aux personnes non initiées, tout en enregistrant les opérations comptables pour les organisations qui en ont besoin.
 
 Chaque **type financier** est lié à un certain nombre de **comptes financiers** qui peuvent effectuer le suivi des recettes, des actifs, des charges et des subventions (le cas échéant), tel qu'indiqué pour les quatre types financiers par défaut de l'image suivante.
 
@@ -29,7 +29,7 @@ Pour créer un nouveau type financier, allez :  **Administer> CiviContribute> Ty
 
 ![image](../img/Fr_contribution_creer_type_financier.PNG)
 
-Lorsque vous créez un nom spécifique pour Type financier, CiviCRM crée automatiquement un compte de recette similairement nommé et l'affecte ainsi que les comptes par défaut pour l'actif, les dépenses et le coût des recettes au nouveau type financier. Pour modifier les comptes attribués à un type financier, vous pouvez le faire en cliquant sur **Comptes** à droite du type financier approprié puis **Administer> CiviContribute> Types financiers**. Le but de ce processus en deux étapes est de simplifier le cas d'utilisation courante où une organisation ne dispose que d'un compte de banque de dépôts, de comptes débiteurs et de comptes fournisseurs, mais offre plus de flexibilité pour des configurations avancées.
+Lorsque vous créez un nom spécifique pour un Type financier, CiviCRM crée automatiquement un compte de recette similairement nommé et l'affecte ainsi que les comptes par défaut pour l'actif, les dépenses et le coût des recettes au nouveau type financier. Pour modifier les comptes attribués à un type financier, vous pouvez le faire en cliquant sur **Comptes** à droite du type financier approprié puis **Administer> CiviContribute> Types financiers**. Le but de ce processus en deux étapes est de simplifier le cas d'utilisation courante où une organisation ne dispose que d'un compte de banque de dépôts, de comptes débiteurs et de comptes fournisseurs, mais offre plus de flexibilité pour des configurations avancées.
 
 ![Editing accounts linked to financial type](../img/civicontribute-financial-types-linked-accounts.png)
 
@@ -55,7 +55,7 @@ Pour commencer à accepter des paiements en ligne, vous devez [configurer un pro
 
 ## **Méthodes de paiement**
 
-Allez à **Administer> CiviContribute> Méthodes de paiement**  pour modifier les options existantes qui peuvent être utilisées pour les contributions ou pour ajouter une nouvelle option via **Ajouter des méthodes de paiement**. Les options courantes - carte de crédit, espèces, chèque, carte de débit et EFT - sont installées par défaut. Vous devez demander à votre comptable de confirmer que chaque méthode de paiement est liée au compte approprié.
+Allez à **Administer> CiviContribute> Méthodes de paiement**  pour modifier les options existantes qui peuvent être utilisées pour les contributions ou pour ajouter une nouvelle option : **Ajouter des méthodes de paiement**. Les options courantes - carte de crédit, espèces, chèque, carte de débit et EFT - sont installées par défaut. Vous devez demander à votre comptable de confirmer que chaque méthode de paiement est liée au compte approprié.
 
 ![image](../img/Fr_contribution_moyen_de_paiement.PNG)
 
@@ -71,7 +71,7 @@ Remarque: Si les informations de facturation sont collectées sur le site Web du
 
 CiviContribute dispose d'un ensemble de champs prédéfinis pour suivre les informations sur les contributions. Si vous devez suivre plus d'informations sur les contributions, vous pouvez le faire en définissant de nouveaux champs de données personnalisés. Ces données peuvent être utiles pour mieux catégoriser vos contributions ou suivre des informations supplémentaires.
 
-Conseil : Notez toutes les informations que vous souhaitez suivre sur vos contributions, y compris les compte rendus (décrits plus loin dans ce chapitre), puis comparez vos besoins de données aux champs prédéfinis de CiviCRM. Une façon simple de le faire est de regarder l'écran pour ajouter une nouvelle contribution. Beaucoup de fonctionnalités utiles sont déjà intégrées dans les champs de contribution de base, il est donc inutile de les dupliquer avec des champs personnalisés, mais votre organisation peut avoir des besoins spécifiques qui nécessitent des champs personnalisés.
+**!!! Conseil** : Notez toutes les informations que vous souhaitez suivre sur vos contributions, y compris les compte rendus (décrits plus loin dans ce chapitre), puis comparez vos besoins de données aux champs prédéfinis de CiviCRM. Une façon simple de le faire est de regarder l'écran pour ajouter, si nécessaire, une nouvelle contribution. Beaucoup de fonctionnalités utiles sont déjà intégrées dans les champs de contribution de base, il est donc inutile de les dupliquer avec des champs personnalisés, mais votre organisation peut avoir des besoins spécifiques qui nécessitent des champs personnalisés.
 
-Si vous devez créer des champs personnalisés pour répondre à vos besoins, lisez : [Création de champs personnalisés](../organizing-your-data / creating-custom-fields).
+Si vous devez créer des champs personnalisés pour répondre à vos besoins, lisez : [Création de champs personnalisés](../organizing-your-data/creating-custom-fields).
 
