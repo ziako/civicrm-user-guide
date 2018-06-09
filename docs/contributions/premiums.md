@@ -1,18 +1,12 @@
-# Premiums
+# Cadeaux
 
-Configure premiums, such as T-shirts or subscriptions, that you want to
-offer on your contribution pages:
+Configurer les cadeaux , tels que des T-shirts, des gratuités ou des abonnements, que vous souhaitez offrir sur vos pages de contribution:
 
-1.  Navigate to **Administer > CiviContribute > Premiums (Thank-You
-    Gifts)**.
-2.  You can edit an existing premium or click **Add Premium** to add a
-    new one.
-3.  Once you edit or add a premium, you can then enter additional
-    information: Name, Description, SKU (an optional product code),
-    Premium Image (an optional image of the item), Minimum Contribution
-    Amount to receive the premium, Market Value of the premium, Actual
-    Cost(optional), Financial Type(optional), and Options (e.g. colors and sizes).
-4.  If you're offering a subscription or service, you can also click on
-    the **Subscription** or **Service Settings** and define additional
-    information here, such as Period type (e.g., Fixed or Rolling), the
-    Fixed Period Start Day, the Duration, and the Frequency.
+1. Accédez à **Administrer> CiviContribute> Cadeaux de remerciement)**.
+
+2. Vous pouvez modifier un cadeau existant ou cliquer sur **Ajouter un cadeau** pour en créer un nouveau.
+
+3. Une fois que vous avez modifié ou ajouté un cadeau, vous pouvez entrer des informations supplémentaires: Nom, Description, SKU (un code produit optionnel), Image du cadeau (facultative), Montant minimum de la contribution pour recevoir le cadeau, Valeur marchande du cadeau, coût réel (facultatif), type financier (facultatif) et des options (par exemple, les couleurs et les tailles).
+
+4. Si vous proposez un abonnement ou un service, vous pouvez également cliquer sur **Abonnement** ou **Paramètres du service** et définir des informations supplémentaires ici, telles que Type de période (par exemple, Fixe ou variable), le jour du début de la période, la durée et la fréquence.
+
