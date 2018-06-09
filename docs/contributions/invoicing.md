@@ -1,7 +1,7 @@
 Facturation
 =========
 
-La facturation fonctionne pour tous les types financiers et statuts de contributions terminés et en attente et doit être activée. Pour activer la facturation, accédez à **Administrer> CiviContribute> Paramètres du composant CiviContribute** et cochez la case "Activer les taxes et la facturation".
+La facturation fonctionne pour tous les types financiers et statuts de contributions terminés et en attente et doit être activée. Pour activer la facturation, accédez à **Administrer> CiviContribute> Paramètres du module CiviContribute** et cochez la case "Activer les taxes et la facturation".
 
 Dans cet écran, vous pouvez également définir certains paramètres pour les factures:
 
