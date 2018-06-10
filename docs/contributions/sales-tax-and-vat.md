@@ -1,62 +1,51 @@
 Sales tax and VAT
 =================
 
-If your organization charges Sales Tax or VAT you should enable
-this feature.
+Si votre organisation facture des taxes de vente ou de la TVA, vous devez activer cette fonctionnalité.
 
-To enable Sales Tax/VAT go to
-**Administer > CiviContribute > CiviContribute Component Settings** and check
-the "Enable Tax and Invoicing" box.
+Pour activer la taxe de vente / TVA, allez à :
 
-In this screen you can set certain settings for Sales Tax/VAT as well:
+**Administrer > CiviContribute > CiviContribute Component Settings** 
+et cochez la case "Activer les taxes et la facturation".
 
--   Tax Term- this is a text field for what your organization wants to call
-the relevant Sales Tax or VAT
+Dans cet écran, vous pouvez également définir certains paramètres pour la taxe de vente / TVA:
 
--   Tax Display Settings - how does your organization want to display the
-tax/VAT
+- Notes ou termes standards : Saisissez la note ou le message à afficher sur la facture PDF ou les notes de crédit
+- Paramètres d'affichage des taxes : comment votre organisation veut afficher la taxe / TVA
 
+   - Pas de taxe / TVA, total seulement
+   - Affichage en tant que prix inclusif - 120 € (incluant les taxes de 20 €)
+   - Affichage comme prix exclusif - taxe de 100 € + 20 €
+   
     -   No breakdown, total only
     -   Shows as inclusive price- $120 (includes $20 tax)
     -   Shows as exclusive price - $100 + $20 tax  
 
 ![image](../img/enable_tax_fields.png)
 
-Adding a Financial Account for Sales Tax/VAT
+Ajouter un compte financier pour la taxe de vente / TVA 
 ---------------------------------------------
 
-Once Sales Tax/VAT is enabled you need to create one or more Financial
-Accounts for Tax/VAT at **Administer > CiviContribute > Financial
-Account**. Scroll down to the bottom of the page, and click on **Add
-Financial Account**.
+Dès que la taxe de vente / TVA est activée, vous devez créer un ou plusieurs comptes financiers pour la TVA / taxe dans **Administrer> CiviContribute> Compte financier**. Faites défiler vers le bas de la page et cliquez sur **Ajouter un compte financier**.
 
-To create the sales tax Account, make sure **Financial Account Type** is
-set to **Liability**. Select **Enabled** and **Is Tax** and specify the
-**Tax Rate**. Note if you use **Quick Books**, the **Account Type Code**
-should be set to **SALESTAX**. **Accounting Code** should be based on the
-organization's specific accounting codes.
+Pour créer le compte de taxe de vente, assurez-vous que le **Type de compte financier** est défini sur **Déductible des impôts ?(Liability)**. Sélectionnez **Activé** et **Taxe** et spécifiez le **Taux de taxe**. Notez que si vous utilisez **Quick Books**, le **code de type de compte** doit être défini sur **SALESTAX**. **Le compte comptable** doit être basé sur les comptes comptables spécifiques de votre organisation.
 
 ![image](../img/salestaxaccount4.jpg)
 
-After you create the Financial Account, you can assign it to the
-specific Financial Type by going to **Adminster > CiviContribute >
-Financial Types**.  Find the Financial Type this sales tax applies to,
-and click on **Accounts**. Click on **Assign Account**.
+Après avoir créé le compte financier, vous pouvez l'affecter au type financier spécifique en allant à **Administrer> CiviContribute>
+Types financiers**. Trouvez le type de financement auquel s'applique cette taxe de vente, puis cliquez sur **Comptes**. 
+Cliquez sur **Affecter un compte**.
 
 ![image](../img/assignaccount2.jpg)
 
-For the **Financial Account Relationship** choose **Sales Tax Account is**
-and in the ** Financial Account** field select your sales tax account.
-Click **Save.**
+Pour la **Relation de compte financier**, choisissez **Le compte de taxe de vente est** et dans le champ **Compte financier**, sélectionnez votre compte de taxe de vente.
+Cliquez sur **Enregistrer**.
 
 ![image](../img/civicontribute-sales-tax-add-account.png)
 
-Once the sales tax Financial Account has been added, you will see it
-listed with the other Financial Accounts for that specific Financial
-Type.
+Une fois le compte financier de la taxe de vente est ajouté, vous le verrez apparaître avec les autres comptes financiers pour ce type financier spécifique.
 
 ![image](../img/salestaxadded2.jpg)
 
-For more advanced configuration with accounting software packages like
-QuickBooks, you should involve your organization's bookkeeper or
-accountant in setting up your Financial Types and Financial Accounts.
+Pour une configuration plus avancée avec des logiciels de comptabilité, tels que QuickBooks, vous devez impliquer le comptable de votre organisation dans la configuration de vos types financiers et de vos comptes financiers.
+
