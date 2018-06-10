@@ -58,7 +58,7 @@ pages:
     - 'Online contributions': 'contributions/online-contributions.md'
     - 'Offline fundraising': 'contributions/offline-fundraising.md'
     - 'Manual entry of contributions': 'contributions/manual-entry-of-contributions.md'
-    - 'Finding and viewing contributions': 'contributions/finding-and-viewing-contributions.md'
+    - 'Rechercher des contributions': 'contributions/finding-and-viewing-contributions.md'
     - 'Manual receipts and thank-you letters': 'contributions/manual-receipts-and-thank-yous.md'
     - 'Reports and analysis': 'contributions/reports-and-analysis.md'
     - 'Soft credits': 'contributions/soft-credits.md'
@@ -100,7 +100,7 @@ pages:
     - "Adhésions annulées ou expirées": 'membership/cancelling-and-expiring-memberships.md'
     - "Création d'accès réservés aux membres": 'membership/making-member-only-websites.md'
 - Email:
-    - 'What is CiviMail?': 'email/what-is-civimail.md'
+    - 'Qu'est-ce que Civimail?': 'email/what-is-civimail.md'
     - 'What You Need To Know': 'email/what-you-need-to-know.md'
     - 'Set-up': 'email/set-up.md'
     - 'Maintaining Healthy Email Lists': 'email/maintaining-healthy-email-lists.md'
@@ -127,7 +127,7 @@ pages:
     - 'Everyday Tasks': 'case-management/everyday-tasks.md'
     - 'Reports and analysis': 'case-management/reports-and-analysis.md'
 - Campaign:
-    - 'What is CiviCampaign?': 'campaign/what-is-civicampaign.md'
+    - 'Qu'est-ce que Civicampaign?': 'campaign/what-is-civicampaign.md'
     - 'What You Need To Know': 'campaign/what-you-need-to-know.md'
     - 'Set-up': 'campaign/set-up.md'
     - 'Everyday tasks': 'campaign/everyday-tasks.md'
