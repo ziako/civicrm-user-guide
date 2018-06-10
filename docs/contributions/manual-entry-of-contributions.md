@@ -17,7 +17,7 @@ Pour entrer manuellement une contribution pour un contact dans votre base de don
 ![Image](../img/New%20Contribution%20by%20Contact.png)
 
 5. Notez le type financier, le montant, la date de réception (la date par défaut est la date du jour), la date de réception (indiquée sur le reçu généré par le système) et le statut (la valeur par défaut est Terminé). Tous les champs personnalisés pour les contributions apparaîtront également sur ce formulaire.
-6. Le champ **Bénéficiaire (Soft Credit To)** fonctionne avec les pages de campagne personnelles (PCP) qui exploitent la participation de vos contacts pour les campagnes. Lorsque vous saisissez un don manuellement sur le formulaire de contribution du contributeur, vous pouvez attribuer un crédit souple au propriétaire du PCP. Il y a plus d'informations sur les PCP et les pages de collecte de fonds de campagne dans le chapitre "Configuration" de la section CiviContribute.
+6. Le champ **Bénéficiaire (Soft Credit To)** fonctionne avec les Pages de Campagne Personnelles (PCP) qui exploitent la participation de vos contacts pour les campagnes. Lorsque vous saisissez un don manuellement sur le formulaire de contribution du contact, vous pouvez l'attribuer à un bénéficiaire propriétaire du PCP. Il y a plus d'informations sur les PCP et les pages de collecte de fonds de campagne dans le chapitre "Configuration" de la section CiviContribute.
 7. La section **Détails supplémentaires** près du bas de l'écran offre d'autres options, y compris l'ajout d'une note sur la contribution et la saisie de la date à laquelle une lettre de remerciement a été envoyée.
 8. Les deux dernières sections vous permettent d'indiquer si la contribution était en l'honneur de quelqu'un d'autre (**Renseignements sur le bénéficiaire**) et s'il y a une prime ou un cadeau associé à la contribution (**Information sur les primes**).
 9. Cliquez sur **Enregistrer** ou sur **Enregistrer et Nouveau** si vous devez entrer d'autres contributions.
@@ -26,9 +26,9 @@ Pour entrer manuellement une contribution pour un contact dans votre base de don
 
 ## Inscription par lots de la contribution, de l'adhésion ou des paiements d'engagement
 
-La fonction **Entrées de données par lot** vous permet d'entrer simultanément plusieurs contributions hors ligne, adhésions ou dons que vous avez reçus, à l'aide d'un écran de saisie par lots où vous pouvez utiliser les icônes «autocopy» en haut de chaque colonne pour remplir rapidement les valeurs des champs. Ceci facilite la saisie de données lorsque vous avez beaucoup de paiements à enregistrer en même temps. Cela vous permet également de vérifier le montant total et le nombre d'articles du lot par rapport aux paiements enregistrés sur votre ou vos bordereaux de dépôt.
+La fonction **Entrées de données par lot** vous permet d'entrer simultanément plusieurs contributions, adhésions ou dons reçus hors ligne, à l'aide d'un écran de saisie par lots  pour remplir rapidement les valeurs des champs (vous pouvez utiliser les icônes «autocopy» en haut de chaque colonne). Ceci facilite la saisie de données lorsque vous avez de nombreux paiements à enregistrer en même temps. Cela vous permet également de vérifier le montant total et le nombre par rapport aux paiements enregistrés sur votre ou vos bordereaux de dépôt à la banque.
 
-Chaque lot contient des paiements de cotisations ou des paiements d'adhésion ou des paiements de dons. Pendant la saisie des données par lot, vous pouvez créer de nouveaux contacts à la volée. Vous pouvez enregistrer le lot et revenir plus tard pour continuer à entrer les paiements. Si vous disposez des autorisations appropriées, vous pouvez également modifier le nombre total et le nombre d'éléments dans la définition du lot si nécessaire.
+Chaque lot peut contenir des paiements de cotisations ou des paiements d'adhésion ou des paiements de dons. Pendant la saisie des données par lot, vous pouvez créer de nouveaux contacts à la volée. Vous pouvez enregistrer le lot et revenir plus tard pour continuer à entrer les paiements. Si vous disposez des autorisations appropriées, vous pouvez également modifier le nombre total et le nombre d'éléments dans la définition du lot si nécessaire.
 
 Voici un mémo simple pour la saisie de données en masse:
 
@@ -50,9 +50,11 @@ Entrez les informations suivantes:
 
 - **Nom du lot**: CiviCRM créera un nom de lot par défaut ("Lot N" + date d'ouverture), que vous pouvez modifier (champ obligatoire)
 - **Type**: sélectionnez le type de paiement, par ex. Contribution, adhésion ou dons. Cela permet de sélectionner le profil réservé approprié à afficher dans l'écran de la grille de saisie par lots (profil d'entrée de lot de contribution, profil d'entrée de lot d'adhésion ou profil d'entrée de lot de paiement de don)
-- **Statut**: la valeur par défaut sera "Ouvert" (Note: une fois qu'un lot a un "statut fermé", le lot ne sera plus modifiable)
-- **Nombre d'articles**: total des postes de paiement dans le lot (champ obligatoire)
+- **Statut**: la valeur par défaut sera "Ouvert" 
+- **Nombre d'articles**: total des lignes de paiement dans le lot (champ obligatoire)
 - **Montant total**: montant total de tous les postes de paiement du lot (champ obligatoire)
+
+!!! Note: une fois qu'un lot a un "statut fermé", le lot ne sera plus modifiable)
 
 Vous pouvez modifier ou supprimer des informations sur les lots ultérieurement en retournant à l'écran **Entrée de données par lots**, puis en cliquant sur **Modifier** ou **Supprimer** à côté du lot souhaité.
 
@@ -69,7 +71,7 @@ Il y a huit champs qui apparaissent pour tous les lots:
 -  **Contact**. Dans cette colonne, vous pouvez:
 - Commencez à entrer le nom d'un contact existant et CiviCRM renverra une liste de noms de contacts potentiels pour que vous puissiez sélectionner, OU
 - créez un nouveau contact en cliquant sur la liste déroulante pour "créer un nouveau contact" et en sélectionnant le type de contact que vous souhaitez créer: **Nouveau individuel**, **Nouvelle organisation** ou **Nouveau ménage** et entrez les informations sur le contact ici.
-Remarque: Si des informations de contact telles que le numéro de téléphone ou l'adresse e-mail sont incluses dans la grille du profil, ces valeurs renseignées pour un contact existant peuvent être mises à jour si nécessaire.
+!!! Remarque: Si des informations de contact telles que le numéro de téléphone ou l'adresse e-mail sont incluses dans la grille du profil, ces valeurs renseignées pour un contact existant peuvent être mises à jour si nécessaire.
 -   **Type financier**
 -   **Montant**
 -   **(Statut) de paiement**
@@ -145,7 +147,7 @@ Pour modifier le profil utilisé lorsque vous souhaitez créer un nouveau contac
 
 - Vous pouvez ensuite ajouter, modifier ou réorganiser les champs comme vous souhaitez les voir apparaitre dans la grille d'entrée d'entrée par lots. Pour en savoir plus sur l'utilisation des profils, voir le chapitre "Profils" dans la section "Interface utilisateur".
 
-**!!! CONSEIL:** Les profils réservés pour **Nouveau individuel, Nouvelle organisation** et **Nouveau ménage** sont utilisés dans d'autres domaines de CiviCRM. Sachez que, si vous modifiez ces profils pour une utilisation avec les **Lots**, ces mêmes modifications, que vous avez faites, apparaîtront également sur d'autres écrans où vous avez la possibilité de créer un nouveau contact en ligne.
+**!!! CONSEIL:** Les profils réservés pour **Nouveau individuel, Nouvelle organisation** et **Nouveau ménage** sont utilisés dans d'autres domaines de CiviCRM. Sachez que, si vous modifiez ces profils pour une utilisation avec les **Lots**, les  modifications que vous faites, apparaîtront également sur d'autres écrans permettant de créer un nouveau contact en ligne.
 
   ![image](../img/CiviCRM-Contributions-SetUp-new-individual-profile.jpg)
   
@@ -153,8 +155,8 @@ Pour modifier le profil utilisé lorsque vous souhaitez créer un nouveau contac
 
 Pour modifier le profil des champs d'informations que vous souhaitez collecter pour les cotisations ou les paiements d'adhésion, vous devez mettre à jour les profils réservés appelés **Contribution par lot de contribution * ou **Inscription de lot d'adhésion**:
 
-- Allez dans le menu et cliquez sur **Administrer> Personnaliser les données et les écrans> Profils**, puis cliquez sur l'onglet **Profils réservés**. Cliquez sur **Champs** à côté du profil **Entrées de Contribution par lots** ou du profil **Entées d'adhésion par lots**.
-- Vous pouvez ensuite ajouter, modifier ou réorganiser les champs de ce profil, par ex. vous pouvez avoir d'autres champs de contribution personnalisés que vous souhaitez afficher et collecter dans la grille d'entrée de l'entrée de lot. Pour en savoir plus, lisez [Profils](../organising-your-data/profiles)
+- Allez dans le menu et cliquez sur **Administrer> Personnaliser les données et les écrans> Profils**, puis cliquez sur l'onglet **Profils réservés**. Cliquez sur **Champs** à côté du profil **Entrées de Contribution par lots** ou du profil **Entrées d'adhésion par lots**.
+- Vous pouvez ensuite ajouter, modifier ou réorganiser les champs de ce profil. Par ex. vous pouvez avoir d'autres champs de contribution personnalisés que vous souhaitez afficher dans la grille d'entrée de l'entrée de lot. Pour en savoir plus, lisez [Profils](../organising-your-data/profiles)
 
   ![image](../img/CiviCRM-Contributions-SetUp-contribution-batch-entry-profile.jpg)
   
@@ -178,7 +180,7 @@ Lors de la préparation de votre importation de données, il est utile de savoir
   -   **Type financier**
   -   **Montant Total**
 
-L'outil d'importation pour les contributions est similaire à celui des contacts, mais les contributions ne peuvent être importées que si les contributeurs existent déjà dans la base de données en tant que contacts. Si vous devez importer des contributions pour des contacts qui ne sont pas encore disponibles, commencez par importer un contact, en incluant de préférence un identifiant externe unique (le plus souvent un identifiant attribué par la base de données ou l'application à partir de laquelle vous importez des enregistrements). Il existe deux façons de faire correspondre une contribution à un contact:
+L'outil d'importation pour les contributions est similaire à celui des contacts, mais les contributions ne peuvent être importées que si les contributeurs existent déjà dans la base de données en tant que contacts. Si vous devez importer des contributions pour des contacts qui ne sont pas encore disponibles, commencez par importer les contacts, en incluant de préférence un identifiant externe unique (le plus souvent un identifiant attribué par la base de données ou l'application à partir de laquelle vous importez des enregistrements). Il existe deux façons de faire correspondre une contribution à un contact:
 
 - Utilisez l'ID externe du contact en incluant l'ID dans une colonne du fichier CSV (si cet ID n'a pas été importé avec les contacts, bien que vous les ayez enregistrés, une deuxième importation de contacts peut être effectuée pour mettre à jour ce champ, après quoi vous pouvez importer des contributions).
 - Vous pouvez également faire correspondre les contributions aux contacts en fonction de vos règles de déduplication des contacts, par ex. en incluant le prénom, le nom et l'adresse électronique du donateur pour chaque contribution. Si un contact correspond à ces trois champs, la contribution lui sera affectée.
