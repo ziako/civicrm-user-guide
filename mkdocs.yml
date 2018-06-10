@@ -66,8 +66,8 @@ pages:
     - 'Accounting Integration': 'contributions/accounting-integration.md'
     - 'Payment processors': 'contributions/payment-processors.md'
     - 'Facturation': 'contributions/invoicing.md'
-    - 'Sales tax and VAT': 'contributions/sales-tax-and-vat.md'
-    - 'Premiums': 'contributions/premiums.md'
+    - 'TVA et taxe de vente': 'contributions/sales-tax-and-vat.md'
+    - 'Cadeaux': 'contributions/premiums.md'
     - 'Widgets': 'contributions/widgets.md'
 - Pledges:
     - 'What is CiviPledge?': 'pledges/what-is-civipledge.md'
