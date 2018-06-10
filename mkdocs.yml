@@ -65,7 +65,7 @@ pages:
     - 'Personal Campaign Pages': 'contributions/personal-campaign-pages.md'
     - 'Accounting Integration': 'contributions/accounting-integration.md'
     - 'Payment processors': 'contributions/payment-processors.md'
-    - 'Invoicing': 'contributions/invoicing.md'
+    - 'Facturation': 'contributions/invoicing.md'
     - 'Sales tax and VAT': 'contributions/sales-tax-and-vat.md'
     - 'Premiums': 'contributions/premiums.md'
     - 'Widgets': 'contributions/widgets.md'
