@@ -29,16 +29,16 @@ Certaines organisations souhaitent envoyer des lettres de remerciement aux perso
 4. Choisissez **Mettre à jour les dates de remerciements pour ces contributions** ou **Mettre à jour les dates de réception de ces contributions** selon les besoins. La date actuelle sera saisie dans le champ approprié.
 5. Il y a trois **Options d'impression et d'email** explicites:
 
-    - Générer des fichiers PDF pour l'impression (uniquement)
-    - Envoyer des emails si possible. Générer des fichiers PDF imprimables pour les contacts qui ne peuvent ou ne veulent pas recevoir d'e-mails
+    - Générer des fichiers PDF pour l'impression (uniquement).
+    
+    - Envoyer des emails si possible. Générer des fichiers PDF imprimables pour les contacts qui ne peuvent ou ne veulent pas recevoir d'e-mails.
+    
     - Envoyer des emails si possible. Générer des fichiers PDF imprimables pour tous les contacts.
 
 6. Certaines personnes peuvent avoir plusieurs contributions. Si vous souhaitez envoyer une lettre pour chaque contribution, définissez **Contributions de groupe par** à **- pas de regroupement -**. Vous pouvez également choisir d'afficher les données de contribution pour plusieurs contributions provenant du même contact à un emplacement dans le corps de votre lettre. Il y a cinq options "grouper par".
 7. **Séparateur (contributions groupées)** ne s'applique que si vous avez choisi autre chose que **- aucun regroupement -** pour les contributions. Ces options seront développées ci-dessous dans *Lettres de remerciement groupées*.
 8. Assurez-vous de vérifier les paramètres **Format de page**.
-9. Vous pouvez utiliser un modèle existant, créer une nouvelle lettre à usage unique ou créer une nouvelle lettre et l'enregistrer en tant que nouveau modèle.
-[Jetons et publipostage](... / common-workflows/jetons-et-publipostage) et [Communications par courrier postal](.../common-workflows/post-mail-communications) 
-fournissent plus d'informations sur la création de lettres modèles
+9. Vous pouvez utiliser un modèle existant, créer une nouvelle lettre à usage unique ou créer une nouvelle lettre et l'enregistrer en tant que nouveau modèle. [Jetons et publipostage](.../common-workflows/jetons-et-publipostage) et [Communications par courrier postal](.../common-workflows/post-mail-communications)  fournissent plus d'informations sur la création de lettres modèles
 10. Lorsque vous cliquez sur **Rédiger des lettres de remerciement**, les lettres seront générées et une activité «Imprimer une lettre PDF» sera créée pour chaque lettre avec le **Sujet d'activité** que vous avez spécifié.
 
 
@@ -62,8 +62,6 @@ aura pour résultat:
 Ce format fonctionne bien si seulement plusieurs contributions ont été reçues au cours de l'année, mais la table sera plus large que la page pour les dons mensuels, bimensuels ou hebdomadaires.
 
 Dans aucun des deux cas, le montant total de la contribution annuelle ne peut être inclus dans la lettre.
-
-In neither case can the total yearly contribution amount be included in the letter.
 
 Pour inclure le montant annuel total de la contribution dans la lettre et pour produire une lettre plus adaptée à plusieurs contributions de la même personne, vous ou votre développeur devrez activer la fonctionnalité Smarty pour vos emails. Voir ici :
 ([http://wiki.civicrm.org/confluence/display/CRMDOC/Smarty+in+mail+templates](http://wiki.civicrm.org/confluence/display/CRMDOC/Smarty+in+mail+templates)).
