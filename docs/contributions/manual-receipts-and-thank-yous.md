@@ -47,7 +47,6 @@ Certaines organisations souhaitent envoyer des lettres de remerciement aux perso
 Vous pouvez envoyer des relevés de fin d'exercice ou des reçus fiscaux à vos contacts si vous choisissez une option autre que **- aucun regroupement -** pour le champ **Contributions groupées par**.
 
 Dans une installation CiviCRM standard, les lettres par défaut qui sont être produites lorsque vous regroupez des contributions peuvent vous paraitre assez sommaire. 
-In a standard CiviCRM installation, the letters that can be produced when you group contributions are fairly rudimentary.
 
 Si vous choisissez **Virgule** comme **Séparateur**, les montants et / ou les dates de cotisation se suivront l'une après l'autre, séparés par des virgules. 
 Par exemple "Merci pour vos généreux dons de {contribution.total_amount} reçus  {contribution.receive_date} respectivement." deviendra "Merci pour vos généreux dons de 100,00 €, 150,00 €, 325,00 € reçus le 1er janvier 2018, le 5 mars 2018, le 16 mai 2018 respectivement."
