@@ -8,7 +8,7 @@ Vous pouvez envoyer des reçus de contribution hors ligne à plusieurs contacts 
 
 ![ContributionReceiptsManual](../img/civicontribute-receipts-manual.PNG)
 
-Vous avez la possibilité d'envoyer les reçus par courrier électronique ou d'éditer des reçus PDF à poster aux contributeurs. 
+Vous avez la possibilité d'envoyer des reçus par courrier électronique ou d'éditer des reçus PDF à poster aux contributeurs. 
 ![image](../img/Print%20contribution%20receipt%20options.PNG)
 
 Par défaut, l'envoi par courrier électronique ou la création de reçus PDF mettra à jour la date de réception de chaque contribution, mais vous pouvez conserver les dates de réception existantes si nécessaire. Vous pouvez également choisir de ne pas tenir compte des paramètres **Ne pas envoyer par courrier électronique/Ne pas envoyer par courrier électronique** afin que tous les contributeurs sélectionnés reçoivent un accusé de réception.
