@@ -35,7 +35,7 @@ Certaines organisations souhaitent envoyer des lettres de remerciement aux perso
     
     - Envoyer des emails si possible. Générer des fichiers PDF imprimables pour tous les contacts.
 
-6. Certaines personnes peuvent avoir plusieurs contributions. Si vous souhaitez envoyer une lettre pour chaque contribution, définissez **Contributions de groupe par** à **- pas de regroupement -**. Vous pouvez également choisir d'afficher les données de contribution pour plusieurs contributions provenant du même contact à un emplacement dans le corps de votre lettre. Il y a cinq options "grouper par".
+6. Certaines personnes peuvent avoir plusieurs contributions. Si vous souhaitez envoyer une lettre pour chaque contribution, définissez **Contributions groupées par** à **- pas de regroupement -**. Vous pouvez également choisir d'afficher les données de contribution pour plusieurs contributions provenant du même contact à un emplacement dans le corps de votre lettre. Il y a cinq options "groupées par".
 7. **Séparateur (contributions groupées)** ne s'applique que si vous avez choisi autre chose que **- aucun regroupement -** pour les contributions. Ces options seront développées ci-dessous dans *Lettres de remerciement groupées*.
 8. Assurez-vous de vérifier les paramètres **Format de page**.
 9. Vous pouvez utiliser un modèle existant, créer une nouvelle lettre à usage unique ou créer une nouvelle lettre et l'enregistrer en tant que nouveau modèle. [Jetons et publipostage](.../common-workflows/jetons-et-publipostage) et [Communications par courrier postal](.../common-workflows/post-mail-communications)  fournissent plus d'informations sur la création de lettres modèles
