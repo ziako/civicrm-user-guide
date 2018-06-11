@@ -1,9 +1,7 @@
-# Offline fundraising
+# Levée de fonds hors ligne
 
-Your organisation may collect donations at events, solicit donations via
-postal mailings and other offline methods. Any money raised through
-offline activities needs to be manually entered into CiviCRM in order to
-ensure that final reporting is accurate.
+Votre organisation peut recueillir des dons lors d'événements, de campagnes ou solliciter des dons par courrier postal et d'autres méthodes hors ligne. Tout l'argent collecté via des activités hors ligne doit être saisi manuellement dans CiviCRM afin de garantir que le rapport final soit exact.
+
 
 There are three steps within CiviCRM for offline fundraising: creating
 your lists, creating your mailings, and
