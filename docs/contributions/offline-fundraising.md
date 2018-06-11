@@ -2,49 +2,32 @@
 
 Votre organisation peut recueillir des dons lors d'événements, de campagnes ou solliciter des dons par courrier postal et d'autres méthodes hors ligne. Tout l'argent collecté via des activités hors ligne doit être saisi manuellement dans CiviCRM afin de garantir que le rapport final soit exact.
 
-
-There are three steps within CiviCRM for offline fundraising: creating
-your lists, creating your mailings, and
-[manually entering contributions](../contributions/manual-entry-of-contributions).
-
-## Creating your lists
-
-This process is fairly straightforward if you are familiar with
-CiviCRM's search capabilities.
-
-Go to **Search > Find Contacts** to create a list of records to receive
-your offline postal mail appeal (it could be your entire database).
-
-If you want to track the success of a mailing or who receives certain
-appeals, save the search results as a group. Use the check box to select
-all and choose the appropriate option from the **Action**
-dropdown menu i.e. **Group - add contacts** or **Group - create smart group**). Later,
-you can mark everyone in that group as recipients of that appeal using
-the **Add Activity** option under the **Actions** dropdown menu.
-
-If you want to create letters for postal mailings you can do this using
-CiviCRM's internal **PDF letters - print** feature, or you export the list as a
-CSV file and use mail merge to a word processor.
-
-To export a list:
-
-1. Select all records or a subset using the checkboxes, and from
-    the **Actions** dropdown menu choose **Export Contacts**.
-1. Choose whether to **Export PRIMARY fields** or **Select fields for
-    export**. If you elect to export primary fields, the CSV file will
-    be immediately generated when you click **Continue**. If you opt to
-    select which fields you want to export, click **Continue** and a
-    list of dropdown options will appear.
-1. Select the required fields; if you wish to save the list of exported
-    fields as an export mapping for future use, check the **Save this
-    field mapping** box.
-1. Click **Export** to generate the CSV file.
-1. Click **Done** when you have finished to return to the contact list.
+Dans CiviCRM la collecte de fonds hors ligne comprend trois étapes: la création de vos listes, la création de vos publipostages et [la saisie manuelle des contributions](../contributions/manual-entry-of-contributions).
 
 
-## Creating postal mailings
+## Créer vos listes
 
-Once your spreadsheet is created, you can do a mail merge using any word
+Ce processus est assez simple si vous connaissez les capacités de recherche de CiviCRM.
+
+Allez à **Recherche> Trouver des contacts** pour créer une liste d'enregistrements qui par exemple seront appellés par téléphone. (il peut s'agir éventuellement de l'ensemble de votre base de données).
+
+Si vous souhaitez suivre l'efficacité d'un publipostage ou recevoir certains appels, enregistrez les résultats de la recherche en tant que groupe. Utilisez la case à cocher pour tout sélectionner et choisissez l'option appropriée dans le menu déroulant **Action** : **Groupe - ajouter des contacts** ou **Groupe - créer un groupe intelligent**. Par la suite, vous pourrez marquer tous les membres de ce groupe comme destinataires de cette action en utilisant l'option **Ajouter une activité** dans le menu déroulant **Actions**.
+
+Si vous voulez créer des lettres pour des envois postaux, vous pouvez le faire en utilisant la fonction interne **Lettres PDF - impression** de CiviCRM. Vous pouvez aussi exporter la liste sous forme de fichier CSV et utiliser la fusion dans un traitement de texte.
+
+Pour exporter une liste:
+
+1. Sélectionnez tous les enregistrements ou un sous-ensemble à l'aide des cases à cocher et dans le menu déroulant **Actions**, choisissez **Exporter les contacts**.
+2. Choisissez d'exporter **les champs PRIMARY** ou **Sélectionnez les champs à exporter**. Si vous choisissez d'exporter les champs primaires, le fichier CSV sera immédiatement généré lorsque vous cliquerez sur **Continuer**. Si vous choisissez de sélectionner les champs que vous souhaitez exporter, cliquez sur **Continuer** et une liste des options déroulantes s'affichera.
+3. Sélectionnez les champs requis. Si vous souhaitez enregistrer la liste des champs exportés en tant que mappage d'exportation pour une utilisation ultérieure, cochez la case **Enregistrer ce mappage de champ**.
+4. Cliquez sur **Export** pour générer le fichier CSV.
+5. Cliquez sur **OK** lorsque vous avez terminé pour revenir à la liste de contacts.
+
+
+## Création de mailings postaux
+
+
+Once you spreadsheet is created, you can do a mail merge using any word
 processing software (such as OpenOffice, the free software word
 processor) that will insert any fields you want in the letter.
 
