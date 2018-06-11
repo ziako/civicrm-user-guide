@@ -1,61 +1,53 @@
-Creating Contribution Pages
+Création de pages de contribution
 -----------------------------
-This section describes setting up online contribution pages where
-visitors to your website can make contributions to your organisation.
-CiviContribute is very flexible and includes many optional fields and features
-such as recurring contributions, pledges and personal campaign pages. These can
-make setting up contribution pages seem like a daunting task.  It can be
-quite simple though as shown by the first two procedures.  
 
-## The simplest contribution page (Receipt sent only from payment processor.)
-1. Make sure you have a [payment processor configured](../contributions/payment-processors).
-2. Go to to **Contributions > New Contribution Page**.
-3. Enter the **title** for your website page.
-4. Select the appropriate **financial type**.
-5. Click on **Continue**.
-6. On the next page leave everything as is except for ticking the **Allow Other
-Amounts** checkbox and setting **minimum** and/or **maximum** amounts if you want to.
-7. Click on **Save and Done**.
-8. Follow the steps for your CMS to [display this page on your website](#publicizing-your-contribution-page).  
-
-## A very simple contribution page including receipt from your organisation
-1. Make sure you have a [payment processor configured](../contributions/payment-processors).
-2. Go to to **Contributions > New Contribution Page**.
-3. Enter the **title** for your website page.
-4. Select the appropriate **financial type**.
-5. Click on **Continue**.
-6. On the next page leave everything as is except for ticking the **Allow Other Amounts** checkbox and setting **minimum** and/or **maximum** amounts if you want to.
-7. Click on **Save**.
-8. Select the **Receipt** tab.
-9. Enter the **title** for your Thank-you page.
-10. Tick **Email Receipt to Contributor**.
-11. Enter the FROM email address in **Receipt From Email**.
-12. Click on **Save and Done**.
-7. Follow the steps for your CMS to [display this page on your website](#publicizing-your-contribution-page).
+Cette section décrit la mise en place de pages de contribution en ligne dans lesquelles les visiteurs de votre site Web peuvent contribuer à votre organisation.
+CiviContribute est très flexible, adaptable et inclut de nombreux champs et fonctionnalités optionnelles tels que des contributions récurrentes, des promesses de dons et des pages de campagne personnelle. Cela peut rendre la mise en place de pages de contribution comme une tâche lourde, mais pas insurmontable comme le montrent les deux premières procédures ci dessous.
 
 
-   &&&& Add links in here to profiles tab &&&
-## Setting up a contribution page - full details.
+## La page de contribution la plus simple (réception envoyée uniquement par le processeur de paiement.)
 
-Navigate to **Contribution > New Contribution Page**.
-(**Contribution > Manage Contribution Pages > Add Contribution Page** takes
-  you to the same screen.)  
+1. Assurez-vous d'avoir un [processeur de paiement configuré](../contributions/payment-processors).
+2. Allez à **Contributions> Nouvelle page de contribution**.
+3. Entrez le **titre** de la page pour votre site Web.
+4. Sélectionnez le **type financier** approprié.
+5. Cliquez sur **Continuer**.
+6. Sur la page suivante, laissez tout tel quel, sauf en cochant la case **Autoriser d'autres montants** et en réglant les montants **minimum * et / ou **maximum** si vous le souhaitez.
+7. Cliquez sur **Enregistrer et Terminé**.
+8. Suivez les étapes de votre CMS pour [afficher cette page sur votre site web](#publicizing-your-contribution-page).  
+
+
+## Une page de contribution très simple incluant la réception de votre organisation
+
+1. Assurez-vous d'avoir un [processeur de paiement configuré](../contributions/payment-processors).
+2. Allez à **Contributions> Nouvelle page de contribution**.
+3. Entrez le **titre** de la page pour votre site Web.
+4. Sélectionnez le **type financier** approprié.
+5. Cliquez sur **Continuer**.
+6. Sur la page suivante, laissez tout tel quel, sauf en cochant la case **Autoriser d'autres montants** et en réglant les montants **minimum * et / ou **maximum** si vous le souhaitez.
+7. Cliquez sur **Enregistrer**.
+8. Sélectionnez l'onglet **Reçu**.
+9. Entrez le **titre** pour votre page de remerciement.
+10. Cochez **Reçu de courrier électronique au contributeur**.
+11. Entrez l'adresse email "DE" dans **Receipt From Email**.
+12. Cliquez sur **Enregistrer et Terminé**.
+
+Suivez les étapes de votre CMS pour [afficher cette page sur votre site](#publicizing-your-contribution-page).
+
+
+## Mise en place d'une page de contribution - détails complets.
+
+Accédez à **Contribution> Nouvelle page de contribution**. (**Contribution> Gérer les pages de contribution> Ajouter une page de contribution**) vous amène à cet écran :
 
 ![New Contribution Page](../img/civicontribute-new-contribution-page.png)
 
--  The page title and financial type are the only compulsory fields. CiviCRM
-comes with four standard financial types, but you can
-[create more](../contributions/key-concepts-and-configurations) to meet your
-organisation's accounting needs.
--  Link this contribution page to a [campaign](../campaign/what-is-civicampaign). (optional)
--  Compose your introductory message. (optional)
--  Compose your footer message. (optional)
--  Set a goal amount. (optional)
--  This contribution page has to be manually enabled or disabled, but you can
-   set a **start date** and **end date** that will apply for a Contribution
-   Widget and
-   [Personal Campaign Pages](../contributions/personal-campaign-pages). (optional)
--  Choose whether or not to accept [Honoree soft crediting.](../contributions/soft-credits)
+- Le titre de la page et le type financier sont les seuls champs obligatoires. CiviCRM est livré avec quatre types financiers standards, mais vous pouvez [créer plus](../contributions/concepts-clés-et-configurations) pour répondre aux besoins comptables de votre organisation. - Lier cette page de contribution à une [campagne](../campaign/what-is-civicampaign). (Optionnel)
+- Composez votre message d'introduction. (optionnel)
+- Composez votre message de pied de page. (optionnel)
+- Définir un montant d'objectif. (optionnel)
+- Cette page de contribution doit être activée ou désactivée manuellement, mais vous pouvez définir une **date de début** et une **date de fin** qui s'appliqueront pour un widget de contribution et [Pages de campagne personnelles](../contributions/personnel-campaign-pages). (optionnel)
+- Choisissez si vous acceptez ou non : [Créditer un bénéficiaire](../contributions/soft-credits)
+
 -  Choose to use a confirmation page where users can check all details are
    correct or to process the payment as soon as the contribution form is submitted.
 -  Choose whether or not to display social media links on online pages and in
