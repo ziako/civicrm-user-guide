@@ -26,27 +26,15 @@ Pour exporter une liste:
 
 ## Création de mailings postaux
 
+Une fois votre feuille de calcul créée, vous pouvez effectuer une opération de fusion et publipostage à l'aide de n'importe quel logiciel de traitement de texte (tel qu'OpenOffice, le logiciel de traitement de texte gratuit) qui insérera les champs souhaités dans la lettre.
 
-Once you spreadsheet is created, you can do a mail merge using any word
-processing software (such as OpenOffice, the free software word
-processor) that will insert any fields you want in the letter.
+CiviCRM peut également créer des étiquettes de publipostage pour vous. Effectuez la même recherche que vous avez utilisée à la section précédente pour créer votre liste de destinataires, puis:
 
-CiviCRM can also create mailing labels for you. Perform the same search
-you used in the previous section to create your list of recipients,
-then:
+1. Dans le menu déroulant **Actions**, sélectionnez **Étiquettes d'adresse - imprimer**.
 
-1.  From the **Actions** dropdown menu, select **Mailing
-    labels - print**.
-2.  Select the mailing label number, determine whether you want to
-    exclude people with "do not mail" checked in their privacy options
-    (checked by default and recommended), and whether you want to merge
-    two records that have the same mailing address into one label. This
-    last option is very useful when you are mailing a household or
-    organization and you don't want them to receive duplicate mailings.
-    When the records are merged, each name at that address appears on
-    its own line on the label.
-3.  Click **Make Mailing Labels** and a printable PDF document will be
-    created.
+2. Sélectionnez le numéro de l'étiquette de publipostage, déterminez si vous souhaitez exclure les personnes dont les options de confidentialité ne sont pas cochées (cochées par défaut et recommandées) et si vous souhaitez fusionner deux enregistrements ayant la même adresse postale en un étiquette. Cette dernière option est très utile lorsque vous envoyez un courrier à un ménage ou une organisation et que vous ne voulez pas qu'ils reçoivent des envois en double. Lorsque les enregistrements sont fusionnés, chaque nom à cette adresse apparaît sur sa propre ligne sur l'étiquette.
 
-Note that CiviCRM prints labels in the order shown on the research results page
-in a column-by-column pattern.
+3. Cliquez sur **Créer des étiquettes de publipostage** et un document PDF imprimable sera créé.
+
+**!!! Note** : CiviCRM imprime les étiquettes dans l'ordre indiqué sur la page de résultats de recherche dans un modèle colonne par colonne.
+
