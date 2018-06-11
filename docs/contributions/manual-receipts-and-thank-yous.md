@@ -1,127 +1,75 @@
-# Sending receipts and thank you letters
+# Envoi de reçus et de lettres de remerciement 
 
-## Receipts
+## Reçus
+ 
+Les donateurs qui effectuent des contributions via un formulaire en ligne recevront automatiquement un reçu par courriel pour leur paiement, à condition que la possibilité de les envoyer ait été sélectionnée lors de la configuration de la page de contribution. Si vous souhaitez envoyer ou renvoyer manuellement un reçu à une date ultérieure, vous pouvez le faire en éditant l'enregistrement de contribution par rapport à un contact et en cochant l'option **Envoyer reçu?**. Le reçu de contribution hors ligne sera envoyé lorsque vous cliquez sur **Enregistrer**.
 
-Donors making contributions through an online form will automatically
-receive an email receipt for their payment, provided the option to send
-them was selected during the configuration of the contribution page. If
-you wish to manually send or re-send a receipt at a later date, you can
-do so by editing the contribution record against a contact and
-ticking the option **Send Receipt?**. The off-line contribution receipt will be
-sent when you click **Save**.
-
-You can send off-line contribution receipts to multiple contacts at the same
-time through the [Find Contributions](../contributions/finding-and-viewing-contributions)
-search. After selecting the contacts you wish to send a receipt to, choose
-**Receipts - print or email** from the actions drop-down menu.
+Vous pouvez envoyer des reçus de contribution hors ligne à plusieurs contacts en même temps via la recherche [Rechercher des contributions](../contributions/recherche-et-visualisation-contributions). Après avoir sélectionné les contacts auxquels vous souhaitez envoyer un reçu, sélectionnez **Reçus - Imprimer ou Email** dans le menu déroulant des actions.
 
 ![ContributionReceiptsManual](../img/civicontribute-receipts-manual.PNG)
 
-You will be given the option to email the receipts or make PDF receipts
-to post out to contributors.
-
+Vous avez la possibilité d'envoyer les reçus par courrier électronique ou d'éditer des reçus PDF à poster aux contributeurs. 
 ![image](../img/Print%20contribution%20receipt%20options.PNG)
 
-By default emailing or creating PDF receipts will update the receipt
-date for each contribution, but you can keep the existing receipt dates
-if you need to. You can also choose to disregard the **Do not email/Do
-not mail** settings so that all selected contributors are sent a receipt.
+Par défaut, l'envoi par courrier électronique ou la création de reçus PDF mettra à jour la date de réception de chaque contribution, mais vous pouvez conserver les dates de réception existantes si nécessaire. Vous pouvez également choisir de ne pas tenir compte des paramètres **Ne pas envoyer par courrier électronique/Ne pas envoyer par courrier électronique** afin que tous les contributeurs sélectionnés reçoivent un accusé de réception.
 
-The standard off-line contribution receipt displays limited information. It can
-be customized but that requires a knowledge of Smarty. You may find it easier
-to set up "send later" receipts using the thank-you letters workflow.
+Le reçu de contribution hors ligne standard affiche des informations limitées. Il peut être personnalisé mais cela nécessite une connaissance de Smarty. Il vous sera peut-être plus facile de configurer des reçus «envoyer plus tard» en utilisant le flux de lettres de remerciements.
 
-## Thank-you letters
 
-Some organisations may wish to send thank-you letters to people who
-donated to a particular campaign, advising them of the total amount
-raised. Other organisations like to send one receipt to each contact at
-the end of the fiscal year covering all tax-deductible donations made
-during that year. Both of these scenarios and more can be accomplished
-using the "Thank-you letters for Contributions" functionality. This
-action is available from a search results screen displaying
-contributions (rather than contacts). The steps involved are:
+## Lettres de remerciements
 
-1.  Use **Find Contributions** or use **Advanced Search** with **Display
-    Results As** set to **Contributions** for your search.
-2.  Select the contributions for which you want thank-you letters or
-    combined receipts.
-3.  Choose the action **Thank-you letters - print or email**. The
-    following will be displayed:
-    ![ContributionThankyouLettersNogrouping](../img/civicontribute-thank-you-letters-no-grouping.PNG)
-4.  Choose to **Update thank-you dates for these contributions** or
-    **Update receipt dates for these contributions** as required. The
-    current date will be entered into the appropriate field.**
-    **
-5.  There are three self-explanatory **Print and Email Options**:
-    -   Generate PDFs for printing (only)
-    -   Send emails where possible. Generate printable PDFs for contacts
-        who cannot receive emails
-    -   Send emails where possible. Generate printable PDFs for all
-        contacts.
+Certaines organisations souhaitent envoyer des lettres de remerciement aux personnes qui ont fait un don pour une campagne particuliere, en les informant du montant total recueilli. D'autres organisations préfèrent envoyer un reçu à chaque contact en fin d'année fiscale couvrant tous les dons déductibles d'impôt effectués au cours de cette année. Ces deux scénarios et d'autres peuvent être réalisés à l'aide de la fonctionnalité "Lettres de remerciement pour les contributions". Cette action est disponible à partir de l'écran de résultats de recherche affichant des contributions (plutôt que des contacts). Les étapes suvantes permettent cette réalisation:
 
-6.  Some people may have made more than one contribution. If you want
-    to send one letter for each contribution then set **Group
-    contributions by** to **"-no grouping-"**. Alternatively, you can
-    choose to show contribution data for multiple contributions from the
-    same contact in one location in the body of your letter. There are
-    five "group by" " options.
-7.  **Separator (grouped contributions)** only applies if you have
-    chosen something other than **- no grouping -** for the
-    contributions. These options will be discussed below in *Grouped contribution thank-you letters*.
-8.  Make sure to check the **Page Format** settings.
-9.  You can use an existing template, create a new letter for one-off
-    use, or create a new letter and save it as a new template.
-    [Tokens and mail merge](.../common-workflows/tokens-and-mail-merge) and
-    [Postal mail communications](.../common-workflows/postal-mail-communications)
-    provide more information on creating letter templates.
-10. When you click on **Make Thank-you Letters** the letters will be
-    generated and a "Print PDF letter" activity will be created for each
-    letter with the **Activity Subject** you have specified.
+1. Utilisez **Rechercher des contributions** ou utilisez **Recherche avancée** avec **Afficher les résultats comme** défini sur **Contributions** pour votre recherche.
+2. Sélectionnez les contributions pour lesquelles vous voulez des lettres de remerciement ou des reçus combinés.
+3. Choisissez l'action **Lettres de remerciement - imprimer ou Email**. Les éléments suivants seront affichés:
 
-### Grouped contribution thank-you letters
+![ContributionThankyouLettersNogrouping](../img/civicontribute-thank-you-letters-no-grouping.PNG)
 
-You can send end-of-fiscal-year giving statements/tax receipts to your contacts
- if you choose an option other than **-no grouping-** for the field
- **Group contributions by**.
+4. Choisissez **Mettre à jour les dates de remerciements pour ces contributions** ou **Mettre à jour les dates de réception de ces contributions** selon les besoins. La date actuelle sera saisie dans le champ approprié.
+5. Il y a trois **Options d'impression et d'email** explicites:
 
-In a standard CiviCRM installation, the letters that can be produced
-when you group contributions are fairly rudimentary.
+    - Générer des fichiers PDF pour l'impression (uniquement)
+    - Envoyer des emails si possible. Générer des fichiers PDF imprimables pour les contacts qui ne peuvent ou ne veulent pas recevoir d'e-mails
+    - Envoyer des emails si possible. Générer des fichiers PDF imprimables pour tous les contacts.
 
-If you choose **Comma** as the **Separator** then the contribution
-amounts and/or dates will follow one after the other separated by
-commas. For example "Thank you for your generous donations of
-{contribution.total_amount} received on {contribution.receive_date}
-respectively." will become "Thank you for your generous donations of
-$100.00, $150.00, $325.00 received on 1 January 2015, 5 March 2015,
-16 May 2015 respectively."
+6. Certaines personnes peuvent avoir plusieurs contributions. Si vous souhaitez envoyer une lettre pour chaque contribution, définissez **Contributions de groupe par** à **- pas de regroupement -**. Vous pouvez également choisir d'afficher les données de contribution pour plusieurs contributions provenant du même contact à un emplacement dans le corps de votre lettre. Il y a cinq options "grouper par".
+7. **Séparateur (contributions groupées)** ne s'applique que si vous avez choisi autre chose que **- aucun regroupement -** pour les contributions. Ces options seront développées ci-dessous dans *Lettres de remerciement groupées*.
+8. Assurez-vous de vérifier les paramètres **Format de page**.
+9. Vous pouvez utiliser un modèle existant, créer une nouvelle lettre à usage unique ou créer une nouvelle lettre et l'enregistrer en tant que nouveau modèle.
+[Jetons et publipostage](... / common-workflows/jetons-et-publipostage) et [Communications par courrier postal](.../common-workflows/post-mail-communications) 
+fournissent plus d'informations sur la création de lettres modèles
+10. Lorsque vous cliquez sur **Rédiger des lettres de remerciement**, les lettres seront générées et une activité «Imprimer une lettre PDF» sera créée pour chaque lettre avec le **Sujet d'activité** que vous avez spécifié.
 
-If you choose **Table Cell** as the **Separator** then each contribution
-instance will be placed in its own table column. For example:
+
+### Lettres de remerciement groupées
+
+Vous pouvez envoyer des relevés de fin d'exercice ou des reçus fiscaux à vos contacts si vous choisissez une option autre que **- aucun regroupement -** pour le champ **Contributions groupées par**.
+
+Dans une installation CiviCRM standard, les lettres par défaut qui sont être produites lorsque vous regroupez des contributions peuvent vous paraitre assez sommaire. 
+In a standard CiviCRM installation, the letters that can be produced when you group contributions are fairly rudimentary.
+
+Si vous choisissez **Virgule** comme **Séparateur**, les montants et / ou les dates de cotisation se suivront l'une après l'autre, séparés par des virgules. 
+Par exemple "Merci pour vos généreux dons de {contribution.total_amount} reçus  {contribution.receive_date} respectivement." deviendra "Merci pour vos généreux dons de 100,00 €, 150,00 €, 325,00 € reçus le 1er janvier 2018, le 5 mars 2018, le 16 mai 2018 respectivement."
+Si vous choisissez **Tabulation** comme **Séparateur**, chaque instance de contribution sera placée dans sa propre colonne de table. Par exemple:
 
 ![image](../img/Thank-you%20letters%20as%20table%20template.PNG)
 
-will result in:
+aura pour résultat:
 
 ![image](../img/Thank-you%20letters%20as%20table_1.PNG)
 
-This format works well if only a few contributions have been received
-during the year, but the table will be wider than the page for monthly,
-fortnightly or weekly donations.
+Ce format fonctionne bien si seulement plusieurs contributions ont été reçues au cours de l'année, mais la table sera plus large que la page pour les dons mensuels, bimensuels ou hebdomadaires.
 
-In neither case can the total yearly contribution amount be included in
-the letter.
+Dans aucun des deux cas, le montant total de la contribution annuelle ne peut être inclus dans la lettre.
 
-To include the total yearly contribution amount in the letter and to
-produce a letter more suited to several contributions from the one
-person, you (or your implementer/developer) will need to enable Smarty
-functionality for you emails
+In neither case can the total yearly contribution amount be included in the letter.
+
+Pour inclure le montant annuel total de la contribution dans la lettre et pour produire une lettre plus adaptée à plusieurs contributions de la même personne, vous ou votre développeur devrez activer la fonctionnalité Smarty pour vos emails. Voir ici :
 ([http://wiki.civicrm.org/confluence/display/CRMDOC/Smarty+in+mail+templates](http://wiki.civicrm.org/confluence/display/CRMDOC/Smarty+in+mail+templates)).
+Une fois que cela a été fait, le montant annuel total de la contribution peut être inclus dans la lettre en utilisant le jeton {$ contribution_aggregate}.
 
-Once that has been done the total yearly contribution amount can be
-included in the letter using the token {$contribution_aggregate}.
-
-For example, if the HTML source for your letter is:
+Par exemple, si la source HTML pour votre lettre est:
 
 ```html
 <p>Dear {contact.first_name}</p>
@@ -151,6 +99,6 @@ For example, if the HTML source for your letter is:
  --></tbody>
   </table>
 ```
-then your letters will look like:
+alors vos lettres ressembleront à:
 
 ![image](../img/Thank-you%20letters%20as%20with%20smarty%20enabled_2.PNG)
