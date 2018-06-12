@@ -127,7 +127,7 @@ pages:
     - 'Everyday Tasks': 'case-management/everyday-tasks.md'
     - 'Reports and analysis': 'case-management/reports-and-analysis.md'
 - Campaign:
-    - 'Qu'est-ce que Civicampaign?': 'campaign/what-is-civicampaign.md'
+    - "Qu'est-ce que Civicampaign?": 'campaign/what-is-civicampaign.md'
     - 'What You Need To Know': 'campaign/what-you-need-to-know.md'
     - 'Set-up': 'campaign/set-up.md'
     - 'Everyday tasks': 'campaign/everyday-tasks.md'
