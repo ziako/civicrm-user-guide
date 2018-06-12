@@ -68,173 +68,107 @@ Vous devez décochez cette case si vous utilisez cette page de contribution pour
 - Si vous désélectionnez la **Section Montants des contributions**, les champs restants de cette page disparaîtront. Vous ne pourrez accepter que des frais d'adhésion à montant fixe ou, si vous configurez un ensemble de prix d'adhésion, des frais d'adhésion à montant fixe et d'autres contributions comme spécifié dans le tarif fixé lors d'une transaction **unique**.
 - Sélectionnez un **Tarif** prédéfini (pour les options de paiement plus complexes) OU entrez jusqu'à 10 montants de cotisations fixes dans le tableau au bas de la page.
 - Vous pouvez sélectionner **Contributions récurrentes** si votre processeur de paiement et son intégration avec CiviCRM prennent en charge la facturation récurrente et que vous souhaitiez autoriser cette fonctionnalité. (Il existe des restrictions sur les paiements récurrents lorsque [les frais d'adhésion](../adhésion/définition-adhésions) sont payés.) Si vous cochez **Contributions récurrentes** d'autres paramètres deviennent visibles.
-- Cochez la case **Promesses** pour donner aux utilisateurs la possibilité de [promettre des paiements futurs](../pledges/what-is-civipledge).
+- Cochez la case **Promesses de dons** pour donner aux utilisateurs la possibilité de [promettre des paiements futurs](../pledges/what-is-civipledge).
+- Décidez de l'étiquette de la zone Montant de la contribution sur votre page.
+- Cochez **Autoriser d'autres montants** pour donner aux utilisateurs la possibilité de payer le montant qu'ils choisissent. Vous pouvez définir un montant minimum et maximum pour les contributions «Autres montants» si vous le souhaitez.
+- Cliquez sur **Enregistrer et Terminé**.
 
+### Onglet Adhésions 
 
--  Check the **Pledges** box to give users the opportunity to [pledge future payments]
--  Decide on the label for the Contribution amount area on your page.
--  Check **Allow other amounts** to give users the option to pay any
-    amount they choose. You can set a minimum and a maximum amount for "Other Amount" contributions if you want to.
--  Click **Save and Done**.
+Cet onglet est traité en détail dans [Adhésions](../memberships/online-membership-sign-up).
 
-### Memberships tab
+### Onglet Profil
 
-This is covered in detail in  [Memberships](../memberships/online-membership-sign-up).
+Si vous s
+ouhaitez recueillir des informations auprès des contributeurs au-delà des champs standards requis pour apporter une contribution, tels que l'âge, les intérêts et les compétences, vous pouvez inclure les Profils CiviCRM existants au début ou à la fin d'une page de contribution. Vous pouvez également créer de nouveaux profils.
 
-### Profile tab
+Les profils utilisés dans une page de contribution ne peuvent contenir que des champs appartenant aux:
+- dossiers de contact
+- dossiers de contribution
 
-If you want to collect information from contributors beyond the essential fields
-required to make a contribution, such as age, interests and skills,
-you can include existing CiviCRM Profiles at the beginning or end of a
-contribution page. You can also create new profiles.
+Les profils qui incluent des champs associés à d'autres types d'enregistrements ne sont pas disponibles.
 
-Profiles used in a contribution page can ONLY contain fields which
-belong to:
+Les pages de contribution incluent toujours un champ d'adresse e-mail obligatoire, quelquesoit les autres champs inclus dans vos profils.
 
--   contact records
--   contribution records
+1. Accédez à Gérer les pages de contribution puis, pour la page que vous souhaitez configurer, cliquez sur **Configurer> Inclure les profils**.
+2. Sélectionnez un profil CiviCRM dans le menu déroulant, à inclure en haut de la page de contribution et / ou en bas de la page. Vous pouvez ensuite prévisualiser vos sélections, modifier un profil existant, copier un profil existant ou créer un nouveau profil.
 
-Profiles which include fields associated with any other record types
-will not be available for this purpose.
-
-Contribution pages will always include a required email address field,
-regardless of whether you include any other fields in your profile(s).
-
-1.  Navigate to Manage Contribution Pages then for the page you wish to
-    configure, click on **Configure > Include Profiles**.
-2.  Select a CiviCRM profile from the dropdown menu to be included at
-    the top of the contribution page and/or at the bottom of the page.
-    You can then preview your selection(s), edit an existing profile,
-    copy an existing profile or create a new profile.
-    When you edit or create a new profile you will use the profile drag
-    and drop interface pictured here.
+Lorsque vous modifiez ou créez un nouveau profil, vous pouvez utiliser l'interface glisser-déposer du profil représentée ici.
 
     ![image](../img/Contribution-page-edit-profile2.gif)
+    
+!!! AVERTISSEMENT: Si vous modifiez un profil existant lors de la configuration de votre page Contribution, les modifications que vous apportez s'appliqueront partout où ce profil est utilisé. Ainsi, sauf si un profil existant **correspond exactement à vos besoins, copiez le profil, puis renommez et modifiez la copie selon les besoins.    
 
-    WARNING: If you modify an existing profile whilst configuring your
-    Contribution page, the changes you make will apply everywhere that
-    profile is being used. So unless an existing profile **exactly**
-    matches your requirements you should copy the profile, then rename
-    and edit the copy as required.
-3.  Click **Save** or **Save and Done** or **Save and Next**.
+3. Cliquez sur **Enregistrer** ou **Enregistrer et Terminer** ou **Enregistrer et Suivant**.
 
-For more information read [Profiles](../organising-your-data/profiles).
+Pour plus d'informations, lisez [Profils](../organising-your-data/profiles).
 
-Automatic Contribution Recording
+Enregistrement automatique des contributions
 --------------------------------
 
-Regardless of how donors get to your contribution page, CiviCRM
-automatically records their donations, freeing your staff from doing
-manual data entry. If the donors already exist in the database, CiviCRM
-adds the contribution to their existing record. If they don't exist,
-CiviCRM creates a new record for them.
+Peu importe la façon dont les donateurs accèdent à votre page de contribution, CiviCRM enregistre automatiquement leurs dons, libérant ainsi votre personnel de la saisie manuelle des données. Si les donateurs existent déjà dans la base de données, CiviCRM ajoute la contribution à leur dossier. S'ils n'existent pas, CiviCRM crée un nouvel enregistrement pour eux.
 
-In situations where people have multiple email addresses, or where more
-than one person shares an email address, it can be possible for
-contributions to be credited to the wrong contact. To mitigate the
-chance of this happening, you can adjust CiviCRM's default duplicate
-matching rules. For instructions on how to do this, read
-[Deduping and Merging](../common-workflows/deduping-and-merging).
+Dans les cas où les utilisateurs ont plusieurs adresses e-mail ou si plus d'une personne partage une adresse e-mail, il est possible que les contributions soient créditées au mauvais contact. Pour limiter ce risque, vous pouvez ajuster les règles de correspondance des doublons par défaut de CiviCRM. Pour obtenir les instructions sur la façon de procéder, lisez [Dedoublonner et fusionner](../common-workflows/deduping-and-merging).
 
-### Receipt TabThank-you and Receipting
 
-Once you have created your contribution page, you can customise the
-Thank-you and Receipt emails that are sent to contributors.
+### Onglet Reçu et remerciement
 
-1.  Navigate to **Administer > CiviContribute > Manage Contribution
-    Pages**.
-2.  Use the **Configure** link at the right-hand side of a contribution
-    page in the list to access and edit the page.
-3.  Click on **Thank-you and Receipting** and enter the information that
-    you wish to appear in the thank-you email. Donors usually expect a
-    receipt as soon as their transaction is complete, so it is
-    recommended to enable the automatic Email Receipt.
-4.  Click **Save and Done**.
+Dès que votre page de contribution est créée, vous pouvez personnaliser les e-mails de remerciement et de reçu envoyés aux contributeurs.
 
-## Publicizing your contribution page
+1. Accédez à **Administrer> CiviContribute> Gérer les pages de contribution**.
+2. Utilisez le lien **Configurer** sur le côté droit d'une page de contribution pour accéder à la page et la modifier.
+3. Cliquez sur **Remerciements et reçus**. Entrez les informations que vous souhaitez voir apparaître dans le courriel de remerciement. Les donneurs s'attendent généralement à recevoir un reçu dès que leur transaction est terminée. Il est donc recommandé d'activer le reçu de courrier électronique automatique.
+4. Cliquez sur **Enregistrer et Terminé**.
 
-Now that you've created your contribution page, it's time to bring
-people to the page so they can contribute. You will probably want to
-display a link to the page prominently on your website through a donate
-button or menu item. Here are some additional tips for promoting a
-contribution page in different CiviCRM configurations:
 
-### Menu item in Joomla!
+## Publier votre page de contribution
 
-The most direct way to expose your contribution page or membership
-signup/renewal page on the front of your web site is by creating a menu
-item.
+Maintenant que vous avez créé votre page de contribution, il est temps d'amener les gens sur la page afin qu'ils puissent contribuer. Vous voudrez probablement afficher un lien vers la page en évidence sur votre site Web via un bouton de don ou un élément de menu. Voici quelques conseils supplémentaires pour promouvoir une page de contribution dans différentes configurations de CiviCRM:
 
-1.  Navigate to a menu and create a new CiviCRM item.
-2.  From the list of menu options, choose Contributions.
-3.  In the basic parameters section, select the contribution page you
-    would like exposed from the dropdown menu.
-4.  Save the menu item and view the website to confirm the page's
-    functionality.
 
-### Menu item in Drupal
+### Élément de menu dans Joomla!
 
-From the contribution page listing, select Live Page to view the
-finished page. You can then copy the URL and include it in a content
-page or assign it to a menu item.
+La façon la plus directe d'afficher votre page de contribution ou votre page d'inscription / de renouvellement d'adhésion sur le devant de votre site Web consiste à créer un élément de menu.
 
-### Page or Post in WordPress
+1. Accédez à un menu et créez un nouvel élément CiviCRM.
+2. Dans la liste des options de menu, choisissez Contributions.
+3. Dans la section Paramètres de base, sélectionnez la page de contribution que vous souhaitez afficher dans le menu déroulant.
+4. Enregistrez l'élément de menu et vérifier votre site Web pour confirmer la fonctionnalité de la page.
 
-You can easily embed your contribution page in a post or page on your
-WordPress front-end site.
 
-1.  Login to the administration dashboard of your WordPress site.
-2.  Click on **Pages** or **Posts > Add New**
-3.  Click on the CiviCRM icon next to Upload / Insert
-4.  Select Contribution Page as your Frontend Element
-5.  Select the desired contribution page
-6.  Save the page or post, and your contribution page will automatically
-    be embedded within your site's theme on that page.
+### Option de menu dans Drupal
+
+Dans la liste des pages de contribution, sélectionnez Page en direct pour afficher la page terminée. Vous pouvez ensuite copier l'URL et l'inclure dans une page de contenu ou l'affecter à un élément de menu.
+
+
+### Page ou Post dans WordPress
+
+Vous pouvez facilement intégrer votre page de contribution dans un article ou une page sur votre site Web WordPress.
+
+1. Connectez-vous au tableau de bord d'administration de votre site WordPress.
+2. Cliquez sur **Pages** ou **Publications> Ajouter nouveau**.
+3. Cliquez sur l'icône CiviCRM à côté de Upload / Insert
+4. Sélectionnez Page de contribution en tant qu'élément Frontend
+5. Sélectionnez la page de contribution souhaitée
+6. Sauvegardez la page ou la publication, et votre page de contribution sera automatiquement intégrée au thème de votre site sur cette page.
+
 
 ### "Pretty" URLs
 
-CiviContribute contribution pages have "ugly" URLs - in other words,
-they are difficult to remember. An example is *:*
+Les pages de contribution ont des URL un peu "compliquées" - en d'autres termes, elles sont difficiles à retenir. Un exemple est *: *www.myorganization.org/civicrm/contribute/transact?reset=1&id=1*
 
-*www.myorganization.org/civicrm/contribute/transact?reset=1&id=1*
-
-On the other hand, "pretty" URLs are much easier to remember and use in
-your organization's outreach, for example:
-
+D'un autre côté, les URL "plus simples" sont beaucoup plus faciles à retenir et à utiliser, par exemple:
 *www.myorganization.org/donate*
 
-A pretty URL is simply a URL redirect (automatically taking people from
-one page of your web site to another). Drupal provides a helpful module
-called Path Redirect
-([http://drupal.org/project/path_redirect](http://drupal.org/project/path_redirect))
-that lets you can create URL redirects from the user interface without
-complicated web server configuration. Joomla! users also have a
-work-around if Search Engine Friendly URLs are enabled in Global
-Settings. You can then create a menu link to the contribution page and
-define the "pretty" URL using the alias field.
+Ce genre d'URL est simplement une redirection d'URL (amenant automatiquement les gens d'une page de votre site web à une autre). Drupal fournit un module utile appelé Redirection de chemin ([http://drupal.org/project/path_redirect](http://drupal.org/project/path_redirect)) qui vous permet de créer des redirections d'URL à partir de l'interface utilisateur sans configuration compliquée du serveur Web. 
+Pour Joomla!, les utilisateurs ont également une solution de rechange si les URL conviviales pour les moteurs de recherche sont activées dans les paramètres globaux. Vous pouvez ensuite créer un lien de menu vers la page de contribution et définir une URL "simplifiée" en utilisant le champ alias.
 
-### Personalised Email
 
-Emailing your current membership is the other critical way to publicize
-the campaign. The CiviMail component of CiviCRM allows you to send
-targeted emails to any group of contacts in your database. Within a
-CiviMail message you can include links to the contribution form and use
-CiviMail's tracking capability to see how many people click on that
-link.
+### Email personnalisé
 
-One time-tested way to increase contributions is to send each targeted
-constituent a personalized email with a link to the contribution form
-that has all of their contact information already filled in. This saves
-them the hassle of filling it out and raises the chances that they
-donate. Using CiviMail, you can use this feature by creating a special
-link in the body of your CiviMail message that includes a *checksum
-token*. A checksum is a unique and pseudo-random number assigned to each
-recipient of the mailing that points back to their contact information,
-securely stored in your database.
+L'envoi par e-mail aux contacts enregistrés est un autre moyen essentiel de diffuser votre campagne. Le composant CiviMail de CiviCRM vous permet d'envoyer des e-mails ciblés à n'importe quel groupe de contacts de votre base de données. Dans un message CiviMail, vous pouvez inclure des liens vers le formulaire de contribution et utiliser la fonction de suivi de CiviMail pour voir combien de personnes ont cliqué sur ce lien.
 
-When people click on the special link, CiviCRM looks them up in the
-database and pre-fills fields on the contribution form (core fields or
-fields exposed via a profile) with any information in their contact
-record. To read more on how to do this and what the link path must be,
-visit:
+Une façon éprouvée d'augmenter les contributions ou les dons est d'envoyer à chaque contact ciblé un courriel personnalisé avec un lien vers le formulaire de contribution dans lequel toutes les coordonnées seront déjà remplies. Cela leur évite d'avoir à le remplir et augmente les chances qu'ils fassent un don. Vous pouvez utiliser cette fonctionnalité en créant un lien spécial dans le corps de votre message CiviMail qui inclut un *jeton de somme de contrôle*. Une somme de contrôle est un nombre unique et pseudo-aléatoire attribué à chaque destinataire de l'envoi qui pointe vers ses informations de contact, stockées de manière sécurisée dans votre base de données.
+
+Si les utilisateurs cliquent sur le lien spécial, CiviCRM les recherche dans la base de données et remplit à l'avance les champs du formulaire de contribution (champs principaux ou champs affichés via un profil) avec toutes informations nécessaires de leur fiche de contact. Pour en savoir plus sur la façon de procéder et sur le chemin du lien, visitez:
 [http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens](http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens)
