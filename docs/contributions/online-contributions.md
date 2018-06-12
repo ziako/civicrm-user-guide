@@ -5,7 +5,7 @@ Cette section décrit la mise en place de pages de contribution en ligne dans le
 CiviContribute est très flexible, adaptable et inclut de nombreux champs et fonctionnalités optionnelles tels que des contributions récurrentes, des promesses de dons et des pages de campagne personnelle. Cela peut rendre la mise en place de pages de contribution comme une tâche lourde, mais pas insurmontable comme le montrent les deux premières procédures ci dessous.
 
 
-## La page de contribution la plus simple (réception envoyée uniquement par le processeur de paiement.)
+## La page de contribution la plus simple (réçu envoyé uniquement par le processeur de paiement.)
 
 1. Assurez-vous d'avoir un [processeur de paiement configuré](../contributions/payment-processors).
 2. Allez à **Contributions> Nouvelle page de contribution**.
@@ -13,7 +13,7 @@ CiviContribute est très flexible, adaptable et inclut de nombreux champs et fon
 4. Sélectionnez le **type financier** approprié.
 5. Cliquez sur **Continuer**.
 6. Sur la page suivante, laissez tout tel quel, sauf en cochant la case **Autoriser d'autres montants** et en réglant les montants **minimum * et / ou **maximum** si vous le souhaitez.
-7. Cliquez sur **Enregistrer et Terminé**.
+7. Cliquez sur **Enregistrer et Terminér**.
 8. Suivez les étapes de votre CMS pour [afficher cette page sur votre site web](#publicizing-your-contribution-page).  
 
 
@@ -29,7 +29,7 @@ CiviContribute est très flexible, adaptable et inclut de nombreux champs et fon
 8. Sélectionnez l'onglet **Reçu**.
 9. Entrez le **titre** pour votre page de remerciement.
 10. Cochez **Reçu de courrier électronique au contributeur**.
-11. Entrez l'adresse email "DE" dans **Receipt From Email**.
+11. Entrez l'adresse email "DE" dans **Reçu From Email**.
 12. Cliquez sur **Enregistrer et Terminé**.
 
 Suivez les étapes de votre CMS pour [afficher cette page sur votre site](#publicizing-your-contribution-page).
@@ -53,7 +53,7 @@ Accédez à **Contribution> Nouvelle page de contribution**. (**Contribution> G�
 - Décidez si la page de contribution doit être active ou non.
 - Cliquez sur **Continuer**. (C'est à ce moment que votre nouvelle page de contribution est enregistrée pour la première fois.) Vous pourrez revenir en arrière et modifier tous les aspects de cette page à tout moment en cliquant sur l'onglet **Titre** et Paramètres.
 
-Vous allez ensuite à l'onglet (Contributions) **Montants**. Toutes les autres fonctionnalités sont alors visibles dans les onglets en haut de page. Nous les explorons un à un ci-dessous.
+Vous allez ensuite à l'onglet (Contributions) **Montants**. Toutes les autres fonctionnalités sont alors visibles dans les onglets en haut de page. Nous les explorons une à une ci-dessous.
 
 
 ### Onglet Montants 
@@ -63,13 +63,13 @@ Vous allez ensuite à l'onglet (Contributions) **Montants**. Toutes les autres f
 - La case **Exécuter les transactions monétaires en temps réel** est cochée par défaut.
 Vous devez décochez cette case si vous utilisez cette page de contribution pour une inscription gratuite ou pour solliciter des dons en nature (non monétaires) ou si vous voulez que tous les utilisateurs ** soumettent leurs paiements hors ligne.
 - Sélectionnez la **Devise** monétaire.
-- Sélectionnez une ou plusieurs [Processeurs de paiement](../contributions/processeurs de paiement) préalablement configurés pour cette page. Certaines organisations trouvent que c'est une bonne idée d'offrir un choix de processeurs. Vous pouvez le faire en configurant plusieurs processeurs et en cochant les cases correspondantes sur ce formulaire.
-- Cochez la case **Payer plus tard** si vous souhaitez donner aux utilisateurs la possibilité de réaliser un paiement hors ligne (par exemple, envoyer un chèque par la poste, payer par virement ou carte de crédit, etc.). Si vous autorisez le paiement des contributions à venir, vous devrez choisir une étiquette à cocher à afficher à vos utilisateurs et les instructions pour soumettre ces paiements différés.
-- Si vous désélectionnez la **Section Montants des contributions**, les champs restants de cette page disparaîtront. Vous ne pourrez accepter que des frais d'adhésion à montant fixe ou, si vous configurez un ensemble de prix d'adhésion, des frais d'adhésion à montant fixe et d'autres contributions comme spécifié dans le tarif fixé lors d'une transaction **unique**.
+- Sélectionnez un ou plusieurs [Processeurs de paiement](../contributions/processeurs de paiement) préalablement configurés pour cette page. Certaines organisations trouvent que c'est une bonne idée d'offrir un choix de processeurs. Vous pouvez le faire en configurant plusieurs processeurs et en cochant les cases correspondantes sur ce formulaire.
+- Cochez la case **Payer plus tard** si vous souhaitez donner aux utilisateurs la possibilité de réaliser un paiement hors ligne (par exemple, envoyer un chèque par la poste, payer par virement ou carte de crédit, etc.). Si vous autorisez le paiement des contributions à venir, vous devrez choisir une étiquette à cocher, à afficher à vos utilisateurs, et les instructions pour soumettre ces paiements différés.
+- Si vous désélectionnez la Section **Montants des contributions**, les champs restants de cette page disparaîtront. Vous ne pourrez accepter que des frais d'adhésion à montant fixe ou, si vous configurez un ensemble de prix d'adhésion, des frais d'adhésion à montant fixe et d'autres contributions comme spécifié dans le tarif fixé lors d'une transaction **unique**.
 - Sélectionnez un **Tarif** prédéfini (pour les options de paiement plus complexes) OU entrez jusqu'à 10 montants de cotisations fixes dans le tableau au bas de la page.
 - Vous pouvez sélectionner **Contributions récurrentes** si votre processeur de paiement et son intégration avec CiviCRM prennent en charge la facturation récurrente et que vous souhaitiez autoriser cette fonctionnalité. (Il existe des restrictions sur les paiements récurrents lorsque [les frais d'adhésion](../adhésion/définition-adhésions) sont payés.) Si vous cochez **Contributions récurrentes** d'autres paramètres deviennent visibles.
 - Cochez la case **Promesses de dons** pour donner aux utilisateurs la possibilité de [promettre des paiements futurs](../pledges/what-is-civipledge).
-- Décidez de l'étiquette de la zone Montant de la contribution sur votre page.
+- Décidez de l'étiquette de la zone "Montant de la contribution" sur votre page.
 - Cochez **Autoriser d'autres montants** pour donner aux utilisateurs la possibilité de payer le montant qu'ils choisissent. Vous pouvez définir un montant minimum et maximum pour les contributions «Autres montants» si vous le souhaitez.
 - Cliquez sur **Enregistrer et Terminé**.
 
@@ -79,8 +79,7 @@ Cet onglet est traité en détail dans [Adhésions](../memberships/online-member
 
 ### Onglet Profil
 
-Si vous s
-ouhaitez recueillir des informations auprès des contributeurs au-delà des champs standards requis pour apporter une contribution, tels que l'âge, les intérêts et les compétences, vous pouvez inclure les Profils CiviCRM existants au début ou à la fin d'une page de contribution. Vous pouvez également créer de nouveaux profils.
+Si vous souhaitez recueillir des informations auprès des contributeurs au-delà des champs standards requis pour apporter une contribution, tels que l'âge, les intérêts et les compétences, vous pouvez inclure les Profils CiviCRM existants au début ou à la fin d'une page de contribution. Vous pouvez également créer de nouveaux profils.
 
 Les profils utilisés dans une page de contribution ne peuvent contenir que des champs appartenant aux:
 - dossiers de contact
@@ -88,10 +87,10 @@ Les profils utilisés dans une page de contribution ne peuvent contenir que des 
 
 Les profils qui incluent des champs associés à d'autres types d'enregistrements ne sont pas disponibles.
 
-Les pages de contribution incluent toujours un champ d'adresse e-mail obligatoire, quelquesoit les autres champs inclus dans vos profils.
+Les pages de contribution incluent toujours un champ d'adresse e-mail obligatoire, quelque soit les autres champs inclus dans vos profils.
 
-1. Accédez à Gérer les pages de contribution puis, pour la page que vous souhaitez configurer, cliquez sur **Configurer> Inclure les profils**.
-2. Sélectionnez un profil CiviCRM dans le menu déroulant, à inclure en haut de la page de contribution et / ou en bas de la page. Vous pouvez ensuite prévisualiser vos sélections, modifier un profil existant, copier un profil existant ou créer un nouveau profil.
+1. Accédez à **Gérer les pages de contribution** puis, pour la page que vous souhaitez configurer, cliquez sur **Configurer> Inclure les profils**.
+2. Sélectionnez un profil CiviCRM dans le menu déroulant, à inclure en haut et / ou en bas de la page de contribution. Vous pouvez ensuite prévisualiser vos sélections, modifier un profil existant, copier un profil existant ou créer un nouveau profil.
 
 Lorsque vous modifiez ou créez un nouveau profil, vous pouvez utiliser l'interface glisser-déposer du profil représentée ici.
 
@@ -123,7 +122,7 @@ Dès que votre page de contribution est créée, vous pouvez personnaliser les e
 
 ## Publier votre page de contribution
 
-Maintenant que vous avez créé votre page de contribution, il est temps d'amener les gens sur la page afin qu'ils puissent contribuer. Vous voudrez probablement afficher un lien vers la page en évidence sur votre site Web via un bouton de don ou un élément de menu. Voici quelques conseils supplémentaires pour promouvoir une page de contribution dans différentes configurations de CiviCRM:
+Maintenant que vous avez créé votre page de contribution, il est temps d'amener les gens sur la page afin qu'ils puissent contribuer. Vous voudrez probablement afficher un lien vers la page d'accueil de votre site Web via un bouton de don ou un élément de menu. Voici quelques conseils supplémentaires pour promouvoir une page de contribution dans différentes configurations de CiviCRM:
 
 
 ### Élément de menu dans Joomla!
@@ -153,7 +152,7 @@ Vous pouvez facilement intégrer votre page de contribution dans un article ou u
 6. Sauvegardez la page ou la publication, et votre page de contribution sera automatiquement intégrée au thème de votre site sur cette page.
 
 
-### "Pretty" URLs
+### URLs "simplifiées"
 
 Les pages de contribution ont des URL un peu "compliquées" - en d'autres termes, elles sont difficiles à retenir. Un exemple est *: *www.myorganization.org/civicrm/contribute/transact?reset=1&id=1*
 
