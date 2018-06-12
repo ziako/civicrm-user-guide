@@ -61,7 +61,7 @@ pages:
     - 'Rechercher des contributions': 'contributions/finding-and-viewing-contributions.md'
     - 'Envoi de reçus et lettres de remerciements': 'contributions/manual-receipts-and-thank-yous.md'
     - 'Reports and analysis': 'contributions/reports-and-analysis.md'
-    - "Bénéficiaires de contributions": 'contributions/soft-credits.md'
+    - "Crédit Indirect": 'contributions/soft-credits.md'
     - 'Personal Campaign Pages': 'contributions/personal-campaign-pages.md'
     - 'Accounting Integration': 'contributions/accounting-integration.md'
     - 'Payment processors': 'contributions/payment-processors.md'
