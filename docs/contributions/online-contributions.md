@@ -55,28 +55,23 @@ Accédez à **Contribution> Nouvelle page de contribution**. (**Contribution> G�
 
 Vous allez ensuite à l'onglet (Contributions) **Montants**. Toutes les autres fonctionnalités sont alors visibles dans les onglets en haut de page. Nous les explorons un à un ci-dessous.
 
---- TRADUCTION EN COURS ----
 
-### Amounts tab
+### Onglet Montants 
+
 ![Contributions Amounts Page](../img/civicontribute-online-contribution-amounts.png)
 
--  The **Execute real-time monetary transactions** box is checked by default.
-You would uncheck this box if you are using this contribution page for free
-membership signup or to solicit in-kind (non-monetary) donations, or when you
-want **all** users to submit their payments offline.
--  Select the **Currency**.
--  Select one or more previously configured [Payment Processors](../contributions/payment-processors)
-for this page. Some organizations find it is a good idea to offer a choice of
-processors. You can do this by setting up multiple processors, and checking the
-    corresponding boxes on this form.
--  Check the **Pay Later** box if you want to give users the option to
-    submit payment offline (e.g. mail in a cheque, call in a credit card, deposit directly into your bank account etc.). If you allow pay later contributions you will need to decide on a checkbox label to display to your users and the instructions for submitting these delayed payments.
--  If you uncheck the **Contribution Amounts Section Enabled** the remaining fields on this page will vanish. You will only be able accept fixed-amount membership fees, or, if you configure a membership price set, fixed-amount memberships fees and other contributions as specified in the price set all charged in a **single** transaction.
--  Select a pre-defined **Price Set** (for more complex payment
-    options), OR enter up to 10 fixed contribution amounts in the table at the bottom of the page.)
--  You can check **Recurring contributions** if you payment processor and its integration with CiviCRM support recurring billing and you want to allow this feature. (There are restrictions on recurring payments when [membership fees](../membership/defining-memberships) are being paid.) If you check **Recurring contributions** further settings become visible.
--  Check the **Pledges** box to give users the opportunity to [pledge
-    future payments](../pledges/what-is-civipledge).
+- La case **Exécuter les transactions monétaires en temps réel** est cochée par défaut.
+Vous devez décochez cette case si vous utilisez cette page de contribution pour une inscription gratuite ou pour solliciter des dons en nature (non monétaires) ou si vous voulez que tous les utilisateurs ** soumettent leurs paiements hors ligne.
+- Sélectionnez la **Devise** monétaire.
+- Sélectionnez une ou plusieurs [Processeurs de paiement](../contributions/processeurs de paiement) préalablement configurés pour cette page. Certaines organisations trouvent que c'est une bonne idée d'offrir un choix de processeurs. Vous pouvez le faire en configurant plusieurs processeurs et en cochant les cases correspondantes sur ce formulaire.
+- Cochez la case **Payer plus tard** si vous souhaitez donner aux utilisateurs la possibilité de réaliser un paiement hors ligne (par exemple, envoyer un chèque par la poste, payer par virement ou carte de crédit, etc.). Si vous autorisez le paiement des contributions à venir, vous devrez choisir une étiquette à cocher à afficher à vos utilisateurs et les instructions pour soumettre ces paiements différés.
+- Si vous désélectionnez la **Section Montants des contributions**, les champs restants de cette page disparaîtront. Vous ne pourrez accepter que des frais d'adhésion à montant fixe ou, si vous configurez un ensemble de prix d'adhésion, des frais d'adhésion à montant fixe et d'autres contributions comme spécifié dans le tarif fixé lors d'une transaction **unique**.
+- Sélectionnez un **Tarif** prédéfini (pour les options de paiement plus complexes) OU entrez jusqu'à 10 montants de cotisations fixes dans le tableau au bas de la page.
+- Vous pouvez sélectionner **Contributions récurrentes** si votre processeur de paiement et son intégration avec CiviCRM prennent en charge la facturation récurrente et que vous souhaitiez autoriser cette fonctionnalité. (Il existe des restrictions sur les paiements récurrents lorsque [les frais d'adhésion](../adhésion/définition-adhésions) sont payés.) Si vous cochez **Contributions récurrentes** d'autres paramètres deviennent visibles.
+- Cochez la case **Promesses** pour donner aux utilisateurs la possibilité de [promettre des paiements futurs](../pledges/what-is-civipledge).
+
+
+-  Check the **Pledges** box to give users the opportunity to [pledge future payments]
 -  Decide on the label for the Contribution amount area on your page.
 -  Check **Allow other amounts** to give users the option to pay any
     amount they choose. You can set a minimum and a maximum amount for "Other Amount" contributions if you want to.
