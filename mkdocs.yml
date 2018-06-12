@@ -100,7 +100,7 @@ pages:
     - "Adhésions annulées ou expirées": 'membership/cancelling-and-expiring-memberships.md'
     - "Création d'accès réservés aux membres": 'membership/making-member-only-websites.md'
 - Email:
-    - 'Qu'est-ce que Civimail?': 'email/what-is-civimail.md'
+    - "Qu'est-ce que Civimail?": 'email/what-is-civimail.md'
     - 'What You Need To Know': 'email/what-you-need-to-know.md'
     - 'Set-up': 'email/set-up.md'
     - 'Maintaining Healthy Email Lists': 'email/maintaining-healthy-email-lists.md'
