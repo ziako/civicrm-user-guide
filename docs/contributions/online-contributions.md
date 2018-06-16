@@ -13,7 +13,7 @@ CiviContribute est très flexible, adaptable et inclut de nombreux champs et fon
 4. Sélectionnez le **type financier** approprié.
 5. Cliquez sur **Continuer**.
 6. Sur la page suivante, laissez tout tel quel, sauf en cochant la case **Autoriser d'autres montants** et en réglant les montants **minimum * et / ou **maximum** si vous le souhaitez.
-7. Cliquez sur **Enregistrer et Terminér**.
+7. Cliquez sur **Enregistrer et Terminer**.
 8. Suivez les étapes de votre CMS pour [afficher cette page sur votre site web](#publicizing-your-contribution-page).  
 
 
@@ -30,7 +30,7 @@ CiviContribute est très flexible, adaptable et inclut de nombreux champs et fon
 9. Entrez le **titre** pour votre page de remerciement.
 10. Cochez **Reçu de courrier électronique au contributeur**.
 11. Entrez l'adresse email "DE" dans **Reçu From Email**.
-12. Cliquez sur **Enregistrer et Terminé**.
+12. Cliquez sur **Enregistrer et Terminer**.
 
 Suivez les étapes de votre CMS pour [afficher cette page sur votre site](#publicizing-your-contribution-page).
 
@@ -71,7 +71,7 @@ Vous devez décochez cette case si vous utilisez cette page de contribution pour
 - Cochez la case **Promesses de dons** pour donner aux utilisateurs la possibilité de [promettre des paiements futurs](../pledges/what-is-civipledge).
 - Décidez de l'étiquette de la zone "Montant de la contribution" sur votre page.
 - Cochez **Autoriser d'autres montants** pour donner aux utilisateurs la possibilité de payer le montant qu'ils choisissent. Vous pouvez définir un montant minimum et maximum pour les contributions «Autres montants» si vous le souhaitez.
-- Cliquez sur **Enregistrer et Terminé**.
+- Cliquez sur **Enregistrer et Terminer**.
 
 ### Onglet Adhésions 
 
@@ -117,7 +117,7 @@ Dès que votre page de contribution est créée, vous pouvez personnaliser les e
 1. Accédez à **Administrer> CiviContribute> Gérer les pages de contribution**.
 2. Utilisez le lien **Configurer** sur le côté droit d'une page de contribution pour accéder à la page et la modifier.
 3. Cliquez sur **Remerciements et reçus**. Entrez les informations que vous souhaitez voir apparaître dans le courriel de remerciement. Les donneurs s'attendent généralement à recevoir un reçu dès que leur transaction est terminée. Il est donc recommandé d'activer le reçu de courrier électronique automatique.
-4. Cliquez sur **Enregistrer et Terminé**.
+4. Cliquez sur **Enregistrer et Terminer**.
 
 
 ## Publier votre page de contribution
@@ -149,7 +149,7 @@ Vous pouvez facilement intégrer votre page de contribution dans un article ou u
 3. Cliquez sur l'icône CiviCRM à côté de Upload / Insert
 4. Sélectionnez Page de contribution en tant qu'élément Frontend
 5. Sélectionnez la page de contribution souhaitée
-6. Sauvegardez la page ou la publication, et votre page de contribution sera automatiquement intégrée au thème de votre site sur cette page.
+6. Sauvegardez la page ou la publication. Votre page de contribution sera automatiquement intégrée au thème de votre site sur cette page.
 
 
 ### URLs "simplifiées"
@@ -160,14 +160,14 @@ D'un autre côté, les URL "plus simples" sont beaucoup plus faciles à retenir 
 *www.myorganization.org/donate*
 
 Ce genre d'URL est simplement une redirection d'URL (amenant automatiquement les gens d'une page de votre site web à une autre). Drupal fournit un module utile appelé Redirection de chemin ([http://drupal.org/project/path_redirect](http://drupal.org/project/path_redirect)) qui vous permet de créer des redirections d'URL à partir de l'interface utilisateur sans configuration compliquée du serveur Web. 
-Pour Joomla!, les utilisateurs ont également une solution de rechange si les URL conviviales pour les moteurs de recherche sont activées dans les paramètres globaux. Vous pouvez ensuite créer un lien de menu vers la page de contribution et définir une URL "simplifiée" en utilisant le champ alias.
+Pour Joomla!, les utilisateurs ont également une solution de rechange si les URL "conviviales" pour les moteurs de recherche sont activées dans les paramètres globaux. Vous pouvez ensuite créer un lien de menu vers la page de contribution et définir une URL "simplifiée" en utilisant le champ alias.
 
 
 ### Email personnalisé
 
-L'envoi par e-mail aux contacts enregistrés est un autre moyen essentiel de diffuser votre campagne. Le composant CiviMail de CiviCRM vous permet d'envoyer des e-mails ciblés à n'importe quel groupe de contacts de votre base de données. Dans un message CiviMail, vous pouvez inclure des liens vers le formulaire de contribution et utiliser la fonction de suivi de CiviMail pour voir combien de personnes ont cliqué sur ce lien.
+L'envoi par e-mail aux contacts enregistrés est un autre moyen essentiel de diffuser vos campagnes de dons, vos évènements,.... Le composant CiviMail de CiviCRM vous permet d'envoyer des e-mails ciblés à n'importe quel groupe de contacts de votre base de données. Dans un message CiviMail, vous pouvez inclure des liens vers le formulaire de contribution et utiliser la fonction de statistiques de CiviMail pour voir combien de personnes ont cliqué sur ce lien.
 
-Une façon éprouvée d'augmenter les contributions ou les dons est d'envoyer à chaque contact ciblé un courriel personnalisé avec un lien vers le formulaire de contribution dans lequel toutes les coordonnées seront déjà remplies. Cela leur évite d'avoir à le remplir et augmente les chances qu'ils fassent un don. Vous pouvez utiliser cette fonctionnalité en créant un lien spécial dans le corps de votre message CiviMail qui inclut un *jeton de somme de contrôle*. Une somme de contrôle est un nombre unique et pseudo-aléatoire attribué à chaque destinataire de l'envoi qui pointe vers ses informations de contact, stockées de manière sécurisée dans votre base de données.
+Une façon éprouvée d'augmenter les contributions ou les dons est d'envoyer à chaque contact ciblé un courriel personnalisé avec un lien vers le formulaire de contribution dans lequel toutes les coordonnées seront déjà remplies. Cela leur évite d'avoir à le remplir et augmente les chances qu'ils fassent un don. Vous pouvez utiliser cette fonctionnalité en créant un lien spécial dans le corps de votre message CiviMail qui inclut une *valeur de contrôle*. Une valeur de contrôle (checksum) est un nombre unique et pseudo-aléatoire attribué à chaque destinataire de l'envoi qui pointe vers ses informations de contact, stockées de manière sécurisée dans votre base de données.
 
 Si les utilisateurs cliquent sur le lien spécial, CiviCRM les recherche dans la base de données et remplit à l'avance les champs du formulaire de contribution (champs principaux ou champs affichés via un profil) avec toutes informations nécessaires de leur fiche de contact. Pour en savoir plus sur la façon de procéder et sur le chemin du lien, visitez:
 [http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens](http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens)
