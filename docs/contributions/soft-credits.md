@@ -1,92 +1,59 @@
-Soft credits
+Crédits indirects
 ============
 
-Soft credits are a familiar concept to many fundraisers, and are useful
-for a better understanding of the sources of contributions received by
-your organisation. They allow you to assign credit for a donation to
-one or more people who are not the donor.
+Les crédits indirects sont un concept familier dans le cas de collectes de fonds, et sont utiles pour une meilleure compréhension des sources de contributions reçues par votre organisation. Ils vous permettent d'attribuer le crédit d'un don à une ou plusieurs personnes qui ne sont pas le donateur.
 
-Soft Credit Types
+Types de Crédits indirects
 -----------------
 
-CiviCRM's soft crediting allows users to assign soft credit types to
-contributions. Assigning an appropriate reserved or custom soft credit
-type enables administrators to properly attribute contributions received
-through one or more charitable contribution types (such as Donor Advised
-Funds, Scholarships, Family Bequests, etc) whether solicited (P2P) or
-not.
+Le Crédit indirect de CiviCRM permet aux utilisateurs d'attribuer des types de crédits indirects aux contributions. L'attribution d'un type de crédit indirect réservé ou personnalisé permet aux administrateurs d'attribuer correctement les contributions reçues par le biais d'un ou de plusieurs types de contributions charitables (fonds versés par un donateur, bourses d'études, legs familiaux, etc.) qu'elles soient sollicitées (P2P) ou non.
 
-CiviCRM uses the following reserved soft credit types:
+CiviCRM utilise les types de crédits indirects réservés suivants:
 
--   In Honor of
--   In Memory of
--   Solicited
--   Personal Campaign Page
--   Gift
+-   En l'honneur de..
+-   En mémoire de 
+-   Sollicité
+-   Page de campagne personnelle
+-   Cadeau
 
-Lets say that a very active member of your organization was responsible
-for getting 10 other people to make a contribution. Soft credits
-provide a way for you to credit this person and the actual donor,
-without counting the contribution twice.
+Supposons que l'objectif d'un membre très actif de votre organisation était de contacter 10 autres personnes pour obtenir une contribution. Les crédits indirects vous permettent de créditer cette personne et les donateurs réels, sans comptabiliser la contribution deux fois.
 
-You can use CiviCRM's soft crediting to credit parts of a donation to
-multiple people.
+Vous pouvez donc utiliser le crédit indirect de CiviCRM pour créditer les parties d'un don à plusieurs personnes.
 
-In the screenshot below, you can see that we have credited Magan
-Cooper's contribution of $1,500.00 to three different people.
+Dans la capture d'écran ci-dessous, vous pouvez voir que nous avons crédité la contribution de Magan Cooper de 1 500 $ à trois personnes différentes.
 
 ![image](../img/soft-credit-donation-1.png)
 
-CiviCRM can also handle more complicated scenarios. For instance, Joe is
-an active member of a community foundation that regularly contributes to
-your organization. Joe solicited a contribution from Jane on behalf of
-the community foundation. Your organization would therefore receive a
-check from the community foundation. Using soft credit types, users can
-properly attribute the credit without duplicating contributions. In this
-case:
+CiviCRM peut également gérer des scénarios plus complexes. Par exemple, Joe est un membre actif d'une fondation communautaire qui contribue régulièrement à votre organisation. Joe a sollicité une contribution de Jane au nom de la fondation communautaire. Votre organisation recevrait donc un chèque de la fondation communautaire. En utilisant des types de crédits souples, les utilisateurs peuvent attribuer correctement le crédit sans dupliquer les contributions. Dans ce cas:
 
--   The community foundation is the donor.
--   Joe would receive the solicited soft credit.
--   Jane would receive the donor advised soft credit
+- La fondation communautaire est le donateur.
+- Joe recoit le crédit indirect sollicité.
+- Jane recoit le crédit indirect de donateur
 
-This scenario is illustrated in the screenshot below.
+Ce scénario est illustré dans la capture d'écran ci-dessous.
 
 ![image](../img/soft-credit-donation-2.png)
 
-As well as recording soft credits, we can also report on them. The
-contribution detail report has optional columns which show soft credit
-details. When checked, these will show four extra columns in CiviReport, which
-can be used to view soft credit information.
+En plus d'enregistrer les crédits indirects, nous pouvons également en faire le rapport. Le rapport détaillé des contributions comporte des colonnes optionnelles qui en affichent les détails. Lorsque cette case est cochée, quatre colonnes supplémentaires s'affichent dans CiviReport, et peuvent être utilisées pour afficher les informations sur le crédit indirect.
 
 ![image](../img/z_sprint14_contributions_soft_credit.PNG)
 
-
-
-Honoree information and profiles
+Section remerciements et profils
 ---------------------------------
 
-When creating a contribution page you will have the option to allow your
-end users to make a contribution on behalf of an honoree. To do so you
-must select the**Honoree Section Enabled** checkbox.
+Lorsque vous créez une page de contribution, vous avez la possibilité d'autoriser vos utilisateurs finaux à faire une contribution pour le compte d'une personne remerciée. Pour ce faire, vous devez sélectionner la case à cocher **Section Remerciements activée**
 
-This will reveal additional fields that will allow you to specify the
-Honor Types and Profile to be included in this section.
+Cela affichera des champs supplémentaires qui vous permettront de spécifier les types d'honneur et le profil à inclure dans cette section.
 
 ![image](../img/z-sprint14_honoree_section.PNG)
 
-Once configured your end users will be able to enter honoree info for
-online contributions. CiviCRM will check to see if the honoree exists
-within CiviCRM already using the default duplicate checking rules on
-your site, if a duplicate is not found a new contact record will be
-created. A soft credit will be added to the contact record of the
-honoree.
+Une fois enregistrés, les utilisateurs finaux pourront entrer des informations honorifiques pour les contributions en ligne. CiviCRM vérifiera si la personne remerciée existe dans CiviCRM en utilisant déjà les règles de vérification des doublons par défaut sur votre site, si un doublon n'est pas trouvé, un nouvel enregistrement de contact sera créé. Un crédit indirect sera ajouté au dossier de contact du candidat.
 
 ![image](../img/soft-credit-honoree-info.png)
 
-Soft credits and personal campaign pages
+Crédits indirects et Pages de Campagne Personnelles
 ----------------------------------------
 
-The concept of soft credits is closely related to
-[personal campaign page](../contributions/personal-campaign-pages). When someone donates by a
-personal campaign page, their donation is soft credited to the owner of
-the personal campaign page.
+Le concept de crédit indirect est étroitement lié à [personal campaign page](../contributions/personal-campaign-pages).
+Lorsque quelqu'un fait un don sur une page de campagne personnelle, son don est crédité au propriétaire de la page de la campagne personnelle.
+
