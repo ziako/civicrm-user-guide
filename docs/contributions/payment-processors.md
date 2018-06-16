@@ -21,132 +21,81 @@ Voici une liste de différentes options à considérer lors du choix d'un proces
 Tous les fournisseurs de paiement ne sont pas égaux et il existe des différences significatives entre eux en termes de coût, d'adéquation à votre cas d'utilisation et de disponibilité. Ceci est un guide rapide pour sélectionner un processeur de paiement. Si possible, vous devez en parler à d'autres organisations similaires et proches qui utilisent CiviCRM pour qu'ils vous fassent part de leurs expériences avec les processeurs de paiement. Vous pouvez également configurer plusieurs processeurs de paiement et donner aux utilisateurs interne la possibilité de choisir celui qu'ils préfèrent.
 
 
-### Processeurs sur site vs externe 
+### Processeurs sur site ou externe?
 
 Les processeurs de paiement peuvent être divisés en deux catégories: ceux dans lesquels l'utilisateur entre directement les coordonnées de sa carte de crédit et ceux qui transfèrent l'utilisateur vers un autre site pour effectuer le paiement, puis les retournent sur votre site une fois le paiement effectué. Vous pouvez généralement -dans une certaine mesure -ajouter le nom, le logo et les couleurs de votre organisation, mais le flux de travail est moins homogène et un pourcentage de personnes a tendance à s'y perdre et ne terminent pas l'opération de paiement.
 
-En plus de proposer plus de transparente pour les utilisateurs finaux, les processeurs de paiement sur site permettent aux administrateurs de sites de traiter les paiements par carte (contributions, frais d'adhésion, paiements d'événements, etc.) depuis les pages d'administration de CiviCRM.
+En plus de proposer plus de transparence pour les utilisateurs finaux, les processeurs de paiement sur site permettent aux administrateurs de sites de traiter les paiements par carte (contributions, frais d'adhésion, paiements d'événements, etc.) depuis les pages d'administration de CiviCRM.
 
 L'inconvénient du traitement des paiements directement depuis votre site est que vous aurez besoin d'un certificat SSL pour assurer la sécurité des données de la carte de l'utilisateur telles qu'elles sont transmises sur Internet. Les certificats SSL sont payants (généralement des frais annuels) et ne sont pas simples à configurer. Votre fournisseur d'hébergement ou votre administrateur système peut vous y aider. Vous pouvez également lire le chapitre sur la sécurité dans la section de configuration initiale de ce livre.
 
 **!!! Note** : Il convient de noter à ce stade que CiviCRM ne stocke jamais les détails de la carte de crédit sur votre serveur. Il les transmet uniquement au processeur de paiement.
 
 
-### Regional Availability
+### Disponibilité régionale  Regional Availability
 
-For many countries there are no payment processors written that support their currencies. If you do not have payment processor support for the payment processor you want to use, consider writing your own processor
-or asking a third party to do so.
+Dans de nombreux pays, il n'y a pas de processeurs de paiement développés qui soutiennent leur devise. Si vous n'avez pas de support de processeur pour le processeur de paiement que vous souhaitez utiliser, envisagez d'écrire votre propre processeur ou demandez à un tiers de le faire.
 
-### Merchant account vs built-in
 
-Most organizations that accept credit card payments will have their own
-merchant account through a bank, however these usually have monthly
-charges which may not suit smaller organizations (though they generally
-have lower percentage payments). You can expect to pay a fee for the
-merchant account and to the payment processor, though these may be
-bundled together. Some, like World Pay & Paypal, do not require separate
-merchant accounts.
+### Compte marchand 
 
-### Support for recurring contributions
+La plupart des organisations qui acceptent les paiements par carte de crédit ont leur propre compte marchand par l'intermédiaire  d'une banque, mais elles ont généralement des frais mensuels qui peuvent ne pas convenir aux petites organisations (bien qu'elles aient généralement des paiements en pourcentage inférieurs). Vous pouvez vous attendre à payer des frais pour le compte marchand et le processeur de paiement, bien que ceux-ci puissent être regroupés. Certains, comme World Pay & Paypal, ne nécessitent pas de comptes marchands distincts.
 
-Support for recurring contributions and auto-renewing memberships is an
-important feature for many organizations. However not all of the payment
-processors available for CiviCRM support this feature, and a few like
-Moneris have "incomplete" support. Check the wiki for the latest
-information.
 
-### Cost
+### Soutien aux contributions récurrentes  Support for recurring contributions
 
-Determining which payment processor is least expensive depends on the
-number and average size of the transaction you process. So the question
-is not which processor is the cheapest, but which is the cheapest for
-you. Commission percentages, per-transaction charges, and fixed monthly
-charges vary along with set-up costs. In general, if you process many
-transactions, an account with a monthly fee but low commission might be
-a good option. On the other hand, if you expect infrequent transactions,
-it is best to avoid monthly fees and accept paying a higher commission.
+La prise en charge des contributions récurrentes et des adhésions à renouvellement automatique est une fonctionnalité importante pour de nombreuses organisations. Cependant, tous les processeurs de paiement disponibles pour CiviCRM ne prennent pas en charge cette fonctionnalité, et certains comme Moneris ont un support "incomplet". Vérifiez le wiki pour les dernières informations.
 
-### Usability
 
-If you do not collect the credit card information yourself on your own
-site, you need to consider whether the payment workflow is intuitive and
-easy to use. Paypal Standard is often confusing to end users because
-they are not sure whether or not they need to create a PayPal account.
-Such a barrier can result in decreased contributions.
+### Coût d'un processeur de paiement
+
+Déterminer quel processeur de paiement est le moins cher dépend du nombre et de la taille moyenne des transactions que vous traitez. La question n'est donc pas de savoir quel processeur est le moins cher, mais lequel est le moins cher pour vous. Les pourcentages de commissions, les frais par transaction et les frais mensuels fixes varient en fonction des coûts d'installation. En général, si vous traitez de nombreuses transactions, un compte avec des frais mensuels mais une faible commission pourrait être une bonne option. D'un autre côté, si vous prévoyez des transactions peu fréquentes, il est préférable d'éviter les frais mensuels et d'accepter de payer une commission plus élevée.
+
+
+### Facilité d'utilisation 
+
+Si vous ne collectez pas vous-même les informations de carte de crédit sur votre site, vous devez déterminer si le flux de paiement est intuitif et facile à utiliser. Paypal Standard est souvent déroutant pour les utilisateurs finaux parce qu'ils hésitent de créer ou pas un compte PayPal.
+Une telle barrière peut entraîner une diminution des contributions.
 
 Support
 -------
 
-CiviCRM supports the processors that are incorporated into the core
-codebase, to the extent that they ensure they do not break in upgrade -
-support and enhancements of community contributed processors are
-generally expected to come from the community.
+CiviCRM prend en charge les processeurs qui sont incorporés dans le coeur du code principal, dans la mesure où ils garantissent leur continuité lors de mise à niveau. Le support et les améliorations des processeurs communautaires sont généralement attendus de la communauté.
 
-Set up
+Installation
 -------
 
-You can configure one or more Payment Processors for your CiviCRM
-installation.
+Vous pouvez configurer un ou plusieurs processeurs de paiement dans votre installation CiviCRM.
 
-You will then need to assign an active Payment Processor to each Online
-Contribution Page and each paid Event. If no Payment Processors have
-been configured for your site,
+Vous devrez affecter un processeur de paiement actif à chaque page de contribution en ligne et à chaque événement payé. Si aucun processeur de paiement n'a été configuré pour votre site.
 
-1.  Go to **Administer > System Settings > Payment Process** and
-    click on **New Payment Processor** .
-2. Choose the Payment Processor Type from the dropdown list.
-3.  Assign a descriptive name to this processor configuration and an
-    optional description. The name will show up when you want to select
-    a payment processor for a Contribution Page or Event. A description
-    can be useful if you are configuring multiple merchant accounts for
-    different chapters or sub-organizations within your site with the
-    same payment processor type.
-4.  Select a Financial Account. You probably want to have a separate
-    Financial Account for each payment processor, but your bookkeeper or
-    accountant will be able to advise you best on this. The financial
-    account you select records where the money gets deposited, not the
-    sort of revenue you anticipate it receiving. The contribution,
-    membership and event money you receive will also get recorded into
-    different revenue financial accounts as well, based on the
-    configuration of contribution pages and events. For a partial
-    explanation of how this works, see Double Entry Accounting in
-    Wikipedia.
-5.  Make the processor active so that it is available for use with paid
-    events and online contribution pages. If the processor allows you to
-    collect credit card information on your website, your staff will
-    also be able to use it to submit credit card contributions and
-    payment for memberships and events.
-6.  If you have multiple payment processors, the one you set as the default
-    will be selected when you create a contribution or event page or process a
-    credit card payment in the admin area, although you will be able to
-    override that selection manually.
-7.  Fill in the appropriate live payment and test payment details for your
-    payment processor. Note that the fields in these sections vary according to
-    the payment processor type selected.
+You will then need to assign an active Payment Processor to each Online Contribution Page and each paid Event. If no Payment Processors have been configured for your site,
 
-You will need to do some further set up on the actual payment gateway but that
-is beyond the scope of this book and should be documented by your gateway.
+1. Allez à **Administrer> Paramètres système> Processus de paiement** et cliquez sur **Nouveau processeur de paiement**.
+2. Choisissez le type de processeur de paiement dans la liste déroulante.
+3. Attribuez un nom descriptif à cette configuration de processeur et une description facultative. Ce nom apparaîtra lorsque vous souhaitez sélectionner un processeur de paiement pour une page de contribution ou un événement. Une description peut être utile si vous configurez plusieurs comptes marchands pour différents chapitres ou sous-organisations de votre site avec le même type de processeur de paiement.
+4. Sélectionnez un compte financier. Si vous souhaiter avoir un compte financier distinct pour chaque processeur de paiement votre comptable sera en mesure de vous conseiller au mieux à ce sujet. Le montant versé est enregistré sur le compte financier sélectionné mais pas le type de revenu que vous recevez. La contribution, l'adhésion et le prix d'un événement que vous recevez seront également enregistrés dans différents comptes financiers de recette, en fonction de la configuration des pages de contribution et des événements. Pour une explication partielle de la façon dont cela fonctionne, voir "compte à double Entrées" dans Wikipedia.
+5. Activez le processeur afin qu'il soit disponible pour les événements payants et les pages de contribution en ligne. Si le processeur vous permet de collecter des informations de carte de crédit sur votre site Web, votre personnel pourra également l'utiliser pour enregistrer des contributions par carte de crédit et le paiement des adhésions et des événements.
+6. Si vous avez plusieurs processeurs de paiement, celui que vous définissez par défaut est sélectionné lorsque vous créez une page de contribution ou d'événement ou un paiement par carte de crédit dans la zone d'administration, mais vous pouvez remplacer cette sélection manuellement.
+7. Remplissez le paiement en direct approprié et testez les détails de paiement de votre processeur. Notez que les champs de ces sections varient en fonction du type de processeur de paiement sélectionné.
 
-Once done, the processor will be available in your paid events and
-contribution pages.
+Vous aurez sans doute besoin de faire quelques réglages supplémentaires sur la passerelle de paiement, mais cela dépasse le cadre de ce livre et devrait être documenté par votre passerelle.
 
-Test payments and dummy payment processors
-------------------------------------------
+Une fois terminé, le processeur sera disponible dans vos pages payantes et contributions.
 
-For the purposed of testing, you can configure dummy payment processors.
+Tester les paiements et les processeurs de paiement fictifs 
+-----------------------------------------------
 
-If you do use a dummy payment processor, or are using any payment pages
-in test mode, the following card details should work:
+Pour les tests, vous pouvez configurer des processeurs de paiement factices.
 
--   Card type: Visa
--   Card number 4111 1111 1111 1111
--   CVV: any three digits
--   Expiry: any date in the future
+Si vous utilisez un processeur de paiement factice ou si vous utilisez des pages de paiement en mode test, les détails de carte suivants devraient fonctionner:
 
-Writing a new payment processor
+-   Type de Carte: Visa
+-   Numéro de carte :  4111 1111 1111 1111
+-   Cryptogramme: trois chiffres
+-   Date d'expiration:  n'importe quelle date dans le futur
+
+Ecrire un nouveau processeur de paiement
 --------------------------------
 
-If you cannot find a suitable payment processor, or want to use a
-specific payment provider that is not currently supported by CiviCRM,
-you can write a new payment processor integration, or pay someone else
-to do so.
+Si vous ne trouvez pas de processeur de paiement vous convenant ou si vous souhaitez utiliser un fournisseur de paiement spécifique actuellement non pris en charge par CiviCRM, vous pouvez écrire une nouvelle intégration de processeur de paiement ou payer quelqu'un d'autre pour le faire.
