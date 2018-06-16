@@ -1,75 +1,43 @@
-Payment processors
+Processeurs de paiement
 ==================
 
+CiviCRM se connecte à une variété de processeurs de paiement différents.
+
 CiviCRM connects to a variety of different payment processors.
-Out-of-the-box, it comes with support for approximately 15 payment
-processors. Many other community contributed processors are available to
-download from the CiviCRM.org Extensions Directory:
+Prêt à l'emploi, il prend en charge environ 15 processeurs de paiement. la communauté a contribué à l'utilisation de nombreux autres processeurs qui peuvent être téléchargés depuis le répertoire des extensions de CiviCRM.org:
 
 [http://civicrm.org/extensions](http://civicrm.org/extensions "CiviCRM.org Extensions Directory")
 
+Des processeurs de paiement supplémentaires peuvent également être disponibles sur des sites tiers.
 
-Additional payment processors may also be available from third party
-sites.
+CiviCRM ne prend pas en charge les processeurs developpés par la communauté, mais il n'y a aucune raison pour qu'ils ne soient pas aussi fiables que les processeurs prêts à l'emploi. Si vous utilisez un processeur fourni par la communauté, assurez-vous d'avoir accès à une assistance technique adéquate pour ce processeur, soit en interne, auprès de l'auteur du processeur de paiement, soit auprès d'un tiers de confiance.
 
-Community contributed processors are not supported by CiviCRM but there
-is no reason why they should not be just as reliable as the
-out-of-the-box processors. If you do use a community contributed
-processor, be sure that you have access to adequate technical support
-for that processor, either in house, from the author of the payment
-processor, or from a trusted third party.
-
-You can browse an up-to-date comparison of many of the available payment
-processors at
-
+Vous pouvez comparer ici les nombreux processeurs de paiement disponibles sur : 
 [http://wiki.civicrm.org/confluence/display/CRMDOC/Payment+Processors](http://wiki.civicrm.org/confluence/display/CRMDOC/Payment+Processors%20)
 
-Selecting a payment processor
+Choisir un processeur de paiement   
 -----------------------------
 
-Below is a list various things to think about when choosing a payment
-processor. Not all payment providers are created equal and there
-are significant differences between them in terms of cost, suitability
-for your use case, and availability. This is a quick guide to selecting
-a payment processor.  If possible, you should talk to other similar and
-nearby organisations that use CiviCRM about their experiences with
-payment processors. You can also configure more than one payment
-processor, and give constituents the option to choose the one they
-prefer.
+Voici une liste de différentes options à considérer lors du choix d'un processeur de paiement. 
+Tous les fournisseurs de paiement ne sont pas égaux et il existe des différences significatives entre eux en termes de coût, d'adéquation à votre cas d'utilisation et de disponibilité. Ceci est un guide rapide pour sélectionner un processeur de paiement. Si possible, vous devez en parler à d'autres organisations similaires et proches qui utilisent CiviCRM pour qu'ils vous fassent part de leurs expériences avec les processeurs de paiement. Vous pouvez également configurer plusieurs processeurs de paiement et donner aux utilisateurs interne la possibilité de choisir celui qu'ils préfèrent.
 
-### Onsite vs offsite processors
+Below is a list various things to think about when choosing a payment processor. Not all payment providers are created equal and there are significant differences between them in terms of cost, suitability for your use case, and availability. This is a quick guide to selecting a payment processor.  If possible, you should talk to other similar and nearby organisations that use CiviCRM about their experiences with payment processors. You can also configure more than one payment processor, and give constituents the option to choose the one they prefer.
 
-Payment processors can be split into those in which the user enters
-credit card details directly on your site, and those that transfer the
-user to another site to make the payment, and then return them to your
-site once the payment is made. You can typically brand the payment site
-to a limited extent – for example you might be able to add your
-organisation name, logo and colours – but the workflow is less seamless
-and a percentage of people tend to get lost along the way and not
-complete the payment.
+### Processeurs sur site vs externe 
 
-As well as providing a more seamless experience for end users, onsite
-payment processors allow site admins to process card payments
-(contributions, membership fees, event payments, etc.) from CiviCRM
-admin pages.
+Les processeurs de paiement peuvent être divisés en deux catégories: ceux dans lesquels l'utilisateur entre directement les coordonnées de sa carte de crédit et ceux qui transfèrent l'utilisateur vers un autre site pour effectuer le paiement, puis les retournent sur votre site une fois le paiement effectué. Vous pouvez généralement -dans une certaine mesure -ajouter le nom, le logo et les couleurs de votre organisation, mais le flux de travail est moins homogène et un pourcentage de personnes a tendance à s'y perdre et ne terminent pas l'opération de paiement.
 
-The disadvantage of processing payments directly on your site is that
-you will need to have an SSL certificate to ensure the security of the
-users card details as they are transmitted over the internet. SSL
-certificates cost money (typically an annual fee) and they are not
-straight forward to set up. Your hosting provider or system
-administrator can help you here. You may also want to read the
-'security' chapter in the initial set up section of this book.
+En plus de proposer plus de transparente pour les utilisateurs finaux, les processeurs de paiement sur site permettent aux administrateurs de sites de traiter les paiements par carte (contributions, frais d'adhésion, paiements d'événements, etc.) depuis les pages d'administration de CiviCRM.
 
-It is worth noting at this point that CiviCRM never stores credit card
-details on your server. It only transmits them to the payment
-processor.
+L'inconvénient du traitement des paiements directement depuis votre site est que vous aurez besoin d'un certificat SSL pour assurer la sécurité des données de la carte de l'utilisateur telles qu'elles sont transmises sur Internet. Les certificats SSL sont payants (généralement des frais annuels) et ne sont pas simples à configurer. Votre fournisseur d'hébergement ou votre administrateur système peut vous y aider. Vous pouvez également lire le chapitre sur la sécurité dans la section de configuration initiale de ce livre.
+
+**!!! Note** : Il convient de noter à ce stade que CiviCRM ne stocke jamais les détails de la carte de crédit sur votre serveur. Il les transmet uniquement au processeur de paiement.
+
+
 
 ### Regional Availability
 
-For many countries there are no payment processors written that support
-their currencies. If you do not have payment processor support for the
-payment processor you want to use, consider writing your own processor
+For many countries there are no payment processors written that support their currencies. If you do not have payment processor support for the payment processor you want to use, consider writing your own processor
 or asking a third party to do so.
 
 ### Merchant account vs built-in
