@@ -94,7 +94,7 @@ Les pages de contribution incluent toujours un champ d'adresse e-mail obligatoir
 
 Lorsque vous modifiez ou créez un nouveau profil, vous pouvez utiliser l'interface glisser-déposer du profil représentée ici.
 
-    ![image](../img/Contribution-page-edit-profile2.gif)
+![image](../img/Contribution-page-edit-profile2.gif)
     
 !!! AVERTISSEMENT: Si vous modifiez un profil existant lors de la configuration de votre page Contribution, les modifications que vous apportez s'appliqueront partout où ce profil est utilisé. Ainsi, sauf si un profil existant **correspond exactement à vos besoins, copiez le profil, puis renommez et modifiez la copie selon les besoins.    
 
