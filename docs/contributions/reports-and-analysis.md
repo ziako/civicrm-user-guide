@@ -1,75 +1,39 @@
-Reports and analysis
+Rapports et analyses
 ====================
 
-You can use CiviReport or CiviCRM's search features for reporting on and
-analysing contributions.
+Vous pouvez utiliser les fonctions de recherche de CiviReport ou de CiviCRM pour créer des rapports et analyser les contributions reçues
 
-Contribution reports
+Rapports de contribution
 --------------------
 
-Out of the box, CiviCRM comes with thirteen contribution reports
-designed to help you analyse your contributions.
+CiviCRM est livré en standard avec treize rapports de contribution conçus pour vous aider à analyser vos contributions.
 
-A **contribution summary report** allows you group contributions by
-different criteria including including the contact that made the
-contribution, time period, type, location and view summary statistics
-for these contributions. The accompanying **contribution detail
-report** is automatically called when clicking on any rows from the
-summary report. It can also be called on its own to provide a detailed
-report for a specific subset of contributions. These two reports can be
-useful for analyses such as what percentage of our income is coming from
-different fundraising campaigns, or from events vs. memberships, etc.
+Le **Rapport de synthèse des contributions** vous permet de regrouper les contributions selon différents critères, y compris le contact ayant effectué la contribution, la période, le type, l'emplacement et les statistiques récapitulatives de ces contributions. 
 
-The **repeat contribution report** compares the total amount of
-contributions that contacts have made in two different time periods. As
-well as the totals, it shows the percentage increase/decrease. This
-report is useful for tracking contacts who have stepped up their giving,
-or who giving less than before. **SYBUNT report** AND **LYBUNT report** are two
-strangely named but useful reports that allow you to
-find donors that gave in 'some years / last year but not this year'.
+Le **Rapport détaillé des contributions** est appelé automatiquement lorsque vous cliquez sur des lignes du rapport récapitulatif. Il peut également être appelé distinctement pour fournir un rapport détaillé d'un sous-ensemble spécifique de contributions. Ces deux rapports peuvent être utiles pour des analyses telles que le pourcentage de vos recettes provenant de différentes campagnes de collecte de fonds, ou des événements par rapport aux adhésions, etc.
 
-Two reports, the **contribution by household report** and **contribution
-by organisation report** allow you to aggregate contributions by household or
-organisation. This is useful for
-organisations that make use of these two concepts. For example, you can
-see all contributions that have been made by employees of one
-organisation and thank them as a whole, or see the contributions made by
-a particularly active family. These reports will also include any
-donations that are attached to the organisation or household record, for
-example a donation made by the organisation after an collective office
-fundraising event.
+Le **Rapport de contribution répétée** compare le montant total des contributions  effectuées au cours de deux périodes différentes. Ainsi que les totaux, il montre le pourcentage d'augmentation / diminution. Ce rapport est utile pour suivre les contacts qui ont augmenté leurs dons, ou qui donnent moins que précédemment.
 
-The **top donors report** provides a list of the top donors during a time
-period you define. You can include as many donors as you want (for
-example, top 100 of your donors). If you leave the **Show no. of Top Donors**
-field empty the report will include all contacts included by the other filters.  
+Le **Rapport SYBUNT**  et le  **Rapport LYBUNT** sont deux rapports étrangement nommés mais utiles qui vous permettent de trouver des donateurs qui ont donné «il y a quelques années / l'année dernière mais pas cette année».
+Le rapport LBUNT répertorie les donateurs qui ont donné "  Last Year But Unfortunately Not This Year".
+Le rapport SYBUNT répertorie les donateurs qui ont donné " Some Year But Unfortunately Not This Year". 
 
-The **personal campaign page report** is useful to get an overview of
-the status of all personal campaign pages. You can filter by
-contribution page to see personal campaign pages for a single campaign
-and other appropriate criteria.
+Les deux rapports,  **Rapport de contribution par ménage** et  **Rapport de Contribution par organisation**, vous permettent d'agréger les contributions par foyer ou organisation. Ceci est utile pour les organisations qui utilisent ces deux concepts. Par exemple, vous pouvez voir toutes les contributions qui ont été faites par les employés d'une organisation et les remercier dans leur ensemble, ou voir les contributions faites par une famille particulièrement active. Ces rapports incluront également tous les dons qui sont attachés à l'organisation ou au dossier du ménage, par exemple un don fait par une organisation pour un événement collectif de collecte de fonds.
 
-The **soft credit report** is useful for looking at all your soft
-credits and seeing who are at least partially responsible for other
-people's donations.
+Le **Rapport des principaux donateurs** fournit une liste des principaux donateurs au cours d'une période que vous définissez. Vous pouvez inclure autant de donateurs que vous le souhaitez (par exemple, les 100 meilleurs donateurs). Si vous laissez le champ **Show no.** de Top donateurs vide le rapport inclura tous les contacts inclus par les autres filtres.
 
-The **contribution aggregate by relationship report** lists a contact's
-donation history, grouped by year, along with contributions attributed
-to any of the contact's related contacts.
+Le **Rapport de page de campagne personnelle** est utile pour obtenir un aperçu de l'état de toutes les pages de campagne personnelles. Vous pouvez filtrer par page de contribution pour voir les pages de campagne personnelles pour une seule campagne et d'autres critères appropriés.
 
-The **recurring contributions report** provides information about the
-status of recurring contributions.
+Le **Rapport de crédit indirect** est utile pour examiner tous vos crédits indirects et voir qui sont au moins partiellement responsables des dons aux bénéficiaires.
 
-The **bookkeeping transactions report** provides transaction details for
-all payments, including financial type and accounts, transaction number,
-invoice ID, payment instrument and check number.
+Le **Rapport agrégé de la contribution par relation** répertorie l'historique des dons d'un contact, regroupés par année, ainsi que les contributions attribuées à l'un des contacts en relation avec un autre contact. 
 
-More analysis
+Le **Rapport de contributions récurrentes** fournit des informations sur l'état des contributions récurrentes.
+
+Le **Rapport des opérations comptables** édite le détail des transactions pour tous les paiements, y compris le type et les comptes financiers, le numéro de transaction, l'ID de la facture, l'instrument de paiement et le numéro de chèque.
+
+Plus d'analyse
 -------------
 
-These standard reports has been configured to display particular information
-and they may not provide what you need. You can
-[download and install extensions](https://civicrm.org/extensions) to access
-additional reports. If you still can't extract the information you need,
-consider commissioning a new report or custom search and contributing it back
-to the community. 
+Ces rapports ont été préconfigurés pour afficher des informations standards et ils peuvent peut-être ne pas fournir ce dont vous avez besoin. Vous pouvez [téléchargez et installez des extensions](https://civicrm.org/extensions) pour accéder à des rapports supplémentaires. Si vous ne pouvez toujours pas extraire les informations dont vous avez besoin, envisagez de commander ou créer un nouveau rapport ou une recherche personnalisée et d'en faire profiter la communauté.
+
