@@ -1,43 +1,31 @@
-Personal Campaign Pages
+Pages de campagne personnelles
 =======================
 
-CiviCRM's features include allowing your constituents to create their
-own fundraising pages - and then ask others to fund their cause. These
-pages are called Personal Campaign Pages or "PCPs".
+Les fonctionnalités standards de CiviCRM  permettent à vos utilisateurs de créer leurs propres pages de collecte de fonds - et ensuite demander aux autres de financer leur cause. Ces pages sont appelées pages de campagne personnelles ou «PCP».
 
-A personal campaign page allows your constituents to personalize the
-fundraiser, event, organization, etc., by offering their personal
-reasons and/or experiences with the organization on their own personal
-page. Also, your contributors may in turn send the personal campaign
-pages to their circle of friends. You can enable the "tell a friend"
-feature to help someone share their page even more.
+Une page de campagne personnelle permet à vos membres de personnaliser une collecte de fonds, un événement, une manifestation etc., en développant leurs raisons personnelles et / ou leurs expériences d'un évènement sur leur propre page personnelle. En outre, vos contributeurs peuvent à leur tour envoyer les pages de leur campagne personnelle à leur cercle d'amis. Vous pouvez activer la fonctionnalité "En parler à un ami" pour aider quelqu'un à partager encore plus sa page de Campagne.
 
-Examples of this feature in action are typically called "Sponsor My 5k
-Walk", "Help Fund Our Trip" or "Let's Raise Money to Build A School".
+Des exemples de cette fonctionnalité peuvent être : "Parrainez ma marche de 5 km", "Aidez-nous à financer notre voyage scolaire" ou «Levons des fonds pour construire une école en Afrique».
 
-Administrator Features
+Fonctions de l'administrateur
 ----------------------
 
-Administrators managing fundraising pages may use the following features
-via the contribution page configuration:
+Les administrateurs qui gérent les pages de collecte de fonds peuvent utiliser les fonctionnalités suivantes via la configuration de la page de contribution:
 
--   Requiring approval before a newly-created fundraising page becomes
-    active
--   Turning on or off 'tell a friend' so fundraisers can email others
--   Setting an email address to notify admin when a new page is created
--   Allowing PCP owners to always, sometimes or never receive
-    notification when a donation is made via their page
--   Choosing a profile of fields to collect from PCP supporters
--   Customizing the text in the create button
+- Exiger l'approbation avant qu'une page de collecte de fonds nouvellement créée devienne active
+- Activer ou non " Transférer à un ami' afin que les collecteurs de fonds puissent envoyer un courriel à d'autres personnes. 
+- Définir une adresse e-mail pour informer l'administrateur lorsqu'une nouvelle page est créée
+- Permettre aux propriétaires de PCP de toujours, parfois ou jamais de recevoir une notification lorsqu'un don est fait via leur page
+- Choisir un profil de champs à recueillir auprès des partisans du PCP
+- Personnaliser le texte dans le bouton Créer
 
-Once PCP pages are active, administrators can:
+Une fois que les pages PCP sont actives, les administrateurs peuvent:
 
--   Disable or deny Personal Contribution Pages
--   Edit PCP content
--   View the amount of money collected by each PCP
--   Run reports (using CiviReport) showing a summary of PCP fundraising
--   Enter 'offline' contributions (i.e. checks) and credit the money to
-    a PCP
+- Désactiver ou refuser des pages de contribution personnelle
+- Modifier le contenu PCP
+- Voir le montant collecté par chaque PCP
+- Exécuter des rapports (en utilisant CiviReport) montrant un résumé de la collecte de fonds PCP
+- Saisir les contributions "hors ligne" (chèques, espèces) et créditer l'argent à un PCP
 
 Fundraiser Features
 ---------------------
