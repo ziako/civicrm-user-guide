@@ -62,7 +62,7 @@ pages:
     - "Envoi de reçus et lettres de remerciements": 'contributions/manual-receipts-and-thank-yous.md'
     - 'Rapports et analyses': 'contributions/reports-and-analysis.md'
     - "Crédit Indirect": 'contributions/soft-credits.md'
-    - 'Personal Campaign Pages': 'contributions/personal-campaign-pages.md'
+    - 'Page de Campagne Personnelles': 'contributions/personal-campaign-pages.md'
     - 'Accounting Integration': 'contributions/accounting-integration.md'
     - "Processeur de paiement": 'contributions/payment-processors.md'
     - 'Facturation': 'contributions/invoicing.md'
