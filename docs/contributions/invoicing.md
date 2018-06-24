@@ -1,7 +1,7 @@
 Facturation
 =========
 
-La facturation fonctionne pour tous les types financiers et statuts de contributions terminés et en attente et doit être activée. Pour activer la facturation, accédez à **Administrer> CiviContribute> Paramètres du module CiviContribute** et cochez la case "Activer les taxes et la facturation".
+La facturation fonctionne pour tous les types financiers et statuts de contributions terminés et en attente. Elle doit être activée. Pour activer la facturation, accédez à **Administrer> CiviContribute> Paramètres du module CiviContribute** et cochez la case "Activer les taxes et la facturation".
 
 Dans cet écran, vous pouvez également définir certains paramètres pour les factures:
 
@@ -21,15 +21,15 @@ Une fois la facturation activée, vous pouvez facilement imprimer des factures o
 
 ![image](../img/contribution_summary.png)
 
-1. Dès que vous consultez le dossier du contact, vous avez la possibilité d'imprimer la facture ou l'envoyer par courriel. L'impression d'une facture génèrera un pdf et envoyer une facture par email fournira un écran "Options supplémentaire".
+1. Dès que vous consultez le dossier du contact, vous avez la possibilité d'imprimer la facture ou l'envoyer par courriel. L'impression d'une facture génèrera un pdf et envoyer une facture par email affichera un écran "Options supplémentaire".
 
 ![image](../img/contributiion_view_Screen.png)
 
 1. Une fois que vous avez choisi l'option Facture par Email vous avez des options avant d'envoyer:
 
-- De l'adresse e-mail
+- De : l'adresse e-mail
 
-- Tapez un message supplémentaire
+- Taper un message supplémentaire si besoin
 
 ![image](../img/email_invoice.png)
 
@@ -40,7 +40,7 @@ Voici un exemple de facture imprimée. Les factures peuvent être personnalisée
 Personnalisation de facture
 -----------------------
 
-Le code du modèle prérempli renseigne le nom de l'entreprise, l'adresse et les informations du site Web figurant en haut à droite des factures, directement à partir de l'adresse de l'organisation et des informations de contact. Pour apporter des modifications à ces informations, vous pouvez y accéder à l'adresse **Administer Console> Liste de contrôle de la configuration> Adresse de l'organisation et informations de contact**.
+Le code du modèle prérempli renseigne le nom de l'organisation, l'adresse et les informations du site Web figurant en haut à droite des factures, directement à partir de l'adresse de l'organisation et des informations de contact. Pour apporter des modifications à ces informations, vous pouvez y accéder à l'adresse **Administer Console> Liste de contrôle de la configuration> Adresse de l'organisation et informations de contact**.
 
 L'aspect de la facture et de l'image de la facture peut être modifié et personnalisé dans **Administrer> CiviCRM> Modèles de messages> Messages de flux de travail système> Contributions-Facture.**
 
@@ -51,6 +51,6 @@ Pour changer l'image sur la facture, vous devrez modifier le code sur la ligne 1
 = "99px"></td>
 ```
 
-Pour une configuration plus avancée avec des logiciels de comptabilité tels que QuickBooks, vous devez impliquer le comptable de votre organisation dans la configuration de vos types financiers et comptes financiers.
+Pour une configuration plus avancée avec des logiciels de comptabilité tels que QuickBooks, vous devez impliquer le comptable de votre organisation pour la configuration de vos types et comptes financiers.
 
 Voir "Intégration comptable" et la page Wiki pour plus d'informations.
