@@ -5,7 +5,7 @@ CiviCRM vous permet de représenter les connexions entre les contacts en créant
 
 Vous pouvez également suivre les relations entre les organisations, ou entre les contacts individuels et les organisations. Par exemple, la saisie d'une organisation dans le domaine de l'employeur actuel de l'enregistrement d'un contact individuel crée automatiquement une relation «employé de l'individu à l'organisation", et une relation «employeur de l'organisation à l'individu".
 
-Creating relationships between contacts
+Créer des relations entre contacts
 ---------------------------------------
 
 ![image](../img/4.5%20Add%20Relationship.png)
