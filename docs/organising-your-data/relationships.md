@@ -52,7 +52,6 @@ Ajout de contacts aux ménages
 Création de nouveaux types de relations
 ---------------------------------------
 
-
 CiviCRM fournit par défaut une liste de types de relations répandus qui peut être utilisée pour indiquer les relations entre les contacts. Si vous avez besoin de définir d'autres types de relations entre vos contacts, vous pouvez créer vos propres types de relation.
 
 1.  Dans le menu de navigation, allez à **Administrer > Personnaliser les données et écrans > Types de relations**.
@@ -67,34 +66,14 @@ CiviCRM fournit par défaut une liste de types de relations répandus qui peut �
 10. Cliquez sur le bouton **Enregistrer**. Vous verrez un message vous indiquant que le type de relation a été sauvegardé et il apparaitra dans la liste en dessous.
 
 
-Disabling or deleting unneeded relationship types
--------------------------------------------------
+Désactiver ou supprimer des types de relation inutiles
+------------------------------------------------------
 
-If an existing relationship type is no longer useful or relevant for
-your organisation you can either disable or delete it so it is no longer
-presented as an option for new relationships. Disabling rather than
-deleting the relationship type has two significant advantages: you will
-still be able to see existing data on relationships of this type, and
-you can easily enable the relationship type again should you find you
-need it later.
+Si un type de relation n'est plus utile ou pertinent pour votre organisation, vous pouvez soit le désactiver, soit le supprimer pour qu'il ne fasse ainsi plus partie des options dans les nouvelles relations. Désactiver plutôt que de supprimer un type de relation présente deux avantages majeurs : vous serez toujours capable de visualiser les données utilisant toujours ce type de relation, et vous pouvez facilement réactiver ce type de relation si le besoin s'en fait à nouveau sentir.
 
-1.  In the navigation menu, go to: **Administer > Option Lists >
-    Relationship Types**.
-2.  Click the **More** link in the row of the relationship type that you'd
-    like to disable or delete.
-3.  Select either **Disable** or **Delete** from the pop-up menu.
-4.  If you select Disable, a pop-up confirmation bubble will appear. If
-    you select Delete, you will be directed to an additional screen that
-    provides a more serious warning and requests confirmation. Review
-    the information provided in either confirmation message and if you
-    are sure you'd like to complete this action, click the **Delete**
-    button otherwise **Cancel**.
-5.  If you have chosen to disable the relationship type it will appear
-    in red in the Relationship Types list and relationships of this type
-    will still be visible when viewing contacts. If you have chosen to
-    delete the relationship type it will no longer appear in the
-    Relationship Types list or in contact relationships data. In either
-    case users will no longer be able to create new relationships of
-    this type.
-6.  To enable a previously disabled relationship type, follow steps 1
-    and 2 above and select **Enable** from the **more** pop-up menu.
+1.  Dans le menu de navigation, allez à **Administrer > Personnaliser les données et écrans > Types de relations**.
+2.  Cliquez sur le lien **plus** de la ligne du type de relation que vous souhaitez désactiver ou supprimer.
+3.  Dans le menu contextuel, sélectionnez **Désactiver** ou **Supprimer**.
+4.  Si vous sélectionnez **Désactiver**, une bulle de demande de confirmation apparaitra. Si vous sélectionnez **Supprimer**, vous serez redirigé vers un nouvel écran qui vous affichera un avertissement plus sérieux et vous demandera une confirmation. Vérifiez les informations fournies et si vous êtes sûr de vouloir continuer cette action, cliquez sur le bouton **Supprimer**. Dans le cas contraire, cliquez sur **Annuler**.
+5.  Si vous avez choisi de désactiver un type de relation, il apparaitra en gris dans la liste Types de relations et les relations sont toujours visibles dans l'affichage des contacts. Si vous avez choisi de supprimer le type de relation, il n'apparaitra plus dans la liste Types de relations et dans les données de relation des contacts. De plus, les utilisateurs ne pourront plus créer de nouvelles relations de ce type.
+6.  Pour activer un type de relation précédemment désactivé, suivez les étapes 1 et 2 ci-dessus puis sélectionnez **Activer** du menu contextuel **plus**.
