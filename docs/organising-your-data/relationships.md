@@ -53,55 +53,18 @@ Création de nouveaux types de relations
 ---------------------------------------
 
 
------Traduction en cours ------
+CiviCRM fournit par défaut une liste de types de relations répandus qui peut être utilisée pour indiquer les relations entre les contacts. Si vous avez besoin de définir d'autres types de relations entre vos contacts, vous pouvez créer vos propres types de relation.
 
-
-CiviCRM comes with a set of common relationship types that can be
-    used to indicate relationships between contacts. If you need to
-    track different types of relationships between your contacts, you
-    can create your own custom relationship types.
-
-1.  In the navigation menu, go to: **Administer > Customize Data and
-    Screens > Relationship Types**.
-2.  Review the list of existing relationship types to ensure that you
-    are not creating a duplicate.
-3.  If the relationship type you need does not already exist, click the
-    **New Relationship Type** button.
-4.  Enter descriptive labels for the relationship type you are creating
-    in the **Relationship Label-A to B** and **Relationship Label-B to A**
-    fields. The **Relationship Label-A to B** field describes the
-    relationship between Contact A and Contact B; the **Relationship
-    Label-B to A** field describes the relationship between Contact B and
-    Contact A.  
-      -  Some relationships can be described by the same label in both
-    directions; in these cases you can enter the Relationship Label once
-    in the **Relationship Label-A to B** field. For example, when
-    describing the relationship between two domestic partners named
-    Sylvia and Audre, you can say that Sylvia is the "Partner of" Audre
-    and Audre is the "Partner of" Sylvia. Therefore you would enter the
-    "Partner of" label only in **Relationship Label-A to B** field,
-    leaving the **Relationship Label-B to A** field blank.
-      -  In other situations one Relationship Label cannot be applied in both
-    directions; in these cases you need to enter different Relationship
-    Labels in each of the Relationship Label fields. For example, you
-    can say that Kiyoshi is the "Grandparent of" Yuki but you cannot say
-    that Yuki is the "Grandparent of" Kiyoshi. Therefore you would enter
-    the "Grandparent of" label in the **Relationship Label-A to B** field
-    and either "Grandchild of" or "Grandparent is" in the **Relationship
-    Label-B to A** field.
-7.  Use the **Contact Type A** and **Contact Type B** fields to designate which
-    contact types are being linked by your relationship. Remember to
-    check that the contact types you select for Contact A and Contact B
-    make sense when corresponded to your Relationship Labels.
-8.  Optionally enter **Description** for this relationship type. This is
-    especially useful if the intended purpose of this relationship type
-    may not be obvious to other users.
-9.  Leave the **Enabled** box checked unless you intend to create this
-    relationship type but not allow users to utilise it until a future
-    date.
-10. Click **Save**. You will see a message telling you that the relationship
-    type has been saved and you will see your new Relationship Type in
-    the list below.
+1.  Dans le menu de navigation, allez à **Administrer > Personnaliser les données et écrans > Types de relations**.
+2.  Réexaminez la liste des types de relations existants pour vous assurez que vous n'allez pas créer un doublon.
+3.  Si le type de relation dont vous avez besoin n'existe pas déjà, cliquez sur le bouton **Ajouter un type de relation**.
+4.  Renseignez les libellés de description pour le type de relation que vous êtes en train de créer dans les champs **Libellé de type de relation A vers B** et **Libellé de type de relation B vers A**. Le **Libellé de type de relation A vers B** décrit la relation du contact A par rapport au contact B ; le **Libellé de type de relation B vers A** décrit la relation du contact B par rapport au contact A**.  
+      -  Certaines relations peuvent être décrites de la même façon quelque soit le sens ; Dans ce cas, vous pouvez décrire la relation uniquement dans le champ **Libellé de type de relation A vers B**. Par exemple, pour décrire la relation entre deux collègues de travail nommés Sylvia et Audre, vous pouvez dire que Sylvia est "collègue de" Audre et que Audre est "collègue de" Sylvia. Par conséquent, il suffira d'écrire "collègue de" uniquement dans le champ **Libellé de type de relation A vers B**, et laisser **Libellé de type de relation B vers A** vide.
+      -  Dans d'autres situations, il n'est pas possible d'appliquer une description unique qui fonctionne dans les deux sens ; Dans ce cas, vous aurez besoin d'entrer une description différente dans chaque champ. Par exemple, vous pouvez dire que Yuki est la "grand-mère de" Kiyoshi, mais vous ne pouvez pas dire que Kiyoshi est "la grand-mère de" Yuki. Par conséquent, il faudra écrire "grand-mère de" dans le champ **Libellé de type de relation A vers B** et "petite fille de" dans le champ **Libellé de type de relation B vers A**.
+7.  Utilisez les champs **Type de contact A** et "Type de contact B** pour indiquer quels types de contacts sont concernés par votre relation. N'oubliez pas de vérifier que les types de contacts que vous selectionnez pour Contact A et Contact B soient cohérents par rapport aux libellés de description correspondants.
+8.  Renseignez éventuellement le champ **Description de la relation" pour ce type de relation. Cela est particulièrement utile si l'objectif voulu de ce type de relation peut ne pas être évident pour tout le monde.
+9.  Laissez active la case à cocher **Le type de relation est actif** à moins que vous n'ayez l'intention de créer ce type de relation sans toutefois permettre aux autres utilisateurs de l'utiliser avant une certaine date.
+10. Cliquez sur le bouton **Enregistrer**. Vous verrez un message vous indiquant que le type de relation a été sauvegardé et il apparaitra dans la liste en dessous.
 
 
 Disabling or deleting unneeded relationship types
