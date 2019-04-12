@@ -26,7 +26,7 @@ pages:
     - "Personnaliser l'interface utilisateur": 'initial-set-up/customizing-the-user-interface.md'
     - "Autorisations et contrôle d'accès": 'initial-set-up/permissions-and-access-control.md'
     - "Sécurité": 'initial-set-up/security.md'
-    - 'CiviCRM System Status': 'initial-set-up/civicrm-system-status.md'
+    - 'État du système CiviCRM': 'initial-set-up/civicrm-system-status.md'
 - Configuration avancée:
     - 'Configuration des e-mails': 'advanced-configuration/email-system-configuration.md'
     - 'Enregistrement': 'advanced-configuration/change-logging.md'
