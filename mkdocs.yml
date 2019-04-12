@@ -26,7 +26,7 @@ pages:
     - "Personnaliser l'interface utilisateur": 'initial-set-up/customizing-the-user-interface.md'
     - "Autorisations et contrôle d'accès": 'initial-set-up/permissions-and-access-control.md'
     - "Sécurité": 'initial-set-up/security.md'
-    - 'CiviCRM System Status': 'initial-set-up/civicrm-system-status.md'
+    - 'État du système CiviCRM': 'initial-set-up/civicrm-system-status.md'
 - Configuration avancée:
     - 'Configuration des e-mails': 'advanced-configuration/email-system-configuration.md'
     - 'Enregistrement': 'advanced-configuration/change-logging.md'
@@ -42,11 +42,11 @@ pages:
     - "Groupes et étiquettes": 'organising-your-data/groups-and-tags.md'
     - 'Groupes dynamiques': 'organising-your-data/smart-groups.md'
     - "Activités": 'organising-your-data/activities.md'
-    - 'Relationships': 'organising-your-data/relationships.md'
+    - 'Relations': 'organising-your-data/relationships.md'
     - "Créer des champs personnalisés": 'organising-your-data/creating-custom-fields.md'
     - "Les Profils": 'organising-your-data/profiles.md'
 - Common workflows:
-    - 'Importing Data into CiviCRM': 'common-workflows/importing-data-into-civicrm.md'
+    - 'Importer des données dans CiviCRM': 'common-workflows/importing-data-into-civicrm.md'
     - 'Exporting Your Contacts': 'common-workflows/exporting-your-contacts.md'
     - 'Deduping and Merging': 'common-workflows/deduping-and-merging.md'
     - 'Tokens and mail merge': 'common-workflows/tokens-and-mail-merge.md'

@@ -5,7 +5,7 @@ CiviCRM vous permet de représenter les connexions entre les contacts en créant
 
 Vous pouvez également suivre les relations entre les organisations, ou entre les contacts individuels et les organisations. Par exemple, la saisie d'une organisation dans le domaine de l'employeur actuel de l'enregistrement d'un contact individuel crée automatiquement une relation «employé de l'individu à l'organisation", et une relation «employeur de l'organisation à l'individu".
 
-Creating relationships between contacts
+Créer des relations entre contacts
 ---------------------------------------
 
 ![image](../img/4.5%20Add%20Relationship.png)
@@ -52,86 +52,28 @@ Ajout de contacts aux ménages
 Création de nouveaux types de relations
 ---------------------------------------
 
+CiviCRM fournit par défaut une liste de types de relations répandus qui peut être utilisée pour indiquer les relations entre les contacts. Si vous avez besoin de définir d'autres types de relations entre vos contacts, vous pouvez créer vos propres types de relation.
 
------Traduction en cours ------
-
-
-CiviCRM comes with a set of common relationship types that can be
-    used to indicate relationships between contacts. If you need to
-    track different types of relationships between your contacts, you
-    can create your own custom relationship types.
-
-1.  In the navigation menu, go to: **Administer > Customize Data and
-    Screens > Relationship Types**.
-2.  Review the list of existing relationship types to ensure that you
-    are not creating a duplicate.
-3.  If the relationship type you need does not already exist, click the
-    **New Relationship Type** button.
-4.  Enter descriptive labels for the relationship type you are creating
-    in the **Relationship Label-A to B** and **Relationship Label-B to A**
-    fields. The **Relationship Label-A to B** field describes the
-    relationship between Contact A and Contact B; the **Relationship
-    Label-B to A** field describes the relationship between Contact B and
-    Contact A.  
-      -  Some relationships can be described by the same label in both
-    directions; in these cases you can enter the Relationship Label once
-    in the **Relationship Label-A to B** field. For example, when
-    describing the relationship between two domestic partners named
-    Sylvia and Audre, you can say that Sylvia is the "Partner of" Audre
-    and Audre is the "Partner of" Sylvia. Therefore you would enter the
-    "Partner of" label only in **Relationship Label-A to B** field,
-    leaving the **Relationship Label-B to A** field blank.
-      -  In other situations one Relationship Label cannot be applied in both
-    directions; in these cases you need to enter different Relationship
-    Labels in each of the Relationship Label fields. For example, you
-    can say that Kiyoshi is the "Grandparent of" Yuki but you cannot say
-    that Yuki is the "Grandparent of" Kiyoshi. Therefore you would enter
-    the "Grandparent of" label in the **Relationship Label-A to B** field
-    and either "Grandchild of" or "Grandparent is" in the **Relationship
-    Label-B to A** field.
-7.  Use the **Contact Type A** and **Contact Type B** fields to designate which
-    contact types are being linked by your relationship. Remember to
-    check that the contact types you select for Contact A and Contact B
-    make sense when corresponded to your Relationship Labels.
-8.  Optionally enter **Description** for this relationship type. This is
-    especially useful if the intended purpose of this relationship type
-    may not be obvious to other users.
-9.  Leave the **Enabled** box checked unless you intend to create this
-    relationship type but not allow users to utilise it until a future
-    date.
-10. Click **Save**. You will see a message telling you that the relationship
-    type has been saved and you will see your new Relationship Type in
-    the list below.
+1.  Dans le menu de navigation, allez à **Administrer > Personnaliser les données et écrans > Types de relations**.
+2.  Réexaminez la liste des types de relations existants pour vous assurez que vous n'allez pas créer un doublon.
+3.  Si le type de relation dont vous avez besoin n'existe pas déjà, cliquez sur le bouton **Ajouter un type de relation**.
+4.  Renseignez les libellés de description pour le type de relation que vous êtes en train de créer dans les champs **Libellé de type de relation A vers B** et **Libellé de type de relation B vers A**. Le **Libellé de type de relation A vers B** décrit la relation du contact A par rapport au contact B ; le **Libellé de type de relation B vers A** décrit la relation du contact B par rapport au contact A**.  
+      -  Certaines relations peuvent être décrites de la même façon quelque soit le sens ; Dans ce cas, vous pouvez décrire la relation uniquement dans le champ **Libellé de type de relation A vers B**. Par exemple, pour décrire la relation entre deux collègues de travail nommés Sylvia et Audre, vous pouvez dire que Sylvia est "collègue de" Audre et que Audre est "collègue de" Sylvia. Par conséquent, il suffira d'écrire "collègue de" uniquement dans le champ **Libellé de type de relation A vers B**, et laisser **Libellé de type de relation B vers A** vide.
+      -  Dans d'autres situations, il n'est pas possible d'appliquer une description unique qui fonctionne dans les deux sens ; Dans ce cas, vous aurez besoin d'entrer une description différente dans chaque champ. Par exemple, vous pouvez dire que Yuki est la "grand-mère de" Kiyoshi, mais vous ne pouvez pas dire que Kiyoshi est "la grand-mère de" Yuki. Par conséquent, il faudra écrire "grand-mère de" dans le champ **Libellé de type de relation A vers B** et "petite fille de" dans le champ **Libellé de type de relation B vers A**.
+7.  Utilisez les champs **Type de contact A** et "Type de contact B** pour indiquer quels types de contacts sont concernés par votre relation. N'oubliez pas de vérifier que les types de contacts que vous selectionnez pour Contact A et Contact B soient cohérents par rapport aux libellés de description correspondants.
+8.  Renseignez éventuellement le champ **Description de la relation" pour ce type de relation. Cela est particulièrement utile si l'objectif voulu de ce type de relation peut ne pas être évident pour tout le monde.
+9.  Laissez active la case à cocher **Le type de relation est actif** à moins que vous n'ayez l'intention de créer ce type de relation sans toutefois permettre aux autres utilisateurs de l'utiliser avant une certaine date.
+10. Cliquez sur le bouton **Enregistrer**. Vous verrez un message vous indiquant que le type de relation a été sauvegardé et il apparaitra dans la liste en dessous.
 
 
-Disabling or deleting unneeded relationship types
--------------------------------------------------
+Désactiver ou supprimer des types de relation inutiles
+------------------------------------------------------
 
-If an existing relationship type is no longer useful or relevant for
-your organisation you can either disable or delete it so it is no longer
-presented as an option for new relationships. Disabling rather than
-deleting the relationship type has two significant advantages: you will
-still be able to see existing data on relationships of this type, and
-you can easily enable the relationship type again should you find you
-need it later.
+Si un type de relation n'est plus utile ou pertinent pour votre organisation, vous pouvez soit le désactiver, soit le supprimer pour qu'il ne fasse ainsi plus partie des options dans les nouvelles relations. Désactiver plutôt que de supprimer un type de relation présente deux avantages majeurs : vous serez toujours capable de visualiser les données utilisant toujours ce type de relation, et vous pouvez facilement réactiver ce type de relation si le besoin s'en fait à nouveau sentir.
 
-1.  In the navigation menu, go to: **Administer > Option Lists >
-    Relationship Types**.
-2.  Click the **More** link in the row of the relationship type that you'd
-    like to disable or delete.
-3.  Select either **Disable** or **Delete** from the pop-up menu.
-4.  If you select Disable, a pop-up confirmation bubble will appear. If
-    you select Delete, you will be directed to an additional screen that
-    provides a more serious warning and requests confirmation. Review
-    the information provided in either confirmation message and if you
-    are sure you'd like to complete this action, click the **Delete**
-    button otherwise **Cancel**.
-5.  If you have chosen to disable the relationship type it will appear
-    in red in the Relationship Types list and relationships of this type
-    will still be visible when viewing contacts. If you have chosen to
-    delete the relationship type it will no longer appear in the
-    Relationship Types list or in contact relationships data. In either
-    case users will no longer be able to create new relationships of
-    this type.
-6.  To enable a previously disabled relationship type, follow steps 1
-    and 2 above and select **Enable** from the **more** pop-up menu.
+1.  Dans le menu de navigation, allez à **Administrer > Personnaliser les données et écrans > Types de relations**.
+2.  Cliquez sur le lien **plus** de la ligne du type de relation que vous souhaitez désactiver ou supprimer.
+3.  Dans le menu contextuel, sélectionnez **Désactiver** ou **Supprimer**.
+4.  Si vous sélectionnez **Désactiver**, une bulle de demande de confirmation apparaitra. Si vous sélectionnez **Supprimer**, vous serez redirigé vers un nouvel écran qui vous affichera un avertissement plus sérieux et vous demandera une confirmation. Vérifiez les informations fournies et si vous êtes sûr de vouloir continuer cette action, cliquez sur le bouton **Supprimer**. Dans le cas contraire, cliquez sur **Annuler**.
+5.  Si vous avez choisi de désactiver un type de relation, il apparaitra en gris dans la liste Types de relations et les relations sont toujours visibles dans l'affichage des contacts. Si vous avez choisi de supprimer le type de relation, il n'apparaitra plus dans la liste Types de relations et dans les données de relation des contacts. De plus, les utilisateurs ne pourront plus créer de nouvelles relations de ce type.
+6.  Pour activer un type de relation précédemment désactivé, suivez les étapes 1 et 2 ci-dessus puis sélectionnez **Activer** du menu contextuel **plus**.
