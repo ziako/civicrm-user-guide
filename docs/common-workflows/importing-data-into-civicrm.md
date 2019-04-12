@@ -28,29 +28,13 @@ Il existe deux façons d'importer des données :
 Si vous ne maîtrisez pas parfaitement la structure de vos données existantes et comment les faire correspondre aux champs CiviCRM, vous rencontrerez frustrations et problèmes durant vos essais d'importation. Merci de vous renseigner sur le type de chaque donnée dans les autres sections de ce manuel CiviCRM et de visiter la documentation en ligne de CiviCRM pour plus d'information :
 [http://wiki.civicrm.org/confluence/display/CRMDOC/Importing+Data](http://wiki.civicrm.org/confluence/display/CRMDOC/Importing+Data)
 
-The following rules and recommendations will help you to import data
-with minimal problems:
+Les règles et recommandations suivantes vous aideront à importer vos données en minimisant les problèmes :
 
--   Always test your data import with a small subset of your records.
-    After importing the test set, visit the records within CiviCRM and
-    ensure that the data was imported and functions as you expected.
--   It can be helpful to create a test contact that has every attribute
-    you've defined in your existing data set. Then import the contact
-    and check results to ensure that CiviCRM correctly represents all
-    the data.
--   When you map the columns or fields from your source data to CiviCRM
-    fields during the import, CiviCRM can save this field mapping as an
-    *import map* for future use. This is helpful if you will be
-    importing multiple files with the same structure. To save an import
-    map for future use, click the "Save this field mapping" check-box at
-    the bottom of the Match Fields screen of the import wizard and enter
-    an appropriate name and description. To reuse a saved import map,
-    select it from the Load Saved Field Mapping dropdown menu on the
-    Choose Data Source screen (step 1) of the import wizard.
--   If your imports are timing out or taking too long, try splitting up
-    the imports into smaller batches. If you have the appropriate
-    permissions on your web server, you can also increase the
-    memory_limit and max_execution_time values in the file php.ini.
+-   Testez toujours l'importation de vos données avec un échantillon représentatif de vos enregistrements. Après avoir effectué le test, vérifiez vos enregistrements dans CiviCRM et assurez-vous que les données ont été importées et fonctionnent telles que vous l'escomptiez.    
+-   Il peut être utile de créer un contact de test qui possède tous les attributs que vous avez définis dans votre jeu de données existant. Importez ensuite votre contact et vérifiez le résultat pour vous assurer que toutes les données sont correctement affichées dans CiviCRM.    
+-   Lorsque, durant l'importation, vous faites correspondre les colonnes ou les champs de vos données sources vers les champs CiviCRM, ce dernier peut sauvegarder cette correspondance en tant que *table de correspondance* pour une utilisation future. Cela s'avère pratique si vous avez de multiples fichiers à importer ayant la même structure. Pour sauvegarder une table de correspondance pour une utilisation future, cliquez sur la case à cocher "Sauvegarder cette correspondance" en bas de l'écran Correspondance de champ de l'assistant d'importation et entrez un nom approprié et une description. Pour réutiliser une correspondance d'importation, sélectionnez-la depuis le menu déroulant Load Saved Field Mapping sur l'écran Import des données (étape 1) de l'assistant d'importation.    
+-   Si vos importations dépasse le temps autorisé ou prennent trop de temps, essayez de découper vos fichiers en des lots plus petits. Si vous avez les autorisations adéquates sur votre serveur web, vous pouvez également augmenter les valeurs memory_limit et max_execution_time dans le fichier php.ini.
+    
 -   You can add all of the contacts imported in an import to new or
     existing groups or tags. All of the contacts in a single import will
     be given the same groups and tags. This limitation has a couple
