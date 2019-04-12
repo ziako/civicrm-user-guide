@@ -48,42 +48,26 @@ Les règles et recommandations suivantes vous aideront à importer vos données 
 -   Si vous prévoyez de faire des importations additionnelles de données liées à vos données de contact, par ex. des données de contribution, de participation à des événements, d'adhésion, vous pouvez vous faciliter la tâche en vous assurant que vos enregistrements de contact possèdent un identifiant unique qui soit également associé à vos données liées. Au moment de l'importation initiale de vos données de contact, importez ces identifiants uniques et faites les correspondre au champ ID externe de CiviCRM, vous pourrez ainsi utiliser ces identifiants pour importer ultérieurement des données liées aux enregistrements des contacts.
 -   Master Address Belongs To est un champ d'importation spécial qui ne fonctionne qu'avec CiviCRM_Address.id. L'information à renseigner dans ce champ n'est disponible que directement depuis les tables de la base de données MySQL. Elles n'apparaissent nulle part dans CiviCRM, y compris dans les écrans de données, les liens urls, les profils et les exports. [De l'information sur la façon d'utiliser ce champ spécial est disponible sur le Wiki](http://wiki.civicrm.org/confluence/display/CRMDOC/Importing+Data+-+Notes "CiviCRM Wiki - Importing Data").
 
-Required Fields for Contact Imports
------------------------------------
+Champs obligatoires pour l'importation de contacts
+--------------------------------------------------
 
-When preparing your data import it is helpful to know what fields are
-required for Import. You'll want to be sure that these fields are
-included in your CSV import file. Below is a list of the required
-fields. They are marked red and starred in the interface. In case you
-have less data, **selecting one field is enough**. The External
-Identifier field is only useful if you want to update existing contacts.
-Please note that the field with the identifier **(Match to Contact)**is
-required for deduplication purposes.
+Lorsque vous préparez vos données à importer, il est utile de savoir quels sont les champs obligatoires pour l'import. Il faudra être sûr que ces champs soient inclus dans votre fichier CSV. Vous trouverez ci-dessous une liste des champs requis. Ils sont marqués d'une étoile rouge dans l'interface. Au cas où vous avez peu de données, **sélectionner un champ suffit**. Le champ ID externe est le seul champ indispensable si vous souhaitez mettre à jour des contacts existants. Veuillez noter que le champ avec l'identifiant **(Correspond à Contact) est obligatoire pour des questions de dédoublonnage**.
 
--   **Email (Match to Contact)**
--   **External Identifier**
--   **First Name**
--   **Last Name**
+-   **Courriel (Correspond à Contact)**
+-   **Identifiant externe**
+-   **Prénom**
+-   **Nom**
 
-Setting up a CSV file for importing
------------------------------------
+Préparer un fichier CSV pour l'importation
+------------------------------------------
 
-Example of spreadsheet .csv format
+Exemple de format .csv d'une feuille de calcul
 
 ![student_sample](../img/CiviCRM-student_sample-en.png)
 
-When thinking about setting up your spreadsheet, think about the data
-that you are collecting and plan out your column headings. Keep in mind
-that you may need to create more than one .csv file and perform multiple
-imports before you are finished.
+Lorsque vous réfléchissez à la création de votre feuille de calcul, pensez aux données que vous allez collecter et planifiez l'en-tête de vos colonnes. Gardez en tête que vous pourriez avoir besoin de créer plus d'un fichier CSV et de faire plusieurs importations avant d'en avoir terminé.
 
-If you plan to import related data that pertains to a specific contact,
-e.g. event participant information, contribution data, etc., you will
-need to make sure that each contact record has a unique identifier or
-the contact record should have First Name, Last Name and Email, so that
-you can link their related data during later imports. If you have
-unique ID, you would map the ID to CiviCRM's External Identifier on
-import.
+Si vous prévoyez d'importer des données qui dépendent d'un contact spécifique, par ex. les informations de participation à un événement, les données de contributions, etc., vous aurez besoin de vous assurer que chaque enregistrement de contact possède un identifiant unique ou qu'il contienne au moins le prénom, le nom et l'adresse courriel pour pouvoir lier des données associées à ce contact dans de futures importations. Si vous utilisez un identifiant unique, vous pourrez le faire correspondre à l'identifiant externe de CiviCRM durant l'importation.
 
 Running an import
 -----------------
