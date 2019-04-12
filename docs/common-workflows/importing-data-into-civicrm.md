@@ -1,60 +1,31 @@
-Importing Data into CiviCRM
-===========================
+Importer des données dans CiviCRM
+=================================
 
-Most organisations have data in sources outside CiviCRM, such as
-previously used database platforms, spreadsheets created on the fly for
-specific events or other purposes, and email address books. Because
-manually entering large amounts of data can be tedious, CiviCRM provides
-a way do import data en masse if the source can export it into some
-common format such as a Comma Separated Version (CSV) file.
+Beaucoup d'organisations possèdent des données dont la source ne provient pas de CiviCRM, telle que des plateformes de base de données utilisées à l'origine, des feuilles de calcul créées à la volée pour des événements spécifiques ou pour d'autres besoins, et des annuaires d'adresses courriel. Parce qu'entrer manuellement une grande quantité de données peut être fastidieux, CiviCRM fournit un moyen d'importer des données en masse si la source peut être exportée dans un format répandu tel qu'un fichier CSV (Comma Separated Value).
 
-Imports can also be used to update existing data. This will be covered
-in the final section of this chapter.
+L'importation peut également être utilisée pour mettre à jour des données existantes. Ce point sera abordé dans la dernière section de ce chapitre.
 
-Considerations before importing
+Considérations avant d'importer
 -------------------------------
 
-For more details on how to think about your data before importing into
-CiviCRM, please read the section on "Organizing your data", especially
-"Mapping your data into CiviCRM".
+Pour plus de détails sur la façon d'organiser vos données avant de les importer dans CiviCRM, merci de lire la section "Organiser vos données", et plus particulièrement "Comment organiser vos données".
 
-Preparing to import data
-------------------------
+Preparer les données à importer
+-------------------------------
 
-Importing data requires considerable attention and care, so we'll
-present some concepts here that you should know before you start your
-first import. You can import both core and custom data for contacts, as
-well as data for event attendance, activities, memberships and
-contributions. This chapter will focus on the import process for
-contacts. The processes for other data are similar.
+Importer des données requiert un soin et une attention extrêmes, nous allons par conséquent vous présenter certains concepts que vous devriez connaître avant de commencer votre première importation. Vous pouvez importer des données métier CiviCRM ainsi que des données personnalisées pour les contacts, mais aussi des données concernant la participation à des événements, des activités, des adhésions et des contributions. Ce chapitre se focalisera sur le processus d'importation pour les contacts. Les processus pour les autres données sont similaires.
 
-There are two ways to import data:
+Il existe deux façons d'importer des données :
 
--   from CSV files. Most database and spreadsheet applications (e.g.
-    OpenOffice.org Calc, Google Spreadsheets, Microsoft Excel) can
-    create and manipulate files in this format. It is often easier to
-    view and clean your data when it's in a CSV file than while it's
-    still inside your old database.
+-   Depuis des fichiers CSV. La plupart des bases de données et des applications de feuille de calcul (par ex. OpenOffice.org Calc, Google Spreadsheets, Microsoft Excel) peuvent créer et manipuler des fichiers dans ce format. Il est souvent plus facile de visualiser et nettoyer vos données lorsqu'elles sont dans un fichier CSV plutôt qu'encore enregistrées dans votre vieille base de données.
 
-    Each column in your CSV file will map to a field in CiviCRM, so make
-    sure you use a different column for every distinct bit of
-    information.
+    Chaque colonne de votre fichier CSV doit correspondre à un champ de CiviCRM, assurez-vous donc d'associer une colonne propre à chaque type d'information.
 
-    Depending on your country or region, fields in your CSV files might
-    be separated by semicolons (;) instead of commas. If so, you'll need
-    to change the Import/Export Field Separator value in the CiviCRM
-    Localization settings by going to the navigation menu and choosing
-    Administer > Configure > Global Settings > Localization.
+    Selon votre pays ou région, les champs de votre fichier CSV peuvent être séparés par des points-virgules (;) à la place des virgules (,). Si c'est le cas, vous aurez besoin de changer la valeur du champ Séparateur de champs pour l'import / export dans les paramètres de localisation en allant dans le menu de navigation et en choisissant Administrer > Configurer > Paramètres généraux > Localisation.
 
--   from another SQL or MySQL database stored on the same server, using
-    an SQL query. (This option is only for advanced users who have a
-    clear understanding of server and database administration.)
+-   Depuis une autre base de donnée SQL ou MySQL stockée sur le même serveur, en utilisant une requête SQL (cette option n'est à considérer que par les utilisateurs avancés maitrisant les techniques d'administration des serveurs et des bases de données). 
 
-If you do not have a clear understanding of your existing data and how
-it will map to CiviCRM fields, you will experience frustrations and
-problems when you try to import the data. Please read about each type of
-data in other sections of this CiviCRM Manual and visit the CiviCRM
-online documentation for more information:
+Si vous ne maîtrisez pas parfaitement la structure de vos données existantes et comment les faire correspondre aux champs CiviCRM, vous rencontrerez frustrations et problèmes durant vos essais d'importation. Merci de vous renseigner sur le type de chaque donnée dans les autres sections de ce manuel CiviCRM et de visiter la documentation en ligne de CiviCRM pour plus d'information :
 [http://wiki.civicrm.org/confluence/display/CRMDOC/Importing+Data](http://wiki.civicrm.org/confluence/display/CRMDOC/Importing+Data)
 
 The following rules and recommendations will help you to import data
