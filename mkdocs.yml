@@ -42,7 +42,7 @@ pages:
     - "Groupes et étiquettes": 'organising-your-data/groups-and-tags.md'
     - 'Groupes dynamiques': 'organising-your-data/smart-groups.md'
     - "Activités": 'organising-your-data/activities.md'
-    - 'Relationships': 'organising-your-data/relationships.md'
+    - 'Relations': 'organising-your-data/relationships.md'
     - "Créer des champs personnalisés": 'organising-your-data/creating-custom-fields.md'
     - "Les Profils": 'organising-your-data/profiles.md'
 - Common workflows:
