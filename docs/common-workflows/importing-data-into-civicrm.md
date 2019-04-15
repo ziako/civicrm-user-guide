@@ -128,24 +128,14 @@ L'écran final affiche les importations réalisées avec succès, ainsi que les 
 
 À ce stade, vous devriez vérifier que votre importation a fonctionné comme vous l'attendiez. Recherchez les contacts que vous venez d'importer et examinez leurs données standards et personnalisées.
 
-Importing relational data
--------------------------
+Importer les données associées
+------------------------------
 
-We have just described the process of importing one data file. But what
-about if you want to import related data, like organizational addresses
-with employees, parent child relationships, activities, contributions,
-etc.? For each type of data you want to import, you will need to import
-a separate CSV file.
+Nous venons de décrire le processus d'importation d'un fichier de données. Mais comment faire pour importer des données liées aux contacts, telles que les adresses professionnelles, les activités, les contributions, etc. ? Vous aurez besoin d'importer un fichier CSV propre à chaque type de données.
 
-CiviCRM has specific tools for importing related contact data and a set
-of specific import tools for contributions, memberships, event
-participation etc. (and you should see specific chapters for details of
-how to use these tools). To import relationships, you should run
-multiple contact imports.
+CiviCRM possède des outils spécifiques pour importer des données liées à des contacts, et un jeu d'outil particulier pour l'importation des contributions, des adhésions, des participations à des événements, etc. (les informations détaillées sur l'utilisation de ces outils sont disponibles dans leur chapitre respectif). Pour importer des relations, vous pouvez lancer des importations de contact multiple.
 
-For example if we want to import data for children and then for both
-parents, we run three imports, one for the child, one for the father and
-one for the mother.
+Par exemple, si nous voulons importer des données sur des enfants et de leur deux parents, nous devrons lancer trois imports : un pour l'enfant, un pour le père et un pour la mère.
 
 We first import the child remembering to include an external identifier
 that we can use to match the child to their parents. We then import the
