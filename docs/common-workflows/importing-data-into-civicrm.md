@@ -69,122 +69,64 @@ Lorsque vous réfléchissez à la création de votre feuille de calcul, pensez a
 
 Si vous prévoyez d'importer des données qui dépendent d'un contact spécifique, par ex. les informations de participation à un événement, les données de contributions, etc., vous aurez besoin de vous assurer que chaque enregistrement de contact possède un identifiant unique ou qu'il contienne au moins le prénom, le nom et l'adresse courriel pour pouvoir lier des données associées à ce contact dans de futures importations. Si vous utilisez un identifiant unique, vous pourrez le faire correspondre à l'identifiant externe de CiviCRM durant l'importation.
 
-Running an import
------------------
+Lancer une importation
+----------------------
 
-The import process has four steps.
+La processus d'importation se déroule en quatre étapes.
 
-### Step 1: Setup
+### Étape 1 : Import des données
 
-Setup lets you specify the basic details of your import, including the
-source of the data. Data can come from either a CSV file, or an SQL
-query of a database on your server. A check-box lets you indicate
-whether the first row of your file contains column headers.
+Dans cette rubrique, vous devez spécifier les informations de base de votre importation, et notamment la source de vos données. Ces dernières peuvent provenir soit d'un fichier CSV, soit d'une requête sur une base de donnée SQL de votre serveur. Une case à cocher vous permet d'indiquer si la première ligne de votre fichier doit être considérée ou non comme des en-têtes de colonne.
 
 ![image](../img/Screen%20Shot%202015-04-29%20at%203.54.21%20PM.png)
 
-Note that imports use the default **unsupervised** rule to decide
-whether a contact record is a duplicate (refer to the *Deduping and
-Merging* chapter in this section for information on duplicate matching
-rules in CiviCRM). You can specify what action to take when an import
-encounters a duplicate:
+Notez que par défaut, le processus d'importation utilise la règle **non-supervisé** pour décider si un contact est ou non un doublon (vous pouvez vous référer au chapitre *Dedoublonnage et fusion* de cette section pour plus d'information sur les règles de détection de doublons dans CiviCRM). Vous pouvez spécifier ce que le système doit faire si un doublon est détecté lors d'une importation :
 
--   **Skip**: skip the duplicate contact, i.e. leave the original record
-    as it is.
--   **Update**: update the original record with the database fields from
-    the import data. Fields that are not included in the import data
-    will be left as they are.
--   **Fill**: fill in the additional contact data, if it contains fields
-    that are missing or blank in the original records, and leave fields
-    which currently have values as they are.
--   **No Duplicate Checking**: this inserts all valid records without
-    comparing them to existing contact records for possible duplicates.
+-   **Passer**: passe le contact en doublon, l'enregistrement original est laissé tel quel ;
+-   **Mettre à jour**: met à jour l'enregistrement original avec les données importées. Les champs originaux qui n'apparaissent pas dans les données importées ne sont pas modifiés.
+-   **Remplir**: remplit avec les champs vides ou manquants de l'enregistrement original avec les données importées. Ceux contenant déjà une ou plusieurs valeurs ne sont pas modifiés.
+-   **Pas de vérification des doublons**: Tous les enregistrements valides importés sont systématiquement insérés dans la base de données CiviCRM sans qu'aucune vérification de doublons ne soit faite..
 
 ![image](../img/Import%20Options.png)
 
-**Import mappings** tell CiviCRM how the fields of data in your import
-file correspond to the fields in CiviCRM. The first time you import from
-a particular data source, it's a good idea to check the box to "Save
-this field mapping" at the bottom of the page before continuing. The
-saved mapping can then be easily reused the next time similar data is
-imported, by requesting that it be loaded at this step.
+**Charger la carte de correspondance** indique comment les champs de données de votre fichier d'importation doivent correspondre aux champs de CiviCRM. La première fois que vous importez des données depuis une source particulière, il peut être utile de cocher la case "Sauvegarder cette carte de correspondance" en bas de la page avant de continuer. Cette dernière peut alors être facilement réutilisée la prochaine fois qu'une importation similaire est faite.
 
-### Step 2: Match the fields
-
-If you had column headings in your file, these headings will appear in
-the first column on the left-hand side of the Field Map, while the next
-two columns show two rows of data in your file to be imported, and the
-fourth column is the Matching CiviCRM Field. If you loaded an import
-mapping in Step 1, your choices will be reflected here. You can change
-them if they are inappropriate for this import.
+### Étape 2: Correspondance des champs
+Si vous avez des en-têtes de colonne dans votre fichier, ces derniers apparaitront dans la première colonne du côté gauche de votre tableau de correspondance. Les deux colonnes suivantes affichent deux lignes d'enregistrements de valeurs qui seront importées, et la quatrième colonne indique les champs CiviCRM correspondants. Si vous avez chargé une carte de correspondance dans l'étape précédente, vous y retrouverez vos choix. Vous pouvez les modifier s'ils ne sont pas pertinents pour cet import.
 
 ![ImportMatchFields](../img/CiviCRM_update-CiviCore-ImportMatchFields-en.png "ImportMatchFields")
 
-The matching CiviCRM fields include standard CiviCRM data such as First
-Name and Last Name as well as any custom data fields that have been
-configured for use with contact records on your site. Match the fields
-by clicking the dropdown list and selecting the appropriate data. For
-example, if the heading of the second column in your input is Surname,
-you should choose Last Name as your Matching CiviCRM Field.
+les champs CiviCRM correspondants incluent des données CiviCRM standards telles que Prénom et Nom, mais aussi des champs de données personnalisées que vous auriez au préalable configurés pour l'utilisation de vos contacts sur votre site. Faites correspondre les champs en cliquant sur les listes déroulantes et en sélectionnant la donnée appropriée. Par exemple, si l'en-tête de votre donnée importée est Nom de famille, vous pourriez choisir Nom comme champ CiviCRM correspondant.
 
-Select "- do not import -" for any columns in the import file that you
-don't want to import into CiviCRM.
+Sélectionner "- ne pas importer -" pour toute colonne du fichier de données que vous ne souhaitez pas prendre en compte lors du processus d'importation dans CiviCRM.
 
-If you have a saved mapping for a specific set of spreadsheet columns,
-and your spreadsheet layout has changed (for instance, you need to
-import additional fields, so you add the appropriate columns of data in
-the spreadsheet), you can modify and save the field mapping. One tip to
-ease the mapping process when you need to import additional fields is to
-place the additional columns of data in your import spreadsheet to the
-right of the columns you've previously mapped in CiviCRM. This allows
-you to use the existing saved field mapping to map the initial import
-fields, and then continue mapping the new data fields.
+Si vous avez sauvegardé une carte de correspondance pour un jeu particulier de colonnes de feuille de calcul et que ce dernier a changé (par exemple, vous avez ajouté des colonnes correspondant à des champs de données supplémentaires), vous pouvez modifier la carte et la sauvegarder à nouveau. Dans ce cas précis, pour faciliter l'importation de données supplémentaire, nous vous conseillons de mettre les nouvelles colonnes à droite des colonnes d'origine. Cela vous permet de retrouver les correspondances sauvegardées et d'en sélectionner ensuite les nouvelles.
 
 ![Step2d](../img/CiviCRM-AddingImporting-Step2d-en.png "Step2d")
 
-Note that if you add new data columns in your spreadsheet and do not
-position the columns AFTER the columns you previously mapped, you then
-can't use the saved mapping and will have to map all your import fields
-again.
+Dans le cas contraire, si vous n'avez pas positionné vos nouvelles données dans des colonnes APRÈS les colonnes d'origine, vous ne pourrez pas utiliser les cartes de correspondance sauvegardées et vous devrez les refaire manuellement.
 
-Once you've mapped your fields, you can decide if you want to keep the
-original saved mapping unchanged, or check the box to "Update this field
-mapping" to include the new field mappings.
+Une fois que vous avez fait correspondre les champs, vous pouvez éventuellement mettre à jour la sauvegarde de la carte de correspondance en cochant la case "Mettre à jour la carte de correspondance" pour y inclure les nouveaux changements.
 
-### Step 3: Preview
+### Étape 3: Prévisualisation
 
-This screen previews the results of importing your data, reports the
-number of rows to be imported, and allows you to double check your field
-matches.
+Cet écran vous affiche une prévisualisation des résultats de vos données importées, le nombre de lignes importées, et vous permets de faire une double vérification de vos correspondances de champs.
 
-If some of the rows in your spreadsheet contain data that doesn't match
-CiviCRM's requirements for one or more fields, you'll see an error
-message with a count of the invalid rows (see the screenshot below).
-Click the Download Errors link and review the errors reported in the
-downloaded file, so you can fix them before doing the import.
+Si des lignes de votre feuille de calcul contiennent des données qui ne remplissent pas les prérequis de CiviCRM pour un ou plusieurs champs, vous verrez alors un message d'erreur avec le nombre de ligne non-valides (cf la capture d'écran ci-dessous). Vous pouvez cliquer sur le lien Télécharger les erreurs et voir le détail des problèmes dans le fichier ainsi téléchargé. Vous avez donc la possibilité de réparer les problèmes avant l'importation définitive.
 
 ![ImportPreviewErrs](../img/CiviCRM_update-CiviCore-ImportPreviewErrs-en.png "ImportPreviewErrs")
 
-At the bottom of the form, you can choose to add the contacts to an
-existing group, import to a new group, create a new tag, or tag imported
-records. Adding imported records to a separate group is strongly
-recommended in order to be able to quickly find the imports and, if
-necessary, delete and reimport them.
+En bas du formulaire, vous pouvez choisir d'ajouter les contacts à un groupe existant, importer un nouveau groupe, créer une nouvelle étiquette, ou associer une étiquette existante. Nous vous recommandons fortement d'importer les enregistrements dans un groupe particulier afin de pouvoir facilement les retrouver et, si le besoin se présente, les effacer et les ré-importer.
 
 ![Step3b_1](../img/CiviCRM-AddingImporting-Step3b_1-en.png "Step3b_1")
 
-### Step 4: Summary
+### Step 4: Résumé
 
-The final screen reports the successful imports along with Duplicate
-Contacts and Errors. If you have set the import to add all contacts to a
-Group or Tag, you can click through to see your imported contact
-records.
+L'écran final affiche les importations réalisées avec succès, ainsi que les erreurs et les contacts en doublon. Si vous avez paramétré l'importation pour ajouter tous les nouveaux contacts à un groupe spécifique, vous pouvez cliquer dessus pour visualiser vos nouveaux enregistrements.
 
 ![Step4a_2](../img/CiviCRM-AddingImporting-Step4a_2-en.png "Step4a_2")
 
-At this point it makes sense to check to make sure that your import has
-worked as expected. Search for the contacts that you just imported and
-examine their fields and custom data to make sure all is as expected.
+À ce stade, vous devriez vérifier que votre importation a fonctionné comme vous l'attendiez. Recherchez les contacts que vous venez d'importer et examinez leurs données standards et personnalisées.
 
 Importing relational data
 -------------------------
