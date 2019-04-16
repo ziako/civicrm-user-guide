@@ -5,9 +5,9 @@ Les contacts sont au coeur de CiviCRM. Toutes les autres interactions gravitent 
 
 Il y a trois types de contact dans la configuration par défaut :
 
--   **Individus** - toute personne sur qui vous voulez faire un suivi.
+-   **Individus / Particuliers** - toute personne sur qui vous voulez faire un suivi.
 -   **Organisations** - ceci pourrait être un organisme communautaire, une entreprise, un chapitre de votre organisation ou un comité.
--   **Ménages** - une famille ou un groupe de personnes résidant à la même adresse physique.
+-   **Ménages / Foyers** - une famille ou un groupe de personnes résidant à la même adresse physique.
 
 Chaque fiche de contact contient des informations de base à leur sujet, telles que :
 
@@ -18,68 +18,38 @@ Chaque fiche de contact contient des informations de base à leur sujet, telles 
 
 Vous pouvez également définir des sous-types de contact, tels que « étudiants », « fermes » ou « cuisines collectives ». Chaque type de contact que vous créez est basé sur un des trois aux types de base. Par exemple, les fiches d'étudiants seraient basés sur le modèle des individus, les fermes seraient basées sur les organisations ou peut-être même sur les ménages, selon vos besoins. 
 
-A quick look at contacts
-------------------------
+Un rapide coup d'oeil sur les contacts
+--------------------------------------
 
-Contacts are organised into tabs. The first tab that you see when
-looking at a contact is the **summary tab** with some basic information
-about your contact. Following the summary tab are a series of other
-tabs each showing information about different aspects of the contact.
-Organising the contact into tabs helps manage the large amount of data
-it is possible to collect about contacts over time.
+Les contacts sont organisés en onglets. Le premier onglet qui s'affiche lorsque vous visualisez un contact est l'onglet **résumé**, qui contient quelques informations de base. Puis viennent les autres onglets, affichant chacun des informations correspondant à différents aspects de votre contact. Cette organisation en onglet vous permet de gérer facilement un nombre important de données qu'il est possible de collecter sur votre contact au fil du temps. 
 
-Tabs get turned on and off depending on what components are enabled and
-what permissions you have. For example, you will only see the
-memberships tab if the CiviMember component is turned on and you have
-permission to see memberships, etc. You can also define extra tabs that
-display any extra custom data that you want to collect about your
-contacts.
+Les onglets qui s'affichent (ou non) dépendent des composants qui sont activés et des autorisations que vous possédez. Par exemple, vous ne verrez que l'onglet Adhésions si le composant CiviMember est actif et que vous avez l'autorisation de visualisation les adhésions. Vous pouvez également définir des onglets supplémentaires capables d'afficher des champs de données personnalisés.
 
-Below we look at the most important parts of the contact screen
-(including most of the contact with pointers to other parts of the book
-where appropriate. 
+Nous allons voir ci-dessous les parties les plus importantes de votre écran contact.
 
-### Contact actions 
+### Actions sur les contacts 
 
-Above the tabs line, you will see a few buttons. The first button is
-the **Actions** button which is a handy shortcut to carrying out actions
-with this contact. For example, you could add a note to this contact, or
-record a new contribution, meeting or other activity.
+Juste au dessus des onglets quelques boutons sont disposés. Le premier d'entre eux est le bouton **Actions** qui contient des raccourcis pratiques sur les actions les plus communes à faire avec un contact : ajouter une note, enregistrer une nouvelle contribution, inscription à un événement, etc.
 
 ![image](../img/ActionRibbon.PNG)
 
-### Summary tab
+### Onglet résumé
 
-The summary tab shows overview information about your contact. Here you
-will find names, addresses and contact details as well as details of
-contact methods. 
+L'onglet résumé vous montre les informations principales concernant votre contact. Vous y trouverez notamment ses noms, adresses et autre détails de contact ainsi que les moyens pour le contacter.
 
-Some fields on this tab are just for individuals, for example, first
-name, last name, nick name, etc. Other fields are just for
-organisations, for example organisation name.
+Certains champs de cet onglet sont propres au type de contact Individu / Particulier (nom, prénom...) et d'autres propres au type de contact organisation (nom de l'organisation...).
 
 ![image](../img/ContactSummary.PNG)
 
-#### Individual fields
+#### Champs propres aux individus / particuliers
 
-Individuals names are split into the following parts: prefix, first
-name, middle name, last name, suffix and nickname (you don't have to use
-all of them). Prefixes and suffixes are selected from a drop down
-list. If you can't find the value you want, you can add more options to
-the list from the following screen: **Administer CiviCRM** >
-**Customize Data and Screens** > **Dropdown Options** > **Individual
-Prefixes (Ms., Mr...)**. 
+Les noms des individus / particuliers sont découpés en parties : préfixe, prénom, deuxième prénom, nom, suffixe et surnom (vous n'avaez pas à tous les utiliser). Les préfixes et suffixes sont sélectionnés à l'aide d'une liste déroulante. Vous pouvez la personnaliser en allant à : **Administrer > Personnaliser les données et écrans > Listes déroulantes > Civilité** et **Suffixes**. 
 
-#### Addresses
+#### Adresses
 
-You can record one or more addresses for a contact. Each address needs
-to be at a different **location type** (e.g. work, home, etc). One of
-the addresses can be marked as primary and will be used for any postal
-mailings that you do. You can explicitly choose which location will be
-primary for a particular person, or let it default to the first one
-entered.
+Vous pouvez enregistrer une ou plusieurs adresses pour un contact. Chaque adresse doit être d'un type différent de localisation (Travail, domicile...). L'une d'entre elle peut être marquée comme principale et sera utilisée pour tout publipostage. Vous pouvez choisir explicitement quel type de localisation sera l'adresse principale, ou laissez par défaut la première adresse qui sera renseignée.
 
-You can share addresses between contacts. For example, you may need to
+Vous pouvez partager des adresses entre contacts. For example, you may need to
 keep information about individual contacts and the organisations where
 they work. When creating or editing the "work" address for an
 individual, check the "Share Address With" box. If their employer
