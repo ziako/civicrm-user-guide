@@ -47,7 +47,7 @@ pages:
     - "Les Profils": 'organising-your-data/profiles.md'
 - Common workflows:
     - 'Importer des données dans CiviCRM': 'common-workflows/importing-data-into-civicrm.md'
-    - 'Exporting Your Contacts': 'common-workflows/exporting-your-contacts.md'
+    - 'Exporter vos contacts': 'common-workflows/exporting-your-contacts.md'
     - 'Deduping and Merging': 'common-workflows/deduping-and-merging.md'
     - 'Tokens and mail merge': 'common-workflows/tokens-and-mail-merge.md'
     - 'Postal mail communications': 'common-workflows/postal-mail-communications.md'
@@ -56,7 +56,7 @@ pages:
     - "Qu'est-ce que CiviContribute?": 'contributions/what-is-civicontribute.md'
     - "Configuration et Concepts clés": 'contributions/key-concepts-and-configurations.md'
     - "Contribution en ligne": 'contributions/online-contributions.md'
-    - "Lévée de fonds manuelle": 'contributions/offline-fundraising.md'
+    - "Levée de fonds manuelle": 'contributions/offline-fundraising.md'
     - "Entrée manuelle des contributions": 'contributions/manual-entry-of-contributions.md'
     - 'Rechercher des contributions': 'contributions/finding-and-viewing-contributions.md'
     - "Envoi de reçus et lettres de remerciements": 'contributions/manual-receipts-and-thank-yous.md'
@@ -99,7 +99,7 @@ pages:
     - 'Renouvellement': 'membership/renewals.md'
     - "Adhésions annulées ou expirées": 'membership/cancelling-and-expiring-memberships.md'
     - "Création d'accès réservés aux membres": 'membership/making-member-only-websites.md'
-- Email:
+- Courriel:
     - "Qu'est-ce que Civimail?": 'email/what-is-civimail.md'
     - 'What You Need To Know': 'email/what-you-need-to-know.md'
     - 'Set-up': 'email/set-up.md'
