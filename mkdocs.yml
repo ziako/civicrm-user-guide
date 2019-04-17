@@ -48,8 +48,8 @@ pages:
 - Common workflows:
     - 'Importer des données dans CiviCRM': 'common-workflows/importing-data-into-civicrm.md'
     - 'Exporter vos contacts': 'common-workflows/exporting-your-contacts.md'
-    - 'Deduping and Merging': 'common-workflows/deduping-and-merging.md'
-    - 'Tokens and mail merge': 'common-workflows/tokens-and-mail-merge.md'
+    - 'Dédoublonner et fusionner': 'common-workflows/deduping-and-merging.md'
+    - 'Jetons, fusions et publipostages': 'common-workflows/tokens-and-mail-merge.md'
     - 'Postal mail communications': 'common-workflows/postal-mail-communications.md'
     - 'Automating tasks': 'common-workflows/automating-tasks.md'
 - Contributions:
@@ -75,7 +75,7 @@ pages:
     - 'Set-up': 'pledges/set-up.md'
     - 'Everyday tasks': 'pledges/everyday-tasks.md'
     - 'Pledges Reports and Analysis': 'pledges/pledges-reports-and-analysis.md'
-- Évènements:
+- Événements:
     - "Qu'est-ce que CiviEvent?": 'events/what-is-civievent.md'
     - "Planification et gestion des événements": 'events/event-planning-and-management.md'
     - 'Créer un évènement': 'events/creating-an-event.md'
@@ -88,7 +88,7 @@ pages:
     - 'Rapports': 'events/reports.md'
     - "Données personnalisées": 'events/custom-data-for-events.md'
     - "Répéter les Evènements": 'events/repeating-events.md'
-- "Adhésions":
+- Adhésions:
     - "Qu'est-ce que CiviMember": 'membership/what-is-civimember.md'
     - "Définition des adhésions": 'membership/defining-memberships.md'
     - "Gestion des adhésions en ligne": 'membership/online-membership-sign-up.md'
