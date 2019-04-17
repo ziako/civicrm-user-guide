@@ -35,18 +35,18 @@ Pour visualiser les règles de dédoublonnage, aller à **Contacts > Rechercher 
 
 ![Duplicate Choose Find Rule](../img/duplicates-choose-find-rule.png)
 
-Différentes règles par défaut (supervisé et non-supervisé) existent pour chaque type de contact (Individu / Particulier, organisations et ménage / foyer). Les règles par défaut sont utilisées par CiviCRM pour des vérifications automatique, que nous allons expliquer un peu plus bas.
+Différentes règles par défaut (supervisé et automatique) existent pour chaque type de contact (Individu / Particulier, organisations et ménage / foyer). Les règles par défaut sont utilisées par CiviCRM pour des vérifications automatique, que nous allons expliquer un peu plus bas.
 
-Comprendre les règles de dédoublonnage : Supervisé, Non-supervisé et Général
+Comprendre les règles de dédoublonnage : Supervisé, Automatique et Général
 ----------------------------------------------------------------------------
 
 CiviCRM dispose de trois catégories de règles de dédoublonnage :
 
-**Non-supervisé** : Les règles "non-supervisé" sont automatiquement utilisées pour chaque type de contact quand ces derniers sont créés à travers des enregistrements en ligne, tels que les événements, les adhésions, les contributions et les pages de profil. Elles sont également sélectionnées par défaut pour l'importation des contacts. Elles sont optimisées pour s'approcher au mieux de la définition stricte de ce que peut être un doublon, afin d'éviter les faux positifs.
+**Automatique** : Les règles "automatique" sont automatiquement utilisées pour chaque type de contact quand ces derniers sont créés à travers des enregistrements en ligne, tels que les événements, les adhésions, les contributions et les pages de profil. Elles sont également sélectionnées par défaut pour l'importation des contacts. Elles sont optimisées pour s'approcher au mieux de la définition stricte de ce que peut être un doublon, afin d'éviter les faux positifs.
 
 **Supervisé** : Les règles "supervisé" sont automatiquement utilisées pour chaque type de contact quand ces derniers sont créés ou modifiés à l'aide de l'interface utilisateur. Ce dernier recevra une alerte en cas de doublon détecté à l'aide de l'une de ces règles, et pourra décider de continuer ou non en toute connaissance de cause. Les règles de cette catégorie devraient être configurées en suivant une définition large de ce que peut être un doublon, l'utilisateur pouvant décider d'agir en conséquence.
 
-**Général** : vous ne pouvez configurer qu'une seule règle "Non-supervisé" et une seule règle "Supervisé" pour chaque type de contact, mais vous n'avez pas de limite pour les règles "Général" qui vous permettent de définir des critères supplémentaires de détection de doublons.
+**Général** : vous ne pouvez configurer qu'une seule règle "Automatique" et une seule règle "Supervisé" pour chaque type de contact, mais vous n'avez pas de limite pour les règles "Général" qui vous permettent de définir des critères supplémentaires de détection de doublons.
 
 Configurer les règles
 ---------------------
@@ -93,61 +93,34 @@ Vous pouvez **Fusionner par lot tous les doublons** (cela fusionnera **tous** le
 
 La fonctionnalité de fusion par lot ne traite que les doublons pour lesquels il n'y a pas de conflit de donnée. Si un champ de l'enregistrement en doublon contient une valeur différente du champ de l'enregistrement original, la paire de doublon sera ignorée par le processus et les contacts ne seront pas fusionnés.
 
-Une fois la fusion par lot effectuée, you will be returned to the
-original list. If any of the records were skipped due to a data conflict
-like the example above, the message shown below will be displayed. To
-view an updated list of duplicate contacts (those that were not merged
-by the duplicate process) you must click **Refresh Duplicates**; the
-page will not refresh automatically, just in case your database is very
-large, and searching for duplicates would cause a significant delay. You
-may then continue to assess and merge the remaining duplicates manually.
+Une fois la fusion par lot effectuée, vous serez renvoyé à la liste originale. Si des enregistrements ont été sautés suite à un conflit de données, ils seront affichés ici (cf image ci-dessous). Il est possible de rafraichir cette liste en cliquant sur **Rafraichir les doublons** (cette page ne se met pas à jour automatiquement pour éviter trop de latence si la taille de la base de donnée est très importante). Vous pourrez alors continuer de juger les possibles doublons et les fusionner manuellement.
 
 ![image](../img/CiviCRM_dedupe_batchmerge.PNG)
 
-**WARNING:** before you begin to consider using batch dedupe, please
-take note of the following:
+**ATTENTION :** si vous pensez utiliser le traitement de déboulonnage par lot, veuillez tout d'abord noter que :
 
-1.  This feature is intended for use with large data sets that have
-    strictly managed field structures. If you have a small database with
-    only a few duplicates, we recommend you merge them manually using
-    your own judgement.
-2.  Once merged, the links between the duplicate contact and records
-    elsewhere in the system will be transferred to the original contact
-    (e.g. event participant records, groups, tags, contributions,
-    activities, cases and memberships). You will NOT be able to reverse
-    this change.
-3.  Duplicate records, once merged, will be deleted and are not
-    recoverable. We strongly recommend backing up your data before
-    running a batch merge.
+1.  Cette fonctionnalité est adaptée pour une utilisation sur un jeu très important de données et une structure claire des champs. Si vous avez peu de données avec quelques doublons, nous vous recommandons de procéder à des fusions manuelles.
+2.  Une fois fusionnés, les liens vers le contact en doublon sont mis à jour et transférés vers le contact original (par ex. les participations aux événements, les contributions, etc.). Cette opération NE PEUT PAS être annulée.
+3.  Les enregistrements en doublons sont supprimés une fois fusionnés. Il n'est pas possible de les restaurer. Nous vous recommandons fortement d'effectuer une sauvegarde de votre base de données avant de lancer un dédoublonnage par lot.
 
-## A multi-stage deduping process
+## Processus de dédoublonnage à plusieurs étapes
 
-Often just using one deduping rule will mean some duplicate remain in your system.
-One process way to apply multiple systematically is given below. If you individual unsupervised rule is strict enough then you may be able to batch de-dupe during the first stage then dedupe manually for the second stage.
-1.  Start by looking for dupes using the "Individual unsupervised" rule:
-    click the **Use Rule** link (contact type "Individual" at the usage
-    "unsupervised").
-2.  Select **All Contacts** or a particular group.
-3.  Click **Continue**.
-4.  If duplicates are found, merge or delete the duplicate contacts.
-5.  Now look for duplicates using a "supervised" or "general" rule to
-    find those that were missed with the stricter rule: click the **Use
-    Rule** link for "Individual supervised" (contact type "Individual"
-    at the usage "supervised").
-6.  Select **All Contacts** or a particular group.
-7.  Click **Continue**.
-8.  If duplicates are found, merge or mark them as 'not a duplicate'.
+Très souvent, l'utilisation d'une seul règle de dédoublonnage ne suffit pas à détecter tous les doublons. Un processus utilisant plusieurs règles est donné ci-dessous. Si votre règle "automatique" pour les individus / particuliers est suffisamment rigoureuse, vous pouvez d'abord lancer un traitement par lot, puis traiter les doublons restants manuellement.
+
+1.  Commencer par chercher les doublons en utilisant la règle "Individu, automatique" : cliquez sur le lien **Utiliser cette règle** (rubrique "Règle individus / particulier", ligne "automatique") ;
+2.  Sélectionnez **Tous les contacts** ou un groupe spécifique ;
+3.  Cliquez sur **Continuer** ;
+4.  Si des doublons sont détectés, fusionnez-les ou supprimez-les.
+5.  Maintenant, répétez l'opération en recherchant les doublons qui auraient pu être manqués en utilisant une règle "Supervisé" ou "Général". Ces règles ont des critères plus larges ;
+6.  Sélectionnez **Tous les contacts** ou un groupe spécifique ;
+3.  Cliquez sur **Continuer** ;
+4.  Si des doublons sont détectés, fusionnez-les ou marquez-les en tant que "pas un doublon".
 
 
-##  Merging contacts from search results
+##  Fusionner des contacts depuis des résultats de recherche
 
-If you notice duplicate contacts within a set of search results you can
-quickly merge them directly from the search results instead of using the
-separate **Find and Merge Duplicate Contacts** process. This is a great
-way to clean up your database during your everyday workflow with minimal
-disruption.
+Si vous remarquez des contacts en double à l'intérieur d'un jeu de données résultant d'une recherche, vous pouvez les fusionner directement et rapidement plutôt que d'utiliser le processus spécifique décrit plus haut. C'est une façon efficace de gérer ce type de problème dans votre gestion quotidienne.
 
-1.  Select the duplicate contacts from your search results by clicking
-    the check box at the left side of each record.
-2.  Select **Merge Contacts** from the ** Actions** menu.
-3.  Follow the normal steps for merging duplicate contacts.
+1.  Sélectionnez les doublons depuis vos résultats de recherche en cliquant dans les cases à cocher à gauche des enregistrements concernés ;
+2.  Sélectionnez **Fusionnez les contacts** depuis le bouton **Actions** ;
+3.  Suivez les étapes habituelles pour la fusion des doublons.
