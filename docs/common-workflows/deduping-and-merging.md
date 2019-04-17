@@ -1,204 +1,99 @@
-Deduping and Merging
-====================
+Dédoublonner et fusionner
+=========================
 
-What is deduping?
------------------
+Qu'est-ce que dédoublonner ?
+----------------------------
 
-Duplicate contacts can turn up in your data for many reasons, such as
-mistakes by users who don't realise they're creating a contact for
-someone who is already in CiviCRM, duplicates that aren't caught in the
-import process, and duplicate records created when people fill in forms
-about themselves on your site without realising they're already in your
-list of contacts (maybe with their names spelled differently or with a
-different email address).
+Des contacts peuvent apparaitre en doublon pour plusieurs raisons. Par exemple : 
+-   des erreurs d'utilisateurs créant un contact sans réaliser qu'un enregistrement existe déjà dans CiviCRM ;
+-   des doublons non traités dans un processus d'importation ;
+-   des personnes remplissant des formulaires d'enregistrement sans réaliser qu'elles se sont déjà enregistrées auparavant.
 
-Some examples of scenarios where duplicate contacts can enter your
-database:
 
--   When an administrator or user creates a new contact through the
-    admin interface and this contact already exists.
--   When a contact is created by self serving or signing up online and
-    the user has done this with another email address or name.
--   When contacts are imported to the database.
-
-CiviCRM Features for deduplicating contacts
+Outils CiviCRM pour dédoublonner les contacts
 -------------------------------------------
 
-CiviCRM is equipped with several features for dealing with duplicate
-contacts. Some attempt to avoid the duplicate contact from being
-created, others help you to search, identify and "merge" duplicate
-contacts found in your database.
+CiviCRM dispose de plusieurs moyens pour traiter les contacts en doublon. Certains sont utilisés pour en éviter la création, tandus que d'autres permettent de les rechercher, de les identifier et de fusionner les données d'un même contact.
 
-These features are split between those that act "automatically" (known
-as "unsupervised"), and those that act manually (known as
-"supervised").
+Elles permettent de :
 
-These features include:
+-   scanner la base de donnée selon une règle de déboublonnage (voir ci-dessous) pour en rechercher les doublons et les fusionner au besoin ;
+-   sélectionner deux contacts après une rechercher et choisir de les fusionner ;
+-   scanner automatiquement la base de données et avertir des possibles doublons lors de la saisie ou la modification d'un contact via l'interface utilisateur ;
+-   Fusionner automatiquement les détails d'une personne vers un contact existant quand elle réalise des opérations en ligne telles qu'une inscription à un événement, une adhésion, une contribution... ; 
+-   Fusionner automatiquement les détails d'une personne lors du processus d'importation de contacts.
 
--   Scanning your database for duplicates using a selected dedupe rule
-    (see below) and merge duplicate contact data as needed.
--   Manually selecting two contacts using the search and then choosing
-    to merge these contacts.
--   Automatically scanning your database and suggesting duplicates when
-    contacts are added or edited via the user interface.
--   Automatically merging a person's details to an existing contact when
-    a person signs up online for items such as Events, Membership,
-    Contributions and Profile pages.
--   Automatically merging a person's details when importing contacts.
 
-Dedupe rules
-------------
+Les règles de dédoublonnage
+---------------------------
 
-Dedupe rules are a way of specifying to these features whether CiviCRM
-should consider contacts to be duplicated. For example a rule could
-state that when the email address and first name between two contacts
-match CiviCRM should consider these contacts to be duplicates.
+Les règles de dédoublonnage est une façon de spécifier à CiviCRM les critères selon lesquels des contacts sont considérés ou non comme des doublons. Par exemple, une règle pourrait dire que deux contacts sont des doublons s'ils ont tous les deux la même adresse courriel et le même prénom.
 
-Using the default rules to find and merge duplicate contacts
+Si vous ne souhaitez pas configurer vos propres règles de dédoublonnage, il existe une règle par défaut que vous pouvez utiliser.
 
-If you do not want to configure the dedupe rules at this stage you can
-simply use the default rules to find duplicates from your database.
-
-Firstly view the dedupe rules. Go to **Contacts > Find and Merge
-Duplicate Contacts** in the navigation menu. This displays the following
-screen:
+Pour visualiser les règles de dédoublonnage, aller à **Contacts > Rechercher et fusionner les contacts en double** dans le menu principal. Vous arriverez à l'écran suivant :
 
 ![Duplicate Choose Find Rule](../img/duplicates-choose-find-rule.png)
 
-Different rules are configured for each contact type (individuals,
-organizations, and households.) A default supervised rule and a default
-unsupervised rule is set for each contact type. The default rules are
-used when CiviCRM invokes automatic checking, in ways we'll explain in
-detail shortly.
+Différentes règles par défaut (supervisé et non-supervisé) existent pour chaque type de contact (Individu / Particulier, organisations et ménage / foyer). Les règles par défaut sont utilisées par CiviCRM pour des vérifications automatique, que nous allons expliquer un peu plus bas.
 
-Understanding dedupe rules: Supervised, Unsupervised and General
-----------------------------------------------------------------
+Comprendre les règles de dédoublonnage : Supervisé, Non-supervisé et Général
+----------------------------------------------------------------------------
 
-CiviCRM now includes three categories of dedupe rules:
+CiviCRM dispose de trois catégories de règles de dédoublonnage :
 
-**Unsupervised:** The 'Unsupervised' rule for each contact type is
-automatically used when new contacts are created through online
-registrations including Events, Membership, Contributions and Profile
-pages. They are also selected by default when you Import contacts. They
-are generally configured with a narrow definition of what constitutes a
-duplicate so as to avoid a false match being merged accidentally.
+**Non-supervisé** : Les règles "non-supervisé" sont automatiquement utilisées pour chaque type de contact quand ces derniers sont créés à travers des enregistrements en ligne, tels que les événements, les adhésions, les contributions et les pages de profil. Elles sont également sélectionnées par défaut pour l'importation des contacts. Elles sont optimisées pour s'approcher au mieux de la définition stricte de ce que peut être un doublon, afin d'éviter les faux positifs.
 
-**Supervised:** The 'Supervised' rule for each contact type is
-automatically used to check for possible duplicates when contacts are
-added or edited via the user interface. The UI will alert the user if a
-contact they are creating matches another contact using the rule. The
-user can then decide whether to edit the existing contact or to continue
-to create a new contact. Supervised Rules should be configured with a
-broader definition of what constitutes a duplicate as the user can
-decide whether to act on the rule or not.
+**Supervisé** : Les règles "supervisé" sont automatiquement utilisées pour chaque type de contact quand ces derniers sont créés ou modifiés à l'aide de l'interface utilisateur. Ce dernier recevra une alerte en cas de doublon détecté à l'aide de l'une de ces règles, et pourra décider de continuer ou non en toute connaissance de cause. Les règles de cette catégorie devraient être configurées en suivant une définition large de ce que peut être un doublon, l'utilisateur pouvant décider d'agir en conséquence.
 
-**General:** You can only configure one 'Unsupervised' and one
-'Supervised' rule for each contact type, but you can configure any
-number of additional 'General' rules to provide other criteria to scan
-for possible duplicates.
+**Général** : vous ne pouvez configurer qu'une seule règle "Non-supervisé" et une seule règle "Supervisé" pour chaque type de contact, mais vous n'avez pas de limite pour les règles "Général" qui vous permettent de définir des critères supplémentaires de détection de doublons.
 
-Configuring rules
------------------
+Configurer les règles
+---------------------
 
-To determine whether two contacts are duplicates, CiviCRM checks up to
-five fields that you can specify. You can also set a length value which
-determines how many characters in the field should be compared. For
-example, if you set a length of 2 on the **First Name** field, a first
-name of "Mike" would match "Michael" and they would be recognized as
-duplicates, because the first 2 characters are the same. However, if you
-set the length to 3 instead, "Mike" would no longer match "Michael" and
-they would be accepted as different contacts. If the length value is
-left blank, the comparison is done on the entire field value.
+Pour déterminer si deux contacts sont des doublons, CiviCRM peut vérifier jusqu'à cinq champs que vous aurez spécifiés. Vous pouvez également préciser sur quelle longueur de chaine de caractère la comparaison de deux champs doit se faire. Par exemple, si vous indiquez une longueur de deux sur le champ **Prénom**, les prénoms "Mike" et "Mickael" seront considérés comme des doublons. En revanche, cela ne sera pas le cas si vous indiquez une longueur de 3 ou plus. Si cette valeur est laissée vide, la comparaison se fera sur la longueur totale des champs.
 
-Each field is also configured with a numeric weight that determines the
-relative importance of a match on that field. When a match is discovered
-on a field, that field's weight is added to the total weight for the
-rule. After each field is checked, if the total weight is equal to or
-greater than the numerical threshold set for the rule, the contacts
-being compared are flagged as suspected duplicates.
+Chaque champ se voit également associé un "poids numérique" qui détermine le degré d'importance d'une correspondance sur ce dernier. Quand un doublon est détecté par rapport à ce champ, ce poids est ajouté au poids total de la règle. Lorsque tous les champs sont vérifiés, le poids total est comparé au seuil numérique de la règle : si le poids est égal ou plus important, les contacts sont considérés comme des doublons potentiels.
 
-Using rules and merging duplicate contacts manually
-------------------------------------------
+Utiliser les règles et fusionner les contacts en doublon manuellement
+---------------------------------------------------------------------
 
-1.  Go to **Contacts > Find and Merge Duplicate Contacts**.
-2.  Click the **Use Rule** link to scan for duplicate contacts using the
-    selected rule.
+1.  Dans le menu principale, allez à **Contacts > Rechercher et fusionner les contacts en doublon**.
+2.  Cliquez sur le lien **Utilisez cette règle** pour scanner des éventuels doublons
 
-3.  You can then select to search all contacts for duplicates or to
-    limit the search to a particular group. If you choose to limit the
-    search to a specific group, CiviCRM looks for duplicates where at
-    least one of the contacts in any identified duplicate pair is in
-    your selected group.  
+3.  Vous pouvez faire une recherche sur l'ensemble des contacts, ou la limiter sur un groupe en particulier. Pour ce dernier cas, CiviCRM recherchera des doublons dont au moins l'un des contacts appartient au groupe concerné.
 
     ![duplicates-select-group](../img/duplicates-select-group.png)  
 
-    Contacts of the type to which the rule is
-    assigned will be scanned and compared. If the match between two
-    contacts meets or exceeds the rule's threshold score, the contacts
-    will be displayed on the following screen of possible duplicates.
-    You will be presented with a list of possible duplicates with a few
-    show/hide tickboxes; Street Address, Post Code, Conflicts and Threshold.  
+    Lors du scan, si le poids numérique entre deux contacts est égal ou supérieur à la valeur de seuil, ces derniers sont affichés sur l'écran suivant en tant que possible doublons. Une liste sera alors affichée en dessous de quelques cases à cocher Afficher / cacher : rue, code postal, conflits et seuil.  
 
-  ![List of Possible Duplicates](../img/duplicates-list-of-possibles.png)  
+![List of Possible Duplicates](../img/duplicates-list-of-possibles.png)  
 
-4.  Clicking **Merge** for any pair of contacts brings up a table
-    showing details for each contact. CiviCRM designates one record as
-    the duplicate record and displays its information in the left
-    column. The record in the right column is considered the original
-    record into which selected data from the duplicate record will be
-    merged.
-5.  If you want to move the information in the opposite direction, you
-    can swap the duplicate and original contacts by choosing **Flip
-    between original and duplicate contacts** at the top of the page.  
+4.  Cliquer sur **Fusionner** pour une paire de contacts fait afficher une table montrant les détails de ces derniers. CiviCRM indique l'enregistrement en doublon dans la colonne de gauche, et l'enregistrement original dans la colonne de droite. En cas de fusion, les valeurs de la colonne de gauche remplaceront celles de la colonne de droite.
+5.  Si vous souhaitez que l'opération se fasse de la droite vers la gauche, il suffit de cliquer sur **Inverser les contacts en doublons et les originaux** en haut de la page.
+
 ![Duplicate Merge Screen](../img/duplicate-merge-screen.png)  
 
-6.  The rows on the merge screen are colour-coded.
-    -  Green indicates the information is the same
- for each contact. These can be hidden by clicking on **Show/hide rows with the same data on each contact record**.
-    -  Red indicates the information is different for the two contacts. For each field, you can choose whether to keep the original data
-    shown on the right (don't tick the check-box in the middle column),
-    or use the value from the duplicate contact instead (tick the box).
-    For the email addresses or phone numbers, you can decide to keep
-    both the value of the duplicate and of the original (tick both the
-    checkbox in the middle column and the "add new" on the right column)
-    to copy the duplicate data.
-    -  Yellow indicates a row where the default option is a tick in the  
-    check-box which means the data from the duplicate will be **added** to the data already
-    in the original record. This applies to tags, groups and activity data
-    (including event attendance, contributions, etc.).  If you untick
-    the check-box the data belonging to the duplicate will be lost.
-7.  Click **Merge...** to complete the merge, or **Mark this pair as not
-    a duplicate** if you believe the two contacts are not the same.
-8.  When marked as 'not a duplicate', those contacts will be excluded from
-    all dedupe results listings.
+6.  Les lignes de l'écran de fusion ont des codes couleurs.
+    -  Le vert indique de l'information est la même pour chaque contact. Ces derniers peuvent être cachés en cliquant sur **Afficher / cacher les lignes ayant des données identiques pour chaque enregistrement de contact**.
+    -  Le rouge indique que l'information est différente entre les deux contacts. Pour chaque champ, vous pouvez décider s'il faut garder la valeur originale (laissez la case à cocher au milieu inactive) ou s'il faut utiliser la valeur de l'enregistrement en doublon (cliquez sur la case à cocher). Pour les adresses courriel et les numéros de téléphone, vous pouvez également décider de garder les deux valeurs en cochant la case à cocher dans la colonne du milieu et celle ("ajouter nouveau") de la colonne de droite.
+    -  Le jaune indique que l'option par défaut est une case à cocher active. Cela signifie que les données du champ de l'enregistrement en doublon seront ajoutées à celles de l'enregistrement original. Cela s'applique aux étiquettes, aux groupes et aux données d'activités (participation aux événements, contribution...) Si vous décochez cette case, les données de l'enregistrement en doublon seront perdues.
+7.  Cliquez sur **Fusionner...** pour lancer l'action, ou sur **Marquer cette paire comme non doublon** si vous pensez que les deux contacts ne sont pas les même.
+8.  Quand un contact est marqué "n'est pas un doublon", il est exclu des résultats de toutes les détections de doublons.
 
-Merging multiple contacts simultaneously
-----------------------------------------
-Sometime it is appropriate to merge multiple pairs of duplicates at the same time.
-This can be done from the possible duplicates screen where you can display up to 100 rows.
+Fusionner plusieurs contacts simultanement
+------------------------------------------
 
-   ![List of Possible Duplicates Batch Merge](../img/duplicate-list-of-possibles-detail.png)
+Parfois, il est plus efficace de fusionner plusieurs paires de doublons en même temps. Vous pouvez le faire depuis l'écran des doublons sur lequel vous pouvez lister jusqu'à 100 lignes.
 
-You can **Batch Merge All Duplicates** (This will merge **all** duplicates found,
-not just those displayed on your screen) or **Batch Merge Selected Duplicates**
-ie those you have selected by ticking the box on the left of the row.  These
- batch merging options are displayed beneath the list of duplicates discovered.
-In the same area you will find **Flip Selected Duplicates**. When duplicates
- are merged Contact 1 is kept and contact 2 is merged then deleted, so sometimes
- you may want to switch the order of the records before merging.
+![List of Possible Duplicates Batch Merge](../img/duplicate-list-of-possibles-detail.png)
 
-The batch merging feature will merge all contacts under the given rule
-together or all selected contacts, provided
-there are no data conflicts. For instance, two individuals named
-"Michael Blake" may have been matched based on identical first and last
-name, with neither having an email address on record. If the data held
-on both contacts is either exactly the same, or one contact contains
-information the other does not (e.g. a work phone number, where the
-other has a mobile), the two will be merged. However, if both contacts
-have different home telephone numbers, the records will be skipped; the
-two contacts will not be merged.
+Vous pouvez **Fusionner par lot tous les doublons** (cela fusionnera **tous** les doublons détectés, pas uniquement ceux listés à l'écran) ou **Fusionner par lot les doublons sélectionnés** (ceux dont la case à cocher à gauche de leur ligne est active). Ces options de fusion sont affichées en dessous de la liste des doublons détectés. Vous y trouverez également la possiblité d'**Inverser les doublons sélectionnés**. Quand des contacts sont fusionnés, Contact 1 est conservé et Contact 2 est fusionné puis supprimé. Cette option permet d'inverser les rôles.
 
-Once a batch merge has been completed, you will be returned to the
+
+La fonctionnalité de fusion par lot ne traite que les doublons pour lesquels il n'y a pas de conflit de donnée. Si un champ de l'enregistrement en doublon contient une valeur différente du champ de l'enregistrement original, la paire de doublon sera ignorée par le processus et les contacts ne seront pas fusionnés.
+
+Une fois la fusion par lot effectuée, you will be returned to the
 original list. If any of the records were skipped due to a data conflict
 like the example above, the message shown below will be displayed. To
 view an updated list of duplicate contacts (those that were not merged
