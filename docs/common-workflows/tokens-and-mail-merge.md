@@ -1,63 +1,28 @@
-Tokens and mail merge
-=====================
+Jetons, fusions et publipostages
+================================
 
-You can use data in your CiviCRM database to set up mail merge
-communications both for emails and printed materials such as letters and
-mailing labels. The mail merging functionality relies on Tokens, which
-represent items in your database. This chapter explains how tokens work
-and how to use them in generating printing materials. Using tokens in
-emails is further addressed in the Email section of this book.
+Vous pouvez utiliser les données stockées dans votre base CiviCRM pour paramétrer des fusions et des publipostages de courriers, qu'ils soient électroniques ou imprimés (lettres et étiquettes). Cette fonctionnalité s'appuie sur le principe des jetons, qui représente chacun un élément de la base de données. Ce chapitre vous explique comment ces derniers fonctionnent et comment les utiliser pour générer du matériel imprimé.
 
-Tokens
+Jetons
 ------
 
-Tokens are the equivalent of mail merge fields in CiviCRM. This means
-that it is possible to insert information from the database into an
-email or a letter that is different for every recipient. For example,
-use the Postal Greeting token to include a customized greeting for each
-recipient in your PDF letters. Most contact fields, including custom
-fields you've created, are available as mail merge tokens. You can view
-available tokens by clicking the **Insert Token** link in the top right
-corner of the message editing area.
+Les jetons dans CiviCRM sont l'équivalent des champs de fusion de courrier. Cela signifie qu'il est possible d'insérer des informations provenant de la base de donnée dans un courriel ou une lettre qui soient propres à chaque destinataire. Par exemple, utilisez le jeton Postal Greeting pour inclure une formule de salutation qui corresponde à chaque destinataire de votre document PDF. La plupart des champs de contacts, y compris les champs personnalisés, peuvent être utilisés en tant que jetons. Vous pouvez voir ceux qui sont disponibles en cliquant sur le lien **Insérer un jeton** dans le coin en haut à droite de votre éditeur de message.
 
-Most of the tokens contain information that is in the database fields.
-However, there are some special tokens that accomplish specific tasks in
-emails, such as a link to an opt-out page or link to choose mail
-formats. Some tokens are only available for mass mailings, such as the
-token to provide a link to a message stored online.
+Si la plupart des jetons affichent une donnée de la base, d'autres sont conçus pour remplir une tâche particulière dans les courriels, tels qu'un lien vers une page de désinscription. Certains jetons ne sont disponibles que pour la diffusion massive de courriel, tel que celui fournissant un lien vers la page en ligne du message. 
 
 ![image](../img/Tokens-4.5.png)
 
-### Checksum token
+### Jeton de contrôle
 
-A particularly useful token is the checksum. The checksum allows you to
-give people links to contribution forms, profiles, petitions, and event
-registration forms that are prefilled with information that is already
-in their contact record. The image above shows an example of this.
+Un jeton particulièrement utile est le jeton de contrôle (checksum). Ce jeton vous permet de fournir aux destinataires un lien vers un formulaire de contribution, profil, pétition et inscription à un événement avec des champs pré-remplis avec leurs données personnelles de contact.
 
-Only contact fields and actions can be inserted in your email as tokens.
-Related records, such as the name of the event for which the contacts
-have pending enrollments, cannot be included. However, you could provide
-a link to the person's contact dashboard so that they can review their
-registration details for themselves (once logged in), or you could use a
-checksum token to allow access to a profile through which they can
-modify their information without having to log in.
+Seuls les champs de contact et les actions peuvent être insérés dans vos courriels par l'intermédiaire des jetons. Les données associées, telles que le nom d'un événement pour lequel le contact est inscrit, ne peut être affiché. Toutefois, vous pouvez toujours fournir un lien vers un tableau de bord fournissant tous les détails dont la personne a besoin (une fois cette dernière connectée à CiviCRM).
 
-Go to this page for further details on using the checksum
-token: [http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens](http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens).
+Vous trouverez de plus amples informations sur le jeton de contrôle à cette page : [http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens](http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens).
 
-### Custom tokens
+### Jetons personnalisés
 
-It is also possible to have custom tokens created by a developer. For
-instance, the total amount of contributions from a contact. To find out
-more about working with custom tokens, refer to the discussion about
-custom mail merge tokens in the Hooks chapter of the Extending CiviCRM
-section of this book and look at the wiki:
+Il est également possible d'utiliser des jetons personnalisés créés par un développeur (par exemple, le montant total des contributions d'un contact). Pour en savoir plus à ce sujet, vous pouvez jeter un oeil au wiki :
 [http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens](http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens).
 
-Another task for a developer is to create if/then logic for your mail
-merge. This is done using the smarty template language as described here
-[http://www.smarty.net/docs/en/language.function.if.tpl](http://www.smarty.net/docs/en/language.function.if.tpl).
-
-
--
+Une autre tâche pour un développeur est de pouvoir créer une condition if/then pour la fusion de courrier. Cela est possible en utilisant le langage smarty template décrit ici : [http://www.smarty.net/docs/en/language.function.if.tpl](http://www.smarty.net/docs/en/language.function.if.tpl).
