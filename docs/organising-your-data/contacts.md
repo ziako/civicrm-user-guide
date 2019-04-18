@@ -49,112 +49,62 @@ Les noms des individus / particuliers sont découpés en parties : préfixe, pr�
 
 Vous pouvez enregistrer une ou plusieurs adresses pour un contact. Chaque adresse doit être d'un type différent de localisation (Travail, domicile...). L'une d'entre elle peut être marquée comme principale et sera utilisée pour tout publipostage. Vous pouvez choisir explicitement quel type de localisation sera l'adresse principale, ou laissez par défaut la première adresse qui sera renseignée.
 
-Vous pouvez partager des adresses entre contacts. For example, you may need to
-keep information about individual contacts and the organisations where
-they work. When creating or editing the "work" address for an
-individual, check the "Share Address With" box. If their employer
-already exists in your database, you can select them from the quick
-search box that appears. Otherwise, you can create the employer's
-organisation record on the fly by selecting "New Organisation" from the
-"create new contact" drop-down.
+Vous pouvez partager des adresses entre contacts. Par exemple, vous pourriez avoir besoin d'information entre des contacts  de type individus / particuliers et leur lieu de travail (contact de type organisation). Lorsque vous créez ou modifiez l'adresse "Travail" pour un individu / particulier, activez la case à cocher "Partager l'adresse avec". Si son employeur existe déjà dans la base de donnée, vous pouvez le sélectionner depuis la boite de recherche rapide qui apparait. Sinon, vous pouvez créer à la volée l'enregistrement de l'employeur en sélectionnant "Nouvelle organisation" depuis la liste déroulante "Créer un nouveau contact".
 
-If a person pays you by credit card, the details used for Billing
-Address in credit card payments will be stored in the Billing location
-for the contact.
+Si une personne effectue un paiement par carte de crédit, les informations utilisées par cette opération seront stockées dans l'adresse de facturation du contact. 
 
-If you have a mapping provider enabled you can click on the map icon
-next to an address to see the location of a contact on a map. 
+Si vous avez un fournisseur de cartographie actif, vous pouvez cliquer sur l'icône à côté de l'adresse pour voir ses coordonnées sur une carte.
 
-#### Phone numbers 
+#### Numéros de téléphone 
 
-You can store multiple phone numbers for each contact. Phone numbers
-have locations (e.g. work, home, etc.) and types, e.g. landline, fax,
-mobile. Note that any phone numbers that you add as of type mobile will
-be available for sending SMS. 
+Vous pouvez stocker plusieurs numéros de téléphone pour chaque contact. Ils sont classés par localisation (travail, domicile...) et par type (filaire, mobile, fax...). Veuillez noter que n'importe quel numéro de téléphone de type "mobile" sera disponible pour l'envoi de SMS.
 
-#### Email addresses
+#### Adresses courriel
 
-You can store multiple email addresses for each contact. One of these
-email addresses can be explicitly marked as the address which receives
-all bulk mailings such as e-newsletters and announcements (e.g. these
-are emails your organisation would send using the CiviMail component).
-Any bouncing emails are automatically marked as being on hold when
-sending emails via CiviMail. See the Mail section for more information.
+Vous pouvez stocker plusieurs adresses courriel pour chaque contact. L'une de ces adresses doit être explicitement marquée comme l'adresse recevant tous les courriels de votre organisation tels que les infolettres/newsletters, les annonces (tous les courriels envoyés depuis le composant CiviMAil). Tout courriel n'arrivant pas à son destinataire est, dans CiviMail, marqué "en suspend". Veuillez vous référer à la section Courriel pour plus d'information.
 
+#### Préférence de communication et protection de la vie privée 
 
-#### Communication preferences and privacy options 
+Les moyens de communication préférés des contacts (téléphone, courriel...) et les options de protection de leur vie privée (ne pas appeler, ne pas envoyer de courrier postal...) peuvent être définis. Les options de protection de la vie privée sont respectée lors de l'exécution de certaines fonctionnalités de CiviCRM : les étiquettes de publipostage ne sont pas imprimées pour les contacts ayant coché "ne pas envoyer de courrier", et les courriels ne sont pas envoyés à ceux ayant coché "ne pas envoyer de courriel".
 
-Communications preferences (i.e. methods of communication that are
-preferred by contacts) and privacy options (e.g. do not contact me via
-email) can be defined. Privacy options are respected when carrying out
-certain functions, e.g. mailing labels are not printed for contacts with
-the 'do not mail' privacy option, and emails are not sent to contacts
-with the 'do not email' privacy option.
+Voici une brève explication de chaque option de protection de la vie privée disponible dans la fiche d'un contact :
 
-Here is a brief explanation of each of the privacy options in the
-CiviCRM contact record:
+-   **Ne pas appeler** : L'utilisateur a choisi de ne pas être contacté par téléphone ;
+-   **Ne pas envoyer de courriel**- L'utilisateur a choisi de ne pas être contacté par courriel ;
+-   **Ne pas envoyer de courrier**- L'utilisateur a choisi de ne pas être contacté par courrier postal ;
+-   **Ne pas envoyer de SMS**- L'utilisateur a choisi de ne pas être contacté par SMS ;
+-   **Ne pas transmettre les données personnelles**- L'utilisateur a choisi de ne pas partager ses données personnelles (que vous pourriez partager ou vendre à des organisations tierces) ;
+-   **Utilisateur s'est exclu des mailings**- Cette case est cochée quand l'utilisateur a cliqué sur le lien d'exclusion fourni dans un courriel géré par CiviMail.
 
--   **Do not phone**- The end user has elected to not be contacted via
-    telephone.
--   **Do not email**- The end user has elected to not be contacted via
-    email.
--   **Do not mail**- The end user has elected to not be contacted via
-    postal delivery (snail mail)
--   **Do not SMS**- The end user has elected to not be contacted via
-    text messaging service to their mobile device.
--   **Do no trade**- The user has elected not to share their info with
-    other organizations. (ie. you may not share or sell user's
-    information to other parties) 
--   **NO BULK EMAILS (User Opt Out)**- This is set when a user selects
-    the Opt Out action in a CiviMail Email. 
+#### Champs de salutation et destinataire
 
-#### Greetings and addressee fields
+Par défaut, les champs de salutations et destinataires sont calculés à partir des champs de nom du contact. Par exemple, la salutation dans un courrier postal pour un individu / particulier s'appelant "Jean Dupont" sera "Cher Jean".
 
-By default greetings and addressee fields are calculated based on the
-contacts name fields. For example the postal greeting for an individual
-called 'Jenny Soper' is 'Dear Jenny'.
+Les salutations par défaut peuvent être configurées de manière globale en allant à **Administrer > Communications > Formules de salutation par courrier *or* Formules de salutation par courriel *or* Formats de destinataires**.
 
-The default greetings can be configured at a global level here:
-**Administer CiviCRM** > **Communications** > **Email Greeting Formats
-*or*Email Greeting Formats*or*Addressee formats**.
+Différents formats peuvent aussi être paramétrés au niveau de chaque contact.
 
-Different formats can also be selected for each contact and can also be
-customised on a contact per contact basis. 
+### Onglet Relations
 
-### Relationships tab
-
-Relationships are connections between contact records in your database.
-Each connection can be named to describe the nature of the connection,
-and a contact may have many relationships to other contacts in the
-database. In the example below you can see a list of Current
-Relationships as well as a list of Inactive relationships.
+Les relations sont des connexions entre des enregistrements de contacts dans votre base de donnée. Chaque connexion peut être nommée pour en décrire sa nature, et chaque contact peuvent avoir plusieurs relations avec d'autres contacts dans la base de donnée. Dans l'exemple ci-dessous, vous pouvez voir une liste de relations courantes et de relations inactives.
 
 ![Contact-RelatoinshipTab_1](../img/CiviCRM_update-CiviCore-Contact-RelatoinshipTab_1-en.png)
 
-You can read more about when it makes sense to use relationships in the
-*relationships* chapter of the*organising your data* section. 
+Vous pouvez en savoir plus sur les relations dans le chapitre *Relations* de la section *Organiser vos données*.
 
-### Activities tab
+### Onglet Activités
 
-The Activities tab displays a list of all of your interactions with a
-contact, including all CiviCRM's built-in activities like event
-attendance, contributions, phone calls etc as well as any custom
-activities you may have added. It also allows you to record activities
-with contacts. Clicking on the icons at the top of the screen (Send an
-Email, Meeting, Phone call) will bring up a screen where you can enter
-those details. This tab will also show any custom activities that you've
-defined.
+L'onglet Activités affiche une liste de toutes vos interactions avec un contact, y compris toutes les activités "métier" de CiviCRM telles que les participations à des événéments, les contributions, les appels téléphoniques... ainsi que toutes les activités personnalisées que vous pourriez ajouter. Il est également possible d'y enregistrer vos interactions avec le contact : Cliquez sur la liste déroulante en haut de l'écran et sélectionnez un type d'activité (Passer un appel téléphonique, Envoyer un courriel...) vous fera afficher un écran sur lequel entrer les détails.
 
 ![Contact_ActivityTab](../img/CiviCRM_update-CiviCore-Contact_ActivityTab-en.jpg)
 
-To find out more about activities please refer to the Activities section
-in this chapter.
+Pour en savoir plus sur les activités, merci de vous référer au chapitre *Activités* de cette section.
 
-### Mailings tab
+### Onglet Mailings
 
-This is only visible if at **Administer > CiviMail > CiviMail Component Settings** you have unselected **Enable CiviMail to create activites on delivery**.  In that case each bulk email is recorded on the mailings tab instead of the activities tab. This improves the speed at which the activies tab loads if your organisation sends bulk emails to large mailing lists. 
+Cet onglet est visible uniquement si vous avez décoché **Permettre à CiviMail de créer une activité à l'envoi** dans **Administrer > CiviMail > Paramètres de composant CiviMail**. Dans ce cas, chaque courriel envoyé en masse est enregistré dans cet onglet plutôt que dans l'onglet Activités. Cela permet d'améliorer la vitesse d'affichage de ce dernier si votre organisation diffuse massivement de nombreux courriels. 
 
-### Contributions tab
+### Onglet Contributions
 
 The Contributions tab shows any financial contributions made by a
 contact, as well as a summary of the contribution activity of the
