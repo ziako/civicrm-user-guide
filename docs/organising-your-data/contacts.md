@@ -106,120 +106,69 @@ Cet onglet est visible uniquement si vous avez décoché **Permettre à CiviMail
 
 ### Onglet Contributions
 
-The Contributions tab shows any financial contributions made by a
-contact, as well as a summary of the contribution activity of the
-contact (total amount of contributions over time, total number of
-contributions, and average amount of contributions).
+L'onglet Contributions affiche toutes les contributions financières faite par un contact, ainsi qu'une synthèse (montant total des contributions pour une période donnée, nombre total des contributions ou montant moyen des contributions)
 
-The Contributions tab also allows you to record offline contributions
-using the Record Contribution button, or record a credit card
-transaction on behalf of the contact (useful if the contribution has
-been made by phone) using the Submit Credit Card Contribution button.
-Both of these buttons lead to forms that allow you to select the
-Financial Type in addition to the normal contribution information
-collected from public contribution pages.
+Cet onglet vous permet également d'enregistrer manuellement des contributions qui n'aurait pas été faites en ligne, en utilisant le bouton **Nouvelle contribution**.
 
 ![Contact_COntribTab](../img/CiviCRM_update-CiviCore-Contact_COntribTab-en.jpg )
 
-Read more about Contributions, in the Contributions chapter of this
-book.
+Pour en savoir plus sur ce sujet, veuillez vous référer au chapitre *Contributions* de ce manuel.
 
-### Memberships tab
+### Onglet Adhésions
 
-This tab displays any memberships a contact has. From this tab you are
-able to add memberships and submit credit card payments for memberships
-that require a fee. You can also renew or delete memberships from the
-"more" link on each membership in the contact's existing memberships.
+Cet onglet affiche les adhésions du contact. Vous pouvez également y enregistrer manuellement celles qui n'auraient pas été faites en lignes, en utilisant le bouton **Ajouter une adhésion**. Vous pouvez également renouveler ou supprimer des adhésions depuis le lien "plus" à droite de chaque adhésion associée au contact.
 
 ![Contact_MembershipTabs](../img/CiviCRM_update-CiviCore-Contact_MembershipTabs-en.jpg)
 
-Read more about Memberships, in the Membership chapter of this book.
+Pour en savoir plus sur ce sujet, veuillez vous référer au chapitre *Adhésions* de ce manuel.
 
-### Events tab
+### Onglet Événement
 
-The Events tab displays events related to this contact, for example
-events the contact has registered for, attended or volunteered at.
+Cet onglet affiche les événéments associés au contact. Par exemple, ceux pour lesquels le contact s'est inscrit, ou encore ceux pour lesquels il s'est porté volontaire.
 
-From this page you can register the contact for an event, and use the
-Submit Credit Card Event Registration button if the event requires
-payment. The related payment will then appear on the contact's
-Contributions tab in the first row.
+Depuis cette page, vous pouvez inscrire un contact à un événement, et même enregistrer le paiement associé (ce dernier apparaitra alors dans l'onglet Contribution).
 
-You can also modify the event information as it relates to the contact
-by clicking the Edit link. For example, you can change the contact's
-event status from "registered" to "attended."
+Vous pouvez également modifier les informations d'un événement associé au contact en cliquant sur le lien "Modifier". Par exemple, vous pouvez changer le statut d'un contact sur un événement de "Enregistré" à "En attente".
 
 ![Contact_Eventstab](../img/CiviCRM_update-CiviCore-Contact_Eventstab-en.jpg)
 
-Read more about Events, in the Events chapter of this book.
+Pour en savoir plus sur ce sujet, veuillez vous référer au chapitre *Événements* de ce manuel.
 
-### Groups tab
 
-The Groups tab shows the groups that the contact belongs to. Groups can
-be used in a variety of ways including mailing lists and permissions
-(**ACL**s).
+### Onglet Groupes
 
-You can add and remove the contact from groups, and see a history of
-groups the contact has unsubscribed or been removed from.
+Cet onglet affiche les groupes auxquels appartient le contact. Les groupes sont utilisés de façon très variée : liste de diffusion de courriel, gestion des autorisations d'accès...
 
-The Status column displays who has added the contact to the group.
-Whether users can add themselves to a group is one of the settings you
-can configure when creating a group. When you set a group's visibility
-to "Public Listings" users can join via **Profile** forms. You may want
-to familiarise yourself with the discussion on using Profiles for
-mailing list sign-ups covered in a later section.
+Dans cet onglet, vous pouvez ajoutez ou retirer le contact d'un groupe, et en voir l'historique.
+
+La colonne Statut indique l'utilisateur qui a ajouté le contact au groupe. Il est possible d'autoriser les utilisateurs à s'ajouter eux-même à un groupe. Lorsque vous paramétrez la visibilité d'un groupe à "Listes publiques", les utilisateurs peuvent s'y ajouter à travers un formulaire **Profil** (plus d'information à ce sujet dans le chapitre *Les profils* de cette section).
 
 ![Contact_GroupsTab](../img/CiviCRM_update-CiviCore-Contact_GroupsTab-en.jpg)
 
-For more on this topic, please refer to the Tags and Groups section of
-the book. 
+Pour en savoir plus sur ce sujet, veuillez vous référer au chapitre *Groupes et étiquettes* de ce manuel.
 
-### Notes tab
+### Onglet Notes
 
-The Notes tab is a place where you can record random bits of information
-about a contact. Generally you would use custom fields for information
-you plan to collect about your contacts, but in some cases it may be
-useful to record additional, ad-hoc notes. Since this information is
-unstructured, you should be careful about using the Notes tab, unless
-you know that you or other people using your CiviCRM implementation will
-remember to look at that tab. When creating a Note, both the subject and
-the content are free-text fields (i.e. the subject field does not have
-to be chosen from predefined options).
+Vous pouvez dans cet onglet enregistrer n'importe quelle information concernant le contact. En général, il est conseillé d'utiliser des champs personnalisés pour des données spécifiques que vous souhaitez collecter auprès de vos contacts. Mais dans certains cas, il peut être utile d'enregistrer quelques notes "telles quelles". Toutefois, ce type d'information n'ayant pas de structure propre, il faut rester prudent quant à son utilisation et avoir le réflexe de consulter régulièrement cet onglet. Les champs d'une note (sujet et contenu) sont libres (pas de format imposé).
 
-You can specify "Author Only" privacy for a note. This means that only
-the person who wrote the note, or someone with "view all notes"
-permission (via your CMS) can view or edit it.
+Vous pouvez spécifier "Auteur uniquement" pour une note. Dans ce cas, seul l'auteur pourra la lire ou la modifier, ou quelqu'un ayant l'autorisation "Voir toutes les notes" dans CiviCRM.
 
 ![Contact_NotesTab](../img/CiviCRM_update-CiviCore-Contact_NotesTab-en.jpg)
 
-### Tags tab
+### Onglet étiquettes
 
-Tags are one way of categorising contacts in your database (other
-methods are Custom Data and Groups). You can configure which tags you
-wish to use for your organisation. You can search on tags and create
-Smart Groups based on them.
-
-The tags next to Keywords are part of the Keywords Tagset. A Tagset is a
-specific grouping of tags that you can create. Tagsets are
-non-hierarchical, and you can create a new tag in a tagset simply by
-typing a new tag into the field. Existing tags that match what you type
-will also show up as a list from which you can select.
+Les étiquettes sont une possibilité de classer vos contacts dans votre base de donnée (les autres moyens sont les groupes et les données personnalisées). Vous pouvez créer autant d'étiquettes que vous le souhaitez pour gérer votre organisation. Vous pouvez faire des recherches sur les étiquettes et créer des groupes dynamiques basés sur ces dernières.
 
 ![Contact_TagTab](../img/CiviCRM_update-CiviCore-Contact_TagTab-en.jpg "Contact_TagTab")
 
-For more on this topic, please refer to the Tags and Groups section of
-the book.
+Pour en savoir plus sur ce sujet, veuillez vous référer au chapitre *Groupes et étiquettes* de ce manuel.
 
-### Change Log tab
+### Onglet Journal des modifications
 
-This tab gives limited information about changes made to a contact
-record. It shows the change date and who made the change, but not what
-was changed.
+Cet onglet vous donne des informations synthétiques sur les modifications faites sur l'enregistrement d'un contact : la date et l'auteur des changements, mais pas ce qui a été changé.
 
 ![Contact_ChangeLog](../img/CiviCRM_update-CiviCore-Contact_ChangeLog-en.jpg "Contact_ChangeLog")
 
-Note: Administrators can use the Contact Logging Report to get detailed
-information on changes to contact records (who, what and when).
 
 Adding contacts
 ---------------
