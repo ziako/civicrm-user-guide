@@ -170,28 +170,18 @@ Cet onglet vous donne des informations synthétiques sur les modifications faite
 ![Contact_ChangeLog](../img/CiviCRM_update-CiviCore-Contact_ChangeLog-en.jpg "Contact_ChangeLog")
 
 
-Adding contacts
----------------
+Ajouter des contacts
+--------------------
 
-The simplest way to add a single contact to CiviCRM is to use the
-navigation menu at the top of any non-public page. To create a new
-Individual, go to: Contacts > New Individual:
+La façon la plus simple d'ajouter un seul contact dans CiviCRM est d'utiliser le menu principal et de se rendre à **Contacts > Nouvel individu**.
 
 ![Contact_createIndividual](../img/CiviCRM_update-CiviCore-Contact_createIndividual-en.jpg "Contact_createIndividual")
 
-Note that the Contacts menu item allows you to create every kind of
-contact and contact sub-type.
+Veuillez noter que le menu Contacts vous propose de créer tous les types et sous-type de contacts.
 
-All of the contact creation forms are similarly arranged, with basic
-information (name, email etc) at the top of the form and more specific
-fields below grouped by type or subject in accordions (such as address
-fields, communications preferences and any custom fields that you have
-added for the contact type).
+Tous les formulaires de création de contact sont disposés de façon similaire, avec les informations de base (nom, courriel...) en haut et les champs plus spécifiques plus bas, regroupés par type ou sujet.
 
-For all contact types you can use the **Check for Matching Contacts**
-option to help avoid duplicate entries. After entering all of the
-information you have in this section, you can click on **Check for
-Matching Contacts.**
+Pour tous les types de contacts, vous pouvez utiliser l'option **Vérification de concordance avec contact(s)** pour éviter de créer un doublon. Il suffit de cliquer sur ce bouton après avoir rempli tous les champs de la section.
 
 *For adding an Individual record to the database, first name and last
 name OR email address are required. For adding an Organization or
