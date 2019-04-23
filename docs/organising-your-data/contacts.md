@@ -183,38 +183,22 @@ Tous les formulaires de création de contact sont disposés de façon similaire,
 
 Pour tous les types de contacts, vous pouvez utiliser l'option **Vérification de concordance avec contact(s)** pour éviter de créer un doublon. Il suffit de cliquer sur ce bouton après avoir rempli tous les champs de la section.
 
-*For adding an Individual record to the database, first name and last
-name OR email address are required. For adding an Organization or
-Household record to the database, just Organization/Household name is
-required. You can fill out as many of these fields as you like, and
-donâ€™t forget, you can always go back and make changes as needed by
-using the edit screen.*
+* Pour ajouter un enregistrement de type Individu / Particulier dans la base de données, vous devez fournir soit le prénom et le nom, soit l'adresse courriel. Pour ajouter un enregistrement de type Organisation ou Ménage / Foyer, seul leur nom est obligatoire.*
 
-Useful things to know when adding contacts:
+Ce qui est utile de savoir lorsque vous ajoutez des contacts :
 
-Address: You can add multiple addresses to a contact record. This allows
-you to store someone's home and work addresses, as well as a billing
-address if that's different.
+Adresses :
+Vous pouvez ajouter plusieurs adresses pour un contact (domicile, travail, adresse de facturation...)
 
-You will see a checkbox here to allow you to share the address of either
-an existing contact, or create a new contact. If you select new contact,
-you will need to select which contact type you wish to create, and a pop
-up box will appear to add the new contact record. When a person uses
-another contact's address, that address can only be edited from the
-"master contact's" record. 
+Vous avez la possibilité de partager une adresse avec un autre contact (existant ou nouveau) en activant la case à cocher associée. Si vous sélectionnez un nouveau contact, vous aurez besoin de choisir son type et une boite pop-up apparaitra pour réaliser l'opération. Quand une personne utilise l'adresse d'un autre contact, cette adresse ne peut être modifiée que depuis la fiche du contact "propriétaire".  
 
-The options available in the countries dropdown will depend on which
-ones you have made available at **Administer > Localization >
-Languages, Currency, Locations** under Available Countries.
+Les noms des pays disponibles dans la liste déroulante dépendent de ce que vous aurez paramétré dans **Administrer > Localisation > Langue, devises et localisation** dans Pays Disponibles.
 
-There may be fields here that you do not need. Available address fields
-can be edited at **Administer > Localization > Address settings.**The
-"Address Name" field which can be used to label a particular address
-(for example "Summer Home") is hidden by default, but can be enabled
-from that screen.**
-**
+Il y a peut-être des champs d'adresse dont vous n'aurez pas besoin. Leur disponiblité peut être paramétrée dans **Administrer > Localisation > Paramètres d'adresse**. Le champ spécial "Address Name", qui peut être utilisé pour labellisé une adresse particulière (par exemple "domicile d'été") est caché par défaut. Vous pouvez l'activer depuis cet écran.
 
-Tags and Groups: Here you can specify which tags and groups to add your
+Étiquettes et groupes :
+
+Here you can specify which tags and groups to add your
 contact to. Please note that you may only add to existing groups and
 tags with existing tags. You can read more about creating tags and
 groups in the Groups and Tags chapter of this book.
