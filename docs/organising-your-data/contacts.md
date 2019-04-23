@@ -197,130 +197,63 @@ Les noms des pays disponibles dans la liste déroulante dépendent de ce que vou
 Il y a peut-être des champs d'adresse dont vous n'aurez pas besoin. Leur disponiblité peut être paramétrée dans **Administrer > Localisation > Paramètres d'adresse**. Le champ spécial "Address Name", qui peut être utilisé pour labellisé une adresse particulière (par exemple "domicile d'été") est caché par défaut. Vous pouvez l'activer depuis cet écran.
 
 Étiquettes et groupes :
+Dans cette rubrique, vous pouvez spécifier les étiquettes et les groupes que vous souhaitez ajouter à votre contact. Seuls ceux déjà existants peuvent être ajoutés. Pour en savoir plus sur la création de nouveaux groupes et étiquettes, veuillez vous référer au chapitre *Groupes et étiquettes* du manuel.
 
-Here you can specify which tags and groups to add your
-contact to. Please note that you may only add to existing groups and
-tags with existing tags. You can read more about creating tags and
-groups in the Groups and Tags chapter of this book.
 
-Once you have filled out the form, you have the choice of three buttons
-to click:
+Une fois que vous avez complété le formulaire, vous pouvez cliquer sur l'un des trois boutons suivants :
 
--   Save will save the contact record and take you to the contact
-    screen.
--   Save and New will save the contact and clear the form so that you
-    can add another.
--   Cancel will discard the entered information and return you to your
-    CiviCRM dashboard.
+-   **Enregistrer** Sauvegarde le contact et vous laisse sur l'écran ;
+-   **Enregistrer et nouvelle entrée** Sauvegarde le contact et affiche un nouveau formulaire d'enregistrement vierge pour en ajouter un nouveau ;
+-   **Annuler** Annule le formulaire en cours et vous renvoie au tableau de bord.
 
-Editing contacts
-----------------
 
-Editing information on the summary screen is simple. Hovering in the
-upper right corner of the block that you wish to edit will bring up the
-**Edit Info** link. You can then edit the information directly in the
-summary screen.
+Modifier des contacts
+---------------------
 
-If you need to edit a lot information for one particular contact, an
-alternative is to open the entire contact for editing by clicking on the
-edit button above the tabs.
+Il est simple de modifier des informations dans l'onglet Résumé : lorsque le curseur de la souris survole un bloc, le lien **Éditer les infos** apparait en haut à droite. Cliquer dans ce bloc activera les champs qui seront alors modifiables.
+
+Si vous avez besoin de modifier un nombre important de données pour un contact spécifique, vous pouvez mettre tout le formulaire en mode Édition en cliquant directement sur le bouton **Modifier** au dessus des onglets.
 
 ![image](../img/contact%20Screen%20-inline%20edit.png) 
 
-Note that on the rare occasions that two separate admin users edit a
-contact at the same time (specifically that they both open the edit
-screen, then both save the contact), the second admin user will be
-notified of the first admin user's edit and be given the chance to
-manually 'merge' the edits.
+En de rares occasions, il est possible que deux utilisateurs éditent une fiche contact en même temps (en particulier s'ils ouvrent la même fiche contact puis la sauvegarde en même temps). Dans ce cas, le second utilisateur sera notifié des modifications du premier et aura la possibilité de les fusionner. 
 
-Deleting contacts
------------------
 
-At the top right there is a button to Delete the contact. When a
-contact is deleted, it does not disappear completely - instead it moves
-to the trash, where it can be recovered at a later date (using the
-search in trash feature of **advanced search**). See "searching" under
-the "working with your data" chapter for more information). 
+Supprimer des contacts
+----------------------
 
-Deleted contacts are moved to the "trash" by default (and can be
-restored later if needed). There are a variety of ways to delete a
-contact:
+Il existe le bouton **Supprimer contact**. Quand un contact est supprimé, il ne disparait pas complètement : par défaut, il est déplacé dans la corbeille. Cela offre la possibilité d'être restauré plus tard, en utilisant l'option *Rechercher dans la corbeille* de la recherche avancée.
 
--   **Single contact**: open the contact's record and click the 'delete
-    contact' button at the top of the page. Alternatively, run a search
-    for the contact and, from the results list, look toward the end of
-    the contact's row, click 'More' and select 'Delete Contact'.
--   **Multiple contacts**: run an advanced search, check the boxes of
-    each record you wish to delete (or *select all* with the checkbox in
-    the header at the top) and in the 'actions' drop-down menu, choose
-    'Delete Contacts' to send the contacts to the trash (if enabled) or
-    'Delete Permanently'. A warning page will be displayed to verify
-    your intention; simply click 'Delete' to continue or 'Cancel' to
-    return to the previous screen.
 
-Contact subtypes 
-------------------
+Sous-types de contact 
+---------------------
 
-In addition to the three default contact types (individuals, households
-and contacts), you can define additional contact types (sometimes
-referred to as contact subtypes) to suit your needs.
+En plus des trois types de contact fournis par défaut (Individu/Particulier, Ménage/Foyer et Organisation), vous pouvez ajouter des types supplémentaires (appelés parfois sous-type) pour adapter CiviCRM à vos besoins.
 
-Each contact subtype that you define is based on one of the three core
-contact types. For example, 'Student' would based on the 'Individual'
-contact type, and 'Farm' could be based on the 'Organization' contact
-type, or perhaps 'Household' contact type, depending on your use case.
+Chaque sous-type que vous définissez est basé sur l'un des trois types de contact fournis par défaut. Par exemple, le type "Étudiant" serait basé sur le type "Individu/Particulier, le type "Ferme" basé sur "Organisation", ou peut-être "Ménage/Foyer" selon votre cas d'utilisation.
 
-Contact types are very useful when you need to collect and display
-different sets of custom data for different types of contacts (e.g. you
-may wish to collect information on the subject area and qualifications
-of all teachers in your database but not be interested in collecting
-these for other individuals.  To do this, you would create a contact
-type called Teacher, based on Individual and then create a custom data
-set that only extends Individuals of the type Teacher (see custom data
-for more information).
+Les types de contacts sont très utiles pour collecter et afficher des jeux de données personnalisées. Par ex., vous pourriez souhaiter collecter et afficher le domaine et les qualifications des professeurs de votre base de donnée mais pas pour les autres individus/particuliers. Pour cela, il suffirait de créer un type "Professeur" se basant sur "Individu/particulier", puis de créer des champs personnalisés associés à ce nouveau type (voir le chapitre *Créer des champs personnalisés* dans ce manuel).
 
-Note that the core contact types are mutually exclusive, i.e. a contact
-cannot be an organisation and an individual. However, contacts can be
-of more than one user-defined contact subtype, i.e. they could be a
-Teacher and a Parent, for example.
+Notez que les types fournis par défaut sont mutuellement exclusifs : un contact ne peut pas être à la fois de type Individu/particulier et Organisation par exemple. Toutefois, un contact peut cumuler plusieurs sous-types personnalisés. Par exemple, un contact peut être un professeur et un parent.
 
-To edit existing contact types and and create new contact types go to
-**Administer > Customize Data and Screens > Contact Types**. Note that
-you cannot delete the inbuilt contact types but you can change their
-names and the images associated with them. 
+Pour modifier des types de contact existant, ou pour en créer de nouveaux, aller à **Administrer > Personnaliser les données et écrans > Types de contact**. Veuillez noter que vous ne pouvez pas supprimer les types de contact fournis par défaut dans CiviCRM, mais vous pouvez changer leur nom et l'icône qui leur est associée.
 
-To add custom fields to specific contact subtypes, see the chapter on
-custom fields.
 
-Customizing the view of contacts
+Personnaliser la vue des contacts
 --------------------------------
 
-After working with the contact editing and summary screens for a while,
-you may realise that there are sections and/or fields that aren't useful
-for your organisation. The good news is that you can easily hide some
-fields and sections. For example, if your organisation doesn't need to
-store demographics information, you can remove it by configuring the
-Site Preferences. Using an account with Administer CiviCRM privileges.
+Après un certain temps à travailler sur les fiches de contacts, vous pourriez réaliser que certaines sections ou champs ne sont pas utiles pour votre organisation. Vous pouvez dans ce cas facilement les cacher en paramétrant vos préférences (droits Admin CiviCRM nécessaires) :
 
--   Go to: **Administer > Customize Data and Screens > Display
-    Preferences**.
--   Clear the Demographics box under Editing Contacts.
--   Click Save.
+-   Allez à **Administrer > Personnaliser les données et écrans > Préférences d'affichage** ;
+-   Désactiver la case à cocher données démographiques dans la rubrique *Informations éditables* ;
+-   Cliquez sur Enregistrer.
 
-You can also use this screen to rearrange the order that the information
-is displayed in. 
+Vous pouvez également utiliser cet écran pour réarranger l'ordre de disposition de l'information.
 
-Similarly, if you want to remove (or add) fields in the postal address
-section:
+De manière similaire, vous pouvez supprimer ou ajouter des champs dans la section *Adresse postale* :
 
--   Go to: **Administer > Localization > Address Settings**.
--   Check or uncheck fields under Address Editing.
--   Click Save.
+-   Allez à **Administrer > Localisation > Paramètres d'adresse** ;
+-   Cochez ou décochez les cases dans la rubrique *Édition de l'adresse* ;
+-   Cliquez sur Enregistrer.
 
-If you think that some of the tabs are not useful and will not be used
-in your deployment, you can disable or enable specific tabs from
-**Administer > Customize Data and Screens > Display Preferences**. If
-you don't see some of the tabs described below, you may need to enable
-them. The visibility of some tabs is dependent on which components are
-enabled in your installation. For example, the Contributions tab will be
-hidden if the CiviContribute component is disable.
+Si vous pensez que certains onglets ne sont pas utiles, vous pouvez les désactiver en allant à **Administrer > Personnaliser les données et écrans > Préférences d'affichage**. Vous pouvez également en activant d'autres. Dans ce cas, si l'onglet n'apparait pas dans les préférences d'affichage, pensez à vérifier si vous avez bien activé le composant correspondant (par exemple, l'onglet Contributions n'apparaitra que si vous avez activé CiviContribute).
