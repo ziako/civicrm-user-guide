@@ -5,9 +5,9 @@ Les contacts sont au coeur de CiviCRM. Toutes les autres interactions gravitent 
 
 Il y a trois types de contact dans la configuration par défaut :
 
--   **Individus** - toute personne sur qui vous voulez faire un suivi.
+-   **Individus / Particuliers** - toute personne sur qui vous voulez faire un suivi.
 -   **Organisations** - ceci pourrait être un organisme communautaire, une entreprise, un chapitre de votre organisation ou un comité.
--   **Ménages** - une famille ou un groupe de personnes résidant à la même adresse physique.
+-   **Ménages / Foyers** - une famille ou un groupe de personnes résidant à la même adresse physique.
 
 Chaque fiche de contact contient des informations de base à leur sujet, telles que :
 
@@ -18,466 +18,242 @@ Chaque fiche de contact contient des informations de base à leur sujet, telles 
 
 Vous pouvez également définir des sous-types de contact, tels que « étudiants », « fermes » ou « cuisines collectives ». Chaque type de contact que vous créez est basé sur un des trois aux types de base. Par exemple, les fiches d'étudiants seraient basés sur le modèle des individus, les fermes seraient basées sur les organisations ou peut-être même sur les ménages, selon vos besoins. 
 
-A quick look at contacts
-------------------------
+Un rapide coup d'oeil sur les contacts
+--------------------------------------
 
-Contacts are organised into tabs. The first tab that you see when
-looking at a contact is the **summary tab** with some basic information
-about your contact. Following the summary tab are a series of other
-tabs each showing information about different aspects of the contact.
-Organising the contact into tabs helps manage the large amount of data
-it is possible to collect about contacts over time.
+Les contacts sont organisés en onglets. Le premier onglet qui s'affiche lorsque vous visualisez un contact est l'onglet **résumé**, qui contient quelques informations de base. Puis viennent les autres onglets, affichant chacun des informations correspondant à différents aspects de votre contact. Cette organisation en onglet vous permet de gérer facilement un nombre important de données qu'il est possible de collecter sur votre contact au fil du temps. 
 
-Tabs get turned on and off depending on what components are enabled and
-what permissions you have. For example, you will only see the
-memberships tab if the CiviMember component is turned on and you have
-permission to see memberships, etc. You can also define extra tabs that
-display any extra custom data that you want to collect about your
-contacts.
+Les onglets qui s'affichent (ou non) dépendent des composants qui sont activés et des autorisations que vous possédez. Par exemple, vous ne verrez que l'onglet Adhésions si le composant CiviMember est actif et que vous avez l'autorisation de visualisation les adhésions. Vous pouvez également définir des onglets supplémentaires capables d'afficher des champs de données personnalisés.
 
-Below we look at the most important parts of the contact screen
-(including most of the contact with pointers to other parts of the book
-where appropriate. 
+Nous allons voir ci-dessous les parties les plus importantes de votre écran contact.
 
-### Contact actions 
+### Actions sur les contacts 
 
-Above the tabs line, you will see a few buttons. The first button is
-the **Actions** button which is a handy shortcut to carrying out actions
-with this contact. For example, you could add a note to this contact, or
-record a new contribution, meeting or other activity.
+Juste au dessus des onglets quelques boutons sont disposés. Le premier d'entre eux est le bouton **Actions** qui contient des raccourcis pratiques sur les actions les plus communes à faire avec un contact : ajouter une note, enregistrer une nouvelle contribution, inscription à un événement, etc.
 
 ![image](../img/ActionRibbon.PNG)
 
-### Summary tab
+### Onglet résumé
 
-The summary tab shows overview information about your contact. Here you
-will find names, addresses and contact details as well as details of
-contact methods. 
+L'onglet résumé vous montre les informations principales concernant votre contact. Vous y trouverez notamment ses noms, adresses et autre détails de contact ainsi que les moyens pour le contacter.
 
-Some fields on this tab are just for individuals, for example, first
-name, last name, nick name, etc. Other fields are just for
-organisations, for example organisation name.
+Certains champs de cet onglet sont propres au type de contact Individu / Particulier (nom, prénom...) et d'autres propres au type de contact organisation (nom de l'organisation...).
 
 ![image](../img/ContactSummary.PNG)
 
-#### Individual fields
+#### Champs propres aux individus / particuliers
 
-Individuals names are split into the following parts: prefix, first
-name, middle name, last name, suffix and nickname (you don't have to use
-all of them). Prefixes and suffixes are selected from a drop down
-list. If you can't find the value you want, you can add more options to
-the list from the following screen: **Administer CiviCRM** >
-**Customize Data and Screens** > **Dropdown Options** > **Individual
-Prefixes (Ms., Mr...)**. 
+Les noms des individus / particuliers sont découpés en parties : préfixe, prénom, deuxième prénom, nom, suffixe et surnom (vous n'avaez pas à tous les utiliser). Les préfixes et suffixes sont sélectionnés à l'aide d'une liste déroulante. Vous pouvez la personnaliser en allant à : **Administrer > Personnaliser les données et écrans > Listes déroulantes > Civilité** et **Suffixes**. 
 
-#### Addresses
+#### Adresses
 
-You can record one or more addresses for a contact. Each address needs
-to be at a different **location type** (e.g. work, home, etc). One of
-the addresses can be marked as primary and will be used for any postal
-mailings that you do. You can explicitly choose which location will be
-primary for a particular person, or let it default to the first one
-entered.
+Vous pouvez enregistrer une ou plusieurs adresses pour un contact. Chaque adresse doit être d'un type différent de localisation (Travail, domicile...). L'une d'entre elle peut être marquée comme principale et sera utilisée pour tout publipostage. Vous pouvez choisir explicitement quel type de localisation sera l'adresse principale, ou laissez par défaut la première adresse qui sera renseignée.
 
-You can share addresses between contacts. For example, you may need to
-keep information about individual contacts and the organisations where
-they work. When creating or editing the "work" address for an
-individual, check the "Share Address With" box. If their employer
-already exists in your database, you can select them from the quick
-search box that appears. Otherwise, you can create the employer's
-organisation record on the fly by selecting "New Organisation" from the
-"create new contact" drop-down.
+Vous pouvez partager des adresses entre contacts. Par exemple, vous pourriez avoir besoin d'information entre des contacts  de type individus / particuliers et leur lieu de travail (contact de type organisation). Lorsque vous créez ou modifiez l'adresse "Travail" pour un individu / particulier, activez la case à cocher "Partager l'adresse avec". Si son employeur existe déjà dans la base de donnée, vous pouvez le sélectionner depuis la boite de recherche rapide qui apparait. Sinon, vous pouvez créer à la volée l'enregistrement de l'employeur en sélectionnant "Nouvelle organisation" depuis la liste déroulante "Créer un nouveau contact".
 
-If a person pays you by credit card, the details used for Billing
-Address in credit card payments will be stored in the Billing location
-for the contact.
+Si une personne effectue un paiement par carte de crédit, les informations utilisées par cette opération seront stockées dans l'adresse de facturation du contact. 
 
-If you have a mapping provider enabled you can click on the map icon
-next to an address to see the location of a contact on a map. 
+Si vous avez un fournisseur de cartographie actif, vous pouvez cliquer sur l'icône à côté de l'adresse pour voir ses coordonnées sur une carte.
 
-#### Phone numbers 
+#### Numéros de téléphone 
 
-You can store multiple phone numbers for each contact. Phone numbers
-have locations (e.g. work, home, etc.) and types, e.g. landline, fax,
-mobile. Note that any phone numbers that you add as of type mobile will
-be available for sending SMS. 
+Vous pouvez stocker plusieurs numéros de téléphone pour chaque contact. Ils sont classés par localisation (travail, domicile...) et par type (filaire, mobile, fax...). Veuillez noter que n'importe quel numéro de téléphone de type "mobile" sera disponible pour l'envoi de SMS.
 
-#### Email addresses
+#### Adresses courriel
 
-You can store multiple email addresses for each contact. One of these
-email addresses can be explicitly marked as the address which receives
-all bulk mailings such as e-newsletters and announcements (e.g. these
-are emails your organisation would send using the CiviMail component).
-Any bouncing emails are automatically marked as being on hold when
-sending emails via CiviMail. See the Mail section for more information.
+Vous pouvez stocker plusieurs adresses courriel pour chaque contact. L'une de ces adresses doit être explicitement marquée comme l'adresse recevant tous les courriels de votre organisation tels que les infolettres/newsletters, les annonces (tous les courriels envoyés depuis le composant CiviMAil). Tout courriel n'arrivant pas à son destinataire est, dans CiviMail, marqué "en suspend". Veuillez vous référer à la section Courriel pour plus d'information.
 
+#### Préférence de communication et protection de la vie privée 
 
-#### Communication preferences and privacy options 
+Les moyens de communication préférés des contacts (téléphone, courriel...) et les options de protection de leur vie privée (ne pas appeler, ne pas envoyer de courrier postal...) peuvent être définis. Les options de protection de la vie privée sont respectée lors de l'exécution de certaines fonctionnalités de CiviCRM : les étiquettes de publipostage ne sont pas imprimées pour les contacts ayant coché "ne pas envoyer de courrier", et les courriels ne sont pas envoyés à ceux ayant coché "ne pas envoyer de courriel".
 
-Communications preferences (i.e. methods of communication that are
-preferred by contacts) and privacy options (e.g. do not contact me via
-email) can be defined. Privacy options are respected when carrying out
-certain functions, e.g. mailing labels are not printed for contacts with
-the 'do not mail' privacy option, and emails are not sent to contacts
-with the 'do not email' privacy option.
+Voici une brève explication de chaque option de protection de la vie privée disponible dans la fiche d'un contact :
 
-Here is a brief explanation of each of the privacy options in the
-CiviCRM contact record:
+-   **Ne pas appeler** : L'utilisateur a choisi de ne pas être contacté par téléphone ;
+-   **Ne pas envoyer de courriel**- L'utilisateur a choisi de ne pas être contacté par courriel ;
+-   **Ne pas envoyer de courrier**- L'utilisateur a choisi de ne pas être contacté par courrier postal ;
+-   **Ne pas envoyer de SMS**- L'utilisateur a choisi de ne pas être contacté par SMS ;
+-   **Ne pas transmettre les données personnelles**- L'utilisateur a choisi de ne pas partager ses données personnelles (que vous pourriez partager ou vendre à des organisations tierces) ;
+-   **Utilisateur s'est exclu des mailings**- Cette case est cochée quand l'utilisateur a cliqué sur le lien d'exclusion fourni dans un courriel géré par CiviMail.
 
--   **Do not phone**- The end user has elected to not be contacted via
-    telephone.
--   **Do not email**- The end user has elected to not be contacted via
-    email.
--   **Do not mail**- The end user has elected to not be contacted via
-    postal delivery (snail mail)
--   **Do not SMS**- The end user has elected to not be contacted via
-    text messaging service to their mobile device.
--   **Do no trade**- The user has elected not to share their info with
-    other organizations. (ie. you may not share or sell user's
-    information to other parties) 
--   **NO BULK EMAILS (User Opt Out)**- This is set when a user selects
-    the Opt Out action in a CiviMail Email. 
+#### Champs de salutation et destinataire
 
-#### Greetings and addressee fields
+Par défaut, les champs de salutations et destinataires sont calculés à partir des champs de nom du contact. Par exemple, la salutation dans un courrier postal pour un individu / particulier s'appelant "Jean Dupont" sera "Cher Jean".
 
-By default greetings and addressee fields are calculated based on the
-contacts name fields. For example the postal greeting for an individual
-called 'Jenny Soper' is 'Dear Jenny'.
+Les salutations par défaut peuvent être configurées de manière globale en allant à **Administrer > Communications > Formules de salutation par courrier *or* Formules de salutation par courriel *or* Formats de destinataires**.
 
-The default greetings can be configured at a global level here:
-**Administer CiviCRM** > **Communications** > **Email Greeting Formats
-*or*Email Greeting Formats*or*Addressee formats**.
+Différents formats peuvent aussi être paramétrés au niveau de chaque contact.
 
-Different formats can also be selected for each contact and can also be
-customised on a contact per contact basis. 
+### Onglet Relations
 
-### Relationships tab
-
-Relationships are connections between contact records in your database.
-Each connection can be named to describe the nature of the connection,
-and a contact may have many relationships to other contacts in the
-database. In the example below you can see a list of Current
-Relationships as well as a list of Inactive relationships.
+Les relations sont des connexions entre des enregistrements de contacts dans votre base de donnée. Chaque connexion peut être nommée pour en décrire sa nature, et chaque contact peuvent avoir plusieurs relations avec d'autres contacts dans la base de donnée. Dans l'exemple ci-dessous, vous pouvez voir une liste de relations courantes et de relations inactives.
 
 ![Contact-RelatoinshipTab_1](../img/CiviCRM_update-CiviCore-Contact-RelatoinshipTab_1-en.png)
 
-You can read more about when it makes sense to use relationships in the
-*relationships* chapter of the*organising your data* section. 
+Vous pouvez en savoir plus sur les relations dans le chapitre *Relations* de la section *Organiser vos données*.
 
-### Activities tab
+### Onglet Activités
 
-The Activities tab displays a list of all of your interactions with a
-contact, including all CiviCRM's built-in activities like event
-attendance, contributions, phone calls etc as well as any custom
-activities you may have added. It also allows you to record activities
-with contacts. Clicking on the icons at the top of the screen (Send an
-Email, Meeting, Phone call) will bring up a screen where you can enter
-those details. This tab will also show any custom activities that you've
-defined.
+L'onglet Activités affiche une liste de toutes vos interactions avec un contact, y compris toutes les activités "métier" de CiviCRM telles que les participations à des événéments, les contributions, les appels téléphoniques... ainsi que toutes les activités personnalisées que vous pourriez ajouter. Il est également possible d'y enregistrer vos interactions avec le contact : Cliquez sur la liste déroulante en haut de l'écran et sélectionnez un type d'activité (Passer un appel téléphonique, Envoyer un courriel...) vous fera afficher un écran sur lequel entrer les détails.
 
 ![Contact_ActivityTab](../img/CiviCRM_update-CiviCore-Contact_ActivityTab-en.jpg)
 
-To find out more about activities please refer to the Activities section
-in this chapter.
+Pour en savoir plus sur les activités, merci de vous référer au chapitre *Activités* de cette section.
 
-### Mailings tab
+### Onglet Mailings
 
-This is only visible if at **Administer > CiviMail > CiviMail Component Settings** you have unselected **Enable CiviMail to create activites on delivery**.  In that case each bulk email is recorded on the mailings tab instead of the activities tab. This improves the speed at which the activies tab loads if your organisation sends bulk emails to large mailing lists. 
+Cet onglet est visible uniquement si vous avez décoché **Permettre à CiviMail de créer une activité à l'envoi** dans **Administrer > CiviMail > Paramètres de composant CiviMail**. Dans ce cas, chaque courriel envoyé en masse est enregistré dans cet onglet plutôt que dans l'onglet Activités. Cela permet d'améliorer la vitesse d'affichage de ce dernier si votre organisation diffuse massivement de nombreux courriels. 
 
-### Contributions tab
+### Onglet Contributions
 
-The Contributions tab shows any financial contributions made by a
-contact, as well as a summary of the contribution activity of the
-contact (total amount of contributions over time, total number of
-contributions, and average amount of contributions).
+L'onglet Contributions affiche toutes les contributions financières faite par un contact, ainsi qu'une synthèse (montant total des contributions pour une période donnée, nombre total des contributions ou montant moyen des contributions)
 
-The Contributions tab also allows you to record offline contributions
-using the Record Contribution button, or record a credit card
-transaction on behalf of the contact (useful if the contribution has
-been made by phone) using the Submit Credit Card Contribution button.
-Both of these buttons lead to forms that allow you to select the
-Financial Type in addition to the normal contribution information
-collected from public contribution pages.
+Cet onglet vous permet également d'enregistrer manuellement des contributions qui n'aurait pas été faites en ligne, en utilisant le bouton **Nouvelle contribution**.
 
 ![Contact_COntribTab](../img/CiviCRM_update-CiviCore-Contact_COntribTab-en.jpg )
 
-Read more about Contributions, in the Contributions chapter of this
-book.
+Pour en savoir plus sur ce sujet, veuillez vous référer au chapitre *Contributions* de ce manuel.
 
-### Memberships tab
+### Onglet Adhésions
 
-This tab displays any memberships a contact has. From this tab you are
-able to add memberships and submit credit card payments for memberships
-that require a fee. You can also renew or delete memberships from the
-"more" link on each membership in the contact's existing memberships.
+Cet onglet affiche les adhésions du contact. Vous pouvez également y enregistrer manuellement celles qui n'auraient pas été faites en lignes, en utilisant le bouton **Ajouter une adhésion**. Vous pouvez également renouveler ou supprimer des adhésions depuis le lien "plus" à droite de chaque adhésion associée au contact.
 
 ![Contact_MembershipTabs](../img/CiviCRM_update-CiviCore-Contact_MembershipTabs-en.jpg)
 
-Read more about Memberships, in the Membership chapter of this book.
+Pour en savoir plus sur ce sujet, veuillez vous référer au chapitre *Adhésions* de ce manuel.
 
-### Events tab
+### Onglet Événement
 
-The Events tab displays events related to this contact, for example
-events the contact has registered for, attended or volunteered at.
+Cet onglet affiche les événéments associés au contact. Par exemple, ceux pour lesquels le contact s'est inscrit, ou encore ceux pour lesquels il s'est porté volontaire.
 
-From this page you can register the contact for an event, and use the
-Submit Credit Card Event Registration button if the event requires
-payment. The related payment will then appear on the contact's
-Contributions tab in the first row.
+Depuis cette page, vous pouvez inscrire un contact à un événement, et même enregistrer le paiement associé (ce dernier apparaitra alors dans l'onglet Contribution).
 
-You can also modify the event information as it relates to the contact
-by clicking the Edit link. For example, you can change the contact's
-event status from "registered" to "attended."
+Vous pouvez également modifier les informations d'un événement associé au contact en cliquant sur le lien "Modifier". Par exemple, vous pouvez changer le statut d'un contact sur un événement de "Enregistré" à "En attente".
 
 ![Contact_Eventstab](../img/CiviCRM_update-CiviCore-Contact_Eventstab-en.jpg)
 
-Read more about Events, in the Events chapter of this book.
+Pour en savoir plus sur ce sujet, veuillez vous référer au chapitre *Événements* de ce manuel.
 
-### Groups tab
 
-The Groups tab shows the groups that the contact belongs to. Groups can
-be used in a variety of ways including mailing lists and permissions
-(**ACL**s).
+### Onglet Groupes
 
-You can add and remove the contact from groups, and see a history of
-groups the contact has unsubscribed or been removed from.
+Cet onglet affiche les groupes auxquels appartient le contact. Les groupes sont utilisés de façon très variée : liste de diffusion de courriel, gestion des autorisations d'accès...
 
-The Status column displays who has added the contact to the group.
-Whether users can add themselves to a group is one of the settings you
-can configure when creating a group. When you set a group's visibility
-to "Public Listings" users can join via **Profile** forms. You may want
-to familiarise yourself with the discussion on using Profiles for
-mailing list sign-ups covered in a later section.
+Dans cet onglet, vous pouvez ajoutez ou retirer le contact d'un groupe, et en voir l'historique.
+
+La colonne Statut indique l'utilisateur qui a ajouté le contact au groupe. Il est possible d'autoriser les utilisateurs à s'ajouter eux-même à un groupe. Lorsque vous paramétrez la visibilité d'un groupe à "Listes publiques", les utilisateurs peuvent s'y ajouter à travers un formulaire **Profil** (plus d'information à ce sujet dans le chapitre *Les profils* de cette section).
 
 ![Contact_GroupsTab](../img/CiviCRM_update-CiviCore-Contact_GroupsTab-en.jpg)
 
-For more on this topic, please refer to the Tags and Groups section of
-the book. 
+Pour en savoir plus sur ce sujet, veuillez vous référer au chapitre *Groupes et étiquettes* de ce manuel.
 
-### Notes tab
+### Onglet Notes
 
-The Notes tab is a place where you can record random bits of information
-about a contact. Generally you would use custom fields for information
-you plan to collect about your contacts, but in some cases it may be
-useful to record additional, ad-hoc notes. Since this information is
-unstructured, you should be careful about using the Notes tab, unless
-you know that you or other people using your CiviCRM implementation will
-remember to look at that tab. When creating a Note, both the subject and
-the content are free-text fields (i.e. the subject field does not have
-to be chosen from predefined options).
+Vous pouvez dans cet onglet enregistrer n'importe quelle information concernant le contact. En général, il est conseillé d'utiliser des champs personnalisés pour des données spécifiques que vous souhaitez collecter auprès de vos contacts. Mais dans certains cas, il peut être utile d'enregistrer quelques notes "telles quelles". Toutefois, ce type d'information n'ayant pas de structure propre, il faut rester prudent quant à son utilisation et avoir le réflexe de consulter régulièrement cet onglet. Les champs d'une note (sujet et contenu) sont libres (pas de format imposé).
 
-You can specify "Author Only" privacy for a note. This means that only
-the person who wrote the note, or someone with "view all notes"
-permission (via your CMS) can view or edit it.
+Vous pouvez spécifier "Auteur uniquement" pour une note. Dans ce cas, seul l'auteur pourra la lire ou la modifier, ou quelqu'un ayant l'autorisation "Voir toutes les notes" dans CiviCRM.
 
 ![Contact_NotesTab](../img/CiviCRM_update-CiviCore-Contact_NotesTab-en.jpg)
 
-### Tags tab
+### Onglet étiquettes
 
-Tags are one way of categorising contacts in your database (other
-methods are Custom Data and Groups). You can configure which tags you
-wish to use for your organisation. You can search on tags and create
-Smart Groups based on them.
-
-The tags next to Keywords are part of the Keywords Tagset. A Tagset is a
-specific grouping of tags that you can create. Tagsets are
-non-hierarchical, and you can create a new tag in a tagset simply by
-typing a new tag into the field. Existing tags that match what you type
-will also show up as a list from which you can select.
+Les étiquettes sont une possibilité de classer vos contacts dans votre base de donnée (les autres moyens sont les groupes et les données personnalisées). Vous pouvez créer autant d'étiquettes que vous le souhaitez pour gérer votre organisation. Vous pouvez faire des recherches sur les étiquettes et créer des groupes dynamiques basés sur ces dernières.
 
 ![Contact_TagTab](../img/CiviCRM_update-CiviCore-Contact_TagTab-en.jpg "Contact_TagTab")
 
-For more on this topic, please refer to the Tags and Groups section of
-the book.
+Pour en savoir plus sur ce sujet, veuillez vous référer au chapitre *Groupes et étiquettes* de ce manuel.
 
-### Change Log tab
+### Onglet Journal des modifications
 
-This tab gives limited information about changes made to a contact
-record. It shows the change date and who made the change, but not what
-was changed.
+Cet onglet vous donne des informations synthétiques sur les modifications faites sur l'enregistrement d'un contact : la date et l'auteur des changements, mais pas ce qui a été changé.
 
 ![Contact_ChangeLog](../img/CiviCRM_update-CiviCore-Contact_ChangeLog-en.jpg "Contact_ChangeLog")
 
-Note: Administrators can use the Contact Logging Report to get detailed
-information on changes to contact records (who, what and when).
 
-Adding contacts
----------------
+Ajouter des contacts
+--------------------
 
-The simplest way to add a single contact to CiviCRM is to use the
-navigation menu at the top of any non-public page. To create a new
-Individual, go to: Contacts > New Individual:
+La façon la plus simple d'ajouter un seul contact dans CiviCRM est d'utiliser le menu principal et de se rendre à **Contacts > Nouvel individu**.
 
 ![Contact_createIndividual](../img/CiviCRM_update-CiviCore-Contact_createIndividual-en.jpg "Contact_createIndividual")
 
-Note that the Contacts menu item allows you to create every kind of
-contact and contact sub-type.
+Veuillez noter que le menu Contacts vous propose de créer tous les types et sous-type de contacts.
 
-All of the contact creation forms are similarly arranged, with basic
-information (name, email etc) at the top of the form and more specific
-fields below grouped by type or subject in accordions (such as address
-fields, communications preferences and any custom fields that you have
-added for the contact type).
+Tous les formulaires de création de contact sont disposés de façon similaire, avec les informations de base (nom, courriel...) en haut et les champs plus spécifiques plus bas, regroupés par type ou sujet.
 
-For all contact types you can use the **Check for Matching Contacts**
-option to help avoid duplicate entries. After entering all of the
-information you have in this section, you can click on **Check for
-Matching Contacts.**
+Pour tous les types de contacts, vous pouvez utiliser l'option **Vérification de concordance avec contact(s)** pour éviter de créer un doublon. Il suffit de cliquer sur ce bouton après avoir rempli tous les champs de la section.
 
-*For adding an Individual record to the database, first name and last
-name OR email address are required. For adding an Organization or
-Household record to the database, just Organization/Household name is
-required. You can fill out as many of these fields as you like, and
-donâ€™t forget, you can always go back and make changes as needed by
-using the edit screen.*
+* Pour ajouter un enregistrement de type Individu / Particulier dans la base de données, vous devez fournir soit le prénom et le nom, soit l'adresse courriel. Pour ajouter un enregistrement de type Organisation ou Ménage / Foyer, seul leur nom est obligatoire.*
 
-Useful things to know when adding contacts:
+Ce qui est utile de savoir lorsque vous ajoutez des contacts :
 
-Address: You can add multiple addresses to a contact record. This allows
-you to store someone's home and work addresses, as well as a billing
-address if that's different.
+Adresses :
+Vous pouvez ajouter plusieurs adresses pour un contact (domicile, travail, adresse de facturation...)
 
-You will see a checkbox here to allow you to share the address of either
-an existing contact, or create a new contact. If you select new contact,
-you will need to select which contact type you wish to create, and a pop
-up box will appear to add the new contact record. When a person uses
-another contact's address, that address can only be edited from the
-"master contact's" record. 
+Vous avez la possibilité de partager une adresse avec un autre contact (existant ou nouveau) en activant la case à cocher associée. Si vous sélectionnez un nouveau contact, vous aurez besoin de choisir son type et une boite pop-up apparaitra pour réaliser l'opération. Quand une personne utilise l'adresse d'un autre contact, cette adresse ne peut être modifiée que depuis la fiche du contact "propriétaire".  
 
-The options available in the countries dropdown will depend on which
-ones you have made available at **Administer > Localization >
-Languages, Currency, Locations** under Available Countries.
+Les noms des pays disponibles dans la liste déroulante dépendent de ce que vous aurez paramétré dans **Administrer > Localisation > Langue, devises et localisation** dans Pays Disponibles.
 
-There may be fields here that you do not need. Available address fields
-can be edited at **Administer > Localization > Address settings.**The
-"Address Name" field which can be used to label a particular address
-(for example "Summer Home") is hidden by default, but can be enabled
-from that screen.**
-**
+Il y a peut-être des champs d'adresse dont vous n'aurez pas besoin. Leur disponiblité peut être paramétrée dans **Administrer > Localisation > Paramètres d'adresse**. Le champ spécial "Address Name", qui peut être utilisé pour labellisé une adresse particulière (par exemple "domicile d'été") est caché par défaut. Vous pouvez l'activer depuis cet écran.
 
-Tags and Groups: Here you can specify which tags and groups to add your
-contact to. Please note that you may only add to existing groups and
-tags with existing tags. You can read more about creating tags and
-groups in the Groups and Tags chapter of this book.
+Étiquettes et groupes :
+Dans cette rubrique, vous pouvez spécifier les étiquettes et les groupes que vous souhaitez ajouter à votre contact. Seuls ceux déjà existants peuvent être ajoutés. Pour en savoir plus sur la création de nouveaux groupes et étiquettes, veuillez vous référer au chapitre *Groupes et étiquettes* du manuel.
 
-Once you have filled out the form, you have the choice of three buttons
-to click:
 
--   Save will save the contact record and take you to the contact
-    screen.
--   Save and New will save the contact and clear the form so that you
-    can add another.
--   Cancel will discard the entered information and return you to your
-    CiviCRM dashboard.
+Une fois que vous avez complété le formulaire, vous pouvez cliquer sur l'un des trois boutons suivants :
 
-Editing contacts
-----------------
+-   **Enregistrer** Sauvegarde le contact et vous laisse sur l'écran ;
+-   **Enregistrer et nouvelle entrée** Sauvegarde le contact et affiche un nouveau formulaire d'enregistrement vierge pour en ajouter un nouveau ;
+-   **Annuler** Annule le formulaire en cours et vous renvoie au tableau de bord.
 
-Editing information on the summary screen is simple. Hovering in the
-upper right corner of the block that you wish to edit will bring up the
-**Edit Info** link. You can then edit the information directly in the
-summary screen.
 
-If you need to edit a lot information for one particular contact, an
-alternative is to open the entire contact for editing by clicking on the
-edit button above the tabs.
+Modifier des contacts
+---------------------
+
+Il est simple de modifier des informations dans l'onglet Résumé : lorsque le curseur de la souris survole un bloc, le lien **Éditer les infos** apparait en haut à droite. Cliquer dans ce bloc activera les champs qui seront alors modifiables.
+
+Si vous avez besoin de modifier un nombre important de données pour un contact spécifique, vous pouvez mettre tout le formulaire en mode Édition en cliquant directement sur le bouton **Modifier** au dessus des onglets.
 
 ![image](../img/contact%20Screen%20-inline%20edit.png) 
 
-Note that on the rare occasions that two separate admin users edit a
-contact at the same time (specifically that they both open the edit
-screen, then both save the contact), the second admin user will be
-notified of the first admin user's edit and be given the chance to
-manually 'merge' the edits.
+En de rares occasions, il est possible que deux utilisateurs éditent une fiche contact en même temps (en particulier s'ils ouvrent la même fiche contact puis la sauvegarde en même temps). Dans ce cas, le second utilisateur sera notifié des modifications du premier et aura la possibilité de les fusionner. 
 
-Deleting contacts
------------------
 
-At the top right there is a button to Delete the contact. When a
-contact is deleted, it does not disappear completely - instead it moves
-to the trash, where it can be recovered at a later date (using the
-search in trash feature of **advanced search**). See "searching" under
-the "working with your data" chapter for more information). 
+Supprimer des contacts
+----------------------
 
-Deleted contacts are moved to the "trash" by default (and can be
-restored later if needed). There are a variety of ways to delete a
-contact:
+Il existe le bouton **Supprimer contact**. Quand un contact est supprimé, il ne disparait pas complètement : par défaut, il est déplacé dans la corbeille. Cela offre la possibilité d'être restauré plus tard, en utilisant l'option *Rechercher dans la corbeille* de la recherche avancée.
 
--   **Single contact**: open the contact's record and click the 'delete
-    contact' button at the top of the page. Alternatively, run a search
-    for the contact and, from the results list, look toward the end of
-    the contact's row, click 'More' and select 'Delete Contact'.
--   **Multiple contacts**: run an advanced search, check the boxes of
-    each record you wish to delete (or *select all* with the checkbox in
-    the header at the top) and in the 'actions' drop-down menu, choose
-    'Delete Contacts' to send the contacts to the trash (if enabled) or
-    'Delete Permanently'. A warning page will be displayed to verify
-    your intention; simply click 'Delete' to continue or 'Cancel' to
-    return to the previous screen.
 
-Contact subtypes 
-------------------
+Sous-types de contact 
+---------------------
 
-In addition to the three default contact types (individuals, households
-and contacts), you can define additional contact types (sometimes
-referred to as contact subtypes) to suit your needs.
+En plus des trois types de contact fournis par défaut (Individu/Particulier, Ménage/Foyer et Organisation), vous pouvez ajouter des types supplémentaires (appelés parfois sous-type) pour adapter CiviCRM à vos besoins.
 
-Each contact subtype that you define is based on one of the three core
-contact types. For example, 'Student' would based on the 'Individual'
-contact type, and 'Farm' could be based on the 'Organization' contact
-type, or perhaps 'Household' contact type, depending on your use case.
+Chaque sous-type que vous définissez est basé sur l'un des trois types de contact fournis par défaut. Par exemple, le type "Étudiant" serait basé sur le type "Individu/Particulier, le type "Ferme" basé sur "Organisation", ou peut-être "Ménage/Foyer" selon votre cas d'utilisation.
 
-Contact types are very useful when you need to collect and display
-different sets of custom data for different types of contacts (e.g. you
-may wish to collect information on the subject area and qualifications
-of all teachers in your database but not be interested in collecting
-these for other individuals.  To do this, you would create a contact
-type called Teacher, based on Individual and then create a custom data
-set that only extends Individuals of the type Teacher (see custom data
-for more information).
+Les types de contacts sont très utiles pour collecter et afficher des jeux de données personnalisées. Par ex., vous pourriez souhaiter collecter et afficher le domaine et les qualifications des professeurs de votre base de donnée mais pas pour les autres individus/particuliers. Pour cela, il suffirait de créer un type "Professeur" se basant sur "Individu/particulier", puis de créer des champs personnalisés associés à ce nouveau type (voir le chapitre *Créer des champs personnalisés* dans ce manuel).
 
-Note that the core contact types are mutually exclusive, i.e. a contact
-cannot be an organisation and an individual. However, contacts can be
-of more than one user-defined contact subtype, i.e. they could be a
-Teacher and a Parent, for example.
+Notez que les types fournis par défaut sont mutuellement exclusifs : un contact ne peut pas être à la fois de type Individu/particulier et Organisation par exemple. Toutefois, un contact peut cumuler plusieurs sous-types personnalisés. Par exemple, un contact peut être un professeur et un parent.
 
-To edit existing contact types and and create new contact types go to
-**Administer > Customize Data and Screens > Contact Types**. Note that
-you cannot delete the inbuilt contact types but you can change their
-names and the images associated with them. 
+Pour modifier des types de contact existant, ou pour en créer de nouveaux, aller à **Administrer > Personnaliser les données et écrans > Types de contact**. Veuillez noter que vous ne pouvez pas supprimer les types de contact fournis par défaut dans CiviCRM, mais vous pouvez changer leur nom et l'icône qui leur est associée.
 
-To add custom fields to specific contact subtypes, see the chapter on
-custom fields.
 
-Customizing the view of contacts
+Personnaliser la vue des contacts
 --------------------------------
 
-After working with the contact editing and summary screens for a while,
-you may realise that there are sections and/or fields that aren't useful
-for your organisation. The good news is that you can easily hide some
-fields and sections. For example, if your organisation doesn't need to
-store demographics information, you can remove it by configuring the
-Site Preferences. Using an account with Administer CiviCRM privileges.
+Après un certain temps à travailler sur les fiches de contacts, vous pourriez réaliser que certaines sections ou champs ne sont pas utiles pour votre organisation. Vous pouvez dans ce cas facilement les cacher en paramétrant vos préférences (droits Admin CiviCRM nécessaires) :
 
--   Go to: **Administer > Customize Data and Screens > Display
-    Preferences**.
--   Clear the Demographics box under Editing Contacts.
--   Click Save.
+-   Allez à **Administrer > Personnaliser les données et écrans > Préférences d'affichage** ;
+-   Désactiver la case à cocher données démographiques dans la rubrique *Informations éditables* ;
+-   Cliquez sur Enregistrer.
 
-You can also use this screen to rearrange the order that the information
-is displayed in. 
+Vous pouvez également utiliser cet écran pour réarranger l'ordre de disposition de l'information.
 
-Similarly, if you want to remove (or add) fields in the postal address
-section:
+De manière similaire, vous pouvez supprimer ou ajouter des champs dans la section *Adresse postale* :
 
--   Go to: **Administer > Localization > Address Settings**.
--   Check or uncheck fields under Address Editing.
--   Click Save.
+-   Allez à **Administrer > Localisation > Paramètres d'adresse** ;
+-   Cochez ou décochez les cases dans la rubrique *Édition de l'adresse* ;
+-   Cliquez sur Enregistrer.
 
-If you think that some of the tabs are not useful and will not be used
-in your deployment, you can disable or enable specific tabs from
-**Administer > Customize Data and Screens > Display Preferences**. If
-you don't see some of the tabs described below, you may need to enable
-them. The visibility of some tabs is dependent on which components are
-enabled in your installation. For example, the Contributions tab will be
-hidden if the CiviContribute component is disable.
+Si vous pensez que certains onglets ne sont pas utiles, vous pouvez les désactiver en allant à **Administrer > Personnaliser les données et écrans > Préférences d'affichage**. Vous pouvez également en activant d'autres. Dans ce cas, si l'onglet n'apparait pas dans les préférences d'affichage, pensez à vérifier si vous avez bien activé le composant correspondant (par exemple, l'onglet Contributions n'apparaitra que si vous avez activé CiviContribute).

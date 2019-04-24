@@ -1,70 +1,51 @@
 
-Exporting Your Contacts
+Exporter vos contacts
 =======================
 
-Exporting lets you share data with external applications by providing a
-copy of data from CiviCRM in a standard comma separated value (CSV)
-format. This format can be viewed and edited in spreadsheet
-applications, imported into other database applications, or merged with
-word processing documents.
+L'exportation vous permet de partager vos données avec des applications externes en copiant les valeurs de vos champs CiviCRM dans un fichier CSV (comma separated value). Ce format répandu peut être visualisé et modifié dans des applications de feuille de calcul, importé dans d'autres bases de données, ou encore fusionné avec un autre document à l'aidre d'un traitement de texte.
 
-You can either export a predefined set of fields or create your own
-custom export mapping which can be saved for reuse.
+Vous pouvez soit exporter un jeu de donné prédéfini, soit créer votre propre jeu que vous pourrez sauvegarder et réutiliser.
 
-CiviCRM's export functionality is available:
+La fonctionnalité d'exportation de CiviCRM est disponible :
 
--   in any of the search tools
--   when viewing contacts in a group
--   in component-based search results, where the resulting records
-    reflect the component specific data rather than simply core contact
-    data. For example, from the **Contributions > Find Contributions**
-    search, you could export your donors and their contact information
-    for use in a thank-you letter in which the total amount donated is
-    included.
+-   dans n'importe quel outil de recherche ;
+-   lors de la visualisation des contacts dans un groupe ;
+-   dans les résultats de recherche basée sur les composants, quand les résultats correspondent à des données propres au composant et non-pas aux données standards de contact. Par exemple, depuis la recherche **Contributions > Trouver les contributions**, vous pourriez exporter vos donateurs, leur adresse de contact et le montant de leur donation pour créer une lettre de remerciement.
 
-Here's how you can export contact information:
+Voici comment importer vos informations de contact :
 
-1.  Search for contacts. Carry out a search based on your desired
-    criteria using one of the available search tools, e.g. Quick search,
-    Find Contacts, Advanced search, Search Builder, or a custom search
-    (You can find out more about performing searches in [Searching](../the-user-interface/searching).
+1.  Effectuez une recherche de contacts (vous trouverez des informations dans [Rechercher](../the-user-interface/searching).
 
-2.  Select contacts you wish to export. Select all records, or choose
-    individual records for export using the check-boxes to the left of
-    each record.
-3.  From the **- actions -** dropdown menu, choose **Export Contacts**
-    as shown in the following figure. This takes you to the export wizard.
+2.  Sélectionnez les contacts que vous souhaitez importer (soit la totalité, soit une partie en cliquant sur les cases à cocher à gauche de chaque enregistrement).
+
+3.  Depuis le menu déroulant **- actions -**, sélectionnez **Exportez les contacts** tel qu'indiqué dans la figure ci-dessous. Cela ouvrira l'assistant d'exportation.
 
     ![ExportFromSearch](../img/CiviCRM_update-CiviCore-ExportFromSearch-en.png "ExportFromSearch")
 
-4.  **Export all or selected fields**.  
+4.  **Tout exporter ou uniquement les champs sélectionnés**.  
 
-    -  Choose between
-    exporting the primary fields or selecting your own set of fields for
-    export. 
+    -  Choisissez entre exporter les champs principaux ou selectionnez votre propre jeu de champs.
 
     ![ContactExportOptions](../img/contact-export-options.PNG "ContactExportOptions")
 
-    There are 80 fields in a primary fields export (core contact fields with primary email, phone, and address data). Often it is best to specifically select which fields to export as this lets you include non-primary email, phone and address data, custom contact fields and data from related contacts. You can also choose to use a previously saved export mapping (if you have any).  
+    Il existe 80 champs dans une exportation de champs principaux (les champs standards de contact tels que le courriel, le téléphone et l'adresse principaux). Il est souvent préférable de décider quel champs exporter, et cela vous permet également de prendre en compte les champs tels que courriel, téléphone et adresse secondaires de vos contacts, ainsi que leurs champs personnalisés. Vous pouvez également choisir d'utiiser une carte de correspondance d'exportation que vous auriez précédemment sauvegardé.
 
-    -  If the export is to be used for mailing labels you can choose to export one record per household or one per address. If you choose to export one per address then you can specify the format for Addressee and for the postal greeting.
+    -  Si vous faites une exportation en vue d'un publipostage, vous pouvez décider de n'exporter qu'un seul enregistrement par ménage/foyer ou un seul par adresse. Si vous choisissez cette dernière solution, vous pouvez dans ce cas préciser le format de l'adresse postale ainsi que la salutation.
+    
+    -  Vous pouvez exclure les contacts ayant coché "Ne pas envoyer de courrier", ceux sans adresse postale et ceux décédés.
 
-    -  You can choose to exclude contacts with "do not mail" privacy, no street address, or who are deceased.
+    -  Vous pouvez ajouter des contacts à exporter d'un ou plusieurs autres groupes.
 
-    -  You can add contacts from a(n additional) group to the export.
+5.  Lorsque vous cliquez sur **Continuer**, si vous avez sélectionné *Exporter les champs principaux*, l'exportation est lancée et vous pouvez passer directement à l'étape 7.
 
-5.  When you click **Continue**, if you elected to export the primary fields the export happens immediately, so skip to step 7. If you want to select your own fields or are using an saved field mapping click **Continue** and then go to step 6.
-
-6.  **Select Fields to Export**
+6.  **Selectionner les champs à exporter**
 
     ![ContactExportFieldSelection](../img/contact-export-field-selection.PNG "ContactExportFieldSelection")  
 
-    -  If you have chosen to use a saved export mapping, the fields in that mapping will be displayed.  You can use the mapping as is or modify it.  If you modify it you can update the existing field mapping or save the changes as a new field mapping.
+    -  Si vous avez choisi d'utiliser une carte de correspondance sauvegardée, les champs de cette correspondance seront affichés. Vous pouvez alors l'utiliser telle quelle ou la modifier. Dans le dernier cas, il est bien sûr possible de mettre à jour la sauvegarde ou d'en créer une nouvelle.
+    
+    -  Une fois la correspondance à votre convenance, vous pouvez éventuellement la sauvegarde en cliquant sur **Sauvegarder cette correspondance de champ** pour l'utiliser plus tard.
 
-    -  If this is new mapping choose the fields you want, then decide if you want to **Save this field mapping** to use again later.
+    -  Quand tout est correct, cliquez sur **Exporter**.
 
-    -  When the export fields and other options are correct, click on **Export**.
-
-7.  The file is exported in .CSV format. By default a comma is
-    used as the field separator for import and export functions. If required, you can
-    change the separator value by going to **Administer > Localization > Languages, Currency, Locations** and selecting the appropriate **Import/Export Field Separator**.
+7.  Vous obtenez un fichier au format CSV. Par défaut, une virgule (,) est utilisée pour séparer les valeurs. Vous pouvez modifier ce paramètre en allant dans **Administrer > Localisation > Langues, devises et localisations** et en sélectionnant le bon **Séparateur de champ d'importation/exportation**.

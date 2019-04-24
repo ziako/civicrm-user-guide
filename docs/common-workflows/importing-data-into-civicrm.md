@@ -69,314 +69,169 @@ Lorsque vous réfléchissez à la création de votre feuille de calcul, pensez a
 
 Si vous prévoyez d'importer des données qui dépendent d'un contact spécifique, par ex. les informations de participation à un événement, les données de contributions, etc., vous aurez besoin de vous assurer que chaque enregistrement de contact possède un identifiant unique ou qu'il contienne au moins le prénom, le nom et l'adresse courriel pour pouvoir lier des données associées à ce contact dans de futures importations. Si vous utilisez un identifiant unique, vous pourrez le faire correspondre à l'identifiant externe de CiviCRM durant l'importation.
 
-Running an import
------------------
+Lancer une importation
+----------------------
 
-The import process has four steps.
+La processus d'importation se déroule en quatre étapes.
 
-### Step 1: Setup
+### Étape 1 : Import des données
 
-Setup lets you specify the basic details of your import, including the
-source of the data. Data can come from either a CSV file, or an SQL
-query of a database on your server. A check-box lets you indicate
-whether the first row of your file contains column headers.
+Dans cette rubrique, vous devez spécifier les informations de base de votre importation, et notamment la source de vos données. Ces dernières peuvent provenir soit d'un fichier CSV, soit d'une requête sur une base de donnée SQL de votre serveur. Une case à cocher vous permet d'indiquer si la première ligne de votre fichier doit être considérée ou non comme des en-têtes de colonne.
 
 ![image](../img/Screen%20Shot%202015-04-29%20at%203.54.21%20PM.png)
 
-Note that imports use the default **unsupervised** rule to decide
-whether a contact record is a duplicate (refer to the *Deduping and
-Merging* chapter in this section for information on duplicate matching
-rules in CiviCRM). You can specify what action to take when an import
-encounters a duplicate:
+Notez que par défaut, le processus d'importation utilise la règle **non-supervisé** pour décider si un contact est ou non un doublon (vous pouvez vous référer au chapitre *Dedoublonnage et fusion* de cette section pour plus d'information sur les règles de détection de doublons dans CiviCRM). Vous pouvez spécifier ce que le système doit faire si un doublon est détecté lors d'une importation :
 
--   **Skip**: skip the duplicate contact, i.e. leave the original record
-    as it is.
--   **Update**: update the original record with the database fields from
-    the import data. Fields that are not included in the import data
-    will be left as they are.
--   **Fill**: fill in the additional contact data, if it contains fields
-    that are missing or blank in the original records, and leave fields
-    which currently have values as they are.
--   **No Duplicate Checking**: this inserts all valid records without
-    comparing them to existing contact records for possible duplicates.
+-   **Passer**: passe le contact en doublon, l'enregistrement original est laissé tel quel ;
+-   **Mettre à jour**: met à jour l'enregistrement original avec les données importées. Les champs originaux qui n'apparaissent pas dans les données importées ne sont pas modifiés.
+-   **Remplir**: remplit avec les champs vides ou manquants de l'enregistrement original avec les données importées. Ceux contenant déjà une ou plusieurs valeurs ne sont pas modifiés.
+-   **Pas de vérification des doublons**: Tous les enregistrements valides importés sont systématiquement insérés dans la base de données CiviCRM sans qu'aucune vérification de doublons ne soit faite..
 
 ![image](../img/Import%20Options.png)
 
-**Import mappings** tell CiviCRM how the fields of data in your import
-file correspond to the fields in CiviCRM. The first time you import from
-a particular data source, it's a good idea to check the box to "Save
-this field mapping" at the bottom of the page before continuing. The
-saved mapping can then be easily reused the next time similar data is
-imported, by requesting that it be loaded at this step.
+**Charger la carte de correspondance** indique comment les champs de données de votre fichier d'importation doivent correspondre aux champs de CiviCRM. La première fois que vous importez des données depuis une source particulière, il peut être utile de cocher la case "Sauvegarder cette carte de correspondance" en bas de la page avant de continuer. Cette dernière peut alors être facilement réutilisée la prochaine fois qu'une importation similaire est faite.
 
-### Step 2: Match the fields
-
-If you had column headings in your file, these headings will appear in
-the first column on the left-hand side of the Field Map, while the next
-two columns show two rows of data in your file to be imported, and the
-fourth column is the Matching CiviCRM Field. If you loaded an import
-mapping in Step 1, your choices will be reflected here. You can change
-them if they are inappropriate for this import.
+### Étape 2: Correspondance des champs
+Si vous avez des en-têtes de colonne dans votre fichier, ces derniers apparaitront dans la première colonne du côté gauche de votre tableau de correspondance. Les deux colonnes suivantes affichent deux lignes d'enregistrements de valeurs qui seront importées, et la quatrième colonne indique les champs CiviCRM correspondants. Si vous avez chargé une carte de correspondance dans l'étape précédente, vous y retrouverez vos choix. Vous pouvez les modifier s'ils ne sont pas pertinents pour cet import.
 
 ![ImportMatchFields](../img/CiviCRM_update-CiviCore-ImportMatchFields-en.png "ImportMatchFields")
 
-The matching CiviCRM fields include standard CiviCRM data such as First
-Name and Last Name as well as any custom data fields that have been
-configured for use with contact records on your site. Match the fields
-by clicking the dropdown list and selecting the appropriate data. For
-example, if the heading of the second column in your input is Surname,
-you should choose Last Name as your Matching CiviCRM Field.
+les champs CiviCRM correspondants incluent des données CiviCRM standards telles que Prénom et Nom, mais aussi des champs de données personnalisées que vous auriez au préalable configurés pour l'utilisation de vos contacts sur votre site. Faites correspondre les champs en cliquant sur les listes déroulantes et en sélectionnant la donnée appropriée. Par exemple, si l'en-tête de votre donnée importée est Nom de famille, vous pourriez choisir Nom comme champ CiviCRM correspondant.
 
-Select "- do not import -" for any columns in the import file that you
-don't want to import into CiviCRM.
+Sélectionner "- ne pas importer -" pour toute colonne du fichier de données que vous ne souhaitez pas prendre en compte lors du processus d'importation dans CiviCRM.
 
-If you have a saved mapping for a specific set of spreadsheet columns,
-and your spreadsheet layout has changed (for instance, you need to
-import additional fields, so you add the appropriate columns of data in
-the spreadsheet), you can modify and save the field mapping. One tip to
-ease the mapping process when you need to import additional fields is to
-place the additional columns of data in your import spreadsheet to the
-right of the columns you've previously mapped in CiviCRM. This allows
-you to use the existing saved field mapping to map the initial import
-fields, and then continue mapping the new data fields.
+Si vous avez sauvegardé une carte de correspondance pour un jeu particulier de colonnes de feuille de calcul et que ce dernier a changé (par exemple, vous avez ajouté des colonnes correspondant à des champs de données supplémentaires), vous pouvez modifier la carte et la sauvegarder à nouveau. Dans ce cas précis, pour faciliter l'importation de données supplémentaire, nous vous conseillons de mettre les nouvelles colonnes à droite des colonnes d'origine. Cela vous permet de retrouver les correspondances sauvegardées et d'en sélectionner ensuite les nouvelles.
 
 ![Step2d](../img/CiviCRM-AddingImporting-Step2d-en.png "Step2d")
 
-Note that if you add new data columns in your spreadsheet and do not
-position the columns AFTER the columns you previously mapped, you then
-can't use the saved mapping and will have to map all your import fields
-again.
+Dans le cas contraire, si vous n'avez pas positionné vos nouvelles données dans des colonnes APRÈS les colonnes d'origine, vous ne pourrez pas utiliser les cartes de correspondance sauvegardées et vous devrez les refaire manuellement.
 
-Once you've mapped your fields, you can decide if you want to keep the
-original saved mapping unchanged, or check the box to "Update this field
-mapping" to include the new field mappings.
+Une fois que vous avez fait correspondre les champs, vous pouvez éventuellement mettre à jour la sauvegarde de la carte de correspondance en cochant la case "Mettre à jour la carte de correspondance" pour y inclure les nouveaux changements.
 
-### Step 3: Preview
+### Étape 3: Prévisualisation
 
-This screen previews the results of importing your data, reports the
-number of rows to be imported, and allows you to double check your field
-matches.
+Cet écran vous affiche une prévisualisation des résultats de vos données importées, le nombre de lignes importées, et vous permets de faire une double vérification de vos correspondances de champs.
 
-If some of the rows in your spreadsheet contain data that doesn't match
-CiviCRM's requirements for one or more fields, you'll see an error
-message with a count of the invalid rows (see the screenshot below).
-Click the Download Errors link and review the errors reported in the
-downloaded file, so you can fix them before doing the import.
+Si des lignes de votre feuille de calcul contiennent des données qui ne remplissent pas les prérequis de CiviCRM pour un ou plusieurs champs, vous verrez alors un message d'erreur avec le nombre de ligne non-valides (cf la capture d'écran ci-dessous). Vous pouvez cliquer sur le lien Télécharger les erreurs et voir le détail des problèmes dans le fichier ainsi téléchargé. Vous avez donc la possibilité de réparer les problèmes avant l'importation définitive.
 
 ![ImportPreviewErrs](../img/CiviCRM_update-CiviCore-ImportPreviewErrs-en.png "ImportPreviewErrs")
 
-At the bottom of the form, you can choose to add the contacts to an
-existing group, import to a new group, create a new tag, or tag imported
-records. Adding imported records to a separate group is strongly
-recommended in order to be able to quickly find the imports and, if
-necessary, delete and reimport them.
+En bas du formulaire, vous pouvez choisir d'ajouter les contacts à un groupe existant, importer un nouveau groupe, créer une nouvelle étiquette, ou associer une étiquette existante. Nous vous recommandons fortement d'importer les enregistrements dans un groupe particulier afin de pouvoir facilement les retrouver et, si le besoin se présente, les effacer et les ré-importer.
 
 ![Step3b_1](../img/CiviCRM-AddingImporting-Step3b_1-en.png "Step3b_1")
 
-### Step 4: Summary
+### Step 4: Résumé
 
-The final screen reports the successful imports along with Duplicate
-Contacts and Errors. If you have set the import to add all contacts to a
-Group or Tag, you can click through to see your imported contact
-records.
+L'écran final affiche les importations réalisées avec succès, ainsi que les erreurs et les contacts en doublon. Si vous avez paramétré l'importation pour ajouter tous les nouveaux contacts à un groupe spécifique, vous pouvez cliquer dessus pour visualiser vos nouveaux enregistrements.
 
 ![Step4a_2](../img/CiviCRM-AddingImporting-Step4a_2-en.png "Step4a_2")
 
-At this point it makes sense to check to make sure that your import has
-worked as expected. Search for the contacts that you just imported and
-examine their fields and custom data to make sure all is as expected.
+À ce stade, vous devriez vérifier que votre importation a fonctionné comme vous l'attendiez. Recherchez les contacts que vous venez d'importer et examinez leurs données standards et personnalisées.
 
-Importing relational data
--------------------------
+Importer les données associées
+------------------------------
 
-We have just described the process of importing one data file. But what
-about if you want to import related data, like organizational addresses
-with employees, parent child relationships, activities, contributions,
-etc.? For each type of data you want to import, you will need to import
-a separate CSV file.
+Nous venons de décrire le processus d'importation d'un fichier de données. Mais comment faire pour importer des données liées aux contacts, telles que les adresses professionnelles, les activités, les contributions, etc. ? Vous aurez besoin d'importer un fichier CSV propre à chaque type de données.
 
-CiviCRM has specific tools for importing related contact data and a set
-of specific import tools for contributions, memberships, event
-participation etc. (and you should see specific chapters for details of
-how to use these tools). To import relationships, you should run
-multiple contact imports.
+CiviCRM possède des outils spécifiques pour importer des données liées à des contacts, et un jeu d'outil particulier pour l'importation des contributions, des adhésions, des participations à des événements, etc. (les informations détaillées sur l'utilisation de ces outils sont disponibles dans leur chapitre respectif). Pour importer des relations, vous pouvez lancer des importations de contact multiple.
 
-For example if we want to import data for children and then for both
-parents, we run three imports, one for the child, one for the father and
-one for the mother.
+Par exemple, si nous voulons importer des données sur des enfants et de leur deux parents, nous devons lancer trois imports : un pour l'enfant, un pour le père et un pour la mère.
 
-We first import the child remembering to include an external identifier
-that we can use to match the child to their parents. We then import the
-father, and then the mother, as related contacts, linking them to the
-child using the child's external identifier.
+Tout d'abord, nous importons les données enfant en pensant à bien inclure un identifiant externe. Puis nous importons les données père, et ensuite les données mère, en tant que contacts associés à l'enfant en utilisant l'identifiant externe de ce dernier.
 
-In the example below we have one CSV file which contains father and
-mother information. We use this CSV file twice as part of the import.
-Have a look at the fields below to understand what is happening.
+Dans l'exemple ci-dessous, nous avons un fichier CSV qui contient les informations de la mère et du père. Nous utilisons ce même fichier deux fois pour l'importation. Regardez bien les champs ci-dessous pour comprendre ce qui se passe.
 
 ![Parent1a](../img/CiviCRM-AddingImporting-Parent1a-en.png "Parent1a")
 
 ![Parent1b](../img/CiviCRM-AddingImporting-Parent1b-en.png "Parent1b")
 
-We are linking the father to the original child using the external
-identifier and are then importing the related father name using the
-'Child of' relationship type.
+Nous lions le père à l'enfant en utilisant l'identifiant externe et ainsi importons le nom du père en utilisant le type de relation "Enfant de ".
 
-When the import is done, go back and verify the data by searching for
-the parent and examining the relationship tab. They should have a
-relationship linking them to the child.
+Quand l'importation est réalisée, vérifiez les données en recherchant les parents et en examinant l'onglet Relations. Il devrait y avoir un lien de relation les connectant à l'enfant.
 
-You can then repeat this process for the mother, and also for other
-relationships as necessary.
+Vous pouvez répéter ce processus pour la mère, et tout autre type de relation si besoin.
 
-Address standardisation
-------------------------
+Normalisation des adresses
+--------------------------
 
-For many organisations, an important element of cleaning your data is
-standardising addresses. In the US, this means conform to conventions
-defined by the United States Postal Service's Standards for Addresses.
-Standardising how addresses are entered into CiviCRM will allow for more
-accurate search results when searching by address, as CiviCRM can parse
-addresses based on the USPS standards if you choose to do so. To find
-out more about how Address Parsing is handled and used in CiviCRM, refer
-to the Installation chapter of the Configuration section of this manual.
-When adding or editing contacts, you will enter and edit such address
-elements as street number, street name, and Apt/Unit/Suite number
-according to these standards.
+Pour beaucoup d'organisations, un élément important concernant le nettoyage et la fiabilité des données est la normalisation des adresses. En France, cela signifie se conformer aux standards définis par l'Afnor dans sa norme NF Z10-011 (norme 38). Aux États-Unis, les normes sont définies par les Services Postaux des États-Unis (USPS).
+Renseigner des adresses normalisées dans CiviCRM vous permet d'obtenir des résultats plus précis lorsque vous effectuez une recherche via une adresse. CiviCRM peut en effet faire la recherche en respectant les standards USPS si vous choisissez d'activer cette option. Pour plus de renseignement, merci de vous référer au chapitre *Installation et paramétrage* de la section *Configuration*.
 
-Import Activities
------------------
+Importer les activités
+----------------------
 
-When preparing your data import it is helpful to know what fields are
-required for Import. You'll want to be sure that these fields are
-included in your CSV import file. Below is a list of the required
-fields. The Contact ID field is used to cross reference and attach the
-activity to the contact so it must match the contact ID of the contact
-in the system exactly.
+Lorsque vous préparez vos données à importer, il est utile de savoir quels sont les champs indispensables à remplir, afin de les inclure dans votre fichier CSV. Vous en trouverez ci-dessous une liste. Le champ Identifiant de contact est utilisé pour lier l'activité au contact concerné. Il est donc important qu'il corresponde précisement. 
 
--   Activity Date
--   Activity Type IDs
--   Activity Type Label
--   Contact ID (Match to Contact)
--  Subject
+-   Date de l'activité
+-   Identifiants du type d'activité
+-   Libellé du type d'activité
+-   Identifiant de contact (Correspond au contact)
+-   Sujet
 
-The import tool for Activities is similar to that of contacts, but there
-are some pre-requisites which must be met before running the import.
-Firstly, Activities cannot be imported unless the contacts and Activity
-Types already exist in the database. If you need to import Activities
-for contacts that are not yet available, run a contact import first,
-preferably including a unique external identifier (most often an ID
-assigned by the database or application you are importing records from).
+L'outil d'importation des activités est semblable à celui des contacts, mais un prérequis doit être respectés avant de lancer le processus. Les activités ne peuvent être importées que si les contacts associés et les types d'activités existent déjà dans CiviCRM. Pensez donc à réaliser l'importation des contacts en premier, en n'oubliant pas de leur associer un identifiant externe unique (cf plus haut).
 
-Remember, CSV files must be less than 2MB in size. If the file size
-exceeds this, create multiple CSV files and distribute the data between
-them.
+N'oubliez pas que les fichiers CSV doivent avoir une taille inférieure à 2Mo. Si besoin, découpez votre fichier en plusieurs morceaux.
 
-Import Contributions
---------------------
+Importer les contributions
+--------------------------
 
-You can insert new contributions or update existing ones.
+Vous pouvez ajouter ou mettre à jour des contributions.
 
-If you **insert new contributions,** your CSV file must include at least
-the following fields:
+Si vous voulez **ajouter des nouvelles contributions**, votre fichier CSV doit contenir au moins les champs suivants :
 
--   Contact Id or External Identifier or all the fields used in your
-    Unsupervised Duplicate Matching rule (to match to an existing
-    contact)
--   Financial Type
--   Total Amount
+-   Identifiant de contact, ou Identifiant externe, ou tout champ utilisé dans votre règle de doublons non superviséé (pour faire correspondre à un contact existant)
+-   Compte
+-   Montant total
 
-If you want to **update existing contributions,** your CSV file must
-include at least the following fields:
+Si vous souhaitez **mettre à jour des contributions existantes**, votre fichier CSV doit contenir au moins les champs suivants :
 
--   Transaction ID or Invoice ID or Payment ID (to match to an existing
-    contribution)
--   Financial Type
--   Total Amount
+-   Identifiant de transaction, ou de facture, ou de paiement (pour faire correspondre à une contribution existante)
+-   Compte
+-   Montant total
 
-You can use also use **update existing contributions** to import new or
-change existing data in other core or custom contribution fields. When
-doing this you will still need to include an ID to match to an existing
-contribution and the Financial Type and Total Amount fields in you CSV
-file, even if the values you import for those fields are no different
-from the values already in your database.
+Vous pouvez aussi utiliser **mettre à jour des contributions  existantes** pour importer des nouvelles données ou en modifier des existantes dans des champs contribution standards ou personnalisés. En faisant cela, vous aurez besoin d'inclure un identifiant pour faire correspondre une contribution existante, ainsi que le compte et montant total dans votre fichier CSV, même si ces valeurs ne sont pas différentes des valeurs déjà présentes dans votre base de donnée.
 
-Import Memberships
-------------------
+Importer les adhésions
+----------------------
 
-You can insert new memberships or update existing memberships.
+Vous pouvez ajouter ou mettre à jour des adhésions.
 
-If you **insert new memberships** your CSV file must include at
-least the following fields:
+Si vous voulez **ajouter des nouvelles adhésions**, votre fichier CSV doit contenir au moins les champs suivants :
 
--   Contact Id or External Identifier or all the fields used in your
-    Unsupervised Duplicate Matching rule (to match to an existing
-    contact)
--   Membership Type
--   Membership Start Date
+-   Identifiant de contact, ou Identifiant externe, ou tout champ utilisé dans votre règle de doublons non superviséé (pour faire correspondre à un contact existant)
+-   Type d'adhésion
+-   Date de début d'adhésion
 
-If you want to **update existing memberships** your CSV file must
-include at least the following fields:
+Si vous souhaitez **mettre à jour des adhésions existantes**, votre fichier CSV doit contenir au moins les champs suivants :
 
--   Membership Id (to match to an existing membership)
--   Membership Type
--   Membership Start Date
+-   Identifiant d'adhésion (pour faire correspondre à l'adhésion existante)
+-   Type d'adhésion
+-   Date de début d'adhésion
 
-You can use also use **update existing memberships** to import new or
-change existing data in other core or custom membership fields. When
-doing this you will still need to include Membership ID to match to an
-existing membership, and the Membership Type and Membership Start Date
-fields in you CSV file, even if the values you import for those fields
-are no different from the values already in your database.
+Vous pouvez aussi utiliser **mettre à jour des adhésions existantes** pour importer des nouvelles données ou en modifier des existantes dans des champs adhésion standards ou personnalisés. En faisant cela, vous aurez besoin d'inclure un identifiant d'adhésion pour faire correspondre une adhésion existante, ainsi que le type d'adhésion et la date de début d'adhésion dans votre fichier CSV, même si ces valeurs ne sont pas différentes des valeurs déjà présentes dans votre base de donnée.
 
-Import Participants
--------------------
+Importer des participants
+-------------------------
 
-In each import session you can either insert new registrations or update
-existing participant records.
+Pour chaque session d'importation, vous pouvez soit ajouter des nouvelles inscriptions, soit mettre à jour des participations existantes.
 
-If you **insert new registrations**you need to decide whether to
-restrict registrations for each event to just one per person (set **On
-duplicate entries** to **Skip)** or to allow duplicate registrations for
-the same event from a given contact (set **On duplicate entries** to
-**No Duplicate Checking)**. In either case your CSV file must include
-at least the following fields:
+Si vous voulez **ajouter des nouvelles inscriptions**, vous devrez soit limiter à une seule inscription par événement et par personne (sélectionnez **sur entrées en doublon** sur **passer**), soit autoriser les doublons d'inscriptions (sélectionnez **sur entrées en doublon** sur **pas de vérification de doublon**). Dans les deux cas, votre fichier CSV doit contenir au moins les champs suivants :
 
--   Contact Id or External Identifier or all the fields used in your
-    Unsupervised Duplicate Matching rule (to match to an existing
-    contact)
--   Event ID
--   Participant Status
+-   Identifiant de contact, ou Identifiant externe, ou tout champ utilisé dans votre règle de doublons non superviséé (pour faire correspondre à un contact existant)
+-   Identifiant de l'événement
+-   Statut du participant
 
-If you want to **update existing registrations,** you should set **On
-duplicate entries** to **Update**. Your CSV file must include at least
-the following fields:
+Si vous souhaitez **mettre à jour des inscriptions existantes**, vous devez sélectionner **sur entrées en doublon** sur **Mettre à jour**. votre fichier CSV doit contenir au moins les champs suivants :
 
--   Participant ID (to match to an existing registration)
--   Event ID or Event Title
--   Participant Status
+-   Identifiant de participant (pour faire correspondre à l'inscription existante)
+-   Identifiant ou Titre d'événement
+-   Statut du participant
 
-You can use also use **update existing registrations** to import new or
-change existing data in custom participant fields. When doing this you
-will still need to include Participant ID to match to an existing
-registration, and the Event ID or Event Title and Participant Status
-fields in you CSV file, even if the values you import for those fields
-are no different from the values already in your database.
+Vous pouvez aussi utiliser **mettre à jour des inscriptions existantes** pour importer des nouvelles données ou en modifier des existantes dans des champs participant standards ou personnalisés. En faisant cela, vous aurez besoin d'inclure un identifiant de participant pour faire correspondre une inscription existante, ainsi que l'Identifiant (ou Titre) de l'événément et le statut du participant dans votre fichier CSV, même si ces valeurs ne sont pas différentes des valeurs déjà présentes dans votre base de donnée.
 
-Import Tags
-------------
+Importer des étiquettes
+-----------------------
 
-There is currently no inbuilt way of importing tags or tag sets. You can
-use [this advanced
-extension](https://civicrm.org/extensions/api-csv-import-gui "API csv Import GUI")
-though.
+CiviCRM n'inclue pas encore dans son système un moyen d'importer ou de mettre à jour des étiquettes. Vous pouvez cependant utiliser [cette extension](https://civicrm.org/extensions/api-csv-import-gui "API csv Import GUI").
 
-If you want to assign individual tags during your contacts import, you
-will have to either:
-
--   split your CSV file by individual tags and import each subset
-    separately as described above,
--   create temporary custom fields and import tags into them as standard
-    data, then after the import use advanced searches to isolate
-    contacts with particular values and mass tag them. Once you're done,
-    you can remove the custom fields.
+Si vous souhaitez assigner des étiquettes durant l'importation de vos contacts, vous pouvez vous referer au début de ce chapitre.
