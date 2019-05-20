@@ -15,7 +15,7 @@ Avant de commencer toute activité de communication, prenez le temps d'identifie
 Il existe trois façon d'utiliser CiviCRM pour vos courriers postaux :
 
 1.  Générer des étiquettes : il s'agit d'imprimer les étiquettes d'adresse lorsque vous n'avez pas besoin de personnaliser le contenu du courrier (ex : envoi d'une brochure) ;
-2.  Exporter des contacts et les fusionner via un traitement de texte (tel qu'OpenOffice ou Microsoft Word). Pour cela, veuiller vous référer au chapitre sur l'exportation ; 
+2.  Exporter des contacts et les fusionner via un traitement de texte (tel qu'OpenOffice ou Microsoft Word). Pour cela, veuiller vous référer au chapitre [Exporter vos contacts](exporting-your-contacts.md) ; 
 3.  Utiliser la fonctionnalité d'impression des lettres PDF de CiviCRM pour réaliser la fusion directement dans le système.
 
 Beaucoup d'organisation à but non-lucratif aux États-Unis ont besoin de trier les destinataires par code postal pour des besoins de publipostage. Si cela est également votre cas, nous vous recommandons d'effectuer ce tri en utilisant un logiciel de traitement de texte, dans lequel vous pouvez facilement contrôler l'ordre des contenus, plutôt que dans CiviCRM.
@@ -23,7 +23,7 @@ Beaucoup d'organisation à but non-lucratif aux États-Unis ont besoin de trier 
 Paramétrer les salutations
 --------------------------
 
-Vous pouvez paramétrer un format de salutation spécifique à chaque contact. Il existe plusieurs options allant de la plus amicale ("Cher John") à la plus formelle ("Cher Monsieur John Doe"). Vous pouvez également créer une salutation personnalisée ("Votre Royale Majesté"). Les salutations de courrier postal peuvent être éditées dans la section **Préférences de communication** du formulaire d'édition du contact. Si vous avez besoin de paramétrer ou de réinitialiser les salutations de courrier postal en masse, veuillez vous référer au chapitre *Tâches planifiées* dans cette section.
+Vous pouvez paramétrer un format de salutation spécifique à chaque contact. Il existe plusieurs options allant de la plus amicale ("Cher John") à la plus formelle ("Cher Monsieur John Doe"). Vous pouvez également créer une salutation personnalisée ("Votre Royale Majesté"). Les salutations de courrier postal peuvent être éditées dans la section **Préférences de communication** du formulaire d'édition du contact. Si vous avez besoin de paramétrer ou de réinitialiser les salutations de courrier postal en masse, veuillez vous référer au chapitre [Automatiser les tâches](automating-tasks.md).
 
 Imprimer les lettres PDF
 ------------------------
@@ -66,4 +66,4 @@ Il s'agit d'une fonction à la fois simple et utile.
 
 Ces deux dernières options vous permettent d'éviter des doublons inutiles (et par la même occasion d'économiser des frais d'affranchissement). Lorsque des fusions d'adresse sont réalisées, les noms des contacts correspondants sont listés sur une ligne séparée de l'étiquette.
 
-Pour savoir comment personnaliser vos étiquettes, veuillez vous référer au chapitre Contacts.
+Pour savoir comment personnaliser vos étiquettes d'adresse, veuillez vous référer au paragraphe **Paramètre d'adresse** de la rubrique [Configuration](../initial-set-up/installation-and-basic-set-up.md#configuration) du chapitre [Installation et paramétrage](../initial-set-up/installation-and-basic-set-up.md)
