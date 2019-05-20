@@ -17,12 +17,8 @@ Pour modifier le contenu de ce manuel, il faut :
 
 Vos modifications seront publiées dès qu'elles auront été révisées par notre équipe de documentation.
 
-## Versions (quelle version devrais-je modifier?)
+## Conventions
 
-Pour améliorer la documentation, veuillez modifier la branch « master » (disponible à https://docs.civicrm.org/user/fr/latest).
+Pour les conventions typographiques, glossaire et autres recommendations pour la traduction en français, consulter [le guide de la traduction française de CiviCRM](https://lab.civicrm.org/dev/translation/wikis/translation-guides/french).
 
-La branche « master » est fusionnée périodiquement dans la branche 4.7 et est disponible à l'adresse suivante : http://docs.civicrm.org/user/fr/stable.
-
-La traduction de ce guide ayant été débutée durant le cycle 4.7 de CiviCRM, nous ne prévoyons pas maintenir une version 4.6 de ce manuel.
-
-Pour plus d'information sur comment contribuer au guide de l'utilisateur, voir :  [https://github.com/civicrm/civicrm-docs/#contributing-to-documentation](https://github.com/civicrm/civicrm-docs/#contributing-to-documentation) (en anglais).
+Pour plus d'information sur comment contribuer au guide de l'utilisateur, consulter  [https://docs.civicrm.org/dev/en/latest/documentation/](le guide de rédaction de documentation CiviCRM) (en anglais).
