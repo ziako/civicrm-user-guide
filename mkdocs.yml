@@ -50,7 +50,7 @@ pages:
     - 'Exporter vos contacts': 'common-workflows/exporting-your-contacts.md'
     - 'Dédoublonner et fusionner': 'common-workflows/deduping-and-merging.md'
     - 'Jetons, fusions et publipostages': 'common-workflows/tokens-and-mail-merge.md'
-    - 'Postal mail communications': 'common-workflows/postal-mail-communications.md'
+    - 'Communications par courrier postal': 'common-workflows/postal-mail-communications.md'
     - 'Automating tasks': 'common-workflows/automating-tasks.md'
 - Contributions:
     - "Qu'est-ce que CiviContribute?": 'contributions/what-is-civicontribute.md'
