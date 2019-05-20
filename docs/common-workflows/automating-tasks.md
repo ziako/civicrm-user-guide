@@ -1,6 +1,7 @@
-Automating tasks
-================
+Automatiser les tâches
+======================
 
+Si vous vous retrouvez à suivre régulièrement les mêmes procédures de gestion dans votre organisation, CiviCRM peut très certainement vous libérer du temps. Automatiser des tâches administratives ou de routine, plus communément appelées processus, 
 If you find yourself making the same set of decisions regularly, more
 often than not, CiviCRM can free you from having to make them again.
 Automating administrative or routine tasks, more commonly referred to as
