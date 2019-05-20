@@ -21,4 +21,4 @@ Vos modifications seront publiées dès qu'elles auront été révisées par not
 
 Pour les conventions typographiques, glossaire et autres recommendations pour la traduction en français, consulter [le guide de la traduction française de CiviCRM](https://lab.civicrm.org/dev/translation/wikis/translation-guides/french).
 
-Pour plus d'information sur comment contribuer au guide de l'utilisateur, consulter  [https://docs.civicrm.org/dev/en/latest/documentation/](le guide de rédaction de documentation CiviCRM) (en anglais).
+Pour plus d'information sur comment contribuer au guide de l'utilisateur, consulter  [https://docs.civicrm.org/dev/en/latest/documentation/](le guide de rédaction de documentation CiviCRM).
