@@ -55,7 +55,7 @@ pages:
 - Contributions:
     - "Qu'est-ce que CiviContribute?": 'contributions/what-is-civicontribute.md'
     - "Configuration et Concepts clés": 'contributions/key-concepts-and-configurations.md'
-    - "Contribution en ligne": 'contributions/online-contributions.md'
+    - "Contributions en ligne": 'contributions/online-contributions.md'
     - "Levée de fonds manuelle": 'contributions/offline-fundraising.md'
     - "Entrée manuelle des contributions": 'contributions/manual-entry-of-contributions.md'
     - 'Rechercher des contributions': 'contributions/finding-and-viewing-contributions.md'
@@ -70,7 +70,7 @@ pages:
     - 'Cadeaux': 'contributions/premiums.md'
     - 'Widgets': 'contributions/widgets.md'
 - Pledges:
-    - 'What is CiviPledge?': 'pledges/what-is-civipledge.md'
+    - "Qu'est-ce que CiviPledge ?": 'pledges/what-is-civipledge.md'
     - 'What you need to know': 'pledges/what-you-need-to-know.md'
     - 'Set-up': 'pledges/set-up.md'
     - 'Everyday tasks': 'pledges/everyday-tasks.md'
