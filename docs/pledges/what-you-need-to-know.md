@@ -1,15 +1,12 @@
-What you need to know
-=====================
+Ce que vous avez besoin de savoir
+=================================
 
-Before using CiviPledge, you must enable it for your installation, if
-you have not done so already. Go to **Administer > System Settings > Enable CiviCRM Components**, and move CiviPledge into the
-box on the right to enable it.
+Afin de pouvoir utiliser CiviPledge, vous devez l'activer pour votre installation si ce n'est pas encore le cas. Aller à **Administrer** > **Paramètres système** > **Composants**, et déplacez CiviPledge dans la colonne de droite.
 
-New Pledges
------------
+Nouvelles promesses de don
+--------------------------
 
-To create a new pledge on behalf of a constituent, navigate to
-**Contributions** > **Pledges** > **New Pledge** (note that an
+Pour créer une nouvelle promesse de don au nom d'un contact, aller à **Contributions** > **Pledges** > **New Pledge** (note that an
 individual may do this themselves through an online contribution form;
 see the 'contributions' section).
 
