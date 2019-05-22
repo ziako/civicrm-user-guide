@@ -1,13 +1,7 @@
-Set-up
-======
+Paramétrage
+===========
 
-Within your online CiviContribute donation form, you may let your
-constituents make pledges for future donations. By allowing pledges,
-donors have the flexibility to choose the frequency with which they will
-donate, e.g. twice a year, twice a month for five months, etc. Some
-payment processors will not allow this kind of automation and the
-payments themselves may arrive in a non-electronic form like cheques.
-However, you can record future income against a current source such as
+À l'aide de votre formulaire en ligne de donation CiviContribute, vous pouvez permettre à vos contacts de faire des promesses de don. En autorisant les promesses de don, vous permettez aux donateurs de choisir la fréquence à laquelle ils souhaitent donner (2 fois par an, trois fois par mois pendant cinq mois...). Tous les types de paiement ne peuvent être gérés par les processeurs de paiement. Les versements peuvent arriver sous une forme non-électronique, tels que les chèques. However, you can record future income against a current source such as
 an event or email campaign, and change the status from 'pledged' to
 'complete/paid' manually when the payment arrives (should the payment
 method not support this). Pledges also provide an automated mechanism to
