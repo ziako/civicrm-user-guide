@@ -6,60 +6,35 @@ Afin de pouvoir utiliser CiviPledge, vous devez l'activer pour votre installatio
 Nouvelles promesses de don
 --------------------------
 
-Pour créer une nouvelle promesse de don au nom d'un contact, aller à **Contributions** > **Pledges** > **New Pledge** (note that an
-individual may do this themselves through an online contribution form;
-see the 'contributions' section).
+Pour créer une nouvelle promesse de don au nom d'un contact, aller à **Contributions** > **Promesses de don** > **Nouvelle promesse de don** (notez qu'un particulier peut faire lui-même sa promesse de don : cf. le chapitre [Contributions en ligne](../contributions/online-contributions.md) pour plus de détails.).
 
-The options available are as follows:
+Les options suivantes sont disponibles :
 
--   **Select contact**: type the name of an existing contact, or create
-    a new one before setting up the pledge (a new window will open)
--   **Total pledge amount**: enter the total amount to be donated
--   **To be paid in**: specify the number of instalments and time period
-    for payment, if greater than one
--   **Payments are due on the**: choose the day on which a payment is
-    due during that instalment cycle (e.g. the second day of the
-    week/month/year)
--   **Pledge made**: select the date on which the pledge was promised
--   **Payments start**: set the date the scheduled payments will start
--   **Send Acknowledgment?**: if outgoing mail is configured, and an
-    email address is available for that contact, check this box to send
-    a notification email
--   **Acknowledgement date**: the date the individual was notified of
-    the pledge's creation (automatically populated if an email was sent)
--   **Financial Type**: choose the Financial Type of the contribution
-    (e.g. donation or event fee) to denote what the pledged money is
-    meant for
--   **Campaign**: if available, you may assign the pledge to a campaign
-    if the money is intended to go towards that fundraising effort
--   **Self-service payments page**: give donors the ability to make a
-    payment online by selecting an online contribution form to collect
-    the money through
--   **Honoree information**: you may also enter honoree information if
-    the individual elects to dedicate the pledge to someone, and set
-    payment reminders
-
+-   **Sélectionnez le contact** : entrez le nom d'un contact existant, ou créez-en un nouveau avant de renseigner la promesse de don (une nouvelle fenêtre s'ouvrira) ;
+-   **Montant total de la promesse de don** : entrez le montant total qui sera donné ;
+-   **À payer en**: spécifiez le nombre de versements et, s'il est supérieur à un, leur périodicité ;
+-   **Les paiements sont dûs le** : choisissez le jour de la période auquel chaque versement est fait (par ex. le deuxième jour de la semaine / mois / année) ;
+-   **Promesse de don faite le** : sélectionnez la date à laquelle la promesse de don a été faite ;
+-   **Début des paiements** : indiquez la date de départ du premier versement ;
+-   **Envoyez accusé de réception ?** : si les courriels sortants sont configurés, et que le contact dispose d'une adresse courriel, vous pouvez activer cette case à cocher pour lui envoyer une notification ;
+-   **Date de réception** : date à laquelle le contact a été notifié de la création de sa promesse de don (remplie automatiquement si un courriel a été envoyé - cf. option précédente) ;
+-   **Type d'opération** : choisissez le type financier pour les paiements liés à cette promesse de don (don, abandon de frais...) ;
+-   **Campagne** : Si elle est disponible, vous pouvez associer la promesse de don à une campagne de levée de fond ;
+-   **Page de paiment en ligne** : donne au donateur la possibilité de faire lui-même le paiement à travers un formulaire de paiment en ligne ;
+-   **Contributions faites en l'honneur de %1** : vous pouvez également donner le nom de la personne à qui vous dédiez votre promesse de don ;
 
 
 ![image](../img/new_pledge2.png)
 
-Payment reminders
------------------
+Rappels de paiement
+-------------------
 
-One or more payment reminders can be emailed to the donor prior to the
-scheduled payment date. If a 'Self-service Payments Page' has been
-selected (see below), the reminder will include a link for the
-contributor to make their payment online.
+Un ou plusieurs rappels de paiement peuvent être envoyés par courriel au donateur avant leur date d'échéance. Si une page de paiement en ligne a été renseignée (voir plus bas), le courriel inclura un lien pointant sur cette dernière.
 
-In order for reminders to be sent:
+Pour que les rappels puissent être envoyés :
 
-1.  The Process Pledges (process_pledge) scheduled job must be enabled
-    to updates pledge payment statuses and sends the payment reminders.
-    Alternatively a cron job can be scheduled to run this specific task
-    apart from other scheduled jobs. Refer to the *Scheduled Jobs*
-    chapter for more information.
-2.  The donor must have a valid email address (and must not have the "Do
-    Not Email" flag checked).
+1.  La tâche planifiée *Process Pledges (process_pledge)* doit être active afin d'automatiquement mettre à jour le statut des promesses de don et envoyer les rappels de paiement par courriel. Ou bien un cronjob peut être planifié pour faire tourner cette tâche en dehors des autres tâches planifiées. Pour plus d'information, veuillez vous référer au chapitre [Travaux programmés](../initial-set-up/scheduled-jobs.md) ;
+2.  Le donateur doit avoir une adresse courriel valide et ne pas avoir coché l'option "Ne pas envoyer de courriel" dans sa fiche contact ;
 
 Once these pre-requisites have been met, you can choose the payment
 reminder schedule for an individual when creating a new pledge. The
