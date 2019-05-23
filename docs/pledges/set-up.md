@@ -1,49 +1,21 @@
 Paramétrage
 ===========
 
-À l'aide de votre formulaire en ligne de donation CiviContribute, vous pouvez permettre à vos contacts de faire des promesses de don. En autorisant les promesses de don, vous permettez aux donateurs de choisir la fréquence à laquelle ils souhaitent donner (2 fois par an, trois fois par mois pendant cinq mois...). Tous les types de paiement ne peuvent être gérés par les processeurs de paiement. Les versements peuvent arriver sous une forme non-électronique, tels que les chèques. However, you can record future income against a current source such as
-an event or email campaign, and change the status from 'pledged' to
-'complete/paid' manually when the payment arrives (should the payment
-method not support this). Pledges also provide an automated mechanism to
-remind donors of their commitment.
+À l'aide de votre formulaire en ligne de donation CiviContribute, vous pouvez permettre à vos contacts de faire des promesses de don. En autorisant les promesses de don, vous permettez aux donateurs de choisir la fréquence à laquelle ils souhaitent donner (2 fois par an, trois fois par mois pendant cinq mois...). Tous les types de paiement ne peuvent être gérés par les processeurs de paiement. Les versements peuvent arriver sous une forme non-électronique, tels que les chèques. Toutefois, vous pouvez enregistrer un versement futur et changer le statut de la contribution de "Promesse de don" à "Payé" au moment où le paiement arrive.
 
-For further information on pledges, and creating pledges internally on
-behalf of constituents (i.e. not through an online form), see the
-chapter 'Pledges'.
+Activer les promesses de don
+----------------------------
 
-Enabling pledges
-----------------
-
-Setting up pledges for online forms is a simple check-box affair. Once a
-contribution page has been created (see the chapter 'Setup'), while
-editing the page's settings go to the 'Amounts' tab and tick the option
-'**Pledges**'. Several options will appear, as below.
+Paramétrer les formulaires en ligne pour les promesses de don n'est qu'une simple affaire de case à cocher. Une fois la première étape de création de page de contribution faite (voir le chapitre [Contribution en ligne](../contributions/online-contributions.md)), allez dans l'onglet "Montants" puis cochez l'option **Promesses de don**. Une liste d'options apparaitra :
 
 ![image](../img/pledge-setup.png)
 
--   **Supported pledge frequencies**: choose whether the donor can
-    pledge a daily, weekly, monthly or annual donation.
--   **Allow frequency intervals**: if checked, donors will be able to
-    specify a gap in payments (e.g. once every 5 days, 5 weeks, 5
-    months, or five years).
--   **Send payment reminder**: if you wish to send the donor a reminder
-    before their scheduled payment is due, enter the number of days
-    prior to the payment that they will be reminded (e.g. via email)
--   **Send up to**: specify the maximum number of reminders an
-    individual will receive for one scheduled payment.
--   **Send additional reminders**: set the interval period between
-    reminders, by the number of days, e.g. 5 days before the next
-    reminder is sent.
--   **Allow other amounts**: check this box if you wish to give
-    individuals the option to pledge an amount of their choosing. You
-    can also specify the minimum and maximum payment they can make.
+-   **Fréquences de versement disponibles** : choisissez les fréquences que le donateur peut choisir (jour, mois, année...) ;
+-   **Permettre les intervalles de fréquence** : si coché, les donateurs pour choisir un intervalle de fréquence (ex. tous les 5 jours, tous les 2 mois...) ;
+-   **Envoyer un rappel de paiement** : si vous souhaitez faire un rappel, entrez le nombre de jours en amont de la date d'échéance du paiement pour l'envoi du rappel par courriel ;
+-   **Envoyer jusqu'à** : spécifiez le nombre maximum de rappels à envoyer pour chaque paiement planifié ;
+-   **Envoyer des rappels supplémentaires** : paramétrez l'intervalle de temps (en nombre de jours) entre les rappels ;
 
-Once enabled, the option to make a pledge will appear on the online
-form. To check and monitor the current pledges, several reports and a
-dashboard are available. To access the dashboard, go to:
-**Contributions** > **Pledges** > **Dashboard.**
+Une fois ces paramétrages effectués, une option pour réaliser une promesse de don sera disponible dans le formulaire de contribution. Pour avoir une vue d'ensemble des promesses de don, plusieurs rapports et un tableau de bord sont disponibles. Pour ce dernier, il suffit d'aller à **Contributions** > **Promesses de don** > **Tableau de bord**
 
 ![image](../img/selectpledge_contributeform_1.png)
-
-
-
