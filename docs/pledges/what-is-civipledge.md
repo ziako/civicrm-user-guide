@@ -1,19 +1,8 @@
-What is CiviPledge?
-===================
+Qu'est-ce que CiviPledge ?
+==========================
 
-A pledge is the promise to give a donation at a pre-arranged time in the
-future, either in full, or at regular intervals until a total goal is
-reached. For example, Sally pledges to give $3000 over five years, at
-regular monthly intervals of $50 each.
+Pledge, en anglais, signifie engagement, promesse. CiviPledge gère les promesses de dons, à savoir l'engagement d'une personne à faire une donation au bout d'un temps donnée, soit en une fois, soit à intervalle régulier. Par exemple, Sally s'engage à donner 3000 € en cinq ans, sous forme de paiements mensuels de 50 €.
 
-In CiviCRM, donors can make a pledge themselves through an online
-contribution form (see the 'Contributions' section), or internal users
-may do so on their behalf. Payments are handled separately, either
-manually (e.g. cheque) or automatically through a payment processor, and
-the pledge itself is the 'umbrella' that links all of the individual
-contributions together.
+Dans CiviCRM, les donateurs peuvent faire eux-même une promesse de don à travers un formulaire en ligne (cf. le chapitre [Contributions en ligne](../contributions/online-contributions.md) pour plus de détails). Les gestionnaires de l'organisation peuvent également le faire de leur côté. Les paiements sont gérés séparément, soit manuellement (par exemple par chèque), soit automatiquement à travers un processuer de paiement, et la promesse de don relit tous les versements / contributions ensembles.
 
-If a donor has missed a payment, the status of the pledge can be updated
-accordingly, and email reminders may be set for delivery automatically
-at specified intervals before the payments are due, to remind donors of
-their commitment.
+Si un donateur manque un paiement, le statut de la promesse de don peut être mis à jour en conséquence. Des rappels par courriel peuvent être envoyés à intervales réguliers jusqu'à ce que le paiement soit dû.

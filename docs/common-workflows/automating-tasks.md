@@ -1,66 +1,39 @@
-Automating tasks
-================
+Automatiser les tâches
+======================
 
-If you find yourself making the same set of decisions regularly, more
-often than not, CiviCRM can free you from having to make them again.
-Automating administrative or routine tasks, more commonly referred to as
-workflows, take quite a bit of work to set up, but save a tremendous
-amount of time in the long run. To get started, realize that every
-decision, no matter how arbitrary it may feel, can be made based on a
-set of criteria and information that satisfies that criteria. We'll help
-you think through what criteria you might be using to make decisions
-that CiviCRM could easily make for you. The second step will be to find
-places for information that corresponds with your criteria in CiviCRM
-and then teach CiviCRM which action to take in response. Here is an
-example:
+Si vous vous retrouvez à répéter régulièrement les mêmes procédures de gestion dans votre organisation, CiviCRM peut très certainement vous libérer du temps. Automatiser des tâches administratives ou de routine, plus communément appelées processus, est un peu délicat à mettre en place, mais vous fera gagner énormément de temps sur le long term.
+Pour commencer, soyez conscient que chaque décision de process peut être prise selon un jeu de critères plus ou moins satisfaits. Nous vous aiderons à réfléchir à la définition de ces critères qui pourraient être utilisés par CiviCRM pour réaliser des opérations répétitives. Ensuite, nous devrons rechercher dans le système les informations testées par ces critères, puis indiquer à CiviCRM les actions à réaliser en conséquence.
 
-> *Goal*: Automatically personalize acknowledgment letters
+En voici un exemple :
 
-> *Focus Questions*: What letters do I edit and what information do I
-> add? Where do I find information that needs to be added? What CiviCRM
-> features can help accomplish this task?
+> *Objectif*: Automatiser les lettres de remerciement pour un don
 >
-> *Strategy*: Create custom tokens and print to PDF function in CiviCRM
+> *Questions centrales*: Quelles lettres dois-je éditer et quelles informations doivent y apparaitre ? Où puis-je trouver ces informations ? Quelles fonctionnalités de CiviCRM peuvent accomplir cette tâche ?
 >
-> *Custom Fields*: Fund Name, Tag “Works with Organization,” Tax Receipt
-> Pull-Down (No Tax Receipt, Extra Tax Receipt to Soft Credit, Tax
-> Receipt to Hard Credit), Relationship “Known by Organization Staff”
+> *Stratégie*: Créer des champs de fusion personnalisés et utiliser la fonction de création de documents PDF de CiviCRM.
 >
-> *Existing Fields*: Thank You Letter Sent, Soft Credit
+> *Champs personnalisés*: Fund Name, Tag “Works with Organization,” Tax Receipt Pull-Down (No Tax Receipt, Extra Tax Receipt to Soft Credit, Tax Receipt to Hard Credit), Relationship “Known by Organization Staff”
 >
-> *Custom Tokens*: First Gift Date, Financial Type, Soft Credit Address
-> and Main Contact
+> *Champs existants*: Thank You Letter Sent, Soft Credit
 >
-> *Variations in Template Language*:
+> *Champs de fusion personnalisés*: First Gift Date, Financial Type, Soft Credit Address and Main Contact
 >
-> -   Include/Exclude Fund Name - based on the fact that the money was
->     donated to the fund or as a generic donation
-> -   Include/Exclude Tax Receipt - based on information if this
->     contribution is eligible for tax receipt
-> -   Include/Exclude Invitation for Sponsorship - based on the fact
->     that the organization receiving this email was a sponsor in the
->     past
-> -   Include/Exclude Invitation to Visit Office - based on the address
->     of the recipient; if constituent is located close by, include the
->     invitation.
+> *Variations en language "Modèle de document"*:
+>
+> -   Include/Exclude Fund Name - basé sur le fait qu'il s'agisse d'une donation au fonds ou d'une donation générique ;
+> -   Include/Exclude Tax Receipt - basé sur le fait que le don donne droit, ou non, à un reçu fiscal ;
+> -   Include/Exclude Invitation for Sponsorship - basé sur le fait que le donateur est, ou non, un sponsor de l'organisation ;
+> -   Include/Exclude Invitation to Visit Office - basé sur l'adresse du donateur. Si ce dernier est géographiquement proche des locaux de l'organisation, lui envoyer une invitation.
 
-The goal refers to which routine task you would like to automate. It can
-be: email me a report of major donations the organization receives each
-day, send a reminder email to anyone who has registered for an upcoming
-event, remind me when it's time to follow up with a donor about an
-outstanding invitation to meet for lunch, send a renewal notice to
-anyone whose membership is about to expire, or send a reminder email to
-anyone who has promised to make 4 more donations to your organization.
-CiviCRM has the capability of doing all these things out-of-the box. To
-learn more about how you can set these tasks up, visit the chapters that
-discuss functionality of CiviCRM components (chapters like Events,
-Membership, Contributions, Scheduled Jobs, Reporting etc.).
+L'objectif indique la tâche de routine que vous souhaitez automatiser. Par exemple, cela peut être :
 
-But there are probably a number of other, more complicated tasks, that
-with a little customization, CiviCRM could do for you as well. These
-might include sending personalized acknowledgment letters to certain
-donors or giving members access to member-only content, discounts,
-mailings and other benefits on your site.
+-   M'envoyer un rapport quotidien par courriel des principaux dons faits à l'organisation ;
+-   Envoyer un rappel par courriel aux personnes inscrites à un événement la veille de ce dernier ;
+-   Envoyer une notification de renouvellement à toute personne dont l'adhésion est sur le point d'expirer.
+
+CiviCRM a la possibilité de faire tout cela clé en main (pour en savoir plus, vous pouvez vous référer aux chapitres sur les composants CiviCRM concernés). Il est également possible d'automatiser des tâches plus complexes avec un minimum de personnalisation.
+
+Les réponses aux questions centrales demandent de la reflexion et de la recherche.
 
 Answering focus questions will require reflection and research. As an
 expert in what you do, try to articulate what piece of information helps
