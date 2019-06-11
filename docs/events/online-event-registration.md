@@ -1,18 +1,14 @@
-Online event registration
-=========================
+Inscription en ligne à un événement
+===================================
 
-The ability for end-users to register themselves for events is
-beneficial for both your constituents - they can register and a time and
-in a place that is convenient for them - and for your organization -
-reducing administration. This chapter details the steps involved in
-offering online registration for events.
+La possibilité pour les utilisateurs finaux de pouvoir s'enregistrer eux-même à des événements est bénéfique pour tout le monde : les participants peuvent s'inscrire au moment le plus pratique pour eux, et votre organisation économise du travail administratif. Ce chapitre détaille les étapes impliquées à la mise en oeuvre des inscriptions en ligne pour des événements.
 
-The standard flow for registering for an event is as follows:
+Le processus standard pour l'inscription en ligne à un événement est le suivant :
 
 ![event_registrationflow_1](../img/CiviCRM-CiviEvent-event_registrationflow_1-en.gif "event_registrationflow_1")
 
-Setting up online registration
-------------------------------
+Paramétrer l'inscription en ligne
+---------------------------------
 
 To offer online registration, check **Allow Online Registration** in the
 Online Registration step of event creation and use the options on this
