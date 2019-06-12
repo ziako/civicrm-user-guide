@@ -14,7 +14,7 @@ To offer online registration, check **Allow Online Registration** in the
 Online Registration step of event creation and use the options on this
 form to configure this feature.
 
-![image](../img/event_online_rego_part_1.PNG)
+![image](../img/event_online_rego_part_1.png)
 
 Define the text to be used as the **link** from the event information
 page to the registration form, and set the starting and ending dates for
