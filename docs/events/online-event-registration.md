@@ -59,7 +59,7 @@ scheduled reminders)
 The next step is to define the text and the fields for collecting
 information that will be displayed on your online registration page.
 
-![image](../img/event_online_rego_part_2.PNG)
+![image](../img/event_online_rego_part_2.png)
 
 The introductory text comes at the top of the page and the footer text
 at the bottom. In between will come some, or all, of: profile, fee
