@@ -10,21 +10,13 @@ Le processus standard pour l'inscription en ligne à un événement est le suiva
 Paramétrer l'inscription en ligne
 ---------------------------------
 
-To offer online registration, check **Allow Online Registration** in the
-Online Registration step of event creation and use the options on this
-form to configure this feature.
+Pour afficher les paramètres, cochez **Autoriser l'inscription en ligne**.
 
 ![image](../img/event_online_rego_part_1.png)
 
-Define the text to be used as the **link** from the event information
-page to the registration form, and set the starting and ending dates for
-registration. The link text is used in the event information page, and
-is most commonly "Register Now" or similar. The start and end dates
-define when web site visitors may register for the event. The
-registration end date may be different from the start date of the event,
-as you may want to close registration in advance of the event in order
-to prepare name tags or perform other administrative functions.
+Confirmez ou modifiez le texte qui s'affichera en tant que lien vers la page d'inscription (par défaut, "S'incrire maintenant"), et indiquez les dates de début et de fin pour les inscriptions en ligne. Ces dernières définissent la période durant laquelle le formulaire d'inscription sera en ligne sur le site. Elle peut se terminer avant la date de l'événement lui-même, afin de vous laisser le temps de réaliser des tâches de préparation selon le nombre de participants.
 
+Activer **Inscrire plusieurs participants** permet l'inscription et le paiement pour plusieurs personnes sur une seule transaction du formulaire.
 Enabling **Register multiple participants** lets individuals register as
 many people as they choose for the event and pay the fees with a single
 transaction. For example, an organisation may be sending multiple people
