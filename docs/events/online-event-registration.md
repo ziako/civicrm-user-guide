@@ -16,13 +16,13 @@ Pour afficher les paramètres, cochez **Autoriser l'inscription en ligne**.
 
 Confirmez ou modifiez le texte qui s'affichera en tant que lien vers la page d'inscription (par défaut, "S'incrire maintenant"), et indiquez les dates de début et de fin pour les inscriptions en ligne. Ces dernières définissent la période durant laquelle le formulaire d'inscription sera en ligne sur le site. Elle peut se terminer avant la date de l'événement lui-même, afin de vous laisser le temps de réaliser des tâches de préparation selon le nombre de participants.
 
-Activer **Inscrire plusieurs participants** permet l'inscription et le paiement pour plusieurs personnes sur une seule transaction du formulaire.
-Enabling **Register multiple participants** lets individuals register as
-many people as they choose for the event and pay the fees with a single
-transaction. For example, an organisation may be sending multiple people
-to a conference, or an individual may bring their partner and wish to
-register and pay for both in a single process. By default, this option
-requires a different name and email address for each person registered.
+Activer **Inscrire plusieurs participants** permet l'inscription et le paiement pour plusieurs personnes sur une seule transaction. Par exemple, vous organisez une conférence, et des personnes souhaiteront inscrire également leur partenaire et payer pour les deux en un seul processus.
+
+Par défaut, cette option nécessite un nom et une adresse courriel différents pour chaque personne enregistrée. Cocher **Même adresse électronique ?** permet d'avoir une adresse commune. Dans les deux cas, CiviCRM utilise des enregistrements de contact distincts (soit existants, soit créés à la volée) pour chaque personne inscrite.
+
+La **Règle de dédoublement** est expliquée plus loin dans la sous-section *Correspondance de contact et gestion des doublons* de ce chapitre.
+
+
 
 Checking **same email address** provides the same capabilities, but
 without requiring distinct email addresses for each registrant. In
@@ -215,8 +215,8 @@ For more information see **Contributions > Personal Campaign Pages** in
 this book. This is the last step in creating an event. Click **Save and
 Done.**
 
-Contact matching and duplicate management 
-------------------------------------------
+Correspondance de contact et gestion des doublons 
+-------------------------------------------------
 
 Whenever we allow people to interact with our database from 'the
 outside' we run the risk of creating duplicate contacts. There are
