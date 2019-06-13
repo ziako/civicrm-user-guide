@@ -20,42 +20,15 @@ Activer **Inscrire plusieurs participants** permet l'inscription et le paiement 
 
 Par défaut, cette option nécessite un nom et une adresse courriel différents pour chaque personne enregistrée. Cocher **Même adresse électronique ?** permet d'avoir une adresse commune. Dans les deux cas, CiviCRM utilise des enregistrements de contact distincts (soit existants, soit créés à la volée) pour chaque personne inscrite.
 
-La **Règle de dédoublement** est expliquée plus loin dans la sous-section *Correspondance de contact et gestion des doublons* de ce chapitre.
+La **Règle de dédoublement** est expliquée plus loin dans la sous-section [Correspondance de contact et gestion des doublons](#correspondance-de-contact-et-gestion-des-doublons) de ce chapitre.
 
+**Expiration des inscriptions en attente (en heure)** est le temps alloué aux participants pour confirmer / terminer leur inscription dont le statut est "en attente". Cela fonctionne avec la tâche programmée **Mettre à jour les statuts des participants** (voir **Administrer** > **Paramètres système** > **Travaux programmés**). Si l'un et l'autre sont activés, une inscription en attente doit être finalisée dans la période de temps spécifiée. Dans le cas contraire, l'inscription sera annulée et le participant notifié par courriel. Cette fonctionnalité est très utile lorsqu'elle est combinée avec les rappels automatiques pour gérer automatiquement les inscriptions *En attente de paiment*, si vous avez autorisé l'option de paiement sur votre formulaire d'inscription en ligne (cf le chapitre [Rappels programmés](../email/scheduled-reminders.md) de la section Courriel pour plus d'information).
 
-
-Checking **same email address** provides the same capabilities, but
-without requiring distinct email addresses for each registrant. In
-either case, CiviCRM uses a separate contact record (an existing one if
-the contact is already in the system, otherwise a new one is created)
-for each individual registered. 
-
-Information on the **Duplicate matching rule** is provided in the
-*Contact matching and duplicate management* sub-section of this chapter
-(below). 
-
-
-**Pending participant expiration (hours)** is the time for
-confirming/finishing registration by participants with any of the
-statuses classed as **Pending**. It works in conjunction with the
-scheduled job **Update Participant Statuses** (see **Administer >
-System Setting > Scheduled jobs**). If these are both set, pending
-registration must be finalized within the set time or the registration
-will be cancelled and the would-be registrant notified by email of the
-cancellation. This feature is very useful when combined with scheduled
-reminders for automatically managing **Pending from pay later**
-registrations if you have allowed that payment option on your online
-registration page. (See the *Email* section for more details on
-scheduled reminders)
-
-The next step is to define the text and the fields for collecting
-information that will be displayed on your online registration page.
+L'étape suivante consiste à définir le texte et les champs servant à collecter les informations, et qui seront affichés dans la page d'inscription en ligne.
 
 ![image](../img/event_online_rego_part_2.png)
 
-The introductory text comes at the top of the page and the footer text
-at the bottom. In between will come some, or all, of: profile, fee
-selection, credit card details, additional profile(s) in that order.
+Le **Texte d'introduction** sera affiché en haut de la page, et le **Pied de page (texte)** en bas. Tous ou certains champs seront affichés entre les deux : profil, tarif, détail de la carte de crédit...
 
 Collecting participant information with profiles
 -------------------------------------------------
