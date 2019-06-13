@@ -30,24 +30,12 @@ L'étape suivante consiste à définir le texte et les champs servant à collect
 
 Le **Texte d'introduction** sera affiché en haut de la page, et le **Pied de page (texte)** en bas. Tous ou certains champs seront affichés entre les deux : profil, tarif, détail de la carte de crédit...
 
-Collecting participant information with profiles
--------------------------------------------------
+Collecter les informations sur les participants à l'aide des profils
+--------------------------------------------------------------------
 
-The best way to collect information during online registration is to
-include one or more profiles in your event configuration.You can include
-one profile immediately after the introductory message and one or more
-profiles under any fees and payment details you need to collect. (If
-you are not sure what a profile is and why you would use them see the
-*Profiles* chapter of *Organising you data*.)
+La meilleure façon de collecter de l'information durant une inscription en ligne est d'inclure un ou plusieurs profils dans la configuration de votre événement. Vous pouvez en mettre un immédiatement après le message d'introduction, et un ou plusieurs en dessous des tarifs et des détails de paiement (des informations détaillées sont disponibles dans le chapitre [Profils](../organising-your-data/profiles.md) de la section *Organiser vos données*).
 
-By default, when creating an online registration form the profile "Your
-Registration Info" will be selected as the 'top' profile. This consists
-of three fields: first name, last name and email address. However,
-CiviCRM only requires either first name and last name or email address
-for each contact. So you can modify 'Your Registration Info' or create a
-new profile with fewer fields. If you choose not to collect email
-addresses, be sure to uncheck the option "Send confirmation email?" at
-the bottom!
+Lorsque vous créez un formulaire d'inscription en ligne, le profil *Vos informations d'inscription* est sélectionné par défaut. Il consiste en trois champs : le prénom, le nom et l'adresse courriel. Toutefois, CiviCRM n'a besoin pour ses enregistrements de contact soit du prénom et nom, soit d'une adresse courriel. Vous pouvez donc modifier ce profil, ou en créer un nouveau requérant moins de champs. Si vous choisissez de ne pas collecter les adresses courriel, pensez à décocher l'option **Envoyer un courriel de confirmation ?** en bas.
 
 WARNING: If you modify an existing profile whilst configuring your
 Online Registration page, the changes you make will apply everywhere
