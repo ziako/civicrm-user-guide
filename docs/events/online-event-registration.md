@@ -37,20 +37,10 @@ La meilleure façon de collecter de l'information durant une inscription en lign
 
 Lorsque vous créez un formulaire d'inscription en ligne, le profil *Vos informations d'inscription* est sélectionné par défaut. Il consiste en trois champs : le prénom, le nom et l'adresse courriel. Toutefois, CiviCRM n'a besoin pour ses enregistrements de contact soit du prénom et nom, soit d'une adresse courriel. Vous pouvez donc modifier ce profil, ou en créer un nouveau requérant moins de champs. Si vous choisissez de ne pas collecter les adresses courriel, pensez à décocher l'option **Envoyer un courriel de confirmation ?** en bas.
 
-WARNING: If you modify an existing profile whilst configuring your
-Online Registration page, the changes you make will apply everywhere
-that profile is being used. So unless an existing profile **exactly**
-matches your requirements you should copy the profile, then rename and
-edit the copy as required. 
+ATTENTION : si vous modifiez un profil existant pendant le paramétrage de votre page d'inscription en ligne, le changement s'appliquera partout où ce profil est utilisé. Donc à moins qu'un profil existant ne corresponde *exactement* avec vos besoins, vous devriez plutôt faire la copie de l'un d'eux, le renommer, le modifier et enfin l'appliquer à votre page.
 
-If the profile you require does not already exist, you can create it
-without leaving the Online Registration configuration page. The drag and
-drop profile interface also allows you to create custom fields to
-include in the profile if you have not already done so. Custom fields
-can be created for all events or all participants, or only specific
-Event Types or Participant Roles (see the chapter *Custom data on
-events* in this section for more details on where you should store what
-custom data).
+Une autre façon de faire est d'en créer un totalement nouveau, sans quitter la configuration de votre page d'inscription en ligne. L'interface *glisser-déposer* vous permet également de créer des champs personnalisés à inclure dans votre profil. Ces champs peuvent être créés pour tous ou certains types d'événements, et tous ou certains rôles de participants (cf. le chapitre [Données personnalisées](./custom-data-for-events.md) de cette section). 
+
 
 ![image](../img/Drag_and_drop_profile_for_event.PNG)
 
