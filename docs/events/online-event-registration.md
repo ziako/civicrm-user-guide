@@ -44,55 +44,31 @@ Une autre façon de faire est d'en créer un totalement nouveau, sans quitter la
 
 ![image](../img/Drag_and_drop_profile_for_event.PNG)
 
-Registration confirmation
+
+Confirmation d'inscription
 --------------------------
 
-Once you registration page is configured you need to enter the text to
-be displayed on the Confirmation page, Thank-you page, and emailed
-confirmations/receipts (if enabled). 
+Une fois votre page d'inscription configurée, vous aurez besoin d'entrer le texte à afficher sur la page de confirmation, la page de remerciement, et envoyer par courriel les confirmations et accusés de reception (si vous en avez activé l'option).
 
-For free events, the Confirmation step is skipped. For paid events the
-payment is processed between the Confirmation and Thank you pages. 
+Pour les événements gratuits, l'étape de confirmation est sautée. Pour les événements payants, le processus de paiement s'effectue entre la page de confirmation et celle de remerciement. 
 
-For most events you'll want to enable the Send Confirmation Email
-feature (see following screenshot). For paid events, the confirmation
-email also acts as a receipt. Make sure that the **Confirm From Email**
-address entered is a valid email account on your mail server. Add one or
-more staff emails (separating multiple email addresses with commas) to
-the **CC Confirmation To** field if you want real-time updates on who is
-registering for your event. 
+Pour la plupart des événements, il sera utile d'activer l'option du courriel de confirmation. Pour les événéments payants, ce courriel sert également de reçu. Assurez-vous que l'adresse **Courriel de l'expéditeur pour la confirmation** soit un compte courriel valide de votre serveur de messagerie. Ajoutez une ou plusieurs adresses dans le champ **CC confirmation à** si vous souhaitez informer en temps réel des membres de votre organisation sur les participants.
 
 ![OnlineRegEmail](../img/CiviCRM_update-CiviEvent-OnlineRegEmail-en.png "OnlineRegEmail")
 
-Please note that the contents of the **Text** field will be included in
-both TEXT and HTML versions of receipt emails so we do not recommend
-including HTML tags / formatting here.
+Veuillez noter que le contenu du champ **Texte** sera généré en texte brut ET en HTML. Nous ne recommandons donc pas d'y inclure des tags HTML de formatage.
 
-Optional event registration features
-------------------------------------
 
-The following features may be useful to enhance your online event
-registration process. 
+Fonctionnalités optionnelles d'inscription à un événement
+---------------------------------------------------------
 
-### Waitlists
+### Liste d'attente
 
-Your organization may have limits on attendance, such as a 25-person
-limit for a training workshop or a 200-person limit for a fund-raising
-dinner. CiviEvent lets you set the maximum number of people allowed to
-register for your event. When registrations reach that number, CiviEvent
-will not allow other people to register, but will instead send an
-automatic message saying, "The event is currently full." This message
-can be customized by the organization when creating a new event, and you
-can let people add themselves on a first-come-first-served basis to a
-waitlist.
+Un événement peut accueillir un nombre limité de participants (par exemple, 25 personnes pour un atelier). CiviEvent vous permet de configurer un nombre maximum de personnes autorisées à s'inscrire à un événement. Lorsque ce nombre est atteint, CiviEvent désactivera les inscriptions mais enverra un message automatique disant "L'événement est actuellement complet". Vou pouvez personnaliser ce message, et configurer une liste d'attente de type "premier arrivé, premier servi".
 
-The waiting list works in the following way:
+Cette liste fonctionne de la manière suivante :
 
--   As space becomes available on your event, for example, if one or
-    more people cancels, then On waitlist participants will be moved to
-    'Pending from waitlist' status and will be sent an email with a link
-    to complete their registration (including paying event fees - if
-    any).
+-   Quand une place se libère (par exemple lorsqu'une personne annule son inscription), les participants en liste d'attente auront le statu changé en *En attente (depuis la liste d'attente)* et un courriel automatique leur sera envoyé avec un lien leur permettant de compléter leur inscription (y compris la méthode de paiement si applicable).
 -   People will remain pending for a certain amount of time defined in
     Pending participant expiration (hours). This gives them a window of
     opportunity to register. 
