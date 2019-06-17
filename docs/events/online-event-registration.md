@@ -68,49 +68,26 @@ Un événement peut accueillir un nombre limité de participants (par exemple, 2
 
 Cette liste fonctionne de la manière suivante :
 
--   Quand une place se libère (par exemple lorsqu'une personne annule son inscription), les participants en liste d'attente auront le statu changé en *En attente (depuis la liste d'attente)* et un courriel automatique leur sera envoyé avec un lien leur permettant de compléter leur inscription (y compris la méthode de paiement si applicable).
--   People will remain pending for a certain amount of time defined in
-    Pending participant expiration (hours). This gives them a window of
-    opportunity to register. 
-    You can set the amount of time, measured in hours, that you set on
-    the **Online registration** tab under Pending participant expiration
-    hours. If you want, you can set this to 0 for no limit.
--   After this period of time, they will be moved to expired and other
-    people on the waitlist will be given the opportunity to register.
+-   Quand une place se libère (par exemple lorsqu'une personne annule son inscription), la première personne en liste d'attente aura le statut changé en *En attente (depuis la liste d'attente)* et un courriel automatique lui sera envoyé avec un lien lui permettant de compléter son inscription (y compris la méthode de paiement si applicable).
+-   Cette personne restera avec ce statut pendant le temps défini dans la configuration (voir plus haut la rubrique "Paramétrer l'inscription en ligne"). Cela correspond à une fenêtre durant laquelle elle aura l'opportunité de s'inscrire. Une valeur à 0 correspond à une période illimité.
+-   À l'expiration de la période, le statut passera à *Expiré* et le processus reprendra pour la personne suivante de la liste d'attente.
 
-If you'd like to enable the Waitlist feature, you must first enable the
-related participant statuses **On waitlist** and **Pending from
-waitlist**. You can do this in **Administer > CiviEvent > Participant
-statuses**. You can then check the **Offer Waitlist** checkbox on
-the **Info and settings** tab, and set the message you want displayed on
-the event information page when the event is full.
+Si vous souhaitez utiliser la fonctionnalité de liste d'attente, vous devez :
+-   Activer (pré-requis) les status des participants *Sur liste d'attente* et *En attente (depuis la liste d'attente)*. Vous pouvez le faire en allant à **Administrer** > **CiviEvent** > **Statut de participant** ;
+-   Dans la page de configuration de l'événement, onglet *Infos et paramètres*; les options **Proposer une liste d'attente** et le texte du message seront disponibles. Activez-les et modifiez le texte le cas échéant ; 
 
 ![EventInfo2](../img/CiviCRM_update-CiviEvent-EventInfo2-en.png "EventInfo2")
 
-Note that in order for the status processing to happen, you need to have
-the **Update Participant Statuses** scheduled job
-running (see **Administer > System Setting > Scheduled jobs**).
+Notez que le processus ne peut fonctionner que si la tâche programmée *Mettre à jour les statuts des participants* est en cours d'exécution (voir **Administrer** > **Paramètres système** > **Travaux programmés**).
 
-### Participant approval
+### Approbation d'inscription
 
-Many events are open to everyone, but there may be times when your
-organization invites only specific people to the event. For example, you
-could invite volunteers who have donated 100 or more volunteer hours to
-an appreciation dinner. The people invited may talk about the event to
-their friends, and possibly forward the information. With CiviEvent, you
-can check who has registered and approve only the people invited.
+Dans certains cas, les événements ne seront ouverts que pour des personnes particulières (par exemple pour les donateurs de sommes importantes). Si tout le monde peut accéder à la page d'inscription, CiviEvent permet néanmoins aux organisateurs de vérifier la liste des personnes qui se sont "pré-inscrites" et de valider définitivement leur participation.
 
-If you'd like to enable the 'Participant approval' feature, you must
-first enable the related participant statuses Awaiting approval and
-pending from approval. This is similar to what you do for waiting lists
-and you can do it in **Administer > CiviEvent > Participant
-statuses**. You can then check the **Require participant
-approval** checkbox on the **Online registration **tab, and set the
-message you want displayed in the approval message. You can also limit
-the amount of time participants have to complete their registration
-after approval by entering the time in hours in the Pending participant
-expiration field. For example, if you want to give participants 3 days
-to complete their registration, enter "72" in that field. 
+Pour activer cette fonctionnalité, vous devez :
+-   Activer (pré-requis) les status des participants *En attente de validation*, *En instance de validation* et *Rejeté*. Vous pouvez le faire en allant à **Administrer** > **CiviEvent** > **Statut de participant** ;
+-   Dans la page de configuration de l'événement, onglet *Inscription en ligne*; les options **Requiert la validation de l'inscription** et **Message de validation** seront disponbiles pour activation et configuration.
+
 
 Now, when a person registers for the event, they will get a reply that
 says, "Your registration has been submitted. Once your registration has
