@@ -88,13 +88,9 @@ Pour activer cette fonctionnalité, vous devez :
 -   Activer (pré-requis) les status des participants *En attente de validation*, *En instance de validation* et *Rejeté*. Vous pouvez le faire en allant à **Administrer** > **CiviEvent** > **Statut de participant** ;
 -   Dans la page de configuration de l'événement, onglet *Inscription en ligne*; les options **Requiert la validation de l'inscription** et **Message de validation** seront disponbiles pour activation et configuration.
 
+Dorénavant, lorsqu'une personne s'enregistrera pour l'événément, elle recevra une réponse disant "Votre inscription a été transmise. Quand votre demande d'inscription aura été vérifiée, vous recevrez un courriel contenant un lien vers la page où vous pourrez terminer votre inscription". Cette réponse peut être personnalisée selon vos besoins.
 
-Now, when a person registers for the event, they will get a reply that
-says, "Your registration has been submitted. Once your registration has
-been reviewed, you will receive an email with a link to a web page where
-you can complete the registration process." This reply can be customized
-to your organisation's needs.
-
+Le statut de la personne sera "En attente d'approbation". Vous pouvez parcourir et confirmer les demandes de participation en allant à **Événements** > **Rechercher des participants**.
 Participants will be placed in 'Awaiting Approval' status. You can
 review and approve participants from 'Find Participants' - select the
 'Change Participant Status' task. Approved participants will move to
