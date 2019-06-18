@@ -5,7 +5,7 @@ La possibilité pour les utilisateurs finaux de pouvoir s'enregistrer eux-même 
 
 Le processus standard pour l'inscription en ligne à un événement est le suivant :
 
-![event_registrationflow_1](../img/CiviCRM-CiviEvent-event_registrationflow_1-en.gif "event_registrationflow_1")
+![event_registrationflow_1](../img/CiviCRM-CiviEvent-event_registrationflow_1-fr.gif "event_registrationflow_1")
 
 Paramétrer l'inscription en ligne
 ---------------------------------
