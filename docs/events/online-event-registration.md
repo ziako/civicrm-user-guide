@@ -100,7 +100,7 @@ Si vous avez activé les pages personnelles de campagne, vous offrez la possibli
 -   soit promouvoir l'événement pour lequel elles sont inscrites ;
 -   soit promouvoir la page d'inscription en ligne.
 
-Pour plus d'information, veuillez vous référer au chapitre [Pages personnelles de campagne](../contributions/personal-campaign-pages/) de la section *Contributions*.
+Pour plus d'information, veuillez vous référer au chapitre [Pages personnelles de campagne](../contributions/personal-campaign-pages.md) de la section *Contributions*.
 
 Il s'agisssait de la dernière étape de création d'un événement. Clqiuez sur **Enregistrer et terminer**.
 
@@ -112,7 +112,7 @@ Correspondance de contact et gestion des doublons
 
 Nous avons vu plus qu'une personne inscrite à un événement était automatiquement enregistrée dans la base des contacts si celle-ci n'existait pas encore. Mais que se passe-t-il si, par exemple, Dominique Snow vivant à Londres s'inscrit alors que nous avons un contact Dominique Snow vivant à Paris ? C'est ici que les règles de dédoublement entre en jeu.
 
-Vous pouvez en apprendre davantage sur les règles de dédoublement dans le chapitre [Dédoublonner et fusionner](../common-workflows/deduping-and-merging/). Ici, nous ne couvrirons le sujet que dans le contexte de CiviEvent.
+Vous pouvez en apprendre davantage sur les règles de dédoublement dans le chapitre [Dédoublonner et fusionner](../common-workflows/deduping-and-merging.md). Ici, nous ne couvrirons le sujet que dans le contexte de CiviEvent.
 
 ![image](../img/event-duplicate-matching.png)
 
@@ -136,7 +136,7 @@ La plupart des organisations autorisent les visiteurs anonymes (ceux que ne se s
 Si vous souhaitez exclure les utilisateurs anonymes, assignez ces permmissions au rôle *Utilisateurs authentifié*.
 
 CiviCRM possède un système de permission supplémentaire connu sous le nom de *Access Control Lists (ACLs)*. ACLs vous permet de contrôler les accès aux données CiviCRM. Veuillez noter que ce système n'est pas lié aux rôles Drupal.
-Pour plus d'information, veuillez vous référer au chapitre [Autorisations et contrôle d'accès](../initial-set-up/permissions-and-access-control/).
+Pour plus d'information, veuillez vous référer au chapitre [Autorisations et contrôle d'accès](../initial-set-up/permissions-and-access-control.md).
 
 Si vous avez besoin de limiter les accès à des événements particuliers, vous pouvez utiliser la fonctionnalité *Gérer les contrôles d'accès* pour assigner les accès à des groupes spécifiques de contact.
 
