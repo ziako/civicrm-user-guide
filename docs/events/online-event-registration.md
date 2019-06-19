@@ -140,29 +140,17 @@ Pour plus d'information, veuillez vous référer au chapitre [Autorisations et c
 
 Si vous avez besoin de limiter les accès à des événements particuliers, vous pouvez utiliser la fonctionnalité *Gérer les contrôles d'accès* pour assigner les accès à des groupes spécifiques de contact.
 
-Testing the registration process
---------------------------------
+Tester le processus d'inscription
+---------------------------------
 
-Before revealing your event to the public, you should always test the
-event registration process. This can be done as follows:
+Avant de rendre l'événement disponible au public, vous devriez toujours tester son processus d'inscription :
 
-1.  Navigate to **Events > Manage Events**.
-2.  From Event Links, select **Test-drive** to test the registration
-    page. Test-drive mode will use the sandbox options for your payment
-    processor, if available, and will create a registrant record with a
-    test indication so that it can be reviewed and easily removed.
-3.  Fill out the registration form and complete the registration
-    process.
-4.  In order to find the new test participant record, navigate
-    to **Events > Find Participants**.
-5.  In the search criteria, check the box **Find Test Participants**.
-6.  If you need to adjust the event settings, navigate to **Events > Manage Events** and click the **Configure** link for this event.
-7.  If you discover elements that you need to edit and adjust,
-    select **Configure** to return to the list of event setting pages.
-8.  If you have events where anonymous users register for events, you
-    should also test the registration when not logged in. Refer to the
-    Event Permissions information later in this chapter for details.
+1.  Allez à **Événements** > **Gestion des événements** ;
+2.  Depuis **Lien événement** de l'événement correspondant, sélectionnez **inscription (mode test)**. Ce mode utilisera les options bac à sable pour le processeur de paiement, si disponible, et créera un enregistrement d'inscription avec une indication de test. Cet enregistrement pourra donc facilement être retrouvé et supprimé ;
+3.  Allez jusqu'au bout du processus d'inscription ;
+4.  Afin de trouver l'enregistrement du participant du test, allez à **Événements** > **Rechercher des participants** ;
+5.  Dans le critère de recherche, cochez la boite **Trouver les participants de test**
+6.  Si vous avez besoin d'ajuster les paramètres de l'événement, retournez à **Événements** > **Gestion des événements** et cliquez sur **Configurer** de l'enregistrement correspondant.
+7.  Si votre événement permet l'inscription de visiteurs anonymes, vous devriez également tester une inscription lorsque vous n'êtes pas authentifié.
 
-Once you are satisfied with the event information and registration form,
-it's time to display it on your website. Below are details of how to do
-this.
+Une fois validé tout cela, il est temps d'arfficher l'événement sur votre site web. Le chapitre [Intégrer un événement sur votre site](./integrating-events-with-your-website.md) vous explique comment faire.
