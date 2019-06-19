@@ -90,111 +90,55 @@ Pour activer cette fonctionnalité, vous devez :
 
 Dorénavant, lorsqu'une personne s'enregistrera pour l'événément, elle recevra une réponse disant "Votre inscription a été transmise. Quand votre demande d'inscription aura été vérifiée, vous recevrez un courriel contenant un lien vers la page où vous pourrez terminer votre inscription". Cette réponse peut être personnalisée selon vos besoins.
 
-Le statut de la personne sera "En attente d'approbation". Vous pouvez parcourir et confirmer les demandes de participation en allant à **Événements** > **Rechercher des participants**.
-Participants will be placed in 'Awaiting Approval' status. You can
-review and approve participants from 'Find Participants' - select the
-'Change Participant Status' task. Approved participants will move to
-'Pending from approval' status, and will be sent an email with a link to
-complete their registration (including paying event fees - if any)
+Le statut de la personne sera "En attente d'approbation". Vous pouvez parcourir et confirmer les demandes de participation en allant à **Événements** > **Rechercher des participants**. Sélectionnez la tâche *Changer le statut des participants*. Le statut des participants validés passera en « En attente suite à validation », et les participants recevront un courriel contenant un lien pour compléter leur inscription (y compris le paiement des frais d'inscription à l'événement - s'il y en a). 
 
-Note that in order for the status processing to happen, you need to have
-the **Update Participant Statuses** scheduled job running
-(see **Administer > System Setting > Scheduled jobs**).
+Notez que le processus ne peut fonctionner que si la tâche programmée *Mettre à jour les statuts des participants* est en cours d'exécution (voir **Administrer** > **Paramètres système** > **Travaux programmés**).
 
-### Personal Campaign Pages
+### Pages personnelles de campagne
 
-If you enable Personal Campaign Pages (PCPs), you offer completed event
-registrants the ability to create and customize a page of their own to
-either:
+Si vous avez activé les pages personnelles de campagne, vous offrez la possiblité aux personnes inscrites à un événement la possiblité de créer et de personnaliser une page qui leur est propre pour :
+-   soit promouvoir l'événement pour lequel elles sont inscrites ;
+-   soit promouvoir la page d'inscription en ligne.
 
--   promote the event for which they registered
+Pour plus d'information, veuillez vous référer au chapitre [Pages personnelles de campagne](../contributions/personal-campaign-pages/) de la section *Contributions*.
 
--   promote an online contribution page
+Il s'agisssait de la dernière étape de création d'un événement. Clqiuez sur **Enregistrer et terminer**.
 
-For more information see **Contributions > Personal Campaign Pages** in
-this book. This is the last step in creating an event. Click **Save and
-Done.**
 
 Correspondance de contact et gestion des doublons 
 -------------------------------------------------
 
-Whenever we allow people to interact with our database from 'the
-outside' we run the risk of creating duplicate contacts. There are
-various ways to deal with this. For example, some websites require you
-to be logged in at all times when doing important things and we can do
-the same for CiviCRM using permissions (just take away the register for
-events permission from anonymous users and give it to logged in users,
-or a specific role). Depending on the type of event that you are
-running, this might not be a good idea. Lets say you are running a
-conference, or AGM and you want as many people as possible to register.
-Requiring them to log in wil decrease the amount of registrations.
+À partir du moment où des personnes interagissent avec la base de donnée CiviCRM depuis l'extérieur (par l'intermédiaire des auto-inscription en ligne), nous courons le risque de créer des doublons de contact. Il existe plusieurs possibilité pour gérer cela. Par exemple, nous pouvons afficher le formulaire d'inscription en ligne uniquement pour les personnnes déjà authentifée sur le site web de votre organisation, en jouant sur les permissions. Mais cela n'est peut-être pas une bonne idée si vous souhaitez ouvrir un événement au grand public, et non pas uniquement aux personnes enregistrées dans votre base.
 
-Lets say, we don't require people to log in to register for an event.
-Consider the following situation. James Martin registers for an event.
-James Martin is already in our database. How do we match up the James
-who is registering with the one that is in the database. What about if
-there are two James Martins in our database. One that lives in London,
-and one that lives in Paris. How do we know that we have found the right
-one? The answer is duplicate rules.
+Nous avons vu plus qu'une personne inscrite à un événement était automatiquement enregistrée dans la base des contacts si celle-ci n'existait pas encore. Mais que se passe-t-il si, par exemple, Dominique Snow vivant à Londres s'inscrit alors que nous avons un contact Dominique Snow vivant à Paris ? C'est ici que les règles de dédoublement entre en jeu.
 
-You can read more general and more detailed information about duplicates
-and merging in the *Deduping and merging* chapter and we recommend that
-you get familiar with that chapter at some point. This section just
-covers contact matching and duplicate management in the context of
-CiviEvent.
+Vous pouvez en apprendre davantage sur les règles de dédoublement dans le chapitre [Dédoublonner et fusionner](../common-workflows/deduping-and-merging/). Ici, nous ne couvrirons le sujet que dans le contexte de CiviEvent.
 
 ![image](../img/event-duplicate-matching.png)
 
-By default, CiviEvent uses the Unsupervised rule to do matching. When
-you configure an event for online registration, you can override the
-default by selecting a different duplicate matching rule for matching
-participants for this particular event. The rule you select takes effect
-for the primary participant and any additional participants. 
- 
-The Online Registration tab checks for whether the included profiles
-have enough fields to have a chance at matching participants to existing
-contacts. It reviews the possible combinations of matching fields that
-would satisfy the matching rule in effect for the event, and it checks
-to see if any of those combinations is present among the fields in the
-included profiles. The warning "Duplicate Matching Impossible" appears
-if there's no way to match duplicate contacts using the rule, while the
-warning "Duplicate Contacts Possible" appears if enough fields are there
-but not all of them are required.
+Par défaut, CiviEvent utilise la règle *automatique* pour établir les correspondances. Lorsque vous configurez la page d'inscription en ligne d'un événement, vous pouvez choisir une règle différente de celle par défaut pour cet événement particulier.
 
-Registration permissions
+L'onglet *Inscription en ligne* vérifie si les profils inclus ont assez de champs pour permettre de faire des comparaisons et détecter des doublons. L'alerte *Détection de doublon impossible* apparait si la règle et les champs disponibles ne permettent pas de réaliser suffisamment de comparaisons, tandis que l'alerte *Détection de doublon possible* apparait si tous les champs sont là, y compris ceux qui ne sont pas nécessaires aux comparaisons.
+
+Permissions d'inscription
 -------------------------
 
-If you've enabled online registration for events on your site you need
-to review the Drupal user permissions to ensure that visitors are able
-to view event information and complete the registration forms. Navigate
-to **Administer > Users > Permissions**.
+Si vous avez activé l'inscription en ligne sur votre site web, vous aurez besoin de configurer vos permissions Drupal pour vous assurer que vos visiteurs puissent visualiser la page de l'événement et celle de son inscription. Allez à **Administrer** > **Utilisateurs et permissions** > **Permissions (contrôle d'accès)**, puis cliquez sur **Contrôle d'accès Drupal**.
 
-Most organizations allow anonymous users (users who have not logged in)
-to view and register for events. If you want to allow this, you must
-assign the following CiviCRM module permissions for the anonymous user
-role: 
+La plupart des organisations autorisent les visiteurs anonymes (ceux que ne se sont pas connectés) à voir et s'inscrire aux événements. Si vous voulez permettre cela, vous devez assigner au module CiviCRM les permissions suivantes pour le rôle *Utilisateur anonyme* :
 
--   access all custom data - required if you are collecting information
-    in custom fields from registrants
--   profile create - required if you've included any profiles in your
-    online registration forms
--   register for events
--   view event info
--   view event participants - required if you want to display a listing
-    of registered participants. 
+-   *CiviCRM: accéder à toutes les données personnalisées* - requis si vous collectez des informations depuis des champs personnalisés ;
+-   *CiviCRM: Création de profils* - requis si vous incluez un profil dans vos formulaires d'inscription ;
+-   *CiviEvent: s'inscrire à des événements*
+-   *CiviEvent: afficher les informations sur l'événement*
+-   *CiviEvent: afficher les participants à l'événement* - requis si vous souhaitez afficher une liste des participants inscrits à l'événement ;
 
-If you want to exclude anonymous visitors from viewing or registering
-online for events, assign these permissions to an authenticated user
-role.
+Si vous souhaitez exclure les utilisateurs anonymes, assignez ces permmissions au rôle *Utilisateurs authentifié*.
 
-CiviCRM has an additional permissioning system known as Access Control
-Lists (ACLs) ACLs allow you control access to CiviCRM data. Note that a
-CiviCRM ACL Role is not related to the Drupal Role. Refer to the
-*Permissions and access control* chapter for more information. 
+CiviCRM possède un système de permission supplémentaire connu sous le nom de *Access Control Lists (ACLs)*. ACLs vous permet de contrôler les accès aux données CiviCRM. Veuillez noter que ce système n'est pas lié aux rôles Drupal.
+Pour plus d'information, veuillez vous référer au chapitre [Autorisations et contrôle d'accès](../initial-set-up/permissions-and-access-control/).
 
-If you need to limit access control for specific events, you can use the
-Manage Access Control feature to assign access to specific groups of
-contacts.
+Si vous avez besoin de limiter les accès à des événements particuliers, vous pouvez utiliser la fonctionnalité *Gérer les contrôles d'accès* pour assigner les accès à des groupes spécifiques de contact.
 
 Testing the registration process
 --------------------------------
