@@ -1,336 +1,156 @@
-Online event registration
-=========================
+Inscription en ligne à un événement
+===================================
 
-The ability for end-users to register themselves for events is
-beneficial for both your constituents - they can register and a time and
-in a place that is convenient for them - and for your organization -
-reducing administration. This chapter details the steps involved in
-offering online registration for events.
+La possibilité pour les utilisateurs finaux de pouvoir s'enregistrer eux-même à des événements est bénéfique pour tout le monde : les participants peuvent s'inscrire au moment le plus pratique pour eux, et votre organisation économise du travail administratif. Ce chapitre détaille les étapes impliquées à la mise en oeuvre des inscriptions en ligne pour des événements.
 
-The standard flow for registering for an event is as follows:
+Le processus standard pour l'inscription en ligne à un événement est le suivant :
 
-![event_registrationflow_1](../img/CiviCRM-CiviEvent-event_registrationflow_1-en.gif "event_registrationflow_1")
+![event_registrationflow_1](../img/CiviCRM-CiviEvent-event_registrationflow_1-fr.png "event_registrationflow_1")
 
-Setting up online registration
-------------------------------
+Paramétrer l'inscription en ligne
+---------------------------------
 
-To offer online registration, check **Allow Online Registration** in the
-Online Registration step of event creation and use the options on this
-form to configure this feature.
+Pour afficher les paramètres, cochez **Autoriser l'inscription en ligne**.
 
-![image](../img/event_online_rego_part_1.PNG)
+![image](../img/event_online_rego_part_1.png)
 
-Define the text to be used as the **link** from the event information
-page to the registration form, and set the starting and ending dates for
-registration. The link text is used in the event information page, and
-is most commonly "Register Now" or similar. The start and end dates
-define when web site visitors may register for the event. The
-registration end date may be different from the start date of the event,
-as you may want to close registration in advance of the event in order
-to prepare name tags or perform other administrative functions.
+Confirmez ou modifiez le texte qui s'affichera en tant que lien vers la page d'inscription (par défaut, "S'incrire maintenant"), et indiquez les dates de début et de fin pour les inscriptions en ligne. Ces dernières définissent la période durant laquelle le formulaire d'inscription sera en ligne sur le site. Elle peut se terminer avant la date de l'événement lui-même, afin de vous laisser le temps de réaliser des tâches de préparation selon le nombre de participants.
 
-Enabling **Register multiple participants** lets individuals register as
-many people as they choose for the event and pay the fees with a single
-transaction. For example, an organisation may be sending multiple people
-to a conference, or an individual may bring their partner and wish to
-register and pay for both in a single process. By default, this option
-requires a different name and email address for each person registered.
+Activer **Inscrire plusieurs participants** permet l'inscription et le paiement pour plusieurs personnes sur une seule transaction. Par exemple, vous organisez une conférence, et des personnes souhaiteront inscrire également leur partenaire et payer pour les deux en un seul processus.
 
-Checking **same email address** provides the same capabilities, but
-without requiring distinct email addresses for each registrant. In
-either case, CiviCRM uses a separate contact record (an existing one if
-the contact is already in the system, otherwise a new one is created)
-for each individual registered. 
+Par défaut, cette option nécessite un nom et une adresse courriel différents pour chaque personne enregistrée. Cocher **Même adresse électronique ?** permet d'avoir une adresse commune. Dans les deux cas, CiviCRM utilise des enregistrements de contact distincts (soit existants, soit créés à la volée) pour chaque personne inscrite.
 
-Information on the **Duplicate matching rule** is provided in the
-*Contact matching and duplicate management* sub-section of this chapter
-(below). 
+La **Règle de dédoublement** est expliquée plus loin dans la sous-section [Correspondance de contact et gestion des doublons](#correspondance-de-contact-et-gestion-des-doublons) de ce chapitre.
 
+**Expiration des inscriptions en attente (en heure)** est le temps alloué aux participants pour confirmer / terminer leur inscription dont le statut est "en attente". Cela fonctionne avec la tâche programmée **Mettre à jour les statuts des participants** (voir **Administrer** > **Paramètres système** > **Travaux programmés**). Si l'un et l'autre sont activés, une inscription en attente doit être finalisée dans la période de temps spécifiée. Dans le cas contraire, l'inscription sera annulée et le participant notifié par courriel. Cette fonctionnalité est très utile lorsqu'elle est combinée avec les rappels automatiques pour gérer automatiquement les inscriptions *En attente de paiment*, si vous avez autorisé l'option de paiement sur votre formulaire d'inscription en ligne (cf le chapitre [Rappels programmés](../email/scheduled-reminders.md) de la section Courriel pour plus d'information).
 
-**Pending participant expiration (hours)** is the time for
-confirming/finishing registration by participants with any of the
-statuses classed as **Pending**. It works in conjunction with the
-scheduled job **Update Participant Statuses** (see **Administer >
-System Setting > Scheduled jobs**). If these are both set, pending
-registration must be finalized within the set time or the registration
-will be cancelled and the would-be registrant notified by email of the
-cancellation. This feature is very useful when combined with scheduled
-reminders for automatically managing **Pending from pay later**
-registrations if you have allowed that payment option on your online
-registration page. (See the *Email* section for more details on
-scheduled reminders)
+L'étape suivante consiste à définir le texte et les champs servant à collecter les informations, et qui seront affichés dans la page d'inscription en ligne.
 
-The next step is to define the text and the fields for collecting
-information that will be displayed on your online registration page.
+![image](../img/event_online_rego_part_2.png)
 
-![image](../img/event_online_rego_part_2.PNG)
+Le **Texte d'introduction** sera affiché en haut de la page, et le **Pied de page (texte)** en bas. Tous ou certains champs seront affichés entre les deux : profil, tarif, détail de la carte de crédit...
 
-The introductory text comes at the top of the page and the footer text
-at the bottom. In between will come some, or all, of: profile, fee
-selection, credit card details, additional profile(s) in that order.
+Collecter les informations sur les participants à l'aide des profils
+--------------------------------------------------------------------
 
-Collecting participant information with profiles
--------------------------------------------------
+La meilleure façon de collecter de l'information durant une inscription en ligne est d'inclure un ou plusieurs profils dans la configuration de votre événement. Vous pouvez en mettre un immédiatement après le message d'introduction, et un ou plusieurs en dessous des tarifs et des détails de paiement (des informations détaillées sont disponibles dans le chapitre [Profils](../organising-your-data/profiles.md) de la section *Organiser vos données*).
 
-The best way to collect information during online registration is to
-include one or more profiles in your event configuration.You can include
-one profile immediately after the introductory message and one or more
-profiles under any fees and payment details you need to collect. (If
-you are not sure what a profile is and why you would use them see the
-*Profiles* chapter of *Organising you data*.)
+Lorsque vous créez un formulaire d'inscription en ligne, le profil *Vos informations d'inscription* est sélectionné par défaut. Il consiste en trois champs : le prénom, le nom et l'adresse courriel. Toutefois, CiviCRM n'a besoin pour ses enregistrements de contact soit du prénom et nom, soit d'une adresse courriel. Vous pouvez donc modifier ce profil, ou en créer un nouveau requérant moins de champs. Si vous choisissez de ne pas collecter les adresses courriel, pensez à décocher l'option **Envoyer un courriel de confirmation ?** en bas.
 
-By default, when creating an online registration form the profile "Your
-Registration Info" will be selected as the 'top' profile. This consists
-of three fields: first name, last name and email address. However,
-CiviCRM only requires either first name and last name or email address
-for each contact. So you can modify 'Your Registration Info' or create a
-new profile with fewer fields. If you choose not to collect email
-addresses, be sure to uncheck the option "Send confirmation email?" at
-the bottom!
+ATTENTION : si vous modifiez un profil existant pendant le paramétrage de votre page d'inscription en ligne, le changement s'appliquera partout où ce profil est utilisé. Donc à moins qu'un profil existant ne corresponde *exactement* avec vos besoins, vous devriez plutôt faire la copie de l'un d'eux, le renommer, le modifier et enfin l'appliquer à votre page.
 
-WARNING: If you modify an existing profile whilst configuring your
-Online Registration page, the changes you make will apply everywhere
-that profile is being used. So unless an existing profile **exactly**
-matches your requirements you should copy the profile, then rename and
-edit the copy as required. 
+Une autre façon de faire est d'en créer un totalement nouveau, sans quitter la configuration de votre page d'inscription en ligne. L'interface *glisser-déposer* vous permet également de créer des champs personnalisés à inclure dans votre profil. Ces champs peuvent être créés pour tous ou certains types d'événements, et tous ou certains rôles de participants (cf. le chapitre [Données personnalisées](./custom-data-for-events.md) de cette section). 
 
-If the profile you require does not already exist, you can create it
-without leaving the Online Registration configuration page. The drag and
-drop profile interface also allows you to create custom fields to
-include in the profile if you have not already done so. Custom fields
-can be created for all events or all participants, or only specific
-Event Types or Participant Roles (see the chapter *Custom data on
-events* in this section for more details on where you should store what
-custom data).
 
 ![image](../img/Drag_and_drop_profile_for_event.PNG)
 
-Registration confirmation
+
+Confirmation d'inscription
 --------------------------
 
-Once you registration page is configured you need to enter the text to
-be displayed on the Confirmation page, Thank-you page, and emailed
-confirmations/receipts (if enabled). 
+Une fois votre page d'inscription configurée, vous aurez besoin d'entrer le texte à afficher sur la page de confirmation, la page de remerciement, et envoyer par courriel les confirmations et accusés de reception (si vous en avez activé l'option).
 
-For free events, the Confirmation step is skipped. For paid events the
-payment is processed between the Confirmation and Thank you pages. 
+Pour les événements gratuits, l'étape de confirmation est sautée. Pour les événements payants, le processus de paiement s'effectue entre la page de confirmation et celle de remerciement. 
 
-For most events you'll want to enable the Send Confirmation Email
-feature (see following screenshot). For paid events, the confirmation
-email also acts as a receipt. Make sure that the **Confirm From Email**
-address entered is a valid email account on your mail server. Add one or
-more staff emails (separating multiple email addresses with commas) to
-the **CC Confirmation To** field if you want real-time updates on who is
-registering for your event. 
+Pour la plupart des événements, il sera utile d'activer l'option du courriel de confirmation. Pour les événéments payants, ce courriel sert également de reçu. Assurez-vous que l'adresse **Courriel de l'expéditeur pour la confirmation** soit un compte courriel valide de votre serveur de messagerie. Ajoutez une ou plusieurs adresses dans le champ **CC confirmation à** si vous souhaitez informer en temps réel des membres de votre organisation sur les participants.
 
 ![OnlineRegEmail](../img/CiviCRM_update-CiviEvent-OnlineRegEmail-en.png "OnlineRegEmail")
 
-Please note that the contents of the **Text** field will be included in
-both TEXT and HTML versions of receipt emails so we do not recommend
-including HTML tags / formatting here.
+Veuillez noter que le contenu du champ **Texte** sera généré en texte brut ET en HTML. Nous ne recommandons donc pas d'y inclure des tags HTML de formatage.
 
-Optional event registration features
-------------------------------------
 
-The following features may be useful to enhance your online event
-registration process. 
+Fonctionnalités optionnelles d'inscription à un événement
+---------------------------------------------------------
 
-### Waitlists
+### Liste d'attente
 
-Your organization may have limits on attendance, such as a 25-person
-limit for a training workshop or a 200-person limit for a fund-raising
-dinner. CiviEvent lets you set the maximum number of people allowed to
-register for your event. When registrations reach that number, CiviEvent
-will not allow other people to register, but will instead send an
-automatic message saying, "The event is currently full." This message
-can be customized by the organization when creating a new event, and you
-can let people add themselves on a first-come-first-served basis to a
-waitlist.
+Un événement peut accueillir un nombre limité de participants (par exemple, 25 personnes pour un atelier). CiviEvent vous permet de configurer un nombre maximum de personnes autorisées à s'inscrire à un événement. Lorsque ce nombre est atteint, CiviEvent désactivera les inscriptions mais enverra un message automatique disant "L'événement est actuellement complet". Vou pouvez personnaliser ce message, et configurer une liste d'attente de type "premier arrivé, premier servi".
 
-The waiting list works in the following way:
+Cette liste fonctionne de la manière suivante :
 
--   As space becomes available on your event, for example, if one or
-    more people cancels, then On waitlist participants will be moved to
-    'Pending from waitlist' status and will be sent an email with a link
-    to complete their registration (including paying event fees - if
-    any).
--   People will remain pending for a certain amount of time defined in
-    Pending participant expiration (hours). This gives them a window of
-    opportunity to register. 
-    You can set the amount of time, measured in hours, that you set on
-    the **Online registration** tab under Pending participant expiration
-    hours. If you want, you can set this to 0 for no limit.
--   After this period of time, they will be moved to expired and other
-    people on the waitlist will be given the opportunity to register.
+-   Quand une place se libère (par exemple lorsqu'une personne annule son inscription), la première personne en liste d'attente aura le statut changé en *En attente (depuis la liste d'attente)* et un courriel automatique lui sera envoyé avec un lien lui permettant de compléter son inscription (y compris la méthode de paiement si applicable).
+-   Cette personne restera avec ce statut pendant le temps défini dans la configuration (voir plus haut la rubrique "Paramétrer l'inscription en ligne"). Cela correspond à une fenêtre durant laquelle elle aura l'opportunité de s'inscrire. Une valeur à 0 correspond à une période illimité.
+-   À l'expiration de la période, le statut passera à *Expiré* et le processus reprendra pour la personne suivante de la liste d'attente.
 
-If you'd like to enable the Waitlist feature, you must first enable the
-related participant statuses **On waitlist** and **Pending from
-waitlist**. You can do this in **Administer > CiviEvent > Participant
-statuses**. You can then check the **Offer Waitlist** checkbox on
-the **Info and settings** tab, and set the message you want displayed on
-the event information page when the event is full.
+Si vous souhaitez utiliser la fonctionnalité de liste d'attente, vous devez :
+-   Activer (pré-requis) les status des participants *Sur liste d'attente* et *En attente (depuis la liste d'attente)*. Vous pouvez le faire en allant à **Administrer** > **CiviEvent** > **Statut de participant** ;
+-   Dans la page de configuration de l'événement, onglet *Infos et paramètres*; les options **Proposer une liste d'attente** et le texte du message seront disponibles. Activez-les et modifiez le texte le cas échéant ; 
 
 ![EventInfo2](../img/CiviCRM_update-CiviEvent-EventInfo2-en.png "EventInfo2")
 
-Note that in order for the status processing to happen, you need to have
-the **Update Participant Statuses** scheduled job
-running (see **Administer > System Setting > Scheduled jobs**).
+Notez que le processus ne peut fonctionner que si la tâche programmée *Mettre à jour les statuts des participants* est en cours d'exécution (voir **Administrer** > **Paramètres système** > **Travaux programmés**).
 
-### Participant approval
+### Approbation d'inscription
 
-Many events are open to everyone, but there may be times when your
-organization invites only specific people to the event. For example, you
-could invite volunteers who have donated 100 or more volunteer hours to
-an appreciation dinner. The people invited may talk about the event to
-their friends, and possibly forward the information. With CiviEvent, you
-can check who has registered and approve only the people invited.
+Dans certains cas, les événements ne seront ouverts que pour des personnes particulières (par exemple pour les donateurs de sommes importantes). Si tout le monde peut accéder à la page d'inscription, CiviEvent permet néanmoins aux organisateurs de vérifier la liste des personnes qui se sont "pré-inscrites" et de valider définitivement leur participation.
 
-If you'd like to enable the 'Participant approval' feature, you must
-first enable the related participant statuses Awaiting approval and
-pending from approval. This is similar to what you do for waiting lists
-and you can do it in **Administer > CiviEvent > Participant
-statuses**. You can then check the **Require participant
-approval** checkbox on the **Online registration **tab, and set the
-message you want displayed in the approval message. You can also limit
-the amount of time participants have to complete their registration
-after approval by entering the time in hours in the Pending participant
-expiration field. For example, if you want to give participants 3 days
-to complete their registration, enter "72" in that field. 
+Pour activer cette fonctionnalité, vous devez :
+-   Activer (pré-requis) les status des participants *En attente de validation*, *En instance de validation* et *Rejeté*. Vous pouvez le faire en allant à **Administrer** > **CiviEvent** > **Statut de participant** ;
+-   Dans la page de configuration de l'événement, onglet *Inscription en ligne*; les options **Requiert la validation de l'inscription** et **Message de validation** seront disponbiles pour activation et configuration.
 
-Now, when a person registers for the event, they will get a reply that
-says, "Your registration has been submitted. Once your registration has
-been reviewed, you will receive an email with a link to a web page where
-you can complete the registration process." This reply can be customized
-to your organisation's needs.
+Dorénavant, lorsqu'une personne s'enregistrera pour l'événément, elle recevra une réponse disant "Votre inscription a été transmise. Quand votre demande d'inscription aura été vérifiée, vous recevrez un courriel contenant un lien vers la page où vous pourrez terminer votre inscription". Cette réponse peut être personnalisée selon vos besoins.
 
-Participants will be placed in 'Awaiting Approval' status. You can
-review and approve participants from 'Find Participants' - select the
-'Change Participant Status' task. Approved participants will move to
-'Pending from approval' status, and will be sent an email with a link to
-complete their registration (including paying event fees - if any)
+Le statut de la personne sera "En attente d'approbation". Vous pouvez parcourir et confirmer les demandes de participation en allant à **Événements** > **Rechercher des participants**. Sélectionnez la tâche *Changer le statut des participants*. Le statut des participants validés passera en « En attente suite à validation », et les participants recevront un courriel contenant un lien pour compléter leur inscription (y compris le paiement des frais d'inscription à l'événement - s'il y en a). 
 
-Note that in order for the status processing to happen, you need to have
-the **Update Participant Statuses** scheduled job running
-(see **Administer > System Setting > Scheduled jobs**).
+Notez que le processus ne peut fonctionner que si la tâche programmée *Mettre à jour les statuts des participants* est en cours d'exécution (voir **Administrer** > **Paramètres système** > **Travaux programmés**).
 
-### Personal Campaign Pages
+### Pages personnelles de campagne
 
-If you enable Personal Campaign Pages (PCPs), you offer completed event
-registrants the ability to create and customize a page of their own to
-either:
+Si vous avez activé les pages personnelles de campagne, vous offrez la possiblité aux personnes inscrites à un événement la possiblité de créer et de personnaliser une page qui leur est propre pour :
+-   soit promouvoir l'événement pour lequel elles sont inscrites ;
+-   soit promouvoir la page d'inscription en ligne.
 
--   promote the event for which they registered
+Pour plus d'information, veuillez vous référer au chapitre [Pages personnelles de campagne](../contributions/personal-campaign-pages.md) de la section *Contributions*.
 
--   promote an online contribution page
+Il s'agisssait de la dernière étape de création d'un événement. Clqiuez sur **Enregistrer et terminer**.
 
-For more information see **Contributions > Personal Campaign Pages** in
-this book. This is the last step in creating an event. Click **Save and
-Done.**
 
-Contact matching and duplicate management 
-------------------------------------------
+Correspondance de contact et gestion des doublons 
+-------------------------------------------------
 
-Whenever we allow people to interact with our database from 'the
-outside' we run the risk of creating duplicate contacts. There are
-various ways to deal with this. For example, some websites require you
-to be logged in at all times when doing important things and we can do
-the same for CiviCRM using permissions (just take away the register for
-events permission from anonymous users and give it to logged in users,
-or a specific role). Depending on the type of event that you are
-running, this might not be a good idea. Lets say you are running a
-conference, or AGM and you want as many people as possible to register.
-Requiring them to log in wil decrease the amount of registrations.
+À partir du moment où des personnes interagissent avec la base de donnée CiviCRM depuis l'extérieur (par l'intermédiaire des auto-inscription en ligne), nous courons le risque de créer des doublons de contact. Il existe plusieurs possibilité pour gérer cela. Par exemple, nous pouvons afficher le formulaire d'inscription en ligne uniquement pour les personnnes déjà authentifée sur le site web de votre organisation, en jouant sur les permissions. Mais cela n'est peut-être pas une bonne idée si vous souhaitez ouvrir un événement au grand public, et non pas uniquement aux personnes enregistrées dans votre base.
 
-Lets say, we don't require people to log in to register for an event.
-Consider the following situation. James Martin registers for an event.
-James Martin is already in our database. How do we match up the James
-who is registering with the one that is in the database. What about if
-there are two James Martins in our database. One that lives in London,
-and one that lives in Paris. How do we know that we have found the right
-one? The answer is duplicate rules.
+Nous avons vu plus qu'une personne inscrite à un événement était automatiquement enregistrée dans la base des contacts si celle-ci n'existait pas encore. Mais que se passe-t-il si, par exemple, Dominique Snow vivant à Londres s'inscrit alors que nous avons un contact Dominique Snow vivant à Paris ? C'est ici que les règles de dédoublement entre en jeu.
 
-You can read more general and more detailed information about duplicates
-and merging in the *Deduping and merging* chapter and we recommend that
-you get familiar with that chapter at some point. This section just
-covers contact matching and duplicate management in the context of
-CiviEvent.
+Vous pouvez en apprendre davantage sur les règles de dédoublement dans le chapitre [Dédoublonner et fusionner](../common-workflows/deduping-and-merging.md). Ici, nous ne couvrirons le sujet que dans le contexte de CiviEvent.
 
 ![image](../img/event-duplicate-matching.png)
 
-By default, CiviEvent uses the Unsupervised rule to do matching. When
-you configure an event for online registration, you can override the
-default by selecting a different duplicate matching rule for matching
-participants for this particular event. The rule you select takes effect
-for the primary participant and any additional participants. 
- 
-The Online Registration tab checks for whether the included profiles
-have enough fields to have a chance at matching participants to existing
-contacts. It reviews the possible combinations of matching fields that
-would satisfy the matching rule in effect for the event, and it checks
-to see if any of those combinations is present among the fields in the
-included profiles. The warning "Duplicate Matching Impossible" appears
-if there's no way to match duplicate contacts using the rule, while the
-warning "Duplicate Contacts Possible" appears if enough fields are there
-but not all of them are required.
+Par défaut, CiviEvent utilise la règle *automatique* pour établir les correspondances. Lorsque vous configurez la page d'inscription en ligne d'un événement, vous pouvez choisir une règle différente de celle par défaut pour cet événement particulier.
 
-Registration permissions
+L'onglet *Inscription en ligne* vérifie si les profils inclus ont assez de champs pour permettre de faire des comparaisons et détecter des doublons. L'alerte *Détection de doublon impossible* apparait si la règle et les champs disponibles ne permettent pas de réaliser suffisamment de comparaisons, tandis que l'alerte *Détection de doublon possible* apparait si tous les champs sont là, y compris ceux qui ne sont pas nécessaires aux comparaisons.
+
+Permissions d'inscription
 -------------------------
 
-If you've enabled online registration for events on your site you need
-to review the Drupal user permissions to ensure that visitors are able
-to view event information and complete the registration forms. Navigate
-to **Administer > Users > Permissions**.
+Si vous avez activé l'inscription en ligne sur votre site web, vous aurez besoin de configurer vos permissions Drupal pour vous assurer que vos visiteurs puissent visualiser la page de l'événement et celle de son inscription. Allez à **Administrer** > **Utilisateurs et permissions** > **Permissions (contrôle d'accès)**, puis cliquez sur **Contrôle d'accès Drupal**.
 
-Most organizations allow anonymous users (users who have not logged in)
-to view and register for events. If you want to allow this, you must
-assign the following CiviCRM module permissions for the anonymous user
-role: 
+La plupart des organisations autorisent les visiteurs anonymes (ceux que ne se sont pas connectés) à voir et s'inscrire aux événements. Si vous voulez permettre cela, vous devez assigner au module CiviCRM les permissions suivantes pour le rôle *Utilisateur anonyme* :
 
--   access all custom data - required if you are collecting information
-    in custom fields from registrants
--   profile create - required if you've included any profiles in your
-    online registration forms
--   register for events
--   view event info
--   view event participants - required if you want to display a listing
-    of registered participants. 
+-   *CiviCRM: accéder à toutes les données personnalisées* - requis si vous collectez des informations depuis des champs personnalisés ;
+-   *CiviCRM: Création de profils* - requis si vous incluez un profil dans vos formulaires d'inscription ;
+-   *CiviEvent: s'inscrire à des événements*
+-   *CiviEvent: afficher les informations sur l'événement*
+-   *CiviEvent: afficher les participants à l'événement* - requis si vous souhaitez afficher une liste des participants inscrits à l'événement ;
 
-If you want to exclude anonymous visitors from viewing or registering
-online for events, assign these permissions to an authenticated user
-role.
+Si vous souhaitez exclure les utilisateurs anonymes, assignez ces permmissions au rôle *Utilisateurs authentifié*.
 
-CiviCRM has an additional permissioning system known as Access Control
-Lists (ACLs) ACLs allow you control access to CiviCRM data. Note that a
-CiviCRM ACL Role is not related to the Drupal Role. Refer to the
-*Permissions and access control* chapter for more information. 
+CiviCRM possède un système de permission supplémentaire connu sous le nom de *Access Control Lists (ACLs)*. ACLs vous permet de contrôler les accès aux données CiviCRM. Veuillez noter que ce système n'est pas lié aux rôles Drupal.
+Pour plus d'information, veuillez vous référer au chapitre [Autorisations et contrôle d'accès](../initial-set-up/permissions-and-access-control.md).
 
-If you need to limit access control for specific events, you can use the
-Manage Access Control feature to assign access to specific groups of
-contacts.
+Si vous avez besoin de limiter les accès à des événements particuliers, vous pouvez utiliser la fonctionnalité *Gérer les contrôles d'accès* pour assigner les accès à des groupes spécifiques de contact.
 
-Testing the registration process
---------------------------------
+Tester le processus d'inscription
+---------------------------------
 
-Before revealing your event to the public, you should always test the
-event registration process. This can be done as follows:
+Avant de rendre l'événement disponible au public, vous devriez toujours tester son processus d'inscription :
 
-1.  Navigate to **Events > Manage Events**.
-2.  From Event Links, select **Test-drive** to test the registration
-    page. Test-drive mode will use the sandbox options for your payment
-    processor, if available, and will create a registrant record with a
-    test indication so that it can be reviewed and easily removed.
-3.  Fill out the registration form and complete the registration
-    process.
-4.  In order to find the new test participant record, navigate
-    to **Events > Find Participants**.
-5.  In the search criteria, check the box **Find Test Participants**.
-6.  If you need to adjust the event settings, navigate to **Events > Manage Events** and click the **Configure** link for this event.
-7.  If you discover elements that you need to edit and adjust,
-    select **Configure** to return to the list of event setting pages.
-8.  If you have events where anonymous users register for events, you
-    should also test the registration when not logged in. Refer to the
-    Event Permissions information later in this chapter for details.
+1.  Allez à **Événements** > **Gestion des événements** ;
+2.  Depuis **Lien événement** de l'événement correspondant, sélectionnez **inscription (mode test)**. Ce mode utilisera les options bac à sable pour le processeur de paiement, si disponible, et créera un enregistrement d'inscription avec une indication de test. Cet enregistrement pourra donc facilement être retrouvé et supprimé ;
+3.  Allez jusqu'au bout du processus d'inscription ;
+4.  Afin de trouver l'enregistrement du participant du test, allez à **Événements** > **Rechercher des participants** ;
+5.  Dans le critère de recherche, cochez la boite **Trouver les participants de test**
+6.  Si vous avez besoin d'ajuster les paramètres de l'événement, retournez à **Événements** > **Gestion des événements** et cliquez sur **Configurer** de l'enregistrement correspondant.
+7.  Si votre événement permet l'inscription de visiteurs anonymes, vous devriez également tester une inscription lorsque vous n'êtes pas authentifié.
 
-Once you are satisfied with the event information and registration form,
-it's time to display it on your website. Below are details of how to do
-this.
+Une fois validé tout cela, il est temps d'arfficher l'événement sur votre site web. Le chapitre [Intégrer un événement sur votre site](./integrating-events-with-your-website.md) vous explique comment faire.

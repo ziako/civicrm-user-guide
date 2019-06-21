@@ -79,7 +79,7 @@ pages:
     - "Qu'est-ce que CiviEvent?": 'events/what-is-civievent.md'
     - "Planification et gestion des événements": 'events/event-planning-and-management.md'
     - 'Créer un évènement': 'events/creating-an-event.md'
-    - 'Online event registration': 'events/online-event-registration.md'
+    - 'Inscription en ligne à un événement': 'events/online-event-registration.md'
     - "Intégrer un évènement sur votre site": 'events/integrating-events-with-your-website.md'
     - 'Manual event registration': 'events/manual-event-registration.md'
     - 'Keeping track of events and participants': 'events/keeping-track-of-events-and-participants.md'

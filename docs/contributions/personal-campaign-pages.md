@@ -1,5 +1,5 @@
-Pages de campagne personnelles
-=======================
+Pages personnelles de campagne
+==============================
 
 Les fonctionnalités standards de CiviCRM  permettent à vos utilisateurs de créer leurs propres pages de collecte de fonds et ensuite de solliciter le public pour financer leur cause. Ces pages sont appelées pages de campagne personnelles ou «PCP».
 
