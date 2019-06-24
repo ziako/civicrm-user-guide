@@ -1,48 +1,23 @@
-# Integrating with Drupal
+# Integration avec Drupal
 
-Of all the three CMS that integrate with CiviCRM, Drupal has received
-the most attention, and offers the most options when it comes to
-integration. This is in part due to the fact that the Drupal community
-is largely a developer community.
+Des trois CMS pouvant intégrer CiviCRM, Drupal est celui ayant reçu le plus d'attention, et offrant le plus d'options d'intégration. Cela est dû en partie parce que la communauté Drupal est principalement une communauté de développeurs.
 
-When thinking about website integration with Drupal, it is important to
-understand the concept of **Drupal modules**. It might help you to
-think of a module as an application which provides a certain bit of
-functionality. For example the *calendar* module allows you to display
-calendars on your website. The Drupal distribution of CiviCRM comes with a
-number of Drupal modules which give you the ability to integrate CiviCRM with
-Drupal in various different ways.
+Lorsque l'on pense à l'intégration à un site web avec Drupal, il est important de comprendre le concept de *modules Drupal*. Un module peut être considéré comme une application fournissant au CMS des fonctionnalités supplémentaires. Par exemple, le module *Calendar* vous permet d'afficher des calendriers sur votre site web. La distributation Drupal de CiviCRM contient plusieurs modules Drupal facilitant son intégration, et ce de différentes façons.
 
+## Rôles et permissions Drupal
 
-## Drupal Roles and permissions
+Lorsque vous créez un nouvel *Utilisateur* sur un site Drupal et que CiviCRM y est intégré, alors ce dernier créera automatiquement un enregistrement *Contact* lui correspondant. *Utilisateur* et *Contact* possède tous deux une identification / numéro d'index différents.
 
-When you create a new Drupal site **User** and CiviCRM is installed a
-corresponding CiviCRM **Contact** is also created. Both users and
-contacts have a separate identification or index number.
+*Voir également le chapitre [Autorisations et contrôle d'accès](../initial-set-up/permissions-and-access-control.md) de la section Configuration intiale pour une discussion générale sur le contrôle d'accès.*
 
-*See also the permissions and access control chapter in initial set up
-for a general discussion of access control.*
+Votre site Drupal vous permet de créer différents *Rôles*. Ces rôles sont assignés à des utilisateurs du site, et chaque rôle contient des *permissions* qui vous permettent de réaliser une certaine série de tâches (voir, modifier, supprimer, et administrer des contacts) ou accéder à un certain jeu d'information (contacts CiviCRM, CiviMail, CiviEvents, Drupal USers, etc.)
 
-Your Drupal website allows you to create a series of **Roles.** Your
-website administrator give roles to site users and grant each role
-the **permission** to perform a certain series of tasks (view, edit,
-delete, and administer contacts) or access a certain set of information
-(CiviCRM Contacts, CiviMail, CiviEvents, Drupal Users, specific content
-types, etc.)
+Pour plus d'information sur les rôles Drupal, merci de lire la documentation disponible sur drupal.org :
 
-For more information on Drupal Roles, please read the documentation on
-Drupal Roles at Drupal.org:
+-   Utilisateur : paramètres d'accès et de gestion [http://drupal.org/documentation/modules/user](http://drupal.org/documentation/modules/user)
+-   Gérer les contrôles d'accès avec les rôles et les permissions Drupal [http://drupal.org/node/22275](http://drupal.org/node/22275)
 
--   User: Access and management
-    settings [http://drupal.org/documentation/modules/user](http://drupal.org/documentation/modules/user)
--   Managing Access Control with Permissions and Drupal Roles
-    [http://drupal.org/node/22275](http://drupal.org/node/22275)
-
-Drupal permission settings allow you to decide what tasks a
-specific **Role** can perform or what information a certain **Role** has
-access to. Drupal permissions determine how much access a certain type
-of user has to configure modules, view, create, edit, or change types of
-content, users, or CiviCRM Contact information.
+Les *permissions* Drupal vous permet de définir quelles tâches un *rôle* particulier de Drupal peut executer, et à quelles informations il a accès. Les *permissions* déterminent également le niveau d'accès qu'un certain type d'utilisateur a sur la configuration des modules, l'affichage, l'édition, les utilisateurs ou les informations de contact CiviCRM.
 
 For more information on Drupal Permission settings, please read the
 documentation on Drupal Permissions at Drupal.org:
