@@ -19,40 +19,25 @@ Pour plus d'information sur les rôles Drupal, merci de lire la documentation di
 
 Les *permissions* Drupal vous permet de définir quelles tâches un *rôle* particulier de Drupal peut executer, et à quelles informations il a accès. Les *permissions* déterminent également le niveau d'accès qu'un certain type d'utilisateur a sur la configuration des modules, l'affichage, l'édition, les utilisateurs ou les informations de contact CiviCRM.
 
-For more information on Drupal Permission settings, please read the
-documentation on Drupal Permissions at Drupal.org:
+Pour plus d'information sur le paramétrage des permissions Drupal, veuillez lire la documentation sur drupal.org :
 
--   User: Access and management settings
-   [http://drupal.org/documentation/modules/user](http://drupal.org/documentation/modules/user)
+-   Associer des permissions et des utilisateurs à des rôles [http://drupal.org/node/22278](http://drupal.org/node/22278)
 
--   Assigning permissions and users to
-    roles [http://drupal.org/node/22278](http://drupal.org/node/22278)
+-   Ajuster les permissions après l'ajout d'un module [http://drupal.org/node/22279](http://drupal.org/node/22279)
+-   Références permissions [http://drupal.org/node/132202](http://drupal.org/node/132202)
+-   Visualiser les permissions de module [http://drupal.org/node/1089746](http://drupal.org/node/1089746)
 
--   Adjusting permissions after adding
-    modules [http://drupal.org/node/22279](http://drupal.org/node/22279)
--   Permissions
-    reference [http://drupal.org/node/132202](http://drupal.org/node/132202)
--   Views module
-    permissions [http://drupal.org/node/1089746](http://drupal.org/node/1089746)
 
-Drupal roles are global and will override relevant access controls (see
-chapter Initial Setup> Permissions and Access Control) setup in
-CiviCRM. For example you can setup Access Control in CiviCRM to restrict
-access to contacts but if the Drupal permission 'Access All Contacts' is
-set anyone with that role will be able to see all contacts regardless.
+Les rôles Drupal sont globaux et écraseront les contrôles d'accès (voir le chapitre [Autorisations et contrôle d'accès](../initial-set-up/permissions-and-access-control.md) dans la section *Configuration initiale*) définis dans CiviCRM.
+Par exemple, si vous définissez un contrôle d'accès pour limiter l'accès à certains contacts mais qu'un rôle Drupal possède la permission *Accéder à tous les contacts*, alors toute personne associée à ce rôle pourra voir l'ensemble des contacts.
 
-Drupal Taxonomies, Content Access, or other Role-based User Access Modules
----------------------------------------------------------------------------
 
-There are several Drupal Modules that determine what
-Drupal **Roles** have access to which types of content in your Drupal
-website. This can be based on Drupal taxonomies, by selecting access to
-specific nodes, settings on a specific views, pages, or panels, or based
-on certain contexts or rules. A few of the most common modules used for
-controlling access to content or include options for controlling content
-based on Drupal **Roles** are:
+Taxinomies Drupal, accès au contenu ou tout autre module d'accès basé sur un rôle utilisateur
+---------------------------------------------------------------------------------------------
 
--   Views [http://drupal.org/project/views](http://drupal.org/project/views)
+Il existe plusieurs modules Drupal pouvant déterminer quel rôle Drupal a accès à un certain type de contenu dans votre site web. Cela peut être basé sur les taxinomies, en sélectinnant un accès à des noeux spécifiques, des paramètres sur des vues spécifiques, pages ou paneaux, ou basé sur un certain contexte ou règle. Voici ci-dessous quelques uns de ces modules :
+
+-   Views [https://www.drupal.org/project/views](https://www.drupal.org/project/views)
 -   Panels [http://drupal.org/project/panels](http://drupal.org/project/panels)
 -   Chaos Tools Suite and Page
     Manager [http://drupal.org/project/ctools](http://drupal.org/project/ctools)
@@ -62,15 +47,10 @@ based on Drupal **Roles** are:
 -   Taxonomy Access
     Control [http://drupal.org/project/taxonomy_access](http://drupal.org/project/taxonomy_access)
 
-Drupal Views
---------------
+Vues Drupal
+-----------
 
-[Views](http://drupal.org/project/views) is a powerful Drupal module
-that allows you to display website content e.g. a list of latest news
-for the home page. CiviCRM integrates with Drupal Views and allows
-CiviCRM data to be shown on your website. For instance, if you wanted to
-create a page called 'Partner Organizations' and display it publicly you
-could:
+[Views](https://www.drupal.org/project/views) est un puissant module Drupal vous permettant d'afficher du contenu de site web comme, par exemple, les dernières nouvelles de votre page d'acceuil. CiciCRM intégré avec ce module permet d'afficher les données CiviCRM sur le site web. Par exemple, si vous souhaitez créer une page appelée *Organisations partenaires* et que vous souhaitez l'afficher au grand public, vous pourriez utiliser la procédure suivante :
 
 1. Select criteria for what Contact data will be displayed such as:
  * Organization contacts only
