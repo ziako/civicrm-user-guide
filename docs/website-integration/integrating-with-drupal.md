@@ -8,7 +8,7 @@ Lorsque l'on pense à l'intégration à un site web avec Drupal, il est importan
 
 Lorsque vous créez un nouvel *Utilisateur* sur un site Drupal et que CiviCRM y est intégré, alors ce dernier créera automatiquement un enregistrement *Contact* lui correspondant. *Utilisateur* et *Contact* possède tous deux une identification / numéro d'index différents.
 
-*Voir également le chapitre [Autorisations et contrôle d'accès](../initial-set-up/permissions-and-access-control.md) de la section Configuration intiale pour une discussion générale sur le contrôle d'accès.*
+*Voir également le chapitre [Autorisations et contrôle d'accès](../initial-set-up/permissions-and-access-control.md) de la section* Configuration initiale *pour une discussion générale sur le contrôle d'accès.*
 
 Votre site Drupal vous permet de créer différents *Rôles*. Ces rôles sont assignés à des utilisateurs du site, et chaque rôle contient des *permissions* qui vous permettent de réaliser une certaine série de tâches (voir, modifier, supprimer, et administrer des contacts) ou accéder à un certain jeu d'information (contacts CiviCRM, CiviMail, CiviEvents, Drupal USers, etc.)
 
@@ -52,72 +52,49 @@ Vues Drupal
 
 [Views](https://www.drupal.org/project/views) est un puissant module Drupal vous permettant d'afficher du contenu de site web comme, par exemple, les dernières nouvelles de votre page d'acceuil. CiciCRM intégré avec ce module permet d'afficher les données CiviCRM sur le site web. Par exemple, si vous souhaitez créer une page appelée *Organisations partenaires* et que vous souhaitez l'afficher au grand public, vous pourriez utiliser la procédure suivante :
 
-1. Select criteria for what Contact data will be displayed such as:
- * Organization contacts only
- * That are tagged 'Partner' in CiviCRM
- * That have a membership of status 'New' or 'Current'
-2. Choose which data will be shown such as:
-  * Organization name
-  * State/Province
-  * Website
-  * Phone number
-3. Choose to show the data in either table or paragraph format
-4. Allow the public to filter the results themselves by State/Province
+1. Sélectionnez le critère déterminant le jeu de contacts à prendre en compte, tel que :
+   * Contacts de type *Organisation* uniquement ;
+   * Ceux tagués "Partenaire" dans CiviCRM ;
+   * Ceux ayant un statut d'adhésion *Nouveau* ou *En cours*.
+2. Choisissez quelles données seront affichées, telles que :
+   * Nom de l'organisation ;
+   * Région ;
+   * Site web ;
+   * Numéro de téléphone.
+3. Choisissez le format d'affichage (table ou paragraphe) ;
+4. Autorisez le public à filtrer le résultat, par exemple par région.
 
-This is just a simple example, the possibilities of Drupal Views and
-CiviCRM are far reaching.
+Il s'agit ici d'un simple exemple, les possibilités de jouer avec les vues Drupal et les données CiviCRM étant bien plus vastes.
 
 ### Configuration
 
-If you have your Drupal and CiviCRM in separate databases adding CiviCRM
-support to Views takes a small bit of configuration. Views must be told
-where to look for CiviCRM data. **Administer > System
-Settings > CMS Database Integration** shows some code that must be
-copied and pasted into the Drupal *settings.php* file after (but not
-replacing) the existing database connection code. If you have trouble
-consider asking for help in
-the [forums](http://forum.civicrm.org/) or [hiring a
-consultant](http://civicrm.org/what/experts). If you are using Custom
-Data sets in CiviCRM, anytime you add a new data **set** (not just a
-field) you must repeat this process.
+Si vos bases de données Drupal et CiviCRM sont distinctes, ajouter le support CiviCRM au module *Vues* requiert un brin de configuration. Il s'agit d'indiquer aux vues où trouver les données CiviCRM.
+Allez à **Administrer** > **Paramètres système** > **Intégration à la base de donnée du CMS**. Vous pourrez visualiser les lignes de code à recopier après le code du fichier *settings.php* de Drupal. En cas de problème, vous pouvez demander de l'aide dans le [forum](http://forum.civicrm.org/) or [engager un consultant](http://civicrm.org/what/experts). Si vous utilisez des jeux de données personnalisées, et à chaque fois que vous en ajouterez, vous devrez répéter le processus.
 
-### Creating Views Using CiviCRM Data
+### Créer des vues utilisant des données CiviCRM
 
-Views are located in the **Structure** section of the Drupal
-administrative menu. When you create a View, give it a name and select
-what kind of data you wish to show.
+Les vues font partie de la section **Structure** du menu d'administration Drupal. Lorsque vous créez une vue, nommez-là et sélectionnez le type de données que vous souhaitez afficher.
 
-Generally speaking if your view is focused on Contacts (which most are)
-you will select Show: CiviCRM Contacts. If you wish to display details
-about other CiviCRM data such as events, relationships, contributions or
-activities there are additional options that might provide more data
-fields for those types.
+De façon générale, si votre vue concerne des contacts, vous sélectionnerez Afficher: Contacts CiviCRM. Si vous souhaitez afficher d'autres détails comme des événements, des relations, des contributions ou des activités, il existe des options vous permettant d'enrichir votre vue.
 
 ![image](../img/Views-CiviCRM-Partner-1.png)
 
-After the View is created, edit the fields, filters, display and other
-configurations to show the data exactly how you'd prefer. Views does
-take some experimentation and/or training to get it right. Feel free to
-ask questions on the [forums](http://forum.civicrm.org/) or [hire a
-consultant](http://civicrm.org/what/experts) if you become stuck.
+Quand la vue est créée, ajustez les champs, filtres, affichage et autres configurations pour adapter la page à vos besoins.
 
-![image](../img/Views-CiviCRM-Partner-3.png)  
+![image](../img/Views-CiviCRM-Partner-3.png "sample configuration using Views 3 in a Drupal 7 environment")  
 
-This is a sample configuration using Views 3 in a Drupal 7 environment.
-Your View will probably be slightly different, but this gives you some
-examples to get started with.
 
-### Other Things Views and CiviCRM Can Do
+### Ce que peuvent également faire les vues et CiviCRM
 
--   Lists of upcoming events
--   Building reports on contributions, activities or event registrants
--   Honor roll listing of recent donors
--   Staff, board of directors or committee lists
--   A list of current members
--   ...and more!
+-   Liste des événements à venir ;
+-   Construction de rapport sur les contributions, activités ou participants ;
+-   Liste des donateurs les plus récents ;
+-   Listes de comité, conseil d'administration, bureau... ;
+-   Liste des membres de votre organisation ;
+-   et plus encore !
 
-Webform CiviCRM Integration
----------------------------
+Intégration du Webform CiviCRM 
+------------------------------
 
 Just as Views can *output* data in virtually any way imaginable, this
 module allows you to have data *input* exactly the way you want. The
