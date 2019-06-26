@@ -1,4 +1,4 @@
-# Integration avec Drupal
+# Intégration avec Drupal
 
 Des trois CMS pouvant intégrer CiviCRM, Drupal est celui ayant reçu le plus d'attention, et offrant le plus d'options d'intégration. Cela est dû en partie parce que la communauté Drupal est principalement une communauté de développeurs.
 
@@ -96,61 +96,26 @@ Quand la vue est créée, ajustez les champs, filtres, affichage et autres confi
 Intégration du Webform CiviCRM 
 ------------------------------
 
-Just as Views can *output* data in virtually any way imaginable, this
-module allows you to have data *input* exactly the way you want. The
-webform CiviCRM integration is extensive and offers many different
-options for things that can happen as part of the form submission.
+Tout comme les vues peuvent *sortir* les données de multiples façons, le module Webform peut les faire *entrer* exactement de la façon que vous souhaitez : vous pouvez créer et mettre à jour des contacts, des inscriptions à des groupes, à des étiquettes, des champs personnalisés et effectuer des paiement en ligne. Le module Webform offre une souplesse d'utilisation encore plus importante que l'utilisation des profils CiviCRM.
 
-You can create and update contacts, group subscriptions, tags,
-relationships, cases, custom data, activities, memberships, event
-participants and take payments online via webforms. They can offer
-greater flexibility when compared to standard CiviCRM Profiles.
-
-For example, you can create a form which adds a family with all
-relationships / you can add a new member form with a multi-page form
-which includes question logic / you can create a new activity when
-someone submits the form. Webform CiviCRM has extensive online
-documentation which you should read to make the most out of its
-functionality.
-
-For more information see:
-[http://wiki.civicrm.org/confluence/display/CRMDOC/Webform+CiviCRM+Integration](http://wiki.civicrm.org/confluence/display/CRMDOC/Webform+CiviCRM+Integration)
+Par exemple, vous pouvez :
+  - créer un formulaire pour ajouter dans vos contacts une famille complète avec toutes les relations définies ;
+  - créer une nouvelle activité lorsqu'une personne complète un formulaire.
+  
+Le module Webform CiviCRM possède une documentation en ligne très complète. Pour plus d'information, veuillez vous référer au chapitre [Webform CiviCRM Integration](https://docs.civicrm.org/sysadmin/en/latest/integration/drupal/webform/) (en anglais) du manuel de l'administrateur système de CiviCRM.
 
 CiviCRM Organic Groups Sync
 ---------------------------
 
-The Organic Groups CiviCRM module
-([http://drupal.org/project/og_civicrm](http://drupal.org/project/og_civicrm))
-integrates Organic Groups from a Drupal site with CiviCRM groups. This
-is useful for groups that require Organic Group functionality on their
-website but also need to be tracked within CiviCRM. Once an Organic
-Group of Drupal users are integrated into CiviCRM, the Drupal group can
-be used for mailings, tracking address information, tracking activities
-or anything else normally done with CiviCRM contacts.
+Le module [Organic Groups CiviCRM](https://www.drupal.org/project/og_civicrm) permet d'intégrer les groupes organiques de Drupal aux groupes CiviCRM. Cela s'avère utile pour les groupes requérant la fonctionnalité *Groupe organique* sur le site web mais dont les changements doivent également se refléter au sein de CiviCRM. Une fois les utilisateurs Drupal d'un groupe organique intégrés à CiviCRM, le groupe peut être utilisé pour de la diffusion massive de courriel, du suivi d'activité, ou tout autre chose liée aux contacts.
 
-Once the Organic Groups CiviCRM module is installed and enabled in
-Drupal it automatically creates two CiviCRM groups for each existing
-Drupal Organic Group:
+Une fois le module Organic Groups CiviCRM installé et activé dans Drupal, ce dernier créé automatiquement deux groupes CiviCRM pour chaque groupe organique Drupal existant :
+-   Un groupe régulier contenant un enregistrement de contact pour chaque utilisateur Drupal d'un groupe organique. Ce groupe possède le même nom que le groupe organique ;
+-   un groupe ACL contenant l'enregistrement de contact de l'administrateur du groupe organique correspondant. Cela donne à ce dernier la possibilité de visualiser et de modifier les membres du groupe normal correspondant dans CiviCRM.
 
--   A normal group containing a contact record for each corresponding
-    user who is part of an Organic Group. This group is assigned the
-    same name as the linked Organic Group.
--   An access control group containing the contact record of the
-    administrator of the corresponding Organic Group. This gives the OG
-    group admin the ability to view and edit members of their group in
-    CiviCRM.
+ATTENTION : La synchronisation de ces groupes ne se fait que dans le sens groupe organique Drupal vers les groupes CiviCRM.
 
-The groups are synchronised one way only, from the Drupal Organic Groups
-to CiviCRM groups. When a new user is added to or signs up for an
-Organic Group, they are automatically added to the corresponding CiviCRM
-group. If they leave the Organic Group then they are removed from the
-CiviCRM group. If an Organic Group is deleted, the CiviCRM group is also
-deleted. However, the reverse of each of this situations is not true; a
-contact added to the CiviCRM group will not appear in the Drupal Organic
-Group, a contact removed from the CiviCRM group will still remain in the
-Drupal Organic Group, and if you delete the CiviCRM group, the Drupal
-Organic Group will still remain. Therefore, this integration is meant to
-be used when you administer the group from the Drupal side.
+Lorsqu'un nouvel utilisateur est ajouté dans un groupe organique, il est automatiquement ajouté dans le groupe CiviCRM correspondant. S'il quitte le groupe organique, il est également dissocié du groupe CiviCRM. Si un groupe organique est supprimé, les groupes CiviCRM sont également supprimés. Toutefois, l'inverse n'est pas vrai : un contact ajouté dans un groupe CiviCRM ne sera pas ajouté dans le groupe organique correspondant. Idem pour sa suppression. L'administration de ces groupe doit donc se faire du côté du site Drupal.
 
 CiviGroup Roles Sync
 --------------------
