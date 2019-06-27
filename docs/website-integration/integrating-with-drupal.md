@@ -93,8 +93,8 @@ Quand la vue est créée, ajustez les champs, filtres, affichage et autres confi
 -   Liste des membres de votre organisation ;
 -   et plus encore !
 
-Intégration du Webform CiviCRM 
-------------------------------
+Webform CiviCRM 
+---------------
 
 Tout comme les vues peuvent *sortir* les données de multiples façons, le module Webform peut les faire *entrer* exactement de la façon que vous souhaitez : vous pouvez créer et mettre à jour des contacts, des inscriptions à des groupes, à des étiquettes, des champs personnalisés et effectuer des paiement en ligne. Le module Webform offre une souplesse d'utilisation encore plus importante que l'utilisation des profils CiviCRM.
 
@@ -120,115 +120,56 @@ Lorsqu'un nouvel utilisateur est ajouté dans un groupe organique, il est automa
 CiviGroup Roles Sync
 --------------------
 
-The CiviGroup Roles Sync module allows administrators of Drupal Websites
-to streamline the user experience for donors and staff. The CiviGroup
-Roles Sync module allows you to:
+Le module CiviGroup Roles Sync permet aux administrateurs du site Drupal de gérer et paramétrer l'expérience utilisateur tel que des donateurs ou du personnel de l'organisation. Il permet notamment de :
+   - autoriser aux membres du conseil d'administration, du personnel, des bénévoles un accès à du contenu spécifique, ou l'execution de tâches particulières ;
+   - fournir une expérience personnalisée pour les utilisateurs d'un groupe spécifique lors de l'accès au site web. Par exemple, lorsqu'un donateur important se connecte au site web, ce dernier peut afficher une lettre du Président le remerciant pour sa contribution, ou encore fournir un accès d'inscription pour des événements particuliers.
 
--   Allow board members, committees, staff, and volunteers to access
-    specific content or perform specific tasks.
--   Provide customized experiences for users of specific groups when
-    they access your website. For example, when a major donor logs into
-    the website display a letter from the President thanking the donor
-    for his contribution and participation, or provide a major donors
-    with pre-registration access to upcoming events and exclusive news
-    or resources.
+Avant toute configuration, vous devriez passer du temps à envisager toutes les interactions que les différents utilisateurs seront amenés à faire avec le site web. Demandez-vous si l'expérience utilisateur dépend d'un groupe particulier, d'équipe, de comité ou si un contact doit remplir certains critères, ou si vous devriez appliquez manuellement des rôles à des utilisateurs.
 
-You should spend some time assessing the different ways that different
-sorts of users interact with your website, being sure to ask yourself
-whether or not the user experience is dependent on specific organized
-groups, teams, committees, or task forces or on whether or not a contact
-meets a specific set of criteria, or if you should apply roles to users
-manually.
+En bref, ce module vous permet de synchroniser les utilisateurs Drupal ayant un certain rôle avec les contacts CiviCRM dans un certain groupe.
 
-In essence, it allows you to synchronize Drupal users that have a
-certain role with CiviCRM contacts in a certain group.
+### Planification
 
-### Preparation
+Avant d'utiliser ce module, vous devriez avoir préparé les points suivants :
+   - les groupes de votre organisation doivent avoir été créés ;
+   - les rôles Drupal correspondant à chaque cas d'utilisation doivent également avoir été créés ;
+   - si vous utilisez des modules supplémentaires pour affiner vos accès au contenu, ces derniers devraient préalablement être installés et configurés.
+
+Au moment de déterminer les groupes et les rôles Drupal que vous devrez créer, il est important de garder en tête que plusieurs types de groupes peuvent être associés à un rôle Drupal, et qu'un seul groupe peut être associé à plusieurs rôles Drupal.
 
 
-Before using CiviGroup Roles Sync module you should have the following
-prepared:
+### Synchroniser les groupes CiviCRM avec les rôles Drupal
 
--   your organization's Groups should be created.
--   the roles you will need for each use case should be created in
-    Drupal.
--   if you are using additional modules to fine-tune access, you should
-    have all modules you need installed and configured
+-   Activez le module depuis l'écran d'administration Drupal des modules ;
+-   Allez à l'écran de configuration CiviGroup Role Sync ;
+-   Cliquez sur **Ajouter une règle d'association**
+-   Sous *Groupe CiviCRM*, sélectionnez le groupe d'utilisateurs pour lesquels vous voulez qu'un rôle Drupal particulier soit associé ;
+-   Sous *Rôle Drupal*, sélectionnez le rôle Drupal à associer ;
+-   Cliquez sur **Ajouter une règle d'association**.
 
-When determining what Groups and what Drupal Roles you should create it
-is important to remember that multiple Group Types may grant the same
-Drupal Role and each Group can be used to grant multiple Drupal roles.
+Vous pouvez toujours modifier ou supprimer une règle ultérieurement depuis ce même écran de configuration.
 
-You should enable the module from the Drupal module administration
-screen.
-
-### Syncing CiviCRM Groups to Drupal Roles
-
--   Navigate to the CiviGroup Role Sync configuration screen.
-
--   Click on **Add Association Rule.**
-
--   Under **CiviCRM Group** select the Group that you want a user to
-    have in order to be granted a specific Drupal Role.
--   Under **Drupal Role** select the Drupal Role that should be granted.
--   Click on **Add Association Rule** when you are finished configuring
-    your new association rule.
-
-You can always edit or delete existing association rules from the same
-configuration screen.
 
 CiviMember Roles Sync
 ---------------------
 
-The CiviMember Roles Sync module allows administrators of Drupal
-Websites to streamline the user experience for organization members. The
-CiviMember Roles Sync module allows you to.
+Le module CiviMember Roles Sync permet aux administrateurs Drupal de gérer et paramétrer l'expérience utilisateur pour les membres de votre organisation. Il permet notamment de :
+-   Accorder automatiquement un rôle Drupal en fonction du type d'adhésion et de son statut ;
+-   Permettre à un utilisateur d'accéder à du contenu réservé aux membres, ou d'executer des tâches que leur sont réservées ;
+-   Restreindre à des anciens membres l'accès à ce contenu et proposer à la place un formulaire de réadhésion.
 
--   Automatically grant a Drupal Role to a user based on the type of
-    membership he/she has with your organization and whether or not
-    he/she is currently in good standing.
--   Allow a user to access member-only content or perform specific
-    member-only tasks.
--   Restrict a non-member or expired member user from accessing
-    member-only content or performing member-only tasks until he/she
-    registers or renews membership with your organization.
+### Exemple de Scenario: Contenu réservé aux membres
 
-### Scenario: Member-only Content
+L'association Retail Baker's of America (RBA) mettre en relation les fournisseurs et les propriétaires de boulangerie à travers tout le pays afin de promouvoir une communité encourageant les échanges d'affaires, les informations industrielles, et établir des standards industriels à travers des certifications, de la recherche et des programmes scolaires.
 
-The Retail Baker's Association of America (RBA) connects bakery
-suppliers and owners across the country to foster a community that
-encourages exchange of business and industry information, networking,
-mentoring, and business opportunities, and establish industry standards
-through certification, research, and school programs.
+Les visiteurs de leur site web tombent dans les trois expériences utilisateur suivantes :
+   - Les non-membres qui achètent du matériel et des ressources via la boutique en ligne de RBA. Un non-membre doit créer un compte utilisateur afin de procéder aux transactions, accèder à son historique d'achat, et éventuellement être contacté par l'association pour se voir proposer une adhésion ;
+   - Les membres ayant une adhésion à jour, et qui ont accès aux ressources *membre uniquement* tel qu'un forum de discussion, du matériel de marketique, et une version numérique des publications de RBA.
+   - Les membres ayant une adhésion expirée, en période de grâce, ou anciens membres souhaitant renouveler leur adhésion pour accèder à nouveau au contenu *membre uniquement*.
+   
+RBA utilise CiviMember Role Sync pour accorder le rôle Drupal "membre actif" à tout utilisateur ayant une adhésion à jour. Ce rôle est enlevé lors de la période de grâce, puis ajouté à nouveau en cas de réadhésion.
 
-Visitors to their website fall into three different user experiences:
-
--   Non-Members who purchase resources and materials from RBA's online
-    boutique. A non-Member must register for a user account to make a
-    transaction so that he or she can keep track of purchase history, so
-    that RBA can petition him or her for membership in the future.
--   Current members in good standing who have access to member-only
-    resources including discussion boards, programs, marketing
-    materials, and digital version of RBA publications.
--   Members with expired memberships or former members who need to renew
-    need to log into the RBA website to renew their membership, but
-    should not have access to member-only resources until their
-    membership has been reactivated.
-
-In order to save their staff from having to grant the Drupal Role
-"Active Member" to a user each time he or she renews his or her
-membership and then remove the "Active Member" role if that user cancels
-his or her membership or allows his or her membership to expire, RBA
-uses CiviMember Role Sync to grant the "Active Member" role to any user
-who is either a new or current member and any user who's membership has
-fallen into the grace period. Now when a user registers or renews his or
-her membership he or she will automatically be granted access to RBA's
-Member-Only web content.
-
-### What You Need to Know
-
-This section covers what you need to think about before beginning to
-work with CiviMember Role Sync.
+### Planification
 
 You should spend some time assessing the different ways that different
 sorts of users interact with your website, being sure to ask yourself
