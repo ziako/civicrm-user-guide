@@ -171,130 +171,63 @@ RBA utilise CiviMember Role Sync pour accorder le rôle Drupal "membre actif" à
 
 ### Planification
 
-You should spend some time assessing the different ways that different
-sorts of users interact with your website, being sure to ask yourself
-whether or not the use case is dependent on your membership structure
-or dependent on the organization of committees, teams, and contacts
-meeting a specific set of criteria, or if your workflow simply does not
-warrant the use of CiviMember Role Sync at all.
+Vous devriez passer un peu de temps à réfléchir aux différentes façons dont les utilisateurs interagissent avec votre site web. Demandez-vous s'il existe des cas d'utilisation qui dépendent de votre structure d'adhésion, ou qui dépendent plutôt de comité, équipe ou contacts remplissant certains critères (cf module précédent).
 
-### CiviCRM Membership Types
+### Types d'adhésion CiviCRM
 
-You should have a full understanding of CiviCRM Membership Types and
-CiviCRM Membership Statuses before you begin working with the CiviMember
-Role Sync module. You can learn more about the CiviMember component by
-reviewing the **MEMBERSHIP** chapter.
+Il est important d'avoir une compréhension totale de ce que sont les types et les status d'adhésion CiviCRM. Vous trouverez les explications détaillées sur le composant CiviMember au chapitre [Définition des adhésions](../membership/defining-memberships.md) de la section *Adhésion*
 
-### Configuring CiviMember Roles Sync
 
-Before using CiviMember Roles Sync module you should have the following
-prepared:
+### Configurer CiviMember Roles Sync
 
--   your organization's Membership Types and Membership Statuses should
-    be created and configured in the CiviMember component.
--   the roles you will need for each use case should be created in
-    Drupal.
--   what content each Membership Type should grant permissions to should
-    be agreed upon by your staff
--   what tasks each Membership Type should grant permission to should be
-    agreed upon by your staff
--   if you are using additional modules to fine-tune access, you should
-    have all modules you need installed and configured
+Avant de pouvoir utiliser le module CiviMember Roles Sync, vous devriez avoir préparé les points suivants :
+-   Les types et les status d'adhésion de votre organisation devraient avoir été créés et configurés dans le composant CiviMember ;
+-   Les rôle Drupal nécessaires à vos cas d'utilisation doivent également avoir été créés ;
+-   Les contenus et les tâches accessibles uniquement à un type d'adhésion devraient avoir été identifié
+-   si vous utilisez des modules supplémentaires pour affiner vos accès au contenu, ces derniers devraient préalablement être installés et configurés.
 
-When determining what Membership Types and what Drupal Roles you should
-create it is important to remember that multiple Membership Types may
-grant the same Drupal Role and each Membership Type can be used to grant
-multiple Drupal roles.
+Au moment de déterminer les types d'adhésion et les rôles Drupal que vous devrez créer, il est important de garder en tête que plusieurs types d'adhésion peuvent être associés à un même rôle Drupal, et qu'un seul type d'adhésion peut être associé à plusieurs rôles Drupal.
 
-*For example: The Retail Bakers Association of America has five
-different membership types: Corporate Sponsor, Bakery, Individual,
-Student, and Retired Bakery. Having any one of the five Membership Types
-will grant a user the "Active Member" Drupal Role that gives access to
-the member-only content. In addition to this, users with the Corporate
-Sponsor Membership Type should have access to additional exclusive
-content. RBA decides calls the Drupal role used to access this
-additional exclusive content "Corporate Member" and user with the
-Corporate Sponsor Membership Type will be granted the "Corporate Member"
-role in addition to the "Active Member" role.*
+*Dans notre scenario, l'association Retail Baker's of America possède cinq types différents d'adhésion : Sponsor d'entreprise, Boulangerie, Individu, Étudiant et Boulanger retraité. À ces cinq types d'adhésion correspondent un seul rôle Drupal, celui de "Membre actif". Ce rôle donne accès au contenu réservé aux membres. De plus, les adhérents de type Sponsor d'entreprise ont également accès à du contenu supplémentaire exclusif. RBA décide d'appeler le rôle Drupal "Membre d'entreprise". Ces utilisateurs auront donc deux rôles associés : "Membre actif" et "Membre d'entreprise".*
 
-#### Enabling CiviMember Roles Sync Module
 
-1.
-To enable the CiviMember Roles Sync Module navigate to your list of
-installed Drupal modules.
+#### Activer le module CiviMember Roles Sync
 
-    -   Drupal 6: Go to **Administer > Site Building > Modules**
-    -   Drupal 7: Go to **Modules** from the Administration Menu at the
-    top of your screen.
+1. Allez à la liste de vos modules Drupal :
+    -   Drupal 6: **Administrer** > **Construction du Site** > **Modules** ;
+    -   Drupal 7: **Modules** dans le menu d'administration Drupal ;
 
-1.
-Find the Module **CiviMember Roles Sync** and check the box to the left
-of the module's name.
+2. Cochez la case (mettre à "ON") à côté du module **CiviMember Roles Sync** puis cliquez sur **Enregistrer la configuration** ;
 
-1.
-Click on **Save Configuration**.
+#### Synchroniser les types d'adhésion CiviCRM avec les rôles Drupal
 
-#### Syncing CiviCRM Membership Types to Drupal Roles
+1. Allez à l'écran de configuration CiviMember Role Sync :
+    -   Drupal 6: **Administrer** > **Construction du Site** > **CiviMember Roles Sync** ;
+    -   Drupal 7: **Configuration** > **CiviMember Roles Sync** ;
 
-1.
-Navigate to the CiviMember Role Sync configuration screen.
+2. Cliquez sur **Ajouter une règle d'association** ;
 
-    -   Drupal 6: Go to *Administer > Site Configuration > CiviMember
-    Roles Sync*
-    -   Drupal 7: Go to *Configuration > CiviMember Roles Sync*
+3. Sous *Sélectionnez un type d'adhésion CiviMember*, choisissez celui pour lequel un rôle Drupal sera associé ;
 
-1.
-Click on **Add Association Rule.**
+4. Sous *Sélectionnez un rôle Drupal*, choisissez le rôle correspondant.
 
-1.
-Under **Select a CiviMember Membership Type** select the Membership Type
-that you want a user to have in order to be granted a specific Drupal
-Role.
+*Example: RBA wants any user with a Current Bakery Membership Type to be granted the "Active Member" role, so the RBA staff creates a new Association Rule and selects Bakery under Select a CiviMember Membership Type and selects "Active Member" under Select a Drupal Role.*
 
-1.
-Under **Select a Drupal Role** select the Drupal Role that should be
-granted.
-*Example: RBA wants any user with a Current Bakery Membership Type to be
-granted the "Active Member" role, so the RBA staff creates a new
-Association Rule and selects Bakery under Select a CiviMember Membership
-Type and selects "Active Member" under Select a Drupal Role.*
+5. Sous *Statut en cours*, sélectionnez le statut d'adhésion pour lequel l'utilisateur devrait voir s'accorder le rôle Drupal.
 
-1.
-Under **Current Status** select the Membership Status that a user
-should have to be granted your selected Drupal Role.
-*Example: RBA wants to grant any user who has a Membership Status of
-either New, Current, or Grace access to the member-only website content,
-so the RBA staff checks the boxes next to those three Membership
-Statuses.*
+*Example: RBA wants to grant any user who has a Membership Status of either New, Current, or Grace access to the member-only website content, so the RBA staff checks the boxes next to those three Membership Statuses.*
 
-1.
-Under **Expired Status** select the Membership Status that will revoke
-the Drupal Role from the user. *Example: RBA wants to make sure that any user
-whose membership expires
-or who cancels their membership has their access to the member-only website
-content revoked, so the RBA staff checks the boxes next to Expired and
-Canceled.*
+6. Sous *Statut expiré*, sélectionnez le statut d'adhésion pour lequel le rôle Drupal sera révoqué au niveau de l'utilisateur.
 
-1.
-Click on **Add Association Rule** when you are finished configuring your
-new association rule.
+*Example: RBA wants to make sure that any user whose membership expires or who cancels their membership has their access to the member-only website content revoked, so the RBA staff checks the boxes next to Expired and Canceled.*
 
-1.
-The page will reload, and you should see the message "Your Association
-Rule has been added."
+7. Cliquez sur **Ajouter une règle d'association** lorsque vous avez terminé.
 
-1.
-Repeat steps 1-8 to add all necessary association rules for your
-organization. Once you have finished adding all of your association
-rules, move on to step 10.
+8. Répétez les étapes 1 à 7 pour ajouter toutes les règles d'association nécessaires à votre organisation, puis passez à l'étape 9.
 
-1.
-Click on the tab **Manually Synchronize**
+9. Cliquez sur l'onglet **Synchroniser manuellement**
 
-1.
-Click on **Synchronize CiviMember Membership Types to Drupal Roles
-Now**. This will put your new CiviMember Role Sync Association Role
-immediately into effect.
+10. Cliquez sur **Synchroniser les types d'adhésion CiviMember avec les rôles Drupal maintenant**.
 
 #### Editing Existing Association Rules
 
