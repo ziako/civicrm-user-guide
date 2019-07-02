@@ -159,7 +159,7 @@ pages:
     - 'Reports and analyis': 'grants/reports-and-analysis.md'
 - Website integration:
     - 'Choisir votre CMS': 'website-integration/choosing-your-cms.md'
-    - 'Integrating with Drupal': 'website-integration/integrating-with-drupal.md'
+    - 'Intégration avec Drupal': 'website-integration/integrating-with-drupal.md'
     - "Intégration avec WordPress": 'website-integration/integrating-with-wordpress.md'
     - "Intégration avec Joomla": 'website-integration/integrating-with-joomla.md'
 - La communauté CiviCRM:
