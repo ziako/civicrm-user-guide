@@ -211,15 +211,15 @@ Au moment de déterminer les types d'adhésion et les rôles Drupal que vous dev
 
 4. Sous *Sélectionnez un rôle Drupal*, choisissez le rôle correspondant.
 
-*Example: RBA wants any user with a Current Bakery Membership Type to be granted the "Active Member" role, so the RBA staff creates a new Association Rule and selects Bakery under Select a CiviMember Membership Type and selects "Active Member" under Select a Drupal Role.*
+*Exemple: RBA souhaite que tout utilisateur ayant une adhésion en cours de type "Boulangerie" puisse être gratifié du rôle Drupal "Membre actif". Pour cela, le personnel créera une règle d'association et sélectionnera "Boulangerie" dans la section* Type d'adhésion *, et "Membre actif" dans la section* Rôle Drupal.
 
 5. Sous *Statut en cours*, sélectionnez le statut d'adhésion pour lequel l'utilisateur devrait voir s'accorder le rôle Drupal.
 
-*Example: RBA wants to grant any user who has a Membership Status of either New, Current, or Grace access to the member-only website content, so the RBA staff checks the boxes next to those three Membership Statuses.*
+*Exemple: RBA souhaite gratifier tout utilisateur dont le statut d'adhésion est soit "En cours", soit "Nouveau" soit "Période de grâce" au contenu réservé aux membres. Le personnel va donc cocher les boites correspondant à ces statuts.*
 
 6. Sous *Statut expiré*, sélectionnez le statut d'adhésion pour lequel le rôle Drupal sera révoqué au niveau de l'utilisateur.
 
-*Example: RBA wants to make sure that any user whose membership expires or who cancels their membership has their access to the member-only website content revoked, so the RBA staff checks the boxes next to Expired and Canceled.*
+*Exemple: RBA souhaite s'assurer que tout utilisateur dont l'adhésion expire ou soit annulée ai leur accès au contenu réservé aux membres révoqué. Le personnel va donc cocher les boites correspondant à ces statuts.*
 
 7. Cliquez sur **Ajouter une règle d'association** lorsque vous avez terminé.
 
@@ -236,34 +236,20 @@ Au moment de déterminer les types d'adhésion et les rôles Drupal que vous dev
     -   Drupal 7: **Configuration** > **CiviMember Roles Sync** ;
 
 2. Vous devriez voir maintenant la liste des règles existantes. Si ce n'est pas le cas, cliquez sur l'onglet **List Association Rule(s)**.
-      a) Pour modifier une règle :
-         * positionnez-vous sur celle-ci et cliquez sur **modifier** ;
-         * effectuez les changements puis cliquez sur **modifier la règle d'association**
+    -   Pour modifier une règle :
+            * positionnez-vous sur celle-ci et cliquez sur **modifier** ;
+            * effectuez les changements puis cliquez sur **modifier la règle d'association**
 
-      b) Pour supprimer une règle :
-         * positionnez-vous sur celle-ci puis cliquez sur **supprimer** ;
+    -   Pour supprimer une règle :
+            * positionnez-vous sur celle-ci puis cliquez sur **supprimer** ;
 
 #### Configurer les moments de synchronisation
 
 Vous avez le choix entre différentes options pour synchroniser les types d'adhésion CiviCRM avec les rôles Drupal. Pour cela, allez dans l'écran de configuration CiviMember Role Sync habituel, puis choisissez l'une des options disponibles :
 
--   Synchronize whenever someone logs in or logs out: This method will
-    trigger synchronization only after a user logs in or out of his or
-    her account. You should be careful when using this method because if
-    you have long user sessions a user could continue to have access to
-    actions or content until he or she finally logs out. (This is the
-    default setting)
--   Synchronize when a Drupal Cron occurs: This method relies on a cron
-    to trigger synchronization. Learn more about Drupal Cron at:
-    [http://drupal.org/cron](http://drupal.org/cron)
--   Synchronize when membership is updated: This method will synchronize
-    when the user registers for or renews his or her membership and when
-    the organization staff updates a user's membership information from
-    the back office.
--   Disable Automatic Synchronization: This method relies on an
-    organization staff member to manually trigger synchronization. To
-    manually trigger synchronization, go to **CiviMember Roles Sync
-    settings**, click on the Manually Synchronize tab, and click
-    on Synchronize CiviMember Membership Types to Drupal Roles Now.
+-   Synchronise lorsque quelqu'un se connecte ou se déconnecte (option par défaut) : cette méthode déclenche la synchronisation uniquement après que quelqu'un se soit connecté ou déconnecté de son compte. Vous devriez être prudent avec cette option car si vous gérez des sessions d'utilisateurs très longues, ces derniers auront accès aux contenus ou tâches  *membres uniquement* jusqu'à ce qu'ils se déconnectent ;
+-   Synchronise lors d'un cron Drupal : cette méthode repose sur un cron Drupal pour déclencher la synchronisation. Vous pouvez en savoir plus sur le cron Drupal, allez à [https://www.drupal.org/docs/7/setting-up-cron/overview](https://www.drupal.org/docs/7/setting-up-cron/overview)
+-   Synchronise lorsqu'une adhésion est mise à jour : cette méthode déclenche la synchronisation lorsqu'un utilisateur adhère ou renouvelle son adhésion, ou lorsque qu'un membre du personnel met à jour l'adhésion d'un contact depuis le back-office ;
+-   Désactive la synchronisation automatique : uniquement si vous comptez sur un membre du personnel pour déclencher manuellement la synchronisation. Pour faire cela, allez à **CiviMember Roles Sync settings**, cliquez sur l'onglet **Synchronisation manuelle** puis cliquez sur **Synchronisez les types d'adhésion CiviMember avec les rôles Drupal maintenant**.
 
-Be sure to click **Save Configuration** after making any changes.
+Assurez-vous de cliquer sur **Enregistrer la configuration** après vos changements.
