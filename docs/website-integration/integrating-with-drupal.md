@@ -13,19 +13,15 @@ Lorsque vous créez un nouvel *Utilisateur* sur un site Drupal et que CiviCRM y 
 Votre site Drupal vous permet de créer différents *Rôles*. Ces rôles sont assignés à des utilisateurs du site, et chaque rôle contient des *permissions* qui vous permettent de réaliser une certaine série de tâches (voir, modifier, supprimer, et administrer des contacts) ou accéder à un certain jeu d'information (contacts CiviCRM, CiviMail, CiviEvents, Drupal USers, etc.)
 
 Pour plus d'information sur les rôles Drupal, merci de lire la documentation disponible sur drupal.org :
-
--   Utilisateur : paramètres d'accès et de gestion [http://drupal.org/documentation/modules/user](http://drupal.org/documentation/modules/user)
--   Gérer les contrôles d'accès avec les rôles et les permissions Drupal [http://drupal.org/node/22275](http://drupal.org/node/22275)
+-   [Utilisateur : paramètres d'accès et de gestion](https://www.drupal.org/docs/8/core/modules/user/overview) ;
+-   [Gérer les contrôles d'accès avec les rôles et les permissions Drupal](https://www.drupal.org/node/22275) ;
 
 Les *permissions* Drupal vous permet de définir quelles tâches un *rôle* particulier de Drupal peut executer, et à quelles informations il a accès. Les *permissions* déterminent également le niveau d'accès qu'un certain type d'utilisateur a sur la configuration des modules, l'affichage, l'édition, les utilisateurs ou les informations de contact CiviCRM.
 
 Pour plus d'information sur le paramétrage des permissions Drupal, veuillez lire la documentation sur drupal.org :
-
--   Associer des permissions et des utilisateurs à des rôles [http://drupal.org/node/22278](http://drupal.org/node/22278)
-
--   Ajuster les permissions après l'ajout d'un module [http://drupal.org/node/22279](http://drupal.org/node/22279)
--   Références permissions [http://drupal.org/node/132202](http://drupal.org/node/132202)
--   Visualiser les permissions de module [http://drupal.org/node/1089746](http://drupal.org/node/1089746)
+-   [Ajuster les permissions après l'ajout d'un module](https://www.drupal.org/node/22279) ;
+-   [Références sur les permissions](https://www.drupal.org/node/132202) ;
+-   [Permissions pour le module Vues](http://drupal.org/node/1089746) ;
 
 
 Les rôles Drupal sont globaux et écraseront les contrôles d'accès (voir le chapitre [Autorisations et contrôle d'accès](../initial-set-up/permissions-and-access-control.md) dans la section *Configuration initiale*) définis dans CiviCRM.
@@ -37,15 +33,12 @@ Taxinomies Drupal, accès au contenu ou tout autre module d'accès basé sur un 
 
 Il existe plusieurs modules Drupal pouvant déterminer quel rôle Drupal a accès à un certain type de contenu dans votre site web. Cela peut être basé sur les taxinomies, en sélectinnant un accès à des noeux spécifiques, des paramètres sur des vues spécifiques, pages ou paneaux, ou basé sur un certain contexte ou règle. Voici ci-dessous quelques uns de ces modules :
 
--   Views [https://www.drupal.org/project/views](https://www.drupal.org/project/views)
--   Panels [http://drupal.org/project/panels](http://drupal.org/project/panels)
--   Chaos Tools Suite and Page
-    Manager [http://drupal.org/project/ctools](http://drupal.org/project/ctools)
--   Context [http://drupal.org/project/context](http://drupal.org/project/context)
--   Content
-    Access [http://drupal.org/project/content_access](http://drupal.org/project/content_access)
--   Taxonomy Access
-    Control [http://drupal.org/project/taxonomy_access](http://drupal.org/project/taxonomy_access)
+-   [Views](https://www.drupal.org/project/views) ;
+-   [Panels](https://www.drupal.org/project/panels) ;
+-   [Chaos Tools Suite (ctools) and Page Manager](https://www.drupal.org/project/ctools) ;
+-   [Context](https://www.drupal.org/project/context) ;
+-   [Content Access](https://www.drupal.org/project/content_access) ;
+-   [Taxonomy Access Control](https://www.drupal.org/project/taxonomy_access) ;
 
 Vues Drupal
 -----------
