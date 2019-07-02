@@ -229,47 +229,23 @@ Au moment de déterminer les types d'adhésion et les rôles Drupal que vous dev
 
 10. Cliquez sur **Synchroniser les types d'adhésion CiviMember avec les rôles Drupal maintenant**.
 
-#### Editing Existing Association Rules
+#### Modifier des règles d'association existantes
 
-You can always edit or delete existing association rules.
+1. Pour modifier ou supprimer une règle d'association, allez à l'écran de configuration CiviMember Role Sync :
+    -   Drupal 6: **Administrer** > **Construction du Site** > **CiviMember Roles Sync** ;
+    -   Drupal 7: **Configuration** > **CiviMember Roles Sync** ;
 
-1.
-To edit or delete an existing Association Rule, Navigate to the
-CiviMember Role Sync configuration screen.
+2. Vous devriez voir maintenant la liste des règles existantes. Si ce n'est pas le cas, cliquez sur l'onglet **List Association Rule(s)**.
+      a) Pour modifier une règle :
+         * positionnez-vous sur celle-ci et cliquez sur **modifier** ;
+         * effectuez les changements puis cliquez sur **modifier la règle d'association**
 
-    -   Drupal 6: Go to *Administer > Site Configuration > CiviMember
-    Roles Sync*
-    -   Drupal 7: Go to *Configuration > CiviMember Roles Sync*
+      b) Pour supprimer une règle :
+         * positionnez-vous sur celle-ci puis cliquez sur **supprimer** ;
 
-1.
-You should now see a list of all existing CiviMember Role Sync
-Association Rules. If not, click on **List Association Rule(s)** tab.
+#### Configurer les moments de synchronisation
 
-    *   Edit an Existing Association Rule
-        *   Find the Association Rule you want to make changes to and click
-on **edit** for that Association rule.
-        *   Make the changes to your Association Rule and when yo are finished click
-on **Edit association rule**.
-
-    *   Delete an Association Rule
-
-        *  Find the Association Rule you want to remove and click on **delete** for
-that Association Rule.
-
-        *  Your association rule will be deleted. You will not need to confirm
-deletion.
-
-#### Configure when Synchronization Should Happen
-
- You can select several different options for when synchronization
-should occur by navigating to the CiviMember Role Sync Configure screen.
-
--   Drupal 6: Go to **Administer > Site Configuration > CiviMember
-    Roles Sync > Configure**
--   Drupal 7: Go to **Configuration > CiviMember Roles Sync >
-    Configure**
-
-#### Automatic Synchronization Methods:
+Vous avez le choix entre différentes options pour synchroniser les types d'adhésion CiviCRM avec les rôles Drupal. Pour cela, allez dans l'écran de configuration CiviMember Role Sync habituel, puis choisissez l'une des options disponibles :
 
 -   Synchronize whenever someone logs in or logs out: This method will
     trigger synchronization only after a user logs in or out of his or
