@@ -1,522 +1,248 @@
-# Integrating with Drupal
+# Intégration avec Drupal
 
-Of all the three CMS that integrate with CiviCRM, Drupal has received
-the most attention, and offers the most options when it comes to
-integration. This is in part due to the fact that the Drupal community
-is largely a developer community.
+Des trois CMS pouvant intégrer CiviCRM, Drupal est celui ayant reçu le plus d'attention, et offrant le plus d'options d'intégration. Cela est dû en partie parce que la communauté Drupal est principalement une communauté de développeurs.
 
-When thinking about website integration with Drupal, it is important to
-understand the concept of **Drupal modules**. It might help you to
-think of a module as an application which provides a certain bit of
-functionality. For example the *calendar* module allows you to display
-calendars on your website. The Drupal distribution of CiviCRM comes with a
-number of Drupal modules which give you the ability to integrate CiviCRM with
-Drupal in various different ways.
+Lorsque l'on pense à l'intégration à un site web avec Drupal, il est important de comprendre le concept de *modules Drupal*. Un module peut être considéré comme une application fournissant au CMS des fonctionnalités supplémentaires. Par exemple, le module *Calendar* vous permet d'afficher des calendriers sur votre site web. La distributation Drupal de CiviCRM contient plusieurs modules Drupal facilitant son intégration, et ce de différentes façons.
+
+## Rôles et permissions Drupal
+
+Lorsque vous créez un nouvel *Utilisateur* sur un site Drupal et que CiviCRM y est intégré, alors ce dernier créera automatiquement un enregistrement *Contact* lui correspondant. *Utilisateur* et *Contact* possède tous deux une identification / numéro d'index différents.
+
+*Voir également le chapitre [Autorisations et contrôle d'accès](../initial-set-up/permissions-and-access-control.md) de la section* Configuration initiale *pour une discussion générale sur le contrôle d'accès.*
+
+Votre site Drupal vous permet de créer différents *Rôles*. Ces rôles sont assignés à des utilisateurs du site, et chaque rôle contient des *permissions* qui vous permettent de réaliser une certaine série de tâches (voir, modifier, supprimer, et administrer des contacts) ou accéder à un certain jeu d'information (contacts CiviCRM, CiviMail, CiviEvents, Drupal USers, etc.)
+
+Pour plus d'information sur les rôles Drupal, merci de lire la documentation disponible sur drupal.org :
+-   [Utilisateur : paramètres d'accès et de gestion](https://www.drupal.org/docs/8/core/modules/user/overview) ;
+-   [Gérer les contrôles d'accès avec les rôles et les permissions Drupal](https://www.drupal.org/node/22275) ;
+
+Les *permissions* Drupal vous permet de définir quelles tâches un *rôle* particulier de Drupal peut executer, et à quelles informations il a accès. Les *permissions* déterminent également le niveau d'accès qu'un certain type d'utilisateur a sur la configuration des modules, l'affichage, l'édition, les utilisateurs ou les informations de contact CiviCRM.
+
+Pour plus d'information sur le paramétrage des permissions Drupal, veuillez lire la documentation sur drupal.org :
+-   [Ajuster les permissions après l'ajout d'un module](https://www.drupal.org/node/22279) ;
+-   [Références sur les permissions](https://www.drupal.org/node/132202) ;
+-   [Permissions pour le module Vues](http://drupal.org/node/1089746) ;
 
 
-## Drupal Roles and permissions
+Les rôles Drupal sont globaux et écraseront les contrôles d'accès (voir le chapitre [Autorisations et contrôle d'accès](../initial-set-up/permissions-and-access-control.md) dans la section *Configuration initiale*) définis dans CiviCRM.
+Par exemple, si vous définissez un contrôle d'accès pour limiter l'accès à certains contacts mais qu'un rôle Drupal possède la permission *Accéder à tous les contacts*, alors toute personne associée à ce rôle pourra voir l'ensemble des contacts.
 
-When you create a new Drupal site **User** and CiviCRM is installed a
-corresponding CiviCRM **Contact** is also created. Both users and
-contacts have a separate identification or index number.
 
-*See also the permissions and access control chapter in initial set up
-for a general discussion of access control.*
+Taxinomies Drupal, accès au contenu ou tout autre module d'accès basé sur un rôle utilisateur
+---------------------------------------------------------------------------------------------
 
-Your Drupal website allows you to create a series of **Roles.** Your
-website administrator give roles to site users and grant each role
-the **permission** to perform a certain series of tasks (view, edit,
-delete, and administer contacts) or access a certain set of information
-(CiviCRM Contacts, CiviMail, CiviEvents, Drupal Users, specific content
-types, etc.)
+Il existe plusieurs modules Drupal pouvant déterminer quel rôle Drupal a accès à un certain type de contenu dans votre site web. Cela peut être basé sur les taxinomies, en sélectinnant un accès à des noeux spécifiques, des paramètres sur des vues spécifiques, pages ou paneaux, ou basé sur un certain contexte ou règle. Voici ci-dessous quelques uns de ces modules :
 
-For more information on Drupal Roles, please read the documentation on
-Drupal Roles at Drupal.org:
+-   [Views](https://www.drupal.org/project/views) ;
+-   [Panels](https://www.drupal.org/project/panels) ;
+-   [Chaos Tools Suite (ctools) and Page Manager](https://www.drupal.org/project/ctools) ;
+-   [Context](https://www.drupal.org/project/context) ;
+-   [Content Access](https://www.drupal.org/project/content_access) ;
+-   [Taxonomy Access Control](https://www.drupal.org/project/taxonomy_access) ;
 
--   User: Access and management
-    settings [http://drupal.org/documentation/modules/user](http://drupal.org/documentation/modules/user)
--   Managing Access Control with Permissions and Drupal Roles
-    [http://drupal.org/node/22275](http://drupal.org/node/22275)
+Vues Drupal
+-----------
 
-Drupal permission settings allow you to decide what tasks a
-specific **Role** can perform or what information a certain **Role** has
-access to. Drupal permissions determine how much access a certain type
-of user has to configure modules, view, create, edit, or change types of
-content, users, or CiviCRM Contact information.
+[Views](https://www.drupal.org/project/views) est un puissant module Drupal vous permettant d'afficher du contenu de site web comme, par exemple, les dernières nouvelles de votre page d'acceuil. CiciCRM intégré avec ce module permet d'afficher les données CiviCRM sur le site web. Par exemple, si vous souhaitez créer une page appelée *Organisations partenaires* et que vous souhaitez l'afficher au grand public, vous pourriez utiliser la procédure suivante :
 
-For more information on Drupal Permission settings, please read the
-documentation on Drupal Permissions at Drupal.org:
+1. Sélectionnez le critère déterminant le jeu de contacts à prendre en compte, tel que :
+   * Contacts de type *Organisation* uniquement ;
+   * Ceux tagués "Partenaire" dans CiviCRM ;
+   * Ceux ayant un statut d'adhésion *Nouveau* ou *En cours*.
+2. Choisissez quelles données seront affichées, telles que :
+   * Nom de l'organisation ;
+   * Région ;
+   * Site web ;
+   * Numéro de téléphone.
+3. Choisissez le format d'affichage (table ou paragraphe) ;
+4. Autorisez le public à filtrer le résultat, par exemple par région.
 
--   User: Access and management settings
-   [http://drupal.org/documentation/modules/user](http://drupal.org/documentation/modules/user)
-
--   Assigning permissions and users to
-    roles [http://drupal.org/node/22278](http://drupal.org/node/22278)
-
--   Adjusting permissions after adding
-    modules [http://drupal.org/node/22279](http://drupal.org/node/22279)
--   Permissions
-    reference [http://drupal.org/node/132202](http://drupal.org/node/132202)
--   Views module
-    permissions [http://drupal.org/node/1089746](http://drupal.org/node/1089746)
-
-Drupal roles are global and will override relevant access controls (see
-chapter Initial Setup> Permissions and Access Control) setup in
-CiviCRM. For example you can setup Access Control in CiviCRM to restrict
-access to contacts but if the Drupal permission 'Access All Contacts' is
-set anyone with that role will be able to see all contacts regardless.
-
-Drupal Taxonomies, Content Access, or other Role-based User Access Modules
----------------------------------------------------------------------------
-
-There are several Drupal Modules that determine what
-Drupal **Roles** have access to which types of content in your Drupal
-website. This can be based on Drupal taxonomies, by selecting access to
-specific nodes, settings on a specific views, pages, or panels, or based
-on certain contexts or rules. A few of the most common modules used for
-controlling access to content or include options for controlling content
-based on Drupal **Roles** are:
-
--   Views [http://drupal.org/project/views](http://drupal.org/project/views)
--   Panels [http://drupal.org/project/panels](http://drupal.org/project/panels)
--   Chaos Tools Suite and Page
-    Manager [http://drupal.org/project/ctools](http://drupal.org/project/ctools)
--   Context [http://drupal.org/project/context](http://drupal.org/project/context)
--   Content
-    Access [http://drupal.org/project/content_access](http://drupal.org/project/content_access)
--   Taxonomy Access
-    Control [http://drupal.org/project/taxonomy_access](http://drupal.org/project/taxonomy_access)
-
-Drupal Views
---------------
-
-[Views](http://drupal.org/project/views) is a powerful Drupal module
-that allows you to display website content e.g. a list of latest news
-for the home page. CiviCRM integrates with Drupal Views and allows
-CiviCRM data to be shown on your website. For instance, if you wanted to
-create a page called 'Partner Organizations' and display it publicly you
-could:
-
-1. Select criteria for what Contact data will be displayed such as:
- * Organization contacts only
- * That are tagged 'Partner' in CiviCRM
- * That have a membership of status 'New' or 'Current'
-2. Choose which data will be shown such as:
-  * Organization name
-  * State/Province
-  * Website
-  * Phone number
-3. Choose to show the data in either table or paragraph format
-4. Allow the public to filter the results themselves by State/Province
-
-This is just a simple example, the possibilities of Drupal Views and
-CiviCRM are far reaching.
+Il s'agit ici d'un simple exemple, les possibilités de jouer avec les vues Drupal et les données CiviCRM étant bien plus vastes.
 
 ### Configuration
 
-If you have your Drupal and CiviCRM in separate databases adding CiviCRM
-support to Views takes a small bit of configuration. Views must be told
-where to look for CiviCRM data. **Administer > System
-Settings > CMS Database Integration** shows some code that must be
-copied and pasted into the Drupal *settings.php* file after (but not
-replacing) the existing database connection code. If you have trouble
-consider asking for help in
-the [forums](http://forum.civicrm.org/) or [hiring a
-consultant](http://civicrm.org/what/experts). If you are using Custom
-Data sets in CiviCRM, anytime you add a new data **set** (not just a
-field) you must repeat this process.
+Si vos bases de données Drupal et CiviCRM sont distinctes, ajouter le support CiviCRM au module *Vues* requiert un brin de configuration. Il s'agit d'indiquer aux vues où trouver les données CiviCRM.
+Allez à **Administrer** > **Paramètres système** > **Intégration à la base de donnée du CMS**. Vous pourrez visualiser les lignes de code à recopier après le code du fichier *settings.php* de Drupal. En cas de problème, vous pouvez demander de l'aide dans le [forum](http://forum.civicrm.org/) or [engager un consultant](http://civicrm.org/what/experts). Si vous utilisez des jeux de données personnalisées, et à chaque fois que vous en ajouterez, vous devrez répéter le processus.
 
-### Creating Views Using CiviCRM Data
+### Créer des vues utilisant des données CiviCRM
 
-Views are located in the **Structure** section of the Drupal
-administrative menu. When you create a View, give it a name and select
-what kind of data you wish to show.
+Les vues font partie de la section **Structure** du menu d'administration Drupal. Lorsque vous créez une vue, nommez-là et sélectionnez le type de données que vous souhaitez afficher.
 
-Generally speaking if your view is focused on Contacts (which most are)
-you will select Show: CiviCRM Contacts. If you wish to display details
-about other CiviCRM data such as events, relationships, contributions or
-activities there are additional options that might provide more data
-fields for those types.
+De façon générale, si votre vue concerne des contacts, vous sélectionnerez Afficher: Contacts CiviCRM. Si vous souhaitez afficher d'autres détails comme des événements, des relations, des contributions ou des activités, il existe des options vous permettant d'enrichir votre vue.
 
 ![image](../img/Views-CiviCRM-Partner-1.png)
 
-After the View is created, edit the fields, filters, display and other
-configurations to show the data exactly how you'd prefer. Views does
-take some experimentation and/or training to get it right. Feel free to
-ask questions on the [forums](http://forum.civicrm.org/) or [hire a
-consultant](http://civicrm.org/what/experts) if you become stuck.
+Quand la vue est créée, ajustez les champs, filtres, affichage et autres configurations pour adapter la page à vos besoins.
 
-![image](../img/Views-CiviCRM-Partner-3.png)  
+![image](../img/Views-CiviCRM-Partner-3.png "sample configuration using Views 3 in a Drupal 7 environment")  
 
-This is a sample configuration using Views 3 in a Drupal 7 environment.
-Your View will probably be slightly different, but this gives you some
-examples to get started with.
 
-### Other Things Views and CiviCRM Can Do
+### Ce que peuvent également faire les vues et CiviCRM
 
--   Lists of upcoming events
--   Building reports on contributions, activities or event registrants
--   Honor roll listing of recent donors
--   Staff, board of directors or committee lists
--   A list of current members
--   ...and more!
+-   Liste des événements à venir ;
+-   Construction de rapport sur les contributions, activités ou participants ;
+-   Liste des donateurs les plus récents ;
+-   Listes de comité, conseil d'administration, bureau... ;
+-   Liste des membres de votre organisation ;
+-   et plus encore !
 
-Webform CiviCRM Integration
----------------------------
+Webform CiviCRM 
+---------------
 
-Just as Views can *output* data in virtually any way imaginable, this
-module allows you to have data *input* exactly the way you want. The
-webform CiviCRM integration is extensive and offers many different
-options for things that can happen as part of the form submission.
+Tout comme les vues peuvent *sortir* les données de multiples façons, le module Webform peut les faire *entrer* exactement de la façon que vous souhaitez : vous pouvez créer et mettre à jour des contacts, des inscriptions à des groupes, à des étiquettes, des champs personnalisés et effectuer des paiement en ligne. Le module Webform offre une souplesse d'utilisation encore plus importante que l'utilisation des profils CiviCRM.
 
-You can create and update contacts, group subscriptions, tags,
-relationships, cases, custom data, activities, memberships, event
-participants and take payments online via webforms. They can offer
-greater flexibility when compared to standard CiviCRM Profiles.
-
-For example, you can create a form which adds a family with all
-relationships / you can add a new member form with a multi-page form
-which includes question logic / you can create a new activity when
-someone submits the form. Webform CiviCRM has extensive online
-documentation which you should read to make the most out of its
-functionality.
-
-For more information see:
-[http://wiki.civicrm.org/confluence/display/CRMDOC/Webform+CiviCRM+Integration](http://wiki.civicrm.org/confluence/display/CRMDOC/Webform+CiviCRM+Integration)
+Par exemple, vous pouvez :
+  - créer un formulaire pour ajouter dans vos contacts une famille complète avec toutes les relations définies ;
+  - créer une nouvelle activité lorsqu'une personne complète un formulaire.
+  
+Le module Webform CiviCRM possède une documentation en ligne très complète. Pour plus d'information, veuillez vous référer au chapitre [Webform CiviCRM Integration](https://docs.civicrm.org/sysadmin/en/latest/integration/drupal/webform/) (en anglais) du manuel de l'administrateur système de CiviCRM.
 
 CiviCRM Organic Groups Sync
 ---------------------------
 
-The Organic Groups CiviCRM module
-([http://drupal.org/project/og_civicrm](http://drupal.org/project/og_civicrm))
-integrates Organic Groups from a Drupal site with CiviCRM groups. This
-is useful for groups that require Organic Group functionality on their
-website but also need to be tracked within CiviCRM. Once an Organic
-Group of Drupal users are integrated into CiviCRM, the Drupal group can
-be used for mailings, tracking address information, tracking activities
-or anything else normally done with CiviCRM contacts.
+Le module [Organic Groups CiviCRM](https://www.drupal.org/project/og_civicrm) permet d'intégrer les groupes organiques de Drupal aux groupes CiviCRM. Cela s'avère utile pour les groupes requérant la fonctionnalité *Groupe organique* sur le site web mais dont les changements doivent également se refléter au sein de CiviCRM. Une fois les utilisateurs Drupal d'un groupe organique intégrés à CiviCRM, le groupe peut être utilisé pour de la diffusion massive de courriel, du suivi d'activité, ou tout autre chose liée aux contacts.
 
-Once the Organic Groups CiviCRM module is installed and enabled in
-Drupal it automatically creates two CiviCRM groups for each existing
-Drupal Organic Group:
+Une fois le module Organic Groups CiviCRM installé et activé dans Drupal, ce dernier créé automatiquement deux groupes CiviCRM pour chaque groupe organique Drupal existant :
+-   Un groupe régulier contenant un enregistrement de contact pour chaque utilisateur Drupal d'un groupe organique. Ce groupe possède le même nom que le groupe organique ;
+-   un groupe ACL contenant l'enregistrement de contact de l'administrateur du groupe organique correspondant. Cela donne à ce dernier la possibilité de visualiser et de modifier les membres du groupe normal correspondant dans CiviCRM.
 
--   A normal group containing a contact record for each corresponding
-    user who is part of an Organic Group. This group is assigned the
-    same name as the linked Organic Group.
--   An access control group containing the contact record of the
-    administrator of the corresponding Organic Group. This gives the OG
-    group admin the ability to view and edit members of their group in
-    CiviCRM.
+ATTENTION : La synchronisation de ces groupes ne se fait que dans le sens groupe organique Drupal vers les groupes CiviCRM.
 
-The groups are synchronised one way only, from the Drupal Organic Groups
-to CiviCRM groups. When a new user is added to or signs up for an
-Organic Group, they are automatically added to the corresponding CiviCRM
-group. If they leave the Organic Group then they are removed from the
-CiviCRM group. If an Organic Group is deleted, the CiviCRM group is also
-deleted. However, the reverse of each of this situations is not true; a
-contact added to the CiviCRM group will not appear in the Drupal Organic
-Group, a contact removed from the CiviCRM group will still remain in the
-Drupal Organic Group, and if you delete the CiviCRM group, the Drupal
-Organic Group will still remain. Therefore, this integration is meant to
-be used when you administer the group from the Drupal side.
+Lorsqu'un nouvel utilisateur est ajouté dans un groupe organique, il est automatiquement ajouté dans le groupe CiviCRM correspondant. S'il quitte le groupe organique, il est également dissocié du groupe CiviCRM. Si un groupe organique est supprimé, les groupes CiviCRM sont également supprimés. Toutefois, l'inverse n'est pas vrai : un contact ajouté dans un groupe CiviCRM ne sera pas ajouté dans le groupe organique correspondant. Idem pour sa suppression. L'administration de ces groupe doit donc se faire du côté du site Drupal.
 
 CiviGroup Roles Sync
 --------------------
 
-The CiviGroup Roles Sync module allows administrators of Drupal Websites
-to streamline the user experience for donors and staff. The CiviGroup
-Roles Sync module allows you to:
+Le module CiviGroup Roles Sync permet aux administrateurs du site Drupal de gérer et paramétrer l'expérience utilisateur tel que des donateurs ou du personnel de l'organisation. Il permet notamment de :
+   - autoriser aux membres du conseil d'administration, du personnel, des bénévoles un accès à du contenu spécifique, ou l'execution de tâches particulières ;
+   - fournir une expérience personnalisée pour les utilisateurs d'un groupe spécifique lors de l'accès au site web. Par exemple, lorsqu'un donateur important se connecte au site web, ce dernier peut afficher une lettre du Président le remerciant pour sa contribution, ou encore fournir un accès d'inscription pour des événements particuliers.
 
--   Allow board members, committees, staff, and volunteers to access
-    specific content or perform specific tasks.
--   Provide customized experiences for users of specific groups when
-    they access your website. For example, when a major donor logs into
-    the website display a letter from the President thanking the donor
-    for his contribution and participation, or provide a major donors
-    with pre-registration access to upcoming events and exclusive news
-    or resources.
+Avant toute configuration, vous devriez passer du temps à envisager toutes les interactions que les différents utilisateurs seront amenés à faire avec le site web. Demandez-vous si l'expérience utilisateur dépend d'un groupe particulier, d'équipe, de comité ou si un contact doit remplir certains critères, ou si vous devriez appliquez manuellement des rôles à des utilisateurs.
 
-You should spend some time assessing the different ways that different
-sorts of users interact with your website, being sure to ask yourself
-whether or not the user experience is dependent on specific organized
-groups, teams, committees, or task forces or on whether or not a contact
-meets a specific set of criteria, or if you should apply roles to users
-manually.
+En bref, ce module vous permet de synchroniser les utilisateurs Drupal ayant un certain rôle avec les contacts CiviCRM dans un certain groupe.
 
-In essence, it allows you to synchronize Drupal users that have a
-certain role with CiviCRM contacts in a certain group.
+### Planification
 
-### Preparation
+Avant d'utiliser ce module, vous devriez avoir préparé les points suivants :
+   - les groupes de votre organisation doivent avoir été créés ;
+   - les rôles Drupal correspondant à chaque cas d'utilisation doivent également avoir été créés ;
+   - si vous utilisez des modules supplémentaires pour affiner vos accès au contenu, ces derniers devraient préalablement être installés et configurés.
+
+Au moment de déterminer les groupes et les rôles Drupal que vous devrez créer, il est important de garder en tête que plusieurs types de groupes peuvent être associés à un rôle Drupal, et qu'un seul groupe peut être associé à plusieurs rôles Drupal.
 
 
-Before using CiviGroup Roles Sync module you should have the following
-prepared:
+### Synchroniser les groupes CiviCRM avec les rôles Drupal
 
--   your organization's Groups should be created.
--   the roles you will need for each use case should be created in
-    Drupal.
--   if you are using additional modules to fine-tune access, you should
-    have all modules you need installed and configured
+-   Activez le module depuis l'écran d'administration Drupal des modules ;
+-   Allez à l'écran de configuration CiviGroup Role Sync ;
+-   Cliquez sur **Ajouter une règle d'association**
+-   Sous *Groupe CiviCRM*, sélectionnez le groupe d'utilisateurs pour lesquels vous voulez qu'un rôle Drupal particulier soit associé ;
+-   Sous *Rôle Drupal*, sélectionnez le rôle Drupal à associer ;
+-   Cliquez sur **Ajouter une règle d'association**.
 
-When determining what Groups and what Drupal Roles you should create it
-is important to remember that multiple Group Types may grant the same
-Drupal Role and each Group can be used to grant multiple Drupal roles.
+Vous pouvez toujours modifier ou supprimer une règle ultérieurement depuis ce même écran de configuration.
 
-You should enable the module from the Drupal module administration
-screen.
-
-### Syncing CiviCRM Groups to Drupal Roles
-
--   Navigate to the CiviGroup Role Sync configuration screen.
-
--   Click on **Add Association Rule.**
-
--   Under **CiviCRM Group** select the Group that you want a user to
-    have in order to be granted a specific Drupal Role.
--   Under **Drupal Role** select the Drupal Role that should be granted.
--   Click on **Add Association Rule** when you are finished configuring
-    your new association rule.
-
-You can always edit or delete existing association rules from the same
-configuration screen.
 
 CiviMember Roles Sync
 ---------------------
 
-The CiviMember Roles Sync module allows administrators of Drupal
-Websites to streamline the user experience for organization members. The
-CiviMember Roles Sync module allows you to.
+Le module CiviMember Roles Sync permet aux administrateurs Drupal de gérer et paramétrer l'expérience utilisateur pour les membres de votre organisation. Il permet notamment de :
+-   Accorder automatiquement un rôle Drupal en fonction du type d'adhésion et de son statut ;
+-   Permettre à un utilisateur d'accéder à du contenu réservé aux membres, ou d'executer des tâches que leur sont réservées ;
+-   Restreindre à des anciens membres l'accès à ce contenu et proposer à la place un formulaire de réadhésion.
 
--   Automatically grant a Drupal Role to a user based on the type of
-    membership he/she has with your organization and whether or not
-    he/she is currently in good standing.
--   Allow a user to access member-only content or perform specific
-    member-only tasks.
--   Restrict a non-member or expired member user from accessing
-    member-only content or performing member-only tasks until he/she
-    registers or renews membership with your organization.
+### Exemple de Scenario: Contenu réservé aux membres
 
-### Scenario: Member-only Content
+L'association Retail Baker's of America (RBA) mettre en relation les fournisseurs et les propriétaires de boulangerie à travers tout le pays afin de promouvoir une communité encourageant les échanges d'affaires, les informations industrielles, et établir des standards industriels à travers des certifications, de la recherche et des programmes scolaires.
 
-The Retail Baker's Association of America (RBA) connects bakery
-suppliers and owners across the country to foster a community that
-encourages exchange of business and industry information, networking,
-mentoring, and business opportunities, and establish industry standards
-through certification, research, and school programs.
+Les visiteurs de leur site web tombent dans les trois expériences utilisateur suivantes :
+   - Les non-membres qui achètent du matériel et des ressources via la boutique en ligne de RBA. Un non-membre doit créer un compte utilisateur afin de procéder aux transactions, accèder à son historique d'achat, et éventuellement être contacté par l'association pour se voir proposer une adhésion ;
+   - Les membres ayant une adhésion à jour, et qui ont accès aux ressources *membre uniquement* tel qu'un forum de discussion, du matériel de marketique, et une version numérique des publications de RBA.
+   - Les membres ayant une adhésion expirée, en période de grâce, ou anciens membres souhaitant renouveler leur adhésion pour accèder à nouveau au contenu *membre uniquement*.
+   
+RBA utilise CiviMember Role Sync pour accorder le rôle Drupal "membre actif" à tout utilisateur ayant une adhésion à jour. Ce rôle est enlevé lors de la période de grâce, puis ajouté à nouveau en cas de réadhésion.
 
-Visitors to their website fall into three different user experiences:
+### Planification
 
--   Non-Members who purchase resources and materials from RBA's online
-    boutique. A non-Member must register for a user account to make a
-    transaction so that he or she can keep track of purchase history, so
-    that RBA can petition him or her for membership in the future.
--   Current members in good standing who have access to member-only
-    resources including discussion boards, programs, marketing
-    materials, and digital version of RBA publications.
--   Members with expired memberships or former members who need to renew
-    need to log into the RBA website to renew their membership, but
-    should not have access to member-only resources until their
-    membership has been reactivated.
+Vous devriez passer un peu de temps à réfléchir aux différentes façons dont les utilisateurs interagissent avec votre site web. Demandez-vous s'il existe des cas d'utilisation qui dépendent de votre structure d'adhésion, ou qui dépendent plutôt de comité, équipe ou contacts remplissant certains critères (cf module précédent).
 
-In order to save their staff from having to grant the Drupal Role
-"Active Member" to a user each time he or she renews his or her
-membership and then remove the "Active Member" role if that user cancels
-his or her membership or allows his or her membership to expire, RBA
-uses CiviMember Role Sync to grant the "Active Member" role to any user
-who is either a new or current member and any user who's membership has
-fallen into the grace period. Now when a user registers or renews his or
-her membership he or she will automatically be granted access to RBA's
-Member-Only web content.
+### Types d'adhésion CiviCRM
 
-### What You Need to Know
+Il est important d'avoir une compréhension totale de ce que sont les types et les status d'adhésion CiviCRM. Vous trouverez les explications détaillées sur le composant CiviMember au chapitre [Définition des adhésions](../membership/defining-memberships.md) de la section *Adhésion*
 
-This section covers what you need to think about before beginning to
-work with CiviMember Role Sync.
 
-You should spend some time assessing the different ways that different
-sorts of users interact with your website, being sure to ask yourself
-whether or not the use case is dependent on your membership structure
-or dependent on the organization of committees, teams, and contacts
-meeting a specific set of criteria, or if your workflow simply does not
-warrant the use of CiviMember Role Sync at all.
+### Configurer CiviMember Roles Sync
 
-### CiviCRM Membership Types
+Avant de pouvoir utiliser le module CiviMember Roles Sync, vous devriez avoir préparé les points suivants :
+-   Les types et les status d'adhésion de votre organisation devraient avoir été créés et configurés dans le composant CiviMember ;
+-   Les rôle Drupal nécessaires à vos cas d'utilisation doivent également avoir été créés ;
+-   Les contenus et les tâches accessibles uniquement à un type d'adhésion devraient avoir été identifié
+-   si vous utilisez des modules supplémentaires pour affiner vos accès au contenu, ces derniers devraient préalablement être installés et configurés.
 
-You should have a full understanding of CiviCRM Membership Types and
-CiviCRM Membership Statuses before you begin working with the CiviMember
-Role Sync module. You can learn more about the CiviMember component by
-reviewing the **MEMBERSHIP** chapter.
+Au moment de déterminer les types d'adhésion et les rôles Drupal que vous devrez créer, il est important de garder en tête que plusieurs types d'adhésion peuvent être associés à un même rôle Drupal, et qu'un seul type d'adhésion peut être associé à plusieurs rôles Drupal.
 
-### Configuring CiviMember Roles Sync
+*Dans notre scenario, l'association Retail Baker's of America possède cinq types différents d'adhésion : Sponsor d'entreprise, Boulangerie, Individu, Étudiant et Boulanger retraité. À ces cinq types d'adhésion correspondent un seul rôle Drupal, celui de "Membre actif". Ce rôle donne accès au contenu réservé aux membres. De plus, les adhérents de type Sponsor d'entreprise ont également accès à du contenu supplémentaire exclusif. RBA décide d'appeler le rôle Drupal "Membre d'entreprise". Ces utilisateurs auront donc deux rôles associés : "Membre actif" et "Membre d'entreprise".*
 
-Before using CiviMember Roles Sync module you should have the following
-prepared:
 
--   your organization's Membership Types and Membership Statuses should
-    be created and configured in the CiviMember component.
--   the roles you will need for each use case should be created in
-    Drupal.
--   what content each Membership Type should grant permissions to should
-    be agreed upon by your staff
--   what tasks each Membership Type should grant permission to should be
-    agreed upon by your staff
--   if you are using additional modules to fine-tune access, you should
-    have all modules you need installed and configured
+#### Activer le module CiviMember Roles Sync
 
-When determining what Membership Types and what Drupal Roles you should
-create it is important to remember that multiple Membership Types may
-grant the same Drupal Role and each Membership Type can be used to grant
-multiple Drupal roles.
+1. Allez à la liste de vos modules Drupal :
+    -   Drupal 6: **Administrer** > **Construction du Site** > **Modules** ;
+    -   Drupal 7: **Modules** dans le menu d'administration Drupal ;
 
-*For example: The Retail Bakers Association of America has five
-different membership types: Corporate Sponsor, Bakery, Individual,
-Student, and Retired Bakery. Having any one of the five Membership Types
-will grant a user the "Active Member" Drupal Role that gives access to
-the member-only content. In addition to this, users with the Corporate
-Sponsor Membership Type should have access to additional exclusive
-content. RBA decides calls the Drupal role used to access this
-additional exclusive content "Corporate Member" and user with the
-Corporate Sponsor Membership Type will be granted the "Corporate Member"
-role in addition to the "Active Member" role.*
+2. Cochez la case (mettre à "ON") à côté du module **CiviMember Roles Sync** puis cliquez sur **Enregistrer la configuration** ;
 
-#### Enabling CiviMember Roles Sync Module
+#### Synchroniser les types d'adhésion CiviCRM avec les rôles Drupal
 
-1.
-To enable the CiviMember Roles Sync Module navigate to your list of
-installed Drupal modules.
+1. Allez à l'écran de configuration CiviMember Role Sync :
+    -   Drupal 6: **Administrer** > **Construction du Site** > **CiviMember Roles Sync** ;
+    -   Drupal 7: **Configuration** > **CiviMember Roles Sync** ;
 
-    -   Drupal 6: Go to **Administer > Site Building > Modules**
-    -   Drupal 7: Go to **Modules** from the Administration Menu at the
-    top of your screen.
+2. Cliquez sur **Ajouter une règle d'association** ;
 
-1.
-Find the Module **CiviMember Roles Sync** and check the box to the left
-of the module's name.
+3. Sous *Sélectionnez un type d'adhésion CiviMember*, choisissez celui pour lequel un rôle Drupal sera associé ;
 
-1.
-Click on **Save Configuration**.
+4. Sous *Sélectionnez un rôle Drupal*, choisissez le rôle correspondant.
 
-#### Syncing CiviCRM Membership Types to Drupal Roles
+*Exemple: RBA souhaite que tout utilisateur ayant une adhésion en cours de type "Boulangerie" puisse être gratifié du rôle Drupal "Membre actif". Pour cela, le personnel créera une règle d'association et sélectionnera "Boulangerie" dans la section* Type d'adhésion *, et "Membre actif" dans la section* Rôle Drupal.
 
-1.
-Navigate to the CiviMember Role Sync configuration screen.
+5. Sous *Statut en cours*, sélectionnez le statut d'adhésion pour lequel l'utilisateur devrait voir s'accorder le rôle Drupal.
 
-    -   Drupal 6: Go to *Administer > Site Configuration > CiviMember
-    Roles Sync*
-    -   Drupal 7: Go to *Configuration > CiviMember Roles Sync*
+*Exemple: RBA souhaite gratifier tout utilisateur dont le statut d'adhésion est soit "En cours", soit "Nouveau" soit "Période de grâce" au contenu réservé aux membres. Le personnel va donc cocher les boites correspondant à ces statuts.*
 
-1.
-Click on **Add Association Rule.**
+6. Sous *Statut expiré*, sélectionnez le statut d'adhésion pour lequel le rôle Drupal sera révoqué au niveau de l'utilisateur.
 
-1.
-Under **Select a CiviMember Membership Type** select the Membership Type
-that you want a user to have in order to be granted a specific Drupal
-Role.
+*Exemple: RBA souhaite s'assurer que tout utilisateur dont l'adhésion expire ou soit annulée ai leur accès au contenu réservé aux membres révoqué. Le personnel va donc cocher les boites correspondant à ces statuts.*
 
-1.
-Under **Select a Drupal Role** select the Drupal Role that should be
-granted.
-*Example: RBA wants any user with a Current Bakery Membership Type to be
-granted the "Active Member" role, so the RBA staff creates a new
-Association Rule and selects Bakery under Select a CiviMember Membership
-Type and selects "Active Member" under Select a Drupal Role.*
+7. Cliquez sur **Ajouter une règle d'association** lorsque vous avez terminé.
 
-1.
-Under **Current Status** select the Membership Status that a user
-should have to be granted your selected Drupal Role.
-*Example: RBA wants to grant any user who has a Membership Status of
-either New, Current, or Grace access to the member-only website content,
-so the RBA staff checks the boxes next to those three Membership
-Statuses.*
+8. Répétez les étapes 1 à 7 pour ajouter toutes les règles d'association nécessaires à votre organisation, puis passez à l'étape 9.
 
-1.
-Under **Expired Status** select the Membership Status that will revoke
-the Drupal Role from the user. *Example: RBA wants to make sure that any user
-whose membership expires
-or who cancels their membership has their access to the member-only website
-content revoked, so the RBA staff checks the boxes next to Expired and
-Canceled.*
+9. Cliquez sur l'onglet **Synchroniser manuellement**
 
-1.
-Click on **Add Association Rule** when you are finished configuring your
-new association rule.
+10. Cliquez sur **Synchroniser les types d'adhésion CiviMember avec les rôles Drupal maintenant**.
 
-1.
-The page will reload, and you should see the message "Your Association
-Rule has been added."
+#### Modifier des règles d'association existantes
 
-1.
-Repeat steps 1-8 to add all necessary association rules for your
-organization. Once you have finished adding all of your association
-rules, move on to step 10.
+1. Pour modifier ou supprimer une règle d'association, allez à l'écran de configuration CiviMember Role Sync :
+    -   Drupal 6: **Administrer** > **Construction du Site** > **CiviMember Roles Sync** ;
+    -   Drupal 7: **Configuration** > **CiviMember Roles Sync** ;
 
-1.
-Click on the tab **Manually Synchronize**
+2. Vous devriez voir maintenant la liste des règles existantes. Si ce n'est pas le cas, cliquez sur l'onglet **List Association Rule(s)**.
+    -   Pour modifier une règle :
+            * positionnez-vous sur celle-ci et cliquez sur **modifier** ;
+            * effectuez les changements puis cliquez sur **modifier la règle d'association**
 
-1.
-Click on **Synchronize CiviMember Membership Types to Drupal Roles
-Now**. This will put your new CiviMember Role Sync Association Role
-immediately into effect.
+    -   Pour supprimer une règle :
+            * positionnez-vous sur celle-ci puis cliquez sur **supprimer** ;
 
-#### Editing Existing Association Rules
+#### Configurer les moments de synchronisation
 
-You can always edit or delete existing association rules.
+Vous avez le choix entre différentes options pour synchroniser les types d'adhésion CiviCRM avec les rôles Drupal. Pour cela, allez dans l'écran de configuration CiviMember Role Sync habituel, puis choisissez l'une des options disponibles :
 
-1.
-To edit or delete an existing Association Rule, Navigate to the
-CiviMember Role Sync configuration screen.
+-   Synchronise lorsque quelqu'un se connecte ou se déconnecte (option par défaut) : cette méthode déclenche la synchronisation uniquement après que quelqu'un se soit connecté ou déconnecté de son compte. Vous devriez être prudent avec cette option car si vous gérez des sessions d'utilisateurs très longues, ces derniers auront accès aux contenus ou tâches  *membres uniquement* jusqu'à ce qu'ils se déconnectent ;
+-   Synchronise lors d'un cron Drupal : cette méthode repose sur un cron Drupal pour déclencher la synchronisation. Vous pouvez en savoir plus sur le cron Drupal, allez à [https://www.drupal.org/docs/7/setting-up-cron/overview](https://www.drupal.org/docs/7/setting-up-cron/overview)
+-   Synchronise lorsqu'une adhésion est mise à jour : cette méthode déclenche la synchronisation lorsqu'un utilisateur adhère ou renouvelle son adhésion, ou lorsque qu'un membre du personnel met à jour l'adhésion d'un contact depuis le back-office ;
+-   Désactive la synchronisation automatique : uniquement si vous comptez sur un membre du personnel pour déclencher manuellement la synchronisation. Pour faire cela, allez à **CiviMember Roles Sync settings**, cliquez sur l'onglet **Synchronisation manuelle** puis cliquez sur **Synchronisez les types d'adhésion CiviMember avec les rôles Drupal maintenant**.
 
-    -   Drupal 6: Go to *Administer > Site Configuration > CiviMember
-    Roles Sync*
-    -   Drupal 7: Go to *Configuration > CiviMember Roles Sync*
-
-1.
-You should now see a list of all existing CiviMember Role Sync
-Association Rules. If not, click on **List Association Rule(s)** tab.
-
-    *   Edit an Existing Association Rule
-        *   Find the Association Rule you want to make changes to and click
-on **edit** for that Association rule.
-        *   Make the changes to your Association Rule and when yo are finished click
-on **Edit association rule**.
-
-    *   Delete an Association Rule
-
-        *  Find the Association Rule you want to remove and click on **delete** for
-that Association Rule.
-
-        *  Your association rule will be deleted. You will not need to confirm
-deletion.
-
-#### Configure when Synchronization Should Happen
-
- You can select several different options for when synchronization
-should occur by navigating to the CiviMember Role Sync Configure screen.
-
--   Drupal 6: Go to **Administer > Site Configuration > CiviMember
-    Roles Sync > Configure**
--   Drupal 7: Go to **Configuration > CiviMember Roles Sync >
-    Configure**
-
-#### Automatic Synchronization Methods:
-
--   Synchronize whenever someone logs in or logs out: This method will
-    trigger synchronization only after a user logs in or out of his or
-    her account. You should be careful when using this method because if
-    you have long user sessions a user could continue to have access to
-    actions or content until he or she finally logs out. (This is the
-    default setting)
--   Synchronize when a Drupal Cron occurs: This method relies on a cron
-    to trigger synchronization. Learn more about Drupal Cron at:
-    [http://drupal.org/cron](http://drupal.org/cron)
--   Synchronize when membership is updated: This method will synchronize
-    when the user registers for or renews his or her membership and when
-    the organization staff updates a user's membership information from
-    the back office.
--   Disable Automatic Synchronization: This method relies on an
-    organization staff member to manually trigger synchronization. To
-    manually trigger synchronization, go to **CiviMember Roles Sync
-    settings**, click on the Manually Synchronize tab, and click
-    on Synchronize CiviMember Membership Types to Drupal Roles Now.
-
-Be sure to click **Save Configuration** after making any changes.
+Assurez-vous de cliquer sur **Enregistrer la configuration** après vos changements.
