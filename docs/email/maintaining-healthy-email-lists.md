@@ -1,45 +1,28 @@
-Maintaining Healthy Email Lists
-===============================
+Maintenir des listes de diffusion à jour
+========================================
 
-In the setup chapter we discussed setting up and configuring Email
-lists. In this chapter we are going to delve a bit further into list
-management and discuss compliance. It is important that you keep you
-email lists healthy with low rates of bounced emails and unsubscribes.
+Dans le précédent chapitre, nous avons parlé de la création et du paramétrage des listes de diffusion. Dans ce chapitre, nous allons creuser un peu plus le sujet de la gestion des listes et parler conformité. Il est important de garder ses listes de diffusion avec un taux de rebonds faible et peu de désabonnements.
 
-There is always fear of the dreaded 'blacklist' if you have very high
-bounce rate, or the fear of being scolded by your SMTP provider for the
-same. However, the reality is high bounce rates and unsubscribes
-typically represent a deeper organization issue... and that's really
-scary.
+Il y a également le risque de la redoutée "blacklist" si vous avez un taux de rebond très élevé, ou celui d'être réprimandé par votre fournisseur smtp pour la même raison. Quoiqu'il en soit, gérer les taux de rebonds et les désabonnements représente un important et compliqué enjeu pour votre organisation.
 
-Understanding Email Bounces
----------------------------
+Comprendre les rebonds de courriel
+----------------------------------
 
-Each time you send a bulk email from CiviMail it's possible that some of
-the emails will bounce. Hopefully, only a few. Bounces happen for many
-reasons; some may be temporary, others permanent.
+Chaque fois que vous faites un envoi massif de courriels depuis CiviMail, il est possible que certains d'entre eux rebondissent, c'est à dire qu'un courriel d'erreur spécifique à un destinataire est renvoyé en retour. Les rebonds se produisent pour plusieurs raisons, certaines temporaires et d'autres permanentes.
 
-### So why do emails bounce?
+### Pourquoi les courriels rebondissent ?
 
-If the email bounces, it means it never reached that recipient. It can
-happen for a number of reasons, including the following:
+Si un courriel d'erreur est renvoyé, celui veut dire qu'il n'a jamais atteint sa destination. Les raisons peuvent être les suivantes :
 
-1.  the email address was input incorrectly
-2.  the email address is out of commission
-3.  the email inbox is full and temporarily cannot accept any more
-    messages
-4.  the recipient has an automatic away reply message because they are
-    on vacation and out of the office
+1.  il y a une erreur de frappe dans l'adresse courriel ;
+2.  l'adresse courriel n'existe plus ;
+3.  la boite de réception du destinataire est pleine et ne peut temporairement plus accepter de messages supplémentaires ;
+4.  le destinaire a configuré un message de réponse automatique (absence temporaire, etc).
 
-CiviCRM handles different bounce types differently. Whereas temporary
-bounces will have no affect on a contact record and CiviCRM will attempt
-to send future mailings to this address, permanent bounces may put a
-contact email on **Hold.** When an email is on **Hold**, no future
-emails will be sent to it unless someone fixes it and removes the hold.
+CiviCRM gère ces différents types de rebonds différemment. Les rebonds temporaires n'affecte pas l'enregistrement d'un contact, et CiviCRM tentera de renvoyer le courriel plus tard. En revanche, le système mettra en **Suspendu** tout courriel de contact provoquant un rebond permanent. Dans ce cas, aucun courriel ne sera plus envoyé à cette adresse, jusqu'à ce que quelqu'un resolve le problème et retire ce statut.
 
-A detailed table of each type of bounce and the number of bounces
-allowed before an address is put on hold is available on the wiki
-at: [http://wiki.civicrm.org/confluence/display/CRMDOC/Bounce+Handling](http://wiki.civicrm.org/confluence/display/CRMDOC/Bounce+Handling%20)
+Une table détaillée indiquant le nombre par type de rebonds acceptés par CiviCRM avant que ce dernier ne mette l'adresse du contact en **suspendu** est disponible dans le manuel adminsitrateur à la page [https://docs.civicrm.org/sysadmin/en/latest/setup/civimail/inbound/](inbound mail)
+
 
 ### What do I do if an address is put on hold?
 
