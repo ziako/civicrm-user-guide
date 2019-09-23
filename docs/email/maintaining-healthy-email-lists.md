@@ -21,7 +21,7 @@ Si un courriel d'erreur est renvoyé, celui veut dire qu'il n'a jamais atteint s
 
 CiviCRM gère ces différents types de rebonds différemment. Les rebonds temporaires n'affecte pas l'enregistrement d'un contact, et CiviCRM tentera de renvoyer le courriel plus tard. En revanche, le système mettra en **Suspendu** tout courriel de contact provoquant un rebond permanent. Dans ce cas, aucun courriel ne sera plus envoyé à cette adresse, jusqu'à ce que quelqu'un resolve le problème et retire ce statut.
 
-Une table détaillée indiquant le nombre par type de rebonds acceptés par CiviCRM avant que ce dernier ne mette l'adresse du contact en **suspendu** est disponible dans le manuel adminsitrateur à la page [https://docs.civicrm.org/sysadmin/en/latest/setup/civimail/inbound/](inbound mail)
+Une table détaillée indiquant le nombre par type de rebonds acceptés par CiviCRM avant que ce dernier ne mette l'adresse du contact en **suspendu** est disponible dans le manuel adminsitrateur à la page [inbound mail](https://docs.civicrm.org/sysadmin/en/latest/setup/civimail/inbound/)
 
 
 ### What do I do if an address is put on hold?
