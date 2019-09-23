@@ -101,8 +101,8 @@ pages:
     - "Création d'accès réservés aux membres": 'membership/making-member-only-websites.md'
 - Courriel:
     - "Qu'est-ce que Civimail?": 'email/what-is-civimail.md'
-    - 'What You Need To Know': 'email/what-you-need-to-know.md'
-    - 'Set-up': 'email/set-up.md'
+    - 'Ce que vous avez besoin de savoir': 'email/what-you-need-to-know.md'
+    - 'Configuration': 'email/set-up.md'
     - 'Maintaining Healthy Email Lists': 'email/maintaining-healthy-email-lists.md'
     - 'Everyday tasks': 'email/everyday-tasks.md'
     - 'Mass mailings using CiviMail': 'email/mass-mailings-using-civimail.md'
