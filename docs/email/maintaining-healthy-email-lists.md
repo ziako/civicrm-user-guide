@@ -24,34 +24,23 @@ CiviCRM gère ces différents types de rebonds différemment. Les rebonds tempor
 Une table détaillée indiquant le nombre par type de rebonds acceptés par CiviCRM avant que ce dernier ne mette l'adresse du contact en **suspendu** est disponible dans le manuel adminsitrateur à la page [inbound mail](https://docs.civicrm.org/sysadmin/en/latest/setup/civimail/inbound/)
 
 
-### What do I do if an address is put on hold?
+### Que dois-je faire si une adresse courriel est suspendue ?
 
-Basically you have two options if an email address gets put on hold. You
-can either unhold them or fix/delete them.
+Vous avez basiquement deux options : enlever le statut "suspendu" à l'adresse courriel, ou corriger/supprimer l'adresse.
 
-To release a hold:
-
-1.  Go to **Advanced Search**
-2.  In the **Basic Search Criteria** check the box to search for
-    **Emails On Hold** 
+Pour enlever le statut "Suspendu" :
+1.  Aller dans **Recherche avancée**
+2.  Dans **Critères de base**, cochez "**Courriels suspendus**
 ![image](../img/Mailing%20Basic%20Search.png)
-3.  Once you have the list of contacts with held email addresses, select
-    them and choose the action **Unhold Emails** from the dropdown list
-    and click **Go.**
+3.  Une fois obtenu la liste des contacts concernés, selectionnez les et choisissez l'action **Enlevez la suspension** de la liste déroulante et cliquez sur **Lancer**
 
-To correct/update held emails you'll first need to create a group(s) for
-bad emails, then:
-
-1.  In the top menu, go to **Reports**
-2.  Select **Mail Bounce Report**
-3.  The report will show contacts whose emails have bounced.
-4.  You can then open **Report Criteria** at the top of the mailing to
-    limit the report to a specific bounce type.
-5.  From here you add the contacts in your search results to the group
-    you first created.
-6.  Pull up the group via **Advanced Search.** It is also recommended
-    that you select **Email on Hold** to avoid querying records that
-    have previously bounced but may have been already updated.
+Pour corriger / mettre à jour les adresses, vous devez d'abord créer un groupe (destiné à contenir les adresses en erreur), puis :
+1.  Dans le menu supérieur, allez à **Rapports**
+2.  Sélectionnez **Rapport des rebonds de courriels**
+3.  Le rapport vous montrera la listes des contacts pour lesquels les courriels rebondissent.
+4.  Vous pouvez alors ouvrir **Critères de rapport** dans la partie supérieur pour filtrer le rapport à un type précis de rebond
+5.  À partir d'ici, vous pouvez ajouter les contacts issus de votre recherche au groupe précédemment créé.
+6.  Listez le groupe via **Recherche avancée**, en cochant à nouveau **Courriel suspendu** au cas où des mises à jour auraient déjà été effectuées sur certains contacts.
 7.  Select **Batch Update via Profile** for all the results whose email
     addresses you can correct/update. This will require a profile in
     place that contains *just* **Primary Email**.
