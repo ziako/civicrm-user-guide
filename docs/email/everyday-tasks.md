@@ -1,12 +1,10 @@
-Everyday tasks
-==============
+Tâches quotidiennes
+===================
 
-This chapter contains step-by-step instructions for performing some important
-everyday tasks with email. Sending a mass mailing through CiviMail is covered
-in [Mass mailings using CiviMail](../email/mass-mailings-using-civimail)
+Ce chapitre contient des instructions pas-à-pas pour exécuter les tâches importantes quotidiennes avec le courriel. Réaliser une diffusion de masse à l'aide de CiviMail est expliqué dans le chapitre suivant [Diffusion de masse en utilisant CiviMail](../email/mass-mailings-using-civimail)
 
-Send an email to one person (with CC and BCC)
------------------------------------------------
+Envoyer un courriel à une personne (avec CC et BCC)
+---------------------------------------------------
 
 You can use CiviCRM to send an email to individuals. Using CiviCRM for
 this purpose is useful if you want other people at your organisation to
