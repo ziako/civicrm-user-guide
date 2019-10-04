@@ -104,7 +104,7 @@ pages:
     - 'Ce que vous avez besoin de savoir': 'email/what-you-need-to-know.md'
     - 'Configuration': 'email/set-up.md'
     - 'Maintaining Healthy Email Lists': 'email/maintaining-healthy-email-lists.md'
-    - 'Everyday tasks': 'email/everyday-tasks.md'
+    - 'Tâches quotidiennes': 'email/everyday-tasks.md'
     - 'Mass mailings using CiviMail': 'email/mass-mailings-using-civimail.md'
     - 'Using tokens in emails': 'email/using-tokens-in-emails.md'
     - 'Reports and analysis': 'email/reports-and-analysis.md'
