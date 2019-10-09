@@ -1,10 +1,10 @@
 site_name: "Guide d'utilisation et d'administration de CiviCRM"
-site_url: http://rtfd.civicrm.org
-repo_url: https://github.com/civicrm-french/civicrm-user-guide
+site_url: http://docs.civicrm.org/user/fr/latest
+repo_url: https://lab.civicrm.org/documentation/docs/user-fr
 site_description: 'Un guide pour les utilisateurs et administrateurs de CiviCRM.'
 site_author: 'La communauté de CiviCRM'
 
-theme: readthedocs
+theme: material
 
 pages:
 - Accueil: 'index.md'
