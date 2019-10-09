@@ -1,5 +1,5 @@
-Everyday Tasks
-==============
+Tâches quotidiennes
+===================
 
 This chapter assumes that CiviReport is already configured and you are a
 user wanting to access reports that have been configured for you. If you
