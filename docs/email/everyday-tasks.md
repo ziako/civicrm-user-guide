@@ -1,109 +1,50 @@
-Everyday tasks
-==============
+Tâches quotidiennes
+===================
 
-This chapter contains step-by-step instructions for performing some important
-everyday tasks with email. Sending a mass mailing through CiviMail is covered
-in [Mass mailings using CiviMail](../email/mass-mailings-using-civimail)
+Ce chapitre contient des instructions pas-à-pas pour exécuter les tâches importantes quotidiennes avec le courriel. Réaliser une diffusion de masse à l'aide de CiviMail est expliqué dans le chapitre suivant [Diffusion de masse en utilisant CiviMail](../email/mass-mailings-using-civimail)
 
-Send an email to one person (with CC and BCC)
------------------------------------------------
+Envoyer un courriel à une personne (avec cc et bcc)
+---------------------------------------------------
 
-You can use CiviCRM to send an email to individuals. Using CiviCRM for
-this purpose is useful if you want other people at your organisation to
-see the email or if you want to send an email based on a pre-defined
-template.
+Vous pouvez utiliser CiviCRM pour envoyer un courriel à des individus. Utiliser ce système est pratique si vous souhaitez que d'autres personnes de votre organisation puissent voir votre message ou si vous souhaitez envoyer un courriel à partir d'un modèle prédéfini.
 
-1.  Find the person you wish to email. There are two common ways to do
-    this:
-    -   Use the Quick Search box on the top left. Click inside the box
-        and begin typing a part of the person's name or email address.
-        Choose the person from the choices that are presented.
-    -   Navigate to **Search > Find Contact**. Enter part of the
-        person's name or email address. Click Search and click on the
-        person's name when it shows up on the search results screen.
-2.  From the contact summary page, click **Actions > Send an email** or
-    click the **Activities** tab and choose **Send an Email** from the
-    dropdown menu.
-3.  You can add additional recipients using the CC and BCC fields.
-4.  If you have templates defined, you can choose one from the Use
-    Template dropdown menu. Selecting a template populates the text
-    content and HTML content fields with the message content from the
-    particular template you have chosen. You can then edit that
-    content.
-5.  Enter your content or add content to your template. If you just wish
-    to send a Plain Text version of your email, ignore the HTML Format
-    section and click on the Plain Text Format section. Enter your
-    message in the box.
-6.  Click **Send** to send your message.
+1.  Trouver la personne à qui vous souhaitez envoyer le courriel (via la barre de recherche rapide ou en passant par le menu **Rechercher > Rechercher des contacts**) ;
+2.  Depuis la page résumé du contact, cliquez sur **Actions > Envoyer un courriel** ou cliquez l'onglet **Activités** et choisissez **Envoyer un courriel** depuis le menu déroulant ;
+3.  Vous pouvez ajouter des récipiendaires supplémentaires en remplissant les champs cc et bcc ;
+4.  Si vous avez un modèle prédéfini, vous pouvez le sélectionner depuis le menu déroulant **Utiliser modèle**. La sélection remplira le contenu texte et les champs de contenu HTML avec le contenu de message du modèle choisi. Vous pouvez également éditer ensuite ce contenu.
+5. Entrez votre contenu ou ajoutez-le à votre modèle. Si vous souhaitez juste envoyer du texte brut, ignorez simplement la section *HTML format* et cliquez sur la section *Plain text format*. Entrez votre message dans la boite de dialogue.
+6.  Cliquez sur **Envoyer**.
 
-To see the activity that was just recorded of the email sent, click the
-Activities tab of the contact.
+Pour vérifier que l'envoi a bien été enregistré dans l'historique du contact, cliquez sur l'onglet *Activités* de la fiche contact.
 
-Sending a quick email to less than 50 contacts
-----------------------------------------------
+Envoyer un courriel simple jusqu'à 50 contacts
+-----------------------------------------------------
 
-In the results from a search, CiviCRM makes "Send Email to Contacts"
-available from the actions dropdown menu. This allows you to send an
-email to more than one contact at a time. Sending an email this way is
-relatively quick, but it provides no options for tracking email and
-doesn't give contacts the option to opt out. It is bad practice to use
-this method for mass mailings, which is why it is limited to 50
-contacts. For mass mailings, use CiviMail.
+Dans les résultats d'une recherche, CiviCRM propose l'option "Envoyer un courriel aux contacts" dans le menu déroulant des actions. Cette action est relativement rapide, mais ne permet pas le suivi du courriel et ne propose pas d'option d'opt-out. Cette méthode ne doit pas être utilisée pour la diffusion de masse, raison pour laquelle elle est limitée à 50 contacts.
 
-1.  Click **Search > Find Contacts** (or **Advanced
-    Search**). Choose your search criteria and click Search (or use
-    any other search to find the contacts that you wish to email).
-2.  From the search results screen, choose some or all of the contacts
-    and click **Actions > Email -send now (to 50 or less)**.
-3.  Follow the same steps as in sending an email to one person.
+L'envoi du courriel sera enregistré dans l'onglet *Activité* de chaque destinataire, ainsi que dans celui de l'expéditeur. L'enregistrement contiendra également le nom de tous les autres récipiendaires.
 
-Each of the recipient contacts will have this email recorded as an
-Activity in their record. An activity will also be recorded for the
-sender. The activity record will also list all the other message
-recipients. Unlike with mass mailing (see below) there is no one place
-where all emails sent via the Send Email function are listed.
+**Note:** Si un message est envoyé à plusieurs récipiendaires, ces derniers ne verront que leur nom apparaitre dans le champ *To*. Si vous souhaitez qu'ils connaissent les autres destinataires, il faudra que vous le précisiez dans le corps de votre courriel (par ex. "Chers membres du comité d'administration").
 
-**Note:** If a message is sent to multiple recipients, each recipient
-will see only their own email address in the To field. Because the
-recipients don't see who else received the email, you might want to
-mention whom you are sending it to in the text of your mail (for
-instance: "TO: Members of the board, staff")
+Insérer une image dans un courriel
+----------------------------------
 
-Inserting an image in an email
-------------------------------
-
-Click the **image button** in the WYSIWYG editor.
+Cliquez sur le **bouton image** de votre éditeur WYSIWYG.
 
 ![](../img/Screen%20Shot%202015-04-25%20at%203.06.40%20PM.png)
 
-The Image Properties window will appear. Click **Browse Server** to look
-for image files on your server.
+La fenêtre *Propriétés de l'image* apparait. Cliquez sur **Parcourir le serveur**.
 
 ![](../img/civimail_window%20to%20browse%20server%202.jpg)
-In the left sidebar, you will see a directory of files. If the image you
-need is already uploaded to your server, navigate to it in the directory
-and select it. If not, Click **Upload** to choose a file from your
-computer.
+
+Dans la colonne de gauche sont affichés les dossiers. Si l'image dont vous avez besoin est déjà disponible sur le serveur, naviguez jusqu'à elle et sélectionnez-là. Sinon, cliquez sur **Envoyer** pour choisir un fichier sur votre ordinateur local.
 
 ![](../img/civimail_file%20directory%203.jpg)
 
-Your computer's file-browsing window will open. Find the image file you
-want,
-click to select it and click **Open**. You can repeat this process to
-upload multiple files to CiviCRM at once.
+Pour insérer, double-cliquez sur l'image souhaitée. Cela vous fera revenir sur la fenêtre *Propriétés de l'image* de votre courriel.
 
-To insert, double click on the image you want. You'll return to the
-Image Properties window of your email.
+Vous pouvez alors ajuster la taille et l'alignement de votre image, ainsi que sa bordure. Vous pouvez également ajouter un texte alternatif, ce qui est recommandé pour des raisons d'accessibilité et de compatiblité.
 
-Here you can add adjust the size and alignment of the image and the
-border around it. You can also fill in the Alternative Text field, which
-is text that appears when the image is not available to the reader (if
-they choose not to load images in their email client, or are using
-a[](http://en.wikipedia.org/wiki/Screen_reader "Screen reader") screen
-reader due to a visual impairment). The alternative text ensures no
-information is lost; it's a best practice to always include alt text for
-images to make email accessible to all user communities.
-
-Click **OK** to insert the image.
+Cliquer sur **OK** pour insérer l'image.
 
 ![](../img/civimail_Insert%20image%206.jpg)

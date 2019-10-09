@@ -1,126 +1,67 @@
-Maintaining Healthy Email Lists
-===============================
+Maintenir des listes de diffusion à jour
+========================================
 
-In the setup chapter we discussed setting up and configuring Email
-lists. In this chapter we are going to delve a bit further into list
-management and discuss compliance. It is important that you keep you
-email lists healthy with low rates of bounced emails and unsubscribes.
+Dans le précédent chapitre, nous avons parlé de la création et du paramétrage des listes de diffusion. Dans ce chapitre, nous allons creuser un peu plus le sujet de la gestion des listes et parler conformité. Il est important de garder ses listes de diffusion avec un taux de rebonds faible et peu de désabonnements.
 
-There is always fear of the dreaded 'blacklist' if you have very high
-bounce rate, or the fear of being scolded by your SMTP provider for the
-same. However, the reality is high bounce rates and unsubscribes
-typically represent a deeper organization issue... and that's really
-scary.
+Il y a également le risque de la redoutée "blacklist" si vous avez un taux de rebond très élevé, ou celui d'être réprimandé par votre fournisseur smtp pour la même raison. Quoiqu'il en soit, gérer les taux de rebonds et les désabonnements représente un important et compliqué enjeu pour votre organisation.
 
-Understanding Email Bounces
----------------------------
+Comprendre les rebonds de courriel
+----------------------------------
 
-Each time you send a bulk email from CiviMail it's possible that some of
-the emails will bounce. Hopefully, only a few. Bounces happen for many
-reasons; some may be temporary, others permanent.
+Chaque fois que vous faites un envoi massif de courriels depuis CiviMail, il est possible que certains d'entre eux rebondissent, c'est à dire qu'un courriel d'erreur spécifique à un destinataire est renvoyé en retour. Les rebonds se produisent pour plusieurs raisons, certaines temporaires et d'autres permanentes.
 
-### So why do emails bounce?
+### Pourquoi les courriels rebondissent ?
 
-If the email bounces, it means it never reached that recipient. It can
-happen for a number of reasons, including the following:
+Si un courriel d'erreur est renvoyé, celui veut dire qu'il n'a jamais atteint sa destination. Les raisons peuvent être les suivantes :
 
-1.  the email address was input incorrectly
-2.  the email address is out of commission
-3.  the email inbox is full and temporarily cannot accept any more
-    messages
-4.  the recipient has an automatic away reply message because they are
-    on vacation and out of the office
+1.  il y a une erreur de frappe dans l'adresse courriel ;
+2.  l'adresse courriel n'existe plus ;
+3.  la boite de réception du destinataire est pleine et ne peut temporairement plus accepter de messages supplémentaires ;
+4.  le destinaire a configuré un message de réponse automatique (absence temporaire, etc).
 
-CiviCRM handles different bounce types differently. Whereas temporary
-bounces will have no affect on a contact record and CiviCRM will attempt
-to send future mailings to this address, permanent bounces may put a
-contact email on **Hold.** When an email is on **Hold**, no future
-emails will be sent to it unless someone fixes it and removes the hold.
+CiviCRM gère ces différents types de rebonds différemment. Les rebonds temporaires n'affecte pas l'enregistrement d'un contact, et CiviCRM tentera de renvoyer le courriel plus tard. En revanche, le système mettra en **Suspendu** tout courriel de contact provoquant un rebond permanent. Dans ce cas, aucun courriel ne sera plus envoyé à cette adresse, jusqu'à ce que quelqu'un resolve le problème et retire ce statut.
 
-A detailed table of each type of bounce and the number of bounces
-allowed before an address is put on hold is available on the wiki
-at: [http://wiki.civicrm.org/confluence/display/CRMDOC/Bounce+Handling](http://wiki.civicrm.org/confluence/display/CRMDOC/Bounce+Handling%20)
+Une table détaillée indiquant le nombre par type de rebonds acceptés par CiviCRM avant que ce dernier ne mette l'adresse du contact en **suspendu** est disponible dans le manuel adminsitrateur à la page [inbound mail](https://docs.civicrm.org/sysadmin/en/latest/setup/civimail/inbound/)
 
-### What do I do if an address is put on hold?
 
-Basically you have two options if an email address gets put on hold. You
-can either unhold them or fix/delete them.
+### Que dois-je faire si une adresse courriel est suspendue ?
 
-To release a hold:
+Vous avez basiquement deux options : enlever le statut "suspendu" à l'adresse courriel, ou corriger/supprimer l'adresse.
 
-1.  Go to **Advanced Search**
-2.  In the **Basic Search Criteria** check the box to search for
-    **Emails On Hold** 
+Pour enlever le statut "Suspendu" :
+1.  Aller dans **Recherche avancée**
+2.  Dans **Critères de base**, cochez **Courriels suspendus**
 ![image](../img/Mailing%20Basic%20Search.png)
-3.  Once you have the list of contacts with held email addresses, select
-    them and choose the action **Unhold Emails** from the dropdown list
-    and click **Go.**
+3.  Une fois obtenu la liste des contacts concernés, selectionnez les et choisissez l'action **Enlevez la suspension** de la liste déroulante et cliquez sur **Lancer**
 
-To correct/update held emails you'll first need to create a group(s) for
-bad emails, then:
+Pour corriger / mettre à jour les adresses, vous devez d'abord créer un groupe (destiné à contenir les adresses en erreur), puis :
+1.  Dans le menu supérieur, allez à **Rapports**
+2.  Sélectionnez **Rapport des rebonds de courriels**
+3.  Le rapport vous montrera la listes des contacts pour lesquels les courriels rebondissent.
+4.  Vous pouvez alors ouvrir **Critères de rapport** dans la partie supérieur pour filtrer le rapport à un type précis de rebond
+5.  À partir d'ici, vous pouvez ajouter les contacts issus de votre recherche au groupe précédemment créé.
+6.  Listez le groupe via **Recherche avancée**, en cochant à nouveau **Courriel suspendu** au cas où des mises à jour auraient déjà été effectuées sur certains contacts.
+7.  Sélectionnez **Mise à jour par lot à travers un Profil** pour que tous les résultats avec une adresse courriel incorrecte soient corrigés. Cela nécessite un profil qui contient *simplement* **Primary Email**.
+8.  Sélectionnez ce profile et cliquez sur **Mettre à jour**.
 
-1.  In the top menu, go to **Reports**
-2.  Select **Mail Bounce Report**
-3.  The report will show contacts whose emails have bounced.
-4.  You can then open **Report Criteria** at the top of the mailing to
-    limit the report to a specific bounce type.
-5.  From here you add the contacts in your search results to the group
-    you first created.
-6.  Pull up the group via **Advanced Search.** It is also recommended
-    that you select **Email on Hold** to avoid querying records that
-    have previously bounced but may have been already updated.
-7.  Select **Batch Update via Profile** for all the results whose email
-    addresses you can correct/update. This will require a profile in
-    place that contains *just* **Primary Email**.
-8.  Select this profile and click **Update**.
+### Différence entre courriels suspendus et désinscription
 
-### The difference between on hold emails and unsubscribes
+Les courriels dont le statut est "suspendu" sont différents des courriels pour lesquels les destinataires se sont désinscrits. Ces derniers ont cliqué sur le lien "Se désinscrire de cette newsletter". Ce lien est créé à l'aide du jeton **{action.unsubscribe}** ou **{action.unsubscribeUrl}**.
 
-Emails that have been held are different from emails that have been
-unsubscribed. Unsubscribers have clicked the linked text in an email
-that said “unsubscribe from this mailing”. This link is created by one
-of these tokens in an email: **{action.unsubscribe}** or
-**{action.unsubscribeUrl}**
+Les destinataires qui se sont désinscrits sont simplement retirés du groupe correspondant à la liste de diffusion utilisée.
 
-Email recipients who unsubscribe from a single mailing list will simply
-be removed from the group you used as a mailing list to send to.
+### Quelle est la différence entre l'opt-out et la désinscription ?
 
-### What is the difference between opting out and unsubscribing?
+Les destinataires de couriels peuvent également choisir de ne recevoir aucun courriel de diffusion de masse, en cliquant sur le lien fourni dans les messages de ce type. Cela s'appelle l'opt-out ou "option de retrait" en français. Vous pouvez toujours envoyer un courriel à quelqu'un ayant procédé à l'opt-out avec l'action **Envoyer courriel**, accessible depuis sa fiche contact ou en resultat de recherche. Les rappels planifiés seront également envoyés à ces personnes. Attention toutefois au courriel que vous envoyez à une personne ayant procédé à l'opt-out : vous pourriez être accusé d'envoyer du spam.
 
-Email recipients also have the option of not receiving any bulk emails
-from you by clicking a link you provide in every mass email. This is
-called "opting out". You can still send individual or small volume
-emails to someone who has opted out using the **Send Email** action
-which is accessible via the contact's record or after a search.
-Scheduled reminders will also still be sent to contacts who have opted
-out. You should be very careful about the emails you send to someone who
-has opted out if you do not want to be accused of sending spam. 
+Pour procéder à l'opt-out, le destinataire du courriel peut cliquer sur le lien du courriel généré par l'un des jetons suivants : **{action.optOut}** ou **{action.optOutUrl}**
 
-To opt out, an email recipient can click the linked text in an email
-created by one of these opt-out tokens: **{action.optOut}
-{action.optOutUrl}**
+Vous pouvez inclure ces jetons directement dans le corps ou dans le pied de page de votre courriel (Plus d'information sur les jetons, rendez-vous au chapitre [Jetons, fusions et publipostages](https://docs.civicrm.org/user/fr/latest/common-workflows/tokens-and-mail-merge/). Pour en savoir plus sur les pieds de pages, rendez-vous à la rubrique [Création d'en-têtes et de pieds de page](https://docs.civicrm.org/user/fr/latest/email/set-up/#creation-den-tetes-et-de-pieds-de-page) du chapitre Configuration.
 
-You can include these tokens directly in the body of your mailing or in
-a footer message. (For more on tokens, see here:
-[http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens.](http://wiki.civicrm.org/confluence/display/CRMDOC/Tokens.)
-For more on footers, see the previous section in this chapter, *Set up > Creating headers and footers.*)
+### Qu'est-ce que l'option de protection de la vie privée "ne pas envoyer de courriel" signifie ?
 
-### What does the privacy option 'Do not email' mean?
+Si un contact a activé cette option, alors vous ne serez pas en mesure de lui envoyer des courriels individuels ou en petits volumes en utilisant l'action "Envoyer un courriel" disponible sur sa fiche contact et en résultat d'une recherche. Il ne recevra pas non plus des courriels de diffusion de masse envoyé avec CiviMail. Toutefois, il recevra toujours les courriels générés par les rappels planifiés, à moins de l'avoir exclu spécifiquement de ces rappels (ce qui est probablement une bonne chose à faire dans ce cas précis). Pour en savoir plus sur ce point, allez au chapitre [Rappels planifiés](https://docs.civicrm.org/user/fr/latest/email/scheduled-reminders/) de cette section.
 
-If a contact has this option selected then you will not be able to send
-them individual or small volume emails using the **Send Email** action
-reached via the contact's record or after a search. They will not
-receive bulk emails sent through CiviMail, either. However they will
-still be sent scheduled reminders unless you specifically exclude them
-from those reminders. If the **Do not email** option is set manually
-after someone has contacted you in person, it is probably a good idea to
-exclude them from scheduled reminders. The *Schedule Reminders* chapter
-outlines how to do that.
+### Comment puis-je être certain qu'un contact ne reçoive aucun courriel ?
 
-### How can I make sure a contact doesn't receive any emails?
-
-Due to user error, there is always a chance that someone could change
-CiviCRM settings incorrectly or manually misuse an email address. The
-only way to fully guarantee that a contact doesn't receive any emails is
-to remove all email addresses from the contact's record. However, in
-this case the contact would not be able to log in to your website.
+Une erreur humaine est toujours possible. Pour garantir totalement qu'un contact ne reçoive plus aucun courriel, il faut dans ce cas supprimer toutes les adresses courriels de sa fiche. Toutefois, dans ce cas là, le contact ne pourra plus se connecter à votre site web.
