@@ -1,90 +1,44 @@
-What You Need To Know
-=====================
+Ce que vous devez savoir
+========================
 
-The following concepts and questions will help you to get the most out
-of using the survey tool in CiviCampaign.
+Les concepts et les questions suivants vous aideront à tirer le meilleur parti de l'outil de sondage de CiviCampaign.
 
-Key Concepts
+Concepts clés
 -------------
 
-These concepts are not about creating and undertaking surveys in
-general, but about the specific use of the survey tool in CiviCampaign.
+Ces concepts ne concernent pas la création et la réalisation d’enquêtes en général, mais l’utilisation spécifique de l’outil sondage dans CiviCampaign.
 
-### Custom Fields and Profiles
+### Champs personnalisés et profils
 
-CiviCampaign surveys use profiles to capture survey participants'
-responses. Once you've decided on your questions and the types of
-responses, you need to create custom fields for the questions and
-responses with option values if you're collecting multiple choice
-responses. You can then either create a new profile from the main
-profile screen or create a new profile when you are creating a survey. A
-profile is used to display the survey questions.
+Les sondages CiviCampaign utilisent des profils pour saisir les réponses des participants. Une fois que vous avez choisi vos questions et les types de réponses, vous devez créer des champs personnalisés pour les questions et les réponses avec des valeurs d'option si vous collectez des réponses à choix multiples. Vous pouvez ensuite soit créer un nouveau profil à partir de l'écran de profil principal, soit créer un nouveau profil lorsque vous créez un sondage. Un profil est utilisé pour afficher les questions du sondage.
 
-To learn more about how to create custom field sets, see the chapter
-called *Creating Custom Fields* in the section *Organising Your Data*. To learn how
-to create a custom profile, see the chapter Profiles in the same
-section.
+Pour en savoir plus sur la création de jeux de champs personnalisés, voir le chapitre *Creating Custom Fields* dans le paragraphe *Organising Your Data*. Pour apprendre à créer un profil personnalisé, voir le chapitre Profiles dans le même paragraphe.
 
-### Reserving and releasing respondents
+### Réservation et libération des répondants
 
-Before you can capture responses to your survey, you need to create a
-group made up of the contacts you are seeking responses from. This could
-be an existing group within your contacts, or you may need to create a
-group specifically for the survey. Survey describes this process as
-reserving respondents. When the contact has completed the survey and
-their data recorded, they are released from this group.
+Avant de pouvoir capturer les réponses à votre sondage, vous devez créer un groupe composé des contacts pour lesquels vous recherchez des réponses. Il peut s’agir d’un groupe existant au sein de vos contacts ou de la création d’un groupe spécifique au sondage. Un sondage décrit ce processus comme réservant les répondants. Lorsque le contact a terminé le sondage et que ses données ont été enregistrées, ils sont libérés de ce groupe.
 
-You can learn more about creating groups in the chapter *Groups and Tags*
-in the section *Organising Your Data*.
+Pour en savoir plus sur la création de groupes, consultez le chapitre *Groupes et étiquettes* dans le paragraphe *Organisation de vos données*.
 
-Surveys are designed to capture responses from existing contacts; if you
-are seeking responses from the wider public, use the Petition tool; see
-the Petitions section for information on this.
+Les enquêtes sont conçues pour capturer les réponses des contacts existants; Si vous souhaitez obtenir des réponses du grand public, utilisez l'outil Pétition. voir la section Pétitions pour plus d'informations.
 
-### CiviCampaign and CiviEngage
+### CiviCampaign et CiviEngage
 
-Surveys are part of the functionality of the CiviCampaign component, so
-you must have this enabled in order to use surveys; however, you can
-create surveys that are not connected to a specific campaign. For
-example, an organisation may wish to conduct a membership satisfaction
-service to assess the performance of their own service, without having
-it associated with a campaign.
+Les sondages font partie des fonctionnalités du composant CiviCampaign. Vous devez donc l'activer pour pouvoir utiliser les sondages. Cependant, vous pouvez créer des sondages qui ne sont pas liés à une campagne spécifique. Par exemple, une organisation peut souhaiter organiser une enquête de satisfaction des membres pour évaluer la performance de son propre service, sans l'associer à une campagne.
 
-See the *Campaigns* section for information about setting up CiviCampaign.
+Reportez-vous à la section *Campagnes* pour plus d'informations sur la configuration de CiviCampaign.
 
-Drupal sites with the module CiviEngage enabled, will have additional
-result set options profiles that configure surveys to allow you to track
-the status of responses to the survey. To find out more about how
-CiviEngage enhances the Survey feature, see the section called Civic
-Engagement.
+Les sites Drupal avec le module CiviEngage activé auront des profils d'options de jeu de résultats supplémentaires qui configurent les sondages pour vous permettre de suivre l'état des réponses à ce sondage. Pour en savoir plus sur les améliorations apportées par CiviEngage à la fonction Sondage, consultez la section intitulée Civic Engagement.
 
-### Drupal Permissions
+### Autorisations Drupal
 
-If you are using Drupal, you need to set permissions to allow specific
-roles to Reserve Campaign Contacts and Release Campaign Contacts when
-conducting the surveys. To learn more about setting Drupal permissions,
-go to the Drupal documentation at
-[http://drupal.org/getting-started/6/admin/user/permissions](http://drupal.org/getting-started/6/admin/user/permissions).
+Si vous utilisez Drupal, vous devez définir des autorisations pour autoriser des rôles spécifiques pour "Réserver" des contacts de campagne et "Libérer" des contacts de campagne lors de la réalisation des enquêtes. Pour en savoir plus sur la définition des autorisations Drupal, consultez la documentation Drupal à l'adresse http://drupal.org/getting-started/6/admin/user/permissions.
 
-Key Questions
--------------
+Questions clés
+--------------
 
--   Is the survey part of a campaign? When creating a survey, you don't
-    have to connect it to a specific campaign; a general survey may be
-    used for any programme in your organisation. But if you are using
-    surveys as a particular strategy within a campaign, connecting the
-    survey to the campaign will enable you to analyse the survey along
-    with other strategies and activities related to this campaign.
--   Think about the specific questions and types of responses you want
-    to gather. Do you want to standard set of responses to make it
-    easier to analyse results to specific questions, e.g. Yes, No,
-    Undecided, Declined? Or is an open-ended question more appropriate,
-    to allow the individual to provide you with a narrative?
--   How many questions do you need to ask? If it is more than one, you
-    will need to create custom fields; if it is more than three,
-    consider using Petition instead of Survey.
--   Who will conduct the survey, and how will the data be entered into
-    CiviCRM?
--   What group of your constituents do you want to survey?
-
-
+-   Le sondage fait-il partie d’une campagne? Lors de la création d'un sondage, il n'est pas nécessaire de le connecter à une campagne spécifique. un sondage général peut être utilisé pour n’importe quel programme de votre organisation. Mais si vous utilisez les sondages comme stratégie particulière dans une campagne, associer le sondage à la campagne vous permettra d'analyser le sondage ainsi que d'autres stratégies et activités liées à cette campagne.
+-   Réfléchissez aux questions spécifiques et aux types de réponses que vous souhaitez recueillir. Voulez-vous un ensemble standard de réponses pour faciliter l'analyse des résultats à des questions spécifiques, par exemple Oui, non, indécis, sans réponse? Ou une question ouverte est-elle plus appropriée pour permettre à la personne de vous fournir un récit?
+-   Combien de questions devez-vous poser? S'il en existe plusieurs, vous devrez créer des champs personnalisés. si le nombre de champs est supérieur à trois, envisagez d'utiliser Pétition au lieu de Sondage.
+-   Qui mènera le sondage et comment les données seront-elles saisies dans CiviCRM?
+-   Quel groupe de vos électeurs (répondants) souhaitez-vous interroger?
