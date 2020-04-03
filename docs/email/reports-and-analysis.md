@@ -1,112 +1,96 @@
-Reports and analysis
+Rapports et analyse
 ====================
 
-CiviMail has a number of tools for reporting and analysis; indeed
-reporting is one of the key reasons to use CiviMail.
+CiviMail dispose de nombreux outils pour le reporting et l'analyse ; 
+le reporting est une des raisons clés pour utiliser CiviMail.
 
-Individual mail reports
-------------------------
+Un rapport pour chaque envoi de courriel
+----------------------------------------
 
-You can view a report for each individual mailing from the **Mailings >
-Scheduled and Sent Mailings**. These reports are based on live
-information about your data; you can track your emails in real time by
-refreshing the page. Each mailing report is broken down into a few
-sections. The availability of data is dependent on you enabling tracking
-of the items when you set up your mailing. 
+Vous pouvez visualiser un rapport pour chaque mail individuel depuis
+**Envois en masse > Envois programmés et courriels envoyés**. Ces
+rapports présentent les statistiques vivantes à propos de votre envoi ;
+vous pouvez suivre vos courriels en temps réel en actualisant la page.
+Chaque rapport d'envoi de courriel est découpé en quelques sections.
+En fonction de votre paramétrage pour l'envoi, plus ou moins de données
+sont disponibles. 
 
-### Delivery summary
+### Résumé de livraison
 
 ![report_email](../img/report_email-en.gif "report_email")
 
-The delivery summary shows some high-level statistics about the mailing.
-Clicking on the links in the Delivery Summary will show a list of the
-contacts that took the action.
+Le résumé de livraison affiche des statistiques de haut niveau à propos
+de votre envoi en masse.
+En cliquant sur les liens dans ce résumé, vous verrez une liste de contacts
+qui ont réalisé telle ou telle action.
 
-**Intended Recipients** shows the number of people that the mailing was
-intended to be sent to. 
+**Destinataires prévus** affiche le nombre de personnes prévu auquel l'envoi a été adressé.
 
-**Tracked Opens** shows the number of people that CiviCRM thinks have
-opened the email *if you have chosen to track opens*.
+**Ouvertures suivies** affiche le nombre de personnes qui ont ouvert le courriel, selon CiviCRM *si vous avez activé le paramètre de suivi des ouvertures*.
 
-**Note:** In the world of email, there is no 100% reliable way of
-knowing when someone has opened an email. CiviCRM uses a trick that is
-common amongst mass mailers—it embeds a small image with a unique name
-in each email. When a client views the email and downloads the image,
-CiviCRM knows that they have read the email. Because this technique is
-common, to protect people's privacy, most email clients ask users to
-confirm whether they want to download images in emails. Hence your
-report really tells you the number of people who downloaded the images;
-the actual number of readers is higher than the number reported. Tracked
-opens statistics should be taken as indicative, rather than accurate. In
-our experience, a 30% reported opening rate can be considered good. This
-is obviously different for each organisation and each group you send
-emails to.
+**Note :** Dans le monde de l'emailing, il n'existe aucun moyen fiable à 100%
+de savoir quand quelqu'un a ouvert un courriel. CiviCRM utilise une astuce qui est
+commune chez les fournisseurs d'envois en masse - il intègre une petite image
+avec un nom unique dans chaque courriel. Lorsqu'un client affiche le courriel et
+télécharge l'image, CiviCRM sait qu'il a ouvert/lu le courriel. Comme cette technique est
+généralisée, pour protéger la vie privée, la plupart des clients de messagerie demandent
+aux utilisateurs de confirmer s'ils souhaitent télécharger les images des courriels
+qu'ils recoivent. Cela signifie que le rapport statistique vous indique plutôt le nombre
+de personnes qui ont téléchargé les images que le nombre de lecteurs du courriel ;
+le nombre réel de lecteurs est toujours supérieur au nombre affiché dans le rapport. 
+Les statistiques d'ouvertures devraient être considérées comme indicatives, et non précises.
+D'après notre expérience, un taux d'ouverture de 30% peut être considéré comme bon. C'est
+évidemment différent pour chaque organisation et chaque groupe auquel vous envoyez
+des envois en masse.
 
-Don't focus too much on the absolute numbers, but rather use them as a
-way of comparing different mailings you send. You might want to use them
-to experiment with different layouts, writing styles, and lengths and
-see what works best for your constituents.
+Ne vous focalisez pas trop sur les chiffres en valeur absolue, mais utilisez-les plutôt
+comme une façon de comparer les différents envois que vous envoyez. Par exemple ils peuvent
+vous permettre de comparer et expérimenter différentes dispositions, styles d'écriture
+et longueurs de texte. Voyez ce qui fonctionne le mieux pour vos lecteurs.
 
-**Click-throughs** shows the total number of times that people have
-clicked links in your email *if you have enabled click tracking*.
+**Ouvertures par clics** indiquent le nombre total de fois où les destinataires ont cliqué sur un lien dans votre courriel *si vous avez activé le suivi des clics*.
 
-**Forwards** show the number of times people have forwarded the email
-using the forward link (which is a token that you can include in your
-mailing).
+**Transferts** indique le nombre de fois où les destinataires ont transféré le courriel
+en utilisant le lien "faire suivre" (C'est un jeton que vous pouvez inclure dans votre envoi).
 
-**Replies** shows the number of times that people have replied to the
-email *if you have enabled reply tracking*.
+**Réponses** indique le nombre de fois où des destinataires ont répondu au courriel *si vous avez activé le suivi des réponses*.
 
-**Bounces** show the number of email addresses that could not be
-successfully delivered to *if you have enabled bounce processing*. 
+**Rebonds (bounces)** indique le nombre d'adresses de courriel en échec, qui n'ont pas pu être
+livrées avec succès *si vous avez activé le traitement des rebonds (bounces)*.
 
-**Unsubscribe requests** shows the amount of people that have clicked on
-any unsubscribe links that you include in your email. 
+**Demandes de désabonnement** indique le nombre de personnes qui ont cliqué sur un des liens de désabonnement que vous incluez dans votre courriel.
 
-Managing bounces and contacts with invalid emails
--------------------------------------------------
+Gérer les rebonds (bounces) et les contacts avec des adresses de courriel invalides
+-------------------------------------------------------------------
 
-If your server is set up to process bounces, contacts will be marked as
-**On Hold** when their email bounces. Further messages to those
-addresses will be suppressed. You can search for emails that are on hold
-either from the Bounces report or with an advanced search, and then
-investigate why the emails are bouncing.
+Si votre serveur est configuré pour traiter les rebonds, les contacts seront marqués comme
+**Suspendus** lorsque leur adresse de courriel est en échec. Les messages expédiés ultérieurement à cette adresse seront supprimés. Vous pouvez lister les adresses de courriel suspendues soit à partir du rapport "Rebonds/Bounces", soit à partir de la recherche avancée, puis
+chercher pourquoi les courriels rebondissent.
 
-You should review a list of bounces by clicking on the **Bounces** link
-in the Delivery Summary. You can see the reasons for individual bounces
-such as incorrect email addresses (e.g., contact@gooogle.com), fix them
-and remove their On Hold status. You can then re-use the mailing and
-simply add it to the EXCLUDE Recipients of These Mailing(s) list on the
-Select Recipients screen of the re-used mailing setup.
+Vous pouvez consulter une liste de rebonds en cliquant sur le lien **Rebonds (Bounces)**
+dans le Résumé de livraison. Vous pouvez y voir les raisons des rebonds individuels : adresses de courriel incorrectes (par exemple, contact@goooogle.com)... vous pouvez aussi les corriger, et supprimer leur statut "Suspendu". Vous pouvez ensuite réutiliser le mailing et simplement "EXCLURE" ces courriels invalides des listes de destinataires sur l'écran 
+"Sélectionnez des Destinataires" de la configuration de l'envoi en masse.
 
-In the Mailings area of **Search>Advanced search** you can search by
-bounce type.
+Dans la zone "Envois en masse" de **Recherche > Recherche avancée**, vous pouvez rechercher par
+type de rebond.
 
 ![image](../img/advanced_search_mailing_bounce_type.png) 
 
-Click-through summary
----------------------
+Résumé des ouvertures de clics
+------------------------------
 
-In this section, click-through statistics are shown for each link.
-There are two statistics, **Clicks** (i.e., the number of times that a
-link has been clicked) and **Unique clicks** (i.e., the number of people
-that have clicked on links).
+Dans cette section, les statistiques de clics sont affichées pour chaque lien.
+Il existe deux statistiques, **Clics** (c'est-à-dire le nombre de fois qu'un lien a été cliqué) et **Clics uniques** (c'est-à-dire le nombre de personnes qui ont cliqué sur des liens).
 
 ![image](../img/Screen%20shot%202011-08-27%20at%2016.28.28.png)
 
-Mailing reports with CiviReport
+Envoi de rapports avec CiviReport
 -------------------------------
 
-CiviReport has four reports, Mail Bounce Report, Mail Summary Report,
-Mail Clickthrough Report and Mail Opened Report, which offer similar
-functionality to what is described above. The major advantages of
-looking at the reports via CiviReport (available from the **Reports**
-menu) are:
+Le composant Rapports comporte quatre rapports : Rapports de Rebonds de Courriels, Synthèse des envois en masse, Rapport d'ouvertures de clics des envois en masse et Rapport d'ouvertures d'envois en masse qui utilisent les
+fonctions décrites ci-dessus. Voici les principaux avantages de consulter les rapports via le composant Rapports (disponible à partir du menu **Rapports**) :
 
--   You can run the reports for multiple mailings.
--   You have access to all the other cool features of CiviReport,
-    including the ability to add reports to dashboards, get reports
-    emailed, etc.
+- Vous pouvez exécuter un rapport pour plusieurs envois en masse, en une fois.
+- Vous avez accès à toutes les autres fonctionnalités intéressantes du composant Rapports, y compris la possibilité d'ajouter des rapports aux tableaux de bord, d'envoyer des rapports par courriel, etc.
 
-Read the *Reporting* section of this book for more information.
-
+Lisez la section *Rapports* de ce livre pour plus d'informations.
