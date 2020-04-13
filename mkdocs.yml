@@ -3,10 +3,23 @@ site_url: http://docs.civicrm.org/user/fr/latest
 repo_url: https://lab.civicrm.org/documentation/docs/user-fr
 site_description: "Un guide pour les utilisateurs et administrateurs de CiviCRM."
 site_author: "La communauté CiviCRM"
-
 theme: material
+markdown_extensions:
+  - attr_list
+  - admonition
+  - def_list
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tilde
+  - pymdownx.betterem
+  - pymdownx.mark
 
-pages:
+
+nav:
 - Accueil: "index.md"
 - Introduction:
     - "Qu'est-ce que CiviCRM ?": "introduction/what-is-civicrm.md"
