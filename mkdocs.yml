@@ -3,7 +3,8 @@ site_url: http://docs.civicrm.org/user/fr/latest
 repo_url: https://lab.civicrm.org/documentation/docs/user-fr
 site_description: "Un guide pour les utilisateurs et administrateurs de CiviCRM."
 site_author: "La communauté CiviCRM"
-theme: material
+theme: 
+  name: material
 markdown_extensions:
   - attr_list
   - admonition
