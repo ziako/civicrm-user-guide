@@ -100,5 +100,5 @@ Pour utiliser la fonction **Mise à jour par lot des adhésions via un profil**:
 
       Vous trouverez ci-dessous un exemple d'une page "Entrée des données du lot" qui utilise un profil d'adhésion configuré pour afficher les champs **Type d'adhésion** et **Date de départ de l'adhésion** 
 
-![image](../imgmg/Memberships-Everydaytasks-batchupdateviaprofile-batchupdateformembers.jpg)
+![image](../img/Memberships-Everydaytasks-batchupdateviaprofile-batchupdateformembers.jpg)
 
