@@ -136,7 +136,7 @@ Accédez à **Contributions**> **Gérer les Pages de Contribution**> cliquez sur
 
 *Ou* cliquez sur l'icône de raccourci Wordpress pour insérer un formulaire dans n'importe quelle page.
 
-![image](../imgmg/Wordpress-Shortcodes-small.png)
+![image](../img/Wordpress-Shortcodes-small.png)
 
 ### Dans Joomla!
 La façon la plus directe d'afficher votre page d'inscription/renouvellement d'adhésion sur votre site Web dans Joomla est en créant un élément de menu.
