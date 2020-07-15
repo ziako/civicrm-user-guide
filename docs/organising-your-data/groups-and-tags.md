@@ -106,7 +106,7 @@ Gestion des groupes
 ---------------
 Pour afficher et gérer tous les groupes, accédez à: **Menu de navigation> Contacts> Gérer les groupes**
 
-![image](../imgmgmg/ManageGroups.png)
+![image](../img/ManageGroups.png)
 
 Vous pouvez  utiliser le formulaire "Rechercher des groupes" en haut de l'écran "Gérer les groupes" pour rechercher des groupes par nom, type, visibilité et si le groupe est activé ou désactivé. Vous pouvez également faire défiler ou parcourir la liste de groupes dans l'écran "Gérer les groupes". Cette liste comprend les groupes réguliers et les groupes intelligents.
 
@@ -122,7 +122,7 @@ Trouver des contacts dans un groupe
 
 La page Contacts de chaque groupe comprend un formulaire pour trouver des contacts dans le groupe. Vous pouvez rechercher des contacts au sein d'un groupe par nom, adresse e-mail, type de contact, statut de groupe (ajouté, supprimé ou en attente) ainsi que les étiquettes
 
-![Groups_searchwithin](../imgmg/CiviCRM_update-CiviCore-Groups_searchwithin-en.jpg "Groups_searchwithin")
+![Groups_searchwithin](../img/CiviCRM_update-CiviCore-Groups_searchwithin-en.jpg "Groups_searchwithin")
 
 Groupes et ACL
 --------------
@@ -137,7 +137,7 @@ Travailler avec les étiquettes
 Pour afficher les étiquettes, accédez à: **Contacts> Gérer les étiquettes** dans le menu de navigation.
 Une étiquette peut être éditée ou supprimée en utilisant les liens respectifs dans sa ligne. Vous pouvez créer de nouvelles étiquettes en cliquant sur le bouton "Ajouter une étiquette" ou en allant dans "Contacts> Nouvelle étiquette" dans le menu de navigation.
 
-![admin_tags](../imgmg/CiviCRM_update-CiviCore-resized_600x158_admin_tags-en.png "admin_tags")
+![admin_tags](../img/CiviCRM_update-CiviCore-resized_600x158_admin_tags-en.png "admin_tags")
 
 Chaque étiquette doit avoir un nom clair et unique et une description explicative pour aider les utilisateurs à comprendre le but de l'étiquette. Les étiquettes peuvent être structurées hiérarchiquement et désignées comme sous-étiquettes d'une étiquette existante en sélectionnant une étiquette Parent dans la liste déroulante.
 
