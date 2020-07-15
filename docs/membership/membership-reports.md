@@ -66,4 +66,4 @@ Pour exporter les enregistrements d'adhésion:
 - Si vous avez sélectionné **Exporter les champs PRINCIPAUX**, un fichier appelé CiviCRM_Member_Search.csv sera créé contenant les enregistrements d'adhésion en fonction de vos critères de recherche
 - Si vous avez sélectionné **Sélectionnez les champs à exporter**, incluez les champs que vous souhaitez exporter, cochez la case **Sauvegarder cette correspondance de champs** si vous souhaitez réutiliser ce mappage de champ pour une exportation future, Puis cliquez sur le bouton **Exporter**. Un fichier appelé CiviCRM_Member_Search.csv sera créé contenant les enregistrements d'adhésion en fonction de vos critères de recherche et des champs que vous avez sélectionnés.
 
-![image](../imgmg/memberships%20select%20fields%20to%20export.JPG)
+![image](../img/memberships%20select%20fields%20to%20export.JPG)
