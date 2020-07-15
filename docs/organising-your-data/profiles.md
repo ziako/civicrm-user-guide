@@ -328,7 +328,7 @@ Remarque: le profil doit inclure uniquement des champs relatifs au type de conta
 
 Si vous voulez que les visiteurs créent un compte Drupal ou Joomla! lors du remplissage d'un profil, vous pouvez activer cette option avec l'option "Enregistrement de compte d'utilisateur" sous **Personnaliser les données et les écrans>Profils**  Cliquez sur **Paramètres** dans un profil. Les utilisateurs anonymes (non connectés) seront invités (ou obligés) de créer un compte lorsqu'ils visiteront le profil. Les utilisateurs connectés verront simplement les champs du profil.
 
-![Profile user registration options](../imgmg/CiviCRM-CapturingExposing-buildprofile-CMS_user_reg-en.png "CMS_user_reg")
+![Profile user registration options](../img/CiviCRM-CapturingExposing-buildprofile-CMS_user_reg-en.png "CMS_user_reg")
 
 Vous devez inclure un champ "Adresse e-mail principale" dans le profil pour que cette fonctionalité agisse correctement. C'est également vrai lorsque le profil est incorporé dans une page de contribution en ligne ou une page d'enregistrement d'événement. Par conséquent, vous pouvez inviter ou forcer les visiteurs anonymes à créer un compte lorsqu'ils s'inscrivent à un événement.
 
