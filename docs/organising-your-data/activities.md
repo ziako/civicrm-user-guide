@@ -118,5 +118,5 @@ Lorsque vous modifiez une répétition d'une activité, vous avez la possibilit�
 cette activité uniquement, ou à cette activité et à toutes les activités futures de la série ou à chaque 
 activité de la série. Les modifications apportées à la date ou à l'heure ne sont PAS appliquées à d'autres activités récurrentes.
 
-![image](../imgmg/reoccurringscreenedits.png)
+![image](../img/reoccurringscreenedits.png)
 
