@@ -1,10 +1,14 @@
 site_name: "Guide d'utilisation et d'administration de CiviCRM"
-site_url: http://docs.civicrm.org/user/fr/latest
-repo_url: https://lab.civicrm.org/documentation/docs/user-fr
+site_url: http://docs.civicrm.org/user/fr/latest/
+repo_url: https://lab.civicrm.org/documentation/docs/user-fr/
+edit_uri: https://lab.civicrm.org/-/ide/project/documentation/docs/user-fr/blob/master/-/docs/
 site_description: "Un guide pour les utilisateurs et administrateurs de CiviCRM."
 site_author: "La communauté CiviCRM"
 theme: 
   name: material
+  icon:
+      repo: fontawesome/brands/gitlab
+
 markdown_extensions:
   - attr_list
   - admonition
@@ -19,6 +23,9 @@ markdown_extensions:
   - pymdownx.betterem
   - pymdownx.mark
 
+plugins:
+    search:
+        lang: fr
 
 nav:
 - Accueil: "index.md"
