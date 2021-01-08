@@ -1,7 +1,7 @@
 site_name: "Guide d'utilisation et d'administration de CiviCRM"
 site_url: http://docs.civicrm.org/user/fr/latest/
 repo_url: https://lab.civicrm.org/documentation/docs/user-fr/
-edit_uri: https://lab.civicrm.org/-/ide/project/documentation/docs/user-fr/blob/master/-/docs/
+edit_uri: https://lab.civicrm.org/documentation/docs/user-fr/-/edit/master/docs/
 site_description: "Un guide pour les utilisateurs et administrateurs de CiviCRM."
 site_author: "La communauté CiviCRM"
 theme: 
